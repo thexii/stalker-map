@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<circle cx="64" cy="64" r="59" stroke="#adbfcb" stroke-width="10" fill="none" />
+	<polyline points="50,49 73,49 73,96 78,99 78,103 50,103 50,99 55,96 55,57 50,52 50,49" stroke="#adbfcb" stroke-width='1' fill="#adbfcb" />
+	<circle cx="64" cy="31" r="10" stroke="#adbfcb" fill="#adbfcb" />
+</svg>

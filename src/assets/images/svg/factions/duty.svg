@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!--<path d="M 64,11 A 62.7 42 0 0 0 114 14 L 120 18 A 68 78 0 0 0 127 58 A 155.89 238.21 -5.75 0 1 64 125
+	A 155.89 238.21 -5.75 0 1 1 58 A 68 78 0 0 0 8 18 L 14 14 A 62.7 42 0 0 0 64 11" stroke="#9d8651" fill="#b60422" stroke-width="1" />-->
+
+	<circle cx="64" cy="64" r="55" stroke="#9d8651" stroke-width="5" fill="#b60422" />
+	<circle cx="64" cy="64" r="38" stroke="#9d8651" stroke-width="2" fill="none" />
+	<circle cx="64" cy="64" r="28" stroke="#9d8651" stroke-width="2" fill="#534551" />
+	<circle cx="64" cy="64" r="17" stroke="#9d8651" stroke-width="2" fill="none" />
+	<circle cx="64" cy="64" r="8" stroke="#9d8651" stroke-width="2" fill="#9d8651" />
+	<line x1="26" y1="64" x2="102" y2="64" stroke-width="2" stroke="#9d8651" />
+	<line x1="64" y1="26" x2="64" y2="102" stroke-width="2" stroke="#9d8651" />
+</svg>

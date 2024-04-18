@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!--<path id="leaf" viewBox="0 0 64 64" d=" M 10,0.5 H 46 A 18 18 90 0 0 55 15 L 37,47 A 54 54 90 0 1 10,0.5" stroke="none"  fill="#523d32" stroke-width="1" />-->
+		<path id="swan" viewBox="0 0 48 48" d="M 15,14 L 18,19 20,21 25,27 22,30 19,32 13,35 13,47.95 15,45 18,41 25,38 29,36 34,40 34,35 38,35 35,31 39,27 42,21 47,17 36,17 33,22 29,25 23,20 21,17 15,14" stroke="#124684"  fill="#d7dbdf" stroke-width=".5" />
+		<path id="textpath" fill="none" d="M 27,100 C 44,100 35,110 64,111 C 87,111 89,99 101,99"/>
+		<g id="sun-rays">
+			<path viewBox="0 0 64 64" d="m 26,44 L 29,40 34,36 35,31 39,32 45,28 47,23 52,23 61,15 64,10" stroke="#0d3369" fill="none" stroke-width="1" />
+			<path viewBox="0 0 64 64" d="m 26,44 L 39,51 37,60 19,60 A 22 32 0 0 1 26 44 Z" stroke="#0d3369" fill="#eba040" stroke-width="1" />
+			<path viewBox="0 0 64 64" d="m 28,41 L 29,36 34,36 43.5,45 40,49 Z" stroke="#0d3369" fill="#eba040" stroke-width="1" />
+			<path viewBox="0 0 64 64" d="m 47,42 L 39,32 40,28 46,29 52,39 Z" stroke="#0d3369" fill="#eba040" stroke-width="1" />
+			<path viewBox="0 0 64 64" d="m 52,12 L 61,16 62,37 57,37 52,23 Z" stroke="#0d3369" fill="#eba040" stroke-width="1" />
+		</g>
+	</defs>
+	<polyline stroke-width='6' stroke="#0d3369" fill="#648bb1" points="3,3 125,3 125,125 3,125 3,107 3,3 125,3" />
+	
+	<path viewBox="0 0 128 128" d=" M 42,76 A 24 24 0 1 1 88 76" stroke="none"  fill="#eba040" stroke-width="1" />
+	<path viewBox="0 0 128 128" d=" M 35,81 A 24 9 0 1 1 93 81" stroke="#0d3369"  fill="#648bb1" stroke-width="1" />
+	
+	<path viewBox="0 0 128 128" d=" M 43,82 A 28 40 0 0 1 53 71" stroke="#0d3369"  fill="#648bb1" stroke-width="1" />
+	<path viewBox="0 0 128 128" d=" M 48,93 A 28 40 0 0 1 66 70" stroke="#0d3369"  fill="#648bb1" stroke-width="1" />
+	<path viewBox="0 0 128 128" d=" M 59,94 A 28 40 0 0 1 80 72" stroke="#0d3369"  fill="#648bb1" stroke-width="1" />
+	<path viewBox="0 0 128 128" d=" M 71,94 A 28 40 0 0 1 87 75" stroke="#0d3369"  fill="#648bb1" stroke-width="1" />
+	
+	<path viewBox="0 0 128 128" d="m 37,60 A 27 23 0 0 1 91 60" stroke="#0d3369" fill="none" stroke-width="1" />
+	<use x='0' y ='0' width="64" height="64" xlink:href='#sun-rays' />
+	<use x='64' y ='0' width="64" height="64" xlink:href='#sun-rays' transform="matrix(-1,0,0,1,192.5,0)" />
+	
+	
+	
+	<polyline stroke-width='1' stroke="#d7dbdf" fill="#d7dbdf" points="10,65 19,58 32,56 31,59 49,57 64,58 73,61 49,61 38,64 23,70 17,65 10,65" />
+	<polyline stroke-width='1' stroke="#d7dbdf" fill="#d7dbdf" points="55,53 82,52 91,53 99,54 109,57 107,61 116,68 109,69 105,67 98,70 88,65 77,64 82,61 68,55 55,53" />
+	
+	<path viewBox="0 0 128 128" d=" M 18,71 A 47 30 0 0 0 45 87 L 40,93 35,103 A 74 47 -11.73 0 1 11 90 L 18,83 18,71" stroke="#124684"  fill="#02b9e3" stroke-width="1" />
+	<path viewBox="0 0 128 128" d=" M 83,87 A 47 30 0 0 0 110 71 L 110,82 117,91 A 74 47 -11.73 0 1 96 105 Z" stroke="#124684"  fill="#02b9e3" stroke-width="1" />
+
+	<path viewBox="0 0 128 128" d=" M 27,88 C 44,88 35,98 64,99 C 87,99 89,87 101,87 C 98,102 104.7,105.7 105,108 C 91,112.4 88.3,121.6 64,120
+									C 37,120 35.7,110.6 22,109 C 28.5,103.3 25.3,95 27,88" stroke="#124684"  fill="#02b9e3" stroke-width="1" />
+
+	<text text-anchor="middle" face="Boycott" fill="white" font-size="10">
+		<textPath startOffset="50%" xlink:href="#textpath" >ЧИСТЕ НЕБО</textPath>
+	</text>
+
+	<use x='0' y ='0' width="48" height="48" xlink:href='#swan' />
+	<use x='64' y ='0' width="48" height="48" xlink:href='#swan' transform="matrix(-1,0,0,1,192.5,0)"/>
+</svg>

@@ -1,0 +1,1 @@
+var markWidth = 1;

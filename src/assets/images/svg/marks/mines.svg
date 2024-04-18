@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<polyline points="64.51,19 116.47,109 12.55,109 64.51,19 116.47,109" stroke="#251e21" stroke-width="6" fill="#ffca06" />
+	<line x1="48px" y1="95px" x2="80px" y2="95px" stroke="#251e21" stroke-width="2" />
+	<path d="M 39 85 L 54,85 39,90 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 43 72 L 54,83 40,75 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 53 67 L 58,79 50,69 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 60 61 L 67,61 63,81 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 71 66 L 76,68 70,82 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 82 74 L 85,77 74,83 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	<path d="M 88 87 L 87,91 72,86 Z" stroke="#251e21" stroke-width="1" fill="#251e21" />
+	
+	<rect x="56" y="90" width="16" height="3" fill="#251e21" />
+	<rect x="61" y="87" width="6" height="2" fill="#251e21" />
+</svg>

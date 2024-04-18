@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="24px" height="127px" version="1.0" state='normal'
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg
+        class='input-source'
+        stroke='white'
+        stroke-width='1'
+        viewBox="0 0 24 127"
+        fill="none">
+        <polyline width="100%" height="100%" points="0,127 6,127 14,119 24,119 24,9 15,0 0,0" />
+    </svg>   
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!--<path id="leaf" viewBox="0 0 64 64" d=" M 10,0.5 H 46 A 18 18 90 0 0 55 15 L 37,47 A 54 54 90 0 1 10,0.5" stroke="none"  fill="#523d32" stroke-width="1" />-->
+		<path id="leaf" viewBox="0 0 54 63" d=" M 0,9 L 18,42 A 18 18 90 0 1 36 42 L 54,9 A 54 54 90 0 0 0,9" stroke="none"  fill="white" stroke-width="1" />
+	</defs>
+	<circle cx="64" cy="64" r="60" stroke="white" stroke-width="3" fill="black" />
+	<circle cx="64" cy="64" r="11" fill="white" />
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf'>
+		<animateTransform
+			attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 64 64"
+			to="360 64 64"
+			dur="10s"
+			repeatCount="indefinite" />
+	</use>
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf' transform="rotate(120,64,64)">
+		<animateTransform
+			attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="120 64 64"
+			to="480 64 64"
+			dur="10s"
+			repeatCount="indefinite" />
+	</use>
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf' transform="rotate(-120,64,64)">
+		<animateTransform
+			attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="-120 64 64"
+			to="240 64 64"
+			dur="10s"
+			repeatCount="indefinite" />
+	</use>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg style="pointer-events: fill;" viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<pattern id="lines" x="0" y="0" width="100%" fill-opacity="0.66" height=".025">
+			<line stroke-width='1' stroke="white" x1="0" y1="0" x2="128" y2="0" />
+		</pattern>
+	</defs>
+	<circle cx="64" cy="64" r="62" stroke="white" stroke-width="3" fill="url(#lines)" />
+</svg>

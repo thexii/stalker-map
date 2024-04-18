@@ -1,0 +1,36 @@
+{
+    "shoc": "Shadow of Chornobyl",
+    "cs": "Clear Sky",
+    "cop": "Call of Pripyat",
+    "sub-location": "Locations",
+    "acidic": "Acidic zone",
+    "psychic": "Psy-emission",
+    "radioactive": "Radiation",
+    "thermal": "Thermal zone",
+    "mines": "Mines",
+    "teleport": "Teleports",
+    "stash": "Stashes",
+    "quest": "Quest habar",
+    "stuff": "Habar",
+    "anomaly-zone": "Artifact deposits",
+    "anomaly-zone-no-art": "Anomaly zones",
+    "destroyable-box": "Habar in box",
+    "hideAll": "Hide all",
+
+    "anomaliesConcentration": "Concentration of anomalies",
+    "anomalySpawnsArtefacts": "The anomalous zone generates artifacts",
+    "anomaliesCount": "Number of anomalies: {{count}}",
+    "anomalyArtMaxCount": "Maximum artifacts: {{count}}",
+    "anomalyZoneArtMaxCount": "Maximum artifacts per zone: {{count}}",
+    "markLink": "Mark link",
+
+    "copMapPageTitle": "Call of Prypiat map",
+    "csMapPageTitle": "Clear Sky map",
+    "shocMapPageTitle": "Shadow of Chornobyl map",
+
+    "shocShort": "ShoC",
+    "csShort": "CS",
+    "copShort": "CoP",
+
+    "mainTitle": "Interactive maps for the S.T.A.L.K.E.R. series"
+}

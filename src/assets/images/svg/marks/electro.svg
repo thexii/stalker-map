@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<polyline points="64.51,19 116.47,109 12.55,109 64.51,19 116.47,109" stroke="#251e21" stroke-width="6" fill="#ffca06" />
+	
+	<path d="M 60,45 L 54,76 67,70 65,90 62,87 65,98 71,88 68,90 73,62 60,70 67,45 Z" stroke="#251e21"  fill="#251e21" stroke-width="0.5" />
+</svg>

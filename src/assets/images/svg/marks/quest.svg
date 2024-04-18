@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path id="sector" viewBox="0 0 64 64" d="M 52 20 A 44 44 0 0 0 20 52" stroke="#eeff00" stroke-width="5" fill="none" />
+	</defs>
+	<circle cx="64" cy="64" r="33" stroke="#eeff00" stroke-width="5" fill="none" />
+	<use x='0' y ='0' width="64" height="64" xlink:href='#sector' />
+	<use x='0' y ='0' width="64" height="64" xlink:href='#sector' transform="translate(128, 0) scale(-1, 1)" />
+	<use x='0' y ='0' width="64" height="64" xlink:href='#sector' transform="translate(0, 128) scale(1, -1)" />
+	<use x='0' y ='0' width="64" height="64" xlink:href='#sector' transform="translate(128, 128) scale(-1, -1)"  />
+	<line x1="44" y1="64" x2="57" y2="64" stroke="#eeff00" stroke-width="5" />
+	<line x1="84" y1="64" x2="71" y2="64" stroke="#eeff00" stroke-width="5" />
+	<line x1="64" y1="44" x2="64" y2="57" stroke="#eeff00" stroke-width="5" />
+	<line x1="64" y1="84" x2="64" y2="71" stroke="#eeff00" stroke-width="5" />
+</svg>

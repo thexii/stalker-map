@@ -1,0 +1,36 @@
+{
+    "shoc": "Тени Чернобыля",
+    "cs": "Чистое небо",
+    "cop": "Зов Припяти",
+    "sub-location": "Локации",
+    "acidic": "Кислотная зона",
+    "psychic": "Пси-излучение",
+    "radioactive": "Радиоактивность",
+    "thermal": "Термальная зона",
+    "mines": "Мины",
+    "teleport": "Телепорты",
+    "stash": "Тайники",
+    "quest": "Квестовый хабар",
+    "stuff": "Хабар",
+    "anomaly-zone": "Источники артефактов",
+    "anomaly-zone-no-art": "Аномальные зоны",
+    "destroyable-box": "Хабар в ящиках",
+    "hideAll": "Спрятать все",
+
+    "anomaliesConcentration": "Сосредоточение аномалий",
+    "anomalySpawnsArtefacts": "Аномальная зона порождает артефакты",
+    "anomaliesCount": "Количество аномалий: {{count}}",
+    "anomalyArtMaxCount": "Максимум артефактов: {{count}}",
+    "anomalyZoneArtMaxCount": "Маскимум артефактов на зону: {{count}}",
+    "markLink": "Ссылка на метку",
+
+    "copMapPageTitle": "Карта Зова Припяти",
+    "csMapPageTitle": "Карта Чистого Неба",
+    "shocMapPageTitle": "Карта Теней Чернобиля",
+
+    "shocShort": "ТЧ",
+    "csShort": "ЧН",
+    "copShort": "ЗП",
+
+    "mainTitle": "Интерактивные карты для игр серии S.T.A.L.K.E.R."
+}

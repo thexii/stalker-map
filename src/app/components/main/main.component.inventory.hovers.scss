@@ -1,0 +1,87 @@
+.inventory-item:has(.wpn_svd:hover, .wpn_svu:hover)~.inventory-item :is(.ammo_7\.62x54_7h14, .ammo_7\.62x54_ap, .ammo_7\.62x54_7h1) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_7\.62x54_7h14:hover, .ammo_7\.62x54_ap:hover, .ammo_7\.62x54_7h1:hover) .inventory-item :is(.wpn_svd, .wpn_svu) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_val:hover, .wpn_vintorez:hover, .wpn_groza:hover)~.inventory-item :is(.ammo_9x39_pab9, .ammo_9x39_ap) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_9x39_pab9:hover, .ammo_9x39_ap:hover) .inventory-item :is(.wpn_val, .wpn_vintorez, .wpn_groza) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_ak74u:hover, .wpn_abakan:hover, .wpn_ak74:hover)~.inventory-item :is(.ammo_5\.45x39_fmj, .ammo_5\.45x39_ap) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_5\.45x39_fmj:hover, .ammo_5\.45x39_ap:hover) .inventory-item :is(.wpn_ak74u, .wpn_abakan, .wpn_ak74) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_l85:hover, .wpn_lr300:hover, .wpn_sig550:hover, .wpn_g36:hover, .wpn_fn2000:hover)~.inventory-item :is(.ammo_5\.56x45_ss190, .ammo_5\.56x45_ap) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_5\.56x45_ss190:hover, .ammo_5\.56x45_ap:hover) .inventory-item :is(.wpn_l85, .wpn_lr300, .wpn_sig550, .wpn_g36, .wpn_fn2000) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_pm:hover, .wpn_pb:hover, .wpn_fort:hover)~.inventory-item :is(.ammo_9x18_fmj, .ammo_9x18_pmm) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_9x18_fmj:hover, .ammo_9x18_pmm:hover) .inventory-item :is(.wpn_pm, .wpn_pb, .wpn_fort) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_beretta:hover, .wpn_walther:hover, .wpn_mp5:hover)~.inventory-item :is(.ammo_9x19_fmj, .ammo_9x19_pbp) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_9x19_fmj:hover, .ammo_9x19_pbp:hover) .inventory-item :is(.wpn_beretta, .wpn_walther, .wpn_mp5) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_colt1911:hover, .wpn_usp:hover, .wpn_sig220:hover, .wpn_desert_eagle:hover)~.inventory-item :is(.ammo_11\.43x23_fmj, .ammo_11\.43x23_hydro) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_11\.43x23_fmj:hover, .ammo_11\.43x23_hydro:hover) .inventory-item :is(.wpn_colt1911, .wpn_usp, .wpn_sig220, .wpn_desert_eagle) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_bm16:hover, .wpn_wincheaster1300:hover, .wpn_spas12:hover, .wpn_toz34:hover, .wpn_protecta:hover)~.inventory-item :is(.ammo_12x70_buck, .ammo_12x76_zhekan, .ammo_12x76_dart) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_12x70_buck:hover, .ammo_12x76_zhekan:hover, .ammo_12x76_dart:hover) .inventory-item :is(.wpn_bm16, .wpn_wincheaster1300, .wpn_spas12, .wpn_toz34, .wpn_protecta) {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_pkm:hover)~.inventory-item .ammo_pkm_100 {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_pkm_100:hover) .inventory-item .wpn_pkm {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_gauss:hover)~.inventory-item :is(.ammo_gauss, .ammo_gauss_cardan) {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_gauss:hover, .ammo_gauss_cardan:hover) .inventory-item .wpn_gauss {
+  background-color: #0f464b
+}
+
+.inventory-item:has(.wpn_rpg7:hover)~.inventory-item .ammo_og-7b {
+  background-color: #0f464b
+}
+
+.inventory:has(.ammo_og-7b:hover) .inventory-item .wpn_rpg7 {
+  background-color: #0f464b
+}

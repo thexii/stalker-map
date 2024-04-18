@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path viewBox="0 0 128 128" id="elipse-back" d="M 16,59 A 48 9 0 0 1 112 59" stroke-width="2" stroke="white" fill="none" />
+		<path viewBox="0 0 128 128" id="elipse-front" d="M 16,59 A 48 9 0 0 0 112 59" stroke-width="2" stroke="white" fill="none" />
+	</defs>
+	
+	<circle cx="64" cy="59" r="58" fill="#502518" />
+	<circle cx="64" cy="59" r="44" fill="#85661b" />
+	<circle cx="64" cy="59" r="30" fill="#ccce2f" />
+	
+	<use x='0' y ='0' xlink:href='#elipse-back' />
+	<use x='0' y ='0' xlink:href='#elipse-back' transform="rotate(315,64,59)" />
+	<use x='0' y ='0' xlink:href='#elipse-back' transform="rotate(45,64,59)" />
+	
+	<path viewBox="0 0 128 128" d=" M 54,74 A 15 19 0 1 1 74 74 A 29 24 0 0 0 87 94
+									A 44 27 0 0 1 105 109 L 105,116 A 99 30 0 0 1 23 116
+									L 23,109 A 44 27 0 0 1 41 94 A 29 24 0 0 0 54 74" stroke="black" fill="#1d5967" stroke-width="1" />
+	
+	<use x='0' y ='0' xlink:href='#elipse-front' />
+	<use x='0' y ='0' xlink:href='#elipse-front' transform="rotate(315,64,59)" />
+	<use x='0' y ='0' xlink:href='#elipse-front' transform="rotate(45,64,59)" />
+	
+	<circle cx="64" cy="104" r="8" fill="white" />
+	
+	<path viewBox="0 0 128 128" d=" M 43,107 C 47 103 56 94 64 94 C 72 94 81 103 85 107 C 74 107 74 113 64 113 C 54 113 54 107 43 107 Z" stroke="white" fill="none" stroke-width="1" />
+</svg>

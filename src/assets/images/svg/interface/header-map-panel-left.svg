@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="43" height="35" viewBox="0 0 43 35" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg>
+		<!--<path d="M 13 10 H 46 L 55.5 0.5 55.5 34.5 13 34.5 A 12 12 90 1 0 13 10" stroke="red" fill="none" stroke-width='1' />-->
+		<path d="M 0.5 1 L 9 13 H 42.5 A 12 12 0 0 0 42.5 34.5 H 0.5 Z" stroke="white" fill="none" stroke-width='1' />
+	</svg>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<path id="textpath" fill="none" d="M 32,106.5 A 98 43 0 0 0 99 106.5"/>
+	</defs>
+	
+	<polyline stroke-width='1' fill="none" stroke="#e3c3a7" 
+	points="57,15 64,8 68,3 69,11 67,24" />
+	<polyline stroke-width='1' fill="#45a551" stroke="#e3c3a7" 
+	points="18,81 12,47 15,56 24,33 23,42 36,23 35,27 60,12 38,51 38,43 34,66 30,47 31,82 18,81" />
+	<polyline stroke-width='1' fill="#45a551" stroke="#e3c3a7" 
+	points="106,44 118,43 121,46 120,50 115,53" />
+	<polyline stroke-width='1' fill="#e3c3a7" stroke="#e3c3a7" 
+	points="83,68 100,65 107,59 92,62 83,68" />
+	<polyline stroke-width='1' fill="#45a551" stroke="#e3c3a7" 
+	points="109,60 113,60 116,63 111,63 107,70 106,65 105,64 102,65 109,60" />
+	<polyline stroke-width='1' fill="#45a551" stroke="#e3c3a7" 
+	points="36,81 39,59 49,35 56,27 63,25 67,19 79,22 80,25 89,29 92,34 93,37 98,40 109,43 109,46 118,52 118,61 114,57
+	105,57 91,61 83,66 78,66 75,66 81,72 88,73 92,67 91,72 95,74 99,69 98,75 105,75 99,81 92,81 81,79 74,84 77,79 54,81
+	55,39 50,65 47,54 50,82 36,81" />
+	<polyline stroke-width='1' fill="white" stroke="#e3c3a7" 
+	points="80,29 86,34 89,40 87,42 80,38 73,36 79,34 80,29" />
+	
+	<path d="M 23,89 L 5,98 1,110 16,117 51,89" stroke="#e3c3a7" fill="#61775d" stroke-width="1" />
+	<path d="M 53,89 L 47,117 64,127 81,117 75,89" stroke="#e3c3a7" fill="#61775d" stroke-width="1" />
+	<path d="M 76,89 L 109,116 125,111 123,99 96,89" stroke="#e3c3a7" fill="#61775d" stroke-width="1" />
+	
+	<line x1="21" y1="88" x2="107" y2="88" stroke="#e3c3a7" stroke-width="2"/>
+	
+	<path d=" M 5,77 A 110 65 0 0 0 37 91 L 32,95 A 98 43 0 0 0 96 95 L 91,91 A 110 65 0 0 0 123 77 L 118,88 128,91
+	A 110 65 0 0 1 99 102 L 99,109 A 98 43 0 0 1 32 109 L 32,101 A 110 65 0 0 1 1 91 L 9,88 5,77" stroke="#45a551" fill="#111622" stroke-width="1" />
+	<line x1="31.5" y1="95" x2="32" y2="101" stroke="#45a551" stroke-width="1"/>
+	<line x1="96.5" y1="95" x2="99" y2="102" stroke="#45a551" stroke-width="1"/>
+	
+	<text text-anchor="middle" face="Boycott" fill="white" font-size="12">
+		<textPath startOffset="50%" xlink:href="#textpath" >ВОЛЯ</textPath>
+	</text>
+	<!--<polyline stroke-width='1' fill="#111622" stroke="#45a551" 
+	points="5,77 19,86 37,90 32,95 31,101 12,97 1,91 9,88 5,77" />-->
+</svg>

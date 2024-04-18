@@ -1,0 +1,36 @@
+{
+    "shoc": "Тіні Чорнобиля",
+    "cs": "Чисте небо",
+    "cop": "Поклик Прип'яті",
+    "sub-location": "Локації",
+    "acidic": "Кислотна зона",
+    "psychic": "Псі-випромінювання",
+    "radioactive": "Радіоактивність",
+    "thermal": "Термальна зона",
+    "mines": "Міни",
+    "teleport": "Телепорти",
+    "stash": "Схованки",
+    "quest": "Квестовий хабар",
+    "stuff": "Хабар",
+    "anomaly-zone": "Родовища артефактів",
+    "anomaly-zone-no-art": "Аномальні зони",
+    "destroyable-box": "Хабар в ящиках",
+    "hideAll": "Сховати все",
+
+    "anomaliesConcentration": "Зосередження аномалій",
+    "anomalySpawnsArtefacts": "Аномальна зона породжує артефакти",
+    "anomaliesCount": "Кількість аномалій: {{count}}",
+    "anomalyArtMaxCount": "Максимум артефактів: {{count}}",
+    "anomalyZoneArtMaxCount": "Маскимум артефактів на зону: {{count}}",
+    "markLink": "Посилання на мітку",
+
+    "copMapPageTitle": "Карта Поклику Прип'яті",
+    "csMapPageTitle": "Карта Чистого Неба",
+    "shocMapPageTitle": "Карта Тіней Чорнобиля",
+
+    "shocShort": "ТЧ",
+    "csShort": "ЧН",
+    "copShort": "ПП",
+
+    "mainTitle": "Інтерактивні мапи для ігор серії S.T.A.L.K.E.R."
+}

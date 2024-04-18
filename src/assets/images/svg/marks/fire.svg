@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<polyline points="64.51,19 116.47,109 12.55,109 64.51,19 116.47,109" stroke="#251e21" stroke-width="6" fill="#ffca06" />
+	
+	<path d="M 63,44 C 63 44 53 54 56 62 C 58 67 65 73 65 80 C 66 80 74 75 69 64 C 68 61 63 56 63 44" fill="#251e21" />
+	<path	d="	M 45,63 C 43 64 45 68 49 73 C 51 76 53 77 54 80 C 55.4 83.7 54.2 87.7 55 88 C 56 88.4 59.3 84.4 59 80
+				C 58.8 76.1 55.8 73.6 53 71 C 49.8 68.1 45.7 62.5 45 63" fill="#251e21" />
+	<path d="M 61,96 C 59.4 96 74.7 88.3 75 78 C 75 75 73.2 71.5 74 71 C 74.8 70.5 78.5 72.6 79 76 C 80.8 86.2 70.6 96 61 96" fill="#251e21" />
+</svg>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090a0a;
+}

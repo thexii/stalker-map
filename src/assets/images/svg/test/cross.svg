@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 10 10" width="100" height="100" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<rect x="0" y="0" width="10" height="10" fill="white" />
+	<line stroke-width='0.1' stroke="blue" x1="2.03" y1="0" x2="2.03" y2="10" />
+	<line stroke-width='0.1' stroke="blue" x1="4.01" y1="0" x2="4.01" y2="10" />
+	<line stroke-width='0.1' stroke="blue" x1="5.99" y1="0" x2="5.99" y2="10" />
+	<line stroke-width='0.1' stroke="blue" x1="7.97" y1="0" x2="7.97" y2="10" />
+	<line stroke-width='0.1' stroke="red" x1="9.95" y1="0" x2="9.95" y2="10" />
+	
+	<line stroke-width='0.1' stroke="blue" x1="0" y1="2.03" x2="10" y2="2.03" />
+	<line stroke-width='0.1' stroke="blue" x1="0" y1="4.01" x2="10" y2="4.01" />
+	<line stroke-width='0.1' stroke="blue" x1="0" y1="5.99" x2="10" y2="5.99" />
+	<line stroke-width='0.1' stroke="blue" x1="0" y1="7.97" x2="10" y2="7.97" />
+	<line stroke-width='0.1' stroke="red"  x1="0" y1="9.95" x2="10" y2="9.95" />
+</svg>

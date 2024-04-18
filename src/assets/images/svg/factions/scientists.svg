@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!--<path d="M 64,11 A 62.7 42 0 0 0 114 14 L 120 18 A 68 78 0 0 0 127 58 A 155.89 238.21 -5.75 0 1 64 125
+	A 155.89 238.21 -5.75 0 1 1 58 A 68 78 0 0 0 8 18 L 14 14 A 62.7 42 0 0 0 64 11" stroke="#9d8651" fill="#b60422" stroke-width="1" />-->
+
+	<defs>
+		<circle cx="64" cy="64" r="49" id="branches" fill="none" />
+		<path id="path" d="M 50,14 A 52 52 0 1 0 78 14" stroke="white" fill="transparent" />
+		<linearGradient id="gradient">
+			<stop offset="33%" stop-color="#013c9a"/>
+			<stop offset="66%" stop-color="#bf0011"/>
+		</linearGradient>
+		<linearGradient id="gradient2">
+			<stop offset="33%" stop-color="#bf0011"/>
+			<stop offset="66%" stop-color="#013c9a"/>
+		</linearGradient>
+		<g viewBox="0 0 128 128" id="branch">
+			<path d="M 53,124 64,117.5 A 53 53 0 0 0 87 17" stroke="white" fill="none" stroke-width="2" />
+			<line x1="70" y1="117" x2="76" y2="109" stroke="white" stroke-width="2" ></line>
+			<line x1="80" y1="114" x2="85" y2="106" stroke="white" stroke-width="2" ></line>
+			<line x1="88" y1="111" x2="90" y2="103" stroke="white" stroke-width="2" ></line>
+			<line x1="95" y1="107" x2="96" y2="98" stroke="white" stroke-width="2" ></line>
+			<line x1="101" y1="102" x2="100" y2="93" stroke="white" stroke-width="2" ></line>
+			<line x1="106" y1="95" x2="105" y2="87" stroke="white" stroke-width="2" ></line>
+			<line x1="111" y1="88" x2="108" y2="80" stroke="white" stroke-width="2" ></line>
+			<line x1="114" y1="80" x2="110" y2="72" stroke="white" stroke-width="2" ></line>
+			<line x1="116" y1="70" x2="110" y2="63" stroke="white" stroke-width="2" ></line>
+			<line x1="116" y1="60" x2="109" y2="56" stroke="white" stroke-width="2" ></line>
+			<line x1="114" y1="51" x2="106" y2="48" stroke="white" stroke-width="2" ></line>
+			<line x1="111" y1="43" x2="103" y2="42" stroke="white" stroke-width="2" ></line>
+			<line x1="108" y1="37" x2="99" y2="36" stroke="white" stroke-width="2" ></line>
+			<line x1="104" y1="31" x2="95" y2="30" stroke="white" stroke-width="2" ></line>
+			<line x1="98" y1="25" x2="91" y2="25" stroke="white" stroke-width="2" ></line>
+			<line x1="91" y1="20" x2="83" y2="20" stroke="white" stroke-width="2" ></line>
+			
+			<line x1="70" y1="117" x2="81" y2="120" stroke="white" stroke-width="2" ></line>
+			<line x1="80" y1="114" x2="90" y2="116" stroke="white" stroke-width="2" ></line>
+			<line x1="88" y1="111" x2="98" y2="112" stroke="white" stroke-width="2" ></line>
+			<line x1="95" y1="107" x2="104" y2="108" stroke="white" stroke-width="2" ></line>
+			<line x1="101" y1="102" x2="109" y2="99" stroke="white" stroke-width="2" ></line>
+			<line x1="106" y1="95" x2="114" y2="91" stroke="white" stroke-width="2" ></line>
+			<line x1="111" y1="88" x2="118" y2="83" stroke="white" stroke-width="2" ></line>
+			<line x1="114" y1="80" x2="121" y2="73" stroke="white" stroke-width="2" ></line>
+			<line x1="116" y1="70" x2="122" y2="63" stroke="white" stroke-width="2" ></line>
+			<line x1="116" y1="60" x2="121" y2="53" stroke="white" stroke-width="2" ></line>
+			<line x1="114" y1="51" x2="118" y2="43" stroke="white" stroke-width="2" ></line>
+			<line x1="111" y1="43" x2="115" y2="35" stroke="white" stroke-width="2" ></line>
+			<line x1="108" y1="37" x2="109" y2="28" stroke="white" stroke-width="2" ></line>
+			<line x1="104" y1="31" x2="104" y2="23" stroke="white" stroke-width="2" ></line>
+			<line x1="98" y1="25" x2="96" y2="16" stroke="white" stroke-width="2" ></line>
+			<line x1="91" y1="20" x2="87" y2="12" stroke="white" stroke-width="2" ></line>
+			
+			<line x1="88" y1="18" x2="77" y2="13" stroke="white" stroke-width="2" ></line>
+		</g>
+		<pattern id="dnk1" patternTransform="rotate(20 0 0)" x="0" y="0" width="100%" fill-opacity="0.66" height="0.15">
+			<line stroke-width='1' stroke="url(#gradient2)" x1="0" y1="0" x2="200%" y2="0" />
+		</pattern>
+	</defs>
+
+	<circle cx="64" cy="64" r="62" stroke="white" stroke-width="4" fill="#16151a" />
+	
+	<use href="#branch" x="0" y="0"/>
+	<use href="#branch" x="0" y="0" color="red" transform="translate(128,0) scale(-1, 1)"/>
+	<circle cx="64" cy="64" r="42" stroke="none" fill="#66b1d0" />
+	
+	<path viewBox="0 0 128 128" d="M 57,23 C 57 55, 53 44, 23 70" stroke="#013c9a" fill="none" stroke-width="3" />
+	<path viewBox="0 0 128 128" d="M 28,45 C 29 66, 50 69, 39 98" stroke="#bf0011" fill="none" stroke-width="3" />
+	
+	<path viewBox="0 0 128 128" d="M 76,24 C 75 57, 100 38, 104 62" stroke="#013c9a" fill="none" stroke-width="3" />
+	<path viewBox="0 0 128 128" d="M 93,37 C 76 46, 69 68, 98 86" stroke="#bf0011" fill="none" stroke-width="3" />
+	
+	<circle cx="64" cy="64" r="42" stroke="#66b1d0" stroke-width="2" fill="none" />
+	
+	<polyline points="34,61 45,53 55,44 57,23 47,25 38,31 32,36 27,43" stroke="white" stroke-width='.1' fill="url(#dnk1)" />
+	
+	<polyline points="54,41 54,44 57,45 57,66 39,92 39,95 42,100 86,100 89,95 89,92 71,66 71,45 74,44 74,41 54,41 54,44" stroke="white" stroke-width='1' fill="#16151a" />
+	<polyline points="60,45 60,69 44,91 44,95 45,96 83,96 84,95 84,91 68,69 68,45" stroke="none" fill="white" />
+	<polyline points="72,79 56,79 46,93 82,93" stroke="none" fill="url(#gradient)" />
+</svg>

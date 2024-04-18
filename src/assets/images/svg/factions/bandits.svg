@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!--<circle cx="64" cy="64" r="50" stroke="#b60422" stroke-width="6" fill="none" />-->
+	<defs>
+		<path id="eye" viewBox="0 0 128 128" d=" M 28,65 C 34,59 43,60 49,63 C 51,64 57,68 57,74 C 57,80 52,83 50,84 C 47,86 43,86 43,86 C 43,86 34,89 31,87 C 25,84 22,72 28,65" stroke="none"  fill="white" stroke-width="1" />
+	</defs>
+	
+	<polyline stroke-width='1' stroke="white" points="83,49 68,44 57,52 43,34 31,33 50,5 58,2 70,2 81,5 83,16 75,26 83,49" />
+	<polyline stroke-width='1' stroke="white" points="28,16 21,25 15,40 15,64 17,83 15,86 15,97 28,106 39,107 39,123 48,127 56,127 64,126 73,127 81,127 90,123 90,107 101,106 114,97 114,86 112,83 114,64 114,40 109,27 102,17 92,10 78,25 83,50 68,46 57,55 39,35 23,41 28,16" />
+	<use x='0' y ='0' width="128" height="128" xlink:href='#eye'/>
+	<use x='0' y ='0' width="128" height="128" xlink:href='#eye' transform="translate(128, 0) scale(-1, 1)" />
+	<path d=" M 64,98 C 60,105 53,102 54,94 C 54,87 59,79 64,79 C 69,79 74,87 74,94 C 75,102 68,105 64,98" stroke="none"  fill="white" stroke-width="1" />
+</svg>
