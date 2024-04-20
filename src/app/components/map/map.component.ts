@@ -15,6 +15,7 @@ declare var markWidth: number;
   styleUrls: [
     './map.component.inventory.items.scss',
     './map.component.inventory.quest.scss',
+    './map.component.inventory.artefacts.scss',
     './map.component.inventory.weapon.scss',
     './map.component.inventory.hovers.scss',
     './map.component.scss'

@@ -11,7 +11,7 @@
   background-image: linear-gradient(#555656 1px, transparent 1px), linear-gradient(to right, #555656 1px, #090a0a 1px);
   background-size: 50px 50px;
   border-bottom: 1px solid #555656;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem
 }
 
 .inventory-item {
@@ -19,65 +19,65 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  position: relative;
+  position: relative
 }
 
-  .inventory-item:hover {
-      background-color: #4d4d4d;
-  }
+.inventory-item:hover {
+  background-color: #4d4d4d
+}
 
 .inventory-item-width-1 {
-  grid-column: span 1;
+  grid-column: span 1
 }
 
 .inventory-item-width-2 {
-  grid-column: span 2;
+  grid-column: span 2
 }
 
 .inventory-item-width-3 {
-  grid-column: span 3;
+  grid-column: span 3
 }
 
 .inventory-item-width-4 {
-  grid-column: span 4;
+  grid-column: span 4
 }
 
 .inventory-item-width-5 {
-  grid-column: span 5;
+  grid-column: span 5
 }
 
 .inventory-item-width-6 {
-  grid-column: span 6;
+  grid-column: span 6
 }
 
 .inventory-item-height-1 {
   grid-row: span 1;
-  height: 50px;
+  height: 50px
 }
 
 .inventory-item-height-2 {
   grid-row: span 2;
-  height: 100px;
+  height: 100px
 }
 
 .inventory-item-height-3 {
   grid-row: span 3;
-  height: 150px;
+  height: 150px
 }
 
 .inventory-item-height-4 {
   grid-row: span 4;
-  height: 200px;
+  height: 200px
 }
 
 .inventory-item-height-5 {
   grid-row: span 5;
-  height: 250px;
+  height: 250px
 }
 
 .inventory-item-height-6 {
   grid-row: span 6;
-  height: 300px;
+  height: 300px
 }
 
 .inventory-item-image {
@@ -85,22 +85,30 @@
   min-height: 100%;
   max-height: 100%;
   object-fit: cover;
-  background-image: url(/assets/images/items/ui_icon_equipment.png);
+  background-image: url(/assets/images/items/ui_icon_equipment.png)
+}
+
+.item-additional-info {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  height: 25px;
+  align-items: center;
+  left: 5px;
+  pointer-events: none
 }
 
 .inventory-item-count {
-  position: absolute;
-  color: white;
   border: 1px solid white;
   border-radius: 3px;
   padding-inline: 3px;
-  font-size: 0.8rem;
-  background-color: rgba(16, 20, 8, 1);
+  font-size: .8rem;
+  background-color: #101408
 }
 
 .inventory-item-percentage {
   position: absolute;
-  color: white;
+  color: #fff;
   border: 1px solid white;
   border-radius: 3px;
   padding-inline: 3px;
@@ -109,11 +117,11 @@
 }
 
 .bread {
-  background-position: 474px 1598px;
+  background-position: 474px 1598px
 }
 
 .kolbasa {
-  background-position: 74px 1448px;
+  background-position: 74px 1448px
 }
 
 .conserva {
@@ -305,71 +313,70 @@
 }
 
 .af_dummy_battery {
-  background-position: left -400px top -200px;
 }
 
 .af_dummy_battery.shoc {
-  background-position: left -850px top -1350px;
+  background-position: left -850px top -1350px
 }
 
 .af_dummy_dummy {
-  background-position: left -950px top -300px;
+  background-position: left -950px top -300px
 }
 
 .af_dummy_dummy.shoc {
-  background-position: left -800px top -1350px;
+  background-position: left -800px top -1350px
 }
 
 .af_ice {
-  background-position: left -650px top -50px;
+  background-position: left -650px top -50px
 }
 
 .af_compass {
-  background-position: left -600px top -50px;
+  background-position: left -600px top -50px
 }
 
 .af_oasis_heart {
-  background-position: left -300px top -200px;
+  background-position: left -300px top -200px
 }
 
 .jup_b1_half_artifact {
-  background-position: left -350px top -200px;
+  background-position: left -350px top -200px
 }
 
 .af_quest_b14_twisted {
-  background-position: left -450px top -50px;
+  background-position: left -450px top -50px
 }
 
 .af_drops {
-  background-position: left -750px top -1250px;
+  background-position: left -750px top -1250px
 }
 
 .af_ameba_slime {
-  background-position: left -800px top -1150px;
+  background-position: left -800px top -1150px
 }
 
 .af_ameba_slug {
-  background-position: left -750px top -1150px;
+  background-position: left -750px top -1150px
 }
 
 .af_ameba_mica {
-  background-position: left -700px top -1150px;
+  background-position: left -700px top -1150px
 }
 
 .af_dummy_spring {
-  background-position: left -750px top -1300px;
+  background-position: left -750px top -1300px
 }
 
 .af_dummy_pellicle {
-  background-position: left -750px top -1200px;
+  background-position: left -750px top -1200px
 }
 
 .af_rusty_thorn {
-  background-position: left -700px top -1250px;
+  background-position: left -700px top -1250px
 }
 
 .af_rusty_kristall {
-  background-position: left -700px top -1200px;
+  background-position: left -700px top -1200px
 }
 
 .af_rusty_sea-urchin {
@@ -377,11 +384,11 @@
 }
 
 .bandit_cool_outfit {
-  background-position: left 0 top -900px;
+  background-position: left 0 top -900px
 }
 
 .stalker_outfit {
-  background-position: 724px 1298px;
+  background-position: 724px 1298px
 }
 
 .svoboda_light_outfit {
@@ -389,87 +396,95 @@
 }
 
 .dolg_outfit {
-  background-position: left -600px top -800px;
+  background-position: left -600px top -800px
 }
 
 .scientific_outfit {
-  background-position: 324px 1248px;
+  background-position: 324px 1248px
 }
 
 .cs_heavy_outfit {
-  background-position: 624px 1098px;
+  background-position: 624px 1098px
 }
 
 .svoboda_heavy_outfit {
-  background-position: left -400px top -750px;
+  background-position: left -400px top -750px
+}
+
+.svoboda_heavy_outfit.shoc {
+  background-position: left -900px top -1100px
 }
 
 .specops_outfit {
-  background-position: left -500px top -650px;
+  background-position: left -500px top -650px
 }
 
 .military_outfit {
-  background-position: left -900px top -850px;
+  background-position: left -900px top -850px
+}
+
+.military_outfit.shoc {
+  background-position: left -900px top -1250px
 }
 
 .dolg_heavy_outfit {
-  background-position: left -800px top -800px;
+  background-position: left -800px top -800px
 }
 
 .exo_outfit {
-  background-position: 324px 1398px;
+  background-position: 324px 1398px
 }
 
 .novice_outfit {
-  background-position: left -400px top -1350px;
+  background-position: left -400px top -1350px
 }
 
 .bandit_outfit {
-  background-position: left -400px top -1450px;
+  background-position: left -400px top -1450px
 }
 
 .cs_light_outfit {
-  background-position: left -600px top -1350px;
+  background-position: left -600px top -1350px
 }
 
 .svoboda_exo_outfit {
-  background-position: left -700px top -1350px;
+  background-position: left -700px top -1350px
 }
 
 .killer_outfit {
-  background-position: left -200px top -1350px;
+  background-position: left -200px top -1350px
 }
 
 .monolit_outfit {
-  background-position: left -300px top -1350px;
+  background-position: left -300px top -1350px
 }
 
 .dolg_scientific_outfit {
-  background-position: left -500px top -1350px;
+  background-position: left -500px top -1350px
 }
 
 .ecolog_outfit {
-  background-position: left 0px top -1350px;
+  background-position: left 0px top -1350px
 }
 
 .protection_outfit {
-  background-position: left -100px top -1350px;
+  background-position: left -100px top -1350px
 }
 
 .helm_respirator {
-  background-position: left -200px top -900px;
+  background-position: left -200px top -900px
 }
 
 .helm_hardhat {
-  background-position: left -300px top -1000px;
+  background-position: left -300px top -1000px
 }
 
 .helm_protective {
-  background-position: left -200px top -1000px;
+  background-position: left -200px top -1000px
 }
 
 .helm_tactic {
-  background-position: left -100px top -1000px;
+  background-position: left -100px top -1000px
 }
 
 .helm_battle {
@@ -491,71 +506,43 @@
 .detector_scientific {
   background-position: left -950px top -1050px;
 }
-
-.toolkit_1 {
-  background-position: left -800px top -700px;
 }
 
-.toolkit_2 {
-  background-position: left -800px top -750px;
-}
 
 .toolkit_3 {
-  background-position: left -600px top -1200px;
-}
-
 .flesh_up_ac_mp5, .flesh_up_ac_wincheaster1300, .flesh_up_bd_wincheaster1300, .flesh_up_ac_spas12, .flesh_up_bd_desert_eagle, .flesh_up_ac_desert_eagle {
   background-position: left -550px top -1100px;
-}
-
-.flesh_up_ab_pkm, .flesh_up_cd_pkm, .flesh_up_fh_scientific_outfit, .flesh_up_aceg_scientific_outfit, .flesh_up_bdfh_scientific_outfit, .flesh_up_ab_svu, .flesh_up_cd_svu {
-  background-position: left -550px top -1150px;
-}
-
-.quest_case_01, .quest_case_02 {
   background-position: left -400px top -900px;
 }
 
 .ammo_9x39_sp5.shoc {
-  background-position: left -900px top -550px;
-}
-
-.decoder {
-  background-position: left -600px top -1250px;
+  background-position: left -900px top -550px
 }
 
 .jup_b200_tech_materials_textolite {
-  background-position: left -100px top -950px;
+  background-position: left -100px top -950px
 }
 
 .jup_b200_tech_materials_acetone {
-  background-position: left -100px top -900px;
+  background-position: left -100px top -900px
 }
 
 .jup_b200_tech_materials_capacitor {
-  background-position: left -550px top -1050px;
+  background-position: left -550px top -1050px
 }
 
 .jup_b200_tech_materials_transistor {
-  background-position: left -500px top -1050px;
+  background-position: left -500px top -1050px
 }
 
 .jup_b200_tech_materials_wire {
-  background-position: left -700px top -950px;
+  background-position: left -700px top -950px
 }
 
-.jup_b205_sokolov_note {
-  background-position: left -600px top -1100px;
+.wpn_addon_scope_x2\.7 {
+  background-position: left -500px top -800px
 }
 
-.zat_a23_gauss_rifle_docs {
-  background-position: left -800px top -1050px;
-}
-
-.zat_b39_joker_pda {
-  background-position: left -300px top -650px;
-}
-
-.zat_b40_notebook {
-  background-position: left -350px top -650px;
+.wpn_addon_scope_susat_x1\.6 {
+  background-position: left -500px top -900px
 }
