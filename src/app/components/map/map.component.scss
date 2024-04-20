@@ -1,0 +1,106 @@
+#map-wrapper {
+  position: relative;
+  border: 1px solid white;
+}
+
+.leaflet-tooltip {
+  border: 11px solid !important;
+  border-image: url(/assets/images/svg/interface/map-info-solid.svg) 11 stretch stretch !important;
+  border-image-slice: 11 fill !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  display: inline-block;
+  max-width: 296px;
+  min-width: 268px;
+  height: auto;
+  color: white !important;
+}
+
+.leaflet-tooltip-right::before {
+  display: none;
+}
+
+.leaflet-tooltip-left::before {
+  display: none;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup-content-wrapper {
+  border: 11px solid !important;
+  border-image: url(/assets/images/svg/interface/map-info-solid.svg) 11 stretch stretch !important;
+  border-image-slice: 11 fill !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  display: inline-block;
+}
+
+.leaflet-popup-close-button {
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+.tooltip-text {
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.popup.header {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.popup.description {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.anomaly-section-info {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.leaflet-control-layers {
+  background-color: black !important;
+  color: white !important;
+}
+
+.leaflet-control-zoom-in {
+background-color: rgba(9,10,10,1) !important;
+}
+
+.leaflet-control-zoom-out {
+background-color: rgba(9,10,10,1) !important;
+}
+
+.leaflet-bar a.leaflet-disabled {
+color: rgba(9,10,10,1) !important;
+}
+
+.leaflet-bar a {
+color: white !important;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+  border: 2px solid rgb(255 255 255) !important;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.button {
+  height: 25px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-inline: 1rem;
+}

@@ -11,3 +11,19 @@
 body {
   background-color: #090a0a;
 }
+
+.stalker-mark-4 {
+  width:calc(var(--map-mark-width) * 4) !important;
+}
+
+.stalker-mark-2 {
+  width:calc(var(--map-mark-width) * 2) !important;
+}
+
+.stalker-mark-1\.5 {
+  width:calc(var(--map-mark-width) * 1.5) !important;
+}
+
+.stalker-mark {
+  width:calc(var(--map-mark-width)) !important;
+}

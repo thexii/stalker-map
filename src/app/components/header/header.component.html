@@ -5,28 +5,28 @@
         <div class="header-nav-items">
           <div class="header-nav-item-left"></div>
           <a class="header-nav-item header-nav-item-full" href="/map/shoc">
-            <span>Тіні Чорнобиля</span>
+            <span>{{ 'shoc' | translate }}</span>
           </a>
           <a class="header-nav-item header-nav-item-full" href="/map/cs">
-            <span>Чисте небо</span>
+            <span>{{ 'cs' | translate }}</span>
           </a>
           <a class="header-nav-item header-nav-item-full" href="/map/cop">
-            <span>Поклик Прип'яті</span>
+            <span>{{ 'cop' | translate }}</span>
           </a>
           <a class="header-nav-item header-nav-item-short" href="/map/shoc">
-            <span>ТЧ</span>
+            <span>{{ 'shocShort' | translate }}</span>
           </a>
           <a class="header-nav-item header-nav-item-short" href="/map/cs">
-            <span>ЧН</span>
+            <span>{{ 'csShort' | translate }}</span>
           </a>
           <a class="header-nav-item header-nav-item-short" href="/map/cop">
-            <span>ПП</span>
+            <span>{{ 'copShort' | translate }}</span>
           </a>
           <div class="header-nav-item-right">
-            <select class="language-selector ng-untouched ng-pristine ng-valid">
-              <option class="language-selector-option" value="ua">ua</option>
-              <option class="language-selector-option" value="en">en</option>
-              <option class="language-selector-option" value="ru">ru</option>
+            <select class="language-selector" (change)="changeLanguage($event)">
+              <ng-container *ngFor="let language of avaliableLanguages">
+                <option class="language-selector-option" [value]="language" [selected]="selectedLanguage == language">{{language}}</option>
+              </ng-container>
             </select>
           </div>
         </div>
