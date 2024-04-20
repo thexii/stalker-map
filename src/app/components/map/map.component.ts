@@ -12,7 +12,13 @@ declare var markWidth: number;
   standalone: true,
   imports: [HeaderComponent],
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.inventory.items.scss', './map.component.inventory.weapon.scss', './map.component.inventory.hovers.scss', './map.component.scss'],
+  styleUrls: [
+    './map.component.inventory.items.scss',
+    './map.component.inventory.quest.scss',
+    './map.component.inventory.weapon.scss',
+    './map.component.inventory.hovers.scss',
+    './map.component.scss'
+  ],
   encapsulation: ViewEncapsulation.None,
 })
 
@@ -120,6 +126,46 @@ export class MapComponent {
     if (this.gamedata.anomalyZones && this.gamedata.anomalyZones.length > 0 ) {
       this.addAnomalyZones();
     }
+
+    let layerControl = L.control.layers(null, this.layers).addTo(this.map)
+
+    this.map.on('drag', () => {
+      this.map.panInsideBounds(bounds, { animate: false });
+    });
+
+    let searchLayers = L.featureGroup(Object.values(this.layers));
+
+    let searchContoller = L.control.search({
+        layer: searchLayers,
+        initial: false,
+        propertyName: 'search',
+        delayType: 0,
+        collapsed: false,
+        autoCollapseTime: 10000,
+        buildTip: function (text: string, val: any) {
+            let type = val.layer.properties.markType;
+            let name = val.layer.properties.name;
+            let locationName = val.layer.properties.locationName;
+            return '<a href="#"><span class="stalker-search-item ' + type + '">' + name + '</span> <b>(' + locationName + ')</b></a>';
+        }
+    });
+
+    searchContoller.on('search:locationfound', function (e: { layer: { openPopup: () => void; }; }) {
+        e.layer.openPopup();
+    });
+
+    this.map.addControl(searchContoller);
+
+    L.control.zoom({
+        position: 'bottomright'
+    }).addTo(this.map);
+
+    let carousel = document.getElementById("layers-control") as HTMLElement;
+
+    carousel.addEventListener("wheel", function (e) {
+        if (e.deltaY > 0) carousel.scrollLeft += 100;
+        else carousel.scrollLeft -= 100;
+    });
   }
 
   private addLocations() {
@@ -490,7 +536,10 @@ export class MapComponent {
 
     try {
       this.addToCanvas(anomalies, anomalyZoneIcon);
-      this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
+
+      if (anomaliesNoArt.features.length > 0) {
+        this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
+      }
     }
     catch (e) {
         console.log(e);

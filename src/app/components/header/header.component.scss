@@ -249,3 +249,10 @@ html {
   .header-nav-item-games {
   display: flex;
 }
+
+.header-nav-item > span {
+  align-self: center;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}

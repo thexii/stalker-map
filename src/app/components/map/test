@@ -1,0 +1,906 @@
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: repeat(auto-fit, 50px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  gap: 0px;
+  grid-auto-flow: dense;
+  background-color: #e5e5f7;
+  background-image: linear-gradient(#555656 1px, transparent 1px), linear-gradient(to right, #555656 1px, #090a0a 1px);
+  background-size: 50px 50px;
+  border-bottom: 1px solid #555656;
+  margin-bottom: .5rem
+}
+
+.inventory-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative
+}
+
+.inventory-item:hover {
+  background-color: #4d4d4d
+}
+
+.inventory-item-width-1 {
+  grid-column: span 1
+}
+
+.inventory-item-width-2 {
+  grid-column: span 2
+}
+
+.inventory-item-width-3 {
+  grid-column: span 3
+}
+
+.inventory-item-width-4 {
+  grid-column: span 4
+}
+
+.inventory-item-width-5 {
+  grid-column: span 5
+}
+
+.inventory-item-width-6 {
+  grid-column: span 6
+}
+
+.inventory-item-height-1 {
+  grid-row: span 1;
+  height: 50px
+}
+
+.inventory-item-height-2 {
+  grid-row: span 2;
+  height: 100px
+}
+
+.inventory-item-height-3 {
+  grid-row: span 3;
+  height: 150px
+}
+
+.inventory-item-height-4 {
+  grid-row: span 4;
+  height: 200px
+}
+
+.inventory-item-height-5 {
+  grid-row: span 5;
+  height: 250px
+}
+
+.inventory-item-height-6 {
+  grid-row: span 6;
+  height: 300px
+}
+
+.inventory-item-image {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  background-image: url(/assets/images/items/ui_icon_equipment.png)
+}
+
+.item-additional-info {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  height: 25px;
+  align-items: center;
+  left: 5px;
+  pointer-events: none
+}
+
+.inventory-item-count {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding-inline: 3px;
+  font-size: .8rem;
+  background-color: #101408
+}
+
+.inventory-item-percentage {
+  position: absolute;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding-inline: 3px;
+  font-size: .8rem;
+  background-color: #101408
+}
+
+.inventory-item-upgrade {
+  background-image: url(/assets/images/items/upgrade.svg);
+  background-repeat: round;
+  width: 25px;
+  height: 100%;
+  opacity: .75
+}
+
+.wpn_abakan {
+  background-position: 724px 1948px
+}
+
+.wpn_ak74 {
+  background-position: 774px 1798px
+}
+
+.wpn_ak74u {
+  background-position: 1024px 1248px
+}
+
+.wpn_fn2000 {
+  background-position: 774px 1598px
+}
+
+.wpn_g36 {
+  background-position: 1024px 1548px
+}
+
+.wpn_groza {
+  background-position: 1024px 1348px
+}
+
+.wpn_l85 {
+  background-position: 1024px 1448px
+}
+
+.wpn_lr300 {
+  background-position: 1024px 1748px
+}
+
+.wpn_mp5 {
+  background-position: 774px 1498px
+}
+
+.wpn_sig550 {
+  background-position: 774px 1698px
+}
+
+.wpn_val {
+  background-position: 274px 1848px
+}
+
+.wpn_beretta {
+  background-position: 824px 798px
+}
+
+.wpn_colt1911 {
+  background-position: 624px 798px
+}
+
+.wpn_desert_eagle {
+  background-position: 724px 798px
+}
+
+.wpn_fort {
+  background-position: 1024px 798px
+}
+
+.wpn_hpsa {
+  background-position: 924px 748px
+}
+
+.wpn_pb {
+  background-position: 274px 1748px
+}
+
+.wpn_pm {
+  background-position: 824px 748px
+}
+
+.wpn_sig220 {
+  background-position: 774px 748px
+}
+
+.wpn_usp {
+  background-position: left -100px top -1250px
+}
+
+.wpn_walther {
+  background-position: 1024px 748px
+}
+
+.wpn_bm16,
+.hunters_toz {
+  background-position: 724px 1998px
+}
+
+.wpn_protecta {
+  background-position: 1024px 898px
+}
+
+.wpn_spas12 {
+  background-position: 424px 1898px
+}
+
+.wpn_toz34 {
+  background-position: 424px 1948px
+}
+
+.wpn_wincheaster1300 {
+  background-position: 524px 1798px
+}
+
+.grenade_f1 {
+  background-position: 574px 1598px
+}
+
+.grenade_rgd5 {
+  background-position: 524px 1598px
+}
+
+.wpn_gauss {
+  background-position: 524px 1748px
+}
+
+.wpn_svd {
+  background-position: 0 0
+}
+
+.wpn_svu {
+  background-position: 1024px 1948px
+}
+
+.wpn_vintorez {
+  background-position: 0 1848px
+}
+
+.wpn_pkm {
+  background-position: 0 248px
+}
+
+.wpn_rg-6 {
+  background-position: 1024px 1648px
+}
+
+.wpn_rpg7 {
+  background-position: 724px 2048px
+}
+
+.ammo_9x18_fmj {
+  background-position: 474px 1448px
+}
+
+.ammo_9x18_pmm {
+  background-position: 424px 1448px
+}
+
+.ammo_9x19_fmj {
+  background-position: 274px 1448px
+}
+
+.ammo_9x19_pbp {
+  background-position: 324px 1448px
+}
+
+.ammo_pkm_100 {
+  background-position: 224px 1398px
+}
+
+.ammo_9x39_pab9 {
+  background-position: 174px 1548px
+}
+
+.ammo_9x39_ap {
+  background-position: 774px 1448px
+}
+
+.ammo_12x70_buck {
+  background-position: 374px 1598px
+}
+
+.ammo_12x76_zhekan {
+  background-position: 474px 1548px
+}
+
+.ammo_og-7b {
+  background-position: 274px 1098px
+}
+
+.ammo_vog-25 {
+  background-position: 74px 1598px
+}
+
+.ammo_m209 {
+  background-position: 774px 1398px
+}
+
+.ammo_9x39_sp5 {
+  background-position: left -850px top -500px
+}
+
+.ammo_12x76_dart {
+  background-position: 374px 1548px
+}
+
+.ammo_vog-25p {
+  background-position: 74px 1548px
+}
+
+.ammo_11\\.43x23_fmj {
+  background-position: left -450px top -600px
+}
+
+.ammo_11\\.43x23_hydro {
+  background-position: left -350px top -600px
+}
+
+.ammo_5\\.56x45_ss190 {
+  background-position: left -700px top -550px
+}
+
+.ammo_5\\.45x39_fmj {
+  background-position: left -800px top -550px
+}
+
+.ammo_5\\.45x39_ap {
+  background-position: left -600px top -550px
+}
+
+.ammo_5\\.56x45_ap {
+  background-position: left -500px top -550px
+}
+
+.ammo_7\\.62x54_7h1 {
+  background-position: left -850px top -450px
+}
+
+.ammo_7\\.62x54_ap {
+  background-position: left -750px top -500px
+}
+
+.ammo_7\\.62x54_7h14 {
+  background-position: left -850px top -450px
+}
+
+.ammo_gauss {
+  background-position: left -200px top -700px
+}
+
+.bread {
+  background-position: 474px 1598px
+}
+
+.kolbasa {
+  background-position: 74px 1448px
+}
+
+.conserva {
+  background-position: 574px 1398px
+}
+
+.vodka {
+  background-position: 774px 1948px
+}
+
+.energy_drink {
+  background-position: 74px 1698px
+}
+
+.bandage {
+  background-position: 874px 1148px
+}
+
+.antirad {
+  background-position: 124px 1448px
+}
+
+.medkit {
+  background-position: 724px 1348px
+}
+
+.medkit_army {
+  background-position: 524px 1548px
+}
+
+.medkit_scientic {
+  background-position: 424px 1598px
+}
+
+.drug_booster {
+  background-position: 124px 1698px
+}
+
+.drug_coagulant {
+  background-position: 374px 1448px
+}
+
+.drug_psy_blockade {
+  background-position: 624px 1498px
+}
+
+.drug_antidot {
+  background-position: 574px 1498px
+}
+
+.drug_radioprotector {
+  background-position: 574px 1548px
+}
+
+.drug_anabiotic {
+  background-position: 824px 1648px
+}
+
+.af_medusa {
+  background-position: 574px 1848px
+}
+
+.af_cristall_flower {
+  background-position: left -550px top -200px
+}
+
+.af_cristall_flower.shoc {
+  background-position: left -850px top -1150px
+}
+
+.af_night_star {
+  background-position: left -500px top -200px
+}
+
+.af_night_star.shoc {
+  background-position: left -800px top -1400px
+}
+
+.af_vyvert {
+  background-position: left -700px top 0px
+}
+
+.af_vyvert.shoc {
+  background-position: left -850px top -1200px
+}
+
+.af_gravi {
+  background-position: left -750px top 0px
+}
+
+.af_gravi.shoc {
+  background-position: left -800px top -1250px
+}
+
+.af_gold_fish {
+  background-position: left -800px top 0px
+}
+
+.af_gold_fish.shoc {
+  background-position: left -500px top -1500px
+}
+
+.af_cristall {
+  background-position: left -700px top -200px
+}
+
+.af_cristall.shoc {
+  background-position: left -850px top -1300px
+}
+
+.af_fireball {
+  background-position: left -650px top -200px
+}
+
+.af_dummy_glassbeads {
+  background-position: left -800px top -50px
+}
+
+.af_dummy_glassbeads.shoc {
+  background-position: left -600px top -1300px
+}
+
+.af_eye {
+  background-position: left -600px top -200px
+}
+
+.af_fire {
+  background-position: left -550px top -50px
+}
+
+.af_blood {
+  background-position: left -850px top 0px
+}
+
+.af_blood.shoc {
+  background-position: left -850px top -1250px
+}
+
+.af_mincer_meat {
+  background-position: left -900px top -800px
+}
+
+.af_mincer_meat.shoc {
+  background-position: left -800px top -1300px
+}
+
+.af_soul {
+  background-position: left -950px top -800px
+}
+
+.af_soul.shoc {
+  background-position: left -800px top -1200px
+}
+
+.af_fuzz_kolobok {
+  background-position: left -850px top -50px
+}
+
+.af_fuzz_kolobok.shoc {
+  background-position: left -650px top -1300px
+}
+
+.af_baloon {
+  background-position: left -600px top 0px
+}
+
+.af_glass {
+  background-position: left -650px top 0px
+}
+
+.af_electra_sparkler {
+  background-position: left -250px top -200px
+}
+
+.af_electra_sparkler.shoc {
+  background-position: left -850px top -1450px
+}
+
+.af_electra_flash {
+  background-position: left -500px top -50px
+}
+
+.af_electra_flash.shoc {
+  background-position: left -800px top -1450px
+}
+
+.af_electra_moonlight {
+  background-position: left -250px top -150px
+}
+
+.af_electra_moonlight.shoc {
+  background-position: left -850px top -1400px
+}
+
+.af_dummy_battery {
+  background-position: left -400px top -200px
+}
+
+.af_dummy_battery.shoc {
+  background-position: left -850px top -1350px
+}
+
+.af_dummy_dummy {
+  background-position: left -950px top -300px
+}
+
+.af_dummy_dummy.shoc {
+  background-position: left -800px top -1350px
+}
+
+.af_ice {
+  background-position: left -650px top -50px
+}
+
+.af_compass {
+  background-position: left -600px top -50px
+}
+
+.af_oasis_heart {
+  background-position: left -300px top -200px
+}
+
+.jup_b1_half_artifact {
+  background-position: left -350px top -200px
+}
+
+.af_quest_b14_twisted {
+  background-position: left -450px top -50px
+}
+
+.af_drops {
+  background-position: left -750px top -1250px
+}
+
+.af_ameba_slime {
+  background-position: left -800px top -1150px
+}
+
+.af_ameba_slug {
+  background-position: left -750px top -1150px
+}
+
+.af_ameba_mica {
+  background-position: left -700px top -1150px
+}
+
+.af_dummy_spring {
+  background-position: left -750px top -1300px
+}
+
+.af_dummy_pellicle {
+  background-position: left -750px top -1200px
+}
+
+.af_rusty_thorn {
+  background-position: left -700px top -1250px
+}
+
+.af_rusty_kristall {
+  background-position: left -700px top -1200px
+}
+
+.af_rusty_sea-urchin {
+  background-position: left -700px top -1300px
+}
+
+.bandit_cool_outfit {
+  background-position: left 0 top -900px
+}
+
+.stalker_outfit {
+  background-position: 724px 1298px
+}
+
+.svoboda_light_outfit {
+  background-position: left -600px top -650px
+}
+
+.dolg_outfit {
+  background-position: left -600px top -800px
+}
+
+.scientific_outfit {
+  background-position: 324px 1248px
+}
+
+.cs_heavy_outfit {
+  background-position: 624px 1098px
+}
+
+.svoboda_heavy_outfit {
+  background-position: left -400px top -750px
+}
+
+.svoboda_heavy_outfit.shoc {
+  background-position: left -900px top -1100px
+}
+
+.specops_outfit {
+  background-position: left -500px top -650px
+}
+
+.military_outfit {
+  background-position: left -900px top -850px
+}
+
+.military_outfit.shoc {
+  background-position: left -900px top -1250px
+}
+
+.dolg_heavy_outfit {
+  background-position: left -800px top -800px
+}
+
+.exo_outfit {
+  background-position: 324px 1398px
+}
+
+.novice_outfit {
+  background-position: left -400px top -1350px
+}
+
+.bandit_outfit {
+  background-position: left -400px top -1450px
+}
+
+.cs_light_outfit {
+  background-position: left -600px top -1350px
+}
+
+.svoboda_exo_outfit {
+  background-position: left -700px top -1350px
+}
+
+.killer_outfit {
+  background-position: left -200px top -1350px
+}
+
+.monolit_outfit {
+  background-position: left -300px top -1350px
+}
+
+.dolg_scientific_outfit {
+  background-position: left -500px top -1350px
+}
+
+.ecolog_outfit {
+  background-position: left 0px top -1350px
+}
+
+.protection_outfit {
+  background-position: left -100px top -1350px
+}
+
+.helm_respirator {
+  background-position: left -200px top -900px
+}
+
+.helm_hardhat {
+  background-position: left -300px top -1000px
+}
+
+.helm_protective {
+  background-position: left -200px top -1000px
+}
+
+.helm_tactic {
+  background-position: left -100px top -1000px
+}
+
+.helm_battle {
+  background-position: left 0 top -1000px
+}
+
+.wpn_addon_scope {
+  background-position: left -500px top -850px
+}
+
+.wpn_addon_scope_detector {
+  background-position: left -200px top -800px
+}
+
+.wpn_addon_scope_night {
+  background-position: left -200px top -850px
+}
+
+.wpn_addon_scope_susat {
+  background-position: left -550px top -900px
+}
+
+.wpn_addon_scope_susat_custom {
+  background-position: left -750px top -1100px
+}
+
+.wpn_addon_scope_susat_dusk {
+  background-position: left -250px top -750px
+}
+
+.wpn_addon_scope_susat_night {
+  background-position: left -700px top -1100px
+}
+
+.wpn_addon_silencer,
+.wpn_addon_silencer_rifle {
+  background-position: left -900px top -50px
+}
+
+.wpn_addon_grenade_launcher {
+  background-position: left -900px top 0px
+}
+
+.wpn_addon_grenade_launcher_m203 {
+  background-position: left -850px top -150px
+}
+
+.wpn_addon_scope_4x {
+  background-position: left -900px top -100px
+}
+
+.detector_simple {
+  background-position: left -450px top -700px
+}
+
+.detector_advanced {
+  background-position: left -750px top -350px
+}
+
+.detector_elite {
+  background-position: left -250px top -700px
+}
+
+.detector_scientific {
+  background-position: left -950px top -1050px
+}
+
+.toolkit_1 {
+  background-position: left -800px top -700px
+}
+
+.toolkit_2 {
+  background-position: left -800px top -750px
+}
+
+.toolkit_3 {
+  background-position: left -600px top -1200px
+}
+
+.flesh_up_ac_mp5,
+.flesh_up_ac_wincheaster1300,
+.flesh_up_bd_wincheaster1300,
+.flesh_up_ac_spas12,
+.flesh_up_bd_desert_eagle,
+.flesh_up_ac_desert_eagle {
+  background-position: left -550px top -1100px
+}
+
+.flesh_up_ab_pkm,
+.flesh_up_cd_pkm,
+.flesh_up_fh_scientific_outfit,
+.flesh_up_aceg_scientific_outfit,
+.flesh_up_bdfh_scientific_outfit,
+.flesh_up_ab_svu,
+.flesh_up_cd_svu {
+  background-position: left -550px top -1150px
+}
+
+.quest_case_01,
+.quest_case_02 {
+  background-position: left -400px top -900px
+}
+
+.ammo_9x39_sp5.shoc {
+  background-position: left -900px top -550px
+}
+
+.decoder {
+  background-position: left -600px top -1250px
+}
+
+.jup_b200_tech_materials_textolite {
+  background-position: left -100px top -950px
+}
+
+.jup_b200_tech_materials_acetone {
+  background-position: left -100px top -900px
+}
+
+.jup_b200_tech_materials_capacitor {
+  background-position: left -550px top -1050px
+}
+
+.jup_b200_tech_materials_transistor {
+  background-position: left -500px top -1050px
+}
+
+.jup_b200_tech_materials_wire {
+  background-position: left -700px top -950px
+}
+
+.wpn_addon_scope_x2\\.7 {
+  background-position: left -500px top -800px
+}
+
+.wpn_addon_scope_susat_x1\\.6 {
+  background-position: left -500px top -900px
+}
+
+.zat_a23_gauss_rifle_docs {
+  background-position: left -800px top -1050px
+}
+
+.zat_b39_joker_pda,
+.zat_b44_barge_pda,
+.device_pda_old,
+.device_pda_fang {
+  background-position: left -300px top -650px
+}
+
+.zat_b40_notebook {
+  background-position: left -350px top -650px
+}
+
+.pri_decoder_documents {
+  background-position: left -900px top -1450px
+}
+
+.mutant_psevdodog_tail {
+  background-position: left -900px top -1400px
+}
+
+.jup_b205_sokolov_note {
+  background-position: left -600px top -1100px
+}
