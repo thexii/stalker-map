@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Point } from '../../models/point.model';
 
@@ -10,9 +10,10 @@ declare var markWidth: number;
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, TranslateModule],
   templateUrl: './map.component.html',
   styleUrls: [
+    './map.component.inventory.base.scss',
     './map.component.inventory.items.scss',
     './map.component.inventory.quest.scss',
     './map.component.inventory.artefacts.scss',
@@ -50,13 +51,15 @@ export class MapComponent {
   }
 
   private async ngOnInit(): Promise<void> {
-    await this.addScript("/assets/libs/leaflet/index.js");
-    await this.addScript("/assets/libs/leaflet/leaflet.js");
-    await this.addScript("https://unpkg.com/rbush@3.0.1/rbush.js");
-    await this.addScript("/assets/libs/leaflet/plugins/leaflet-markers-canvas.js");
-    await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search.js");
-    await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js");
-    console.log(L);
+    if (typeof L === 'undefined') {
+      await this.addScript("/assets/libs/leaflet/index.js");
+      await this.addScript("/assets/libs/leaflet/leaflet.js");
+      await this.addScript("https://unpkg.com/rbush@3.0.1/rbush.js");
+      await this.addScript("/assets/libs/leaflet/plugins/leaflet-markers-canvas.js");
+      await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search.js");
+      await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js");
+      console.log("Leaflet is loaded");
+    }
 
     await Promise.all([this.addStyle("/assets/libs/leaflet/leaflet.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css")]);
 
@@ -75,13 +78,16 @@ export class MapComponent {
       )
   }
 
+  private async ngOnDestroy(): Promise<void> {
+    if (this.map) {
+      console.log("remove");
+      this.map.remove();
+      this.map = null;
+    }
+  }
+
   private loadMap(gameData: any, gameConfig: any): void {
-    console.log(gameData);
-    console.log(gameConfig);
-
     this.gamedata = gameData;
-    console.log("Leaflet is loaded");
-
     this.map = L.map("map", {
       center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
       zoom: 1,
@@ -166,6 +172,23 @@ export class MapComponent {
     carousel.addEventListener("wheel", function (e) {
         if (e.deltaY > 0) carousel.scrollLeft += 100;
         else carousel.scrollLeft -= 100;
+    });
+
+    this.route.queryParams.subscribe((h: any)=>{
+        if (h.lat != null && h.lng != null) {
+            if (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
+                animate: !0,
+                duration: .3
+            }),
+            h.type) {
+                let m = this.layers[this.translate.instant(h.type)].markers.find((y: { _latlng: { lat: number; lng: number; }; })=>Math.abs(y._latlng.lat - h.lat) < 1 && Math.abs(y._latlng.lng - h.lng) < 1);
+                if (m) {
+                    m.fireEvent("click");
+                    return
+                }
+            }
+        } else
+            this.map.setView([this.gamedata.heightInPixels / 2, this.gamedata.widthInPixels / 2])
     });
   }
 
@@ -456,7 +479,10 @@ export class MapComponent {
     return html;
   }
 
-  private createStashPopup(stash: { properties: { name: any; description: any; items: any[]; }; }) {
+  private createStashPopup(stash: {
+    _latlng: any; properties: {
+    typeUniqueName: any; name: any; description: any; items: any[];
+}; }) {
       let descHtml = `<div><div class='popup header'>${stash.properties.name}</div><div class='popup description'>${stash.properties.description}</div></div>`
 
       let inventoryItemsHtml = '<div class="inventory">';
@@ -468,15 +494,25 @@ export class MapComponent {
       for (let stuffItem of sortedItems) {
           inventoryItemsHtml += `<div class="inventory-item inventory-item-width-${stuffItem.item.width} inventory-item-height-${stuffItem.item.height}">`;
 
-          if (stuffItem.count > 1) {
-              inventoryItemsHtml += `<div class="inventory-item-count">${stuffItem.count}</div>`;
+          if (stuffItem.count > 1 || stuffItem.isUnique) {
+              inventoryItemsHtml += '<div class="item-additional-info">';
+
+              if (stuffItem.count > 1) {
+                inventoryItemsHtml += `<div class="inventory-item-count">${stuffItem.count}</div>`;
+              }
+
+              if (stuffItem.isUnique) {
+                inventoryItemsHtml += `<div class="inventory-item-upgrade"></div>`;
+              }
+
+              inventoryItemsHtml += '</div>';
           }
 
           inventoryItemsHtml += `<div class="inventory-item-image ${stuffItem.item.uniqueName} ${this.gamedata.name}" title="${stuffItem.item.name}"></div></div>`;
       }
 
       inventoryItemsHtml += `</div>`;
-      inventoryItemsHtml += `<div class="bottom"><div class="button url-button"><span>Mark link</span></div></div>`;
+      inventoryItemsHtml += `<div class="bottom"><div link-uniqueName="${stash.properties.typeUniqueName}" link-lng="${stash._latlng.lng}" link-lat="${stash._latlng.lat}" link-game="${this.gamedata.name}" class="button url-button" onclick="copyLink(this)"><span>Mark link</span></div></div>`;
 
       return descHtml + inventoryItemsHtml;
   }
@@ -508,6 +544,7 @@ export class MapComponent {
             canvasMarker.properties.anomaliySpawnSections = zone.anomaliySpawnSections;
             canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
             canvasMarker.properties.ableToSearch = true;
+            canvasMarker.properties.typeUniqueName = "anomaly-zone";
 
             let searchFields = [];
             searchFields.push(canvasMarker.properties.name);
@@ -545,14 +582,6 @@ export class MapComponent {
     catch (e) {
         console.log(e);
     }
-
-    /*try {
-        addToCanvas(anomalies, anomalyZoneIcon);
-        addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
-    }
-    catch (e) {
-        console.log(e);
-    }*/
   }
 
   private addToCanvas(geoMarks: any, markType: any) {
@@ -590,7 +619,10 @@ export class MapComponent {
       return html;
   }
 
-  private createeAnomalyZonePopup(zone: { properties: { name: any; description: any; anomaliySpawnSections: any[]; }; }) {
+  private createeAnomalyZonePopup(zone: {
+    _latlng: any; properties: {
+    typeUniqueName: any; name: any; description: any; anomaliySpawnSections: any[];
+}; }) {
       let descHtml = `<div><div class='popup header'>${zone.properties.name}</div><div class='popup description'>${zone.properties.description}</div></div>`
 
       if (zone.properties.anomaliySpawnSections && zone.properties.anomaliySpawnSections.length > 0) {
@@ -607,8 +639,8 @@ export class MapComponent {
                   if (section.count == 0) {
                       section.count = 1;
                   }
-                  let anomalyCountSection = section.count > 1 ? `<div>Кількість аномалій: ${section.count}</div>` : '';
-                  sectionsHtml += `<div class='section'><div class='anomaly-section-info'>${anomalyCountSection}<div>Максимум артефактів: ${section.maxCapacity}</div></div>`;
+                  let anomalyCountSection = section.count > 1 ? `<div>${this.translate.instant('anomaliesCount', {count: section.count})}</div>` : '';
+                  sectionsHtml += `<div class='section'><div class='anomaly-section-info'>${anomalyCountSection}<div>${this.translate.instant('anomalyArtMaxCount', {count: section.maxCapacity})}</div></div>`;
                   sectionsHtml += `<div class="inventory">`;
                   let items = section.anomalySpawnItems.sort(function (a: { probability: number; }, b: { probability: number; }) {
                       return -(a.probability - b.probability);
@@ -625,9 +657,10 @@ export class MapComponent {
               }
           }
 
-          sectionsHtml += `</div><div class='anomaly-section-info'>Маскимум артефактів на зону: ${maxArtefactsInZone}</div>`
+          sectionsHtml += `</div><div class='anomaly-section-info'>${this.translate.instant('anomalyZoneArtMaxCount', {count: maxArtefactsInZone})}</div>`
 
           descHtml += sectionsHtml;
+          descHtml += `<div class="bottom"><div link-uniqueName="${zone.properties.typeUniqueName}" link-lng="${zone._latlng.lng}" link-lat="${zone._latlng.lat}" link-game="${this.gamedata.name}" class="button url-button" onclick="copyLink(this)"><span>Mark link</span></div></div>`;
       }
 
       return descHtml;
@@ -659,17 +692,4 @@ export class MapComponent {
       }
     });
   }
-  /*addStyle(n) {
-      let i = document.createElement("link");
-      return i.rel = "stylesheet",
-      i.href = n,
-      document.body.appendChild(i),
-      new Promise((o,s)=>{
-          i.onload = ()=>{
-              console.log(`${n} is loaded.`),
-              o()
-          }
-      }
-      )
-  }*/
 }

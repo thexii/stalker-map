@@ -3223,7 +3223,6 @@
             this._icon && (this._icon.style.zIndex = this._zIndex + t)
         },
         _animateZoom: function (t) {
-            console.log(t.zoom);
             t = this._map._latLngToNewLayerPoint(this._latlng, t.zoom, t.center).round();
             this._setPos(t)
         },
