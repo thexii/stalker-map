@@ -21,6 +21,7 @@
             hidden=""
             checked=""
             class="leaflet-control-layers-selector"
+            (change)="showHideAll($event)"
           /><label></label
           ><span id="hide-show-all-checkbox" style="white-space: nowrap"
             >{{ 'hideAll' | translate }}</span

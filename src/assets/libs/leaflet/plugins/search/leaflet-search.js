@@ -141,7 +141,7 @@
       if (this.options.collapsed === false) { this.expand(this.options.collapsed) }
 
       if (this.options.marker) {
-        if (this.options.marker instanceof L.Marker || this.options.marker instanceof L.markerStalker || this.options.marker instanceof L.CircleMarker) { this._markerSearch = this.options.marker } else if (this._isObject(this.options.marker)) { this._markerSearch = new L.Control.Search.Marker([0, 0], this.options.marker) }
+        if (this.options.marker instanceof L.Marker || this.options.marker instanceof L.CircleMarker) { this._markerSearch = this.options.marker } else if (this._isObject(this.options.marker)) { this._markerSearch = new L.Control.Search.Marker([0, 0], this.options.marker) }
 
         this._markerSearch._isMarkerSearch = true
       }
@@ -225,7 +225,7 @@
     expand: function (toggle) {
       toggle = typeof toggle === 'boolean' ? toggle : true
       this._input.style.display = 'block'
-      L.DomUtil.addClass(this._container, 'search-exp')
+      this._container.classList.add('search-exp');
       if (toggle !== false) {
         this._input.focus()
         this._map.on('dragstart click', this.collapse, this)
@@ -372,7 +372,7 @@
         tip.innerHTML = text
       }
 
-      L.DomUtil.addClass(tip, 'search-tip')
+      tip.classList.add('search-exp');
       tip._text = text // value replaced in this._input and used by _autoType
 
       if (this.options.tipAutoSubmit) {
@@ -541,7 +541,7 @@
 
       if (layer instanceof L.Control.Search.Marker) return
 
-      if (layer instanceof L.Marker || layer instanceof L.markerStalker || layer instanceof L.CircleMarker) {
+      if (layer instanceof L.Marker || layer instanceof L.CircleMarker) {
         if (self._getPath(layer.options, propName)) {
           loc = layer.getLatLng()
           loc.layer = layer
@@ -704,7 +704,7 @@
       this._input.value = text
 
       this._input.style.display = 'block'
-      L.DomUtil.addClass(this._container, 'search-exp')
+      this._container.classList.add('search-exp');
 
       this._autoTypeTmp = false
 
@@ -718,7 +718,7 @@
       if (this._curReq && this._curReq.abort) { this._curReq.abort() }
       // abort previous requests
 
-      L.DomUtil.addClass(this._container, 'search-load')
+      this._container.classList.add('search-load');
 
       if (this.options.layer) {
         // TODO _recordsFromLayer must return array of objects, formatted from _formatData
@@ -772,13 +772,13 @@
       }
 
       if ((velocity === 1) && (this._tooltip.currentSelection >= (searchTips.length - 1))) { // If at end of list.
-        L.DomUtil.addClass(searchTips[this._tooltip.currentSelection], 'search-tip-select')
+        searchTips[this._tooltip.currentSelection].classList.add('search-tip-select');
       } else if ((velocity === -1) && (this._tooltip.currentSelection <= 0)) { // Going back up to the search box.
         this._tooltip.currentSelection = -1
       } else if (this._tooltip.style.display !== 'none') {
         this._tooltip.currentSelection += velocity
 
-        L.DomUtil.addClass(searchTips[this._tooltip.currentSelection], 'search-tip-select')
+        searchTips[this._tooltip.currentSelection].classList.add('search-tip-select');
 
         this._input.value = searchTips[this._tooltip.currentSelection]._text
 

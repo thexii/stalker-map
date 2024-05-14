@@ -234,10 +234,7 @@
       this._canvas.height = y;
       this._context = this._canvas.getContext("2d");
 
-      L.DomUtil.addClass(
-        this._canvas,
-        ("leaflet-zoom-" + (isAnimated ? "animated" : "hide"))
-      );
+      this._canvas.classList.add("leaflet-zoom-" + (isAnimated ? "animated" : "hide"));
     },
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * *

@@ -191,10 +191,7 @@
         "svg"
       );
 
-      L.DomUtil.addClass(
-        this._svgLayer,
-        ("leaflet-zoom-" + (isAnimated ? "animated" : "hide"))
-      );
+      this._svgLayer.classList.add(("leaflet-zoom-" + (isAnimated ? "animated" : "hide")));
     },
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * *

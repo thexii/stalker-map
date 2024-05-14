@@ -50,6 +50,22 @@ export class MapComponent {
     }
   }
 
+  public showHideAll(n: any = null) {
+    let i = Object.values(this.layers);
+    if (n.target.checked) {
+      for (let o of i) {
+        this.map.addLayer(o);
+        o.show(o);
+      }
+    }
+    else {
+      for (let o of i) {
+        this.map.removeLayer(o);
+        o.hide(o);
+      }
+    }
+}
+
   private async ngOnInit(): Promise<void> {
     if (typeof L === 'undefined') {
       await this.addScript("/assets/libs/leaflet/index.js");
@@ -135,6 +151,14 @@ export class MapComponent {
     }
 
     let layerControl = L.control.layers(null, this.layers).addTo(this.map)
+    /*let layerControl = L.control.layers(null);
+
+    for (let layer of Object.values(this.layers)) {
+      console.log(layer);
+      layerControl.addOverlay(layer, layer.markers[0].properties.typeUniqueName);
+    }
+
+    layerControl.addTo(this.map);*/
 
     this.map.on('drag', () => {
       this.map.panInsideBounds(bounds, { animate: false });
@@ -307,7 +331,7 @@ export class MapComponent {
         geoMarks.features = [];
 
         for (let mark of marks) {
-          let marker = L.markerStalker([mark.y, mark.x], {
+          let marker = L.marker([mark.y, mark.x], {
             icon: markType.icon
           });
 
@@ -423,7 +447,7 @@ export class MapComponent {
               geoMarks.features = [];
 
               for (let f of stuffsAtLocation) {
-                  let stuff = L.markerStalker([f.y, f.x], {
+                  let stuff = L.marker([f.y, f.x], {
                       icon: markType.icon
                   });
 
@@ -530,10 +554,10 @@ export class MapComponent {
     for (let zone of this.gamedata.anomalyZones) {
         let canvasMarker;
         if (zone.anomaliySpawnSections != null && zone.anomaliySpawnSections.length > 0) {
-            canvasMarker = L.markerStalker([zone.y, zone.x], {icon: anomalyZoneIcon.icon});
+            canvasMarker = L.marker([zone.y, zone.x], {icon: anomalyZoneIcon.icon});
         }
         else {
-            canvasMarker = L.markerStalker([zone.y, zone.x], {icon: anomalyZoneNoArtIcon.icon});
+            canvasMarker = L.marker([zone.y, zone.x], {icon: anomalyZoneNoArtIcon.icon});
         }
 
         canvasMarker.properties = {};
