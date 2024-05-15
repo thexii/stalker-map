@@ -1,0 +1,77 @@
+.stalker-sub-location, .stalker-search-item.sub-location {
+  background: url(/assets/images/svg/marks/sub-location.svg) no-repeat;
+  background-size: contain;
+  pointer-events: fill
+}
+
+.stalker-stash, .stalker-search-item.stash {
+  background: url(/assets/images/svg/marks/stash.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-stash-quest, .stalker-search-item.quest {
+  background: url(/assets/images/svg/marks/quest-item.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-stash-items, .stalker-search-item.destroyable-box {
+  background: url(/assets/images/svg/marks/items.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-stash-stuff, .stalker-search-item.stuff {
+  background: url(/assets/images/svg/marks/stuff.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item {
+  padding-left: 18px
+}
+
+.stalker-search-item.anomaly-zone {
+  background: url(/assets/images/svg/marks/anomaly.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.radioactive {
+  background: url(/assets/images/svg/marks/radiation.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.acidic {
+  background: url(/assets/images/svg/marks/chemical.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.psychic {
+  background: url(/assets/images/svg/marks/psi.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.thermal {
+  background: url(/assets/images/svg/marks/fire.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.mines {
+  background: url(/assets/images/svg/marks/mines.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.anomaly-zone-no-art {
+  background: url(/assets/images/svg/marks/anomaly_noart.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.teleport {
+  background: url(/assets/images/svg/marks/portal.svg)no-repeat;
+  background-size: contain
+}
+
+.search-tooltip {
+  background-color: #090a0a
+}
+
+.leaflet-control-layers-overlays > label > span > .stalker-search-item {
+  font-size: 1rem;
+}

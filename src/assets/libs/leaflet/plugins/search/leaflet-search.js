@@ -242,7 +242,7 @@
       if (this.options.collapsed) {
         this._input.style.display = 'none'
         this._cancel.style.display = 'none'
-        L.DomUtil.removeClass(this._container, 'search-exp')
+        this._container.classList.remove('search-exp')
         if (this.options.hideMarkerOnCollapse) {
           this._map.removeLayer(this._markerSearch)
         }
@@ -728,7 +728,7 @@
 
         this.showTooltip(records)
 
-        L.DomUtil.removeClass(this._container, 'search-load')
+        this._container.classList.remove('search-load')
       } else {
         if (this.options.sourceData) { this._retrieveData = this.options.sourceData } else if (this.options.url) { // jsonp or ajax
           this._retrieveData = this.options.jsonpParam ? this._recordsFromJsonp : this._recordsFromAjax
@@ -742,7 +742,7 @@
 
           self.showTooltip(records)
 
-          L.DomUtil.removeClass(self._container, 'search-load')
+          self._container.classList.remove('search-load')
         })
       }
     },
@@ -768,7 +768,7 @@
       const searchTips = this._tooltip.hasChildNodes() ? this._tooltip.childNodes : []
 
       for (let i = 0; i < searchTips.length; i++) {
-        L.DomUtil.removeClass(searchTips[i], 'search-tip-select')
+        searchTips[i].classList.remove('search-tip-select')
       }
 
       if ((velocity === 1) && (this._tooltip.currentSelection >= (searchTips.length - 1))) { // If at end of list.
