@@ -32,5 +32,82 @@
     "csShort": "ЧН",
     "copShort": "ЗП",
 
-    "mainTitle": "Интерактивные карты для игр серии S.T.A.L.K.E.R."
+    "mainTitle": "Интерактивные карты для игр серии S.T.A.L.K.E.R.",
+    "search": "Поиск",
+
+    "zone_mosquito_bald": "«Трамплин»",
+    "zone_mosquito_bald_weak": "«Трамплин» (слабый)",
+    "zone_mosquito_bald_weak_noart": "«Трамплин» (слабый)",
+    "zone_mosquito_bald_strong": "«Трамплин» (сильный)",
+    "zone_mosquito_bald_average": "«Трамплин» (средний)",
+		"zone_mosquito_bald_strong_noart": "«Трамплин» (сильный)",
+
+    "zone_witches_galantine": "«Электра»",
+    "zone_witches_galantine_weak": "«Электра» (слабая)",
+    "zone_witches_galantine_average": "«Электра» (средняя)",
+    "zone_witches_galantine_strong": "«Электра» (сильная)",
+
+    "zone_gravi_zone": "«Воронка»",
+		"zone_gravi_zone_weak": "«Воронка» (слабая)",
+		"zone_gravi_zone_weak_noart": "«Воронка» (слабая)",
+		"zone_gravi_zone_average": "«Воронка» (средняя)",
+		"zone_gravi_zone_strong": "«Воронка» (сильная)",
+		"zone_gravi_zone_killing": "«Воронка» (смертельна)",
+
+    "zone_mincer": "«Карусель»",
+		"zone_mincer_weak": "«Карусель» (слабая)",
+		"zone_mincer_weak_noart": "«Карусель» (слабая)",
+		"zone_mincer_average": "«Карусель» (средняя)",
+		"zone_mincer_strong": "«Карусель» (сильная)",
+
+		"zone_burning_fuzz": "«Жгучий пух»",
+		"zone_burning_fuzz1": "«Жгучий пух»",
+		"zone_burning_fuzz_weak": "«Жгучий пух» (слабый)",
+		"zone_burning_fuzz_average": "«Жгучий пух» (средний)",
+		"zone_burning_fuzz_strong": "«Жгучий пух» (сильный)",
+		"zone_burning_fuzz_bottom_weak": "«Жгучий пух»",
+		"zone_burning_fuzz_bottom_average": "«Жгучий пух»",
+		"zone_burning_fuzz_bottom_strong": "«Жгучий пух»",
+
+		"zone_buzz": "«Кисель»",
+		"zone_buzz_weak": "«Кисель» (слабый)",
+		"zone_buzz_average": "«Кисель» (средний)",
+		"zone_buzz_strong": "«Кисель» (сильный)",
+		"zone_mine_chemical_average": "«Кисель» (средний)",
+		"zone_mine_chemical_strong": "«Кисель» (сильный)",
+
+    "zone_zharka_static": "«Жарка»",
+		"zone_zharka_static_weak": "«Жарка» (слабая)",
+		"zone_zharka_static_average": "«Жарка» (средняя)",
+		"zone_zharka_static_strong": "«Жарка» (сильная)",
+
+    "zone_zhar": "«Жар»",
+		"zone_emi": "«Эми»",
+
+		"zone_mine_acidic": "«Газировка»",
+		"zone_mine_acidic_weak": "«Газировка» (слабая)",
+		"zone_mine_acidic_average": "«Газировка» (средняя)",
+		"zone_mine_acidic_strong": "«Газировка» (сильная)",
+		"zone_mine_acidic_weak_noshadow": "«Газировка» (слабая)",
+
+		"zone_mine_electric": "«Электра»",
+		"zone_mine_electric_weak": "«Электра» (слабая)",
+		"zone_mine_electric_average": "«Электра» (средняя)",
+		"zone_mine_electric_strong": "«Электра» (сильная)",
+
+		"zone_mine_gravitational_strong": "«Карусель»",
+		"zone_mine_gravitational_average": "«Карусель» (средняя)",
+		"zone_mine_gravitational_weak": "«Карусель» (слабая)",
+
+		"zone_mine_thermal": "«Жарка»",
+		"zone_mine_thermal_weak": "«Жарка» (слабая)",
+		"zone_mine_thermal_average": "«Жарка» (средняя)",
+		"zone_mine_thermal_strong": "«Жарка» (сильная)",
+		"zone_mine_steam_weak": "«Жарка» (слабая)",
+		"zone_mine_steam_average": "«Жарка» (средняя)",
+
+    "zone_mine_static_strong": "«Электра»",
+    "zone_no_gravity": "Лифт",
+
+    "anomaliesCluster": "Скопление аномалий"
 }

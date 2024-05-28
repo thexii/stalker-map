@@ -1,6 +1,7 @@
 #map-wrapper {
   position: relative;
   border: 1px solid white;
+  height: var(--wrapper-height);
 }
 
 .leaflet-tooltip {

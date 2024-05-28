@@ -32,5 +32,82 @@
     "csShort": "CS",
     "copShort": "CoP",
 
-    "mainTitle": "Interactive maps for the S.T.A.L.K.E.R. series"
+    "mainTitle": "Interactive maps for the S.T.A.L.K.E.R. series",
+    "search": "Search",
+
+    "zone_mosquito_bald": "Springboard",
+    "zone_mosquito_bald_weak": "Springboard (weak)",
+    "zone_mosquito_bald_weak_noart": "Springboard (weak)",
+    "zone_mosquito_bald_strong": "Springboard (strong)",
+    "zone_mosquito_bald_average": "Springboard (average)",
+		"zone_mosquito_bald_strong_noart": "Springboard (strong)",
+
+    "zone_witches_galantine": "Electro",
+    "zone_witches_galantine_weak": "Electro (weak)",
+    "zone_witches_galantine_average": "Electro (average)",
+    "zone_witches_galantine_strong": "Electro (strong)",
+
+    "zone_gravi_zone": "Vortex",
+		"zone_gravi_zone_weak": "Vortex (weak)",
+		"zone_gravi_zone_weak_noart": "Vortex (weak)",
+		"zone_gravi_zone_average": "Vortex (average)",
+		"zone_gravi_zone_strong": "Vortex (strong)",
+		"zone_gravi_zone_killing": "Vortex (killing)",
+
+    "zone_mincer": "Whirligig",
+		"zone_mincer_weak": "Whirligig (weak)",
+		"zone_mincer_weak_noart": "Whirligig (weak)",
+		"zone_mincer_average": "Whirligig (average)",
+		"zone_mincer_strong": "Whirligig (strong)",
+
+		"zone_burning_fuzz": "Burnt Fuzz",
+		"zone_burning_fuzz1": "Burnt Fuzz",
+		"zone_burning_fuzz_weak": "Burnt Fuzz (weak)",
+		"zone_burning_fuzz_average": "Burnt Fuzz (average)",
+		"zone_burning_fuzz_strong": "Burnt Fuzz (strong)",
+		"zone_burning_fuzz_bottom_weak": "Burnt Fuzz",
+		"zone_burning_fuzz_bottom_average": "Burnt Fuzz",
+		"zone_burning_fuzz_bottom_strong": "Burnt Fuzz",
+
+		"zone_buzz": "Fruit Punch",
+		"zone_buzz_weak": "Fruit Punch (weak)",
+		"zone_buzz_average": "Fruit Punch (average)",
+		"zone_buzz_strong": "Fruit Punch (strong)",
+		"zone_mine_chemical_average": "Fruit Punch (average)",
+		"zone_mine_chemical_strong": "Fruit Punch (strong)",
+
+    "zone_zharka_static": "Burner",
+		"zone_zharka_static_weak": "Burner (weak)",
+		"zone_zharka_static_average": "Burner (average)",
+		"zone_zharka_static_strong": "Burner (strong)",
+
+    "zone_zhar": "Burn",
+		"zone_emi": "EMP",
+
+		"zone_mine_acidic": "Gas",
+		"zone_mine_acidic_weak": "Gas (weak)",
+		"zone_mine_acidic_average": "Gas (average)",
+		"zone_mine_acidic_strong": "Gas (strong)",
+		"zone_mine_acidic_weak_noshadow": "Gas (weak)",
+
+		"zone_mine_electric": "Electro",
+		"zone_mine_electric_weak": "Electro (weak)",
+		"zone_mine_electric_average": "Electro (average)",
+		"zone_mine_electric_strong": "Electro (strong)",
+
+		"zone_mine_gravitational_strong": "Whirligig",
+		"zone_mine_gravitational_average": "Whirligig (average)",
+		"zone_mine_gravitational_weak": "Whirligig (weak)",
+
+		"zone_mine_thermal": "Burner",
+		"zone_mine_thermal_weak": "Burner (weak)",
+		"zone_mine_thermal_average": "Burner (average)",
+		"zone_mine_thermal_strong": "Burner (strong)",
+		"zone_mine_steam_weak": "Burner (weak)",
+		"zone_mine_steam_average": "Burner (average)",
+
+    "zone_mine_static_strong": "Electro",
+    "zone_no_gravity": "Lift",
+
+    "anomaliesCluster": "Anomal zone"
 }

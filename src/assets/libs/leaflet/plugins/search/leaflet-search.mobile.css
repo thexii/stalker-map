@@ -2,6 +2,7 @@
 /* SEARCH */
 .leaflet-control.leaflet-control-search {
 	z-index:2000;
+  display: flex;
 }
 .leaflet-control-search .search-input {
 	display: block;
@@ -18,12 +19,12 @@
 }
 .leaflet-control-search .search-button:hover,
 .leaflet-control-search .search-button {
-	background-image: url('../images/search-icon-mobile.png');
-	-webkit-border-radius: 4px;
-	        border-radius: 4px;
-	background-position: 1px 1px;
-	width:32px;
-	height:32px;
+	border-left: 1px solid white;
+  color: white;
+  display: none;
+  align-items: center;
+  font-size: 1rem;
+  padding-inline: 0.5rem;
 }
 .leaflet-control-search.search-load .search-input {
 	background: url('../images/loader.gif') no-repeat center right #fff;

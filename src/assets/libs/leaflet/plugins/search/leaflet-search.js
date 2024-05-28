@@ -329,7 +329,8 @@
     _createButton: function (title, className) {
       const button = L.DomUtil.create('a', className, this._container)
       button.href = '#'
-      button.title = title
+      button.title = title;
+      button.innerHTML = title;
 
       L.DomEvent
         .on(button, 'click', L.DomEvent.stop, this)

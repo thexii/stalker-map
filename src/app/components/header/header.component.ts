@@ -16,6 +16,8 @@ export class HeaderComponent {
   private readonly defaultLocale: string = "en";
   public selectedLanguage: string = "";
 
+  private languageChanged: boolean = false;
+
   constructor(private translate: TranslateService) {
 
   }
@@ -34,20 +36,19 @@ export class HeaderComponent {
 
         this.translate.onLangChange.subscribe(i=>{
           this.selectedLanguage = i.lang;
-          localStorage.removeItem(this.lastLanguageCacheKeyString),
-          localStorage.setItem(this.lastLanguageCacheKeyString, i.lang)
+          localStorage.removeItem(this.lastLanguageCacheKeyString);
+          localStorage.setItem(this.lastLanguageCacheKeyString, i.lang);
+
+          if (this.languageChanged) {
+            window.location.reload();
+            this.languageChanged = false;
+          }
         });
-        /*n != null ? (this.translate.use(n),
-        this.translate.currentLang = n) : (this.translate.use(this.defaultLocale),
-        this.translate.currentLang = this.defaultLocale),
-        this.translate.onLangChange.subscribe(i=>{
-            localStorage.removeItem(this.lastLanguageCacheKeyString),
-            localStorage.setItem(this.lastLanguageCacheKeyString, JSON.stringify(i.lang))
-        }*/
   }
 
 
   public changeLanguage(event: any): void {
+    this.languageChanged = true;
     this.translate.use(event.target.value);
   }
 }

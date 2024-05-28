@@ -66,7 +66,7 @@
   background-position: left 0 top -900px
 }
 
-.stalker_outfit {
+.stalker_outfit,.stalker_outfit_barge {
   background-position: 724px 1298px
 }
 
@@ -74,7 +74,7 @@
   background-position: left -600px top -650px
 }
 
-.dolg_outfit {
+.dolg_outfit,.outfit_dolg_m1 {
   background-position: left -600px top -800px
 }
 
@@ -94,7 +94,7 @@
   background-position: left -900px top -1100px
 }
 
-.specops_outfit {
+.specops_outfit,.outfit_specnaz_m1 {
   background-position: left -500px top -650px
 }
 
@@ -110,15 +110,15 @@
   background-position: left -800px top -800px
 }
 
-.exo_outfit {
+.exo_outfit,.outfit_exo_m1 {
   background-position: 324px 1398px
 }
 
-.novice_outfit {
+.novice_outfit,.outfit_novice_m1 {
   background-position: left -400px top -1350px
 }
 
-.bandit_outfit {
+.bandit_outfit,.outfit_bandit_m1 {
   background-position: left -400px top -1450px
 }
 
@@ -130,7 +130,7 @@
   background-position: left -700px top -1350px
 }
 
-.killer_outfit {
+.killer_outfit,.outfit_killer_m1 {
   background-position: left -200px top -1350px
 }
 
@@ -150,7 +150,7 @@
   background-position: left -100px top -1350px
 }
 
-.helm_respirator {
+.helm_respirator,.helm_respirator_joker {
   background-position: left -200px top -900px
 }
 
@@ -196,4 +196,8 @@
 
 .wpn_addon_scope_susat_x1\.6 {
   background-position: left -500px top -900px
+}
+
+.mutant_psevdodog_tail {
+  background-position: left -900px top -1400px
 }

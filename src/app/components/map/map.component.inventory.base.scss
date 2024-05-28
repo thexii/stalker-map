@@ -75,3 +75,12 @@
 .leaflet-control-layers-overlays > label > span > .stalker-search-item {
   font-size: 1rem;
 }
+
+html {
+  height: -webkit-fill-available;
+}
+
+.anomaly-in-claster {
+  color: white;
+  padding-block: 0.25rem;
+}

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
@@ -64,7 +64,22 @@ export class MapComponent {
         o.hide(o);
       }
     }
-}
+  }
+
+  @HostListener('window:resize', ['$event'])
+  private onResize(event: any) {
+    let vh = event.target.outerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    let wrapper = document.getElementById('map-wrapper');
+    console.log('event.target.innerHeight', event.target.innerHeight);
+    console.log('event.target.outerHeight', event.target.outerHeight);
+
+    if (wrapper) {
+      let wrapperHeight = event.target.innerHeight - wrapper.offsetTop - 10;
+      document.documentElement.style.setProperty('--wrapper-height', `${wrapperHeight}px`);
+    }
+  }
 
   private async ngOnInit(): Promise<void> {
     if (typeof L === 'undefined') {
@@ -91,7 +106,19 @@ export class MapComponent {
               }
             )
         }
-      )
+      );
+
+      let body = document.body, html = document.documentElement;
+
+      let height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    let wrapper = document.getElementById('map-wrapper');
+
+    if (wrapper) {
+      let wrapperHeight = height - wrapper.offsetTop - 10;
+      document.documentElement.style.setProperty('--wrapper-height', `${wrapperHeight}px`);
+    }
   }
 
   private async ngOnDestroy(): Promise<void> {
@@ -164,23 +191,12 @@ export class MapComponent {
               layersToHide.push(currentLayer);
             }
           }
-          else {
-            console.log(config.uniqueName);
-          }
         }
 
         this.layers = newLayers;
     }
 
     let layerControl = L.control.layers(null, this.layers).addTo(this.map)
-    /*let layerControl = L.control.layers(null);
-
-    for (let layer of Object.values(this.layers)) {
-      console.log(layer);
-      layerControl.addOverlay(layer, layer.markers[0].properties.typeUniqueName);
-    }
-
-    layerControl.addTo(this.map);*/
 
     this.map.on('drag', () => {
       this.map.panInsideBounds(bounds, { animate: false });
@@ -195,6 +211,7 @@ export class MapComponent {
         delayType: 0,
         collapsed: false,
         autoCollapseTime: 10000,
+        textPlaceholder: this.translate.instant("search"),
         buildTip: function (text: string, val: any) {
             let type = val.layer.properties.typeUniqueName;
             let name = val.layer.properties.name;
@@ -548,14 +565,14 @@ export class MapComponent {
       for (let stuffItem of sortedItems) {
           inventoryItemsHtml += `<div class="inventory-item inventory-item-width-${stuffItem.item.width} inventory-item-height-${stuffItem.item.height}">`;
 
-          if (stuffItem.count > 1 || stuffItem.isUnique) {
+          if (stuffItem.count > 1 || stuffItem.item.isUpgraded || stuffItem.item.isQuest) {
               inventoryItemsHtml += '<div class="item-additional-info">';
 
               if (stuffItem.count > 1) {
-                inventoryItemsHtml += `<div class="inventory-item-count">${stuffItem.count}</div>`;
+                inventoryItemsHtml += `<div class="inventory-item-count">x${stuffItem.count}</div>`;
               }
 
-              if (stuffItem.isUnique) {
+              if (stuffItem.item.isUpgraded) {
                 inventoryItemsHtml += `<div class="inventory-item-upgrade"></div>`;
               }
 
@@ -618,6 +635,9 @@ export class MapComponent {
             }
         }
         else {
+            if (zone.anomalies != null) {
+              canvasMarker.properties.anomalies = zone.anomalies;
+            }
             anomaliesNoArt.features.push(canvasMarker);
             canvasMarker.properties.ableToSearch = false;
         }
@@ -666,7 +686,7 @@ export class MapComponent {
   }
 
   private createAnomalyZoneTooltip(zone: { properties: { name: any; description: any; }; description: any; }) {
-      let html = `<div class="header-tip"><p class="p-header">${zone.properties.name}</p></div>`;
+      let html = `<div class="header-tip"><p class="p-header">${zone.properties.name != null ? zone.properties.name : this.translate.instant('anomaliesCluster')}</p></div>`;
       if (zone.description) {
           html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
       }
@@ -676,10 +696,11 @@ export class MapComponent {
 
   private createeAnomalyZonePopup(zone: {
     _latlng: any; properties: {
+      anomalies: any[];
     typeUniqueName: any; name: any; description: any; anomaliySpawnSections: any[];
 }; }) {
-      let descHtml = `<div><div class='popup header'>${zone.properties.name}</div><div class='popup description'>${zone.properties.description}</div></div>`
-
+      let descHtml = `<div><div class='popup header'>${this.translate.instant('anomaliesCluster')}</div>${ zone.properties.description != null ? `<div class='popup description'>${zone.properties.description}</div>` : ''}</div>`
+      //anomaliySpawnSections[0].anomalyUniqueName
       if (zone.properties.anomaliySpawnSections && zone.properties.anomaliySpawnSections.length > 0) {
           let sectionsHtml = '<div class="sections">';
 
@@ -695,7 +716,21 @@ export class MapComponent {
                       section.count = 1;
                   }
                   let anomalyCountSection = section.count > 1 ? `<div>${this.translate.instant('anomaliesCount', {count: section.count})}</div>` : '';
-                  sectionsHtml += `<div class='section'><div class='anomaly-section-info'>${anomalyCountSection}<div>${this.translate.instant('anomalyArtMaxCount', {count: section.maxCapacity})}</div></div>`;
+                  let anomalyNameSection = '';
+
+                  if (section.anomalyUniqueName != null) {
+                    if (section.count > 1) {
+                      anomalyNameSection = `<div>${section.count} x ${this.translate.instant(section.anomalyUniqueName)}</div>`;
+                    }
+                    else {
+                      anomalyNameSection = `<div>${this.translate.instant(section.anomalyUniqueName)}</div>`;
+                    }
+                  }
+                  else {
+                    anomalyNameSection = anomalyCountSection;
+                  }
+
+                  sectionsHtml += `<div class='section'><div class='anomaly-section-info'>${anomalyNameSection}<div>${this.translate.instant('anomalyArtMaxCount', {count: section.maxCapacity})}</div></div>`;
                   sectionsHtml += `<div class="inventory">`;
                   let items = section.anomalySpawnItems.sort(function (a: { probability: number; }, b: { probability: number; }) {
                       return -(a.probability - b.probability);
@@ -716,6 +751,15 @@ export class MapComponent {
 
           descHtml += sectionsHtml;
           descHtml += `<div class="bottom"><div link-uniqueName="${zone.properties.typeUniqueName}" link-lng="${zone._latlng.lng}" link-lat="${zone._latlng.lat}" link-game="${this.gamedata.name}" class="button url-button" onclick="copyLink(this)"><span>Mark link</span></div></div>`;
+      }
+
+      if (zone.properties.anomalies != null && zone.properties.anomalies.length > 0) {
+        descHtml += `<div class='anomalies-in-claster-container'>`;
+        for (let anomaly of zone.properties.anomalies) {
+          descHtml += `<div class='anomaly-in-claster'> ${anomaly.count} x ${this.translate.instant(anomaly.uniqueName)}</div>`
+        }
+
+        descHtml += '</div>'
       }
 
       return descHtml;

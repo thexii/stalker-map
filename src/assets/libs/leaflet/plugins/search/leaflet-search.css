@@ -36,16 +36,11 @@
 	visibility:hidden;
 }
 .leaflet-control-search .search-cancel {
-	display:block;
-	width:22px;
-	height:22px;
-	position:absolute;
-	right:28px;
-	margin:6px 0;
-	background: url('../images/search-icon.png') no-repeat 0 -46px;
-	text-decoration:none;
-	filter: alpha(opacity=80);
-	opacity: 0.8;
+	color: white;
+  display: flex;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 .leaflet-control-search .search-cancel:hover {
 	filter: alpha(opacity=100);
@@ -62,15 +57,15 @@
 	color:#aaa;
 }
 .leaflet-control-search .search-button {
-	display:block;
-	float:left;
-	width:30px;
-	height:30px;
-	background: url('../images/search-icon.png') no-repeat 4px 4px #fff;
-	border-radius:4px;
+	border-left: 1px solid white;
+  color: white;
+  display: none;
+  align-items: center;
+  font-size: 1rem;
+  padding-inline: 0.5rem;
 }
 .leaflet-control-search .search-button:hover {
-	background: url('../images/search-icon.png') no-repeat 4px -20px #fafafa;
+  background-color: grey;
 }
 .leaflet-control-search .search-tooltip {
 	position:absolute;
@@ -124,7 +119,7 @@
   margin: 2px;
   padding: 2px;
   display: block;
-  color: white;
+  color: white !important;
   background: rgba(9, 10, 10, 1);
   border-radius: .25em;
   text-decoration: none;
