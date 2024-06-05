@@ -26,7 +26,7 @@
     </div>
     <div class="sections-select-container">
       <select (change)="changeSection($event)">
-        <option *ngFor="let section of trader.tradeSections" [value]="section.sectionConditions"></option>
+        <option *ngFor="let section of trader.tradeSections" [value]="section.sectionConditions">{{ trader.uniqueName + '.' + section.sectionConditions | translate }}</option>
       </select>
     </div>
     <div class="chart-container">

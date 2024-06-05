@@ -37,5 +37,8 @@
   background-repeat: no-repeat;
 }
 
-.chart {
+.inventory {
+  max-height: round(up, var(--wrapper-height) / 2, 50px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }

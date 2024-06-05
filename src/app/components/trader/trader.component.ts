@@ -4,11 +4,12 @@ import { TradeSection, TraderModel, TraderSellItem } from '../../models/trader';
 import { NgFor, NgIf } from '@angular/common';
 //import Chart from 'chart.js';
 import Chart from 'chart.js/auto';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-trader',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, TranslateModule],
   templateUrl: './trader.component.html',
   styleUrl: './trader.component.scss'
 })

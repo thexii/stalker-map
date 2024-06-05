@@ -112,5 +112,11 @@
     "anomaliesCluster": "Скупчення аномалій",
     "meterShort": "м",
     "azimuth": "Азимут:",
-    "length": "Дистанція:"
+    "length": "Дистанція:",
+
+    "bar_barman": {
+      "default": "До взяття документів в X-18",
+      "bar_darklab_document_done": "Післе взяття документів в X-18",
+      "yan_labx16_switcher_primary_off": "Після вимкнення псі-установки в X-16"
+    }
 }
