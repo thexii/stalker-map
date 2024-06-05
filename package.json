@@ -20,6 +20,8 @@
     "@angular/router": "^17.2.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "chart.js": "^4.4.3",
+    "firebase": "^10.12.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

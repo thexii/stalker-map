@@ -1,0 +1,50 @@
+<div class="trader-container">
+  <div class="sell container">
+    <div class="trader-info">
+      <div class="trader-bio">
+        <div class="trader-name">{{trader.uniqueName}}</div>
+        <div class="trader-fraction">Торговець</div>
+        <div class="trader-money">5000 RU</div>
+      </div>
+      <div class="trader-image {{trader.uniqueName}} shoc"></div>
+    </div>
+    <div class="sell inventory">
+      <ng-container *ngFor="let sellItem of selectedTradeSection.assortment">
+        <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItem(sellItem)">
+          <div class="item-additional-info">
+            <div class="inventory-item-count">{{sellItem.price}}</div>
+          </div>
+          <div class="inventory-item-image {{sellItem.item.uniqueName}} {{game.gameName}}" title="{{sellItem.item.uniqueName}}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="info container">
+    <div *ngIf="selectedItem">
+
+    </div>
+    <div class="sections-select-container">
+      <select (change)="changeSection($event)">
+        <option *ngFor="let section of trader.tradeSections" [value]="section.sectionConditions"></option>
+      </select>
+    </div>
+    <div class="chart-container">
+      <canvas id="MyChart" class="chart" >{{ chart }}</canvas>
+    </div>
+  </div>
+
+  <div class="buy container">
+    <div class="hero-info"></div>
+    <div class="buy inventory">
+      <ng-container *ngFor="let buyItem of selectedTradeSection.buying">
+        <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}">
+          <div class="item-additional-info">
+            <div class="inventory-item-count">{{buyItem.price}}</div>
+          </div>
+          <div class="inventory-item-image {{buyItem.item.uniqueName}} {{game.gameName}}" title="{{buyItem.item.uniqueName}}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

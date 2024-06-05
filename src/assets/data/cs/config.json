@@ -55,5 +55,6 @@
   ],
   "minZoom": 0,
   "maxZoom": 3,
-  "startZoom": 1
+  "startZoom": 1,
+  "globalMapFileName": "global_map.png"
 }

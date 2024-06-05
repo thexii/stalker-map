@@ -104,6 +104,11 @@ color: white !important;
   align-items: center;
   color: #fff;
   padding-inline: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #4d4d4d
 }
 
 .inventory {

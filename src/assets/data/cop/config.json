@@ -55,5 +55,8 @@
   ],
   "minZoom": 0,
   "maxZoom": 3,
-  "startZoom": 1
+  "startZoom": 1,
+  "rulerEnabled": true,
+  "lengthFactor": 2.926829268292683,
+  "globalMapFileName": "global_map.png"
 }

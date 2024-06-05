@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AnalyticsService } from './services/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'stalker-map';
+
+  constructor(private analytics: AnalyticsService) {
+
+  }
+
+  private ngOnInit(): void {
+    this.analytics.init();
+  }
 }

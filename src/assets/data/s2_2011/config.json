@@ -53,7 +53,10 @@
       "isShow": false
     }
   ],
-  "minZoom": 0,
+  "minZoom": -2,
   "maxZoom": 3,
-  "startZoom": 1
+  "startZoom": 1,
+  "rulerEnabled": true,
+  "lengthFactor": 1.66666666666666667,
+  "globalMapFileName": "global_map_s2_2011.jpg"
 }

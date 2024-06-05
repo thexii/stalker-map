@@ -1,8 +1,11 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, ComponentFactoryResolver, HostListener, ViewEncapsulation, ViewContainerRef, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Point } from '../../models/point.model';
+import { getAnalytics, logEvent } from 'firebase/analytics';
+import { TraderModel } from '../../models/trader/trader.model';
+import { TraderComponent } from '../trader/trader.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -25,9 +28,11 @@ declare var markWidth: number;
 })
 
 export class MapComponent {
+  @ViewChild('dynamicComponents', { read: ViewContainerRef }) container: ViewContainerRef;
+
   public readonly game: string;
 
-  private readonly avaliableGames: string[] = ["shoc", "cs", "cop"];
+  private readonly avaliableGames: string[] = ["shoc", "cs", "cop", "s2_2011", "hoc"];
   private readonly defaultGame: string = "shoc";
 
   private gamedata: any;
@@ -39,6 +44,7 @@ export class MapComponent {
   constructor(
     private translate: TranslateService,
     private route: ActivatedRoute,
+    private resolver: ComponentFactoryResolver
   ) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
@@ -89,10 +95,11 @@ export class MapComponent {
       await this.addScript("/assets/libs/leaflet/plugins/leaflet-markers-canvas.js");
       await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search.js");
       await this.addScript("/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js");
+      await this.addScript("/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js");
       console.log("Leaflet is loaded");
     }
 
-    await Promise.all([this.addStyle("/assets/libs/leaflet/leaflet.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css")]);
+    await Promise.all([this.addStyle("/assets/libs/leaflet/leaflet.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css"), this.addStyle("/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css")]);
 
     fetch(`/assets/data/${this.game}/${this.translate.currentLang}.json`)
       .then(response => response.json())
@@ -134,8 +141,8 @@ export class MapComponent {
     this.map = L.map("map", {
       center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
       zoom: 1,
-      minZoom: 0,
-      maxZoom: 3,
+      minZoom: gameConfig.minZoom,
+      maxZoom: gameConfig.maxZoom,
       crs: L.CRS.Simple,
       markerZoomAnimation: !0,
       zoomAnimation: !0,
@@ -143,7 +150,7 @@ export class MapComponent {
     });
 
     let bounds = [[0, 0], [this.gamedata.heightInPixels, this.gamedata.widthInPixels]];
-    L.imageOverlay(`/assets/images/maps/${this.gamedata.name}/global_map.png`, bounds).addTo(this.map);
+    L.imageOverlay(`/assets/images/maps/${this.gamedata.name}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
     this.map.fitBounds(bounds);
     markWidth = Math.exp(1.3615 + .6117 * this.map.getZoom());
     document.documentElement.style.setProperty(`--map-mark-width`, `${markWidth}px`);
@@ -177,6 +184,10 @@ export class MapComponent {
       this.addAnomalyZones();
     }
 
+    if (this.gamedata.traders && this.gamedata.traders.length > 0) {
+        this.addTraders();
+    }
+
     let layersToHide = [];
 
     if (gameConfig.markersConfig != null && gameConfig.markersConfig.length > 0 && this.layers != null) {
@@ -203,6 +214,7 @@ export class MapComponent {
     });
 
     let searchLayers = L.featureGroup(Object.values(this.layers));
+    let translate = this.translate;
 
     let searchContoller = L.control.search({
         layer: searchLayers,
@@ -215,10 +227,37 @@ export class MapComponent {
         buildTip: function (text: string, val: any) {
             let type = val.layer.properties.typeUniqueName;
             let name = val.layer.properties.name;
-            let locationName = val.layer.properties.locationName;
-            return '<a href="#"><span class="stalker-search-item ' + type + '">' + name + '</span> <b>(' + locationName + ')</b></a>';
+            return '<a href="#"><span class="stalker-search-item ' + type + '">' + name + '</span> <b>(' + val.layer.properties.locationName + ')</b></a>';
         }
     });
+
+    if (gameConfig.rulerEnabled) {
+      var options = {
+          position: 'topright',         // Leaflet control position option
+          circleMarker: {               // Leaflet circle marker options for points used in this plugin
+            color: 'red',
+            radius: 2
+          },
+          lineStyle: {                  // Leaflet polyline options for lines used in this plugin
+            color: 'red',
+            dashArray: '1,6'
+          },
+          lengthUnit: {
+              factor: gameConfig.lengthFactor, //  from km to nm
+              display: this.translate.instant('meterShort'),
+              decimal: 2,
+              label: this.translate.instant('length')
+          },
+          angleUnit: {
+            display: '&deg;',           // This is the display value will be shown on the screen. Example: 'Gradian'
+            decimal: 2,                 // Bearing result will be fixed to this value.
+            factor: null,                // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+            label: this.translate.instant('azimuth')
+          }
+      };
+
+      L.control.ruler(options).addTo(this.map);
+    }
 
     searchContoller.on('search:locationfound', function (e: { layer: { openPopup: () => void; }; }) {
         e.layer.openPopup();
@@ -245,6 +284,12 @@ export class MapComponent {
       this.map.redraw()
     }
 
+    const analytics = getAnalytics();
+    logEvent(analytics, 'open-map', {
+      game: this.gamedata.name,
+      language: this.translate.currentLang
+    });
+
     this.route.queryParams.subscribe((h: any)=>{
         if (h.lat != null && h.lng != null) {
             if (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
@@ -255,6 +300,14 @@ export class MapComponent {
                 let m = this.layers[this.translate.instant(h.type)].markers.find((y: { _latlng: { lat: number; lng: number; }; })=>Math.abs(y._latlng.lat - h.lat) < 1 && Math.abs(y._latlng.lng - h.lng) < 1);
                 if (m) {
                     m.fireEvent("click");
+
+                    logEvent(analytics, 'open-map-queryParams', {
+                      game: this.gamedata.name,
+                      language: this.translate.currentLang,
+                      markType: h.type,
+                      coordinates: `${h.lat} ${h.lng}`
+                    });
+
                     return
                 }
             }
@@ -274,6 +327,7 @@ export class MapComponent {
       });
 
       locationImageOverlay.name = location.name;
+      locationImageOverlay.uniqueName = location.uniqueName;
       locationImageOverlay.id = location.id;
       locationsOnMap.push(locationImageOverlay);
     }
@@ -406,7 +460,9 @@ export class MapComponent {
               }
             };
 
-            marker.properties.locationName = this.locations.locations.find((y: { id: any; }) => y.id == mark.locationId).name;
+            let location = this.locations.locations.find((y: { id: any; }) => y.id == mark.locationId);
+            marker.properties.locationUniqueName = location.uniqueName;
+            marker.properties.locationName = location.name;
           }
 
           marker.bindTooltip(marker.properties.name, {
@@ -418,12 +474,7 @@ export class MapComponent {
 
             //marker.addTo(this.map);
         }
-        /*let d = !0;
-        if (s.markersConfig?.length > 0) {
-          let f = s.markersConfig.filter(h => h.uniqueName == markType.uniqueName);
-          f.length > 0 && (d = f[0].isShow)
-        }
-        this.addToCanvas(markModel, markType, d)*/
+
         this.addToCanvas(geoMarks, markType);
       }
     }
@@ -518,7 +569,10 @@ export class MapComponent {
                               search: p.join(", ")
                           }
                       };
-                      stuff.properties.locationName = this.locations.locations.find((y: { id: any; })=>y.id == f.locationId).name;
+
+                      let location = this.locations.locations.find((y: { id: any; })=>y.id == f.locationId);
+                      stuff.properties.locationUniqueName = location.uniqueName;
+                      stuff.properties.locationName = location.name;
                   }
 
                   stuff.bindTooltip((p: any) =>this.createStuffTooltip(p), {
@@ -552,6 +606,7 @@ export class MapComponent {
 
   private createStashPopup(stash: {
     _latlng: any; properties: {
+      locationUniqueName: string;
     typeUniqueName: any; name: any; description: any; items: any[];
 }; }) {
       let descHtml = `<div><div class='popup header'>${stash.properties.name}</div><div class='popup description'>${stash.properties.description}</div></div>`
@@ -584,6 +639,15 @@ export class MapComponent {
 
       inventoryItemsHtml += `</div>`;
       inventoryItemsHtml += `<div class="bottom"><div link-uniqueName="${stash.properties.typeUniqueName}" link-lng="${stash._latlng.lng}" link-lat="${stash._latlng.lat}" link-game="${this.gamedata.name}" class="button url-button" onclick="copyLink(this)"><span>Mark link</span></div></div>`;
+
+      const analytics = getAnalytics();
+      logEvent(analytics, 'open-stash-popup', {
+        type: stash.properties.typeUniqueName,
+        location: stash.properties.locationUniqueName,
+        coordinates: `${stash._latlng.lat} ${stash._latlng.lng}`,
+        game: this.game,
+        language: this.translate.currentLang
+      });
 
       return descHtml + inventoryItemsHtml;
   }
@@ -631,6 +695,7 @@ export class MapComponent {
 
             let location = this.locations.locations.find((x: { id: any; }) => x.id == zone.locationId);
             if (location) {
+                canvasMarker.properties.locationUniqueName = location.uniqueName;
                 canvasMarker.properties.locationName = location.name;
             }
         }
@@ -656,6 +721,33 @@ export class MapComponent {
     catch (e) {
         console.log(e);
     }
+  }
+
+  private addTraders() {
+    let traderIcon = { name: this.translate.instant("trader"), uniqueName: 'trader', cssClass: "tradere", ableToSearch: false, icon: L.icon({ iconSize: [4, 4], className: 'mark-container stalker-mark-2', animate: false, iconUrl: '/assets/images/svg/marks/trader.svg', iconSizeInit: [2, 2], iconAnchor: [0, 0] }) };
+
+    let traders: any = {};
+    traders.type = "FeatureCollection";
+    traders.features = [];
+
+    for (let trader of this.gamedata.traders) {
+        let canvasMarker = L.marker([trader.y, trader.x], {icon: traderIcon.icon});
+
+        canvasMarker.properties = {};
+        canvasMarker.properties.traderConfig = trader;
+        traders.features.push(canvasMarker);
+        canvasMarker.properties.ableToSearch = false;
+
+        canvasMarker.bindTooltip(canvasMarker.properties.name, {
+          sticky: true,
+          className: "map-tooltip",
+          offset: [0, 50]
+        });
+
+        canvasMarker.bindPopup((trader: any) => this.createTraderPopup(trader, canvasMarker), { maxWidth : 1400 }).openPopup();
+    }
+
+    this.addToCanvas(traders, traderIcon);
   }
 
   private addToCanvas(geoMarks: any, markType: any) {
@@ -696,11 +788,12 @@ export class MapComponent {
 
   private createeAnomalyZonePopup(zone: {
     _latlng: any; properties: {
+      locationUniqueName: string;
       anomalies: any[];
     typeUniqueName: any; name: any; description: any; anomaliySpawnSections: any[];
 }; }) {
       let descHtml = `<div><div class='popup header'>${this.translate.instant('anomaliesCluster')}</div>${ zone.properties.description != null ? `<div class='popup description'>${zone.properties.description}</div>` : ''}</div>`
-      //anomaliySpawnSections[0].anomalyUniqueName
+
       if (zone.properties.anomaliySpawnSections && zone.properties.anomaliySpawnSections.length > 0) {
           let sectionsHtml = '<div class="sections">';
 
@@ -762,7 +855,39 @@ export class MapComponent {
         descHtml += '</div>'
       }
 
+      const analytics = getAnalytics();
+      logEvent(analytics, 'open-anomaly-zone-popup', {
+        type: zone.properties.typeUniqueName,
+        location: zone.properties.locationUniqueName,
+        coordinates: `${zone._latlng.lat} ${zone._latlng.lng}`,
+        game: this.game,
+        language: this.translate.currentLang
+      });
+
       return descHtml;
+  }
+
+  private createTraderPopup(traderMarker: any, marker: any) {
+    let trader: TraderModel = traderMarker.properties.traderConfig;
+
+    marker.getPopup().on('remove', function() {
+        marker.getPopup().off('remove');
+        componentRef.destroy();
+        console.log(`trader popup closed`);
+    });
+    console.log(`trader popup open`);
+
+    const factory =
+      this.resolver.resolveComponentFactory(TraderComponent);
+
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.trader = trader;
+    componentRef.instance.game = {gameName: this.game, id: this.avaliableGames.indexOf(this.game) + 1}
+    return componentRef.location.nativeElement;
+
+    //const componentRef = createComponent(TraderComponent, {hostElement, environmentInjector});
+
+    //return componentRef.location.nativeElement.innerHTML;
   }
 
   private async addScript(scriptUrl: string): Promise<void> {

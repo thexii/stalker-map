@@ -1,0 +1,41 @@
+.trader-container {
+  display: flex;
+  color: white;
+}
+
+.trader-info {
+  display: flex;
+}
+
+.bar_barman {
+  background-position: left -164px top -0px;
+}
+
+.bar_dolg_petrenko {
+  background-position: left 0 top -108px;
+}
+
+.mil_Svoboda_trader {
+  background-position: left -164px top -108px;
+}
+
+.yan_sakharov {
+  background-position: left -330px top -0px;
+}
+
+.trader-bio {
+  flex-grow: 1;
+}
+
+.trader-image.shoc {
+  width: 10rem;
+  height: 6.58rem;
+}
+
+.trader-image {
+  background-image: url(/assets/images/traders/traders.png);
+  background-repeat: no-repeat;
+}
+
+.chart {
+}

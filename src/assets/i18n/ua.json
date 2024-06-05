@@ -109,5 +109,8 @@
     "zone_mine_static_strong": "«Електра»",
     "zone_no_gravity": "Ліфт",
 
-    "anomaliesCluster": "Скупчення аномалій"
+    "anomaliesCluster": "Скупчення аномалій",
+    "meterShort": "м",
+    "azimuth": "Азимут:",
+    "length": "Дистанція:"
 }

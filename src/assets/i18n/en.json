@@ -109,5 +109,8 @@
     "zone_mine_static_strong": "Electro",
     "zone_no_gravity": "Lift",
 
-    "anomaliesCluster": "Anomal zone"
+    "anomaliesCluster": "Anomal zone",
+    "meterShort": "m",
+    "azimuth": "Azimuth:",
+    "length": "Distance:"
 }
