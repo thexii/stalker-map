@@ -1,0 +1,41 @@
+<div>
+  <div class="popup header">{{ "anomaliesCluster" | translate }}</div>
+  <div *ngIf="anomalZone.description" class="popup description">
+    {{ anomalZone.description | translate }}
+  </div>
+</div>
+
+<div
+  class="sections"
+  *ngIf="
+    anomalZone.anomaliySpawnSections &&
+    anomalZone.anomaliySpawnSections.length > 0
+  ">
+  <div class="section" *ngFor="let section of anomalZone.anomaliySpawnSections">
+    <div class="anomaly-section-info"><div>{{ 'anomalyArtMaxCount' | translate: { count: section.maxCapacity } }}</div></div>
+    <div class="inventory">
+      <ng-container *ngFor="let artefact of section.anomalySpawnItems">
+        <div class="inventory-item inventory-item-width-1 inventory-item-height-1">
+          <div class="inventory-item-percentage">{{Math.floor(artefact.probability * 100)}}%</div>
+          <div class="inventory-item-image {{artefact.artefact.uniqueName}} {{this.game}}" title="{{artefact.artefact.uniqueName | translate}}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="anomalies-in-claster-container" *ngIf="anomalZone.anomalies != null && anomalZone.anomalies.length > 0">
+  <div class="anomaly-in-claster" *ngFor="let anomaly of anomalZone.anomalies">
+    <span>{{anomaly.count}} x {{anomaly.uniqueName | translate}}</span>
+  </div>
+</div>
+
+<div class="bottom" *ngIf="
+anomalZone.anomaliySpawnSections &&
+anomalZone.anomaliySpawnSections.length > 0
+">
+  <div class="button url-button">
+    <span>Mark link</span>
+  </div>
+</div>
+

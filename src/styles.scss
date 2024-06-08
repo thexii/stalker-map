@@ -131,3 +131,30 @@ input[type=checkbox]+label:before {
   align-items: center;
   display: flex;
 }
+
+.faction-icon::before {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.5rem;
+  width: 1.5rem;
+  content: "";
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.icon-freedom::before {
+  background-image: url(/assets/images/svg/factions/freedom.svg);
+}
+
+.icon-duty::before {
+  background-image: url(/assets/images/svg/factions/duty.svg);
+}
+
+.icon-stalker::before {
+  background-image: url(/assets/images/svg/factions/stalkers.svg);
+}
+
+.icon-science::before {
+  background-image: url(/assets/images/svg/factions/scientists.svg);
+}

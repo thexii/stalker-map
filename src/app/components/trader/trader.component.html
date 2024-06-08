@@ -2,47 +2,124 @@
   <div class="sell container">
     <div class="trader-info">
       <div class="trader-bio">
-        <div class="trader-name">{{trader.uniqueName}}</div>
-        <div class="trader-fraction">Торговець</div>
-        <div class="trader-money">5000 RU</div>
+        <div class="trader-name">{{trader.name + '.name' | translate}}</div>
+        <div class="trader-fraction">
+          <span>{{ 'trader' | translate}}</span>
+          <span *ngIf="trader.faction"> - <span class="faction-icon icon-{{trader.faction}}">{{ trader.faction | translate}}</span></span>
+        </div>
+        <div class="trader-money">{{ trader.money }} RU</div>
       </div>
-      <div class="trader-image {{trader.uniqueName}} shoc"></div>
+      <div class="trader-image {{trader.name}} shoc"></div>
     </div>
     <div class="sell inventory">
-      <ng-container *ngFor="let sellItem of selectedTradeSection.assortment">
-        <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItem(sellItem)">
+      <ng-container *ngFor="let sellItem of selectedSection.sell.assortment">
+        <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItemSell(sellItem)">
           <div class="item-additional-info">
             <div class="inventory-item-count">{{sellItem.price}}</div>
+            <div class="inventory-item-upgrade" *ngIf="sellItem.item.isUpgraded"></div>
           </div>
-          <div class="inventory-item-image {{sellItem.item.uniqueName}} {{game.gameName}}" title="{{sellItem.item.uniqueName}}"></div>
+          <div class="inventory-item-image {{sellItem.item.uniqueName}} {{game.gameName}}" title="{{sellItem.item.uniqueName | translate}}">
+            <div *ngIf="sellItem.item.hasScope && sellItem.item.scopeX > -1000 && sellItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="sellItem.item.scopeX" [style.top.px]="sellItem.item.scopeY"></div>
+            <div *ngIf="sellItem.item.hasSilencer && sellItem.item.silencerX > -1000 && sellItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="sellItem.item.silencerX" [style.top.px]="sellItem.item.silencerY"></div>
+            <div *ngIf="sellItem.item.hasGrenadeLauncher && sellItem.item.grenadeLauncherX > -1000 && sellItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="sellItem.item.grenadeLauncherX" [style.top.px]="sellItem.item.grenadeLauncherY"></div>
+          </div>
         </div>
       </ng-container>
     </div>
   </div>
 
   <div class="info container">
-    <div *ngIf="selectedItem">
-
-    </div>
     <div class="sections-select-container">
-      <select (change)="changeSection($event)">
-        <option *ngFor="let section of trader.tradeSections" [value]="section.sectionConditions">{{ trader.uniqueName + '.' + section.sectionConditions | translate }}</option>
-      </select>
+      <div class="trader-sections-title">{{'trader-sections-title' | translate}}</div>
+      <div class="trader-sections-container">
+        <ng-container *ngFor="let section of trader.sell">
+          <div class="trader-section" (click)="changeSection(section)" [ngClass]="{'selected': selectedSection && selectedSection.sell && section.sectionConditions == selectedSection.sell.sectionConditions}">
+            <div class="trader-section-title">
+              {{ trader.name + '.' + section.sectionConditions | translate }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="selected-item" *ngIf="selectedItem && selectedItem.item">
+      <table>
+        <tr>
+          <td>{{selectedItem.item.uniqueName | translate}}</td>
+        </tr>
+        <tr>
+          <td>{{ 'nominal-price' | translate:{price: selectedItem.price} }}</td>
+        </tr>
+        <tr *ngIf="selectedItem.boxSize > 1">
+          <td>{{ 'item-box-size' | translate:{boxSize: selectedItem.boxSize} }}</td>
+        </tr>
+      </table>
     </div>
     <div class="chart-container">
-      <canvas id="MyChart" class="chart" >{{ chart }}</canvas>
+      <canvas id="item-chart" class="chart" [hidden]="selectedItem && !selectedItem.sell">{{ chart }}</canvas>
+    </div>
+    <div class="best-trade-container" *ngIf="selectedItem && bestTradersForItem">
+      <table>
+        <ng-container *ngIf="selectedItem && !selectedItem.sell">
+          <tr>
+            <td colspan="2" *ngIf="bestTradersForItem.traderHasNoSellItem">{{ 'trader-dont-sell-item' | translate}}</td>
+            <td colspan="2" *ngIf="bestTradersForItem.traderHasNoSellItemInSection">{{ 'trader-dont-sell-item-in-section' | translate}}</td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="bestTradersForItem.sell.length > 0">
+          <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
+          <tr *ngFor="let sell of bestTradersForItem.sell">
+            <td class="best-trade-price">
+              {{sell.item.sellCoeficient * selectedItem.price}}
+            </td>
+            <td>
+              <div class="best-trade-trader-name">
+                {{sell.traderName + '.name' | translate}}
+              </div>
+              <div class="best-trade-trader-condition" *ngIf="sell.condition != allwaysCondition">
+                {{sell.traderName + '.' + sell.condition | translate}}
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="bestTradersForItem.buy.length > 0">
+          <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
+          <tr *ngFor="let buy of bestTradersForItem.buy">
+            <td>
+              {{buy.item.sellCoeficient * selectedItem.price}}
+            </td>
+            <td>
+              <div class="best-trade-trader-name">
+                {{buy.traderName + '.name' | translate}}
+              </div>
+              <div class="best-trade-trader-condition" *ngIf="buy.condition">
+                {{buy.traderName + '.' + buy.condition | translate}}
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+      </table>
     </div>
   </div>
 
   <div class="buy container">
-    <div class="hero-info"></div>
+    <div class="trader-info">
+      <div class="trader-bio">
+        <div class="trader-name">{{'hero-name.' + game.gameName| translate}}</div>
+      </div>
+      <div class="trader-image hero shoc"></div>
+    </div>
     <div class="buy inventory">
-      <ng-container *ngFor="let buyItem of selectedTradeSection.buying">
-        <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}">
+      <ng-container *ngFor="let buyItem of selectedSection.buy.assortment">
+        <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItemBuy(buyItem)">
           <div class="item-additional-info">
             <div class="inventory-item-count">{{buyItem.price}}</div>
+            <div class="inventory-item-upgrade" *ngIf="buyItem.item.isUpgraded"></div>
           </div>
-          <div class="inventory-item-image {{buyItem.item.uniqueName}} {{game.gameName}}" title="{{buyItem.item.uniqueName}}"></div>
+          <div class="inventory-item-image {{buyItem.item.uniqueName}} {{game.gameName}}" title="{{buyItem.item.uniqueName | translate}}">
+            <div *ngIf="buyItem.item.hasScope && buyItem.item.scopeX > -1000 && buyItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="buyItem.item.scopeX" [style.top.px]="buyItem.item.scopeY"></div>
+            <div *ngIf="buyItem.item.hasSilencer && buyItem.item.silencerX > -1000 && buyItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="buyItem.item.silencerX" [style.top.px]="buyItem.item.silencerY"></div>
+            <div *ngIf="buyItem.item.hasGrenadeLauncher && buyItem.item.grenadeLauncherX > -1000 && buyItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="buyItem.item.grenadeLauncherX" [style.top.px]="buyItem.item.grenadeLauncherY"></div>
+          </div>
         </div>
       </ng-container>
     </div>

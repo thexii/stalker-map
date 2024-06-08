@@ -127,6 +127,21 @@ color: white !important;
   margin-bottom: .5rem
 }
 
+.inventory::-webkit-scrollbar-track {
+	background-color: rgba(9,10,10,1);
+  border: 1px solid #555656;
+}
+
+.inventory::-webkit-scrollbar-thumb {
+	background-color:rgba(9,10,10,1);
+  border: 1px solid white;
+  margin: 3px;
+}
+
+.inventory::-webkit-scrollbar {
+  border: 1px solid white;
+}
+
 .inventory-item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -199,6 +214,11 @@ color: white !important;
   max-height: 100%;
   object-fit: cover;
   background-image: url(/assets/images/items/ui_icon_equipment.png)
+}
+
+.wpn_addon {
+  background-image: url(/assets/images/items/ui_icon_equipment.png);
+  position: absolute;
 }
 
 .item-additional-info {

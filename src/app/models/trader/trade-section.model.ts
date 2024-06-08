@@ -1,10 +1,5 @@
-import { TraderBuyItem } from "./trader-buy-item.model";
-import { TraderSellItem } from "./trader-sell-item.model";
-
-export class TradeSection {
+export class TradeSection<T> {
   public sectionConditions: string;
 
-  public buying: TraderBuyItem[];
-
-  public assortment: TraderSellItem[];
+  public assortment: T[];
 }

@@ -1,12 +1,12 @@
-.wpn_abakan {
+.wpn_abakan,.wpn_abakan_m1,.wpn_abakan_m2 {
   background-position: 724px 1948px;
 }
 
-.wpn_ak74 {
+.wpn_ak74,.wpn_ak74_m1 {
   background-position: 774px 1798px;
 }
 
-.wpn_ak74u {
+.wpn_ak74u,.wpn_ak74u_m1 {
   background-position: 1024px 1248px;
 }
 
@@ -18,11 +18,11 @@
   background-position: 1024px 1548px;
 }
 
-.wpn_groza {
+.wpn_groza,.wpn_groza_m1 {
   background-position: 1024px 1348px;
 }
 
-.wpn_l85 {
+.wpn_l85,.wpn_l85_m1,.wpn_l85_m2 {
   background-position: 1024px 1448px;
 }
 
@@ -30,15 +30,15 @@
   background-position: 1024px 1748px;
 }
 
-.wpn_mp5,.wpn_mp5_m1 {
+.wpn_mp5,.wpn_mp5_m1,.wpn_mp5_m2 {
   background-position: 774px 1498px;
 }
 
-.wpn_sig550 {
+.wpn_sig550,.wpn_sig_m1,.wpn_sig_m2 {
   background-position: 774px 1698px;
 }
 
-.wpn_val {
+.wpn_val,.wpn_val_m1 {
   background-position: 274px 1848px;
 }
 
@@ -46,7 +46,7 @@
   background-position: 824px 798px;
 }
 
-.wpn_colt1911 {
+.wpn_colt1911,.wpn_colt_m1 {
   background-position: 624px 798px;
 }
 
@@ -54,7 +54,7 @@
   background-position: 724px 798px;
 }
 
-.wpn_fort {
+.wpn_fort,.wpn_fort_m1 {
   background-position: 1024px 798px;
 }
 
@@ -75,10 +75,10 @@
 }
 
 .wpn_usp {
-  background-position: 924px 748px;
+  background-position: left -100px top -1250px;
 }
 
-.wpn_walther {
+.wpn_walther,.wpn_walther_m1 {
   background-position: 1024px 748px;
 }
 
@@ -90,7 +90,7 @@
   background-position: 1024px 898px;
 }
 
-.wpn_spas12 {
+.wpn_spas12,.wpn_spas12_m1 {
   background-position: 424px 1898px;
 }
 
@@ -130,7 +130,7 @@
   background-position: 0 248px;
 }
 
-.wpn_rg-6 {
+.wpn_rg-6,.wpn_rg6_m1 {
   background-position: 1024px 1648px;
 }
 
@@ -287,4 +287,52 @@
 }
 .wpn_addon_scope_susat_x1\.6 {
   background-position: left -500px top -900px;
+}
+
+.wpn_lr300, .wpn_lr300_m1, .wpn_sig550,
+.wpn_sig_m1, .wpn_sig_m2 {
+  .wpn_addon.scope {
+    background-position: left -550px top -900px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.wpn_abakan .wpn_addon.scope,
+.wpn_abakan_m1 .wpn_addon.scope,
+.wpn_abakan_m2 .wpn_addon.scope {
+  background-position: left -500px top -850px;
+  width: 100px;
+  height: 50px;
+}
+
+.wpn_addon.silencer
+{
+  background-position: left -900px top -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.wpn_abakan , .wpn_abakan_m1, .wpn_abakan_m2,
+.wpn_ak74, .wpn_ak74_m1 {
+.wpn_addon.grenade-launcher{
+    background-position: left -900px top 0px;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.wpn_lr300 , .wpn_lr300_m1, .wpn_sig550,
+.wpn_sig_m1, .wpn_sig_m2{
+  .wpn_addon.grenade-launcher{
+    background-position: left -850px top -150px;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.wpn_vintorez, .wpn_val, .wpn_pb {
+  .wpn_addon.silencer {
+    display: none;
+  }
 }

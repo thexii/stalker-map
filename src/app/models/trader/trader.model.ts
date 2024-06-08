@@ -1,9 +1,12 @@
-import { TradeSection } from "./trade-section.model";
+import { TradeSection, TraderSellItem, TraderBuyItem } from ".";
 
 export class TraderModel {
-  public uniqueName: string;
+  public name: string;
   public locationId: number;
   public locationName: string;
-  public tradeSections: TradeSection[];
+  public faction: string;
+  public money: number;
+  public sell: TradeSection<TraderSellItem>[];
+  public buy: TradeSection<TraderBuyItem>[];
   //public discounts: Discount[];
 }

@@ -1,0 +1,22 @@
+<div>
+  <div class='popup header'>{{ stuff.name | translate}}</div>
+  <div class='popup description'>{{stuff.description | translate}}</div>
+</div>
+<div class="inventory">
+  <div *ngFor="let stuffItem of stuff.items" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+    <div class="item-additional-info">
+      <div *ngIf="stuffItem.count > 1" class="inventory-item-count">x{{stuffItem.count}}</div>
+      <div *ngIf="stuffItem.item.isUpgraded" class="inventory-item-upgrade"></div>
+    </div>
+    <div class="inventory-item-image {{stuffItem.item.uniqueName}} {{this.game}}" title="{{stuffItem.item.uniqueName | translate}}">
+      <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+      <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+      <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <div class="button url-button" (click)="copyLink()">
+    <span>Mark link</span>
+  </div>
+</div>

@@ -5,6 +5,7 @@
 
 .trader-info {
   display: flex;
+  height: 150px;
 }
 
 .bar_barman {
@@ -23,13 +24,12 @@
   background-position: left -330px top -0px;
 }
 
-.trader-bio {
-  flex-grow: 1;
+.hero.shoc {
+  background-position: left -330px top -432px;
 }
 
-.trader-image.shoc {
-  width: 10rem;
-  height: 6.58rem;
+.trader-bio {
+  flex-grow: 1;
 }
 
 .trader-image {
@@ -37,8 +37,71 @@
   background-repeat: no-repeat;
 }
 
+.trader-image.shoc {
+  width: 10rem;
+  height: 6.58rem;
+}
+
+.trader-name {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
 .inventory {
   max-height: round(up, var(--wrapper-height) / 2, 50px);
   overflow-y: auto;
   overflow-x: hidden;
+  grid-template-columns: repeat(7, 50px);
+}
+
+.best-sell-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.best-trade-trader-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.best-trade-price {
+  float: inline-start;
+  min-width: 30px;
+}
+
+.info.container {
+  margin-inline: 1rem;
+  max-width: 350px;
+  width: 350px;
+}
+
+.trader-sections-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sections-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trader-section {
+  margin-block: 0.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trader-section:hover {
+  background-color: #4d4d4d;
+}
+
+.trader-section.selected {
+  border: 1px solid white;
 }

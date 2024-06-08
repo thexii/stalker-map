@@ -48,7 +48,7 @@ export class HeaderComponent {
 
 
   public changeLanguage(event: any): void {
-    this.languageChanged = true;
+    //this.languageChanged = true;
     this.translate.use(event.target.value);
   }
 }
