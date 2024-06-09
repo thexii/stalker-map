@@ -132,7 +132,7 @@ input[type=checkbox]+label:before {
   display: flex;
 }
 
-.faction-icon::before {
+.stalker-icon::before {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
@@ -157,4 +157,10 @@ input[type=checkbox]+label:before {
 
 .icon-science::before {
   background-image: url(/assets/images/svg/factions/scientists.svg);
+}
+
+.icon-bug::before {
+  height: 1rem;
+  width: 1rem;
+  background-image: url(/assets/images/svg/interface/bug.svg);
 }

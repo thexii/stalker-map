@@ -5,7 +5,7 @@
         <div class="trader-name">{{trader.name + '.name' | translate}}</div>
         <div class="trader-fraction">
           <span>{{ 'trader' | translate}}</span>
-          <span *ngIf="trader.faction"> - <span class="faction-icon icon-{{trader.faction}}">{{ trader.faction | translate}}</span></span>
+          <span *ngIf="trader.faction"> - <span class="stalker-icon icon-{{trader.faction}}">{{ trader.faction | translate}}</span></span>
         </div>
         <div class="trader-money">{{ trader.money }} RU</div>
       </div>
@@ -15,7 +15,10 @@
       <ng-container *ngFor="let sellItem of selectedSection.sell.assortment">
         <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItemSell(sellItem)">
           <div class="item-additional-info">
-            <div class="inventory-item-count">{{sellItem.price}}</div>
+            <div class="inventory-item-count">
+              <span class="stalker-icon icon-bug" *ngIf="sellItem.price == 0 || sellItem.price == undefined"></span>
+              {{sellItem.price}}
+            </div>
             <div class="inventory-item-upgrade" *ngIf="sellItem.item.isUpgraded"></div>
           </div>
           <div class="inventory-item-image {{sellItem.item.uniqueName}} {{game.gameName}}" title="{{sellItem.item.uniqueName | translate}}">
@@ -52,10 +55,16 @@
         <tr *ngIf="selectedItem.boxSize > 1">
           <td>{{ 'item-box-size' | translate:{boxSize: selectedItem.boxSize} }}</td>
         </tr>
+        <tr *ngIf="selectedItem && selectedItem.sell && selectedItem.sell.count > 0">
+          <td>{{ 'trade-count-chance' | translate }}:</td>
+        </tr>
+        <tr *ngIf="selectedItem && selectedItem.sell && selectedItem.sell.count == 0">
+          <td>{{ 'trader-must-buy-item-firstly' | translate }}</td>
+        </tr>
       </table>
     </div>
     <div class="chart-container">
-      <canvas id="item-chart" class="chart" [hidden]="selectedItem && !selectedItem.sell">{{ chart }}</canvas>
+      <canvas id="item-chart" class="chart" [hidden]="selectedItem && (!selectedItem.sell || selectedItem.sell.count == 0)">{{ chart }}</canvas>
     </div>
     <div class="best-trade-container" *ngIf="selectedItem && bestTradersForItem">
       <table>
@@ -69,7 +78,8 @@
           <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
           <tr *ngFor="let sell of bestTradersForItem.sell">
             <td class="best-trade-price">
-              {{sell.item.sellCoeficient * selectedItem.price}}
+              <span class="stalker-icon icon-bug" *ngIf="Math.floor(sell.item.sellCoeficient * selectedItem.price) == 0 || Math.floor(sell.item.sellCoeficient * selectedItem.price) == undefined"></span>
+              {{ Math.floor(sell.item.sellCoeficient * selectedItem.price) }}
             </td>
             <td>
               <div class="best-trade-trader-name">
@@ -85,7 +95,8 @@
           <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
           <tr *ngFor="let buy of bestTradersForItem.buy">
             <td>
-              {{buy.item.sellCoeficient * selectedItem.price}}
+              <span class="stalker-icon icon-bug" *ngIf="Math.floor(buy.item.sellCoeficient * selectedItem.price) == 0 || Math.floor(buy.item.sellCoeficient * selectedItem.price) == null"></span>
+              {{Math.floor(buy.item.sellCoeficient * selectedItem.price)}}
             </td>
             <td>
               <div class="best-trade-trader-name">
@@ -112,7 +123,10 @@
       <ng-container *ngFor="let buyItem of selectedSection.buy.assortment">
         <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItemBuy(buyItem)">
           <div class="item-additional-info">
-            <div class="inventory-item-count">{{buyItem.price}}</div>
+            <div class="inventory-item-count">
+              <span class="stalker-icon icon-bug" *ngIf="buyItem.price == 0 || buyItem.price == undefined || buyItem.price == nan"></span>
+              {{Math.floor(buyItem.price)}}
+            </div>
             <div class="inventory-item-upgrade" *ngIf="buyItem.item.isUpgraded"></div>
           </div>
           <div class="inventory-item-image {{buyItem.item.uniqueName}} {{game.gameName}}" title="{{buyItem.item.uniqueName | translate}}">
@@ -123,5 +137,10 @@
         </div>
       </ng-container>
     </div>
+  </div>
+</div>
+<div class="bottom">
+  <div class="button url-button" (click)="copyLink()">
+    <span>Mark link</span>
   </div>
 </div>

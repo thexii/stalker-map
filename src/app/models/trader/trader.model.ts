@@ -8,5 +8,6 @@ export class TraderModel {
   public money: number;
   public sell: TradeSection<TraderSellItem>[];
   public buy: TradeSection<TraderBuyItem>[];
-  //public discounts: Discount[];
+  public x: number;
+  public y: number;
 }

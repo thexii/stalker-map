@@ -13,8 +13,13 @@ import { NgFor, NgIf } from '@angular/common';
 export class StuffComponent {
   @Input() public stuff: StuffModel;
   @Input() public game: string;
+  @Input() public stuffType: string;
 
   public copyLink(): void {
     console.log(this.stuff);
+
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.y}&lng=${this.stuff.x}&type=${this.stuffType}`;
+    console.log(link);
+    navigator.clipboard.writeText(link)
   }
 }

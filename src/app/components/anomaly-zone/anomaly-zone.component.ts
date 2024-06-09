@@ -13,9 +13,13 @@ import { NgFor, NgIf } from '@angular/common';
 export class AnomalyZoneComponent {
   @Input() public anomalZone: AnomalyZone;
   @Input() public game: string;
+  @Input() public stuffType: string;
+
   public Math: Math = Math;
 
-  private async ngOnInit(): Promise<void> {
-    console.log(this.anomalZone);
+  public copyLink(): void {
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.y}&lng=${this.anomalZone.x}&type=${this.stuffType}`;
+    console.log(link);
+    navigator.clipboard.writeText(link)
   }
 }

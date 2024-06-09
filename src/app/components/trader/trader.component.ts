@@ -25,9 +25,17 @@ export class TraderComponent {
   public readonly allwaysCondition: string = 'allways';
 
   public chart: any;
+  public Math: Math = Math;
+  public nan = NaN;
 
   constructor(private translate: TranslateService) {
 
+  }
+
+  public copyLink(): void {
+    let link = `${window.location.origin}/map/${this.game.gameName}?lat=${this.trader.y}&lng=${this.trader.x}&type=traders`;
+    console.log(link);
+    navigator.clipboard.writeText(link)
   }
 
   public selectItemSell(item: TraderSellItem): void {
@@ -84,36 +92,38 @@ export class TraderComponent {
     let traderHasNoSellItemInSection = false;
 
     if (sell) {
-      let labels: string[] = [];
-      let values: number[] = [];
+      if (sell.count > 0) {
+        let labels: string[] = [];
+        let values: number[] = [];
 
-      for (let i = 0; i < sell.count + 1; i++) {
-        labels.push(i.toString());
-        values.push(this.bernoulli(sell.count, i, sell.probability) * 100);
-      }
+        for (let i = 0; i < sell.count + 1; i++) {
+          labels.push(i.toString());
+          values.push(this.bernoulli(sell.count, i, sell.probability) * 100);
+        }
 
-      this.chart = new Chart("item-chart", {
-        type: 'line', //this denotes tha type of chart
+        this.chart = new Chart("item-chart", {
+          type: 'line', //this denotes tha type of chart
 
-        data: {
-          labels: labels,
-          datasets: [{
-            label: 'Шанс появи',
-            data: values,
-            fill: false,
-            borderColor: 'white',
-            tension: 0.1
-          }]
-        },
-        options: {
-          aspectRatio:2.5,
-          plugins: {
-            legend: {
-              display: false
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Шанс появи',
+              data: values,
+              fill: false,
+              borderColor: 'white',
+              tension: 0.1
+            }]
+          },
+          options: {
+            aspectRatio:2.5,
+            plugins: {
+              legend: {
+                display: false
+              }
             }
           }
-        }
-      });
+        });
+      }
     }
 
     if (buy) {
@@ -224,15 +234,8 @@ export class TraderComponent {
   }
 
   private async ngOnInit(): Promise<void> {
-    console.log('trader ngOnInit');
-    console.log(this.trader);
     this.selectedSection = {sell: this.trader.sell.find(x => x.sectionConditions == "") as TradeSection<TraderSellItem>, buy: this.trader.buy.find(x => x.sectionConditions == "") as TradeSection<TraderBuyItem>} ;
-
     this.recalculateSection();
-  }
-
-  private async ngOnDestroy(): Promise<void> {
-    console.log('trader ngOnDestroy');
   }
 
   private bernoulli(n: number, k: number, p: number): number {
