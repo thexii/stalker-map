@@ -1,6 +1,7 @@
-import { TraderBuyItem } from "./trader-buy-item.model";
+import { Item } from "../item.model";
 
-export class TraderSellItem extends TraderBuyItem {
+export class TraderSupplyItem {
   public count: number;
   public probability: number;
+  public item: Item;
 }

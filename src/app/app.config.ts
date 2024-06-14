@@ -16,7 +16,8 @@ export const appConfig: ApplicationConfig = {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
         deps: [HttpClient]
-      }
+      },
+      isolate: true
     }).providers!]
 };
 

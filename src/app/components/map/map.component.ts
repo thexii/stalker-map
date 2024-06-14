@@ -100,7 +100,11 @@ export class MapComponent {
       console.log("Leaflet is loaded");
     }
 
-    await Promise.all([this.addStyle("/assets/libs/leaflet/leaflet.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css"), this.addStyle("/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css")]);
+    await Promise.all([this.addStyle("/assets/libs/leaflet/leaflet.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.css"), this.addStyle("/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css"), this.addStyle("/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css"), await this.loadLocales(this.translate.currentLang)]);
+
+    this.translate.onLangChange.subscribe(i=>{
+      this.loadLocales(i.lang);
+    });
 
     fetch(`/assets/data/${this.game}.json`)
       .then(response => response.json())
@@ -116,10 +120,10 @@ export class MapComponent {
         }
       );
 
-      let body = document.body, html = document.documentElement;
+    let body = document.body, html = document.documentElement;
 
-      let height = Math.max( body.scrollHeight, body.offsetHeight,
-                       html.clientHeight, html.scrollHeight, html.offsetHeight);
+    let height = Math.max( body.scrollHeight, body.offsetHeight,
+                      html.clientHeight, html.scrollHeight, html.offsetHeight);
 
     let wrapper = document.getElementById('map-wrapper');
 
@@ -127,6 +131,23 @@ export class MapComponent {
       let wrapperHeight = height - wrapper.offsetTop - 10;
       document.documentElement.style.setProperty('--wrapper-height', `${wrapperHeight}px`);
     }
+  }
+
+  private async loadLocales(language: string): Promise<void> {
+    await fetch(`/assets/i18n/${this.game}/${this.translate.currentLang}.json`)
+    .then(response => response.json())
+    .then(
+      (locales: any) => {
+        if (locales) {
+          this.translate.setTranslation(language, locales, true);
+          /*for (let locale in locales) {
+            console.log(locale);
+          }*/
+          //
+        }
+        console.log(locales);
+      }
+    )
   }
 
   private async ngOnDestroy(): Promise<void> {

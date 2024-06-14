@@ -1,7 +1,7 @@
-import { TraderSellItem } from ".";
+import { TraderBuySellItem } from ".";
 
-export class BestSellModel {
+export class BestBuySellModel {
   public traderName: string;
   public condition: string;
-  public item: TraderSellItem;
+  public item: TraderBuySellItem;
 }

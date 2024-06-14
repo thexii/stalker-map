@@ -1,4 +1,4 @@
-import { TradeSection, TraderSellItem, TraderBuyItem } from ".";
+import { TradeSection, TraderSupplyItem, TraderBuySellItem } from ".";
 
 export class TraderModel {
   public name: string;
@@ -6,8 +6,9 @@ export class TraderModel {
   public locationName: string;
   public faction: string;
   public money: number;
-  public sell: TradeSection<TraderSellItem>[];
-  public buy: TradeSection<TraderBuyItem>[];
+  public buy: TradeSection<TraderBuySellItem>[];
+  public sell: TradeSection<TraderBuySellItem>[];
+  public supplies: TradeSection<TraderSupplyItem>[];
   public x: number;
   public y: number;
 }

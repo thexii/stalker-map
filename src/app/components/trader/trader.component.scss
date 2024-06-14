@@ -51,7 +51,7 @@
   max-height: round(up, var(--wrapper-height) / 2, 50px);
   overflow-y: auto;
   overflow-x: hidden;
-  grid-template-columns: repeat(7, 50px);
+  grid-template-columns: repeat(9, 50px);
 }
 
 .best-sell-item {

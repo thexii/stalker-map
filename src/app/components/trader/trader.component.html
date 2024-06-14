@@ -12,8 +12,8 @@
       <div class="trader-image {{trader.name}} shoc"></div>
     </div>
     <div class="sell inventory">
-      <ng-container *ngFor="let sellItem of selectedSection.sell.assortment">
-        <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItemSell(sellItem)">
+      <ng-container *ngFor="let sellItem of selectedSellSection.items">
+        <div class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItem(sellItem.item)">
           <div class="item-additional-info">
             <div class="inventory-item-count">
               <span class="stalker-icon icon-bug" *ngIf="sellItem.price == 0 || sellItem.price == undefined"></span>
@@ -36,7 +36,7 @@
       <div class="trader-sections-title">{{'trader-sections-title' | translate}}</div>
       <div class="trader-sections-container">
         <ng-container *ngFor="let section of trader.sell">
-          <div class="trader-section" (click)="changeSection(section)" [ngClass]="{'selected': selectedSection && selectedSection.sell && section.sectionConditions == selectedSection.sell.sectionConditions}">
+          <div class="trader-section" (click)="selectSellSection(section)" [ngClass]="{'selected': selectedSellSection && selectedSellSection.sectionConditions == section.sectionConditions}">
             <div class="trader-section-title">
               {{ trader.name + '.' + section.sectionConditions | translate }}
             </div>
@@ -44,72 +44,77 @@
         </ng-container>
       </div>
     </div>
-    <div class="selected-item" *ngIf="selectedItem && selectedItem.item">
-      <table>
-        <tr>
-          <td>{{selectedItem.item.uniqueName | translate}}</td>
-        </tr>
-        <tr>
-          <td>{{ 'nominal-price' | translate:{price: selectedItem.price} }}</td>
-        </tr>
-        <tr *ngIf="selectedItem.boxSize > 1">
-          <td>{{ 'item-box-size' | translate:{boxSize: selectedItem.boxSize} }}</td>
-        </tr>
-        <tr *ngIf="selectedItem && selectedItem.sell && selectedItem.sell.count > 0">
-          <td>{{ 'trade-count-chance' | translate }}:</td>
-        </tr>
-        <tr *ngIf="selectedItem && selectedItem.sell && selectedItem.sell.count == 0">
-          <td>{{ 'trader-must-buy-item-firstly' | translate }}</td>
-        </tr>
-      </table>
-    </div>
-    <div class="chart-container">
-      <canvas id="item-chart" class="chart" [hidden]="selectedItem && (!selectedItem.sell || selectedItem.sell.count == 0)">{{ chart }}</canvas>
-    </div>
-    <div class="best-trade-container" *ngIf="selectedItem && bestTradersForItem">
-      <table>
-        <ng-container *ngIf="selectedItem && !selectedItem.sell">
+    <ng-container *ngIf="selectedItem">
+      <div class="selected-item" *ngIf="selectedItem.item">
+        <table>
           <tr>
-            <td colspan="2" *ngIf="bestTradersForItem.traderHasNoSellItem">{{ 'trader-dont-sell-item' | translate}}</td>
-            <td colspan="2" *ngIf="bestTradersForItem.traderHasNoSellItemInSection">{{ 'trader-dont-sell-item-in-section' | translate}}</td>
+            <td>{{selectedItem.item.uniqueName | translate}}</td>
           </tr>
-        </ng-container>
-        <ng-container *ngIf="bestTradersForItem.sell.length > 0">
-          <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
-          <tr *ngFor="let sell of bestTradersForItem.sell">
-            <td class="best-trade-price">
-              <span class="stalker-icon icon-bug" *ngIf="Math.floor(sell.item.sellCoeficient * selectedItem.price) == 0 || Math.floor(sell.item.sellCoeficient * selectedItem.price) == undefined"></span>
-              {{ Math.floor(sell.item.sellCoeficient * selectedItem.price) }}
-            </td>
-            <td>
-              <div class="best-trade-trader-name">
-                {{sell.traderName + '.name' | translate}}
-              </div>
-              <div class="best-trade-trader-condition" *ngIf="sell.condition != allwaysCondition">
-                {{sell.traderName + '.' + sell.condition | translate}}
-              </div>
-            </td>
+          <tr>
+            <td>{{ 'nominal-price' | translate:{price: selectedItem.price} }}</td>
           </tr>
-        </ng-container>
-        <ng-container *ngIf="bestTradersForItem.buy.length > 0">
-          <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
-          <tr *ngFor="let buy of bestTradersForItem.buy">
-            <td>
-              <span class="stalker-icon icon-bug" *ngIf="Math.floor(buy.item.sellCoeficient * selectedItem.price) == 0 || Math.floor(buy.item.sellCoeficient * selectedItem.price) == null"></span>
-              {{Math.floor(buy.item.sellCoeficient * selectedItem.price)}}
-            </td>
-            <td>
-              <div class="best-trade-trader-name">
-                {{buy.traderName + '.name' | translate}}
-              </div>
-              <div class="best-trade-trader-condition" *ngIf="buy.condition">
-                {{buy.traderName + '.' + buy.condition | translate}}
-              </div>
-            </td>
+          <tr *ngIf="selectedItem.boxSize > 1">
+            <td>{{ 'item-box-size' | translate:{boxSize: selectedItem.boxSize} }}</td>
           </tr>
-        </ng-container>
-      </table>
+          <tr *ngIf="selectedItem.sell && selectedItem.supply && selectedItem.supply.count > 0">
+            <td>{{ 'trade-count-chance' | translate }}:</td>
+          </tr>
+          <tr *ngIf="selectedItem.sell && !selectedItem.supply">
+            <td>{{ 'trader-must-buy-item-firstly' | translate }}</td>
+          </tr>
+          <tr *ngIf="!selectedItem.sell && selectedItem.supply">
+            <td>{{ 'error-in-trade-config' | translate }}</td>
+          </tr>
+        </table>
+      </div>
+    </ng-container>
+    <div class="chart-container">
+      <canvas id="item-chart" class="chart" [hidden]="!(selectedItem && selectedItem.sell && selectedItem.supply)">{{ chart }}</canvas>
     </div>
+    <ng-container *ngIf="selectedItem">
+      <div class="best-trade-container">
+        <table>
+          <ng-container *ngIf="selectedItem.supply == null">
+            <tr>
+              <td colspan="2" *ngIf="selectedItem.traderHasNoSellItem">{{ 'trader-dont-sell-item' | translate}}</td>
+              <td colspan="2" *ngIf="selectedItem.traderHasNoSellItemInSection">{{ 'trader-dont-sell-item-in-section' | translate}}</td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="selectedItem.bestSell.length > 0">
+            <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
+            <tr *ngFor="let sell of selectedItem.bestSell">
+              <td class="best-trade-price">
+                {{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) * relations[1]) * selectedItem.price) }}
+              </td>
+              <td>
+                <div class="best-trade-trader-name">
+                  {{sell.traderName + '.name' | translate}}
+                </div>
+                <div class="best-trade-trader-condition" *ngIf="sell.condition != allwaysCondition">
+                  {{sell.traderName + '.' + sell.condition | translate}}
+                </div>
+              </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="selectedItem.bestBuy.length > 0">
+            <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
+            <tr *ngFor="let buy of selectedItem.bestBuy">
+              <td>
+                {{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) * relations[1]) * selectedItem.price) }}
+              </td>
+              <td>
+                <div class="best-trade-trader-name">
+                  {{buy.traderName + '.name' | translate}}
+                </div>
+                <div class="best-trade-trader-condition" *ngIf="buy.condition">
+                  {{buy.traderName + '.' + buy.condition | translate}}
+                </div>
+              </td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+    </ng-container>
   </div>
 
   <div class="buy container">
@@ -120,8 +125,8 @@
       <div class="trader-image hero shoc"></div>
     </div>
     <div class="buy inventory">
-      <ng-container *ngFor="let buyItem of selectedSection.buy.assortment">
-        <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItemBuy(buyItem)">
+      <ng-container *ngFor="let buyItem of selectedBuySection.items">
+        <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItem(buyItem.item)">
           <div class="item-additional-info">
             <div class="inventory-item-count">
               <span class="stalker-icon icon-bug" *ngIf="buyItem.price == 0 || buyItem.price == undefined || buyItem.price == nan"></span>
