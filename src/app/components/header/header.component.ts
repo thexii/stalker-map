@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  public readonly avaliableLanguages: string[] = ["ua", "en", "ru"];
+  public readonly avaliableLanguages: string[] = ["ua", "en", "ru", "pl"];
   private readonly lastLanguageCacheKeyString: string = "language";
   private readonly defaultLocale: string = "en";
   public selectedLanguage: string = "";

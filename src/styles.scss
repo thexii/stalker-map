@@ -164,3 +164,13 @@ input[type=checkbox]+label:before {
   width: 1rem;
   background-image: url(/assets/images/svg/interface/bug.svg);
 }
+
+@for $i from 0 through 30 {
+    .inventory-item-x-#{$i} {
+      background-position-x: $i * -50px;
+    }
+
+    .inventory-item-y-#{$i} {
+      background-position-y: $i * -50px;
+    }
+}

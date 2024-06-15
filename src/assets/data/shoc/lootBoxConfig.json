@@ -1,0 +1,4721 @@
+{
+  "boxes": [
+    {
+      "name": "small_box_generic",
+      "items": [
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 0.09
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 0.06
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 0.075
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 0.08
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 0.06
+        },
+        {
+          "uniqueName": "ammo_7.62x54_ap",
+          "count": 0,
+          "probability": 0.04
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 0.05
+        }
+      ]
+    },
+    {
+      "name": "small_box_ussr",
+      "items": [
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 0.08
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 0.06
+        },
+        {
+          "uniqueName": "ammo_7.62x54_ap",
+          "count": 0,
+          "probability": 0.04
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 0.05
+        }
+      ]
+    },
+    {
+      "name": "small_box_nato",
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 0.05
+        }
+      ]
+    },
+    {
+      "name": "small_box_army",
+      "items": [
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 0.08
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 0.06
+        },
+        {
+          "uniqueName": "ammo_7.62x54_ap",
+          "count": 0,
+          "probability": 0.04
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 0.05
+        }
+      ]
+    },
+    {
+      "name": "small_box_science",
+      "items": [
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 0.08
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 0.13
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 0.06
+        },
+        {
+          "uniqueName": "ammo_7.62x54_ap",
+          "count": 0,
+          "probability": 0.04
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 0.25
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 0.8
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 0.25
+        }
+      ]
+    },
+    {
+      "name": "big_box_generic",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 0.009
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 0.003
+        }
+      ]
+    },
+    {
+      "name": "big_box_dungeons",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 0.03
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 0.018
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 0.012
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_walther",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_bm16",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_val",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_svd",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 0.003
+        }
+      ]
+    },
+    {
+      "name": "big_box_arsenal",
+      "items": [
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 0.1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 0.05
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_walther",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_bm16",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_val",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_svd",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 0.01
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 0.003
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 0.003
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "name": "escape",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "garbage",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "agroprom",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "agr_underground",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "novice_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "darkvalley",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "labx18",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "bar",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "specops_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "rostok",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "military",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "yantar",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "brainlab",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "killer_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "dolg_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "radar",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_val",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svd",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "bunker",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_sp5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_val",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svd",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "pripyat",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "stancia",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_gauss",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "sarcofag",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_gauss",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "control_monolith",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_gauss",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "stancia_2",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_gauss",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    }
+  ]
+}

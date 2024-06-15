@@ -6,6 +6,9 @@ export class Item {
     public height: number;
     public area: number;
 
+    public gridX: number;
+    public gridY: number;
+
     public isQuest: boolean;
     public isUpgraded: boolean;
 

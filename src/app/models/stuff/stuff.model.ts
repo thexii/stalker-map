@@ -1,4 +1,4 @@
-import { StuffItem } from ".";
+import { InventoryItem } from "../inventory-item.model";
 
 export class StuffModel {
   public name: string;
@@ -7,5 +7,6 @@ export class StuffModel {
   public y: number;
   public typeId: number;
   public locationId: number;
-  public items: StuffItem[];
+  public items: InventoryItem[];
+  public boxConfig: string;
 }
