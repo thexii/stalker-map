@@ -1,7 +1,6 @@
-import { ItemMap } from "./item-map.model";
-
 export class Item {
     public uniqueName: string;
+    public localeName: string;
     public width: number;
     public height: number;
     public area: number;
@@ -10,7 +9,7 @@ export class Item {
     public gridY: number;
 
     public isQuest: boolean;
-    public isUpgraded: boolean;
+    public installedUpgrades: string[];
 
     public hasScope: boolean;
     public hasSilencer: boolean;
@@ -23,5 +22,6 @@ export class Item {
     public grenadeLauncherX: number;
     public grenadeLauncherY: number;
 
-    public maps: ItemMap[];
+    public price: number;
+    public boxSize: number;
 }

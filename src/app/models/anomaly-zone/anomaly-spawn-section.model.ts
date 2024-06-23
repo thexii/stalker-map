@@ -1,9 +1,8 @@
-import { AnomalySpawnItem } from ".";
+import { InventoryItem } from "../inventory-item.model";
 
 export class AnomalySpawnSection {
   public maxCapacity: number;
   public count: number;
-  public sort: number;
   public anomalyUniqueName: string;
-  public anomalySpawnItems: AnomalySpawnItem[];
+  public anomalySpawnItems: InventoryItem[];
 }

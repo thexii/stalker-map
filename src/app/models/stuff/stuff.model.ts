@@ -5,6 +5,7 @@ export class StuffModel {
   public description: string;
   public x: number;
   public y: number;
+  public z: number;
   public typeId: number;
   public locationId: number;
   public items: InventoryItem[];

@@ -1,0 +1,19 @@
+.profile-info {
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.profile-data {
+  flex-grow: 1;
+  display: flex;
+}
+
+.profile-name {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.profile-data-info {
+  flex-grow: 1;
+}

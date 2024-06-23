@@ -8,38 +8,68 @@
   height: 150px;
 }
 
-.bar_barman {
+.actor.shoc {
+  background-position: left -330px top -432px;
+}
+
+.ui_npc_u_barman {
   background-position: left -164px top -0px;
 }
 
-.bar_dolg_petrenko {
+.ui_npc_u_trader {
+  background-position: 0 0;
+}
+
+.ui_npc_u_stalker_do_balon_3 {
   background-position: left 0 top -108px;
 }
 
-.mil_Svoboda_trader {
+.ui_npc_u_stalker_sv_balon_1 {
   background-position: left -164px top -108px;
 }
 
-.yan_sakharov {
+.ui_npc_u_ucheniy_2, .yan_st_sakharov_name {
   background-position: left -330px top -0px;
 }
 
-.hero.shoc {
-  background-position: left -330px top -432px;
+.actor.cs {
+  background-position: left -164px top -432px;
+}
+
+.esc_trader_stalkerbase_name, .agr_secret_trader_name, .agr_stalker_base_trader_name {
+  background-position: left -0px top -216px;
+}
+
+.agr_duty_base_trader_name {
+  background-position: left -330px top -324px;
+}
+
+.agr_barman_name {
+  background-position: left -0px top -432px;
+}
+
+.gar_bandit_trader_name {
+  background-position: left -0px top -324px;
+}
+
+.gar_bandit_barman_name {
+  background-position: left -330px top -108px;
+}
+
+.val_freedom_trader_name, .val_freedom_barmen_name {
+  background-position: left -164px top -324px;
+}
+
+.mar_csky_trader_name {
+  background-position: left -164px top -216px;
+}
+
+.mar_csky_barman_name {
+  background-position: left -330px top -216px;
 }
 
 .trader-bio {
   flex-grow: 1;
-}
-
-.trader-image {
-  background-image: url(/assets/images/traders/traders.png);
-  background-repeat: no-repeat;
-}
-
-.trader-image.shoc {
-  width: 10rem;
-  height: 6.58rem;
 }
 
 .trader-name {
@@ -70,8 +100,9 @@
   min-width: 30px;
 }
 
-.info.container {
+.container.info {
   margin-inline: 1rem;
+  min-width: 350px;
   max-width: 350px;
   width: 350px;
 }
@@ -104,4 +135,21 @@
 
 .trader-section.selected {
   border: 1px solid white;
+}
+
+.section.selected {
+  border: 1px solid white;
+}
+
+.section {
+  text-align: center;
+  border: 1px solid #4d4d4d;
+}
+
+.section:hover {
+  background-color: rgba(white, 0.2);
+}
+
+.section-td {
+  text-align: center;
 }

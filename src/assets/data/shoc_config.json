@@ -29,6 +29,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "stalkers",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -57,10 +61,251 @@
       "isShow": false
     }
   ],
+  "rankSetting": [
+    {
+      "rank": 300,
+      "rankName": "experienced"
+    },
+    {
+      "rank": 600,
+      "rankName": "veteran"
+    },
+    {
+      "rank": 900,
+      "rankName": "master"
+    }
+  ],
   "minZoom": 0,
   "maxZoom": 3,
   "startZoom": 1,
   "globalMapFileName": "global_map.png",
   "width": 1024,
-  "height": 2634
+  "height": 2634,
+  "traderConfigs": [
+    {
+      "trader": "escape_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "esc_kill_bandits_quest_done",
+          "enabledBuies": ["esc_kill_bandits_quest_done"],
+          "enabledSupplies": ["esc_kill_bandits_quest_done"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "esc_kill_bandits_quest_done",
+          "enabledSells": ["esc_kill_bandits_quest_done"],
+          "enabledSupplies": ["esc_kill_bandits_quest_done"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "esc_kill_bandits_quest_done",
+          "enabledSells": ["esc_kill_bandits_quest_done"],
+          "enabledBuies": ["esc_kill_bandits_quest_done"]
+        }
+      ]
+    },
+    {
+      "trader": "bar_barmen_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "bar_darklab_document_done",
+          "enabledBuies": ["bar_darklab_document_done"],
+          "enabledSupplies": ["bar_darklab_document_done"]
+        },
+        {
+          "condition": "yan_labx16_switcher_primary_off",
+          "enabledBuies": ["yan_labx16_switcher_primary_off"],
+          "enabledSupplies": ["yan_labx16_switcher_primary_off"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "bar_darklab_document_done",
+          "enabledSells": ["bar_darklab_document_done"],
+          "enabledSupplies": ["bar_darklab_document_done"]
+        },
+        {
+          "condition": "yan_labx16_switcher_primary_off",
+          "enabledSells": ["yan_labx16_switcher_primary_off"],
+          "enabledSupplies": ["yan_labx16_switcher_primary_off"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "esc_kill_bandits_quest_done",
+          "enabledSells": ["esc_kill_bandits_quest_done"],
+          "enabledBuies": ["esc_kill_bandits_quest_done"]
+        },
+        {
+          "condition": "yan_labx16_switcher_primary_off",
+          "enabledSells": ["yan_labx16_switcher_primary_off"],
+          "enabledBuies": ["yan_labx16_switcher_primary_off"]
+        }
+      ]
+    },
+    {
+      "trader": "bar_petrenko_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "bar_svoboda_rg6_done",
+          "enabledBuies": ["bar_svoboda_rg6_done"],
+          "enabledSupplies": ["bar_svoboda_rg6_done"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "bar_svoboda_rg6_done",
+          "enabledSells": ["bar_svoboda_rg6_done"],
+          "enabledSupplies": ["bar_svoboda_rg6_done"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "bar_svoboda_rg6_done",
+          "enabledSells": ["bar_svoboda_rg6_done"],
+          "enabledBuies": ["bar_svoboda_rg6_done"]
+        }
+      ]
+    },
+    {
+      "trader": "yan_saharov_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "yan_kill_brain_done",
+          "enabledBuies": ["yan_kill_brain_done"],
+          "enabledSupplies": ["yan_kill_brain_done"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "yan_kill_brain_done",
+          "enabledSells": ["yan_kill_brain_done"],
+          "enabledSupplies": ["yan_kill_brain_done"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "yan_kill_brain_done",
+          "enabledSells": ["yan_kill_brain_done"],
+          "enabledBuies": ["yan_kill_brain_done"]
+        }
+      ]
+    },
+    {
+      "trader": "mil_Svoboda_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "mil_lukash_dolg_task_complete",
+          "enabledBuies": ["mil_lukash_dolg_task_complete"],
+          "enabledSupplies": ["mil_lukash_dolg_task_complete"]
+        },
+        {
+          "condition": "mil_leader_quest2_complete",
+          "enabledBuies": ["mil_leader_quest2_complete"],
+          "enabledSupplies": ["mil_leader_quest2_complete"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "mil_lukash_dolg_task_complete",
+          "enabledSells": ["mil_lukash_dolg_task_complete"],
+          "enabledSupplies": ["mil_lukash_dolg_task_complete"]
+        },
+        {
+          "condition": "mil_leader_quest2_complete",
+          "enabledSells": ["mil_leader_quest2_complete"],
+          "enabledSupplies": ["mil_leader_quest2_complete"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "mil_lukash_dolg_task_complete",
+          "enabledSells": ["mil_lukash_dolg_task_complete"],
+          "enabledBuies": ["mil_lukash_dolg_task_complete"]
+        },
+        {
+          "condition": "mil_leader_quest2_complete",
+          "enabledSells": ["mil_leader_quest2_complete"],
+          "enabledBuies": ["mil_leader_quest2_complete"]
+        }
+      ]
+    }
+  ]
 }

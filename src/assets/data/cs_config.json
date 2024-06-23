@@ -56,5 +56,330 @@
   "minZoom": 0,
   "maxZoom": 3,
   "startZoom": 1,
-  "globalMapFileName": "global_map.png"
+  "globalMapFileName": "global_map.png",
+  "traderConfigs": [
+    {
+      "trader": "escape_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "esc_bring_habar_complete",
+          "enabledBuies": ["esc_bring_habar_complete"],
+          "enabledSupplies": ["esc_bring_habar_complete", "gar_story_got_info_from_digger"]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "esc_bring_habar_complete",
+          "enabledSells": ["esc_bring_habar_complete"],
+          "enabledSupplies": ["esc_bring_habar_complete", "gar_story_got_info_from_digger"]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "esc_bring_habar_complete",
+          "enabledSells": ["esc_bring_habar_complete"],
+          "enabledBuies": ["esc_bring_habar_complete"]
+        },
+        {
+          "condition": "gar_story_got_info_from_digger",
+          "enabledSells": ["esc_bring_habar_complete"],
+          "enabledBuies": ["esc_bring_habar_complete"]
+        }
+      ]
+    },
+    {
+      "trader": "esc_trader_stalkerbase_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "actor_in_stalker",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_2",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "gar_bandit_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "is_faction_friend_to_actor(bandit)",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledSupplies": null
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_bandit_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_bandit_at_expansion_2",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_bandit_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "agr_duty_base_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "actor_in_dolg",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_dolg_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_dolg_at_expansion_2",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_dolg_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_dolg_at_expansion_3_or_higher =is_faction_resource_greater(dolg:5)",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "agr_stalker_base_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "actor_in_stalker",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_2 +gar_story_got_info_from_digger",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_stalker_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_faction_resource_greater(stalker:5) =is_stalker_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "val_freedom_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "actor_in_freedom",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_freedom_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_freedom_at_expansion_2",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_freedom_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_freedom_at_expansion_3_or_higher =is_faction_resource_greater(freedom:5)",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "mar_csky_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "is_faction_friend_to_actor(csky)",
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_csky_at_expansion_1",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_csky_at_expansion_2",
+          "enabledSells": null,
+          "enabledBuies": null
+        },
+        {
+          "condition": "is_csky_at_expansion_3_or_higher",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    }
+  ]
 }

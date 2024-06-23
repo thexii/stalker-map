@@ -1,7 +1,5 @@
-import { Item } from "../item.model";
-
 export class TraderBuySellItem {
-  public item: Item;
+  public uniqueName: string;
   public minCoeficient: number;
   public maxCoeficient: number;
 

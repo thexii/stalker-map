@@ -1068,7 +1068,7 @@
   ],
   "locations": [
     {
-      "name": "escape",
+      "name": "l01_escape",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1138,7 +1138,7 @@
       ]
     },
     {
-      "name": "garbage",
+      "name": "l02_garbage",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1233,7 +1233,7 @@
       ]
     },
     {
-      "name": "agroprom",
+      "name": "l03_agroprom",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1328,7 +1328,7 @@
       ]
     },
     {
-      "name": "agr_underground",
+      "name": "l03u_agr_underground",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1428,7 +1428,7 @@
       ]
     },
     {
-      "name": "darkvalley",
+      "name": "l04_darkvalley",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1568,7 +1568,7 @@
       ]
     },
     {
-      "name": "labx18",
+      "name": "l04u_labx18",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1713,7 +1713,7 @@
       ]
     },
     {
-      "name": "bar",
+      "name": "l05_bar",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -1948,7 +1948,7 @@
       ]
     },
     {
-      "name": "rostok",
+      "name": "l06_rostok",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -2168,7 +2168,7 @@
       ]
     },
     {
-      "name": "military",
+      "name": "l07_military",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -2418,7 +2418,7 @@
       ]
     },
     {
-      "name": "yantar",
+      "name": "l08_yantar",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -2673,7 +2673,7 @@
       ]
     },
     {
-      "name": "brainlab",
+      "name": "l08u_brainlab",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -2928,7 +2928,7 @@
       ]
     },
     {
-      "name": "radar",
+      "name": "l10_radar",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -3193,7 +3193,7 @@
       ]
     },
     {
-      "name": "bunker",
+      "name": "l10u_bunker",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -3453,7 +3453,7 @@
       ]
     },
     {
-      "name": "pripyat",
+      "name": "l11_pripyat",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -3698,262 +3698,7 @@
       ]
     },
     {
-      "name": "stancia",
-      "items": [
-        {
-          "uniqueName": "af_medusa",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_cristall_flower",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_night_star",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_vyvert",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_gravi",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_gold_fish",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_blood",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_mincer_meat",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_soul",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_electra_sparkler",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_electra_flash",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_electra_moonlight",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_rusty_thorn",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_rusty_kristall",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_rusty_sea-urchin",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_ameba_slime",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_ameba_slug",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_ameba_mica",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_drops",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_fireball",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_cristall",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_11.43x23_hydro",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_11.43x23_fmj",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_12x76_dart",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_12x76_zhekan",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_9x39_ap",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_5.56x45_ss190",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_5.56x45_ap",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_7.62x54_7h14",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_7.62x54_7h1",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_vog-25p",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_vog-25",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "grenade_f1",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "grenade_rgd5",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_m209",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_gauss",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_usp",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_desert_eagle",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_wincheaster1300",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_vintorez",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_g36",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_fn2000",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "monolit_outfit",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "svoboda_heavy_outfit",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "bandage",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_army",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_scientic",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "antirad",
-          "count": 0,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_gauss",
-          "count": 0,
-          "probability": 1
-        }
-      ]
-    },
-    {
-      "name": "sarcofag",
+      "name": "l12_stancia",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -4208,7 +3953,7 @@
       ]
     },
     {
-      "name": "control_monolith",
+      "name": "l12u_sarcofag",
       "items": [
         {
           "uniqueName": "af_medusa",
@@ -4463,7 +4208,262 @@
       ]
     },
     {
-      "name": "stancia_2",
+      "name": "l12u_control_monolith",
+      "items": [
+        {
+          "uniqueName": "af_medusa",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall_flower",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_night_star",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_vyvert",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gravi",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_gold_fish",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_blood",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_mincer_meat",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_soul",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_sparkler",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_flash",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_thorn",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_kristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slime",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_slug",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_ameba_mica",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_drops",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_fireball",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_cristall",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_dart",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h14",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fn2000",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 0,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_gauss",
+          "count": 0,
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "name": "l12_stancia_2",
       "items": [
         {
           "uniqueName": "af_medusa",

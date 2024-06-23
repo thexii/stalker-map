@@ -147,15 +147,31 @@ input[type=checkbox]+label:before {
   background-image: url(/assets/images/svg/factions/freedom.svg);
 }
 
-.icon-duty::before {
+.icon-bandit::before {
+  background-image: url(/assets/images/svg/factions/bandits.svg);
+}
+
+.icon-military::before, .icon-army::before {
+  background-image: url(/assets/images/svg/factions/military.svg);
+}
+
+.icon-killer::before {
+  background-image: url(/assets/images/svg/factions/mercs.svg);
+}
+
+.icon-csky::before {
+  background-image: url(/assets/images/svg/factions/clear-sky.svg);
+}
+
+.icon-duty::before, .icon-dolg::before {
   background-image: url(/assets/images/svg/factions/duty.svg);
 }
 
-.icon-stalker::before {
+.icon-stalker::before, .icon-trader::before {
   background-image: url(/assets/images/svg/factions/stalkers.svg);
 }
 
-.icon-science::before {
+.icon-science::before, .icon-ecolog::before {
   background-image: url(/assets/images/svg/factions/scientists.svg);
 }
 
@@ -165,7 +181,7 @@ input[type=checkbox]+label:before {
   background-image: url(/assets/images/svg/interface/bug.svg);
 }
 
-@for $i from 0 through 30 {
+@for $i from 0 through 40 {
     .inventory-item-x-#{$i} {
       background-position-x: $i * -50px;
     }
@@ -173,4 +189,18 @@ input[type=checkbox]+label:before {
     .inventory-item-y-#{$i} {
       background-position-y: $i * -50px;
     }
+}
+
+@for $i from 6 through 10 {
+    .inventory-columns-#{$i} {
+      grid-template-columns: repeat($i, 50px) !important;
+    }
+}
+
+.stalker-avatar.shoc {
+  background-image: url(/assets/images/shoc_npc_unique.png)
+}
+
+.stalker-avatar.cs {
+  background-image: url(/assets/images/cs_npc_unique.png)
 }

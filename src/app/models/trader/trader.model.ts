@@ -1,7 +1,7 @@
 import { TradeSection, TraderSupplyItem, TraderBuySellItem } from ".";
+import { CharacterProfile } from "../character-profile.model";
 
 export class TraderModel {
-  public name: string;
   public locationId: number;
   public locationName: string;
   public faction: string;
@@ -11,4 +11,6 @@ export class TraderModel {
   public supplies: TradeSection<TraderSupplyItem>[];
   public x: number;
   public y: number;
+  public profile: CharacterProfile;
+  public infinitiveMoney: boolean;
 }

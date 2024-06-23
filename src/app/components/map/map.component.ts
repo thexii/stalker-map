@@ -19,8 +19,13 @@ import { Item } from '../../models/item.model';
 import { Map } from '../../models/map.model';
 import { StuffModel } from '../../models/stuff';
 import { Location } from '../../models/location.model';
-import { LootBoxConfig } from '../../models/loot-box-config.model';
-import { LootBoxSection } from '../../models/loot-box-section.model';
+import { LootBoxConfig } from '../../models/loot-box/loot-box-config.model';
+import { LootBox } from '../../models/loot-box/loot-box-section.model';
+import { LootBoxClusterComponent } from '../loot-box-cluster/loot-box-cluster.component';
+import { AnomalySpawnSection } from '../../models/anomaly-zone';
+import { StalkerComponent } from '../stalker/stalker.component';
+import { MapConfig } from '../../models/gamedata/map-config';
+import { TraderSectionsConfig } from '../../models/trader/trader-sections-config.model';
 
 declare const L: any;
 declare var markWidth: number;
@@ -56,13 +61,14 @@ export class MapComponent {
   ];
   private readonly defaultGame: string = 'shoc';
 
-  private gamedata: any;
+  private gamedata: Map;
   private map: any;
   private locations: any;
   private canvasLayer: any;
   private layers: any[] = [];
   private items: Item[];
   private lootBoxConfig: LootBoxConfig;
+  private mapConfig: MapConfig;
 
   constructor(
     private translate: TranslateService,
@@ -136,9 +142,9 @@ export class MapComponent {
         '/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css'
       ),
       this.addStyle('/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css'),
-      await this.loadLocales(this.translate.currentLang),
-      await this.loadItems(),
-      await this.loadLootBoxConfig()
+      this.loadLocales(this.translate.currentLang),
+      this.loadItems(),
+      this.loadLootBoxConfig()
     ]);
 
     this.translate.onLangChange.subscribe((i) => {
@@ -150,7 +156,7 @@ export class MapComponent {
       .then((gamedata: Map) => {
         fetch(`/assets/data/${this.game}_config.json`)
           .then((response) => response.json())
-          .then((gameConfig: any) => {
+          .then((gameConfig: MapConfig) => {
             this.loadMap(gamedata, gameConfig);
           });
       });
@@ -184,7 +190,6 @@ export class MapComponent {
         if (items) {
           this.items = items;
         }
-        console.log(items);
       });
   }
 
@@ -206,7 +211,6 @@ export class MapComponent {
         if (locales) {
           this.translate.setTranslation(language, locales, true);
         }
-        console.log(locales);
       });
   }
 
@@ -218,8 +222,10 @@ export class MapComponent {
     }
   }
 
-  private loadMap(gameData: Map, gameConfig: any): void {
+  private loadMap(gameData: Map, gameConfig: MapConfig): void {
     this.gamedata = gameData;
+    this.mapConfig = gameConfig;
+    console.log(gameData);
 
     this.map = L.map('map', {
       center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
@@ -282,6 +288,26 @@ export class MapComponent {
       }
     }
 
+    if (this.gamedata.marks && this.gamedata.marks.length > 0) {
+      this.addMarks();
+      let marks = '';
+      for (let mark of this.gamedata.marks) {
+        if (mark.name && this.translate.instant(mark.name) == mark.name) {
+          marks += `"${mark.name}",`;
+        }
+        if (
+          mark.description &&
+          this.translate.instant(mark.description) == mark.description
+        ) {
+          marks += `"${mark.description}",`;
+        }
+      }
+
+      if (marks) {
+        console.error(marks);
+      }
+    }
+
     if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
       this.addStuffs();
       let marks = '';
@@ -304,9 +330,120 @@ export class MapComponent {
         console.error(marks);
       }
     }
-  }
 
-  private loadMap_old(gameData: any, gameConfig: any): void {
+    if (this.gamedata.lootBoxes && this.gamedata.lootBoxes.length > 0) {
+      this.addLootBoxes();
+    }
+
+    if (this.gamedata.anomalyZones && this.gamedata.anomalyZones.length > 0) {
+      this.addAnomalyZones();
+    }
+
+    if (this.gamedata.traders && this.gamedata.traders.length > 0) {
+      this.addTraders();
+    }
+
+    if (this.gamedata.traders && this.gamedata.traders.length > 0) {
+      this.addStalkers();
+    }
+
+    let layersToHide = [];
+
+    if (
+      gameConfig.markersConfig != null &&
+      gameConfig.markersConfig.length > 0 &&
+      this.layers != null
+    ) {
+      let allLayers = Object.values(this.layers);
+      let newLayers: any = {};
+      for (let config of gameConfig.markersConfig) {
+        if (allLayers.some((y) => y.name == config.uniqueName)) {
+          let currentLayer = allLayers.filter(
+            (D) => D.name == config.uniqueName
+          )[0];
+          newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
+
+          if (!config.isShow) {
+            layersToHide.push(currentLayer);
+          }
+        }
+      }
+
+      this.layers = newLayers;
+    }
+
+    let layerControl = L.control.layers(null, this.layers).addTo(this.map);
+
+    this.map.on('drag', () => {
+      this.map.panInsideBounds(bounds, { animate: false });
+    });
+
+    let searchLayers = L.featureGroup(Object.values(this.layers));
+    let translate = this.translate;
+
+    let searchContoller = L.control.search({
+      layer: searchLayers,
+      initial: false,
+      propertyName: 'search',
+      delayType: 0,
+      collapsed: false,
+      autoCollapseTime: 10000,
+      textPlaceholder: this.translate.instant('search'),
+      buildTip: function (text: string, val: any) {
+        try {
+          let type = val.layer.properties.typeUniqueName;
+          let translated = translate.instant(val.layer.properties.name);
+          let location = translate.instant(
+            val.layer.properties.locationUniqueName
+          );
+          return (
+            '<a href="#"><span class="stalker-search-item ' +
+            type +
+            '">' +
+            translated +
+            '</span> <b>(' +
+            location +
+            ')</b></a>'
+          );
+        } catch (ex) {
+          console.error(text, val);
+          throw ex;
+        }
+      },
+    });
+
+    if (gameConfig.rulerEnabled) {
+      var options = {
+        position: 'topright', // Leaflet control position option
+        circleMarker: {
+          // Leaflet circle marker options for points used in this plugin
+          color: 'red',
+          radius: 2,
+        },
+        lineStyle: {
+          // Leaflet polyline options for lines used in this plugin
+          color: 'red',
+          dashArray: '1,6',
+        },
+        lengthUnit: {
+          factor: gameConfig.lengthFactor, //  from km to nm
+          display: this.translate.instant('meterShort'),
+          decimal: 2,
+          label: this.translate.instant('length'),
+        },
+        angleUnit: {
+          display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+          decimal: 2, // Bearing result will be fixed to this value.
+          factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+          label: this.translate.instant('azimuth'),
+        },
+      };
+
+      L.control.ruler(options).addTo(this.map);
+  }
+}
+
+  /*private loadMap_old(gameData: any, gameConfig: any): void {
     this.gamedata = gameData;
     this.map = L.map('map', {
       center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
@@ -368,7 +505,7 @@ export class MapComponent {
     }
 
     if (this.gamedata.marks && this.gamedata.marks.length > 0) {
-      this.addMarks();
+      this.addMarks_old();
       let marks = '';
       for (let mark of this.gamedata.marks) {
         if (this.translate.instant(mark.name) == mark.name) {
@@ -594,32 +731,25 @@ export class MapComponent {
           this.gamedata.widthInPixels / 2,
         ]);
     });
-
-    /*this.map.on('click', function(e: { latlng: any; }){
-      var coord = e.latlng;
-      var lat = coord.lat;
-      var lng = coord.lng;
-      console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
-      });*/
-  }
+  }*/
 
   private addLocations() {
     let locationsOnMap = [];
     for (let location of this.gamedata.locations) {
-      let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
-      let locationBounds = [
-        [location.y1, location.x1],
-        [location.y2, location.x2],
-      ];
-      let locationImageOverlay = L.imageOverlay(locationImage, locationBounds, {
-        interactive: !0,
-        className: 'location-on-map',
-      });
+        let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
+        let locationBounds = [
+          [location.y1, location.x1],
+          [location.y2, location.x2],
+        ];
+        let locationImageOverlay = L.imageOverlay(locationImage, locationBounds, {
+          interactive: !0,
+          className: 'location-on-map',
+        });
 
-      locationImageOverlay.name = location.name;
-      locationImageOverlay.uniqueName = location.uniqueName;
-      locationImageOverlay.id = location.id;
-      locationsOnMap.push(locationImageOverlay);
+        locationImageOverlay.name = location.uniqueName;
+        locationImageOverlay.uniqueName = location.uniqueName;
+        locationImageOverlay.id = location.id;
+        locationsOnMap.push(locationImageOverlay);
     }
 
     this.locations = L.layerGroup(locationsOnMap);
@@ -658,20 +788,6 @@ export class MapComponent {
         }),
       },
       {
-        id: 2,
-        ableToSearch: !0,
-        itemableToSearch: !0,
-        name: this.translate.instant('destroyable-box'),
-        uniqueName: 'destroyable-box',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/items.svg',
-          iconAnchor: [0, 0],
-        }),
-      },
-      {
         id: 3,
         ableToSearch: !0,
         itemableToSearch: !0,
@@ -701,7 +817,7 @@ export class MapComponent {
         geoMarks.features = [];
 
         for (let stuffModel of stuffsAtLocation) {
-          let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stuffModel.locationId);
+          let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stuffModel.locationId) as Location;
 
           let markerX: number = 0.5 - location.xShift + stuffModel.x / location.widthInMeters;
           let markerY: number = 0.5 - location.yShift + stuffModel.z / location.heightInMeters;
@@ -763,6 +879,89 @@ export class MapComponent {
         this.addToCanvas(geoMarks, markType);
       }
     }
+  }
+
+  private addLootBoxes() {
+    let lootBoxType =
+    {
+      id: 2,
+      ableToSearch: false,
+      itemableToSearch: false,
+      name: this.translate.instant('destroyable-box'),
+      uniqueName: 'destroyable-box',
+      icon: L.icon({
+        iconSizeInit: [1, 1],
+        className: 'mark-container stalker-mark',
+        animate: !1,
+        iconUrl: '/assets/images/svg/marks/items.svg',
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let geoMarks: any = {};
+    geoMarks.type = 'FeatureCollection';
+    geoMarks.features = [];
+
+    for (let lootBox of this.gamedata.lootBoxes) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + lootBox.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + lootBox.z / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let lootBoxMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: lootBoxType.icon,
+      });
+
+      lootBoxMarker.properties = {};
+      lootBoxMarker.properties.lootBox = lootBox;
+      lootBoxMarker.properties.name = lootBoxType.name;
+      lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
+      lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
+
+      if (lootBoxMarker.properties.ableToSearch) {
+        let p = [];
+        p.push(lootBoxMarker.properties.name);
+        lootBoxMarker.properties.description !=
+          this.translate.instant('default-desription') &&
+          p.push(lootBoxMarker.properties.description);
+        p.push(
+          ...lootBoxMarker.properties.lootBox.items.map(
+            (y: { uniqueName: string } ) => y.uniqueName
+          )
+        );
+
+        lootBoxMarker.feature = {
+          properties: {
+            search: p.join(', '),
+          },
+        };
+
+        this.createProperty(
+          lootBoxMarker.feature.properties,
+          'search',
+          p,
+          this.translate
+        );
+
+        lootBoxMarker.properties.locationUniqueName = location.uniqueName;
+      }
+
+      lootBoxMarker.bindTooltip(
+        (lootBoxMarker: any) => this.translate.instant(lootBoxMarker.properties.name),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+      lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p)).openPopup(),
+        geoMarks.features.push(lootBoxMarker);
+    }
+
+    this.addToCanvas(geoMarks, lootBoxType);
   }
 
   private addMarks() {
@@ -834,6 +1033,18 @@ export class MapComponent {
         }),
       },
       {
+        id: 104,
+        name: this.translate.instant('thermal'),
+        uniqueName: 'thermal',
+        icon: L.icon({
+          iconSizeInit: [2, 2],
+          className: 'mark-container stalker-mark-2',
+          animate: !1,
+          iconUrl: '/assets/images/svg/marks/electro.svg',
+          iconAnchor: [0, 0],
+        }),
+      },
+      {
         id: 200,
         name: this.translate.instant('teleport'),
         uniqueName: 'teleport',
@@ -873,7 +1084,15 @@ export class MapComponent {
         geoMarks.features = [];
 
         for (let mark of marks) {
-          let marker = L.marker([mark.y, mark.x], {
+          let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mark.locationId) as Location;
+
+          let markerX: number = 0.5 - location.xShift + mark.x / location.widthInMeters;
+          let markerY: number = 0.5 - location.yShift + mark.y / location.heightInMeters;
+
+          let dx: number = location.x2 - location.x1;
+          let dy: number = location.y1 - location.y2;
+
+          let marker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
             icon: markType.icon,
           });
 
@@ -932,6 +1151,146 @@ export class MapComponent {
     }
   }
 
+  private addAnomalyZones() {
+    let anomalyZoneIcon = {
+      name: this.translate.instant('anomaly-zone'),
+      uniqueName: 'anomaly-zone',
+      cssClass: 'anomaly-zone',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/anomaly.svg',
+        iconSizeInit: [2, 2],
+        iconAnchor: [0, 0],
+      }),
+    };
+    let anomalyZoneNoArtIcon = {
+      name: this.translate.instant('anomaly-zone-no-art'),
+      uniqueName: 'anomaly-zone-no-art',
+      icon: L.icon({
+        iconSize: [12.5, 12.5],
+        className: 'mark-container stalker-mark',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/anomaly_noart.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+    let anomalies: any = {};
+    let anomaliesNoArt: any = {};
+    anomalies.type = 'FeatureCollection';
+    anomaliesNoArt.type = 'FeatureCollection';
+    anomalies.features = [];
+    anomaliesNoArt.features = [];
+
+    for (let zone of this.gamedata.anomalyZones) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == zone.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + zone.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + zone.y / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker;
+      if (
+        zone.anomaliySpawnSections != null &&
+        zone.anomaliySpawnSections.length > 0
+      ) {
+        canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          icon: anomalyZoneIcon.icon,
+        });
+      } else {
+        canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          icon: anomalyZoneNoArtIcon.icon,
+        });
+      }
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.name = zone.name ? zone.name : 'anomaly-zone';
+      canvasMarker.properties.zoneModel = zone;
+
+      if (
+        zone.anomaliySpawnSections != null &&
+        zone.anomaliySpawnSections.length > 0
+      ) {
+        canvasMarker.properties.anomaliySpawnSections =
+          zone.anomaliySpawnSections;
+        canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
+        canvasMarker.properties.ableToSearch = true;
+        canvasMarker.properties.typeUniqueName = 'anomaly-zone';
+
+        let searchFields = [];
+        searchFields.push(canvasMarker.properties.name);
+
+        if (
+          canvasMarker.properties.description !=
+          this.translate.instant('default-desription')
+        ) {
+          searchFields.push(canvasMarker.properties.description);
+        }
+
+        let artefactsSections = zone.anomaliySpawnSections.map(
+          (item: AnomalySpawnSection) =>
+            item.anomalySpawnItems.map((ass) => ass.uniqueName)
+        );
+
+        for (let artefactsSection of artefactsSections) {
+          for (let art of artefactsSection) {
+            searchFields.push(art);
+          }
+        }
+
+        canvasMarker.feature = {
+          properties: { search: searchFields.join(', ') },
+        };
+        this.createProperty(
+          canvasMarker.feature.properties,
+          'search',
+          searchFields,
+          this.translate
+        );
+
+        anomalies.features.push(canvasMarker);
+
+        let location = this.locations.locations.find(
+          (x: { id: any }) => x.id == zone.locationId
+        );
+        if (location) {
+          canvasMarker.properties.locationUniqueName = location.uniqueName;
+          canvasMarker.properties.locationName = location.name;
+        }
+      } else {
+        anomaliesNoArt.features.push(canvasMarker);
+        canvasMarker.properties.ableToSearch = false;
+      }
+
+      canvasMarker.bindTooltip(
+        (zone: any) => {
+          return this.createAnomalyZoneTooltip(zone);
+        },
+        { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
+      );
+      canvasMarker
+        .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
+          maxWidth: 400,
+        })
+        .openPopup();
+    }
+
+    try {
+      this.addToCanvas(anomalies, anomalyZoneIcon);
+
+      if (anomaliesNoArt.features.length > 0) {
+        this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   private createProperty(
     object: any,
     propertyName: string,
@@ -953,139 +1312,6 @@ export class MapComponent {
     });
 
     object[propertyName] = array;
-  }
-
-  private addStuffs_old() {
-    let stuffTypes = [
-      {
-        id: 0,
-        ableToSearch: !0,
-        itemableToSearch: !0,
-        name: this.translate.instant('stash'),
-        uniqueName: 'stash',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/stash.svg',
-          iconAnchor: [0, 0],
-        }),
-      },
-      {
-        id: 1,
-        ableToSearch: !0,
-        itemableToSearch: !0,
-        name: this.translate.instant('quest'),
-        uniqueName: 'quest',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/quest-item.svg',
-          iconAnchor: [0, 0],
-        }),
-      },
-      {
-        id: 2,
-        ableToSearch: !0,
-        itemableToSearch: !0,
-        name: this.translate.instant('destroyable-box'),
-        uniqueName: 'destroyable-box',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/items.svg',
-          iconAnchor: [0, 0],
-        }),
-      },
-      {
-        id: 3,
-        ableToSearch: !0,
-        itemableToSearch: !0,
-        name: this.translate.instant('stuff'),
-        uniqueName: 'stuff',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/stuff.svg',
-          iconAnchor: [0, 0],
-        }),
-      },
-    ];
-
-    this.gamedata.stuffs = this.gamedata.stuffs.sort(
-      (c: { typeId: number }, l: { typeId: number }) => c.typeId - l.typeId
-    );
-    for (let markType of stuffTypes) {
-      let stuffsAtLocation = this.gamedata.stuffs.filter(
-        (u: { typeId: number }) => u.typeId == markType.id
-      );
-
-      if (stuffsAtLocation.length > 0) {
-        let geoMarks: any = {};
-        geoMarks.type = 'FeatureCollection';
-        geoMarks.features = [];
-
-        for (let f of stuffsAtLocation) {
-          let stuff = L.marker([f.y, f.x], {
-            icon: markType.icon,
-          });
-
-          stuff.properties = {};
-          stuff.properties.stuff = f;
-          stuff.properties.name = f.name;
-          stuff.properties.description = f.description;
-          stuff.properties.items = f.items;
-          stuff.properties.markType = markType.name;
-          stuff.properties.typeUniqueName = markType.uniqueName;
-          stuff.properties.ableToSearch = markType.ableToSearch;
-
-          if (stuff.properties.ableToSearch) {
-            let p = [];
-            p.push(stuff.properties.name);
-            stuff.properties.description !=
-              this.translate.instant('default-desription') &&
-              p.push(stuff.properties.description);
-            p.push(
-              ...stuff.properties.items.map(
-                (y: { item: { uniqueName: string } }) => y.item.uniqueName
-              )
-            );
-
-            stuff.feature = {
-              properties: {
-                search: p.join(', '),
-              },
-            };
-
-            this.createProperty(
-              stuff.feature.properties,
-              'search',
-              p,
-              this.translate
-            );
-
-            let location = this.locations.locations.find(
-              (y: { id: any }) => y.id == f.locationId
-            );
-            stuff.properties.locationUniqueName = location.uniqueName;
-            stuff.properties.locationName = location.name;
-          }
-
-          stuff.bindTooltip((p: any) => this.createStuffTooltip_old(p), {
-            sticky: true,
-            className: 'map-tooltip',
-            offset: new Point(0, 50),
-          });
-          stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup(),
-            geoMarks.features.push(stuff);
-        }
-
-        this.addToCanvas(geoMarks, markType);
-      }
-    }
   }
 
   private createStuffTooltip(stuff: any) {
@@ -1131,151 +1357,29 @@ export class MapComponent {
     componentRef.instance.allItems = this.items;
     componentRef.instance.stuffType = stash.properties.typeUniqueName;
 
-    let lootBoxConfig = stash.properties.stuff.boxConfig ? this.lootBoxConfig.boxes.find(x => x.name == stash.properties.stuff.boxConfig) : null;
-    let location = this.gamedata.locations.find((x: { id: any; }) => x.id == stash.properties.stuff.locationId);
-    let lootBoxLocationConfig = this.lootBoxConfig.locations.find(x => x.name == location.uniqueName);
-
-    componentRef.instance.lootBoxConfig = lootBoxConfig as LootBoxSection;
-    componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBoxSection;
-
-
     return componentRef.location.nativeElement;
   }
 
-  private addAnomalyZones() {
-    let anomalyZoneIcon = {
-      name: this.translate.instant('anomaly-zone'),
-      uniqueName: 'anomaly-zone',
-      cssClass: 'anomaly-zone',
-      ableToSearch: true,
-      icon: L.icon({
-        iconSize: [4, 4],
-        className: 'mark-container stalker-mark-2',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/anomaly.svg',
-        iconSizeInit: [2, 2],
-        iconAnchor: [0, 0],
-      }),
-    };
-    let anomalyZoneNoArtIcon = {
-      name: this.translate.instant('anomaly-zone-no-art'),
-      uniqueName: 'anomaly-zone-no-art',
-      icon: L.icon({
-        iconSize: [12.5, 12.5],
-        className: 'mark-container stalker-mark',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/anomaly_noart.svg',
-        iconSizeInit: [1, 1],
-        iconAnchor: [0, 0],
-      }),
-    };
-    let anomalies: any = {};
-    let anomaliesNoArt: any = {};
-    anomalies.type = 'FeatureCollection';
-    anomaliesNoArt.type = 'FeatureCollection';
-    anomalies.features = [];
-    anomaliesNoArt.features = [];
+  private createLootBoxPopup(lootBox: any) {
+    lootBox.getPopup().on('remove', function () {
+      lootBox.getPopup().off('remove');
+      componentRef.destroy();
+    });
 
-    for (let zone of this.gamedata.anomalyZones) {
-      let canvasMarker;
-      if (
-        zone.anomaliySpawnSections != null &&
-        zone.anomaliySpawnSections.length > 0
-      ) {
-        canvasMarker = L.marker([zone.y, zone.x], {
-          icon: anomalyZoneIcon.icon,
-        });
-      } else {
-        canvasMarker = L.marker([zone.y, zone.x], {
-          icon: anomalyZoneNoArtIcon.icon,
-        });
-      }
+    const factory = this.resolver.resolveComponentFactory(LootBoxClusterComponent);
 
-      canvasMarker.properties = {};
-      canvasMarker.properties.name = zone.name;
-      canvasMarker.properties.description = zone.description;
-      canvasMarker.properties.zoneModel = zone;
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.cluster = lootBox.properties.lootBox;
+    componentRef.instance.game = this.game;
+    componentRef.instance.allItems = this.items;
 
-      if (
-        zone.anomaliySpawnSections != null &&
-        zone.anomaliySpawnSections.length > 0
-      ) {
-        canvasMarker.properties.anomaliySpawnSections =
-          zone.anomaliySpawnSections;
-        canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
-        canvasMarker.properties.ableToSearch = true;
-        canvasMarker.properties.typeUniqueName = 'anomaly-zone';
+    let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.properties.lootBox.locationId) as Location;
+    let lootBoxLocationConfig = this.lootBoxConfig.locations.find(x => x.name == location.uniqueName);
 
-        let searchFields = [];
-        searchFields.push(canvasMarker.properties.name);
+    componentRef.instance.lootBoxConfigs = this.lootBoxConfig.boxes;
+    componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
 
-        if (
-          canvasMarker.properties.description !=
-          this.translate.instant('default-desription')
-        ) {
-          searchFields.push(canvasMarker.properties.description);
-        }
-
-        let artefactsSections = zone.anomaliySpawnSections.map(
-          (item: { anomalySpawnItems: any[] }) =>
-            item.anomalySpawnItems.map((ass) => ass.artefact.uniqueName)
-        );
-
-        for (let artefactsSection of artefactsSections) {
-          for (let art of artefactsSection) {
-            searchFields.push(art);
-          }
-        }
-
-        canvasMarker.feature = {
-          properties: { search: searchFields.join(', ') },
-        };
-        this.createProperty(
-          canvasMarker.feature.properties,
-          'search',
-          searchFields,
-          this.translate
-        );
-
-        anomalies.features.push(canvasMarker);
-
-        let location = this.locations.locations.find(
-          (x: { id: any }) => x.id == zone.locationId
-        );
-        if (location) {
-          canvasMarker.properties.locationUniqueName = location.uniqueName;
-          canvasMarker.properties.locationName = location.name;
-        }
-      } else {
-        if (zone.anomalies != null) {
-          canvasMarker.properties.anomalies = zone.anomalies;
-        }
-        anomaliesNoArt.features.push(canvasMarker);
-        canvasMarker.properties.ableToSearch = false;
-      }
-
-      canvasMarker.bindTooltip(
-        (zone: any) => {
-          return this.createAnomalyZoneTooltip(zone);
-        },
-        { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
-      );
-      canvasMarker
-        .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
-          maxWidth: 400,
-        })
-        .openPopup();
-    }
-
-    try {
-      this.addToCanvas(anomalies, anomalyZoneIcon);
-
-      if (anomaliesNoArt.features.length > 0) {
-        this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
-      }
-    } catch (e) {
-      console.log(e);
-    }
+    return componentRef.location.nativeElement;
   }
 
   private addTraders() {
@@ -1299,13 +1403,21 @@ export class MapComponent {
     traders.features = [];
 
     for (let trader of this.gamedata.traders) {
-      let canvasMarker = L.marker([trader.y, trader.x], {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == trader.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + trader.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + trader.y / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: traderIcon.icon,
       });
 
       canvasMarker.properties = {};
       canvasMarker.properties.traderConfig = trader;
-      canvasMarker.properties.name = trader.name + '.name';
+      canvasMarker.properties.name = trader.profile.name;
       canvasMarker.properties.typeUniqueName = traderIcon.uniqueName;
       traders.features.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
@@ -1314,18 +1426,15 @@ export class MapComponent {
       this.createProperty(
         canvasMarker.feature.properties,
         'search',
-        [trader.name + '.name'],
+        [trader.profile.name + '.name'],
         this.translate
       );
 
-      let location = this.locations.locations.find(
-        (y: { id: any }) => y.id == trader.locationId
-      );
       canvasMarker.properties.locationUniqueName = location.uniqueName;
 
       canvasMarker.bindTooltip(
         (marker: any) =>
-          this.translate.instant(marker.properties.traderConfig.name + '.name'),
+          this.translate.instant(marker.properties.traderConfig.profile.name),
         {
           sticky: true,
           className: 'map-tooltip',
@@ -1345,6 +1454,108 @@ export class MapComponent {
     this.addToCanvas(traders, traderIcon);
   }
 
+  private addStalkers() {
+    let stalkerIcon = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let stalkerIconDead = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character_dead.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let stalkerIconQuestItem = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character_quest.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let stalkers: any = {};
+    stalkers.type = 'FeatureCollection';
+    stalkers.features = [];
+
+    for (let stalker of this.gamedata.stalkers) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stalker.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + stalker.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + stalker.y / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem : stalkerIcon.icon) : stalkerIconDead.icon,
+      });
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.stalker = stalker;
+      canvasMarker.properties.name = stalker.profile.name;
+      canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
+      stalkers.features.push(canvasMarker);
+      canvasMarker.properties.ableToSearch = false;
+      canvasMarker.feature = {};
+      canvasMarker.feature.properties = {};
+      this.createProperty(
+        canvasMarker.feature.properties,
+        'search',
+        [stalker.profile.name],
+        this.translate
+      );
+
+      canvasMarker.properties.locationUniqueName = location.uniqueName;
+
+      canvasMarker.bindTooltip(
+        (marker: any) =>
+          this.translate.instant(marker.properties.stalker.profile.name),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+
+      canvasMarker
+        .bindPopup(
+          (stalker: any) =>
+            this.createStalkerPopup(stalker),
+          { maxWidth: 500 }
+        )
+        .openPopup();
+    }
+
+    this.addToCanvas(stalkers, stalkerIcon);
+  }
+
   private addToCanvas(geoMarks: any, markType: any) {
     let marksLayer = L.geoJSON(geoMarks);
     marksLayer.ableToSearch = markType.ableToSearch ?? false;
@@ -1362,7 +1573,7 @@ export class MapComponent {
     };
 
     marksLayer.show = (layer: { isShowing: boolean; markers: any }) => {
-      if (!layer.isShowing) {
+      if (!layer.isShowing && layer.markers?.length > 0) {
         this.canvasLayer.addMarkers(layer.markers);
 
         layer.isShowing = true;
@@ -1389,69 +1600,6 @@ export class MapComponent {
   }
 
   private createeAnomalyZonePopup(zone: any) {
-    /*let descHtml = `<div><div class='popup header'>${this.translate.instant('anomaliesCluster')}</div>${ zone.properties.description != null ? `<div class='popup description'>${zone.properties.description}</div>` : ''}</div>`
-
-      if (zone.properties.anomaliySpawnSections && zone.properties.anomaliySpawnSections.length > 0) {
-          let sectionsHtml = '<div class="sections">';
-
-          let sortedSections = zone.properties.anomaliySpawnSections.sort(function (a, b) {
-              return -(a.Sort - b.Sort);
-          });
-
-          let maxArtefactsInZone = 0;
-
-          for (let section of sortedSections) {
-              if (section.anomalySpawnItems && section.anomalySpawnItems.length > 0) {
-                  if (section.count == 0) {
-                      section.count = 1;
-                  }
-                  let anomalyCountSection = section.count > 1 ? `<div>${this.translate.instant('anomaliesCount', {count: section.count})}</div>` : '';
-                  let anomalyNameSection = '';
-
-                  if (section.anomalyUniqueName != null) {
-                    if (section.count > 1) {
-                      anomalyNameSection = `<div>${section.count} x ${this.translate.instant(section.anomalyUniqueName)}</div>`;
-                    }
-                    else {
-                      anomalyNameSection = `<div>${this.translate.instant(section.anomalyUniqueName)}</div>`;
-                    }
-                  }
-                  else {
-                    anomalyNameSection = anomalyCountSection;
-                  }
-
-                  sectionsHtml += `<div class='section'><div class='anomaly-section-info'>${anomalyNameSection}<div>${this.translate.instant('anomalyArtMaxCount', {count: section.maxCapacity})}</div></div>`;
-                  sectionsHtml += `<div class="inventory">`;
-                  let items = section.anomalySpawnItems.sort(function (a: { probability: number; }, b: { probability: number; }) {
-                      return -(a.probability - b.probability);
-                  });
-
-                  for (let item of items) {
-                      sectionsHtml += `<div class="inventory-item inventory-item-width-1 inventory-item-height-1">`
-                      sectionsHtml += `<div class="inventory-item-percentage">${Math.floor(item.probability * 100)}%</div>`;
-                      sectionsHtml += `<div class="inventory-item-image ${item.artefact.uniqueName} ${this.gamedata.uniqueName}" title="${item.artefact.name}"></div></div>`;
-                  }
-
-                  sectionsHtml += '</div></div>';
-                  maxArtefactsInZone += section.count * section.maxCapacity;
-              }
-          }
-
-          sectionsHtml += `</div><div class='anomaly-section-info'>${this.translate.instant('anomalyZoneArtMaxCount', {count: maxArtefactsInZone})}</div>`
-
-          descHtml += sectionsHtml;
-          descHtml += `<div class="bottom"><div link-uniqueName="${zone.properties.typeUniqueName}" link-lng="${zone._latlng.lng}" link-lat="${zone._latlng.lat}" link-game="${this.gamedata.name}" class="button url-button" onclick="copyLink(this)"><span>Mark link</span></div></div>`;
-      }
-
-      if (zone.properties.anomalies != null && zone.properties.anomalies.length > 0) {
-        descHtml += `<div class='anomalies-in-claster-container'>`;
-        for (let anomaly of zone.properties.anomalies) {
-          descHtml += `<div class='anomaly-in-claster'> ${anomaly.count} x ${this.translate.instant(anomaly.uniqueName)}</div>`
-        }
-
-        descHtml += '</div>'
-      }*/
-
     const analytics = getAnalytics();
     logEvent(analytics, 'open-anomaly-zone-popup', {
       type: zone.properties.typeUniqueName,
@@ -1460,8 +1608,6 @@ export class MapComponent {
       game: this.game,
       language: this.translate.currentLang,
     });
-
-    //return descHtml;
 
     zone.getPopup().on('remove', function () {
       zone.getPopup().off('remove');
@@ -1473,6 +1619,8 @@ export class MapComponent {
     const componentRef = this.container.createComponent(factory);
     componentRef.instance.anomalZone = zone.properties.zoneModel;
     componentRef.instance.game = this.game;
+    componentRef.instance.allItems = this.items;
+
     return componentRef.location.nativeElement;
   }
 
@@ -1489,10 +1637,28 @@ export class MapComponent {
     const componentRef = this.container.createComponent(factory);
     componentRef.instance.trader = trader;
     componentRef.instance.allTraders = traders as TraderModel[];
-    componentRef.instance.game = {
-      gameName: this.game,
-      id: this.avaliableGames.indexOf(this.game) + 1,
-    };
+    componentRef.instance.game = this.game;
+    componentRef.instance.allItems = this.items;
+    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+    componentRef.instance.traderConfig = this.mapConfig.traderConfigs.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
+
+    return componentRef.location.nativeElement;
+  }
+
+  private createStalkerPopup(stalkerMarker: any) {
+    stalkerMarker.getPopup().on('remove', function () {
+      stalkerMarker.getPopup().off('remove');
+      componentRef.destroy();
+    });
+
+    const factory = this.resolver.resolveComponentFactory(StalkerComponent);
+
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.stalker = stalkerMarker.properties.stalker;
+    componentRef.instance.game = this.game;
+    componentRef.instance.allItems = this.items;
+    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+
     return componentRef.location.nativeElement;
   }
 

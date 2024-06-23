@@ -2,6 +2,7 @@
     "shoc": "Тіні Чорнобиля",
     "cs": "Чисте небо",
     "cop": "Поклик Прип'яті",
+
     "sub-location": "Локації",
     "acidic": "Кислотна зона",
     "psychic": "Псі-випромінювання",
@@ -22,7 +23,7 @@
 
     "stuff": "Хабар",
     "st_name_habar": "Хабар",
-    "st_name_habar_desc": "Розкиданий по локації хабар",
+    "stuff_at_location": "Розкиданий по локації хабар",
     "st_name_habar_in_body": "Хабар в трупі",
     "st_name_military_warehouse_title": "Армійський склад",
     "st_name_duty_warehouse_title": "Склад «Долга»",
@@ -40,6 +41,11 @@
     "physic_destroyable_object": "Ящик з хабаром",
     "st_name_habar_in_box": "Хабар в ящику",
     "st_name_habar_in_box_desc": "Хабар в ящику",
+
+    "novice": "Новачок",
+    "experienced": "Досвідчений",
+    "veteran": "Ветеран",
+    "master": "Майстер",
 
     "escape": "Кордон",
     "garbage": "Смітник",
@@ -188,40 +194,67 @@
     "trade-count-chance": "Кількість і шанс появи",
     "trader-must-buy-item-firstly": "Предмет не з'являється в інвентарі торговця самостійно і продаватиметься тільки після покупки у гравця.",
 
+    "trader-sell": "Ціна продажу",
+    "trader-buy": "Ціна покупки",
+    "trader-supply": "Асортимент",
+
+    "sell_default": "Базова",
+    "buy_default": "Базова",
+    "supply_default": "Базовий",
+
+    "escape_trader_name_shoc_default": "До АТП",
+    "esc_kill_bandits_quest_done": "Після АТП",
+
+    "bar_barmen_name_shoc_default": "До X-18",
+    "bar_darklab_document_done": "Після X-18",
+    "yan_labx16_switcher_primary_off": "Після X-16",
+
+    "yan_saharov_name_shoc_default": "До X-16",
+    "yan_kill_brain_done": "Після X-16",
+
+    "bar_petrenko_name_shoc_default": "До \"Дістати «Бульдог-6» у «Волі»\"",
+    "bar_svoboda_rg6_done": "Після \"Дістати «Бульдог-6» у «Волі»\"",
+
+    "mil_Svoboda_trader_name_shoc_default": "До ліквідації групи Черепа",
+    "mil_lukash_dolg_task_complete": "Після ліквідації групи Черепа",
+    "mil_leader_quest2_complete": "Павлик і інформатор ліквідовані",
+
+    "actor_in_stalker": "Гравець в сталкерах",
+    "actor_in_dolg": "Гравець Долгівець",
+    "actor_in_freedom": "Гравець в Волі",
+    "is_faction_friend_to_actor(bandit)": "Друг Бандитів",
+    "is_faction_friend_to_actor(csky)": "Друг Чистого Неба",
+
+    "is_csky_at_expansion_1": "Перевагу в силі забезпечено",
+    "is_csky_at_expansion_2": "Базу Ренегатів захоплено",
+    "is_csky_at_expansion_3_or_higher": "Шлях на Кордон під контролем",
+
+    "esc_bring_habar_complete": "Після повернення кейса",
+    "gar_story_got_info_from_digger": "Після дігерів",
+
+    "is_stalker_at_expansion_1": "Кордон під контролем",
+    "is_stalker_at_expansion_2": "Переходи на Смітик під контролем",
+    "is_stalker_at_expansion_3_or_higher": "Плацдарм на Смітнику захоплено",
+
+    "is_bandit_at_expansion_1": "Смітник під контролем",
+    "is_bandit_at_expansion_2": "Переходи на Кордон під контролем",
+    "is_bandit_at_expansion_3_or_higher": "Плацдарм на Кордоні захоплено",
+
+    "is_dolg_at_expansion_1": "Агропром під контролем",
+    "is_dolg_at_expansion_2": "Плацдарм на Смітнику захоплено",
+    "is_dolg_at_expansion_3_or_higher": "Переходи в Темну Долину під контролем",
+    "is_dolg_at_expansion_3_or_higher =is_faction_resource_greater(dolg:5)": "Переходи в Темну Долину під контролем і достатньо ресурсів",
+
+    "is_stalker_at_expansion_2 +gar_story_got_info_from_digger": "Переходи на Кордон під контролем і отримана інфа від дігерів",
+    "is_faction_resource_greater(stalker:5) =is_stalker_at_expansion_3_or_higher": "Плацдарм на Смітнику захоплено і вдосталь ресурсів",
+
+    "is_freedom_at_expansion_1": "Темна Долина під контролем",
+    "is_freedom_at_expansion_2": "Плацдарм на Смітнику захоплено",
+    "is_freedom_at_expansion_3_or_higher": "Переходи на Агропром під контролем",
+    "is_freedom_at_expansion_3_or_higher =is_faction_resource_greater(freedom:5)": "Переходи на Агропром під контролем і достатньо ресурсів",
+
     "hero-name": {
       "shoc": "Мічений"
-    },
-
-    "bar_barman": {
-      "name": "Бармен",
-      "": "До взяття документів в X-18",
-      "bar_darklab_document_done": "Після взяття документів в X-18",
-      "yan_labx16_switcher_primary_off": "Після вимкнення псі-установки в X-16"
-    },
-
-    "mil_Svoboda_trader": {
-      "name": "Скнара",
-      "": "До ліквідації групи Черепа",
-      "mil_lukash_dolg_task_complete": "Череп і група знищені",
-      "mil_leader_quest2_complete": "Павлик і інформатор ліквідовані"
-    },
-
-    "bar_dolg_petrenko": {
-      "name": "Петренко",
-      "": "До виконання \"Дістати «Бульдог-6» у «Волі»\"",
-      "bar_svoboda_rg6_done": "Після виконання \"Дістати «Бульдог-6» у «Волі»\""
-    },
-
-    "yan_sakharov": {
-      "name": "Сахаров",
-      "": "До вимкнення псі-установки в X-16",
-      "yan_kill_brain_done": "Після вимкнення псі-установки в X-16"
-    },
-
-    "esc_trader": {
-      "name": "Сідорович",
-      "": "До розмови з Вовком про зачистку АТП",
-      "esc_kill_bandits_quest_done": "Після розмови з Вовком про зачистку АТП"
     },
 
     "all-traders": {
