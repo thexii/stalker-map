@@ -194,14 +194,16 @@ export class MapComponent {
   }
 
   private async loadLootBoxConfig(): Promise<void> {
-    await fetch(`/assets/data/${this.game}/lootBoxConfig.json`)
-      .then((response) => response.json())
-      .then((config: LootBoxConfig) => {
-        if (config) {
-          this.lootBoxConfig = config;
-        }
-        console.log(config);
-      });
+    if (this.game != 'cop') {
+      await fetch(`/assets/data/${this.game}/lootBoxConfig.json`)
+        .then((response) => response.json())
+        .then((config: LootBoxConfig) => {
+          if (config) {
+            this.lootBoxConfig = config;
+          }
+          console.log(config);
+        });
+    }
   }
 
   private async loadLocales(language: string): Promise<void> {
@@ -1640,7 +1642,8 @@ export class MapComponent {
     componentRef.instance.game = this.game;
     componentRef.instance.allItems = this.items;
     componentRef.instance.rankSetting = this.mapConfig.rankSetting;
-    componentRef.instance.traderConfig = this.mapConfig.traderConfigs.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
+    componentRef.instance.traderConfigs = this.mapConfig.traderConfigs;
+    componentRef.instance.traderConfig = this.mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
 
     return componentRef.location.nativeElement;
   }

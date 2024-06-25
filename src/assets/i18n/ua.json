@@ -194,6 +194,7 @@
     "trade-count-chance": "Кількість і шанс появи",
     "trader-must-buy-item-firstly": "Предмет не з'являється в інвентарі торговця самостійно і продаватиметься тільки після покупки у гравця.",
 
+    "all-traders": "Всі торговці",
     "trader-sell": "Ціна продажу",
     "trader-buy": "Ціна покупки",
     "trader-supply": "Асортимент",
@@ -224,6 +225,7 @@
     "actor_in_freedom": "Гравець в Волі",
     "is_faction_friend_to_actor(bandit)": "Друг Бандитів",
     "is_faction_friend_to_actor(csky)": "Друг Чистого Неба",
+    "is_faction_friend_to_actor(stalker)": "Друг сталкерів",
 
     "is_csky_at_expansion_1": "Перевагу в силі забезпечено",
     "is_csky_at_expansion_2": "Базу Ренегатів захоплено",
@@ -253,11 +255,21 @@
     "is_freedom_at_expansion_3_or_higher": "Переходи на Агропром під контролем",
     "is_freedom_at_expansion_3_or_higher =is_faction_resource_greater(freedom:5)": "Переходи на Агропром під контролем і достатньо ресурсів",
 
+    "zat_b30_sultan_loose": "Скадовськ за сталкерами",
+    "zat_b30_barmen_under_sultan": "Скадовськ під бандитами",
+    "wealthy_functor": "Заможний клієнт",
+    "jup_a9_tech_way_info": "Шлях до Прип'яті розвідано",
+    "zat_b22_medic_respawn": "Медик зник",
+
+    "counter_greater(jup_a6_actor_help_freedom:3)": "Тричі допоміг Волі",
+    "counter_equal(jup_a6_actor_help_freedom:2)": "Двічі допоміг Волі",
+    "counter_greater(jup_a6_actor_help_duty:3)": "Тричі допоміг Долгу",
+    "counter_equal(jup_a6_actor_help_duty:2)": "Двічі допоміг Долгу",
+    "counter_greater(jup_a6_actor_help_freedom:1)": "Допоміг Волі",
+    "counter_greater(jup_a6_actor_help_duty:1)": "Допоміг Долгу",
+    "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам",
+
     "hero-name": {
       "shoc": "Мічений"
-    },
-
-    "all-traders": {
-      "name": "Всі торговці"
     }
 }

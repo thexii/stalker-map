@@ -9,6 +9,7 @@ export class MapConfig {
   public markersConfig: MarkerConfig[];
   public rankSetting: RankSetting[];
   public rulerEnabled: boolean;
+  public needLootBoxConfig: boolean;
   public lengthFactor: number;
   public traderConfigs: TraderSectionsConfig[];
 }

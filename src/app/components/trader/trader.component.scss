@@ -1,3 +1,7 @@
+
+$trader-columns: 9;
+$cell: 50px;
+
 .trader-container {
   display: flex;
   color: white;
@@ -78,10 +82,10 @@
 }
 
 .inventory {
-  max-height: round(up, var(--wrapper-height) / 2, 50px);
+  max-height: round(up, var(--wrapper-height) / 2, $cell);
   overflow-y: auto;
   overflow-x: hidden;
-  grid-template-columns: repeat(9, 50px);
+  grid-template-columns: repeat($trader-columns, $cell);
 }
 
 .best-sell-item {
@@ -100,11 +104,17 @@
   min-width: 30px;
 }
 
+.trader-container-section {
+  vertical-align: top;
+}
+
+.container {
+  max-height: 800px;
+}
+
 .container.info {
   margin-inline: 1rem;
   min-width: 350px;
-  max-width: 350px;
-  width: 350px;
 }
 
 .trader-sections-container {

@@ -58,5 +58,59 @@
   "startZoom": 1,
   "rulerEnabled": true,
   "lengthFactor": 2.926829268292683,
-  "globalMapFileName": "global_map.png"
+  "globalMapFileName": "global_map.png",
+  "needLootBoxConfig": false,
+  "traderConfigs": [
+    {
+      "trader": "st_zat_b30_owl_stalker_trader_name",
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": null
+        },
+        {
+          "condition": "zat_b22_medic_respawn",
+          "enabledBuies": ["zat_b22_medic_respawn"],
+          "enabledSupplies": null
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "zat_b22_medic_respawn",
+          "enabledSells": ["zat_b22_medic_respawn"],
+          "enabledSupplies": null
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledBuies": [""]
+        },
+        {
+          "condition": "esc_kill_bandits_quest_done",
+          "enabledSells": ["esc_kill_bandits_quest_done"],
+          "enabledBuies": ["esc_kill_bandits_quest_done"]
+        }
+      ]
+    },
+    {
+      "trader": "jup_a6_stalker_barmen",
+      "sell": [],
+      "buy": [],
+      "supply": []
+    },
+    {
+      "trader": "jup_a6_stalker_medik",
+      "sell": [],
+      "buy": [],
+      "supply": []
+    }
+  ]
 }
