@@ -129,6 +129,8 @@ $cell: 50px;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .trader-section {
@@ -162,4 +164,40 @@ $cell: 50px;
 
 .section-td {
   text-align: center;
+}
+
+.section div:nth-child(n) {
+  border-bottom: 1px solid rgba(white, 0.2);
+}
+
+.section div:last-child {
+  border-bottom: unset;
+}
+
+.relation-range {
+  width: 50%;
+
+  input {
+    width: 100%;
+    background-color: black;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track{
+    border-radius: 3px;
+  }
+
+  .range-labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.condition {
+  border: 1px solid grey;
 }

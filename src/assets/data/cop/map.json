@@ -1004,7 +1004,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": -11.76,
       "y": 283.17,
@@ -4150,14 +4150,14 @@
   ],
   "stuffs": [
     {
-      "name": null,
+      "name": "inventory_box",
       "uniqueName": null,
       "description": null,
       "x": -447.11,
       "z": 183.64,
       "y": -6.13,
       "locationId": 1,
-      "typeId": 0,
+      "typeId": 3,
       "items": [
         {
           "uniqueName": "wpn_pb",
@@ -4225,6 +4225,25 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
+      "x": 412.92,
+      "z": 232.43,
+      "y": 0.14,
+      "locationId": 1,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "af_quest_b14_twisted",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
       "x": -413.8215,
       "z": -346.1447,
       "y": 34.530537,
@@ -4273,7 +4292,7 @@
       "z": 420.33075,
       "y": 13.5333605,
       "locationId": 1,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "ammo_5.45x39_ap",
@@ -4347,7 +4366,7 @@
       "z": -244.27574,
       "y": 34.378544,
       "locationId": 1,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "ammo_5.45x39_fmj",
@@ -4397,79 +4416,45 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
-      "x": 314.31555,
-      "z": -400.50446,
-      "y": 37.79222,
+      "x": 334.06845,
+      "z": -402.1531,
+      "y": 37.866848,
       "locationId": 1,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "ammo_5.56x45_ap",
-          "count": 120,
+          "count": 180,
           "probability": 1
         },
         {
           "uniqueName": "ammo_9x19_pbp",
-          "count": 100,
+          "count": 300,
           "probability": 1
         },
         {
           "uniqueName": "bread",
-          "count": 2,
+          "count": 5,
           "probability": 1
         },
         {
           "uniqueName": "conserva",
-          "count": 2,
+          "count": 8,
           "probability": 1
         },
         {
           "uniqueName": "vodka",
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "uniqueName": "zat_b40_notebook",
           "count": 1,
-          "probability": 1
-        }
-      ],
-      "condlist": null,
-      "communities": null
-    },
-    {
-      "name": "stuff_at_location",
-      "uniqueName": null,
-      "description": null,
-      "x": 343.54095,
-      "z": -402.776,
-      "y": 37.651997,
-      "locationId": 1,
-      "typeId": 3,
-      "items": [
-        {
-          "uniqueName": "ammo_5.56x45_ap",
-          "count": 60,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_9x19_pbp",
-          "count": 200,
-          "probability": 1
-        },
-        {
-          "uniqueName": "bread",
-          "count": 3,
-          "probability": 1
-        },
-        {
-          "uniqueName": "conserva",
-          "count": 6,
           "probability": 1
         },
         {
           "uniqueName": "medkit",
           "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "vodka",
-          "count": 3,
           "probability": 1
         },
         {
@@ -4689,7 +4674,7 @@
       "z": -205.57843,
       "y": 24.723534,
       "locationId": 1,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "helm_respirator_joker",
@@ -4713,10 +4698,1458 @@
       "z": -414.99457,
       "y": 25.508883,
       "locationId": 1,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "toolkit_2",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": -426.5636,
+      "z": -383.57068,
+      "y": 26.070286,
+      "locationId": 1,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "zat_a23_gauss_rifle_docs",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -62.968365,
+      "z": -271.7456,
+      "y": 21.950935,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -427.61563,
+      "z": -391.38782,
+      "y": 40.74432,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 50,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -390.8185,
+      "z": -26.413458,
+      "y": 7.016863,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -179.67262,
+      "z": -128.4338,
+      "y": 10.885625,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 375.82968,
+      "z": -8.722992,
+      "y": 38.038925,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 213.3872,
+      "z": 288.87012,
+      "y": -6.943629,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_toz34",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 82.4376,
+      "z": 373.9714,
+      "y": 10.072173,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -117.56701,
+      "z": -382.991,
+      "y": 24.416756,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 425.44354,
+      "z": -39.88543,
+      "y": 36.643646,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 522.8428,
+      "z": -287.84998,
+      "y": 7.94238,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 215.62871,
+      "z": 19.208578,
+      "y": 21.204176,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 55.09016,
+      "z": 573.6841,
+      "y": 1.992927,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -425.2782,
+      "z": 464.1266,
+      "y": 18.05725,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -111.874664,
+      "z": 664.5875,
+      "y": -2.7101436,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -342.88522,
+      "z": -290.01355,
+      "y": 41.144676,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -130.75784,
+      "z": -449.8706,
+      "y": 27.525427,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 188.56078,
+      "z": -45.627106,
+      "y": -5.294222,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_l85",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 15
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -162.42757,
+      "z": 102.954,
+      "y": 7.4786296,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 58.198784,
+      "z": 751.9421,
+      "y": 9.05303,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_m209",
+          "count": 4,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -292.56458,
+      "z": 564.8943,
+      "y": 17.126905,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_svd",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -403.87122,
+      "z": 4.083908,
+      "y": 13.462785,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 513.9517,
+      "z": 313.8049,
+      "y": 13.805919,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 385.06512,
+      "z": 260.71808,
+      "y": -6.4598527,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -107.66053,
+      "z": 291.3625,
+      "y": 6.2207704,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 231.38104,
+      "z": -17.86277,
+      "y": 8.464966,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 150,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": 374.38135,
+      "z": -23.051147,
+      "y": 34.398018,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": -398.55493,
+      "z": -31.522186,
+      "y": 11.922311,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": -421.55698,
+      "z": -321.08984,
+      "y": 35.66986,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 397.32648,
+      "z": -426.54196,
+      "y": 35.376266,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_m209",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher_m203",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -1.164616,
+      "z": -303.93274,
+      "y": 26.330303,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 164.86356,
+      "z": 535.496,
+      "y": 10.226157,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_addon_scope",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -520.5614,
+      "z": 97.307884,
+      "y": 6.1215644,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 422.83197,
+      "z": -295.83057,
+      "y": 8.569797,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 313.29492,
+      "z": -421.1073,
+      "y": 40.637775,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -222.1869,
+      "z": -440.2247,
+      "y": 29.006075,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -139.87907,
+      "z": -421.4894,
+      "y": 28.445648,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_booster",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -429.86105,
+      "z": 4.858255,
+      "y": 3.5886493,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_anabiotic",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -515.5656,
+      "z": -230.11855,
+      "y": 34.430943,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -57.375164,
+      "z": 209.96008,
+      "y": 17.684753,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 22.182629,
+      "z": 176.97392,
+      "y": -2.8992944,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 29.084595,
+      "z": 611.0818,
+      "y": -0.6571937,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -361.27432,
+      "z": 341.73938,
+      "y": 19.758379,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -185.69315,
+      "z": 76.445274,
+      "y": 9.412934,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bread",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "kolbasa",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 431.35178,
+      "z": 47.34199,
+      "y": 35.393124,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "conserva",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 413.1466,
+      "z": 232.07225,
+      "y": -5.228014,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 420.40942,
+      "z": 179.81664,
+      "y": 3.335331,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -263.79214,
+      "z": 302.61758,
+      "y": 6.0506144,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 169.10283,
+      "z": -264.83258,
+      "y": 15.206394,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 346.77682,
+      "z": 402.12524,
+      "y": -6.923033,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -29.771576,
+      "z": -183.00159,
+      "y": 0.934674,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -168.57098,
+      "z": -174.253,
+      "y": 24.703487,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "stalker_outfit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 40.34149,
+      "z": -85.67534,
+      "y": -6.9105806,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 62.873608,
+      "z": 28.848501,
+      "y": -4.704099,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "vodka",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -170.9784,
+      "z": 140.7828,
+      "y": 15.69163,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -44.376587,
+      "z": 354.78156,
+      "y": 28.73162,
+      "locationId": 1,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": -32.84247,
+      "z": -324.80023,
+      "y": 17.59562,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "af_oasis_heart",
           "count": 1,
           "probability": 1
         }
@@ -5037,11 +6470,183 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
+      "x": 417.89517,
+      "z": -360.51358,
+      "y": 32.373734,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_conservation_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 347.2604,
+      "z": -370.35812,
+      "y": 28.583363,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_delivery_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 313.67703,
+      "z": -234.31465,
+      "y": 35.636116,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_evacuation_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 418.06598,
+      "z": -230.86234,
+      "y": 28.98837,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_losses_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 358.2604,
+      "z": -275.04034,
+      "y": 35.0373,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_meeting_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 324.44168,
+      "z": -302.7291,
+      "y": 32.42467,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_power_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 447.93082,
+      "z": -451.7822,
+      "y": 31.894257,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_a9_way_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": 393.98032,
+      "z": 357.31442,
+      "y": 15.765756,
+      "locationId": 2,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "jup_b200_tech_materials_acetone",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "jup_b200_tech_materials_textolite",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "jup_b200_tech_materials_wire",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "jup_b200_tech_materials_capacitor",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "jup_b200_tech_materials_transistor",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
       "x": -394.75482,
       "z": 10.205453,
       "y": 12.328432,
       "locationId": 2,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "jup_b205_sokolov_note",
@@ -5060,7 +6665,7 @@
       "z": -64.001945,
       "y": 5.526909,
       "locationId": 2,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "toolkit_1",
@@ -5079,7 +6684,7 @@
       "z": -442.9929,
       "y": 36.722527,
       "locationId": 2,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "toolkit_2",
@@ -5110,14 +6715,1679 @@
       "communities": null
     },
     {
-      "name": null,
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -90.95227,
+      "z": -298.52832,
+      "y": 26.183466,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_silencer",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -315.27414,
+      "z": -382.2976,
+      "y": 0.5004975,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 200,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 172.17326,
+      "z": -445.20078,
+      "y": 24.07206,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -105.43072,
+      "z": -139.87697,
+      "y": 0.07932914,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "drug_psy_blockade",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -432.97195,
+      "z": 269.17023,
+      "y": 12.110308,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svu",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 151.96909,
+      "z": -308.13937,
+      "y": 16.722446,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 162.36357,
+      "z": -419.06485,
+      "y": 21.299805,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 332.1205,
+      "z": -114.83663,
+      "y": 26.193735,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_toz34",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -224.53043,
+      "z": 217.16592,
+      "y": -3.0534885,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 420.25977,
+      "z": -475.31992,
+      "y": 27.720362,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 406.6827,
+      "z": -205.67133,
+      "y": 39.448303,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_protecta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 30,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 151.44574,
+      "z": -196.89064,
+      "y": 25.97261,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 20,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -164.87944,
+      "z": 413.67242,
+      "y": 2.9805477,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_anabiotic",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -0.43123302,
+      "z": 190.86461,
+      "y": 3.966362,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_scope",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 44.616837,
+      "z": 423.76822,
+      "y": -5.4457583,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 312.6224,
+      "z": -238.87396,
+      "y": 27.60013,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 366.31415,
+      "z": -359.41467,
+      "y": 27.55844,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -304.21204,
+      "z": -249.25505,
+      "y": -1.1710085,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 102.53848,
+      "z": 146.14691,
+      "y": 2.926261,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_l85",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -32.790485,
+      "z": 103.69877,
+      "y": 4.8021126,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_silencer",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 184.823,
+      "z": -457.71072,
+      "y": 29.584446,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 131.39378,
+      "z": 211.032,
+      "y": 4.143849,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 434.5538,
+      "z": 403.2662,
+      "y": 1.0520784,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -27.48823,
+      "z": -361.70993,
+      "y": 23.904282,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 240,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 129.9884,
+      "z": 448.6189,
+      "y": -3.4260738,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -231.50749,
+      "z": 434.93613,
+      "y": 1.3654207,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 466.17355,
+      "z": -384.10446,
+      "y": 28.156073,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_l85",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -398.93677,
+      "z": 7.970077,
+      "y": 11.002257,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -370.5449,
+      "z": 387.0519,
+      "y": 4.276137,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_lr300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 240,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 410.2692,
+      "z": 111.50278,
+      "y": 7.631323,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_svd",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -174.09477,
+      "z": -27.917387,
+      "y": 9.748525,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_svu",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 30,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 328.29263,
+      "z": -50.72514,
+      "y": -0.9085447,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_hpsa",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 393.68942,
+      "z": 361.11816,
+      "y": 31.86581,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "helm_tactic",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 63.48844,
+      "z": -105.45152,
+      "y": 24.30805,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 200,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -419.34613,
+      "z": -323.78024,
+      "y": 1.2704966,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -42.984478,
+      "z": 439.76987,
+      "y": 1.9334644,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 400.74368,
+      "z": -180.76575,
+      "y": 28.082842,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -376.58673,
+      "z": 166.66121,
+      "y": -2.9694948,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_val",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -331.40833,
+      "z": 22.282812,
+      "y": 8.568759,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -323.19272,
+      "z": 176.15105,
+      "y": 0.4805326,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": 385.56815,
+      "z": 316.6001,
+      "y": 0.79302394,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": 486.33707,
+      "z": -408.65048,
+      "y": 35.272453,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": -71.66043,
+      "z": -148.6987,
+      "y": -0.14928725,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -323.38446,
+      "z": 244.13438,
+      "y": -1.7738354,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_psy_blockade",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "detector_elite",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -356.1676,
+      "z": -166.34132,
+      "y": 1.301724,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 465.85117,
+      "z": -29.925491,
+      "y": -4.441881,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 230.94081,
+      "z": 35.64506,
+      "y": -28.637123,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_psy_blockade",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -44.8339,
+      "z": 312.55203,
+      "y": 0.4269889,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bread",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "kolbasa",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -198.56448,
+      "z": -435.51492,
+      "y": 3.5364192,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -417.31375,
+      "z": 323.92355,
+      "y": 14.973704,
+      "locationId": 2,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "helm_hardhat",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "inventory_box",
       "uniqueName": null,
       "description": null,
       "x": 27.997793,
       "z": 91.66361,
       "y": 1.094023,
       "locationId": 3,
-      "typeId": 0,
+      "typeId": 3,
       "items": [
         {
           "uniqueName": "ammo_12x70_buck",
@@ -5134,14 +8404,14 @@
       "communities": null
     },
     {
-      "name": null,
+      "name": "inventory_box",
       "uniqueName": null,
       "description": null,
       "x": 58.83109,
       "z": 7.902828,
       "y": 1.898806,
       "locationId": 3,
-      "typeId": 0,
+      "typeId": 3,
       "items": [
         {
           "uniqueName": "scientific_outfit",
@@ -5163,14 +8433,14 @@
       "communities": null
     },
     {
-      "name": null,
+      "name": "inventory_box",
       "uniqueName": null,
       "description": null,
       "x": 40.94407,
       "z": -172.96805,
       "y": 4.49347,
       "locationId": 3,
-      "typeId": 0,
+      "typeId": 3,
       "items": [
         {
           "uniqueName": "ammo_9x39_pab9",
@@ -5760,11 +9030,11 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
-      "x": 9.367857,
-      "z": 269.81497,
-      "y": 5.176746,
+      "x": 9.243364,
+      "z": 269.92453,
+      "y": 5.243792,
       "locationId": 4,
-      "typeId": 3,
+      "typeId": 1,
       "items": [
         {
           "uniqueName": "ammo_5.45x39_ap",
@@ -5789,6 +9059,11 @@
         {
           "uniqueName": "grenade_f1",
           "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "toolkit_3",
+          "count": 1,
           "probability": 1
         },
         {
@@ -5920,6 +9195,25 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
+      "x": -104.03125,
+      "z": -232.96013,
+      "y": -2.676594,
+      "locationId": 4,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "toolkit_3",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
       "x": 145.71974,
       "z": -194.44824,
       "y": 0.551144,
@@ -5955,23 +9249,950 @@
       "communities": null
     },
     {
-      "name": "stuff_at_location",
+      "name": "st_stash",
       "uniqueName": null,
       "description": null,
-      "x": -88.87875,
-      "z": 85.918076,
-      "y": -15.467655,
-      "locationId": 5,
-      "typeId": 3,
+      "x": 93.753456,
+      "z": 0.0916,
+      "y": 0.5345342,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_psy_blockade",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 204.41171,
+      "z": 192.86426,
+      "y": -0.060493,
+      "locationId": 4,
+      "typeId": 0,
       "items": [
         {
           "uniqueName": "ammo_11.43x23_fmj",
-          "count": 100,
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -19.663044,
+      "z": -352.5791,
+      "y": -0.36380526,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 30,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -31.869612,
+      "z": -274.8121,
+      "y": 2.5453124,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 4,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 229.8468,
+      "z": 21.081556,
+      "y": 0.65400535,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -83.04123,
+      "z": 105.721954,
+      "y": 13.232386,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 98.70321,
+      "z": 369.01312,
+      "y": 2.7772126,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -172.23062,
+      "z": 66.45224,
+      "y": -2.1829329,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_booster",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 321.1269,
+      "z": 270.84415,
+      "y": -8.31704,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -241.489,
+      "z": -44.664993,
+      "y": -0.3411155,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_g36",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -186.0928,
+      "z": -358.9145,
+      "y": 3.3807237,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 1,
           "probability": 1
         },
         {
           "uniqueName": "ammo_5.56x45_ss190",
-          "count": 180,
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 44.63269,
+      "z": 134.16096,
+      "y": 5.334812,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 205.8801,
+      "z": -26.703892,
+      "y": 7.8150444,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -100.40498,
+      "z": -99.35234,
+      "y": -0.198578,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_svu",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 208.4703,
+      "z": -21.211649,
+      "y": 0.69987,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -13.434163,
+      "z": 0.6036107,
+      "y": -0.213311,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 10.542276,
+      "z": 126.61397,
+      "y": 5.9239216,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 120,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 125.09876,
+      "z": -38.62887,
+      "y": 0.7186057,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 104.7439,
+      "z": 51.272755,
+      "y": -0.37673935,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_val",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -249.16357,
+      "z": -238.1213,
+      "y": -2.765007,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": 305.42563,
+      "z": 228.96057,
+      "y": 6.4936686,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": 274.59473,
+      "z": 312.2881,
+      "y": 18.84167,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_monolith_stuff_title",
+      "uniqueName": null,
+      "description": null,
+      "x": -53.68361,
+      "z": -97.070984,
+      "y": 4.2675333,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit_army",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_gauss",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 194.74004,
+      "z": 54.878834,
+      "y": 5.1860256,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_m209",
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher_m203",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 106.417244,
+      "z": 142.89995,
+      "y": 3.331712,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_m209",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 22.561745,
+      "z": 381.93323,
+      "y": -1.464268,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_og-7b",
+          "count": 1,
+          "probability": 0.5
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -169.20325,
+      "z": -195.58133,
+      "y": -8.761518,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "wpn_rpg7",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_og-7b",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 137.06653,
+      "z": 240.82767,
+      "y": 29.045628,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 300,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pkm",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -10.087676,
+      "z": 257.75275,
+      "y": 0.6525128,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 5,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -98.09068,
+      "z": -4.8042603,
+      "y": -2.8605874,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "detector_elite",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "scientific_outfit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -173.91896,
+      "z": -383.0138,
+      "y": -0.238971,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_radioprotector",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": 63.065964,
+      "z": 115.321396,
+      "y": 1.4909616,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "st_stash",
+      "uniqueName": null,
+      "description": null,
+      "x": -45.0141,
+      "z": 183.94754,
+      "y": -1.5918334,
+      "locationId": 4,
+      "typeId": 0,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "x": -79.38553,
+      "z": 81.301094,
+      "y": -18.775896,
+      "locationId": 5,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 200,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 300,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 300,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 5,
           "probability": 1
         },
         {
@@ -5981,64 +10202,136 @@
         },
         {
           "uniqueName": "conserva",
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_anabiotic",
           "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 8,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x7_info",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
           "probability": 1
         },
         {
           "uniqueName": "wpn_colt1911",
           "count": 1,
           "probability": 1
-        }
-      ],
-      "condlist": null,
-      "communities": null
-    },
-    {
-      "name": "stuff_at_location",
-      "uniqueName": null,
-      "description": null,
-      "x": -76.77977,
-      "z": 113.34949,
-      "y": -15.484943,
-      "locationId": 5,
-      "typeId": 3,
-      "items": [
+        },
         {
-          "uniqueName": "conserva",
+          "uniqueName": "wpn_fort",
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 8,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_addon_grenade_launcher",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x10_info",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 60,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pkm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x18_info",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_american_experiment_info",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_psy_blockade",
           "count": 1,
           "probability": 1
         },
         {
           "uniqueName": "energy_drink",
-          "count": 1,
+          "count": 3,
           "probability": 1
-        }
-      ],
-      "condlist": null,
-      "communities": null
-    },
-    {
-      "name": "stuff_at_location",
-      "uniqueName": null,
-      "description": null,
-      "x": -74.52587,
-      "z": 60.29695,
-      "y": -21.166553,
-      "locationId": 5,
-      "typeId": 3,
-      "items": [
+        },
         {
-          "uniqueName": "grenade_f1",
+          "uniqueName": "lx8_service_instruction",
           "count": 1,
           "probability": 1
         },
         {
-          "uniqueName": "vodka",
-          "count": 6,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_pkm",
+          "uniqueName": "pri_a19_lab_x16_info",
           "count": 1,
           "probability": 1
         }
@@ -7057,7 +11350,13 @@
           ]
         }
       ],
-      "discounts": null,
+      "discounts": [
+        {
+          "conditions": "friend_of_stalkers_functor",
+          "buy": 1,
+          "sell": 0.9
+        }
+      ],
       "profile": {
         "name": "zat_b22_stalker_medic_name",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -13912,7 +18211,33 @@
           ]
         }
       ],
-      "discounts": null,
+      "discounts": [
+        {
+          "conditions": "zat_b7_actor_really_helped_bandits \u002Bzat_b30_barmen_under_sultan =information_dealer_functor",
+          "buy": 1,
+          "sell": 0.8
+        },
+        {
+          "conditions": "zat_b7_actor_really_helped_stalkers \u002Bzat_b30_sultan_loose =information_dealer_functor",
+          "buy": 1,
+          "sell": 0.8
+        },
+        {
+          "conditions": "zat_b7_actor_really_helped_stalkers \u002Bzat_b30_sultan_loose",
+          "buy": 1,
+          "sell": 0.9
+        },
+        {
+          "conditions": "zat_b30_barmen_under_sultan \u002Bzat_b7_actor_really_helped_bandits",
+          "buy": 1,
+          "sell": 0.9
+        },
+        {
+          "conditions": "information_dealer_functor",
+          "buy": 1,
+          "sell": 0.85
+        }
+      ],
       "profile": {
         "name": "st_zat_b30_owl_stalker_trader_name",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -19307,7 +23632,23 @@
           ]
         }
       ],
-      "discounts": null,
+      "discounts": [
+        {
+          "conditions": "counter_greater(jup_a6_actor_help_freedom:3)",
+          "buy": 1,
+          "sell": 0.8
+        },
+        {
+          "conditions": "counter_greater(jup_a6_actor_help_stalkers:2)",
+          "buy": 1,
+          "sell": 0.85
+        },
+        {
+          "conditions": "counter_greater(jup_a6_actor_help_duty:3)",
+          "buy": 1.1,
+          "sell": 1.1
+        }
+      ],
       "profile": {
         "name": "jup_a6_stalker_barmen",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -19807,7 +24148,13 @@
           ]
         }
       ],
-      "discounts": null,
+      "discounts": [
+        {
+          "conditions": "friend_of_stalkers_functor",
+          "buy": 1,
+          "sell": 0.85
+        }
+      ],
       "profile": {
         "name": "jup_a6_stalker_medik",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -19896,7 +24243,7 @@
     {
       "x": -359.65564,
       "y": -353.1016,
-      "name": "zat_b100_anomal_zone",
+      "name": "st_zat_b100_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -19942,7 +24289,7 @@
     {
       "x": -348.50006,
       "y": 159.54466,
-      "name": "zat_b101_anomal_zone",
+      "name": "st_zat_b101_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -19988,7 +24335,7 @@
     {
       "x": 403.26456,
       "y": 231.11052,
-      "name": "zat_b14_anomal_zone",
+      "name": "st_zat_b14_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20034,7 +24381,7 @@
     {
       "x": -36.670456,
       "y": 308.28842,
-      "name": "zat_b20_anomal_zone",
+      "name": "st_zat_b20_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20075,7 +24422,7 @@
     {
       "x": -296.84653,
       "y": -142.9273,
-      "name": "zat_b39_anomal_zone",
+      "name": "st_zat_b39_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20119,9 +24466,9 @@
       "anomalies": null
     },
     {
-      "x": -71.661736,
-      "y": 253.79756,
-      "name": "zat_b44_anomal_zone_acid",
+      "x": -75.31515,
+      "y": 244.16333,
+      "name": "st_zat_b44_name_acid",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20160,16 +24507,7 @@
               "probability": 0.083333336
             }
           ]
-        }
-      ],
-      "anomalies": null
-    },
-    {
-      "x": -78.96856,
-      "y": 234.52908,
-      "name": "zat_b44_anomal_zone_gravi",
-      "locationId": 1,
-      "anomaliySpawnSections": [
+        },
         {
           "maxCapacity": 2,
           "count": 0,
@@ -20213,7 +24551,7 @@
     {
       "x": 419.9567,
       "y": 411.25418,
-      "name": "zat_b53_anomal_zone",
+      "name": "st_zat_b53_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20254,7 +24592,7 @@
     {
       "x": 272.86414,
       "y": -286.8995,
-      "name": "zat_b54_anomal_zone",
+      "name": "st_zat_b54_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20300,7 +24638,7 @@
     {
       "x": -51.024616,
       "y": -184.05057,
-      "name": "zat_b55_anomal_zone",
+      "name": "st_zat_b55_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20346,7 +24684,7 @@
     {
       "x": 52.026695,
       "y": 7.968361,
-      "name": "zat_wa_anomal_zone",
+      "name": "st_zat_wa_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20442,7 +24780,7 @@
     {
       "x": 11.301344,
       "y": -378.82465,
-      "name": "zaton_b56_anomal_zone",
+      "name": "st_zaton_b56_name",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -20693,7 +25031,7 @@
     {
       "x": -387.29346,
       "y": 315.80228,
-      "name": "jup_b10_anomal_zone",
+      "name": "st_jup_b1_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20732,30 +25070,9 @@
       "anomalies": null
     },
     {
-      "x": -365.2493,
-      "y": 411.71933,
-      "name": "jup_b1_anomal_zone",
-      "locationId": 2,
-      "anomaliySpawnSections": [
-        {
-          "maxCapacity": 0,
-          "count": 0,
-          "anomalyUniqueName": null,
-          "anomalySpawnItems": [
-            {
-              "uniqueName": "af_cristall",
-              "count": 0,
-              "probability": 1
-            }
-          ]
-        }
-      ],
-      "anomalies": null
-    },
-    {
       "x": 395.9313,
       "y": 357.00214,
-      "name": "jup_b200_anomal_zone",
+      "name": "st_jup_b200_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20796,7 +25113,7 @@
     {
       "x": 223.792,
       "y": -304.3537,
-      "name": "jup_b201_anomal_zone",
+      "name": "st_jup_b201_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20842,7 +25159,7 @@
     {
       "x": 52.487576,
       "y": 20.689842,
-      "name": "jup_b206_anomal_zone",
+      "name": "st_jup_b206_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20878,7 +25195,7 @@
     {
       "x": 221.1628,
       "y": -91.293,
-      "name": "jup_b209_anomal_zone",
+      "name": "st_jup_b209_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20949,7 +25266,7 @@
     {
       "x": 262.3783,
       "y": 459.36743,
-      "name": "jup_b211_anomal_zone",
+      "name": "st_jup_b211_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -20985,7 +25302,7 @@
     {
       "x": 243.76474,
       "y": -435.8013,
-      "name": "jup_b214_anomal_zone",
+      "name": "st_jup_b214_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -21031,7 +25348,7 @@
     {
       "x": 265.46652,
       "y": 84.24965,
-      "name": "jup_b25_anomal_zone",
+      "name": "st_jup_b25_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -21067,7 +25384,7 @@
     {
       "x": -72.9817,
       "y": -144.71329,
-      "name": "jup_b32_anomal_zone",
+      "name": "st_jup_b32_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -21113,7 +25430,7 @@
     {
       "x": -12.593841,
       "y": -15.241943,
-      "name": "jup_wa_anomal_zone",
+      "name": "st_jup_wa_name",
       "locationId": 2,
       "anomaliySpawnSections": [
         {
@@ -21563,7 +25880,7 @@
     {
       "x": 63.035927,
       "y": 124.54397,
-      "name": "pri_b301_anomal_zone",
+      "name": "st_pri_b301_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21609,7 +25926,7 @@
     {
       "x": 136.07076,
       "y": 237.29257,
-      "name": "pri_b302_anomal_zone",
+      "name": "st_pri_b302_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21655,7 +25972,7 @@
     {
       "x": 28.86558,
       "y": 290.0587,
-      "name": "pri_b303_anomal_zone",
+      "name": "st_pri_b303_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21701,7 +26018,7 @@
     {
       "x": -138.21968,
       "y": -223.69214,
-      "name": "pri_b304_anomal_zone",
+      "name": "st_pri_b304_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21747,7 +26064,7 @@
     {
       "x": -63.941963,
       "y": 94.02126,
-      "name": "pri_b306_anomal_zone",
+      "name": "st_pri_b306_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21793,7 +26110,7 @@
     {
       "x": -168.97017,
       "y": -49.34616,
-      "name": "pri_b307_anomal_zone",
+      "name": "st_pri_b307_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -21834,7 +26151,7 @@
     {
       "x": 25.176485,
       "y": 68.6331,
-      "name": "pri_wa_anomal_zone",
+      "name": "st_pri_wa_name",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -22051,7 +26368,1086 @@
     }
   ],
   "levelChangers": null,
-  "stalkers": [],
+  "stalkers": [
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": "trader",
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_a2_stalker_nimble_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 0,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "stalker"
+      },
+      "x": 106.1423,
+      "y": 186.64462,
+      "locationId": 1,
+      "money": 10000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_b106_stalker_crab_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 174,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 35,
+        "faction": "stalker"
+      },
+      "x": 118.25422,
+      "y": 185.44603,
+      "locationId": 1,
+      "money": 1000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_b106_stalker_garmata_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 87,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 45,
+        "faction": "stalker"
+      },
+      "x": 122.51,
+      "y": 186.16,
+      "locationId": 1,
+      "money": 1000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "detector_advanced",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_b106_stalker_gonta_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 783,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 50,
+        "faction": "stalker"
+      },
+      "x": 123.53,
+      "y": 187.82,
+      "locationId": 1,
+      "money": 1000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": "guider",
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b215_stalker_guide_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 696,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 65,
+        "faction": "stalker"
+      },
+      "x": 129.94,
+      "y": 186.1,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_bm16",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b33_stalker_snag",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 0,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 25,
+        "faction": "stalker"
+      },
+      "x": 135.75998,
+      "y": 187.51,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_b38_stalker_cop_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 435,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 55,
+        "faction": "stalker"
+      },
+      "x": 125.04,
+      "y": 189.8,
+      "locationId": 1,
+      "money": 8000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_zat_b7_bandit_boss_sultan_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 174,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 60,
+        "faction": "bandit"
+      },
+      "x": 139.32,
+      "y": 178.61,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_protecta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_a10_bandit_leader_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 369,
+        "iconY": 174,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 60,
+        "faction": "bandit"
+      },
+      "x": 14.02352,
+      "y": -187.86176,
+      "locationId": 2,
+      "money": 10000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_jup_a12_stalker_assaulter",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 261,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "stalker"
+      },
+      "x": -42.837807,
+      "y": 187.12108,
+      "locationId": 2,
+      "money": 3000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_l85",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_jup_a12_stalker_diplomat",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 174,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 30,
+        "faction": "stalker"
+      },
+      "x": -44.71,
+      "y": 187.62,
+      "locationId": 2,
+      "money": 3000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_sig220",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_a6_duty_leader",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 435,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 100,
+        "faction": "dolg"
+      },
+      "x": -57.1871,
+      "y": 176.65562,
+      "locationId": 2,
+      "money": 1550
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_a6_freedom_leader",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 783,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 100,
+        "faction": "freedom"
+      },
+      "x": -46.258976,
+      "y": 219.49133,
+      "locationId": 2,
+      "money": 750
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "conserva",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b10_stalker_drunk",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 0,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 20,
+        "faction": "stalker"
+      },
+      "x": -41.089996,
+      "y": 179.3,
+      "locationId": 2,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_jup_b43_stalker_assistant",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 100,
+        "faction": "stalker"
+      },
+      "x": -56.69,
+      "y": 194.57,
+      "locationId": 2,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b215_stalker_guide_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 696,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 65,
+        "faction": "stalker"
+      },
+      "x": -47.599922,
+      "y": 196.5799,
+      "locationId": 2,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_wincheaster1300_trapper",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b220_trapper",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0417\u0432\u0435\u0440\u043E\u0431\u043E\u0439.",
+        "iconX": 123,
+        "iconY": 870,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 70,
+        "faction": "stalker"
+      },
+      "x": -58.102116,
+      "y": 201.61278,
+      "locationId": 2,
+      "money": 100000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "detector_elite",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_a10_stalker_vano",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 123,
+        "iconY": 87,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 45,
+        "faction": "stalker"
+      },
+      "x": -43.62,
+      "y": 202.0339,
+      "locationId": 2,
+      "money": 10000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_svd",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b19_freedom_yar_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 696,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 100,
+        "faction": "freedom"
+      },
+      "x": -45.61,
+      "y": 207.65,
+      "locationId": 2,
+      "money": 3750
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_pkm_zulus",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_usp",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b15_zulus",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 261,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 50,
+        "faction": "stalker"
+      },
+      "x": -7.72,
+      "y": 243.88,
+      "locationId": 2,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_mp5",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b25_freedom_flint",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 522,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 0,
+        "faction": "freedom"
+      },
+      "x": -48.96,
+      "y": 202.45,
+      "locationId": 2,
+      "money": 750
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_abakan",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "pri_a18_skorlupko_in_suit_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 783,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": 148.7,
+      "y": -194.75,
+      "locationId": 4,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_val",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "pri_a18_vano_in_suit_reserve_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 783,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": 157.25764,
+      "y": -189.2546,
+      "locationId": 4,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_svu",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_7.62x54_7h1",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pb",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "pri_a17_military_sergeant_morozov",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 80,
+        "faction": "army"
+      },
+      "x": 161.04,
+      "y": -35.67,
+      "locationId": 4,
+      "money": 0
+    }
+  ],
   "heightInPixels": 1024,
   "widthInPixels": 1024
 }

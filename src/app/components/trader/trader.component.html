@@ -28,7 +28,7 @@
         <div class="info container">
           <div class="sections-select-container" *ngIf="hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies">
             <div class="trader-sections-title">{{'trader-sections-title' | translate}}</div>
-            <table>
+            <table style="width: 100%;">
               <tr>
                 <ng-container *ngIf="hasMultiplySells">
                   <td class="section-td">{{ 'trader-sell' | translate}}</td>
@@ -38,6 +38,9 @@
                 </ng-container>
                 <ng-container *ngIf="hasMultiplySupplies">
                   <td class="section-td">{{ 'trader-supply' | translate}}</td>
+                </ng-container>
+                <ng-container *ngIf="hasDicounts">
+                  <td class="section-td">{{ 'discounts' | translate}}</td>
                 </ng-container>
               </tr>
               <ng-container *ngFor="let index of traderSectionIndexes">
@@ -68,6 +71,16 @@
                       </ng-container>
                     </td>
                     <td *ngIf="!traderSupplySections[index]"></td>
+                  </ng-container>
+
+                  <ng-container *ngIf="hasDicounts">
+                    <td class="section" *ngIf="traderDiscounts[index]" (click)="selectDiscount(traderDiscounts[index])" [ngClass]="{'selected': selectedDiscount && selectedDiscount.conditions == traderDiscounts[index].conditions}">
+                      <ng-container *ngIf="!traderDiscounts[index].conditions">{{ "discount_default" | translate}}</ng-container>
+                      <ng-container *ngFor="let cond of traderDiscounts[index].sectionConditions">
+                        <div>{{ cond | translate}}</div>
+                      </ng-container>
+                    </td>
+                    <td *ngIf="!traderDiscounts[index]"></td>
                   </ng-container>
                 </tr>
               </ng-container>
@@ -113,7 +126,7 @@
                   <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
                   <tr *ngFor="let sell of selectedItem.bestSell">
                     <td class="best-trade-price">
-                      {{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) * relations[1]) * selectedItem.item.price) }}
+                      {{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) / 2) * selectedItem.item.price) }}
                     </td>
                     <td>
                       <div class="best-trade-trader-name">
@@ -134,7 +147,7 @@
                   <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
                   <tr *ngFor="let buy of selectedItem.bestBuy">
                     <td>
-                      {{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) * relations[1]) * selectedItem.item.price) }}
+                      {{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) / 2) * selectedItem.item.price) }}
                     </td>
                     <td>
                       <div class="best-trade-trader-name">
@@ -155,9 +168,26 @@
         <div class="buy container">
           <div class="trader-info">
             <div class="trader-bio">
-              <div class="trader-name">{{ 'actor' | translate}}</div>
+              <div class="trader-name">{{ 'actor_name' | translate}}</div>
+              <div class="profile-data-info">
+                <select #relation (change)="setRelationSelect(relation.value)" *ngIf="relationType == relationTypeEnum.selector">
+                  <option class="language-selector-option" [value]="0">{{ 'enemy' | translate }}</option>
+                  <option class="language-selector-option" [value]="1" selected>{{ 'neutral' | translate }}</option>
+                  <option class="language-selector-option" [value]="2">{{ 'friend' | translate }}</option>
+                </select>
+                <div class="relation-range" *ngIf="relationType == relationTypeEnum.range">
+                  <input type="range" min="0" max="1" step="0.01" list="relations-det" [value]="relation" #ranger (input)="setRelationSelectRange(ranger.value)">
+
+                  <datalist id="relations-det">
+                    <option *ngFor="let relId of [0, 1, 2]" [value]="relations[relId]"></option>
+                  </datalist>
+                  <div class="range-labels">
+                    <div *ngFor="let relId of [0, 1, 2]">{{relationsTitle[relId] | translate}}</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="trader-image actor {{game}}"></div>
+            <div class="stalker-avatar {{game}}" [ngStyle]="{'width': actor.iconWidth + 'px', 'height': actor.iconHeight + 'px', 'background-position': 'left ' + (-actor.iconX) + 'px top ' + (-actor.iconY) + 'px'}"></div>
           </div>
           <div class="buy inventory" *ngIf="!selectedBuySection"></div>
           <div class="buy inventory" *ngIf="selectedBuySection">

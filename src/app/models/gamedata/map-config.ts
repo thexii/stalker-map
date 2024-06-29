@@ -1,3 +1,4 @@
+import { CharacterProfile } from "../character-profile.model";
 import { MarkerConfig } from "../marker-config.model";
 import { RankSetting } from "../rank-settings.model";
 import { TraderSectionsConfig } from "../trader/trader-sections-config.model";
@@ -12,4 +13,11 @@ export class MapConfig {
   public needLootBoxConfig: boolean;
   public lengthFactor: number;
   public traderConfigs: TraderSectionsConfig[];
+  public traderRelationType: RelationType;
+  public actor: CharacterProfile;
+}
+
+export enum RelationType {
+  selector = 1,
+  range = 2
 }

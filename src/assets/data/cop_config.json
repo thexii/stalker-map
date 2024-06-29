@@ -25,6 +25,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "traders",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -51,6 +55,14 @@
     {
       "uniqueName": "anomaly-zone-no-art",
       "isShow": false
+    },
+    {
+      "uniqueName": "mutants",
+      "isShow": false
+    },
+    {
+      "uniqueName": "stalkers",
+      "isShow": true
     }
   ],
   "minZoom": 0,
@@ -60,6 +72,13 @@
   "lengthFactor": 2.926829268292683,
   "globalMapFileName": "global_map.png",
   "needLootBoxConfig": false,
+  "traderRelationType": 2,
+  "actor": {
+    "iconHeight": 87,
+    "iconWidth": 123,
+    "iconX": 246,
+    "iconY": 870
+  },
   "traderConfigs": [
     {
       "trader": "st_zat_b30_owl_stalker_trader_name",
@@ -92,13 +111,68 @@
           "condition": "",
           "enabledSells": [""],
           "enabledBuies": [""]
+        }
+      ],
+      "discount": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": null
         },
         {
-          "condition": "esc_kill_bandits_quest_done",
-          "enabledSells": ["esc_kill_bandits_quest_done"],
-          "enabledBuies": ["esc_kill_bandits_quest_done"]
+          "condition": "information_dealer_functor",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": null
+        },
+        {
+          "condition": "zat_b30_barmen_under_sultan +zat_b7_actor_really_helped_bandits",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": [
+            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
+            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor"]
+        },
+        {
+          "condition": "zat_b7_actor_really_helped_bandits +zat_b30_barmen_under_sultan =information_dealer_functor",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": [
+            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
+            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor"]
+        },
+        {
+          "condition": "zat_b7_actor_really_helped_stalkers +zat_b30_sultan_loose",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": [
+            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
+            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor"]
+        },
+        {
+          "condition": "zat_b7_actor_really_helped_stalkers +zat_b30_sultan_loose =information_dealer_functor",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": [
+            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
+            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor",
+            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor"]
         }
       ]
+    },
+    {
+      "trader": "zat_a2_stalker_barmen_name",
+      "sell": [],
+      "buy": [],
+      "supply": []
     },
     {
       "trader": "jup_a6_stalker_barmen",
@@ -110,7 +184,34 @@
       "trader": "jup_a6_stalker_medik",
       "sell": [],
       "buy": [],
+      "supply": [],
+      "discount": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": null
+        }]
+    },
+    {
+      "trader": "zat_b22_stalker_medic_name",
+      "sell": [],
+      "buy": [],
       "supply": []
+    }
+  ],
+  "rankSetting": [
+    {
+      "rank": 30,
+      "rankName": "experienced"
+    },
+    {
+      "rank": 60,
+      "rankName": "veteran"
+    },
+    {
+      "rank": 90,
+      "rankName": "master"
     }
   ]
 }

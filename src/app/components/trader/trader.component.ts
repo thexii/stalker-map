@@ -7,6 +7,9 @@ import { Item } from '../../models/item.model';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { RankSetting } from '../../models/rank-settings.model';
 import { TraderSectionsConfig } from '../../models/trader/trader-sections-config.model';
+import { TraderDiscounts } from '../../models/trader/trader-discount.model';
+import { RelationType } from '../../models/gamedata/map-config';
+import { CharacterProfile } from '../../models/character-profile.model';
 
 @Component({
     selector: 'app-trader',
@@ -22,20 +25,25 @@ export class TraderComponent {
   @Input() public game: string;
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
+  @Input() public actor: CharacterProfile;
+  @Input() public relationType: RelationType;
   @Input() public traderConfigs: TraderSectionsConfig[];
   @Input() public traderConfig: TraderSectionsConfig;
 
-  public readonly relations: number[] = [1, 0.5, 0];
+  public readonly relations: number[] = [0, 0.5, 1];
   public readonly relationsTitle: string[] = ['enemy', 'neutral', 'friend'];
+  public selectedRelationId: number = 1;
+  public relation: number = this.relations[1];
 
   public traderBuySections: TradeSection<TraderBuySellItemView>[];
   public traderSellSections: TradeSection<TraderBuySellItemView>[];
   public traderSupplySections: TradeSection<TraderSupplyItemView>[];
+  public traderDiscounts: TraderDiscounts[];
 
   public selectedBuySection: TradeSection<TraderBuySellItemView>;
   public selectedSellSection: TradeSection<TraderBuySellItemView>;
   public selectedSupplySection: TradeSection<TraderSupplyItemView>;
-  public selectedRelationId: number = 1;
+  public selectedDiscount: TraderDiscounts;
   public readonly space: string = ' ';
 
   public selectedItem: SelectedItem;
@@ -45,6 +53,9 @@ export class TraderComponent {
   public hasMultiplyBuies: boolean = true;
   public hasMultiplySells: boolean = true;
   public hasMultiplySupplies: boolean = true;
+  public hasDicounts: boolean = false;
+
+  public relationTypeEnum = RelationType;
 
   private static factorialCache: Map<number, number>;
 
@@ -124,6 +135,28 @@ export class TraderComponent {
     }).reverse();
 
     this.hasMultiplySupplies = this.traderSupplySections.length > 1;
+    this.hasDicounts = this.trader.discounts && this.trader.discounts.length > 0;
+
+    if (this.hasDicounts) {
+      this.traderDiscounts = JSON.parse(JSON.stringify(this.trader.discounts));
+
+      for (let d of this.traderDiscounts ) {
+        d.sectionConditions = d.conditions.split(' ');
+        d.sectionConditions = d.sectionConditions.map(x => x.replace('+', '').replace('=', ''));
+      }
+
+      let defaultDiscount = new TraderDiscounts();
+      defaultDiscount.conditions = '';
+      defaultDiscount.sectionConditions = [];
+      defaultDiscount.buy = 1;
+      defaultDiscount.sell = 1;
+
+      this.traderDiscounts.push(defaultDiscount);
+
+      this.selectedDiscount = defaultDiscount;
+
+      this.traderDiscounts.reverse();
+    }
 
     this.selectedBuySection = this.copy(this.traderBuySections.find(x => x.sectionConditions == "") as TradeSection<TraderBuySellItemView>);
     this.selectedSellSection = this.copy(this.traderSellSections.find(x => x.sectionConditions == "") as TradeSection<TraderBuySellItemView>);
@@ -153,6 +186,8 @@ export class TraderComponent {
 
     this.checkSupply(sectionConfig?.enabledSupplies);
 
+    this.checkDiscount(sectionConfig?.enabledDicounts);
+
     this.recalculateSection();
   }
 
@@ -167,6 +202,8 @@ export class TraderComponent {
     this.checkSell(sectionConfig?.enabledSells);
 
     this.checkSupply(sectionConfig?.enabledSupplies);
+
+    this.checkDiscount(sectionConfig?.enabledDicounts);
 
     this.recalculateSection();
   }
@@ -183,6 +220,36 @@ export class TraderComponent {
 
     this.checkBuy(sectionConfig?.enabledBuies);
 
+    this.checkDiscount(sectionConfig?.enabledDicounts);
+
+    this.recalculateSection();
+  }
+
+  public selectDiscount(discount: TraderDiscounts) {
+    if (this.selectedDiscount.conditions == discount.conditions) {
+      return;
+    }
+
+    let sectionConfig = this.traderConfig.discount.find(x => x.condition == discount.conditions);
+    this.selectedDiscount = this.copy(this.traderDiscounts.find(x => x.conditions == discount.conditions) as TraderDiscounts);
+
+    this.checkSell(sectionConfig?.enabledSells);
+
+    this.checkBuy(sectionConfig?.enabledBuies);
+
+    this.checkSupply(sectionConfig?.enabledSupplies);
+
+    this.recalculateSection();
+  }
+
+  public setRelationSelect(relation: string): void {
+    this.selectedRelationId = parseInt(relation);
+    this.relation = this.relations[this.selectedRelationId];
+    this.recalculateSection();
+  }
+
+  public setRelationSelectRange(relation: string): void {
+    this.relation = parseFloat(relation);
     this.recalculateSection();
   }
 
@@ -240,6 +307,24 @@ export class TraderComponent {
     }
   }
 
+  public checkDiscount(enabledDicounts: string[] | undefined): void {
+    if (enabledDicounts) {
+      if (!enabledDicounts.includes(this.selectedDiscount.conditions)) {
+        for (let discount of enabledDicounts) {
+          for (let traderDiscount of this.traderDiscounts) {
+            if (traderDiscount.conditions == discount) {
+              this.selectedDiscount = this.copy(traderDiscount);
+              return;
+            }
+          }
+        }
+      }
+    }
+    else {
+      this.selectedSupplySection = this.copy(this.traderSupplySections.find(x => x.sectionConditions == this.selectedSupplySection.sectionConditions) as TradeSection<TraderSupplyItemView>);
+    }
+  }
+
   public selectItem(item: Item): void {
     if (this.chart != null) {
       this.chart.destroy();
@@ -255,13 +340,14 @@ export class TraderComponent {
 
     for (let trader of this.allTraders) {
       let traderSell: BestBuySellModel[] = [];
+      let traderBuy: BestBuySellModel[] = [];
       let traderSectionConfig = this.traderConfigs.find(x => x.trader == trader.profile.name)
 
       for (let section of trader.sell) {
         let sellItem = section.items.find(x => x.uniqueName == item.uniqueName);
         if (sellItem) {
           for (let supply of trader.supplies) {
-            if (traderSectionConfig?.supply.some(x => x.condition == supply.sectionConditions)) {
+            if (traderSectionConfig?.supply == null || traderSectionConfig?.supply.length == 0 || traderSectionConfig?.supply.some(x => x.condition == supply.sectionConditions)) {
                 let supplyItem = supply.items.find(x => x.uniqueName == item.uniqueName);
                 if (supplyItem) {
                   let bestAssortement: BestBuySellModel = new BestBuySellModel();
@@ -277,9 +363,9 @@ export class TraderComponent {
         }
       }
 
-      if (traderSell.length == 0) {
+      /*if (traderSell.length == 0) {
         continue;
-      }
+      }*/
 
       for (let section of trader.buy) {
         let buyItem = section.items.find(x => x.uniqueName == item.uniqueName);
@@ -290,7 +376,7 @@ export class TraderComponent {
           bestHeroSell.conditionSell = section.sectionConditions;
           bestHeroSell.traderName = trader.profile.name;
 
-          bestBuy.push(bestHeroSell);
+          traderBuy.push(bestHeroSell);
         }
       }
 
@@ -304,6 +390,7 @@ export class TraderComponent {
               bestAssortement.item = sameSellCoeffSupply[0].item;
               bestAssortement.conditionSell = sell.sectionConditions;
               bestAssortement.traderName = trader.profile.name;
+              bestAssortement.conditionSupply = [];
 
               if (sameSellCoeffSupply.length != trader.supplies.length) {
                 bestAssortement.conditionSupply.push(...sameSellCoeffSupply.map(x => x.conditionSupply.map(x => x.trim())).flat(1));
@@ -335,6 +422,51 @@ export class TraderComponent {
           }
 
           bestSell.push(...traderSell);
+        }
+      }
+
+      let uniqueBuyCoefs = [... new Set(traderBuy.map(x => (x.item.minCoeficient + x.item.maxCoeficient) / 2))];
+
+      if (uniqueBuyCoefs.length == trader.buy.length) {
+        for (let buy of trader.buy) {
+            let sameBuyCoeffSupply = traderBuy.filter(x => x.conditionSell == buy.sectionConditions);
+
+            let bestAssortement: BestBuySellModel = new BestBuySellModel();
+            bestAssortement.item = sameBuyCoeffSupply[0].item;
+            bestAssortement.conditionSell = buy.sectionConditions;
+            bestAssortement.traderName = trader.profile.name;
+            /*bestAssortement.conditionSupply = [];
+
+            if (sameBuyCoeffSupply.length != trader.supplies.length) {
+              bestAssortement.conditionSupply.push(...sameBuyCoeffSupply.map(x => x.conditionSupply.map(x => x.trim())).flat(1));
+            }*/
+
+            bestBuy.push(bestAssortement);
+        }
+      }
+      else {
+        if (uniqueBuyCoefs.length == 1) {
+          if (trader.buy.length == traderBuy.length) {
+            traderBuy[0].conditionSell = '';
+            bestBuy.push(traderBuy[0]);
+          }
+          else {
+            traderBuy[0].conditionSell = '';
+            traderBuy[0].conditionSupply = [''];
+            bestBuy.push(traderBuy[0]);
+          }
+        }
+        else{
+          /*if (trader == this.trader) {
+            if (uniqueBuyCoefs.length == 0) {
+              newSelectedItem.traderHasNoSellItem = true;
+            }
+            else if (newSelectedItem.sell == null) {
+              newSelectedItem.traderHasNoSellItemInSection = true;
+            }
+          }
+
+          bestSell.push(...traderSell);*/
         }
       }
     }
@@ -400,15 +532,23 @@ export class TraderComponent {
       return -(a.item.width - b.item.width || a.item.area - b.item.area);
     });
 
+    let sellCoeff = 1;
+    let buyCoeff = 1;
+
+    if (this.selectedDiscount) {
+      sellCoeff = this.selectedDiscount.sell;
+      buyCoeff = this.selectedDiscount.buy;
+    }
+
     for (let item of this.selectedBuySection.items) {
-      item.price = item.item.price as number * (item.minCoeficient + item.maxCoeficient) * this.relations[this.selectedRelationId];
+      item.price = item.item.price as number * (item.maxCoeficient + (item.minCoeficient - item.maxCoeficient) * this.relation ) * buyCoeff;
     }
 
     this.selectedSellSection.subSections = [new TradeSection<TraderBuySellItemView>()];
     this.selectedSellSection.subSections[0].items = [];
 
     for (let item of this.selectedSellSection.items) {
-      item.price = Math.floor(item.item.price * (item.minCoeficient + (item.maxCoeficient - item.minCoeficient)* this.relations[this.selectedRelationId]));
+      item.price = Math.floor(item.item.price * ((item.minCoeficient + (item.maxCoeficient - item.minCoeficient) * (1 - this.relation) ) * sellCoeff));
 
       if (!this.selectedSupplySection.items.some(x => x.item.uniqueName == item.item.uniqueName)) {
         this.selectedSellSection.subSections[0].items.push(item);

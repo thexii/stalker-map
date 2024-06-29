@@ -25,6 +25,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "traders",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -57,6 +61,13 @@
   "maxZoom": 3,
   "startZoom": 1,
   "globalMapFileName": "global_map.png",
+  "traderRelationType": 1,
+  "actor": {
+    "iconHeight": 108,
+    "iconWidth": 165,
+    "iconX": 825,
+    "iconY": 864
+  },
   "traderConfigs": [
     {
       "trader": "escape_trader_name",

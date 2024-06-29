@@ -1,10 +1,11 @@
-import { TraderSectionBuyConfig, TraderSectionSellConfig, TraderSectionSupplyConfig } from "./trader-section-configs";
+import { TraderSectionBuyConfig, TraderSectionDicountConfig, TraderSectionSellConfig, TraderSectionSupplyConfig } from "./trader-section-configs";
 
 export class TraderSectionsConfig {
   public trader: string;
   public sell: TraderSectionSellConfig[];
   public buy: TraderSectionBuyConfig[];
   public supply: TraderSectionSupplyConfig[];
+  public discount: TraderSectionDicountConfig[];
 /*"tarder": "escape_trader_name",
       "sell": [
         {

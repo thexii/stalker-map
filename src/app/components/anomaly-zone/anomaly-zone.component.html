@@ -1,5 +1,6 @@
 <div>
-  <div class="popup header">{{ "anomaliesCluster" | translate }}</div>
+  <div class="popup header" *ngIf="anomalZone.name">{{ anomalZone.name | translate }}</div>
+  <div class="popup header" *ngIf="!anomalZone.name">{{ "anomaly-zone" | translate }}</div>
 </div>
 
 <div

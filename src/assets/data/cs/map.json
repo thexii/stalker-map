@@ -32231,7 +32231,7 @@
     {
       "x": 38.48508,
       "y": -11.913786,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -32262,7 +32262,7 @@
     {
       "x": -7.754626,
       "y": -309.30716,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -32288,7 +32288,7 @@
     {
       "x": 148.2472,
       "y": 108.98924,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -32314,7 +32314,7 @@
     {
       "x": -218.46245,
       "y": 69.403015,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 1,
       "anomaliySpawnSections": [
         {
@@ -32663,7 +32663,7 @@
     {
       "x": -47.64329,
       "y": 69.89325,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 3,
       "anomaliySpawnSections": [
         {
@@ -32689,7 +32689,7 @@
     {
       "x": -2.215638,
       "y": -81.055305,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 3,
       "anomaliySpawnSections": [
         {
@@ -32715,7 +32715,7 @@
     {
       "x": 121.06451,
       "y": -49.59933,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 3,
       "anomaliySpawnSections": [
         {
@@ -32741,7 +32741,7 @@
     {
       "x": 174.80183,
       "y": -308.68195,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 3,
       "anomaliySpawnSections": [
         {
@@ -32821,7 +32821,7 @@
     {
       "x": -247.07132,
       "y": -16.171492,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -32847,7 +32847,7 @@
     {
       "x": 336.03757,
       "y": 208.61656,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -32873,7 +32873,7 @@
     {
       "x": 121.64846,
       "y": 516.42786,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 4,
       "anomaliySpawnSections": [
         {
@@ -33129,7 +33129,7 @@
     {
       "x": -95.38154,
       "y": -200.41449,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33155,7 +33155,7 @@
     {
       "x": -50.45228,
       "y": -224.66786,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33181,7 +33181,7 @@
     {
       "x": -248.83195,
       "y": 99.463066,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33207,7 +33207,7 @@
     {
       "x": 109.85439,
       "y": -267.57242,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33228,7 +33228,7 @@
     {
       "x": 120.88255,
       "y": -145.28094,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33254,7 +33254,7 @@
     {
       "x": -153.98682,
       "y": -225.42722,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 5,
       "anomaliySpawnSections": [
         {
@@ -33624,7 +33624,7 @@
     {
       "x": -300.76828,
       "y": -103.395325,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 7,
       "anomaliySpawnSections": [
         {
@@ -33697,7 +33697,7 @@
     {
       "x": 524.78424,
       "y": 299.32092,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 7,
       "anomaliySpawnSections": [
         {
@@ -33723,7 +33723,7 @@
     {
       "x": 472.56967,
       "y": 0.381856,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 7,
       "anomaliySpawnSections": [
         {
@@ -33749,7 +33749,7 @@
     {
       "x": -183.49321,
       "y": 80.43622,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 7,
       "anomaliySpawnSections": [
         {
@@ -33775,7 +33775,7 @@
     {
       "x": -176.76657,
       "y": 250.10587,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 7,
       "anomaliySpawnSections": [
         {
@@ -33941,7 +33941,7 @@
     {
       "x": 101.61346,
       "y": 121.16832,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 8,
       "anomaliySpawnSections": [
         {
@@ -33967,7 +33967,7 @@
     {
       "x": -203.60486,
       "y": 440.36646,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 8,
       "anomaliySpawnSections": [
         {
@@ -33993,7 +33993,7 @@
     {
       "x": -8.364703,
       "y": 448.16986,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 8,
       "anomaliySpawnSections": [
         {
@@ -34019,7 +34019,7 @@
     {
       "x": -167.75946,
       "y": 5.570226,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 8,
       "anomaliySpawnSections": [
         {
@@ -34045,7 +34045,7 @@
     {
       "x": -300.99335,
       "y": 34.863792,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 8,
       "anomaliySpawnSections": [
         {
@@ -34293,7 +34293,7 @@
     {
       "x": 14.845779,
       "y": -217.40044,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34319,7 +34319,7 @@
     {
       "x": 167.97644,
       "y": 73.31379,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34345,7 +34345,7 @@
     {
       "x": -113.89469,
       "y": -57.845993,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34376,7 +34376,7 @@
     {
       "x": 134.33238,
       "y": -280.73285,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34407,7 +34407,7 @@
     {
       "x": -80.96516,
       "y": -26.4393,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34438,7 +34438,7 @@
     {
       "x": 220.67517,
       "y": -105.67104,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 9,
       "anomaliySpawnSections": [
         {
@@ -34801,7 +34801,7 @@
     {
       "x": 89.7346,
       "y": -62.949955,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 11,
       "anomaliySpawnSections": [
         {
@@ -34827,7 +34827,7 @@
     {
       "x": 88.11299,
       "y": -4.988768,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 11,
       "anomaliySpawnSections": [
         {
@@ -34853,7 +34853,7 @@
     {
       "x": -49.21624,
       "y": -244.98808,
-      "name": "anomaliesConcentration",
+      "name": "st_name_anomal_zone",
       "locationId": 11,
       "anomaliySpawnSections": [
         {
@@ -35064,6 +35064,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "agr_duty_base_commander_name",
@@ -35084,6 +35085,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "agr_weaponmaster_name",
@@ -35104,6 +35106,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "agr_stalker_pda_name",
@@ -35124,6 +35127,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "agr_pda_for_secret_trader",
@@ -35150,6 +35154,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_beretta",
@@ -35191,6 +35196,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_sig550",
@@ -35237,6 +35243,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_svu",
@@ -35283,6 +35290,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "esc_device_pda_driver",
@@ -35309,6 +35317,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "esc_flashman_name",
@@ -35329,6 +35338,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "esc_flashman_name",
@@ -35349,6 +35359,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -35380,6 +35391,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "esc_zak_stalkerbase_name",
@@ -35400,6 +35412,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "esc_wolf_brother_name",
@@ -35420,6 +35433,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pkm",
@@ -35451,6 +35465,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pkm",
@@ -35482,6 +35497,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_ak74u",

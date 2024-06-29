@@ -4,7 +4,7 @@
   "build": null,
   "marks": [
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -103.02321,
       "y": -272.9977,
@@ -12,7 +12,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -174.48296,
       "y": -314.16,
@@ -20,7 +20,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -183.24525,
       "y": -322.70746,
@@ -28,7 +28,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -202.65608,
       "y": -319.86658,
@@ -36,7 +36,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -198.8988,
       "y": -338.87302,
@@ -44,7 +44,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -243.84172,
       "y": -320.70602,
@@ -52,7 +52,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -241.92941,
       "y": -333.1244,
@@ -60,7 +60,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -232.83932,
       "y": -319.34595,
@@ -68,7 +68,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -233.68605,
       "y": -332.15112,
@@ -76,7 +76,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -215.99925,
       "y": -338.76758,
@@ -84,7 +84,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -222.53374,
       "y": -338.55243,
@@ -92,7 +92,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -222.58783,
       "y": -332.0103,
@@ -100,7 +100,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -208.6304,
       "y": -329.66995,
@@ -108,7 +108,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -218.20828,
       "y": -319.8132,
@@ -116,7 +116,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -206.02173,
       "y": -340.96057,
@@ -124,7 +124,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -185.4342,
       "y": -336.4731,
@@ -132,7 +132,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -195.77988,
       "y": -329.93158,
@@ -140,7 +140,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -175.82233,
       "y": -340.5613,
@@ -148,7 +148,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -176.0309,
       "y": -330.7772,
@@ -156,7 +156,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -70.09487,
       "y": -331.50272,
@@ -164,7 +164,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -123.441635,
       "y": -329.0666,
@@ -172,7 +172,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -105.95721,
       "y": -338.3553,
@@ -180,7 +180,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -123.079926,
       "y": -339.61725,
@@ -188,7 +188,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -87.42557,
       "y": -336.82886,
@@ -196,7 +196,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -102.29021,
       "y": -326.46335,
@@ -204,7 +204,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -80.39084,
       "y": -328.13834,
@@ -212,7 +212,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -77.943306,
       "y": -340.1323,
@@ -220,7 +220,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -84.33945,
       "y": -318.5393,
@@ -228,7 +228,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -112.08772,
       "y": -328.3528,
@@ -236,7 +236,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -118.630264,
       "y": -320.162,
@@ -244,7 +244,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -140.03032,
       "y": -317.1832,
@@ -252,7 +252,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -136.45473,
       "y": -331.6364,
@@ -260,7 +260,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -61.200203,
       "y": -318.40283,
@@ -268,7 +268,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -59.22498,
       "y": -335.7369,
@@ -276,7 +276,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -208.98045,
       "y": -312.03687,
@@ -284,7 +284,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -225.60684,
       "y": -306.81714,
@@ -292,7 +292,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -197.66467,
       "y": -310.04614,
@@ -300,7 +300,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -177.09183,
       "y": -314.4604,
@@ -308,7 +308,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -179.85184,
       "y": -316.41208,
@@ -316,7 +316,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -182.3386,
       "y": -318.90292,
@@ -324,7 +324,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -171.50273,
       "y": -314.26474,
@@ -332,7 +332,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -147.41678,
       "y": -314.58838,
@@ -340,7 +340,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -145.96246,
       "y": -326.48157,
@@ -348,7 +348,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -93.45473,
       "y": -341.09515,
@@ -356,7 +356,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -104.88023,
       "y": -317.66934,
@@ -364,7 +364,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -71.98581,
       "y": -315.9177,
@@ -372,7 +372,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -55.018887,
       "y": -326.9218,
@@ -380,7 +380,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -53.76248,
       "y": -334.71024,
@@ -388,7 +388,7 @@
       "locationId": 1
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": -58.953087,
       "y": -343.92908,
@@ -396,7 +396,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 109.960915,
       "y": 459.88983,
@@ -404,7 +404,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 253.41032,
       "y": 222.0077,
@@ -412,7 +412,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 261.5067,
       "y": 225.82861,
@@ -420,7 +420,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 268.96906,
       "y": 228.81671,
@@ -428,7 +428,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 277.48965,
       "y": 232.15727,
@@ -436,7 +436,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 286.41205,
       "y": 235.22748,
@@ -444,7 +444,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 294.80188,
       "y": 238.60031,
@@ -452,7 +452,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 303.6407,
       "y": 242.04544,
@@ -460,7 +460,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 312.13977,
       "y": 245.66014,
@@ -468,7 +468,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 321.48242,
       "y": 249.92378,
@@ -476,7 +476,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 330.23932,
       "y": 254.03833,
@@ -484,7 +484,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 339.04257,
       "y": 258.63495,
@@ -492,7 +492,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 347.68,
       "y": 263.486,
@@ -500,7 +500,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 355.6761,
       "y": 268.16812,
@@ -508,7 +508,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 362.97662,
       "y": 272.54755,
@@ -516,7 +516,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 370.51324,
       "y": 276.5079,
@@ -524,7 +524,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 377.24954,
       "y": 282.18073,
@@ -532,7 +532,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 386.38635,
       "y": 285.60455,
@@ -540,7 +540,7 @@
       "locationId": 1
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -52.496624,
       "y": -108.73906,
@@ -548,7 +548,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -61.15996,
       "y": 109.63934,
@@ -556,7 +556,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 97.06421,
       "y": 39.26652,
@@ -564,7 +564,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -53.209995,
       "y": -110.20838,
@@ -572,7 +572,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -61.873333,
       "y": 108.17004,
@@ -580,7 +580,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 97.63997,
       "y": 35.819542,
@@ -588,7 +588,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -116.20137,
       "y": -119.83051,
@@ -596,7 +596,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 52.66091,
       "y": -11.05957,
@@ -604,7 +604,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -155.53964,
       "y": -114.03433,
@@ -612,7 +612,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -184.11136,
       "y": -119.78134,
@@ -620,7 +620,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -203.77496,
       "y": -186.26915,
@@ -628,7 +628,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -226.76782,
       "y": -109.31145,
@@ -636,7 +636,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -264.06216,
       "y": -118.55223,
@@ -644,7 +644,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -267.52707,
       "y": -149.20802,
@@ -652,7 +652,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -173.12628,
       "y": -205.5221,
@@ -660,7 +660,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -173.55936,
       "y": -255.06335,
@@ -668,7 +668,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -132.58365,
       "y": -283.7937,
@@ -676,7 +676,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 107.354034,
       "y": -263.55096,
@@ -684,7 +684,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 98.33516,
       "y": -223.46571,
@@ -692,7 +692,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 135.32487,
       "y": -197.40076,
@@ -700,7 +700,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 291.64343,
       "y": -121.23683,
@@ -708,7 +708,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 292.08945,
       "y": -156.34824,
@@ -716,7 +716,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 266.55588,
       "y": -177.19496,
@@ -724,7 +724,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 244.76038,
       "y": -82.6864,
@@ -732,7 +732,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 221.43143,
       "y": -101.02038,
@@ -740,7 +740,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 234.30435,
       "y": -220.39131,
@@ -748,7 +748,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 133.62646,
       "y": -72.55084,
@@ -756,7 +756,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 175.77295,
       "y": -74.62353,
@@ -764,7 +764,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 261.50378,
       "y": -24.476667,
@@ -772,7 +772,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 255.05968,
       "y": 16.724049,
@@ -780,7 +780,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 211.4533,
       "y": -58.635147,
@@ -788,7 +788,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -255.11328,
       "y": -37.74394,
@@ -796,7 +796,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -289.5653,
       "y": 12.218985,
@@ -804,7 +804,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -159.42406,
       "y": -89.36259,
@@ -812,7 +812,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -215.07306,
       "y": 33.421467,
@@ -820,7 +820,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -209.4271,
       "y": 224.38074,
@@ -828,7 +828,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -121.76414,
       "y": 226.15689,
@@ -836,7 +836,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 123.62568,
       "y": 274.63144,
@@ -844,7 +844,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 243.57661,
       "y": 165.93272,
@@ -852,7 +852,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 242.67886,
       "y": -45.817028,
@@ -860,7 +860,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -220.86588,
       "y": 4.889983,
@@ -868,7 +868,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -276.5152,
       "y": 0.36599016,
@@ -876,7 +876,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -232.75479,
       "y": 5.637742,
@@ -884,7 +884,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -241.66827,
       "y": 10.460147,
@@ -892,7 +892,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -257.1051,
       "y": 14.275644,
@@ -900,7 +900,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -269.09903,
       "y": 15.746053,
@@ -908,7 +908,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -221.1226,
       "y": -60.804955,
@@ -916,7 +916,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -184.08322,
       "y": -85.342476,
@@ -924,7 +924,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -229.75418,
       "y": 61.90581,
@@ -932,7 +932,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -235.23123,
       "y": 122.2665,
@@ -940,7 +940,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -198.50003,
       "y": 184.56021,
@@ -948,7 +948,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -247.6946,
       "y": 179.24472,
@@ -956,7 +956,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 212.5654,
       "y": 181.78865,
@@ -964,7 +964,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -47.856113,
       "y": -110.100945,
@@ -972,7 +972,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -56.51945,
       "y": 108.27747,
@@ -980,7 +980,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 102.6352,
       "y": 35.03538,
@@ -988,7 +988,7 @@
       "locationId": 2
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -180.42912,
       "y": 53.319946,
@@ -996,7 +996,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -180.66968,
       "y": 78.5503,
@@ -1004,7 +1004,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -179.68768,
       "y": 98.76241,
@@ -1012,7 +1012,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -194.55228,
       "y": 116.548065,
@@ -1020,7 +1020,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -100.40769,
       "y": 87.857994,
@@ -1028,7 +1028,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 38.884647,
       "y": 207.7367,
@@ -1036,7 +1036,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 192.70619,
       "y": -240.02626,
@@ -1044,7 +1044,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 201.53786,
       "y": -271.78406,
@@ -1052,7 +1052,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 228.10501,
       "y": -219.58945,
@@ -1060,7 +1060,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 260.28964,
       "y": -271.74713,
@@ -1068,7 +1068,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 266.4422,
       "y": -231.40303,
@@ -1076,7 +1076,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 190.31317,
       "y": -187.64565,
@@ -1084,7 +1084,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 181.96979,
       "y": -301.7874,
@@ -1092,7 +1092,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 248.28772,
       "y": -167.90749,
@@ -1100,7 +1100,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 279.84467,
       "y": -189.45627,
@@ -1108,7 +1108,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 214.14204,
       "y": -140.05833,
@@ -1116,7 +1116,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 230.5172,
       "y": -321.25873,
@@ -1124,7 +1124,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -164.14679,
       "y": 35.6363,
@@ -1132,7 +1132,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -191.06061,
       "y": 25.873775,
@@ -1140,7 +1140,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -168.67683,
       "y": 16.18522,
@@ -1148,7 +1148,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -199.87616,
       "y": 50.791824,
@@ -1156,7 +1156,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -162.84398,
       "y": 66.908966,
@@ -1164,7 +1164,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -177.98724,
       "y": 115.67458,
@@ -1172,7 +1172,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -200.84982,
       "y": 127.676186,
@@ -1180,7 +1180,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -211.91348,
       "y": 107.79343,
@@ -1188,7 +1188,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -202.5971,
       "y": 70.44097,
@@ -1196,7 +1196,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 126.79401,
       "y": 141.58511,
@@ -1204,7 +1204,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 15.925804,
       "y": -0.34812808,
@@ -1212,7 +1212,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -111.77676,
       "y": 105.0886,
@@ -1220,7 +1220,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -115.10758,
       "y": -28.97701,
@@ -1228,7 +1228,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -21.749136,
       "y": -83.106895,
@@ -1236,7 +1236,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 82.689125,
       "y": -224.19034,
@@ -1244,7 +1244,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -186.9229,
       "y": -309.8449,
@@ -1252,7 +1252,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -85.674194,
       "y": -129.10286,
@@ -1260,7 +1260,7 @@
       "locationId": 3
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -74.183365,
       "y": -130.48439,
@@ -1268,7 +1268,7 @@
       "locationId": 4
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 34.813076,
       "y": -31.592733,
@@ -1276,7 +1276,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 15.849299,
       "y": -330.89862,
@@ -1284,7 +1284,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -58.288857,
       "y": -131.03201,
@@ -1292,7 +1292,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 41.330414,
       "y": -365.6859,
@@ -1300,7 +1300,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -9.536835,
       "y": -284.313,
@@ -1308,7 +1308,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 59.21664,
       "y": -325.43613,
@@ -1316,7 +1316,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -27.532932,
       "y": -74.04656,
@@ -1324,7 +1324,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 110.0959,
       "y": 20.835272,
@@ -1332,7 +1332,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 168.86383,
       "y": -16.26386,
@@ -1340,7 +1340,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -40.733364,
       "y": 1.4388164,
@@ -1348,7 +1348,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 10.879823,
       "y": -141.9304,
@@ -1356,7 +1356,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -152.44705,
       "y": -231.4993,
@@ -1364,7 +1364,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -95.25001,
       "y": -143.54507,
@@ -1372,7 +1372,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -160.31703,
       "y": -149.79483,
@@ -1380,7 +1380,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -76.75701,
       "y": -34.31744,
@@ -1388,7 +1388,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -83.32688,
       "y": 5.2014694,
@@ -1396,7 +1396,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 132.74994,
       "y": -179.94814,
@@ -1404,7 +1404,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 161.17975,
       "y": -434.27185,
@@ -1412,7 +1412,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 155.40793,
       "y": -409.23276,
@@ -1420,7 +1420,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 147.16678,
       "y": -384.53424,
@@ -1428,7 +1428,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 139.42531,
       "y": -360.79507,
@@ -1436,7 +1436,7 @@
       "locationId": 5
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 10.862574,
       "y": -24.504536,
@@ -1444,7 +1444,7 @@
       "locationId": 6
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -6.424366,
       "y": 14.678125,
@@ -1452,7 +1452,7 @@
       "locationId": 6
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -172.52809,
       "y": 92.40984,
@@ -1460,7 +1460,7 @@
       "locationId": 8
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -163.39513,
       "y": 107.31612,
@@ -1468,7 +1468,7 @@
       "locationId": 8
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -212.04504,
       "y": 100.89758,
@@ -1476,7 +1476,7 @@
       "locationId": 8
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -273.65338,
       "y": 203.7209,
@@ -1484,7 +1484,7 @@
       "locationId": 8
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 16.910358,
       "y": 96.292625,
@@ -1492,7 +1492,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 22.357264,
       "y": 88.88312,
@@ -1500,7 +1500,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 27.084333,
       "y": 98.44424,
@@ -1508,7 +1508,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 40.382732,
       "y": 93.41389,
@@ -1516,7 +1516,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 50.850246,
       "y": 89.93488,
@@ -1524,7 +1524,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 16.149376,
       "y": 88.17537,
@@ -1532,7 +1532,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 17.125822,
       "y": 103.41637,
@@ -1540,7 +1540,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 18.28143,
       "y": 109.54998,
@@ -1548,7 +1548,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 27.56363,
       "y": 107.64881,
@@ -1556,7 +1556,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 39.08067,
       "y": 101.98337,
@@ -1564,7 +1564,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 54.470238,
       "y": 97.48202,
@@ -1572,7 +1572,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 43.432426,
       "y": 107.46122,
@@ -1580,7 +1580,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 34.383224,
       "y": 96.028984,
@@ -1588,7 +1588,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 71.94365,
       "y": 98.80029,
@@ -1596,7 +1596,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 67.223274,
       "y": 106.015045,
@@ -1604,7 +1604,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 59.082756,
       "y": 108.63828,
@@ -1612,7 +1612,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 53.36944,
       "y": 104.51685,
@@ -1620,7 +1620,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 53.41807,
       "y": 116.3864,
@@ -1628,7 +1628,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 46.676258,
       "y": 116.624,
@@ -1636,7 +1636,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 51.58072,
       "y": 123.98767,
@@ -1644,7 +1644,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 35.151234,
       "y": 107.97613,
@@ -1652,7 +1652,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 46.824936,
       "y": 145.29962,
@@ -1660,7 +1660,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 43.700733,
       "y": 128.74501,
@@ -1668,7 +1668,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 44.582924,
       "y": 138.20233,
@@ -1676,7 +1676,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 34.703354,
       "y": 120.462814,
@@ -1684,7 +1684,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 39.392624,
       "y": 133.70384,
@@ -1692,7 +1692,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 62.961266,
       "y": 179.14505,
@@ -1700,7 +1700,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 71.39188,
       "y": 184.56299,
@@ -1708,7 +1708,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 80.12403,
       "y": 187.25533,
@@ -1716,7 +1716,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 74.96035,
       "y": 177.39148,
@@ -1724,7 +1724,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 39.275585,
       "y": 165.90324,
@@ -1732,7 +1732,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 49.216347,
       "y": 185.22388,
@@ -1740,7 +1740,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 59.8373,
       "y": 194.30441,
@@ -1748,7 +1748,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 66.75503,
       "y": 198.37245,
@@ -1756,7 +1756,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 72.45554,
       "y": 202.84906,
@@ -1764,7 +1764,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 79.08392,
       "y": 200.64346,
@@ -1772,7 +1772,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 85.23301,
       "y": 201.43642,
@@ -1780,7 +1780,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 52.05347,
       "y": 132.19818,
@@ -1788,7 +1788,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 54.622868,
       "y": 138.94473,
@@ -1796,7 +1796,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 58.053032,
       "y": 145.3018,
@@ -1804,7 +1804,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 62.07494,
       "y": 150.401,
@@ -1812,7 +1812,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 63.256275,
       "y": 156.94632,
@@ -1820,7 +1820,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 29.832363,
       "y": 115.40468,
@@ -1828,7 +1828,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 53.298325,
       "y": 148.32481,
@@ -1836,7 +1836,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 35.448143,
       "y": 128.0924,
@@ -1844,7 +1844,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 66.158966,
       "y": 163.05394,
@@ -1852,7 +1852,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 71.4129,
       "y": 166.73392,
@@ -1860,7 +1860,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 76.712616,
       "y": 170.06734,
@@ -1868,7 +1868,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 87.44263,
       "y": 194.5923,
@@ -1876,7 +1876,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 80.22497,
       "y": 194.30925,
@@ -1884,7 +1884,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 69.28845,
       "y": 192.66287,
@@ -1892,7 +1892,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 62.327526,
       "y": 187.7402,
@@ -1900,7 +1900,7 @@
       "locationId": 9
     },
     {
-      "name": "mines",
+      "name": null,
       "description": null,
       "x": 76.795525,
       "y": 208.18303,
@@ -1908,7 +1908,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -284.92554,
       "y": -21.447891,
@@ -1916,7 +1916,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -177.0972,
       "y": 3.2343764,
@@ -1924,7 +1924,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -307.40408,
       "y": 135.19266,
@@ -1932,7 +1932,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -228.04102,
       "y": 140.39708,
@@ -1940,7 +1940,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 92.12828,
       "y": 121.10579,
@@ -1948,7 +1948,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 115.72528,
       "y": 210.72119,
@@ -1956,7 +1956,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 129.8112,
       "y": 158.446,
@@ -1964,7 +1964,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -304.18085,
       "y": 207.85414,
@@ -1972,7 +1972,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -294.4129,
       "y": 263.54333,
@@ -1980,7 +1980,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -331.05188,
       "y": 219.87233,
@@ -1988,7 +1988,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -332.1517,
       "y": 214.07234,
@@ -1996,7 +1996,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -337.05176,
       "y": 219.67235,
@@ -2004,7 +2004,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -244.63707,
       "y": 432.61975,
@@ -2012,7 +2012,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -206.21529,
       "y": 453.46286,
@@ -2020,7 +2020,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -32.348694,
       "y": 365.86578,
@@ -2028,7 +2028,7 @@
       "locationId": 9
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 13.868245,
       "y": -200.79698,
@@ -2036,7 +2036,7 @@
       "locationId": 10
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 594.8719,
       "y": -296.00674,
@@ -2044,7 +2044,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 600.40924,
       "y": -377.09253,
@@ -2052,7 +2052,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 567.7394,
       "y": -379.78482,
@@ -2060,7 +2060,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 601.4702,
       "y": -343.1097,
@@ -2068,7 +2068,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 529.27747,
       "y": -273.59924,
@@ -2076,7 +2076,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 599.5176,
       "y": -326.2854,
@@ -2084,7 +2084,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 493.72205,
       "y": -184.129,
@@ -2092,7 +2092,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 501.9892,
       "y": -155.68904,
@@ -2100,7 +2100,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 500.69992,
       "y": -228.0368,
@@ -2108,7 +2108,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 467.497,
       "y": -108.09617,
@@ -2116,7 +2116,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 532.1048,
       "y": -78.33914,
@@ -2124,7 +2124,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 435.3779,
       "y": -57.12989,
@@ -2132,7 +2132,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 408.46024,
       "y": -137.99777,
@@ -2140,7 +2140,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 429.64148,
       "y": -181.8151,
@@ -2148,7 +2148,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 355.90558,
       "y": -189.31631,
@@ -2156,7 +2156,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 288.1931,
       "y": -228.18857,
@@ -2164,7 +2164,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 293.43906,
       "y": -199.72667,
@@ -2172,7 +2172,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 347.1377,
       "y": -282.466,
@@ -2180,7 +2180,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 624.6259,
       "y": -37.92318,
@@ -2188,7 +2188,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 626.5111,
       "y": -149.55867,
@@ -2196,7 +2196,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 219.6075,
       "y": 92.60587,
@@ -2204,7 +2204,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 95.55266,
       "y": 79.50347,
@@ -2212,7 +2212,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -11.894988,
       "y": -15.899435,
@@ -2220,7 +2220,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 41.36869,
       "y": -79.478096,
@@ -2228,7 +2228,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 30.690056,
       "y": 48.137623,
@@ -2236,7 +2236,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 70.722046,
       "y": 50.045746,
@@ -2244,7 +2244,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 71.99501,
       "y": 52.019245,
@@ -2252,7 +2252,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 66.74784,
       "y": 68.289444,
@@ -2260,7 +2260,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 72.594604,
       "y": 68.661964,
@@ -2268,7 +2268,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 66.66778,
       "y": 45.13101,
@@ -2276,7 +2276,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 93.5287,
       "y": 94.37329,
@@ -2284,7 +2284,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 120.53366,
       "y": 44.50859,
@@ -2292,7 +2292,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 109.29719,
       "y": 41.544792,
@@ -2300,7 +2300,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 334.56998,
       "y": -93.7573,
@@ -2308,7 +2308,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 321.7882,
       "y": -75.783165,
@@ -2316,7 +2316,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 299.1894,
       "y": -84.641266,
@@ -2324,7 +2324,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 288.89124,
       "y": -71.2842,
@@ -2332,7 +2332,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 552.33,
       "y": -216.96373,
@@ -2340,7 +2340,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 564.73975,
       "y": -207.04344,
@@ -2348,7 +2348,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 622.9535,
       "y": -76.94481,
@@ -2356,7 +2356,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 109.6555,
       "y": -81.13323,
@@ -2364,7 +2364,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 98.52302,
       "y": -15.613809,
@@ -2372,7 +2372,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -33.861073,
       "y": -82.51325,
@@ -2380,7 +2380,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 96.70976,
       "y": -9.277013,
@@ -2388,7 +2388,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 333.79852,
       "y": 7.921843,
@@ -2396,7 +2396,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 333.32388,
       "y": 12.460661,
@@ -2404,7 +2404,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 534.0348,
       "y": -254.21214,
@@ -2412,7 +2412,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 609.12244,
       "y": 3.125002,
@@ -2420,7 +2420,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 590.9424,
       "y": 0.22430182,
@@ -2428,7 +2428,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 369.32275,
       "y": 2.2339725,
@@ -2436,7 +2436,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 381.41718,
       "y": 17.671646,
@@ -2444,7 +2444,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 369.14688,
       "y": 31.527756,
@@ -2452,7 +2452,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 404.30756,
       "y": 18.932228,
@@ -2460,7 +2460,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 381.39795,
       "y": 117.68606,
@@ -2468,7 +2468,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 421.22107,
       "y": 3.4865637,
@@ -2476,7 +2476,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 426.71387,
       "y": 16.797188,
@@ -2484,7 +2484,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 476.7928,
       "y": 1.1691113,
@@ -2492,7 +2492,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 501.4069,
       "y": 1.0018344,
@@ -2500,7 +2500,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 552.8556,
       "y": 11.952958,
@@ -2508,7 +2508,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 615.40405,
       "y": -28.052603,
@@ -2516,7 +2516,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 612.0014,
       "y": -63.250263,
@@ -2524,7 +2524,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 598.47754,
       "y": -94.26888,
@@ -2532,7 +2532,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 586.1785,
       "y": -113.3612,
@@ -2540,7 +2540,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 572.70776,
       "y": -166.21954,
@@ -2548,7 +2548,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 612.9507,
       "y": -169.40617,
@@ -2556,7 +2556,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 574.81244,
       "y": -185.90999,
@@ -2564,7 +2564,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 383.09454,
       "y": 79.90676,
@@ -2572,7 +2572,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 391.4929,
       "y": -20.171883,
@@ -2580,7 +2580,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 102.85242,
       "y": -47.57063,
@@ -2588,7 +2588,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 84.9336,
       "y": -66.83915,
@@ -2596,7 +2596,7 @@
       "locationId": 11
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -146.41815,
       "y": 43.34679,
@@ -2604,7 +2604,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -160.89914,
       "y": 48.686108,
@@ -2612,7 +2612,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -100.90406,
       "y": 91.19287,
@@ -2620,7 +2620,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -100.828735,
       "y": 147.4107,
@@ -2628,7 +2628,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -104.952934,
       "y": 233.40279,
@@ -2636,7 +2636,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 189.48372,
       "y": 180.61368,
@@ -2644,7 +2644,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -9.1092205,
       "y": 345.45715,
@@ -2652,7 +2652,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -9.1092205,
       "y": 345.45715,
@@ -2660,7 +2660,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 181.06483,
       "y": 87.57271,
@@ -2668,7 +2668,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 179.89479,
       "y": 73.63921,
@@ -2676,7 +2676,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 202.00238,
       "y": 72.368706,
@@ -2684,7 +2684,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 192.21182,
       "y": 90.27851,
@@ -2692,7 +2692,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -20.15858,
       "y": -183.17297,
@@ -2700,7 +2700,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -118.178635,
       "y": 233.27328,
@@ -2708,7 +2708,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 196.95943,
       "y": 232.57454,
@@ -2716,7 +2716,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -110.68168,
       "y": 8.101493,
@@ -2724,7 +2724,7 @@
       "locationId": 12
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 859.2495,
       "y": -159.16635,
@@ -2732,7 +2732,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 771.3136,
       "y": -221.06325,
@@ -2740,7 +2740,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 552.0301,
       "y": -241.221,
@@ -2748,7 +2748,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 600.5771,
       "y": -187.23065,
@@ -2756,7 +2756,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 415.5257,
       "y": -237.88356,
@@ -2764,7 +2764,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 406.47388,
       "y": -197.33702,
@@ -2772,7 +2772,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 568.14594,
       "y": -48.799164,
@@ -2780,7 +2780,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 697.76526,
       "y": -18.86644,
@@ -2788,7 +2788,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 1007.0479,
       "y": 38.43881,
@@ -2796,7 +2796,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 1011.1376,
       "y": -51.632187,
@@ -2804,7 +2804,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 1025.4073,
       "y": -99.56039,
@@ -2812,7 +2812,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 1016.37305,
       "y": -148.65945,
@@ -2820,7 +2820,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 997.257,
       "y": -201.82874,
@@ -2828,7 +2828,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 960.22644,
       "y": -102.138596,
@@ -2836,7 +2836,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 204.55464,
       "y": -96.0157,
@@ -2844,7 +2844,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 158.42378,
       "y": -97.53523,
@@ -2852,7 +2852,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 192.25583,
       "y": -56.33533,
@@ -2860,7 +2860,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 228.8233,
       "y": -22.8196,
@@ -2868,7 +2868,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 250.46294,
       "y": -69.00453,
@@ -2876,7 +2876,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 222.771,
       "y": -188.5564,
@@ -2884,7 +2884,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 182.18138,
       "y": -188.67503,
@@ -2892,7 +2892,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 138.01059,
       "y": -209.72899,
@@ -2900,7 +2900,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 102.343765,
       "y": -183.82678,
@@ -2908,7 +2908,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 852.2593,
       "y": -176.64317,
@@ -2916,7 +2916,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 854.049,
       "y": 11.585068,
@@ -2924,7 +2924,7 @@
       "locationId": 13
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": -17.726168,
       "y": 139.15207,
@@ -2932,7 +2932,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 73.59161,
       "y": 219.75227,
@@ -2940,7 +2940,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 133.60457,
       "y": 134.2319,
@@ -2948,7 +2948,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 376.02777,
       "y": 268.5291,
@@ -2956,7 +2956,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 190.06277,
       "y": 121.395874,
@@ -2964,7 +2964,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 54.25429,
       "y": 184.77383,
@@ -2972,7 +2972,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 205.00766,
       "y": 349.95667,
@@ -2980,7 +2980,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 406.16998,
       "y": 130.31544,
@@ -2988,7 +2988,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 243.2625,
       "y": 282.07758,
@@ -2996,7 +2996,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 267.80472,
       "y": 424.603,
@@ -3004,7 +3004,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 62.96688,
       "y": 307.77463,
@@ -3012,7 +3012,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 581.26416,
       "y": 172.00806,
@@ -3020,7 +3020,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 561.29474,
       "y": 202.02705,
@@ -3028,7 +3028,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 394.79745,
       "y": 436.8226,
@@ -3036,7 +3036,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 595.4574,
       "y": 158.2147,
@@ -3044,7 +3044,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 258.11682,
       "y": 78.80011,
@@ -3052,7 +3052,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 567.4644,
       "y": 280.02322,
@@ -3060,7 +3060,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 3.8366604,
       "y": 265.17465,
@@ -3068,7 +3068,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 752.2304,
       "y": 93.36665,
@@ -3076,7 +3076,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 884.3204,
       "y": 97.19952,
@@ -3084,7 +3084,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 279.42316,
       "y": 69.670364,
@@ -3092,7 +3092,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 243.22296,
       "y": 255.46738,
@@ -3100,7 +3100,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 371.53683,
       "y": 69.11378,
@@ -3108,7 +3108,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 265.6753,
       "y": 191.50583,
@@ -3116,7 +3116,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 44.23087,
       "y": 328.29807,
@@ -3124,7 +3124,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 26.836437,
       "y": 133.05406,
@@ -3132,7 +3132,7 @@
       "locationId": 14
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 25.86531,
       "y": -5.128177,
@@ -3140,7 +3140,7 @@
       "locationId": 16
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 23.074183,
       "y": 9.975052,
@@ -3148,7 +3148,7 @@
       "locationId": 16
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 36.489838,
       "y": 6.318851,
@@ -3156,7 +3156,7 @@
       "locationId": 16
     },
     {
-      "name": "st_name_radioactive_contamination",
+      "name": null,
       "description": null,
       "x": 36.489838,
       "y": 9.643208,
@@ -3164,7 +3164,7 @@
       "locationId": 16
     },
     {
-      "name": "st_name_teleport",
+      "name": null,
       "description": null,
       "x": 23.107779,
       "y": 12.278325,
@@ -28082,6 +28082,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28122,7 +28123,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_fort_m1",
@@ -28164,6 +28166,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28205,6 +28208,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_bm16",
@@ -28236,6 +28240,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28277,6 +28282,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28313,6 +28319,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28354,6 +28361,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_bm16",
@@ -28385,6 +28393,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28416,6 +28425,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28457,6 +28467,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28498,6 +28509,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28529,6 +28541,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28569,7 +28582,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pb",
@@ -28611,6 +28625,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_ak74u",
@@ -28646,7 +28661,8 @@
     },
     {
       "alive": false,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_mp5_m1",
@@ -28693,6 +28709,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28723,7 +28740,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pb",
@@ -28765,6 +28783,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "bandit_outfit",
@@ -28790,7 +28809,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther_m1",
@@ -28832,6 +28852,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pm",
@@ -28872,7 +28893,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -28914,6 +28936,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_pb",
@@ -28959,7 +28982,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29006,6 +29030,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29047,6 +29072,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [],
       "profile": {
         "name": "val_prisoner_name",
@@ -29067,6 +29093,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29098,6 +29125,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_lr300",
@@ -29129,6 +29157,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "detector_advances",
@@ -29155,6 +29184,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_ak74u",
@@ -29186,6 +29216,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "ammo_5.56x45_ss190",
@@ -29217,6 +29248,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "ammo_5.56x45_ss190",
@@ -29243,6 +29275,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29284,6 +29317,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29324,7 +29358,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -29370,7 +29405,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_colt_m1",
@@ -29412,6 +29448,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29457,7 +29494,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29499,6 +29537,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_sig220",
@@ -29550,6 +29589,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29591,6 +29631,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_sig220",
@@ -29632,6 +29673,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29668,6 +29710,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29709,6 +29752,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_desert_eagle",
@@ -29740,6 +29784,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "medkit",
@@ -29766,6 +29811,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -29807,6 +29853,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "medkit",
@@ -29843,6 +29890,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "conserva",
@@ -29874,6 +29922,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -29920,6 +29969,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "medkit",
@@ -29951,6 +30001,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "bread",
@@ -29987,6 +30038,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "crazy_flash",
@@ -30013,6 +30065,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30053,7 +30106,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30094,7 +30148,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -30135,7 +30190,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30176,7 +30232,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -30217,7 +30274,8 @@
     },
     {
       "alive": true,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30259,6 +30317,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "medkit",
@@ -30290,6 +30349,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "outfit_specnaz_m1",
@@ -30316,6 +30376,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",
@@ -30347,6 +30408,7 @@
     {
       "alive": true,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30388,6 +30450,7 @@
     {
       "alive": false,
       "hasUniqueItem": false,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_usp",
@@ -30428,7 +30491,8 @@
     },
     {
       "alive": false,
-      "hasUniqueItem": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
       "inventoryItems": [
         {
           "uniqueName": "wpn_walther",

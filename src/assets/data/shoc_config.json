@@ -29,6 +29,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "anomaly-zone-no-art",
+      "isShow": false
+    },
+    {
       "uniqueName": "stalkers",
       "isShow": true
     },
@@ -55,10 +59,6 @@
     {
       "uniqueName": "teleport",
       "isShow": false
-    },
-    {
-      "uniqueName": "anomaly-zone-no-art",
-      "isShow": false
     }
   ],
   "rankSetting": [
@@ -81,6 +81,13 @@
   "globalMapFileName": "global_map.png",
   "width": 1024,
   "height": 2634,
+  "traderRelationType": 1,
+  "actor": {
+    "iconHeight": 108,
+    "iconWidth": 165,
+    "iconX": 660,
+    "iconY": 0
+  },
   "traderConfigs": [
     {
       "trader": "escape_trader_name",

@@ -230,39 +230,29 @@ export class MapComponent {
     console.log(gameData);
 
     this.map = L.map('map', {
-      center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
-      zoom: 1,
-      minZoom: gameConfig.minZoom,
-      maxZoom: gameConfig.maxZoom,
-      crs: L.CRS.Simple,
-      markerZoomAnimation: !0,
-      zoomAnimation: !0,
-      zoomControl: !1,
+        center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
+        zoom: 1,
+        minZoom: gameConfig.minZoom,
+        maxZoom: gameConfig.maxZoom,
+        crs: L.CRS.Simple,
+        markerZoomAnimation: !0,
+        zoomAnimation: !0,
+        zoomControl: !1,
     });
 
     let bounds = [
-      [0, 0],
-      [this.gamedata.heightInPixels, this.gamedata.widthInPixels],
+        [0, 0],
+        [this.gamedata.heightInPixels, this.gamedata.widthInPixels],
     ];
     L.imageOverlay(
-      `/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`,
-      bounds
-    ).addTo(this.map);
+`/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`,
+        bounds).addTo(this.map);
     this.map.fitBounds(bounds);
 
     markWidth = Math.exp(1.3615 + 0.6117 * this.map.getZoom());
     document.documentElement.style.setProperty(
-      `--map-mark-width`,
-      `${markWidth}px`
-    );
-
-    this.map.on('zoomend', () => {
-      markWidth = 3 * Math.pow(2, this.map.getZoom());
-      document.documentElement.style.setProperty(
         `--map-mark-width`,
-        `${markWidth}px`
-      );
-    });
+`${markWidth}px`);
 
     this.map.setMaxBounds(bounds);
 
@@ -270,470 +260,261 @@ export class MapComponent {
     this.canvasLayer.addTo(this.map);
 
     this.map.redraw = () => {
-      this.canvasLayer.redraw();
+        this.canvasLayer.redraw();
     };
 
+    this.map.on('zoomend', () => {
+        markWidth = 3 * Math.pow(2, this.map.getZoom());
+        document.documentElement.style.setProperty(
+            `--map-mark-width`,
+`${markWidth}px`);
+    });
+
     if (this.gamedata.locations && this.gamedata.locations.length > 0) {
-      this.addLocations();
-      let marks = '';
+        this.addLocations();
+        let marks = '';
 
-      for (let location of this.gamedata.locations) {
-        if (
-          this.translate.instant(location.uniqueName) == location.uniqueName
-        ) {
-          marks += `"${location.uniqueName}",`;
+        for (let location of this.gamedata.locations) {
+            if (
+                this.translate.instant(location.uniqueName) == location.uniqueName) {
+                marks += `"${location.uniqueName}",`;
+            }
         }
-      }
 
-      if (marks) {
-        console.error(marks);
-      }
+        if (marks) {
+            console.error(marks);
+        }
     }
 
     if (this.gamedata.marks && this.gamedata.marks.length > 0) {
-      this.addMarks();
-      let marks = '';
-      for (let mark of this.gamedata.marks) {
-        if (mark.name && this.translate.instant(mark.name) == mark.name) {
-          marks += `"${mark.name}",`;
+        this.addMarks();
+        let marks = '';
+        for (let mark of this.gamedata.marks) {
+            if (mark.name && this.translate.instant(mark.name) == mark.name) {
+                marks += `"${mark.name}",`;
+            }
+            if (
+                mark.description &&
+                this.translate.instant(mark.description) == mark.description) {
+                marks += `"${mark.description}",`;
+            }
         }
-        if (
-          mark.description &&
-          this.translate.instant(mark.description) == mark.description
-        ) {
-          marks += `"${mark.description}",`;
-        }
-      }
 
-      if (marks) {
-        console.error(marks);
-      }
+        if (marks) {
+            console.error(marks);
+        }
     }
 
     if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
-      this.addStuffs();
-      let marks = '';
+        this.addStuffs();
+        let marks = '';
 
-      for (let stuff of this.gamedata.stuffs) {
-        if (stuff.name) {
-          if (this.translate.instant(stuff.name) == stuff.name) {
-            marks += `"${stuff.name}",`;
-          }
+        for (let stuff of this.gamedata.stuffs) {
+            if (stuff.name) {
+                if (this.translate.instant(stuff.name) == stuff.name) {
+                    marks += `"${stuff.name}",`;
+                }
 
-          if (stuff.description) {
-            if (this.translate.instant(stuff.description) == stuff.description) {
-              marks += `"${stuff.description}",`;
+                if (stuff.description) {
+                    if (this.translate.instant(stuff.description) == stuff.description) {
+                        marks += `"${stuff.description}",`;
+                    }
+                }
             }
-          }
         }
-      }
 
-      if (marks) {
-        console.error(marks);
-      }
+        if (marks) {
+            console.error(marks);
+        }
     }
 
     if (this.gamedata.lootBoxes && this.gamedata.lootBoxes.length > 0) {
-      this.addLootBoxes();
+        this.addLootBoxes();
     }
 
     if (this.gamedata.anomalyZones && this.gamedata.anomalyZones.length > 0) {
-      this.addAnomalyZones();
+        this.addAnomalyZones();
     }
 
     if (this.gamedata.traders && this.gamedata.traders.length > 0) {
-      this.addTraders();
+        this.addTraders();
     }
 
     if (this.gamedata.traders && this.gamedata.traders.length > 0) {
-      this.addStalkers();
+        this.addStalkers();
     }
 
     let layersToHide = [];
 
     if (
-      gameConfig.markersConfig != null &&
-      gameConfig.markersConfig.length > 0 &&
-      this.layers != null
-    ) {
-      let allLayers = Object.values(this.layers);
-      let newLayers: any = {};
-      for (let config of gameConfig.markersConfig) {
-        if (allLayers.some((y) => y.name == config.uniqueName)) {
-          let currentLayer = allLayers.filter(
-            (D) => D.name == config.uniqueName
-          )[0];
-          newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
+        gameConfig.markersConfig != null &&
+        gameConfig.markersConfig.length > 0 &&
+        this.layers != null) {
+        let allLayers = Object.values(this.layers);
+        let newLayers: any = {};
+        for (let config of gameConfig.markersConfig) {
+            if (allLayers.some((y) => y.name == config.uniqueName)) {
+                let currentLayer = allLayers.filter(
+                        (D) => D.name == config.uniqueName)[0];
+                newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
 
-          if (!config.isShow) {
-            layersToHide.push(currentLayer);
-          }
+                if (!config.isShow) {
+                    layersToHide.push(currentLayer);
+                }
+            }
         }
-      }
 
-      this.layers = newLayers;
+        this.layers = newLayers;
     }
 
     let layerControl = L.control.layers(null, this.layers).addTo(this.map);
 
     this.map.on('drag', () => {
-      this.map.panInsideBounds(bounds, { animate: false });
+        this.map.panInsideBounds(bounds, {
+            animate: false
+        });
     });
 
     let searchLayers = L.featureGroup(Object.values(this.layers));
     let translate = this.translate;
 
     let searchContoller = L.control.search({
-      layer: searchLayers,
-      initial: false,
-      propertyName: 'search',
-      delayType: 0,
-      collapsed: false,
-      autoCollapseTime: 10000,
-      textPlaceholder: this.translate.instant('search'),
-      buildTip: function (text: string, val: any) {
-        try {
-          let type = val.layer.properties.typeUniqueName;
-          let translated = translate.instant(val.layer.properties.name);
-          let location = translate.instant(
-            val.layer.properties.locationUniqueName
-          );
-          return (
-            '<a href="#"><span class="stalker-search-item ' +
-            type +
-            '">' +
-            translated +
-            '</span> <b>(' +
-            location +
-            ')</b></a>'
-          );
-        } catch (ex) {
-          console.error(text, val);
-          throw ex;
-        }
-      },
+        layer: searchLayers,
+        initial: false,
+        propertyName: 'search',
+        delayType: 0,
+        collapsed: false,
+        autoCollapseTime: 10000,
+        textPlaceholder: this.translate.instant('search'),
+        buildTip: function (text: string, val: any) {
+            try {
+                let type = val.layer.properties.typeUniqueName;
+                let translated = translate.instant(val.layer.properties.name);
+                let location = translate.instant(
+                        val.layer.properties.locationUniqueName);
+                return (
+                    '<a href="#"><span class="stalker-search-item ' +
+                    type +
+                    '">' +
+                    translated +
+                    '</span> <b>(' +
+                    location +
+                    ')</b></a>');
+            } catch (ex) {
+                console.error(text, val, val.layer.properties);
+                throw ex;
+            }
+        },
     });
 
     if (gameConfig.rulerEnabled) {
-      var options = {
-        position: 'topright', // Leaflet control position option
-        circleMarker: {
-          // Leaflet circle marker options for points used in this plugin
-          color: 'red',
-          radius: 2,
-        },
-        lineStyle: {
-          // Leaflet polyline options for lines used in this plugin
-          color: 'red',
-          dashArray: '1,6',
-        },
-        lengthUnit: {
-          factor: gameConfig.lengthFactor, //  from km to nm
-          display: this.translate.instant('meterShort'),
-          decimal: 2,
-          label: this.translate.instant('length'),
-        },
-        angleUnit: {
-          display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
-          decimal: 2, // Bearing result will be fixed to this value.
-          factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
-          label: this.translate.instant('azimuth'),
-        },
-      };
+        var options = {
+            position: 'topright', // Leaflet control position option
+            circleMarker: {
+                // Leaflet circle marker options for points used in this plugin
+                color: 'red',
+                radius: 2,
+            },
+            lineStyle: {
+                // Leaflet polyline options for lines used in this plugin
+                color: 'red',
+                dashArray: '1,6',
+            },
+            lengthUnit: {
+                factor: gameConfig.lengthFactor, //  from km to nm
+                display: this.translate.instant('meterShort'),
+                decimal: 2,
+                label: this.translate.instant('length'),
+            },
+            angleUnit: {
+                display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+                decimal: 2, // Bearing result will be fixed to this value.
+                factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+                label: this.translate.instant('azimuth'),
+            },
+        };
 
-      L.control.ruler(options).addTo(this.map);
-  }
-}
-
-  /*private loadMap_old(gameData: any, gameConfig: any): void {
-    this.gamedata = gameData;
-    this.map = L.map('map', {
-      center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
-      zoom: 1,
-      minZoom: gameConfig.minZoom,
-      maxZoom: gameConfig.maxZoom,
-      crs: L.CRS.Simple,
-      markerZoomAnimation: !0,
-      zoomAnimation: !0,
-      zoomControl: !1,
-    });
-
-    let bounds = [
-      [0, 0],
-      [this.gamedata.heightInPixels, this.gamedata.widthInPixels],
-    ];
-    L.imageOverlay(
-      `/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`,
-      bounds
-    ).addTo(this.map);
-    this.map.fitBounds(bounds);
-    markWidth = Math.exp(1.3615 + 0.6117 * this.map.getZoom());
-    document.documentElement.style.setProperty(
-      `--map-mark-width`,
-      `${markWidth}px`
-    );
-    this.map.setMaxBounds(bounds);
-
-    this.canvasLayer = new L.MarkersCanvas();
-    this.canvasLayer.addTo(this.map);
-
-    this.map.redraw = () => {
-      this.canvasLayer.redraw();
-    };
-
-    this.map.on('zoomend', () => {
-      markWidth = 3 * Math.pow(2, this.map.getZoom());
-      document.documentElement.style.setProperty(
-        `--map-mark-width`,
-        `${markWidth}px`
-      );
-    });
-
-    if (this.gamedata.locations && this.gamedata.locations.length > 0) {
-      this.addLocations();
-      let marks = '';
-
-      for (let location of this.gamedata.locations) {
-        if (
-          this.translate.instant(location.uniqueName) == location.uniqueName
-        ) {
-          marks += `"${location.uniqueName}",`;
-        }
-      }
-
-      if (marks) {
-        console.error(marks);
-      }
-    }
-
-    if (this.gamedata.marks && this.gamedata.marks.length > 0) {
-      this.addMarks_old();
-      let marks = '';
-      for (let mark of this.gamedata.marks) {
-        if (this.translate.instant(mark.name) == mark.name) {
-          marks += `"${mark.name}",`;
-        }
-        if (
-          mark.description &&
-          this.translate.instant(mark.description) == mark.description
-        ) {
-          marks += `"${mark.description}",`;
-        }
-      }
-
-      if (marks) {
-        console.error(marks);
-      }
-    }
-
-    if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
-      this.addStuffs_old();
-      let marks = '';
-
-      for (let stuff of this.gamedata.stuffs) {
-        if (this.translate.instant(stuff.name) == stuff.name) {
-          marks += `"${stuff.name}",`;
-        }
-        if (this.translate.instant(stuff.description) == stuff.description) {
-          marks += `"${stuff.description}",`;
-        }
-      }
-
-      if (marks) {
-        console.error(marks);
-      }
-    }
-
-    if (this.gamedata.anomalyZones && this.gamedata.anomalyZones.length > 0) {
-      this.addAnomalyZones();
-
-      let marks = '';
-      for (let mark of this.gamedata.anomalyZones) {
-        if (mark.name && this.translate.instant(mark.name) == mark.name) {
-          marks += `"${mark.name}",`;
-        }
-        if (
-          mark.description &&
-          this.translate.instant(mark.description) == mark.description
-        ) {
-          marks += `"${mark.description}",`;
-        }
-      }
-
-      if (marks) {
-        console.error(marks);
-      }
-    }
-
-    if (this.gamedata.traders && this.gamedata.traders.length > 0) {
-      this.addTraders();
-    }
-
-    let layersToHide = [];
-
-    if (
-      gameConfig.markersConfig != null &&
-      gameConfig.markersConfig.length > 0 &&
-      this.layers != null
-    ) {
-      let allLayers = Object.values(this.layers);
-      let newLayers: any = {};
-      for (let config of gameConfig.markersConfig) {
-        if (allLayers.some((y) => y.name == config.uniqueName)) {
-          let currentLayer = allLayers.filter(
-            (D) => D.name == config.uniqueName
-          )[0];
-          newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
-
-          if (!config.isShow) {
-            layersToHide.push(currentLayer);
-          }
-        }
-      }
-
-      this.layers = newLayers;
-    }
-
-    let layerControl = L.control.layers(null, this.layers).addTo(this.map);
-
-    this.map.on('drag', () => {
-      this.map.panInsideBounds(bounds, { animate: false });
-    });
-
-    let searchLayers = L.featureGroup(Object.values(this.layers));
-    let translate = this.translate;
-
-    let searchContoller = L.control.search({
-      layer: searchLayers,
-      initial: false,
-      propertyName: 'search',
-      delayType: 0,
-      collapsed: false,
-      autoCollapseTime: 10000,
-      textPlaceholder: this.translate.instant('search'),
-      buildTip: function (text: string, val: any) {
-        try {
-          let type = val.layer.properties.typeUniqueName;
-          let translated = translate.instant(val.layer.properties.name);
-          let location = translate.instant(
-            val.layer.properties.locationUniqueName
-          );
-          return (
-            '<a href="#"><span class="stalker-search-item ' +
-            type +
-            '">' +
-            translated +
-            '</span> <b>(' +
-            location +
-            ')</b></a>'
-          );
-        } catch (ex) {
-          console.error(text, val);
-          throw ex;
-        }
-      },
-    });
-
-    if (gameConfig.rulerEnabled) {
-      var options = {
-        position: 'topright', // Leaflet control position option
-        circleMarker: {
-          // Leaflet circle marker options for points used in this plugin
-          color: 'red',
-          radius: 2,
-        },
-        lineStyle: {
-          // Leaflet polyline options for lines used in this plugin
-          color: 'red',
-          dashArray: '1,6',
-        },
-        lengthUnit: {
-          factor: gameConfig.lengthFactor, //  from km to nm
-          display: this.translate.instant('meterShort'),
-          decimal: 2,
-          label: this.translate.instant('length'),
-        },
-        angleUnit: {
-          display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
-          decimal: 2, // Bearing result will be fixed to this value.
-          factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
-          label: this.translate.instant('azimuth'),
-        },
-      };
-
-      L.control.ruler(options).addTo(this.map);
+        L.control.ruler(options).addTo(this.map);
     }
 
     searchContoller.on(
-      'search:locationfound',
-      function (e: { layer: { openPopup: () => void } }) {
+        'search:locationfound',
+        function (e: {
+            layer: {
+                openPopup: () => void
+            }
+        }) {
         e.layer.openPopup();
-      }
-    );
+    });
 
     this.map.addControl(searchContoller);
 
     L.control
-      .zoom({
+    .zoom({
         position: 'bottomright',
-      })
-      .addTo(this.map);
+    })
+    .addTo(this.map);
 
-    let carousel = document.getElementById('layers-control') as HTMLElement;
+    let carousel = document.getElementById('layers-control')as HTMLElement;
 
     carousel.addEventListener('wheel', function (e) {
-      if (e.deltaY > 0) carousel.scrollLeft += 100;
-      else carousel.scrollLeft -= 100;
+        if (e.deltaY > 0)
+            carousel.scrollLeft += 100;
+        else
+            carousel.scrollLeft -= 100;
     });
 
     if (layersToHide.length > 0) {
-      for (let h of layersToHide) {
-        this.map.removeLayer(h);
-        h.hide(h);
-      }
-      this.map.redraw();
+        for (let h of layersToHide) {
+            this.map.removeLayer(h);
+            h.hide(h);
+        }
+        this.map.redraw();
     }
 
     const analytics = getAnalytics();
     logEvent(analytics, 'open-map', {
-      game: this.gamedata.name,
-      language: this.translate.currentLang,
+        game: this.gamedata.uniqueName,
+        language: this.translate.currentLang,
     });
 
     this.route.queryParams.subscribe((h: any) => {
-      if (h.lat != null && h.lng != null) {
-        if (
-          (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
-            animate: !0,
-            duration: 0.3,
-          }),
-          h.type)
-        ) {
-          let m = this.layers[this.translate.instant(h.type)].markers.find(
-            (y: { _latlng: { lat: number; lng: number } }) =>
-              Math.abs(y._latlng.lat - h.lat) < 1 &&
-              Math.abs(y._latlng.lng - h.lng) < 1
-          );
-          if (m) {
-            m.fireEvent('click');
+        if (h.lat != null && h.lng != null) {
+            if (
+                (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
+                        animate: !0,
+                        duration: 0.3,
+                    }),
+                    h.type)) {
+                let m = this.layers[this.translate.instant(h.type)].markers.find(
+                        (y: {
+                            _latlng: {
+                                lat: number;
+                                lng: number
+                            }
+                        }) =>
+                        Math.abs(y._latlng.lat - h.lat) < 1 &&
+                        Math.abs(y._latlng.lng - h.lng) < 1);
+                if (m) {
+                    m.fireEvent('click');
 
-            logEvent(analytics, 'open-map-queryParams', {
-              game: this.gamedata.name,
-              language: this.translate.currentLang,
-              markType: h.type,
-              coordinates: `${h.lat} ${h.lng}`,
-            });
+                    logEvent(analytics, 'open-map-queryParams', {
+                        game: this.gamedata.uniqueName,
+                        language: this.translate.currentLang,
+                        markType: h.type,
+                        coordinates: `${h.lat} ${h.lng}`,
+                    });
 
-            return;
-          }
-        }
-      } else
-        this.map.setView([
-          this.gamedata.heightInPixels / 2,
-          this.gamedata.widthInPixels / 2,
-        ]);
+                    return;
+                }
+            }
+        } else
+            this.map.setView([
+                    this.gamedata.heightInPixels / 2,
+                    this.gamedata.widthInPixels / 2,
+                ]);
     });
-  }*/
+  }
 
   private addLocations() {
     let locationsOnMap = [];
@@ -808,6 +589,9 @@ export class MapComponent {
     this.gamedata.stuffs = this.gamedata.stuffs.sort(
       (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
     );
+
+    let ignoredNames: string[] = ['stuff_at_location'];
+
     for (let markType of stuffTypes) {
       let stuffsAtLocation = this.gamedata.stuffs.filter(
         (u: { typeId: number }) => u.typeId == markType.id
@@ -838,35 +622,47 @@ export class MapComponent {
           stuff.properties.ableToSearch = markType.ableToSearch;
 
           if (stuff.properties.ableToSearch) {
-            let p = [];
-            p.push(stuff.properties.name);
-            stuff.properties.description !=
-              this.translate.instant('default-desription') &&
-              p.push(stuff.properties.description);
-            p.push(
-              ...stuff.properties.stuff.items.map(
-                (y: { uniqueName: string } ) => y.uniqueName
-              )
-            );
+            let localesToFind = [];
 
-            stuff.feature = {
-              properties: {
-                search: p.join(', '),
-              },
-            };
+            if (stuff.properties.stuff.name && !ignoredNames.includes(stuff.properties.stuff.name)) {
+              localesToFind.push(stuff.properties.stuff.name);
+            }
+
+            if (stuff.properties.description) {
+              localesToFind.push(stuff.properties.stuff.description);
+            }
+
+            if (stuff.properties.stuff.items?.length > 0) {
+              localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
+                return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
+              } ));
+            }
+
+            stuff.feature = {};
+            stuff.feature.properties = {};
+
+            if (localesToFind.length > 0) {
+              let bugged = localesToFind.filter(x => this.translate.instant(x) == x)
+
+              if (bugged.length > 0) {
+                console.log(bugged);
+              }
+            }
 
             this.createProperty(
               stuff.feature.properties,
               'search',
-              p,
+              localesToFind,
               this.translate
             );
 
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
             );
+
             stuff.properties.locationUniqueName = location.uniqueName;
             stuff.properties.locationName = location.name;
+            stuff.properties.name = stuff.properties.stuff.name;
           }
 
           stuff.bindTooltip((p: any) => this.createStuffTooltip(p), {
@@ -926,7 +722,7 @@ export class MapComponent {
       if (lootBoxMarker.properties.ableToSearch) {
         let p = [];
         p.push(lootBoxMarker.properties.name);
-        lootBoxMarker.properties.description !=
+        lootBoxMarker.properties.description && lootBoxMarker.properties.description !=
           this.translate.instant('default-desription') &&
           p.push(lootBoxMarker.properties.description);
         p.push(
@@ -978,6 +774,7 @@ export class MapComponent {
         ableToSearch: !0,
         name: this.translate.instant('sub-location'),
         uniqueName: 'sub-location',
+        markName: 'sub-location',
         icon: L.icon({
           iconSizeInit: [4, 4],
           className: 'mark-container stalker-mark-4',
@@ -990,6 +787,7 @@ export class MapComponent {
         id: 100,
         name: this.translate.instant('acidic'),
         uniqueName: 'acidic',
+        markName: 'acidic',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1002,6 +800,7 @@ export class MapComponent {
         id: 101,
         name: this.translate.instant('psychic'),
         uniqueName: 'psychic',
+        markName: 'psychic',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1014,6 +813,7 @@ export class MapComponent {
         id: 102,
         name: this.translate.instant('radioactive'),
         uniqueName: 'radioactive',
+        markName: 'st_name_radioactive_contamination',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1026,6 +826,7 @@ export class MapComponent {
         id: 103,
         name: this.translate.instant('thermal'),
         uniqueName: 'thermal',
+        markName: 'thermal_zone',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1036,8 +837,9 @@ export class MapComponent {
       },
       {
         id: 104,
-        name: this.translate.instant('thermal'),
-        uniqueName: 'thermal',
+        name: this.translate.instant('electro'),
+        uniqueName: 'electro',
+        markName: 'electro_zone',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1050,6 +852,7 @@ export class MapComponent {
         id: 200,
         name: this.translate.instant('teleport'),
         uniqueName: 'teleport',
+        markName: 'st_name_teleport',
         icon: L.icon({
           iconSizeInit: [2, 2],
           className: 'mark-container stalker-mark-2',
@@ -1062,6 +865,7 @@ export class MapComponent {
         id: 201,
         name: this.translate.instant('mines'),
         uniqueName: 'mines',
+        markName: 'mines',
         icon: L.icon({
           iconSizeInit: [1.5, 1.5],
           className: 'mark-container stalker-mark-1.5',
@@ -1099,7 +903,7 @@ export class MapComponent {
           });
 
           marker.properties = {};
-          marker.properties.name = mark.name;
+          marker.properties.name = mark.name ? mark.name : markType.markName;
           marker.properties.description = mark.description;
           marker.properties.markType = markType.name;
           marker.properties.typeUniqueName = markType.uniqueName;
@@ -1111,6 +915,7 @@ export class MapComponent {
             p.push(marker.properties.name);
 
             if (
+              marker.properties.description &&
               marker.properties.description !=
               this.translate.instant('default-desription')
             ) {
@@ -1168,6 +973,7 @@ export class MapComponent {
         iconAnchor: [0, 0],
       }),
     };
+
     let anomalyZoneNoArtIcon = {
       name: this.translate.instant('anomaly-zone-no-art'),
       uniqueName: 'anomaly-zone-no-art',
@@ -1180,10 +986,13 @@ export class MapComponent {
         iconAnchor: [0, 0],
       }),
     };
+
     let anomalies: any = {};
     let anomaliesNoArt: any = {};
+
     anomalies.type = 'FeatureCollection';
     anomaliesNoArt.type = 'FeatureCollection';
+
     anomalies.features = [];
     anomaliesNoArt.features = [];
 
@@ -1195,6 +1004,8 @@ export class MapComponent {
 
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
+
+      const defaultType: string = 'anomaly-zone';
 
       let canvasMarker;
       if (
@@ -1211,7 +1022,7 @@ export class MapComponent {
       }
 
       canvasMarker.properties = {};
-      canvasMarker.properties.name = zone.name ? zone.name : 'anomaly-zone';
+      canvasMarker.properties.name = zone.name ? zone.name : defaultType;
       canvasMarker.properties.zoneModel = zone;
 
       if (
@@ -1222,12 +1033,16 @@ export class MapComponent {
           zone.anomaliySpawnSections;
         canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
         canvasMarker.properties.ableToSearch = true;
-        canvasMarker.properties.typeUniqueName = 'anomaly-zone';
+        canvasMarker.properties.typeUniqueName = defaultType;
 
         let searchFields = [];
-        searchFields.push(canvasMarker.properties.name);
+
+        if (canvasMarker.properties.name != defaultType) {
+          searchFields.push(canvasMarker.properties.name);
+        }
 
         if (
+          canvasMarker.properties.description &&
           canvasMarker.properties.description !=
           this.translate.instant('default-desription')
         ) {
@@ -1323,22 +1138,6 @@ export class MapComponent {
     if (stuff.description) {
       html += `<div class="tooltip-text"><p>${this.translate.instant(
         stuff.properties.stuff.description
-      )}</p></div>`;
-    }
-
-    return html;
-  }
-
-  private createStuffTooltip_old(stuff: {
-    properties: { name: any; description: any };
-    description: any;
-  }) {
-    let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(
-      stuff.properties.name
-    )}</p></div>`;
-    if (stuff.description) {
-      html += `<div class="tooltip-text"><p>${this.translate.instant(
-        stuff.properties.description
       )}</p></div>`;
     }
 
@@ -1516,7 +1315,7 @@ export class MapComponent {
       let dy: number = location.y1 - location.y2;
 
       let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
-        icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem : stalkerIcon.icon) : stalkerIconDead.icon,
+        icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
       });
 
       canvasMarker.properties = {};
@@ -1592,7 +1391,7 @@ export class MapComponent {
     let html = `<div class="header-tip"><p class="p-header">${
       zone.properties.name != null
         ? this.translate.instant(zone.properties.name)
-        : this.translate.instant('anomaliesCluster')
+        : this.translate.instant('anomaly-zone')
     }</p></div>`;
     if (zone.description) {
       html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
@@ -1642,6 +1441,8 @@ export class MapComponent {
     componentRef.instance.game = this.game;
     componentRef.instance.allItems = this.items;
     componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+    componentRef.instance.relationType = this.mapConfig.traderRelationType;
+    componentRef.instance.actor = this.mapConfig.actor;
     componentRef.instance.traderConfigs = this.mapConfig.traderConfigs;
     componentRef.instance.traderConfig = this.mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
 

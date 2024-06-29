@@ -52,7 +52,7 @@
   {
     "id": 0,
     "uniqueName": "medkit_army",
-    "localeName": "Medkit_army",
+    "localeName": "medkit_army",
     "category": "II_MEDKI",
     "sort": 0,
     "width": 2,
@@ -177,7 +177,7 @@
   {
     "id": 0,
     "uniqueName": "medkit",
-    "localeName": "Medkit",
+    "localeName": "medkit",
     "category": "II_MEDKI",
     "sort": 0,
     "width": 2,
@@ -227,7 +227,7 @@
   {
     "id": 0,
     "uniqueName": "conserva",
-    "localeName": "Conserva",
+    "localeName": "conserva",
     "category": "II_FOOD",
     "sort": 0,
     "width": 1,
@@ -352,7 +352,7 @@
   {
     "id": 0,
     "uniqueName": "antirad",
-    "localeName": "Antirad",
+    "localeName": "antirad",
     "category": "II_ANTIR",
     "sort": 0,
     "width": 1,
@@ -377,7 +377,7 @@
   {
     "id": 0,
     "uniqueName": "vodka",
-    "localeName": "Vodka",
+    "localeName": "vodka",
     "category": "II_BOTTL",
     "sort": 0,
     "width": 1,
@@ -2727,7 +2727,7 @@
   {
     "id": 0,
     "uniqueName": "medkit_scientic",
-    "localeName": "Medkit_scientific",
+    "localeName": "medkit_scientific",
     "category": "II_MEDKI",
     "sort": 0,
     "width": 2,
@@ -2752,7 +2752,7 @@
   {
     "id": 0,
     "uniqueName": "bread",
-    "localeName": "Bread",
+    "localeName": "bread",
     "category": "II_FOOD",
     "sort": 0,
     "width": 1,
@@ -2777,7 +2777,7 @@
   {
     "id": 0,
     "uniqueName": "kolbasa",
-    "localeName": "Kolbasa",
+    "localeName": "kolbasa",
     "category": "II_FOOD",
     "sort": 0,
     "width": 1,
@@ -2827,7 +2827,7 @@
   {
     "id": 0,
     "uniqueName": "device_pda",
-    "localeName": "PDA",
+    "localeName": "pda",
     "category": "D_PDA",
     "sort": 0,
     "width": 2,
@@ -3727,7 +3727,7 @@
   {
     "id": 0,
     "uniqueName": "detector_advances",
-    "localeName": "Detector",
+    "localeName": "detector",
     "category": "D_SIMDET",
     "sort": 0,
     "width": 1,
