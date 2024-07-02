@@ -605,6 +605,10 @@ export class MapComponent {
         for (let stuffModel of stuffsAtLocation) {
           let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stuffModel.locationId) as Location;
 
+          if (location.isUnderground) {
+            continue;
+          }
+
           let markerX: number = 0.5 - location.xShift + stuffModel.x / location.widthInMeters;
           let markerY: number = 0.5 - location.yShift + stuffModel.z / location.heightInMeters;
 
@@ -649,12 +653,16 @@ export class MapComponent {
               }
             }
 
+            console.log(localesToFind);
+
             this.createProperty(
               stuff.feature.properties,
               'search',
               localesToFind,
               this.translate
             );
+
+            console.log(stuff.feature.properties.search);
 
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
@@ -702,6 +710,10 @@ export class MapComponent {
 
     for (let lootBox of this.gamedata.lootBoxes) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.locationId) as Location;
+
+      if (location.isUnderground) {
+        continue;
+      }
 
       let markerX: number = 0.5 - location.xShift + lootBox.x / location.widthInMeters;
       let markerY: number = 0.5 - location.yShift + lootBox.z / location.heightInMeters;
@@ -892,6 +904,10 @@ export class MapComponent {
         for (let mark of marks) {
           let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mark.locationId) as Location;
 
+          if (location.isUnderground) {
+            continue;
+          }
+
           let markerX: number = 0.5 - location.xShift + mark.x / location.widthInMeters;
           let markerY: number = 0.5 - location.yShift + mark.y / location.heightInMeters;
 
@@ -999,6 +1015,10 @@ export class MapComponent {
     for (let zone of this.gamedata.anomalyZones) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == zone.locationId) as Location;
 
+      if (location.isUnderground) {
+        continue;
+      }
+
       let markerX: number = 0.5 - location.xShift + zone.x / location.widthInMeters;
       let markerY: number = 0.5 - location.yShift + zone.y / location.heightInMeters;
 
@@ -1022,7 +1042,6 @@ export class MapComponent {
       }
 
       canvasMarker.properties = {};
-      canvasMarker.properties.name = zone.name ? zone.name : defaultType;
       canvasMarker.properties.zoneModel = zone;
 
       if (
@@ -1034,6 +1053,7 @@ export class MapComponent {
         canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
         canvasMarker.properties.ableToSearch = true;
         canvasMarker.properties.typeUniqueName = defaultType;
+        canvasMarker.properties.name = zone.name ? zone.name : defaultType;
 
         let searchFields = [];
 
@@ -1082,7 +1102,10 @@ export class MapComponent {
       } else {
         anomaliesNoArt.features.push(canvasMarker);
         canvasMarker.properties.ableToSearch = false;
+        canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
       }
+
+      canvasMarker.properties.zoneModel.name = canvasMarker.properties.name;
 
       canvasMarker.bindTooltip(
         (zone: any) => {
@@ -1199,6 +1222,15 @@ export class MapComponent {
       }),
     };
 
+    let medicIcon = L.icon({
+      iconSize: [4, 4],
+      className: 'mark-container stalker-mark-1.5',
+      animate: false,
+      iconUrl: '/assets/images/svg/marks/medic.svg',
+      iconSizeInit: [1.5, 1.5],
+      iconAnchor: [0, 0],
+    })
+
     let traders: any = {};
     traders.type = 'FeatureCollection';
     traders.features = [];
@@ -1206,14 +1238,18 @@ export class MapComponent {
     for (let trader of this.gamedata.traders) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == trader.locationId) as Location;
 
+      if (location.isUnderground) {
+        continue;
+      }
+
       let markerX: number = 0.5 - location.xShift + trader.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + trader.y / location.heightInMeters;
+      let markerY: number = 0.5 - location.yShift + trader.z / location.heightInMeters;
 
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
       let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
-        icon: traderIcon.icon,
+        icon: trader.isMedic ? medicIcon : traderIcon.icon,
       });
 
       canvasMarker.properties = {};
@@ -1308,8 +1344,12 @@ export class MapComponent {
     for (let stalker of this.gamedata.stalkers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stalker.locationId) as Location;
 
+      if (location.isUnderground) {
+        continue;
+      }
+
       let markerX: number = 0.5 - location.xShift + stalker.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + stalker.y / location.heightInMeters;
+      let markerY: number = 0.5 - location.yShift + stalker.z / location.heightInMeters;
 
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
@@ -1326,10 +1366,20 @@ export class MapComponent {
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
+
+      let propertiesToSearch: string[] = [stalker.profile.name];
+
+      if (stalker.hasUniqueItem) {
+        for (let inv of stalker.inventoryItems) {
+          let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
+          propertiesToSearch.push(item.localeName);
+        }
+      }
+
       this.createProperty(
         canvasMarker.feature.properties,
         'search',
-        [stalker.profile.name],
+        propertiesToSearch,
         this.translate
       );
 
@@ -1388,11 +1438,7 @@ export class MapComponent {
     properties: { name: any; description: any };
     description: any;
   }) {
-    let html = `<div class="header-tip"><p class="p-header">${
-      zone.properties.name != null
-        ? this.translate.instant(zone.properties.name)
-        : this.translate.instant('anomaly-zone')
-    }</p></div>`;
+    let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(zone.properties.name)}</p></div>`;
     if (zone.description) {
       html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
     }

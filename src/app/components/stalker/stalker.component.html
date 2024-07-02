@@ -4,7 +4,7 @@
   <div class="stalker-profile">
     <div>{{ stalker.profile.bio | translate}}</div>
   </div>
-  <div class="inventory-columns-7 inventory">
+  <div class="inventory-columns-7 inventory" *ngIf="inventory && inventory.length > 0">
     <div *ngFor="let stuffItem of inventory" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
       <div class="item-additional-info">
         <div *ngIf="stuffItem.count > 1" class="inventory-item-count">x{{stuffItem.count}}</div>

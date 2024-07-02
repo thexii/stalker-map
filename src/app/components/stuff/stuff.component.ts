@@ -40,6 +40,7 @@ export class StuffComponent {
 
         return y.item.area - x.item.area;
       })
+      console.log(this.items);
     }
   }
 

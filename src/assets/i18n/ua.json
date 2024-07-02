@@ -200,6 +200,15 @@
     "mil_lukash_dolg_task_complete": "Після ліквідації групи Черепа",
     "mil_leader_quest2_complete": "Павлик і інформатор ліквідовані",
 
+    "big_box_generic": "Дерев'яний ящик",
+    "small_box_generic": "Маленький звичайний ящик",
+    "big_box_dungeons": "Ящик з цінним хабаром",
+    "small_box_ussr": "Маленький радянський ящик",
+    "small_box_nato": "Маленький натовський ящик",
+    "small_box_science": "Маленький науковий ящик",
+    "small_box_army": "Маленький армійський ящик",
+    "big_box_arsenal": "Великий арсенальний язик",
+
     "actor_in_stalker": "Гравець в сталкерах",
     "actor_in_dolg": "Гравець Долгівець",
     "actor_in_freedom": "Гравець в Волі",

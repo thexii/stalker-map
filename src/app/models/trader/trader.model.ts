@@ -13,6 +13,8 @@ export class TraderModel {
   public discounts: TraderDiscounts[];
   public x: number;
   public y: number;
+  public z: number;
   public profile: CharacterProfile;
   public infinitiveMoney: boolean;
+  public isMedic: boolean;
 }

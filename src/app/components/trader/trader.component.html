@@ -189,25 +189,31 @@
             </div>
             <div class="stalker-avatar {{game}}" [ngStyle]="{'width': actor.iconWidth + 'px', 'height': actor.iconHeight + 'px', 'background-position': 'left ' + (-actor.iconX) + 'px top ' + (-actor.iconY) + 'px'}"></div>
           </div>
-          <div class="buy inventory" *ngIf="!selectedBuySection"></div>
-          <div class="buy inventory" *ngIf="selectedBuySection">
-            <ng-container *ngFor="let buyItem of selectedBuySection.items">
-              <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItem(buyItem.item)">
-                <div class="item-additional-info">
-                  <div class="inventory-item-count">
-                    <span class="stalker-icon icon-bug" *ngIf="buyItem.item.price == 0"></span>
-                    {{Math.floor(buyItem.price)}}
+          <ng-container *ngIf="selectedBuySection.items && selectedBuySection.items.length > 0">
+            <div class="buy inventory" *ngIf="selectedBuySection">
+                <ng-container *ngFor="let buyItem of selectedBuySection.items">
+                  <div class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"  (click)="selectItem(buyItem.item)">
+                    <div class="item-additional-info">
+                      <div class="inventory-item-count">
+                        <span class="stalker-icon icon-bug" *ngIf="buyItem.item.price == 0"></span>
+                        {{Math.floor(buyItem.price)}}
+                      </div>
+                      <div class="inventory-item-upgrade" *ngIf="buyItem.item.installedUpgrades && buyItem.item.installedUpgrades.length > 0"></div>
+                    </div>
+                    <div class="inventory-item-image {{game}} inventory-item-x-{{buyItem.item.gridX}} inventory-item-y-{{buyItem.item.gridY}}" title="{{buyItem.item.localeName | translate}}">
+                      <div *ngIf="buyItem.item.hasScope && buyItem.item.scopeX > -1000 && buyItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="buyItem.item.scopeX" [style.top.px]="buyItem.item.scopeY"></div>
+                      <div *ngIf="buyItem.item.hasSilencer && buyItem.item.silencerX > -1000 && buyItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="buyItem.item.silencerX" [style.top.px]="buyItem.item.silencerY"></div>
+                      <div *ngIf="buyItem.item.hasGrenadeLauncher && buyItem.item.grenadeLauncherX > -1000 && buyItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="buyItem.item.grenadeLauncherX" [style.top.px]="buyItem.item.grenadeLauncherY"></div>
+                    </div>
                   </div>
-                  <div class="inventory-item-upgrade" *ngIf="buyItem.item.installedUpgrades && buyItem.item.installedUpgrades.length > 0"></div>
-                </div>
-                <div class="inventory-item-image {{game}} inventory-item-x-{{buyItem.item.gridX}} inventory-item-y-{{buyItem.item.gridY}}" title="{{buyItem.item.localeName | translate}}">
-                  <div *ngIf="buyItem.item.hasScope && buyItem.item.scopeX > -1000 && buyItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="buyItem.item.scopeX" [style.top.px]="buyItem.item.scopeY"></div>
-                  <div *ngIf="buyItem.item.hasSilencer && buyItem.item.silencerX > -1000 && buyItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="buyItem.item.silencerX" [style.top.px]="buyItem.item.silencerY"></div>
-                  <div *ngIf="buyItem.item.hasGrenadeLauncher && buyItem.item.grenadeLauncherX > -1000 && buyItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="buyItem.item.grenadeLauncherX" [style.top.px]="buyItem.item.grenadeLauncherY"></div>
-                </div>
-              </div>
-            </ng-container>
-          </div>
+                </ng-container>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="!(selectedBuySection.items && selectedBuySection.items.length > 0)">
+            <div class="trader-do-not-buy-info">
+              <div>{{ 'trader-do-not-buy' | translate }}</div>
+            </div>
+          </ng-container>
         </div>
       </td>
     </tr>

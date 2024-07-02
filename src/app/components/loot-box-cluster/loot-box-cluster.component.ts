@@ -39,6 +39,18 @@ export class LootBoxClusterComponent {
           return item;
         } );
 
+        boxView.items.sort((x, y) => {
+          let dw = x.item.width - y.item.width;
+
+          if (dw != 0) {
+            return -dw;
+          }
+
+          return y.item.area - x.item.area;
+        })
+
+        console.log(boxView.items);
+
         if (box.name ) {
           let lootBox: LootBox = this.lootBoxConfigs.find(x => x.name == box.name) as LootBox;
 
@@ -60,6 +72,16 @@ export class LootBoxClusterComponent {
                 }
               }
             }
+
+            boxView.boxItems.sort((x, y) => {
+              let dw = x.item.width - y.item.width;
+
+              if (dw != 0) {
+                return -dw;
+              }
+
+              return y.item.area - x.item.area;
+            })
           }
         }
 

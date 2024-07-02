@@ -11166,6 +11166,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "zat_a2_stalker_barmen_name",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -11178,7 +11179,8 @@
         "faction": "stalker"
       },
       "x": 124.55,
-      "y": 177.83,
+      "y": -7.34,
+      "z": 177.83,
       "locationId": 1,
       "money": 480000
     },
@@ -11357,6 +11359,7 @@
           "sell": 0.9
         }
       ],
+      "isMedic": true,
       "profile": {
         "name": "zat_b22_stalker_medic_name",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -11369,7 +11372,8 @@
         "faction": "stalker"
       },
       "x": 118.514915,
-      "y": 190.41264,
+      "y": -3.934826,
+      "z": 190.41264,
       "locationId": 1,
       "money": 480000
     },
@@ -18238,6 +18242,7 @@
           "sell": 0.85
         }
       ],
+      "isMedic": false,
       "profile": {
         "name": "st_zat_b30_owl_stalker_trader_name",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -18250,7 +18255,8 @@
         "faction": "stalker"
       },
       "x": 109.9,
-      "y": 188.31,
+      "y": -3.93,
+      "z": 188.31,
       "locationId": 1,
       "money": 480000
     },
@@ -23649,6 +23655,7 @@
           "sell": 1.1
         }
       ],
+      "isMedic": false,
       "profile": {
         "name": "jup_a6_stalker_barmen",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -23661,7 +23668,8 @@
         "faction": "stalker"
       },
       "x": -56.33,
-      "y": 204.95,
+      "y": 3.49,
+      "z": 204.95,
       "locationId": 2,
       "money": 480000
     },
@@ -24155,6 +24163,7 @@
           "sell": 0.85
         }
       ],
+      "isMedic": true,
       "profile": {
         "name": "jup_a6_stalker_medik",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
@@ -24167,9 +24176,322 @@
         "faction": "stalker"
       },
       "x": -58.75642,
-      "y": 217.34732,
+      "y": 3.488476,
+      "z": 217.34732,
       "locationId": 2,
       "money": 480000
+    },
+    {
+      "infinitiveMoney": true,
+      "buy": [
+        {
+          "sectionConditions": "",
+          "items": []
+        }
+      ],
+      "sell": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_booster",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_coagulant",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_psy_blockade",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_antidot",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_radioprotector",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "drug_anabiotic",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            },
+            {
+              "uniqueName": "detector_scientific",
+              "minCoeficient": 1,
+              "maxCoeficient": 2.2
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "sectionConditions": "pioneer_achievement_gained \u002Bresearch_man_gained",
+          "items": [
+            {
+              "uniqueName": "bandage",
+              "count": 30,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "count": 10,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "drug_coagulant",
+              "count": 10,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "drug_antidot",
+              "count": 10,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "drug_radioprotector",
+              "count": 10,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "drug_psy_blockade",
+              "count": 10,
+              "probability": 0.45
+            },
+            {
+              "uniqueName": "drug_anabiotic",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "detector_scientific",
+              "count": 2,
+              "probability": 1
+            },
+            {
+              "uniqueName": "detector_elite",
+              "count": 1,
+              "probability": 0.0001
+            }
+          ]
+        },
+        {
+          "sectionConditions": "pioneer_achievement_gained",
+          "items": [
+            {
+              "uniqueName": "bandage",
+              "count": 30,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "drug_coagulant",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_antidot",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_radioprotector",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "detector_elite",
+              "count": 2,
+              "probability": 1
+            },
+            {
+              "uniqueName": "drug_anabiotic",
+              "count": 1,
+              "probability": 1
+            }
+          ]
+        },
+        {
+          "sectionConditions": "research_man_gained",
+          "items": [
+            {
+              "uniqueName": "bandage",
+              "count": 30,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "drug_coagulant",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_antidot",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_radioprotector",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "detector_elite",
+              "count": 1,
+              "probability": 0.0001
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "count": 6,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "drug_psy_blockade",
+              "count": 10,
+              "probability": 0.35
+            },
+            {
+              "uniqueName": "detector_scientific",
+              "count": 2,
+              "probability": 1
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "bandage",
+              "count": 30,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 20,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "drug_coagulant",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_antidot",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "drug_radioprotector",
+              "count": 10,
+              "probability": 0.4
+            },
+            {
+              "uniqueName": "detector_elite",
+              "count": 2,
+              "probability": 1
+            }
+          ]
+        }
+      ],
+      "discounts": [
+        {
+          "conditions": "pioneer_achievement_gained \u002Bresearch_man_gained",
+          "buy": 1,
+          "sell": 0.6
+        },
+        {
+          "conditions": "research_man_gained",
+          "buy": 1,
+          "sell": 0.75
+        }
+      ],
+      "isMedic": false,
+      "profile": {
+        "name": "jup_b6_scientist_nuclear_physicist",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 246,
+        "iconY": 696,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 0,
+        "faction": "ecolog"
+      },
+      "x": -226.15067,
+      "y": -3.376499,
+      "z": 80.64864,
+      "locationId": 2,
+      "money": 100000
     }
   ],
   "locations": [
@@ -26370,6 +26692,347 @@
   "levelChangers": null,
   "stalkers": [
     {
+      "alive": false,
+      "hasUniqueItem": true,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "zat_b44_barge_pda",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "stalker_outfit_barge",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b44_stalker_barge_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 174,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 35,
+        "faction": "stalker"
+      },
+      "x": -80.691635,
+      "y": 6.113034,
+      "z": 274.68094,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b100_army_2",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": -397.0225,
+      "y": 40.22056,
+      "z": -339.47275,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b28_draper_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 696,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": 125.860016,
+      "y": 40.10902,
+      "z": -457.1904,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b28_umerov_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": 80.57865,
+      "y": 38.807743,
+      "z": -470.42413,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b100_army_1",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": -413.2162,
+      "y": 40.261967,
+      "z": -329.09906,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b28_smoliak_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": 71.18518,
+      "y": 37.651882,
+      "z": -478.91232,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b100_army_3",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 40,
+        "faction": "army"
+      },
+      "x": -405.17383,
+      "y": 40.426468,
+      "z": -320.99933,
+      "locationId": 1,
+      "money": 0
+    },
+    {
       "alive": true,
       "hasUniqueItem": false,
       "stalkerType": "trader",
@@ -26407,7 +27070,8 @@
         "faction": "stalker"
       },
       "x": 106.1423,
-      "y": 186.64462,
+      "y": -1.338761,
+      "z": 186.64462,
       "locationId": 1,
       "money": 10000
     },
@@ -26449,7 +27113,8 @@
         "faction": "stalker"
       },
       "x": 118.25422,
-      "y": 185.44603,
+      "y": -3.402002,
+      "z": 185.44603,
       "locationId": 1,
       "money": 1000
     },
@@ -26496,7 +27161,8 @@
         "faction": "stalker"
       },
       "x": 122.51,
-      "y": 186.16,
+      "y": -7.34,
+      "z": 186.16,
       "locationId": 1,
       "money": 1000
     },
@@ -26543,7 +27209,8 @@
         "faction": "stalker"
       },
       "x": 123.53,
-      "y": 187.82,
+      "y": -7.34,
+      "z": 187.82,
       "locationId": 1,
       "money": 1000
     },
@@ -26590,7 +27257,8 @@
         "faction": "stalker"
       },
       "x": 129.94,
-      "y": 186.1,
+      "y": -7.34,
+      "z": 186.1,
       "locationId": 1,
       "money": 0
     },
@@ -26632,7 +27300,8 @@
         "faction": "stalker"
       },
       "x": 135.75998,
-      "y": 187.51,
+      "y": -7.34,
+      "z": 187.51,
       "locationId": 1,
       "money": 0
     },
@@ -26674,7 +27343,8 @@
         "faction": "stalker"
       },
       "x": 125.04,
-      "y": 189.8,
+      "y": -7.32,
+      "z": 189.8,
       "locationId": 1,
       "money": 8000
     },
@@ -26706,8 +27376,115 @@
         "faction": "bandit"
       },
       "x": 139.32,
-      "y": 178.61,
+      "y": -7.34,
+      "z": 178.61,
       "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": true,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_spas12",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "uniqueName": "af_compass",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "zat_b20_noah_pda",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "zat_b18_noah_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 87,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 50,
+        "faction": "stalker"
+      },
+      "x": 153.92406,
+      "y": -6.812592,
+      "z": -141.404,
+      "locationId": 1,
+      "money": 0
+    },
+    {
+      "alive": false,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "jup_b9_shliachin_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 50,
+        "faction": "army"
+      },
+      "x": -152.54344,
+      "y": 26.924686,
+      "z": -428.64313,
+      "locationId": 2,
       "money": 0
     },
     {
@@ -26753,7 +27530,8 @@
         "faction": "bandit"
       },
       "x": 14.02352,
-      "y": -187.86176,
+      "y": 24.616806,
+      "z": -187.86176,
       "locationId": 2,
       "money": 10000
     },
@@ -26800,7 +27578,8 @@
         "faction": "stalker"
       },
       "x": -42.837807,
-      "y": 187.12108,
+      "y": 3.488537,
+      "z": 187.12108,
       "locationId": 2,
       "money": 3000
     },
@@ -26847,7 +27626,8 @@
         "faction": "stalker"
       },
       "x": -44.71,
-      "y": 187.62,
+      "y": 3.49,
+      "z": 187.62,
       "locationId": 2,
       "money": 3000
     },
@@ -26884,7 +27664,8 @@
         "faction": "dolg"
       },
       "x": -57.1871,
-      "y": 176.65562,
+      "y": 3.488694,
+      "z": 176.65562,
       "locationId": 2,
       "money": 1550
     },
@@ -26921,7 +27702,8 @@
         "faction": "freedom"
       },
       "x": -46.258976,
-      "y": 219.49133,
+      "y": 3.488365,
+      "z": 219.49133,
       "locationId": 2,
       "money": 750
     },
@@ -26963,7 +27745,8 @@
         "faction": "stalker"
       },
       "x": -41.089996,
-      "y": 179.3,
+      "y": 3.49,
+      "z": 179.3,
       "locationId": 2,
       "money": 0
     },
@@ -27010,7 +27793,8 @@
         "faction": "stalker"
       },
       "x": -56.69,
-      "y": 194.57,
+      "y": 3.49,
+      "z": 194.57,
       "locationId": 2,
       "money": 0
     },
@@ -27057,7 +27841,8 @@
         "faction": "stalker"
       },
       "x": -47.599922,
-      "y": 196.5799,
+      "y": 3.488476,
+      "z": 196.5799,
       "locationId": 2,
       "money": 0
     },
@@ -27099,7 +27884,8 @@
         "faction": "stalker"
       },
       "x": -58.102116,
-      "y": 201.61278,
+      "y": -0.619068,
+      "z": 201.61278,
       "locationId": 2,
       "money": 100000
     },
@@ -27156,7 +27942,8 @@
         "faction": "stalker"
       },
       "x": -43.62,
-      "y": 202.0339,
+      "y": 3.488392,
+      "z": 202.0339,
       "locationId": 2,
       "money": 10000
     },
@@ -27203,7 +27990,8 @@
         "faction": "freedom"
       },
       "x": -45.61,
-      "y": 207.65,
+      "y": 3.46,
+      "z": 207.65,
       "locationId": 2,
       "money": 3750
     },
@@ -27255,7 +28043,8 @@
         "faction": "stalker"
       },
       "x": -7.72,
-      "y": 243.88,
+      "y": 23.28,
+      "z": 243.88,
       "locationId": 2,
       "money": 0
     },
@@ -27302,9 +28091,161 @@
         "faction": "freedom"
       },
       "x": -48.96,
-      "y": 202.45,
+      "y": 3.49,
+      "z": 202.45,
       "locationId": 2,
       "money": 750
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "jup_b6_scientist_biochemist",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 246,
+        "iconY": 783,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 0,
+        "faction": "ecolog"
+      },
+      "x": -222.13788,
+      "y": -3.344626,
+      "z": 81.83187,
+      "locationId": 2,
+      "money": 10000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_wincheaster1300",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_jup_a12_bandit_cashier",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 369,
+        "iconY": 87,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 30,
+        "faction": "bandit"
+      },
+      "x": -419.12103,
+      "y": -0.010025,
+      "z": -341.93033,
+      "locationId": 2,
+      "money": 3000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_hpsa",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_pbp",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "st_jup_a12_bandit_chief",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 369,
+        "iconY": 261,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 55,
+        "faction": "bandit"
+      },
+      "x": -449.2977,
+      "y": 0.101519,
+      "z": -370.53192,
+      "locationId": 2,
+      "money": 3000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_fort",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "pri_a15_sokolov_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 246,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 50,
+        "faction": "stalker"
+      },
+      "x": 333.60162,
+      "y": 20.541992,
+      "z": -331.7049,
+      "locationId": 2,
+      "money": 0
     },
     {
       "alive": true,
@@ -27349,7 +28290,8 @@
         "faction": "army"
       },
       "x": 148.7,
-      "y": -194.75,
+      "y": -0.1,
+      "z": -194.75,
       "locationId": 4,
       "money": 0
     },
@@ -27396,7 +28338,8 @@
         "faction": "army"
       },
       "x": 157.25764,
-      "y": -189.2546,
+      "y": -0.095597,
+      "z": -189.2546,
       "locationId": 4,
       "money": 0
     },
@@ -27443,7 +28386,56 @@
         "faction": "army"
       },
       "x": 161.04,
-      "y": -35.67,
+      "y": -0.32,
+      "z": -35.67,
+      "locationId": 4,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_val",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x39_ap",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pb",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_pmm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "pri_a17_military_captain_tarasov",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 615,
+        "iconY": 609,
+        "iconWidth": 123,
+        "iconHeight": 87,
+        "description": null,
+        "rank": 70,
+        "faction": "army"
+      },
+      "x": 186.01605,
+      "y": 0.32579,
+      "z": 3.498719,
       "locationId": 4,
       "money": 0
     }

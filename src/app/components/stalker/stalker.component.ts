@@ -44,6 +44,8 @@ export class StalkerComponent {
 
         return y.item.area - x.item.area;
       })
+
+      console.log(this.inventory);
     }
   }
 }

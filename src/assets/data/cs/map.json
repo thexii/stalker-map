@@ -19010,6 +19010,7 @@
       },
       "x": -116.09637,
       "y": -153.97905,
+      "z": 0,
       "locationId": 1,
       "money": 1000000
     },
@@ -20585,6 +20586,7 @@
       },
       "x": -151.75482,
       "y": -169.3225,
+      "z": 0,
       "locationId": 1,
       "money": 1000000
     },
@@ -20864,6 +20866,7 @@
       },
       "x": -38.11804,
       "y": 19.38924,
+      "z": 0,
       "locationId": 1,
       "money": 5000
     },
@@ -22554,6 +22557,7 @@
       },
       "x": -6.50701,
       "y": 14.805171,
+      "z": 0,
       "locationId": 1,
       "money": 1000000
     },
@@ -22679,6 +22683,7 @@
       },
       "x": 42.424076,
       "y": 41.89707,
+      "z": 0,
       "locationId": 3,
       "money": 4750
     },
@@ -24804,6 +24809,7 @@
       },
       "x": 34.286015,
       "y": 2.754417,
+      "z": 0,
       "locationId": 3,
       "money": 18750
     },
@@ -26189,6 +26195,7 @@
       },
       "x": -12.227143,
       "y": 292.31863,
+      "z": 0,
       "locationId": 4,
       "money": 1000000
     },
@@ -28309,6 +28316,7 @@
       },
       "x": -244.22325,
       "y": -133.83183,
+      "z": 0,
       "locationId": 4,
       "money": 100000
     },
@@ -28434,6 +28442,7 @@
       },
       "x": -102.35422,
       "y": -25.857664,
+      "z": 0,
       "locationId": 5,
       "money": 1000000
     },
@@ -30179,6 +30188,7 @@
       },
       "x": -101.73032,
       "y": -1.830966,
+      "z": 0,
       "locationId": 5,
       "money": 1000000
     },
@@ -30304,6 +30314,7 @@
       },
       "x": -133.01718,
       "y": -277.2475,
+      "z": 0,
       "locationId": 7,
       "money": 1000000
     },
@@ -31439,6 +31450,7 @@
       },
       "x": -178.91666,
       "y": -320.59866,
+      "z": 0,
       "locationId": 7,
       "money": 1000000
     },
@@ -32039,6 +32051,7 @@
       },
       "x": 27.93911,
       "y": -272.38046,
+      "z": 0,
       "locationId": 11,
       "money": 35000
     }
@@ -35067,6 +35080,50 @@
       "stalkerType": null,
       "inventoryItems": [],
       "profile": {
+        "name": "agr_stalker_base_leader_name",
+        "bio": "\u00AB\u0414\u0443\u0448\u0430 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438\u00BB, \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0432\u044B\u0431\u0440\u0430\u043B\u0438 \u0432 \u043B\u0438\u0434\u0435\u0440\u044B \u0437\u0430 \u0443\u043C\u0435\u043D\u0438\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C \u043A\u043E \u0432\u0441\u0435\u043C \u043F\u043E\u0434\u0445\u043E\u0434. \u0411\u043E\u043B\u044C\u0448\u043E\u0439, \u0441\u0438\u043B\u044C\u043D\u044B\u0439, \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u044B\u0439 \u0432 \u0441\u0435\u0431\u0435, \u0432\u0435\u0441\u0435\u043B\u044B\u0439 \u0438 \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
+        "iconX": 495,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 600,
+        "faction": "stalker"
+      },
+      "x": -1.907902,
+      "y": 7.5,
+      "z": 18.831846,
+      "locationId": 1,
+      "money": 95000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "agr_stalker_base_mechanic_name",
+        "bio": "\u041C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C 18-20 \u043B\u0435\u0442, \u0441 \u0431\u0430\u0441\u043E\u0432\u0438\u0442\u044B\u043C \u0433\u043E\u043B\u043E\u0441\u043E\u043C. \u041D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0433\u043B\u043E\u0432\u0430\u0442\u044B\u0439. \u0425\u043E\u0447\u0435\u0442 \u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u0442\u0430\u0440\u0448\u0435, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u0442\u044C \u0445\u043C\u0443\u0440\u044B\u043C \u0438 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u043C. \u041E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439, \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
+        "iconX": 495,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 300,
+        "faction": "stalker"
+      },
+      "x": -0.134479,
+      "y": 2.50001,
+      "z": 5.710644,
+      "locationId": 1,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
         "name": "agr_duty_base_commander_name",
         "bio": "\u041A\u043E\u043C\u043C\u0430\u043D\u0434\u0438\u0440 \u0432\u043E\u0435\u043D\u043D\u044B\u0445 \u0441\u0438\u043B \u0431\u0430\u0437\u044B \u0414\u043E\u043B\u0433\u0430",
         "iconX": 330,
@@ -35078,7 +35135,8 @@
         "faction": "dolg"
       },
       "x": -149.07814,
-      "y": -200.86069,
+      "y": 9.999928,
+      "z": -200.86069,
       "locationId": 1,
       "money": 5000
     },
@@ -35099,7 +35157,8 @@
         "faction": "dolg"
       },
       "x": -179.86646,
-      "y": -131.81544,
+      "y": 0.558057,
+      "z": -131.81544,
       "locationId": 1,
       "money": 5000
     },
@@ -35120,7 +35179,8 @@
         "faction": "stalker"
       },
       "x": 125.11485,
-      "y": 64.22112,
+      "y": 13.559354,
+      "z": 64.22112,
       "locationId": 1,
       "money": 5000
     },
@@ -35147,7 +35207,8 @@
         "faction": "stalker"
       },
       "x": -189.57648,
-      "y": 31.735851,
+      "y": 5.336215,
+      "z": 31.735851,
       "locationId": 1,
       "money": 5000
     },
@@ -35189,7 +35250,8 @@
         "faction": "dolg"
       },
       "x": -176.12883,
-      "y": -175.27686,
+      "y": 0.116643,
+      "z": -175.27686,
       "locationId": 1,
       "money": 5000
     },
@@ -35236,7 +35298,8 @@
         "faction": "freedom"
       },
       "x": 19.844452,
-      "y": -14.166033,
+      "y": 0.42651,
+      "z": -14.166033,
       "locationId": 3,
       "money": 7500
     },
@@ -35283,9 +35346,54 @@
         "faction": "freedom"
       },
       "x": 17.460253,
-      "y": -43.41965,
+      "y": 6.197682,
+      "z": -43.41965,
       "locationId": 3,
       "money": 75000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "esc_leader_stalkerbase_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 330,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 600,
+        "faction": "stalker"
+      },
+      "x": 11.890127,
+      "y": 0.849637,
+      "z": 255.59271,
+      "locationId": 4,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "esc_driver_name",
+        "bio": "\u041C\u043E\u043B\u043E\u0434\u043E\u0439 \u0441\u043E\u043B\u0434\u0430\u0442-\u0441\u0440\u043E\u0447\u043D\u0438\u043A. \u041D\u0435\u043E\u043F\u044B\u0442\u043D\u044B\u0439, \u0437\u0435\u043B\u0435\u043D\u044B\u0439 \u0438 \u0442\u0440\u0443\u0441\u043E\u0432\u0430\u0442\u044B\u0439.",
+        "iconX": 495,
+        "iconY": 648,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 50,
+        "faction": "army"
+      },
+      "x": -50.896667,
+      "y": -10.057399,
+      "z": -63.446377,
+      "locationId": 4,
+      "money": 5000
     },
     {
       "alive": false,
@@ -35310,7 +35418,8 @@
         "faction": "army"
       },
       "x": 394.29025,
-      "y": 290.25876,
+      "y": 20.170906,
+      "z": 290.25876,
       "locationId": 4,
       "money": 5000
     },
@@ -35331,7 +35440,8 @@
         "faction": "army"
       },
       "x": 239.44702,
-      "y": 342.30267,
+      "y": 1.807342,
+      "z": 342.30267,
       "locationId": 4,
       "money": 5000
     },
@@ -35352,7 +35462,8 @@
         "faction": "army"
       },
       "x": 121.48042,
-      "y": 516.39954,
+      "y": 2.110325,
+      "z": 516.39954,
       "locationId": 4,
       "money": 5000
     },
@@ -35384,7 +35495,8 @@
         "faction": "stalker"
       },
       "x": -34.992188,
-      "y": -181.75615,
+      "y": -18.557735,
+      "z": -181.75615,
       "locationId": 4,
       "money": 5000
     },
@@ -35405,7 +35517,8 @@
         "faction": "army"
       },
       "x": 18.940975,
-      "y": 292.5922,
+      "y": 0.857208,
+      "z": 292.5922,
       "locationId": 4,
       "money": 0
     },
@@ -35426,8 +35539,166 @@
         "faction": "stalker"
       },
       "x": 314.63425,
-      "y": -9.243695,
+      "y": 16.300367,
+      "z": -9.243695,
       "locationId": 4,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_ak74u",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_pm",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x18_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "esc_wolf_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 300,
+        "faction": "stalker"
+      },
+      "x": -198.83334,
+      "y": -19.870346,
+      "z": -139.2539,
+      "locationId": 4,
+      "money": 0
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "gar_bandit_leader_name",
+        "bio": "",
+        "iconX": 165,
+        "iconY": 216,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 900,
+        "faction": "bandit"
+      },
+      "x": -82.173645,
+      "y": 1.807238,
+      "z": 7.735538,
+      "locationId": 5,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_beretta",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "gar_bandit_minigame_name",
+        "bio": "",
+        "iconX": 165,
+        "iconY": 108,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 250,
+        "faction": "bandit"
+      },
+      "x": -58.840946,
+      "y": 0.4,
+      "z": -33.60389,
+      "locationId": 5,
+      "money": 1875
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "gar_bandit_senya",
+        "bio": "",
+        "iconX": 330,
+        "iconY": 108,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 150,
+        "faction": "bandit"
+      },
+      "x": -104.30971,
+      "y": 0.71376,
+      "z": 23.1146,
+      "locationId": 5,
       "money": 5000
     },
     {
@@ -35447,7 +35718,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_stalker",
+        "name": "generate_name_stalker",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 0,
         "iconY": 756,
@@ -35458,7 +35729,8 @@
         "faction": "army"
       },
       "x": 32.912243,
-      "y": 43.844543,
+      "y": 1.04518,
+      "z": 43.844543,
       "locationId": 6,
       "money": 5000
     },
@@ -35479,7 +35751,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_stalker",
+        "name": "generate_name_stalker",
         "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 825,
         "iconY": 324,
@@ -35490,9 +35762,76 @@
         "faction": "bandit"
       },
       "x": -41.39028,
-      "y": -254.0145,
+      "y": -0.960671,
+      "z": -254.0145,
       "locationId": 6,
       "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "mar_csky_commander_name",
+        "bio": "",
+        "iconX": 0,
+        "iconY": 0,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 400,
+        "faction": "csky"
+      },
+      "x": -180.61942,
+      "y": 1.834641,
+      "z": -273.71515,
+      "locationId": 7,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "mar_csky_scientist_name",
+        "bio": "",
+        "iconX": 165,
+        "iconY": 0,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 400,
+        "faction": "csky"
+      },
+      "x": -162.40085,
+      "y": 1.814592,
+      "z": -273.67218,
+      "locationId": 7,
+      "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": "quest_npc",
+      "inventoryItems": [],
+      "profile": {
+        "name": "mar_csky_scientist_name",
+        "bio": "",
+        "iconX": 165,
+        "iconY": 0,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 400,
+        "faction": "csky"
+      },
+      "x": -162.15541,
+      "y": 1.814592,
+      "z": -273.09756,
+      "locationId": 7,
+      "money": 0
     },
     {
       "alive": true,
@@ -35522,9 +35861,53 @@
         "faction": "csky"
       },
       "x": -193.20947,
-      "y": -294.02173,
+      "y": 0.328753,
+      "z": -294.02173,
       "locationId": 7,
       "money": 5000
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [
+        {
+          "uniqueName": "wpn_desert_eagle",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_11.43x23_hydro",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_sig550",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 10,
+          "probability": 1
+        }
+      ],
+      "profile": {
+        "name": "mil_hog_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 165,
+        "iconY": 648,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 300,
+        "faction": "killer"
+      },
+      "x": -324.69846,
+      "y": -22.320518,
+      "z": 215.34119,
+      "locationId": 8,
+      "money": 0
     }
   ],
   "heightInPixels": 2048,

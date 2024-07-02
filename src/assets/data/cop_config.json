@@ -198,6 +198,57 @@
       "sell": [],
       "buy": [],
       "supply": []
+    },
+    {
+      "trader": "jup_b6_scientist_nuclear_physicist",
+      "sell": null,
+      "buy": null,
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledDicounts": [""]
+        },
+        {
+          "condition": "research_man_gained",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledDicounts": ["research_man_gained"]
+        },
+        {
+          "condition": "pioneer_achievement_gained",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledDicounts": [""]
+        },
+        {
+          "condition": "pioneer_achievement_gained +research_man_gained",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledDicounts": ["pioneer_achievement_gained +research_man_gained"]
+        }
+      ],
+      "discount": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": ["", "pioneer_achievement_gained"]
+        },
+        {
+          "condition": "research_man_gained",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": ["research_man_gained"]
+        },
+        {
+          "condition": "pioneer_achievement_gained +research_man_gained",
+          "enabledSells": null,
+          "enabledBuies": null,
+          "enabledSupplies": ["pioneer_achievement_gained +research_man_gained"]
+        }
+      ]
     }
   ],
   "rankSetting": [

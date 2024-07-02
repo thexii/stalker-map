@@ -25,8 +25,6 @@ export class AnomalyZoneComponent {
   public anomalies: {anomaly: string, count: number}[];
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.anomalZone);
-
     if (this.anomalZone.anomaliySpawnSections?.length > 0) {
       this.spawnSections = [];
 
@@ -52,7 +50,6 @@ export class AnomalyZoneComponent {
     if (this.anomalZone.anomalies) {
       this.anomalies = [];
       for (let anomaly in this.anomalZone.anomalies) {
-        console.log(anomaly);
         this.anomalies.push({anomaly: anomaly, count: this.anomalZone.anomalies[anomaly] as number});
       }
     }
@@ -60,7 +57,6 @@ export class AnomalyZoneComponent {
 
   public copyLink(): void {
     let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.y}&lng=${this.anomalZone.x}&type=${this.stuffType}`;
-    console.log(link);
     navigator.clipboard.writeText(link)
   }
 }

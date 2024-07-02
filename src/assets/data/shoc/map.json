@@ -20710,7 +20710,7 @@
       ],
       "discounts": null,
       "profile": {
-        "name": "mil_Svoboda_trader_name",
+        "name": "mil_svoboda_trader_name",
         "bio": "mil_Svoboda_trader_bio",
         "iconX": 825,
         "iconY": 432,
@@ -28106,7 +28106,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_captain",
+        "name": "generate_name_captain",
         "bio": "esc_captain_bio",
         "iconX": 660,
         "iconY": 216,
@@ -28375,7 +28375,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_stalker",
+        "name": "generate_name_stalker",
         "bio": "esc_stalker_novice_bio",
         "iconX": 0,
         "iconY": 1296,
@@ -28691,7 +28691,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_stalker",
+        "name": "generate_name_stalker",
         "bio": "gar_stalker_regular_bio",
         "iconX": 660,
         "iconY": 1080,
@@ -28792,7 +28792,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_bandit",
+        "name": "generate_name_bandit",
         "bio": "gar_stalker_regular_bio",
         "iconX": 165,
         "iconY": 1188,
@@ -28876,7 +28876,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_private",
+        "name": "generate_name_private",
         "bio": "sim_soldier_regular_bio",
         "iconX": 0,
         "iconY": 0,
@@ -29107,7 +29107,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_stalker",
+        "name": "generate_name_stalker",
         "bio": "val_stalker_novice_bio",
         "iconX": 0,
         "iconY": 1296,
@@ -29793,7 +29793,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Killer_informator_name",
+        "name": "mil_killer_informator_name",
         "bio": "mil_Killer_informator_bio",
         "iconX": 495,
         "iconY": 1728,
@@ -29835,7 +29835,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_blockpost_leader_name",
+        "name": "mil_svoboda_blockpost_leader_name",
         "bio": "mil_Svoboda_blockpost_leader_bio",
         "iconX": 165,
         "iconY": 432,
@@ -29872,7 +29872,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Dolg_specnaz_cherep_name",
+        "name": "mil_dolg_specnaz_cherep_name",
         "bio": "mil_Dolg_specnaz_cherep_bio",
         "iconX": 330,
         "iconY": 648,
@@ -29904,7 +29904,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_stukach_name",
+        "name": "mil_svoboda_stukach_name",
         "bio": "mil_Svoboda_stukach_bio",
         "iconX": 825,
         "iconY": 1836,
@@ -29951,7 +29951,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_engineer_name",
+        "name": "mil_svoboda_engineer_name",
         "bio": "mil_Svoboda_engineer_bio",
         "iconX": 165,
         "iconY": 1728,
@@ -29983,7 +29983,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_master_Max_name",
+        "name": "mil_svoboda_master_max_name",
         "bio": "mil_Svoboda_master_Max_bio",
         "iconX": 495,
         "iconY": 432,
@@ -30020,7 +30020,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_cook_name",
+        "name": "mil_svoboda_cook_name",
         "bio": "mil_Svoboda_cook_bio",
         "iconX": 660,
         "iconY": 432,
@@ -30047,7 +30047,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_zombi_stalker_name",
+        "name": "mil_svoboda_zombi_stalker_name",
         "bio": "mil_Svoboda_zombi_stalker_bio",
         "iconX": 825,
         "iconY": 1404,
@@ -30089,7 +30089,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_master_Ugrumiy_name",
+        "name": "mil_svoboda_master_ugrumiy_name",
         "bio": "mil_Svoboda_master_Ugrumiy_bio",
         "iconX": 660,
         "iconY": 1620,
@@ -30131,7 +30131,7 @@
         }
       ],
       "profile": {
-        "name": "sim_Svoboda_specnaz_leshii_name",
+        "name": "sim_svoboda_specnaz_leshii_name",
         "bio": "sim_Svoboda_specnaz_leshii_bio",
         "iconX": 330,
         "iconY": 1620,
@@ -30331,7 +30331,7 @@
         }
       ],
       "profile": {
-        "name": "mil_Svoboda_leader_name",
+        "name": "mil_svoboda_leader_name",
         "bio": "mil_Svoboda_leader_bio",
         "iconX": 330,
         "iconY": 432,
@@ -30358,7 +30358,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_sergeant",
+        "name": "generate_name_sergeant",
         "bio": "sim_soldier_specnaz_bio",
         "iconX": 660,
         "iconY": 972,
@@ -30432,7 +30432,7 @@
         }
       ],
       "profile": {
-        "name": "GENERATE_NAME_captain",
+        "name": "generate_name_captain",
         "bio": "aes_Soldier_commander_bio",
         "iconX": 0,
         "iconY": 1836,
@@ -30474,7 +30474,7 @@
         }
       ],
       "profile": {
-        "name": "aes_Soldier_specnaz_aes_name",
+        "name": "aes_soldier_specnaz_aes_name",
         "bio": "aes_Soldier_specnaz_aes_bio",
         "iconX": 660,
         "iconY": 864,
