@@ -49,8 +49,6 @@ export class LootBoxClusterComponent {
           return y.item.area - x.item.area;
         })
 
-        console.log(boxView.items);
-
         if (box.name ) {
           let lootBox: LootBox = this.lootBoxConfigs.find(x => x.name == box.name) as LootBox;
 

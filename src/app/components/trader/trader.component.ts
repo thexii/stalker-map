@@ -63,6 +63,9 @@ export class TraderComponent {
   public Math: Math = Math;
   public nan = NaN;
 
+  private infoPortionRegex = new RegExp(/[-+~=!]/);
+  private is_faction_resource_greater_regex = new RegExp(/(is_faction_resource_greater)\([^\)]+\)/);
+
   constructor(private translate: TranslateService) {
     if (TraderComponent.factorialCache == null) {
       TraderComponent.factorialCache = new Map<number, number>();
@@ -393,7 +396,19 @@ export class TraderComponent {
               bestAssortement.conditionSupply = [];
 
               if (sameSellCoeffSupply.length != trader.supplies.length) {
-                bestAssortement.conditionSupply.push(...sameSellCoeffSupply.map(x => x.conditionSupply.map(x => x.trim())).flat(1));
+                bestAssortement.conditionSupply.push(
+                    ...this.uniq(sameSellCoeffSupply.map(
+                        x => x.conditionSupply.map(y => y.trim().split(' ').map(z => {
+                          let value = z.replace(this.infoPortionRegex, '');
+
+                          if (this.is_faction_resource_greater_regex.test(value)) {
+                            value = (this.is_faction_resource_greater_regex.exec(value) as RegExpExecArray)[1];
+                          }
+
+                          return value;
+                        }))
+                    ).flat(2))
+                );
               }
 
               bestSell.push(bestAssortement);
@@ -481,6 +496,7 @@ export class TraderComponent {
       bestBuy[0].traderName = 'all-traders';
     }
 
+    console.log(bestSell);
     newSelectedItem.bestSell = bestSell;
     newSelectedItem.bestBuy = bestBuy;
     newSelectedItem.supply = this.selectedSupplySection.items.find(x => x.item.uniqueName == item.uniqueName) as TraderSupplyItemView;
@@ -562,6 +578,12 @@ export class TraderComponent {
 
   private bernoulli(n: number, k: number, p: number): number {
     return (this.factorial(n) / (this.factorial(k) * this.factorial(n - k))) * Math.pow(p, k) * Math.pow(1 - p, n - k);
+  }
+
+  private uniq(a: any[]): any[] {
+      return a.sort().filter(function(item, pos, ary) {
+          return !pos || item != ary[pos - 1];
+      });
   }
 
   private factorial(n: number): number {

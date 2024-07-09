@@ -1,4 +1,5 @@
 import { AnomalySpawnSection } from ".";
+import { Way } from "../way.model";
 
 export class AnomalyZone {
   public x: number;
@@ -7,4 +8,5 @@ export class AnomalyZone {
   public locationId: number;
   public anomaliySpawnSections: AnomalySpawnSection[];
   public anomalies: any;
+  public artefactWays: Way[];
 }

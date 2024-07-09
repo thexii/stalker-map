@@ -231,13 +231,13 @@ export class MapComponent {
 
     this.map = L.map('map', {
         center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
-        zoom: 1,
+        zoom: 1.5,
         minZoom: gameConfig.minZoom,
         maxZoom: gameConfig.maxZoom,
         crs: L.CRS.Simple,
         markerZoomAnimation: !0,
         zoomAnimation: !0,
-        zoomControl: !1,
+        zoomControl: !1
     });
 
     let bounds = [
@@ -592,6 +592,8 @@ export class MapComponent {
 
     let ignoredNames: string[] = ['stuff_at_location'];
 
+    let buggedStrings = [];
+
     for (let markType of stuffTypes) {
       let stuffsAtLocation = this.gamedata.stuffs.filter(
         (u: { typeId: number }) => u.typeId == markType.id
@@ -649,11 +651,9 @@ export class MapComponent {
               let bugged = localesToFind.filter(x => this.translate.instant(x) == x)
 
               if (bugged.length > 0) {
-                console.log(bugged);
+                buggedStrings.push(...bugged);
               }
             }
-
-            console.log(localesToFind);
 
             this.createProperty(
               stuff.feature.properties,
@@ -662,7 +662,9 @@ export class MapComponent {
               this.translate
             );
 
-            console.log(stuff.feature.properties.search);
+            if (stuff.properties.stuff.name == 'st_monolith_stuff_title') {
+              console.log(stuff.feature.properties.search);
+            }
 
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
@@ -685,6 +687,8 @@ export class MapComponent {
         this.addToCanvas(geoMarks, markType);
       }
     }
+
+    console.log(buggedStrings);
   }
 
   private addLootBoxes() {
@@ -1090,14 +1094,36 @@ export class MapComponent {
           this.translate
         );
 
+        /*if (zone.artefactWays && zone.artefactWays.length > 0) {
+            for (let way of zone.artefactWays) {
+
+                let latlngs: any[] = [];//= way.points.map(x => [x.z, x.x]);
+
+                for (let point of way.points) {
+                    let px = 0.5 - location.xShift + point.x / location.widthInMeters;
+                    let py = 0.5 - location.xShift + point.z / location.widthInMeters;
+
+                    latlngs.push(
+                        [
+                        location.y2 + py * dy,
+                        location.x1 + px * dx
+                        ]
+                    )
+                }
+
+                latlngs.push(latlngs[0]);
+                var polyline = L.polyline(latlngs, {color: 'red', weight: 3}).addTo(this.map);
+            }
+        }*/
+
         anomalies.features.push(canvasMarker);
 
-        let location = this.locations.locations.find(
+        let locationFromL = this.locations.locations.find(
           (x: { id: any }) => x.id == zone.locationId
         );
         if (location) {
-          canvasMarker.properties.locationUniqueName = location.uniqueName;
-          canvasMarker.properties.locationName = location.name;
+          canvasMarker.properties.locationUniqueName = locationFromL.uniqueName;
+          canvasMarker.properties.locationName = locationFromL.name;
         }
       } else {
         anomaliesNoArt.features.push(canvasMarker);
@@ -1283,7 +1309,7 @@ export class MapComponent {
         .bindPopup(
           (trader: any) =>
             this.createTraderPopup(trader, this.gamedata.traders, canvasMarker),
-          { maxWidth: 1400 }
+          { maxWidth: 2000 }
         )
         .openPopup();
     }

@@ -16439,6 +16439,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "escape_trader_name",
         "bio": "escape_trader_bio",
@@ -16451,7 +16452,8 @@
         "faction": "trader"
       },
       "x": -244.6927,
-      "y": -133.96,
+      "y": -24.957996,
+      "z": -133.96,
       "locationId": 1,
       "money": 100000
     },
@@ -17999,6 +18001,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "bar_barmen_name",
         "bio": "bar_barmen_bio",
@@ -18011,7 +18014,8 @@
         "faction": "trader"
       },
       "x": 132.29492,
-      "y": 20.36846,
+      "y": -4.744858,
+      "z": 20.36846,
       "locationId": 7,
       "money": 105000
     },
@@ -19239,6 +19243,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "bar_petrenko_name",
         "bio": "bar_petrenko_bio",
@@ -19251,7 +19256,8 @@
         "faction": "dolg"
       },
       "x": 207.566,
-      "y": 60.462234,
+      "y": 0.42997766,
+      "z": 60.462234,
       "locationId": 7,
       "money": 105000
     },
@@ -20709,6 +20715,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "mil_svoboda_trader_name",
         "bio": "mil_Svoboda_trader_bio",
@@ -20721,7 +20728,8 @@
         "faction": "freedom"
       },
       "x": -19.008354,
-      "y": -28.937477,
+      "y": -7.3627515,
+      "z": -28.937477,
       "locationId": 9,
       "money": 5000
     },
@@ -21889,6 +21897,7 @@
         }
       ],
       "discounts": null,
+      "isMedic": false,
       "profile": {
         "name": "yan_saharov_name",
         "bio": "yan_saharov_bio",
@@ -21901,7 +21910,8 @@
         "faction": "ecolog"
       },
       "x": 25.739895,
-      "y": -273.27414,
+      "y": -11.716592,
+      "z": -273.27414,
       "locationId": 10,
       "money": 105000
     }
@@ -22140,7 +22150,8 @@
         "zone_mincer_weak_noart": 3,
         "zone_mosquito_bald_weak": 12,
         "zone_mosquito_bald_weak_noart": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -48.583694,
@@ -22151,7 +22162,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 1,
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -62.736534,
@@ -22161,7 +22173,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 234.30508,
@@ -22171,7 +22184,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 285.1068,
@@ -22181,7 +22195,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 284.17578,
@@ -22191,7 +22206,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 236.00198,
@@ -22201,7 +22217,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 143.94447,
@@ -22211,7 +22228,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 40.706154,
@@ -22221,7 +22239,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 269.5,
@@ -22231,7 +22250,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 182.33386,
@@ -22241,7 +22261,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 319.75473,
@@ -22251,7 +22272,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 190.99725,
@@ -22261,7 +22283,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 86.58971,
@@ -22271,7 +22294,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 138.85199,
@@ -22281,7 +22305,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 192.44388,
@@ -22291,7 +22316,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 123.33742,
@@ -22301,7 +22327,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 241.92888,
@@ -22311,7 +22338,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -34.36081,
@@ -22321,7 +22349,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 72.39718,
@@ -22331,7 +22360,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -134.79585,
@@ -22341,7 +22371,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -121.36372,
@@ -22351,7 +22382,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 193.41916,
@@ -22361,7 +22393,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 114.524445,
@@ -22371,7 +22404,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 209.7873,
@@ -22381,7 +22415,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 215.42355,
@@ -22391,7 +22426,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -154.63922,
@@ -22401,7 +22437,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -94.11653,
@@ -22411,7 +22448,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -106.90346,
@@ -22421,7 +22459,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -130.24002,
@@ -22431,7 +22470,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -61.16485,
@@ -22441,7 +22481,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -64.04759,
@@ -22451,7 +22492,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -39.834732,
@@ -22461,7 +22503,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 47.713486,
@@ -22471,7 +22514,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 15.574093,
@@ -22481,7 +22525,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -18.852512,
@@ -22491,7 +22536,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -118.95798,
@@ -22501,7 +22547,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -74.8817,
@@ -22512,7 +22559,8 @@
       "anomalies": {
         "zone_mosquito_bald_weak": 1,
         "zone_witches_galantine": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 17.612919,
@@ -22522,7 +22570,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 59.382896,
@@ -22532,7 +22581,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 146.73328,
@@ -22542,7 +22592,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 290.18878,
@@ -22552,7 +22603,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 187.37183,
@@ -22562,7 +22614,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 276.82596,
@@ -22572,7 +22625,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 164.30112,
@@ -22582,7 +22636,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 282.82278,
@@ -22592,7 +22647,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 341.9138,
@@ -22602,7 +22658,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 222.07837,
@@ -22612,7 +22669,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 265.16016,
@@ -22622,7 +22680,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 135.36087,
@@ -22632,7 +22691,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 216.89273,
@@ -22642,7 +22702,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 175.35687,
@@ -22652,7 +22713,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 266.58542,
@@ -22662,7 +22724,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 291.85895,
@@ -22672,7 +22735,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 251.19453,
@@ -22682,7 +22746,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 324.54086,
@@ -22692,7 +22757,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 107.374146,
@@ -22702,7 +22768,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -22.599476,
@@ -22712,7 +22779,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 7.169778,
@@ -22722,7 +22790,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 269.4012,
@@ -22748,7 +22817,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -26.465462,
@@ -22774,7 +22844,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 196.58388,
@@ -22800,7 +22871,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 182.38559,
@@ -22826,7 +22898,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -141.5524,
@@ -22852,7 +22925,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -93.34214,
@@ -22878,7 +22952,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -262.0702,
@@ -22909,7 +22984,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -246.04037,
@@ -22940,7 +23016,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -266.16208,
@@ -22971,7 +23048,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -201.19637,
@@ -22997,7 +23075,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -227.09236,
@@ -23023,7 +23102,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 95.15581,
@@ -23049,7 +23129,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -57.263584,
@@ -23059,7 +23140,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -10.814132,
@@ -23069,7 +23151,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 190.60991,
@@ -23079,7 +23162,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 86.11658,
@@ -23090,7 +23174,8 @@
       "anomalies": {
         "zone_mincer_weak": 1,
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 115.178375,
@@ -23100,7 +23185,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 103.58508,
@@ -23110,7 +23196,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 3.0360184,
@@ -23120,7 +23207,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -11.612509,
@@ -23130,7 +23218,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -40.840122,
@@ -23141,7 +23230,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 1,
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -85.44335,
@@ -23151,7 +23241,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -115.50574,
@@ -23161,7 +23252,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -116.21455,
@@ -23171,7 +23263,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -80.37616,
@@ -23181,7 +23274,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 52.20975,
@@ -23192,7 +23286,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 1,
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 41.020206,
@@ -23202,7 +23297,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 88.27471,
@@ -23212,7 +23308,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 118.55536,
@@ -23222,7 +23319,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 157.57321,
@@ -23232,7 +23330,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 132.35077,
@@ -23242,7 +23341,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 89.535706,
@@ -23252,7 +23352,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 46.911236,
@@ -23263,7 +23364,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 1,
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 36.745678,
@@ -23273,7 +23375,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 8.681952,
@@ -23283,7 +23386,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -36.812496,
@@ -23293,7 +23397,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -84.64375,
@@ -23303,7 +23408,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -99.54425,
@@ -23313,7 +23419,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -81.303795,
@@ -23323,7 +23430,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 98.88561,
@@ -23333,7 +23441,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 16.687256,
@@ -23343,7 +23452,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 18.991486,
@@ -23353,7 +23463,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 142.93648,
@@ -23363,7 +23474,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 138.7967,
@@ -23373,7 +23485,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 141.50325,
@@ -23383,7 +23496,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 115.876785,
@@ -23394,7 +23508,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 1,
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -24.365007,
@@ -23404,7 +23519,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 4.9086466,
@@ -23414,7 +23530,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 6.458489,
@@ -23424,7 +23541,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 169.42316,
@@ -23434,7 +23552,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 259.70972,
@@ -23444,7 +23563,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 103.032425,
@@ -23454,7 +23574,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 60.13475,
@@ -23464,7 +23585,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -11.705645,
@@ -23474,7 +23596,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -17.463362,
@@ -23484,7 +23607,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -59.601105,
@@ -23494,7 +23618,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -21.542948,
@@ -23504,7 +23629,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 155.94324,
@@ -23514,7 +23640,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 158.01308,
@@ -23524,7 +23651,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 40.775085,
@@ -23534,7 +23662,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 75.340096,
@@ -23544,7 +23673,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 110.95428,
@@ -23554,7 +23684,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 96.40899,
@@ -23564,7 +23695,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 256.5659,
@@ -23574,7 +23706,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 234.87085,
@@ -23584,7 +23717,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 260.65552,
@@ -23594,7 +23728,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -187.11462,
@@ -23604,7 +23739,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -202.53246,
@@ -23614,7 +23750,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -157.84976,
@@ -23624,7 +23761,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -163.18576,
@@ -23634,7 +23772,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -138.62141,
@@ -23644,7 +23783,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -62.572357,
@@ -23654,7 +23794,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -20.560059,
@@ -23664,7 +23805,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -244.38402,
@@ -23674,7 +23816,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald_weak_noart": 13
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -153.52966,
@@ -23700,7 +23843,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -39.11592,
@@ -23731,7 +23875,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 208.81197,
@@ -23796,7 +23941,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 124.56743,
@@ -23822,7 +23968,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 155.72005,
@@ -23848,7 +23995,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 81.94696,
@@ -23874,7 +24022,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 27.14526,
@@ -23900,7 +24049,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 34.26801,
@@ -23926,7 +24076,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 60.337597,
@@ -23952,7 +24103,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 65.857414,
@@ -23978,7 +24130,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 49.568718,
@@ -24004,7 +24157,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 85.51547,
@@ -24030,7 +24184,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 161.62624,
@@ -24056,7 +24211,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 160.706,
@@ -24082,7 +24238,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 196.98608,
@@ -24108,7 +24265,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 97.32273,
@@ -24134,7 +24292,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 26.301476,
@@ -24160,7 +24319,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 117.94658,
@@ -24186,7 +24346,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 203.44827,
@@ -24212,7 +24373,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -34.2627,
@@ -24238,7 +24400,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 190.47635,
@@ -24264,7 +24427,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 135.45407,
@@ -24290,7 +24454,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 111.801865,
@@ -24316,7 +24481,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -54.64416,
@@ -24342,7 +24508,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -135.31142,
@@ -24368,7 +24535,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -167.14793,
@@ -24394,7 +24562,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -232.00926,
@@ -24420,7 +24589,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 113.87233,
@@ -24446,7 +24616,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 195.47676,
@@ -24477,7 +24648,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 174.98006,
@@ -24487,7 +24659,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 152.12294,
@@ -24498,7 +24671,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_mosquito_bald": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 47.768993,
@@ -24508,7 +24682,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 27.53886,
@@ -24518,7 +24693,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 7.7111053,
@@ -24528,7 +24704,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 34.128773,
@@ -24538,7 +24715,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 2.0747604,
@@ -24548,7 +24726,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -5.4117565,
@@ -24558,7 +24737,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 70.05846,
@@ -24568,7 +24748,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -16.825733,
@@ -24578,7 +24759,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -31.191326,
@@ -24588,7 +24770,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -37.73681,
@@ -24598,7 +24781,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 97.523605,
@@ -24608,7 +24792,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 108.99971,
@@ -24618,7 +24803,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -15.436967,
@@ -24628,7 +24814,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -49.961266,
@@ -24638,7 +24825,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -78.70542,
@@ -24648,7 +24836,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -60.56417,
@@ -24658,7 +24847,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -112.11479,
@@ -24668,7 +24858,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -214.3731,
@@ -24678,7 +24869,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -187.9977,
@@ -24688,7 +24880,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -159.31273,
@@ -24698,7 +24891,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -142.6158,
@@ -24708,7 +24902,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -137.8022,
@@ -24718,7 +24913,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -149.75752,
@@ -24728,7 +24924,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -156.47357,
@@ -24738,7 +24935,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -211.65869,
@@ -24748,7 +24946,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -230.11636,
@@ -24758,7 +24957,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -237.70697,
@@ -24768,7 +24968,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -104.10153,
@@ -24778,7 +24979,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -11.674192,
@@ -24788,7 +24990,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -38.80998,
@@ -24819,7 +25022,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -56.829956,
@@ -24829,7 +25033,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_buzz": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -107.17089,
@@ -24839,7 +25044,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_buzz": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -83.04833,
@@ -24849,7 +25055,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_buzz": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -42.360157,
@@ -24859,7 +25066,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_buzz": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 44.38245,
@@ -24885,7 +25093,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -13.64665,
@@ -24911,7 +25120,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 130.43379,
@@ -24954,7 +25164,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -151.30032,
@@ -24985,7 +25196,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -151.74266,
@@ -25016,7 +25228,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -38.609013,
@@ -25042,7 +25255,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 33.78804,
@@ -25068,7 +25282,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -5.4586034,
@@ -25094,7 +25309,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 92.335434,
@@ -25120,7 +25336,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 120.22848,
@@ -25130,7 +25347,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -7.0766125,
@@ -25140,7 +25358,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 19.55874,
@@ -25150,7 +25369,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -100.69253,
@@ -25160,7 +25380,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -83.27063,
@@ -25170,7 +25391,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -126.761246,
@@ -25180,7 +25402,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -157.6102,
@@ -25190,7 +25413,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 170.2582,
@@ -25200,7 +25424,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -38.689373,
@@ -25210,7 +25435,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -137.04372,
@@ -25220,7 +25446,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 75.705765,
@@ -25230,7 +25457,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 186.27885,
@@ -25240,7 +25468,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 132.73555,
@@ -25250,7 +25479,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -56.424446,
@@ -25260,7 +25490,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 135.60106,
@@ -25270,7 +25501,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 15.017999,
@@ -25340,7 +25572,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 2.2451699,
@@ -25350,7 +25583,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_buzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 20.085983,
@@ -25360,7 +25594,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zharka_static_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 151.42934,
@@ -25371,7 +25606,8 @@
       "anomalies": {
         "zone_mincer_weak_noart": 4,
         "zone_mosquito_bald_strong_noart": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -126.4802,
@@ -25414,7 +25650,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -81.43568,
@@ -25440,7 +25677,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -256.68143,
@@ -25466,7 +25704,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -167.33487,
@@ -25492,7 +25731,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -262.92624,
@@ -25502,7 +25742,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_flame": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -83.556335,
@@ -25512,7 +25753,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -116.41925,
@@ -25522,7 +25764,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -120.63037,
@@ -25532,7 +25775,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -160.84068,
@@ -25542,7 +25786,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -274.71332,
@@ -25552,7 +25797,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 10
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -216.5633,
@@ -25562,7 +25808,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -197.40817,
@@ -25572,7 +25819,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -187.47804,
@@ -25582,7 +25830,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -175.88292,
@@ -25592,7 +25841,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zharka_static_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -145.11768,
@@ -25602,7 +25852,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zharka_static_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -125.391136,
@@ -25633,7 +25884,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 92.8653,
@@ -25664,7 +25916,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -307.99265,
@@ -25674,7 +25927,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -281.45483,
@@ -25684,7 +25938,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -269.1055,
@@ -25694,7 +25949,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 97.45011,
@@ -25705,7 +25961,8 @@
       "anomalies": {
         "zone_burning_fuzz1": 3,
         "zone_witches_galantine": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -293.93573,
@@ -25715,7 +25972,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -15.471794,
@@ -25727,7 +25985,8 @@
         "zone_gravi_zone": 17,
         "zone_witches_galantine": 3,
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -63.907738,
@@ -25737,7 +25996,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -62.676407,
@@ -25747,7 +26007,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 1.2032948,
@@ -25757,7 +26018,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -274.407,
@@ -25768,7 +26030,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -288.69717,
@@ -25778,7 +26041,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -356.95807,
@@ -25788,7 +26052,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -204.91762,
@@ -25799,7 +26064,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -145.8429,
@@ -25809,7 +26075,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -143.12193,
@@ -25819,7 +26086,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -59.332237,
@@ -25829,7 +26097,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -296.18307,
@@ -25839,7 +26108,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -257.6025,
@@ -25849,7 +26119,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -241.35974,
@@ -25860,7 +26131,8 @@
       "anomalies": {
         "zone_mosquito_bald": 13,
         "zone_witches_galantine": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -77.950424,
@@ -25870,7 +26142,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -293.1483,
@@ -25880,7 +26153,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -175.32475,
@@ -25891,7 +26165,8 @@
       "anomalies": {
         "zone_mosquito_bald": 1,
         "zone_witches_galantine": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -192.70021,
@@ -25901,7 +26176,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -49.10241,
@@ -25911,7 +26187,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -104.06299,
@@ -25921,7 +26198,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -130.85835,
@@ -25931,7 +26209,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -277.87302,
@@ -25941,7 +26220,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -230.78629,
@@ -25951,7 +26231,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -313.3456,
@@ -25961,7 +26242,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -331.65204,
@@ -25971,7 +26253,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -279.79767,
@@ -25981,7 +26264,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -237.59988,
@@ -25991,7 +26275,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -315.67853,
@@ -26001,7 +26286,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -87.41942,
@@ -26011,7 +26297,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zhar": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 480.03198,
@@ -26037,7 +26324,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 513.95306,
@@ -26048,7 +26336,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 4,
         "zone_mincer": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 342.26767,
@@ -26059,7 +26348,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 9,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 408.7993,
@@ -26070,7 +26360,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 5,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 327.6273,
@@ -26081,7 +26372,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 4,
         "zone_gravi_zone": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 299.13895,
@@ -26091,7 +26383,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 383.56528,
@@ -26101,7 +26394,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 425.38452,
@@ -26111,7 +26405,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 450.2755,
@@ -26121,7 +26416,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 470.826,
@@ -26131,7 +26427,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 455.72366,
@@ -26141,7 +26438,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 305.22137,
@@ -26151,7 +26449,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 311.61304,
@@ -26162,7 +26461,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 1,
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 330.81396,
@@ -26173,7 +26473,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 7,
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 309.90634,
@@ -26183,7 +26484,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 288.7772,
@@ -26193,7 +26495,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 307.77457,
@@ -26204,7 +26507,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 2,
         "zone_mincer": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 369.783,
@@ -26214,7 +26518,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 11
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 386.1902,
@@ -26225,7 +26530,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 2,
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 427.05423,
@@ -26235,7 +26541,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 453.4253,
@@ -26245,7 +26552,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 388.8331,
@@ -26255,7 +26563,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 459.56342,
@@ -26265,7 +26574,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 504.45193,
@@ -26275,7 +26585,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 552.50287,
@@ -26286,7 +26597,8 @@
       "anomalies": {
         "zone_gravi_zone": 3,
         "zone_mincer": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 618.92474,
@@ -26297,7 +26609,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 547.49945,
@@ -26308,7 +26621,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_mincer": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 520.45483,
@@ -26318,7 +26632,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 484.32474,
@@ -26328,7 +26643,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 518.30566,
@@ -26339,7 +26655,8 @@
       "anomalies": {
         "zone_gravi_zone": 1,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 346.6227,
@@ -26349,7 +26666,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 525.1656,
@@ -26359,7 +26677,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 592.0533,
@@ -26370,7 +26689,8 @@
       "anomalies": {
         "zone_mincer": 2,
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 549.1196,
@@ -26380,7 +26700,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 543.4097,
@@ -26391,7 +26712,8 @@
       "anomalies": {
         "zone_mincer": 2,
         "zone_witches_galantine": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 529.4865,
@@ -26401,7 +26723,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 608.03015,
@@ -26411,7 +26734,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 594.5631,
@@ -26421,7 +26745,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 609.06915,
@@ -26431,7 +26756,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 369.95786,
@@ -26441,7 +26767,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 397.20593,
@@ -26451,7 +26778,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 579.20544,
@@ -26461,7 +26789,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 498.0502,
@@ -26471,7 +26800,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 492.65704,
@@ -26481,7 +26811,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 235.08774,
@@ -26491,7 +26822,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 275.14865,
@@ -26501,7 +26833,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 150.90373,
@@ -26511,7 +26844,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 125.41052,
@@ -26521,7 +26855,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 105.284805,
@@ -26531,7 +26866,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 39.9573,
@@ -26541,7 +26877,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 46.816257,
@@ -26551,7 +26888,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 89.73706,
@@ -26561,7 +26899,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -1.0474257,
@@ -26571,7 +26910,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -4.9194393,
@@ -26581,7 +26921,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 8.386781,
@@ -26646,7 +26987,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -44.73344,
@@ -26721,7 +27063,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -103.13862,
@@ -26752,7 +27095,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -29.747065,
@@ -26783,7 +27127,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -156.55063,
@@ -26814,7 +27159,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 84.235504,
@@ -26845,7 +27191,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 79.89909,
@@ -26876,7 +27223,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 105.167404,
@@ -26907,7 +27255,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 111.86139,
@@ -26917,7 +27266,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -67.2288,
@@ -26927,7 +27277,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -104.68942,
@@ -26937,7 +27288,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -100.53954,
@@ -26947,7 +27299,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz1": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 32.274223,
@@ -26958,7 +27311,8 @@
       "anomalies": {
         "zone_gravi_zone_weak": 3,
         "zone_mincer": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -59.70776,
@@ -26968,7 +27322,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mincer": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 90.914474,
@@ -26978,7 +27333,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mosquito_bald": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 0.12372112,
@@ -26988,7 +27344,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_no_gravity": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 57.784798,
@@ -26998,7 +27355,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 97.40733,
@@ -27008,7 +27366,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 78.59024,
@@ -27018,7 +27377,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 44.44566,
@@ -27028,7 +27388,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 964.0697,
@@ -27059,7 +27420,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 879.63824,
@@ -27090,7 +27452,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 857.302,
@@ -27121,7 +27484,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 844.8653,
@@ -27152,7 +27516,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 751.0256,
@@ -27183,7 +27548,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 693.00714,
@@ -27214,7 +27580,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 719.436,
@@ -27245,7 +27612,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 659.84357,
@@ -27276,7 +27644,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 605.1,
@@ -27307,7 +27676,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 579.31006,
@@ -27338,7 +27708,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 517.9534,
@@ -27369,7 +27740,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 455.89502,
@@ -27400,7 +27772,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 413.04126,
@@ -27431,7 +27804,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 310.09576,
@@ -27462,7 +27836,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 343.2642,
@@ -27493,7 +27868,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 968.20135,
@@ -27524,7 +27900,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 466.68994,
@@ -27555,7 +27932,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 318.17032,
@@ -27586,7 +27964,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 298.53076,
@@ -27617,7 +27996,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 531.3236,
@@ -27648,7 +28028,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 697.00793,
@@ -27679,7 +28060,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 720.3281,
@@ -27710,7 +28092,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 966.5205,
@@ -27741,7 +28124,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 699.08374,
@@ -27772,7 +28156,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 368.18927,
@@ -27803,7 +28188,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 1007.7324,
@@ -27813,7 +28199,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_emi": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 265.33063,
@@ -27823,7 +28210,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_emi": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 1014.51624,
@@ -27833,7 +28221,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 992.683,
@@ -27843,7 +28232,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 1005.7458,
@@ -27853,7 +28243,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 989.7182,
@@ -27863,7 +28254,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 993.14856,
@@ -27873,7 +28265,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 1004.7358,
@@ -27883,7 +28276,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 982.2054,
@@ -27893,7 +28287,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 981.47675,
@@ -27903,7 +28298,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_gravi_zone": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 23.865944,
@@ -27913,7 +28309,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_monolith": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 152.05516,
@@ -27939,7 +28336,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": 59.276676,
@@ -27965,7 +28363,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -42.643276,
@@ -27991,7 +28390,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -72.04386,
@@ -28017,7 +28417,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     },
     {
       "x": -104.02021,
@@ -28043,7 +28444,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": null
     }
   ],
   "levelChangers": [
@@ -28117,7 +28519,8 @@
         "faction": "military"
       },
       "x": -154.40538,
-      "y": -381.75082,
+      "y": -29.444897,
+      "z": -381.75082,
       "locationId": 1,
       "money": 5000
     },
@@ -28159,7 +28562,8 @@
         "faction": "military"
       },
       "x": 54.94099,
-      "y": 176.51028,
+      "y": 1.2817136,
+      "z": 176.51028,
       "locationId": 1,
       "money": 5000
     },
@@ -28201,7 +28605,8 @@
         "faction": "stalker"
       },
       "x": 133.71562,
-      "y": 314.93182,
+      "y": -0.40598965,
+      "z": 314.93182,
       "locationId": 1,
       "money": 5000
     },
@@ -28233,7 +28638,8 @@
         "faction": "stalker"
       },
       "x": 13.043581,
-      "y": -68.9693,
+      "y": -1.8431578,
+      "z": -68.9693,
       "locationId": 1,
       "money": 400
     },
@@ -28275,7 +28681,8 @@
         "faction": "stalker"
       },
       "x": 134.1721,
-      "y": 310.47253,
+      "y": -0.4060018,
+      "z": 310.47253,
       "locationId": 1,
       "money": 1300
     },
@@ -28312,7 +28719,8 @@
         "faction": "stalker"
       },
       "x": 118.68908,
-      "y": 7.653573,
+      "y": -7.49428,
+      "z": 7.653573,
       "locationId": 1,
       "money": 400
     },
@@ -28354,7 +28762,8 @@
         "faction": "stalker"
       },
       "x": -206.24323,
-      "y": -142.0604,
+      "y": -20.066502,
+      "z": -142.0604,
       "locationId": 1,
       "money": 1300
     },
@@ -28386,7 +28795,8 @@
         "faction": "stalker"
       },
       "x": -84.02452,
-      "y": 110.614105,
+      "y": 0,
+      "z": 110.614105,
       "locationId": 1,
       "money": 400
     },
@@ -28418,7 +28828,8 @@
         "faction": "stalker"
       },
       "x": -89.83825,
-      "y": -70.7686,
+      "y": -4.780039,
+      "z": -70.7686,
       "locationId": 1,
       "money": 400
     },
@@ -28460,7 +28871,8 @@
         "faction": "stalker"
       },
       "x": -210.63261,
-      "y": -142.46112,
+      "y": -20.050709,
+      "z": -142.46112,
       "locationId": 1,
       "money": 1300
     },
@@ -28502,7 +28914,8 @@
         "faction": "bandit"
       },
       "x": -181.8034,
-      "y": -153.75548,
+      "y": -4.273858,
+      "z": -153.75548,
       "locationId": 2,
       "money": 5000
     },
@@ -28534,7 +28947,8 @@
         "faction": "stalker"
       },
       "x": 32.011963,
-      "y": -264.0531,
+      "y": 0.5399998,
+      "z": -264.0531,
       "locationId": 2,
       "money": 400
     },
@@ -28576,7 +28990,8 @@
         "faction": "dolg"
       },
       "x": 29.225185,
-      "y": 233.35968,
+      "y": 0.48844528,
+      "z": 233.35968,
       "locationId": 2,
       "money": 1300
     },
@@ -28618,7 +29033,8 @@
         "faction": "stalker"
       },
       "x": -62.989635,
-      "y": -213.14491,
+      "y": -2.5844245,
+      "z": -213.14491,
       "locationId": 2,
       "money": 1300
     },
@@ -28655,7 +29071,8 @@
         "faction": "stalker"
       },
       "x": -64.8,
-      "y": 9.6,
+      "y": 0.8999999,
+      "z": 9.6,
       "locationId": 2,
       "money": 1300
     },
@@ -28702,7 +29119,8 @@
         "faction": "stalker"
       },
       "x": -278.39078,
-      "y": 25.550457,
+      "y": 0.37123346,
+      "z": 25.550457,
       "locationId": 2,
       "money": 1300
     },
@@ -28734,7 +29152,8 @@
         "faction": "stalker"
       },
       "x": -36.555676,
-      "y": -209.78152,
+      "y": -0.34334373,
+      "z": -209.78152,
       "locationId": 2,
       "money": 5000
     },
@@ -28776,7 +29195,8 @@
         "faction": "stalker"
       },
       "x": -142.08574,
-      "y": 67.890114,
+      "y": 0.3923893,
+      "z": 67.890114,
       "locationId": 2,
       "money": 5000
     },
@@ -28803,7 +29223,8 @@
         "faction": "bandit"
       },
       "x": 146.41747,
-      "y": 147.29323,
+      "y": -3.4204373,
+      "z": 147.29323,
       "locationId": 2,
       "money": 5000
     },
@@ -28845,7 +29266,8 @@
         "faction": "stalker"
       },
       "x": 36.34758,
-      "y": -14.487931,
+      "y": 2.5000334,
+      "z": -14.487931,
       "locationId": 3,
       "money": 1300
     },
@@ -28887,7 +29309,8 @@
         "faction": "stalker"
       },
       "x": -197.19527,
-      "y": 86.83022,
+      "y": 2.5706885,
+      "z": 86.83022,
       "locationId": 3,
       "money": 400
     },
@@ -28929,7 +29352,8 @@
         "faction": "bandit"
       },
       "x": 6.1607533,
-      "y": -63.393265,
+      "y": 0.08187485,
+      "z": -63.393265,
       "locationId": 5,
       "money": 5000
     },
@@ -28976,7 +29400,8 @@
         "faction": "dolg"
       },
       "x": -152.8864,
-      "y": -184.00516,
+      "y": 1.1091044,
+      "z": -184.00516,
       "locationId": 5,
       "money": 1300
     },
@@ -29023,7 +29448,8 @@
         "faction": "bandit"
       },
       "x": -19.809868,
-      "y": -26.449783,
+      "y": 0.04872513,
+      "z": -26.449783,
       "locationId": 5,
       "money": 5000
     },
@@ -29065,7 +29491,8 @@
         "faction": "bandit"
       },
       "x": 39.10371,
-      "y": -85.51448,
+      "y": 4.54276,
+      "z": -85.51448,
       "locationId": 5,
       "money": 5000
     },
@@ -29086,7 +29513,8 @@
         "faction": "dolg"
       },
       "x": 47.59191,
-      "y": -58.1303,
+      "y": -2.4291124,
+      "z": -58.1303,
       "locationId": 5,
       "money": 1300
     },
@@ -29118,7 +29546,8 @@
         "faction": "stalker"
       },
       "x": 96.43429,
-      "y": -13.288811,
+      "y": 4.223022,
+      "z": -13.288811,
       "locationId": 5,
       "money": 400
     },
@@ -29150,7 +29579,8 @@
         "faction": "stalker"
       },
       "x": 149.44801,
-      "y": 69.276184,
+      "y": 0.4299748,
+      "z": 69.276184,
       "locationId": 7,
       "money": 1300
     },
@@ -29177,7 +29607,8 @@
         "faction": "stalker"
       },
       "x": 134.30544,
-      "y": 26.55203,
+      "y": -4.839762,
+      "z": 26.55203,
       "locationId": 7,
       "money": 1300
     },
@@ -29209,7 +29640,8 @@
         "faction": "stalker"
       },
       "x": 138.74332,
-      "y": 22.879158,
+      "y": -4.8240156,
+      "z": 22.879158,
       "locationId": 7,
       "money": 1300
     },
@@ -29241,7 +29673,8 @@
         "faction": "stalker"
       },
       "x": 135.10826,
-      "y": 19.707699,
+      "y": -4.824006,
+      "z": 19.707699,
       "locationId": 7,
       "money": 1300
     },
@@ -29268,7 +29701,8 @@
         "faction": "stalker"
       },
       "x": 129.89543,
-      "y": 28.121151,
+      "y": -4.844016,
+      "z": 28.121151,
       "locationId": 7,
       "money": 400
     },
@@ -29310,7 +29744,8 @@
         "faction": "dolg"
       },
       "x": 192.90877,
-      "y": 117.21825,
+      "y": -2.2888184E-05,
+      "z": 117.21825,
       "locationId": 7,
       "money": 3500
     },
@@ -29352,7 +29787,8 @@
         "faction": "dolg"
       },
       "x": 191.87218,
-      "y": 104.53237,
+      "y": 0,
+      "z": 104.53237,
       "locationId": 7,
       "money": 1300
     },
@@ -29399,7 +29835,8 @@
         "faction": "dolg"
       },
       "x": 198.02597,
-      "y": 106.33077,
+      "y": -2.4795532E-05,
+      "z": 106.33077,
       "locationId": 7,
       "money": 5000
     },
@@ -29441,7 +29878,8 @@
         "faction": "stalker"
       },
       "x": 118.936325,
-      "y": 94.892166,
+      "y": -1.7000408,
+      "z": 94.892166,
       "locationId": 7,
       "money": 5000
     },
@@ -29488,7 +29926,8 @@
         "faction": "dolg"
       },
       "x": 222.95909,
-      "y": 1.586342,
+      "y": -0.010017581,
+      "z": 1.586342,
       "locationId": 7,
       "money": 1300
     },
@@ -29530,7 +29969,8 @@
         "faction": "stalker"
       },
       "x": 172.29945,
-      "y": 101.57863,
+      "y": -2.2888184E-05,
+      "z": 101.57863,
       "locationId": 7,
       "money": 5000
     },
@@ -29582,7 +30022,8 @@
         "faction": "dolg"
       },
       "x": 171.68877,
-      "y": 121.87247,
+      "y": -2.002716E-05,
+      "z": 121.87247,
       "locationId": 7,
       "money": 5000
     },
@@ -29624,7 +30065,8 @@
         "faction": "stalker"
       },
       "x": 165.59993,
-      "y": 63.977673,
+      "y": -4.196167E-05,
+      "z": 63.977673,
       "locationId": 7,
       "money": 5000
     },
@@ -29666,7 +30108,8 @@
         "faction": "dolg"
       },
       "x": 225.38292,
-      "y": 131.61786,
+      "y": -5.248183,
+      "z": 131.61786,
       "locationId": 7,
       "money": 7500
     },
@@ -29703,7 +30146,8 @@
         "faction": "ecolog"
       },
       "x": -294.54434,
-      "y": 137.97499,
+      "y": 9.059906E-05,
+      "z": 137.97499,
       "locationId": 8,
       "money": 1300
     },
@@ -29745,7 +30189,8 @@
         "faction": "killer"
       },
       "x": -213.53583,
-      "y": 165.19176,
+      "y": -2.193451E-05,
+      "z": 165.19176,
       "locationId": 8,
       "money": 1300
     },
@@ -29777,7 +30222,8 @@
         "faction": "stalker"
       },
       "x": -259.04605,
-      "y": 90.51021,
+      "y": -5.9999995,
+      "z": 90.51021,
       "locationId": 8,
       "money": 400
     },
@@ -29804,7 +30250,8 @@
         "faction": "killer"
       },
       "x": -374.91885,
-      "y": 398.2487,
+      "y": -13.985144,
+      "z": 398.2487,
       "locationId": 9,
       "money": 5000
     },
@@ -29846,7 +30293,8 @@
         "faction": "freedom"
       },
       "x": 83.71747,
-      "y": 349.79022,
+      "y": -8.3295555,
+      "z": 349.79022,
       "locationId": 9,
       "money": 5000
     },
@@ -29883,7 +30331,8 @@
         "faction": "dolg"
       },
       "x": -231.4008,
-      "y": 44.314026,
+      "y": -12.653139,
+      "z": 44.314026,
       "locationId": 9,
       "money": 5000
     },
@@ -29915,7 +30364,8 @@
         "faction": "freedom"
       },
       "x": -178.504,
-      "y": 352.31006,
+      "y": -16.965956,
+      "z": 352.31006,
       "locationId": 9,
       "money": 5000
     },
@@ -29962,7 +30412,8 @@
         "faction": "freedom"
       },
       "x": -41.535004,
-      "y": -22.228304,
+      "y": -6.7730803,
+      "z": -22.228304,
       "locationId": 9,
       "money": 5000
     },
@@ -29994,7 +30445,8 @@
         "faction": "freedom"
       },
       "x": -55.607353,
-      "y": 29.56596,
+      "y": -10.430101,
+      "z": 29.56596,
       "locationId": 9,
       "money": 5000
     },
@@ -30031,7 +30483,8 @@
         "faction": "freedom"
       },
       "x": -76.631325,
-      "y": 27.99282,
+      "y": -11.34603,
+      "z": 27.99282,
       "locationId": 9,
       "money": 5000
     },
@@ -30058,7 +30511,8 @@
         "faction": "bandit"
       },
       "x": 102.8774,
-      "y": 163.87218,
+      "y": -8.38547,
+      "z": 163.87218,
       "locationId": 9,
       "money": 5000
     },
@@ -30100,7 +30554,8 @@
         "faction": "freedom"
       },
       "x": -216.05406,
-      "y": 204.30505,
+      "y": -21.881788,
+      "z": 204.30505,
       "locationId": 9,
       "money": 5000
     },
@@ -30142,7 +30597,8 @@
         "faction": "freedom"
       },
       "x": 91.30002,
-      "y": 53.591347,
+      "y": -3.9456334,
+      "z": 53.591347,
       "locationId": 9,
       "money": 5000
     },
@@ -30184,7 +30640,8 @@
         "faction": "stalker"
       },
       "x": -99.784744,
-      "y": 225.7968,
+      "y": -19.508024,
+      "z": 225.7968,
       "locationId": 9,
       "money": 5000
     },
@@ -30226,7 +30683,8 @@
         "faction": "stalker"
       },
       "x": -7.8983955,
-      "y": 188.13245,
+      "y": -19.397053,
+      "z": 188.13245,
       "locationId": 9,
       "money": 5000
     },
@@ -30268,7 +30726,8 @@
         "faction": "stalker"
       },
       "x": -101.0125,
-      "y": 222.62538,
+      "y": -19.06125,
+      "z": 222.62538,
       "locationId": 9,
       "money": 5000
     },
@@ -30310,7 +30769,8 @@
         "faction": "freedom"
       },
       "x": 29.293766,
-      "y": 1.770957,
+      "y": -8.871397,
+      "z": 1.770957,
       "locationId": 9,
       "money": 5000
     },
@@ -30342,7 +30802,8 @@
         "faction": "freedom"
       },
       "x": -24.990881,
-      "y": -17.063644,
+      "y": -4.1127524,
+      "z": -17.063644,
       "locationId": 9,
       "money": 5000
     },
@@ -30369,7 +30830,8 @@
         "faction": "military"
       },
       "x": 12.145308,
-      "y": -38.37732,
+      "y": 0.040094376,
+      "z": -38.37732,
       "locationId": 10,
       "money": 5000
     },
@@ -30401,7 +30863,8 @@
         "faction": "ecolog"
       },
       "x": -92.442955,
-      "y": -278.08597,
+      "y": -11.457275,
+      "z": -278.08597,
       "locationId": 10,
       "money": 5000
     },
@@ -30443,7 +30906,8 @@
         "faction": "military"
       },
       "x": 273.5144,
-      "y": -217.24178,
+      "y": 0.00024604797,
+      "z": -217.24178,
       "locationId": 13,
       "money": 5000
     },
@@ -30485,7 +30949,8 @@
         "faction": "military"
       },
       "x": 919.3738,
-      "y": -217.2628,
+      "y": -0.0975647,
+      "z": -217.2628,
       "locationId": 13,
       "money": 5000
     },
@@ -30527,7 +30992,8 @@
         "faction": "stalker"
       },
       "x": -122.665665,
-      "y": -31.512575,
+      "y": 21.589912,
+      "z": -31.512575,
       "locationId": 17,
       "money": 5000
     }

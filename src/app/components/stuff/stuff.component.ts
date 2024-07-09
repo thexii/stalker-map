@@ -19,9 +19,16 @@ export class StuffComponent {
   @Input() public allItems: Item[];
 
   public items: StuffItem[];
+  public condition: {
+    conditions: string[][],
+    communities: string[]
+  }
+
+  private actorOnLevel = /actor_on_level\(([^\)]+)\)/;
+  private npcRank = /npc_rank\(([^\)]+)\)/;
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.stuff);
+    console.log(this.stuff)
     if (this.stuff.items) {
       this.items = this.stuff.items.map(x => {
         let item = new StuffItem();
@@ -40,7 +47,38 @@ export class StuffComponent {
 
         return y.item.area - x.item.area;
       })
-      console.log(this.items);
+    }
+
+    if ((this.stuff.communities && this.stuff.communities.length > 0) || this.stuff.condlist) {
+      let conds = this.stuff.condlist.split(',');
+      this.condition = { conditions: [], communities: [] };
+
+      if (this.stuff.communities && this.stuff.communities.length > 0) {
+        this.condition.communities = this.stuff.communities;
+      }
+
+      for (let cond of conds) {
+        let sectionConditions = [];
+        if (this.actorOnLevel.test(cond)) {
+            let levelCond: RegExpExecArray | null = this.actorOnLevel.exec(cond);
+
+            if (levelCond) {
+                sectionConditions.push(levelCond[1]);
+            }
+        }
+
+        if (this.npcRank.test(cond)) {
+            let rank: RegExpExecArray | null = this.npcRank.exec(cond);
+
+            if (rank) {
+                sectionConditions.push(rank[1]);
+            }
+        }
+
+        if (sectionConditions.length > 0) {
+            this.condition.conditions.push(sectionConditions);
+        }
+      }
     }
   }
 

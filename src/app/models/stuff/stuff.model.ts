@@ -10,4 +10,7 @@ export class StuffModel {
   public locationId: number;
   public items: InventoryItem[];
   public boxConfig: string;
+
+  public condlist: string;
+  public communities: string[];
 }

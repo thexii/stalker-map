@@ -107,6 +107,13 @@ $cell: 50px;
 
 .trader-container-section {
   vertical-align: top;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.trader-container-section.section-info {
+  margin-right: 1rem;
+  flex-grow: 1;
 }
 
 .container {
@@ -114,8 +121,8 @@ $cell: 50px;
 }
 
 .container.info {
-  margin-inline: 1rem;
-  min-width: 350px;
+  margin-left: 1rem;
+  max-height: round(up, (var(--wrapper-height) / 2 ) + 150px, $cell);
 }
 
 .trader-sections-container {
@@ -157,6 +164,7 @@ $cell: 50px;
 .section {
   text-align: center;
   border: 1px solid #4d4d4d;
+  cursor: pointer;
 }
 
 .section:hover {
@@ -201,4 +209,44 @@ $cell: 50px;
 
 .condition {
   border: 1px solid grey;
+}
+
+.sections-select-container::-webkit-scrollbar-track {
+	background-color: rgba(9,10,10,1);
+  border: 1px solid #555656;
+}
+
+.sections-select-container::-webkit-scrollbar-thumb {
+	background-color:rgba(9,10,10,1);
+  border: 1px solid white;
+  margin: 3px;
+}
+
+.sections-select-container::-webkit-scrollbar {
+  border: 1px solid white;
+}
+
+.trader-container-section::-webkit-scrollbar-track {
+	background-color: rgba(9,10,10,1);
+  border: 1px solid #555656;
+}
+
+.trader-container-section::-webkit-scrollbar-thumb {
+	background-color:rgba(9,10,10,1);
+  border: 1px solid white;
+  margin: 3px;
+}
+
+.trader-container-section::-webkit-scrollbar {
+  border: 1px solid white;
+}
+
+.select-relation {
+  color: white;
+  background: transparent;
+  border: unset;
+}
+
+.select-relation option {
+  color: black;
 }

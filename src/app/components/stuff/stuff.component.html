@@ -15,6 +15,21 @@
     </div>
   </div>
 </div>
+<!--<div class="stash-conditions" *ngIf="condition">
+  <div class="stash-conditions-title">{{ 'stash-conditions-title' | translate }}</div>
+  <ng-container *ngIf="condition.conditions.length > 0">
+    <div class="conditions-list" *ngFor="let cond of condition.conditions">
+      <div class="condition-item" *ngFor="let c of cond">
+      {{ c | translate}}
+    </div>
+  </div>
+  </ng-container>
+  <div class="conditions-list" *ngIf="condition.communities.length > 0">
+    <div class="condition-item" *ngFor="let comm of condition.communities">
+      {{ comm | translate}}
+    </div>
+  </div>
+</div>-->
 <div class="bottom">
   <div class="button url-button" (click)="copyLink()">
     <span>Mark link</span>

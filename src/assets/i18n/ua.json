@@ -10,6 +10,11 @@
     "copShort": "ПП",
     "hocShort": "CЧ",
 
+    "copMapPageTitle": "Карта Поклику Прип'яті",
+    "csMapPageTitle": "Карта Чистого Неба",
+    "shocMapPageTitle": "Карта Тіней Чорнобиля",
+    "hocMapPageTitle": "Карта Серця Чорнобиля",
+
     "sub-location": "Локації",
 
     "stash": "Схованки",
@@ -41,47 +46,36 @@
     "teleport": "Телепорти",
     "st_name_teleport": "Телепорт",
 
-    "st_name_habar_in_body": "Хабар в трупі",
     "st_name_military_warehouse_title": "Армійський склад",
     "st_name_duty_warehouse_title": "Склад «Долга»",
     "st_name_duty_warehouse_desc": "Склад «Долга» в околицях Юпітера.",
-    "st_barge_corpse": "Труп Баржі",
     "st_name_joker_stuff_title": "Рештки Джокера",
 
     "anomaly-zone-no-art": "Смертельні аномалії",
     "mutants": "Небезпечні мутанти",
     "stalkers": "Анархісти і бандити",
 
-    "novice": "Новачок",
-    "experienced": "Досвідчений",
-    "veteran": "Ветеран",
-    "master": "Майстер",
-
     "traders": "Торговці",
     "trader": "Торговець",
 
     "hideAll": "Сховати все",
+    "markLink": "Посилання на мітку",
+    "search": "Пошук",
+    "default_description": "Детальна інформація відсутня.",
 
     "anomaliesCount": "Кількість аномалій: {{count}}",
     "anomalyArtMaxCount": "Максимум артефактів: {{count}}",
     "anomalyZoneArtMaxCount": "Маскимум артефактів на зону: {{count}}",
-    "markLink": "Посилання на мітку",
+
     "st_name_wrenched": "«Вивертень»",
     "st_name_fault": "Розлом",
     "st_name_burnt_farmstead": "Згорівший хутір",
     "st_name_symbiont": "«Симбіонт»",
-    "st_zat_b44_name_gravi": "Печери під хутором",
+    "st_zat_b44_name_acid": "Печери під хутором",
     "st_jup_b214_name": "Горище цеха",
     "st_pri_wa_name": "Блукаючі артефакти в Прип'яті",
     "st_jup_wa_name": "Блукаючі артефакти на Юпітері",
     "st_zat_wa_name": "Блукаючі артефакти на Затоне",
-
-    "copMapPageTitle": "Карта Поклику Прип'яті",
-    "csMapPageTitle": "Карта Чистого Неба",
-    "shocMapPageTitle": "Карта Тіней Чорнобиля",
-
-    "search": "Пошук",
-    "default_description": "Детальна інформація відсутня.",
 
     "zone_mosquito_bald": "«Трамплін»",
     "zone_mosquito_bald_weak": "«Трамплін» (слабкий)",
@@ -171,6 +165,7 @@
     "item-box-size": "Патронів в пачці: {{boxSize}}",
     "trade-count-chance": "Кількість і шанс появи",
     "trader-must-buy-item-firstly": "Предмет не з'являється в інвентарі торговця самостійно і продаватиметься тільки після покупки у гравця.",
+    "trader-do-not-buy": "Торговець не купляє нічого у гравця",
 
     "all-traders": "Всі торговці",
     "trader-sell": "Ціна продажу",
@@ -183,20 +178,15 @@
     "supply_default": "Базовий",
     "discount_default": "Без скидки",
 
-    "escape_trader_name_shoc_default": "До АТП",
-    "esc_kill_bandits_quest_done": "Після АТП",
+    "esc_kill_bandits_quest_done": "Після розмови з Вовком про зачистку АТП",
 
-    "bar_barmen_name_shoc_default": "До X-18",
     "bar_darklab_document_done": "Після X-18",
     "yan_labx16_switcher_primary_off": "Після X-16",
 
-    "yan_saharov_name_shoc_default": "До X-16",
     "yan_kill_brain_done": "Після X-16",
 
-    "bar_petrenko_name_shoc_default": "До \"Дістати «Бульдог-6» у «Волі»\"",
-    "bar_svoboda_rg6_done": "Після \"Дістати «Бульдог-6» у «Волі»\"",
+    "bar_svoboda_rg6_done": "Після доставки «Бульдога-6» Вороніну",
 
-    "mil_Svoboda_trader_name_shoc_default": "До ліквідації групи Черепа",
     "mil_lukash_dolg_task_complete": "Після ліквідації групи Черепа",
     "mil_leader_quest2_complete": "Павлик і інформатор ліквідовані",
 
@@ -207,7 +197,7 @@
     "small_box_nato": "Маленький натовський ящик",
     "small_box_science": "Маленький науковий ящик",
     "small_box_army": "Маленький армійський ящик",
-    "big_box_arsenal": "Великий арсенальний язик",
+    "big_box_arsenal": "Великий арсенальний ящик",
 
     "actor_in_stalker": "Гравець в сталкерах",
     "actor_in_dolg": "Гравець Долгівець",
@@ -221,7 +211,7 @@
 
     "zat_b29_exclusive_conditions": "«Сварог» отримано",
     "jup_a9_tech_way_info": "Шлях до Прип'яті розвідано",
-    "zat_b22_medic_respawn": "Медик зник",
+    "zat_b22_medic_respawn": "Медика роскрито",
 
     "counter_greater(jup_a6_actor_help_freedom:3)": "Тричі допоміг Волі",
     "counter_equal(jup_a6_actor_help_freedom:2)": "Двічі допоміг Волі",
@@ -232,7 +222,8 @@
     "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам",
     "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам",
 
-    "is_faction_resource_greater(stalker:5)": "Вдосталь ресурсів",
-    "is_faction_resource_greater(dolg:5)": "Вдосталь ресурсів",
-    "is_faction_resource_greater(freedom:5)": "Вдосталь ресурсів"
+    "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
+    "smart_terrain_name": "Точки інтересу сталкерів",
+    "ways_between_smart_terrains_name": "Маршрути сталкерів",
+    "anomaly_zone_artefact_way_name": "Маршрути артефактів в аномалії"
 }

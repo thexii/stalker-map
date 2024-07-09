@@ -29,6 +29,14 @@
       "isShow": true
     },
     {
+      "uniqueName": "anomaly-zone-no-art",
+      "isShow": false
+    },
+    {
+      "uniqueName": "stalkers",
+      "isShow": false
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -50,10 +58,6 @@
     },
     {
       "uniqueName": "teleport",
-      "isShow": false
-    },
-    {
-      "uniqueName": "anomaly-zone-no-art",
       "isShow": false
     }
   ],
