@@ -213,17 +213,17 @@
   "jup_a9_tech_way_info": "Way to Pripyat researched",
   "zat_b22_medic_respawn": "Medics crime has been revealed",
 
-  "counter_greater(jup_a6_actor_help_freedom:3)": "Тричі допоміг Волі",
-  "counter_equal(jup_a6_actor_help_freedom:2)": "Двічі допоміг Волі",
-  "counter_greater(jup_a6_actor_help_duty:3)": "Тричі допоміг Долгу",
-  "counter_equal(jup_a6_actor_help_duty:2)": "Двічі допоміг Долгу",
-  "counter_greater(jup_a6_actor_help_freedom:1)": "Допоміг Волі",
-  "counter_greater(jup_a6_actor_help_duty:1)": "Допоміг Долгу",
-  "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам",
-  "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам",
+  "counter_greater(jup_a6_actor_help_freedom:3)": "Helped Freedom three times",
+  "counter_equal(jup_a6_actor_help_freedom:2)": "Helped Freedom two times",
+  "counter_greater(jup_a6_actor_help_duty:3)": "Helped Duty three time",
+  "counter_equal(jup_a6_actor_help_duty:2)": "Helped Duty two time",
+  "counter_greater(jup_a6_actor_help_freedom:1)": "Helped Freedom",
+  "counter_greater(jup_a6_actor_help_duty:1)": "Helped Duty",
+  "counter_greater(jup_a6_actor_help_stalkers:1)": "Helped stalkers",
+  "counter_greater(jup_a6_actor_help_stalkers:2)": "Helped stalkers two time",
 
-  "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
-  "smart_terrain_name": "Точки інтересу сталкерів",
-  "ways_between_smart_terrains_name": "Маршрути сталкерів",
-  "anomaly_zone_artefact_way_name": "Маршрути артефактів в аномалії"
+  "is_faction_resource_greater": "Faction has enough resources",
+  "smart_terrain_name": "Camps",
+  "ways_between_smart_terrains_name": "Stalker paths",
+  "anomaly_zone_artefact_way_name": "Artefact ways in amomaly"
 }

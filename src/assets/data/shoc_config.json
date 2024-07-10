@@ -171,9 +171,9 @@
           "enabledBuies": [""]
         },
         {
-          "condition": "esc_kill_bandits_quest_done",
-          "enabledSells": ["esc_kill_bandits_quest_done"],
-          "enabledBuies": ["esc_kill_bandits_quest_done"]
+          "condition": "bar_darklab_document_done",
+          "enabledSells": ["bar_darklab_document_done"],
+          "enabledBuies": ["bar_darklab_document_done"]
         },
         {
           "condition": "yan_labx16_switcher_primary_off",
