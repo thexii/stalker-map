@@ -223,7 +223,7 @@
     "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам",
 
     "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
-    "smart_terrain_name": "Точки інтересу сталкерів",
-    "ways_between_smart_terrains_name": "Маршрути сталкерів",
-    "anomaly_zone_artefact_way_name": "Маршрути артефактів в аномалії"
+    "smart-terrains": "Точки інтересу сталкерів",
+    "smart-paths": "Маршрути сталкерів",
+    "artefact-ways": "Маршрути артефактів"
 }

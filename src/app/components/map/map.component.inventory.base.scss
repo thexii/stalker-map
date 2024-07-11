@@ -63,6 +63,31 @@
   background-size: contain
 }
 
+.stalker-search-item.smart-terrains {
+  background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.default {
+  background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.resource {
+  background: url(/assets/images/svg/marks/smart_terrain_resource.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.base {
+  background: url(/assets/images/svg/marks/smart_terrain_territory.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.smart-paths {
+  background: url(/assets/images/svg/marks/pre-mark.svg)no-repeat;
+  background-size: contain
+}
+
 .stalker-search-item.anomaly-zone-no-art {
   background: url(/assets/images/svg/marks/anomaly_noart.svg)no-repeat;
   background-size: contain

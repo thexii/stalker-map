@@ -223,7 +223,7 @@
   "counter_greater(jup_a6_actor_help_stalkers:2)": "Helped stalkers two time",
 
   "is_faction_resource_greater": "Faction has enough resources",
-  "smart_terrain_name": "Camps",
-  "ways_between_smart_terrains_name": "Stalker paths",
-  "anomaly_zone_artefact_way_name": "Artefact ways in amomaly"
+  "smart-terrains": "Camps",
+  "smart-paths": "Stalker paths",
+  "artefact-ways": "Artefact ways"
 }

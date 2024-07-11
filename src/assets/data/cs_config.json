@@ -41,6 +41,10 @@
       "isShow": false
     },
     {
+      "uniqueName": "smart-terrains",
+      "isShow": true
+    },
+    {
       "uniqueName": "smart-paths",
       "isShow": false
     },

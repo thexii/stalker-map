@@ -38,6 +38,7 @@ declare var markWidth: number;
   templateUrl: './map.component.html',
   styleUrls: [
     './map.component.inventory.base.scss',
+    './map.component.inventory.addons.scss',
     './map.component.inventory.hovers.scss',
     './map.component.scss',
   ],
@@ -383,6 +384,17 @@ export class MapComponent {
 
     let searchLayers = L.featureGroup(Object.values(this.layers));
     let translate = this.translate;
+
+    let printClickCoordinates = false;
+
+    if (printClickCoordinates) {
+        let tempMap = this.map;
+
+        this.map.on('click', function (ev: any) {
+          var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
+          console.log(`[${latlng.lat}, ${latlng.lng}]`);
+        });
+    }
 
     let searchContoller = L.control.search({
         layer: searchLayers,
@@ -1444,8 +1456,8 @@ export class MapComponent {
 
   private addSmartTerrains(isClearSky: boolean = false) {
     let smartTerrainIcon = {
-      name: this.translate.instant('smart-terrain'),
-      uniqueName: 'smart-terrain',
+      name: this.translate.instant('smart-terrains'),
+      uniqueName: 'smart-terrains',
       cssClass: 'smart-terrain',
       ableToSearch: true,
       icon: L.icon({
@@ -1481,19 +1493,19 @@ export class MapComponent {
 
       let icon = null;
 
-      if (smart.isMutantLair || smart.respawnSector == 'monster') {
-        icon = L.icon({
-          iconSize: [4, 4],
-          className: 'mark-container stalker-mark-2',
-          animate: false,
-          iconUrl: '/assets/images/svg/marks/monsters.svg',
-          iconSizeInit: [2, 2],
-          iconAnchor: [0, 0],
-        })
-      }
-      else {
-        switch (smart.simType) {
-          case "default" : {
+      switch (smart.simType) {
+        case "default" : {
+          if (smart.isMutantLair || smart.respawnSector == 'monster') {
+            icon = L.icon({
+              iconSize: [4, 4],
+              className: 'mark-container stalker-mark-2',
+              animate: false,
+              iconUrl: '/assets/images/svg/marks/monsters.svg',
+              iconSizeInit: [2, 2],
+              iconAnchor: [0, 0],
+            })
+          }
+          else {
             icon = L.icon({
               iconSize: [4, 4],
               className: 'mark-container stalker-mark-2',
@@ -1502,115 +1514,116 @@ export class MapComponent {
               iconSizeInit: [1.75, 1.75],
               iconAnchor: [0, 0],
             });
-            break;
           }
 
-          case "territory" : {
-            icon = L.icon({
-              iconSize: [4, 4],
-              className: 'mark-container stalker-mark-2',
-              animate: false,
-              iconUrl: '/assets/images/svg/marks/smart_terrain_territory.svg',
-              iconSizeInit: [2, 2],
-              iconAnchor: [0, 0],
-            });
-            break;
-          }
+          break;
+        }
 
-          case "resource" : {
-            icon = L.icon({
-              iconSize: [4, 4],
-              className: 'mark-container stalker-mark-2',
-              animate: false,
-              iconUrl: '/assets/images/svg/marks/activePoint.svg',
-              iconSizeInit: [1, 1],
-              iconAnchor: [0, 0],
-            });
-            break;
-          }
+        case "territory" : {
+          icon = L.icon({
+            iconSize: [4, 4],
+            className: 'mark-container stalker-mark-2',
+            animate: false,
+            iconUrl: '/assets/images/svg/marks/smart_terrain_territory.svg',
+            iconSizeInit: [2, 2],
+            iconAnchor: [0, 0],
+          });
+          break;
+        }
 
-          case "base" : {
-            switch (smart.respawnSector) {
-              case 'dolg': {
-                icon = L.icon({
-                  iconSize: [4, 4],
-                  className: 'mark-container stalker-mark-3',
-                  animate: false,
-                  iconUrl: '/assets/images/svg/factions/duty.svg',
-                  iconSizeInit: [2, 2],
-                  iconAnchor: [0, 0],
-                });
-                break;
-              }
-              case 'stalker': {
-                icon = L.icon({
-                  iconSize: [4, 4],
-                  className: 'mark-container stalker-mark-3',
-                  animate: false,
-                  iconUrl: '/assets/images/svg/factions/stalkers.svg',
-                  iconSizeInit: [2, 2],
-                  iconAnchor: [0, 0],
-                });
-                break;
-              }
-              case 'bandit': {
-                icon = L.icon({
-                  iconSize: [4, 4],
-                  className: 'mark-container stalker-mark-3',
-                  animate: false,
-                  iconUrl: '/assets/images/svg/factions/bandits.svg',
-                  iconSizeInit: [2, 2],
-                  iconAnchor: [0, 0],
-                });
-                break;
-              }
-              case 'army': {
-                icon = L.icon({
-                  iconSize: [4, 4],
-                  className: 'mark-container stalker-mark-3',
-                  animate: false,
-                  iconUrl: '/assets/images/svg/factions/military.svg',
-                  iconSizeInit: [2, 2],
-                  iconAnchor: [0, 0],
-                });
-                break;
-              }
-              default: {
-                if (location.uniqueName == "darkvalley") {
-                  icon = L.icon({
-                    iconSize: [4, 4],
-                    className: 'mark-container stalker-mark-2',
-                    animate: false,
-                    iconUrl: '/assets/images/svg/factions/freedom.svg',
-                    iconSizeInit: [2, 2],
-                    iconAnchor: [0, 0],
-                  })
-                }
-                else if (location.uniqueName == "marsh") {
-                  icon = L.icon({
-                    iconSize: [4, 4],
-                    className: 'mark-container stalker-mark-2',
-                    animate: false,
-                    iconUrl: '/assets/images/svg/factions/clear-sky.svg',
-                    iconSizeInit: [2, 2],
-                    iconAnchor: [0, 0],
-                  })
-                }
-                else {
-                  icon = L.icon({
-                    iconSize: [4, 4],
-                    className: 'mark-container stalker-mark-2',
-                    animate: false,
-                    iconUrl: '/assets/images/svg/marks/monsters.svg',
-                    iconSizeInit: [1, 1],
-                    iconAnchor: [0, 0],
-                  })
-                }
-                break;
-              }
+        case "resource" : {
+          icon = L.icon({
+            iconSize: [4, 4],
+            className: 'mark-container stalker-mark-2',
+            animate: false,
+            iconUrl: '/assets/images/svg/marks/smart_terrain_resource.svg',
+            iconSizeInit: [2, 2],
+            iconAnchor: [0, 0],
+          });
+          break;
+        }
+
+        case "base" : {
+          switch (smart.respawnSector) {
+            case 'dolg': {
+              icon = L.icon({
+                iconSize: [4, 4],
+                className: 'mark-container stalker-mark-3',
+                animate: false,
+                iconUrl: '/assets/images/svg/factions/duty.svg',
+                iconSizeInit: [2, 2],
+                iconAnchor: [0, 0],
+              });
+              break;
             }
-            break;
+            case 'stalker': {
+              icon = L.icon({
+                iconSize: [4, 4],
+                className: 'mark-container stalker-mark-3',
+                animate: false,
+                iconUrl: '/assets/images/svg/factions/stalkers.svg',
+                iconSizeInit: [2, 2],
+                iconAnchor: [0, 0],
+              });
+              break;
+            }
+            case 'bandit': {
+              icon = L.icon({
+                iconSize: [4, 4],
+                className: 'mark-container stalker-mark-3',
+                animate: false,
+                iconUrl: '/assets/images/svg/factions/bandits.svg',
+                iconSizeInit: [2, 2],
+                iconAnchor: [0, 0],
+              });
+              break;
+            }
+            case 'army': {
+              icon = L.icon({
+                iconSize: [4, 4],
+                className: 'mark-container stalker-mark-3',
+                animate: false,
+                iconUrl: '/assets/images/svg/factions/military.svg',
+                iconSizeInit: [2, 2],
+                iconAnchor: [0, 0],
+              });
+              break;
+            }
+            default: {
+              if (location.uniqueName == "darkvalley") {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-2',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/freedom.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                })
+              }
+              else if (location.uniqueName == "marsh") {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-2',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/clear-sky.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                })
+              }
+              else {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-2',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/marks/monsters.svg',
+                  iconSizeInit: [1, 1],
+                  iconAnchor: [0, 0],
+                })
+              }
+              break;
+            }
           }
+          break;
         }
       }
 
@@ -1668,6 +1681,21 @@ export class MapComponent {
 
                 if (targetSmart.targets?.includes(smart.name) && handledSmartTerrains.includes(target)) {
                   continue;
+                }
+
+                if (smart.name == "mil_smart_terrain_2_2" && targetSmart.name == "red_smart_terrain_3_1") {
+                  latlngs = [];
+                  latlngs.push([location.y2       + markerY * dy, location.x1       + markerX * dx]);
+
+                  latlngs.push([1091.7000007629395, 433.02499997615814]);
+                  latlngs.push([1194.9500007629395, 428.27499997615814]);
+                  latlngs.push([1259.900001525879, 389.7999999523163]);
+                  latlngs.push([1261.650001525879, 277.7999999523163]);
+                  latlngs.push([1246.150001525879, 271.0499999523163]);
+                  latlngs.push([1236.900001525879, 274.2999999523163]);
+                  latlngs.push([1230.900001525879, 260.0499999523163]);
+
+                  latlngs.push([targetLocation.y2 + targetY * tdy, targetLocation.x1 + targetX * tdx]);
                 }
 
                 var polyline = L.polyline(latlngs, {color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : null});

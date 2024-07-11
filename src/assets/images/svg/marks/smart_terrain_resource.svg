@@ -2,6 +2,8 @@
 <svg style="pointer-events: fill;" viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
 		<line id="line" stroke-width='7' stroke="yellow" x1="64" y1="14" x2="64" y2="5" />
+		<polyline id="line2" stroke-width='1' fill="yellow" stroke="#e3c3a7" 
+		points="40,40 64,29 88,40 88,60 64,49 40,60 40,40" />
 	</defs>
 	<circle cx="64" cy="64" r="45" stroke="yellow" fill="none" stroke-width="5"/>
 	
@@ -17,7 +19,8 @@
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-90,64,64)"/>
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-120,64,64)"/>
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-150,64,64)"/>
+
+	<use x='0' y ='0' xlink:href='#line2' />
+	<use x='0' y ='30' xlink:href='#line2' />
 	
-	<polyline stroke-width='1' fill="yellow" stroke="#e3c3a7" 
-	points="40,40 40,80 64,95 88,80 88,40 64,50" />
 </svg>
