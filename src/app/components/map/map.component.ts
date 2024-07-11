@@ -38,10 +38,6 @@ declare var markWidth: number;
   templateUrl: './map.component.html',
   styleUrls: [
     './map.component.inventory.base.scss',
-    './map.component.inventory.items.scss',
-    './map.component.inventory.quest.scss',
-    './map.component.inventory.artefacts.scss',
-    './map.component.inventory.weapon.scss',
     './map.component.inventory.hovers.scss',
     './map.component.scss',
   ],

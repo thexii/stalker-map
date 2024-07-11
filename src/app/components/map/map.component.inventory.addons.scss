@@ -1,0 +1,47 @@
+.wpn_lr300, .wpn_lr300_m1, .wpn_sig550,
+.wpn_sig_m1, .wpn_sig_m2 {
+  .wpn_addon.scope {
+    background-position: left -550px top -900px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.wpn_abakan .wpn_addon.scope,
+.wpn_abakan_m1 .wpn_addon.scope,
+.wpn_abakan_m2 .wpn_addon.scope {
+  background-position: left -500px top -850px;
+  width: 100px;
+  height: 50px;
+}
+
+.wpn_addon.silencer
+{
+  background-position: left -900px top -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.wpn_abakan , .wpn_abakan_m1, .wpn_abakan_m2,
+.wpn_ak74, .wpn_ak74_m1 {
+.wpn_addon.grenade-launcher{
+    background-position: left -900px top 0px;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.wpn_lr300 , .wpn_lr300_m1, .wpn_sig550,
+.wpn_sig_m1, .wpn_sig_m2{
+  .wpn_addon.grenade-launcher{
+    background-position: left -850px top -150px;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.wpn_vintorez, .wpn_val, .wpn_pb {
+  .wpn_addon.silencer {
+    display: none;
+  }
+}
