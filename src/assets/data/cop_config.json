@@ -29,6 +29,18 @@
       "isShow": true
     },
     {
+      "uniqueName": "anomaly-zone-no-art",
+      "isShow": false
+    },
+    {
+      "uniqueName": "mutants",
+      "isShow": false
+    },
+    {
+      "uniqueName": "stalkers",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -51,18 +63,6 @@
     {
       "uniqueName": "teleport",
       "isShow": false
-    },
-    {
-      "uniqueName": "anomaly-zone-no-art",
-      "isShow": false
-    },
-    {
-      "uniqueName": "mutants",
-      "isShow": false
-    },
-    {
-      "uniqueName": "stalkers",
-      "isShow": true
     }
   ],
   "minZoom": 0,
@@ -178,7 +178,8 @@
       "trader": "jup_a6_stalker_barmen",
       "sell": [],
       "buy": [],
-      "supply": []
+      "supply": [],
+      "discount": []
     },
     {
       "trader": "jup_a6_stalker_medik",

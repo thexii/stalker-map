@@ -123,7 +123,15 @@ export class TraderComponent {
 
       section.sectionConditions = x.sectionConditions;
       section.conditions = section.sectionConditions.split(' ');
-      section.conditions = section.conditions.map(x => x.replace('+', '').replace('=', ''))
+      section.conditions = section.conditions.map(x => {
+        let value = x.replace('+', '').replace('=', '');
+
+        if (this.is_faction_resource_greater_regex.test(value)) {
+          value = (this.is_faction_resource_greater_regex.exec(value) as RegExpExecArray)[1];
+        }
+
+        return value;
+      });
 
       section.items = x.items.map(y => {
         let item = new TraderSupplyItemView();
@@ -423,8 +431,8 @@ export class TraderComponent {
             bestSell.push(traderSell[0]);
           }
           else {
-            //traderSell[0].conditionSell = '';
-            //traderSell[0].conditionSupply = [''];
+            traderSell[0].conditionSell = '';
+            traderSell[0].conditionSupply = [''];
             bestSell.push(traderSell[0]);
           }
         }

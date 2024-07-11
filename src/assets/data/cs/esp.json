@@ -878,5 +878,9 @@
   "is_freedom_at_expansion_3_or_higher": "Controlamos el camino a Agroprom.",
   "enemy": "enemigo",
   "neutral": "neutral",
-  "friend": "amigo"
+  "friend": "amigo",
+  "novice": "Novato",
+  "experienced": "Experimentado",
+  "veteran": "veteran",
+  "master": "maestro"
 }

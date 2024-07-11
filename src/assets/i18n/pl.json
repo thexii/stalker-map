@@ -1,12 +1,44 @@
 {
+    "mainTitle": "Interaktywna mapa dla serii gier S.T.A.L.K.E.R.",
     "shoc": "Сień Czarnobyla",
     "cs": "Czyste Niebo",
     "cop": "Zew Prypeci",
+    "hoc": "Серце Чорнобиля",
+
+    "shocShort": "СС",
+    "csShort": "CzN",
+    "copShort": "ZP",
+    "hocShort": "CЧ",
+
+    "copMapPageTitle": "Lokacje Zewu Prypeci",
+    "csMapPageTitle": "Lokacje Czystego Nieba",
+    "shocMapPageTitle": "Lokacje Cieni Czarnobyla",
+    "hocMapPageTitle": "Карта Серця Чорнобиля",
+
     "sub-location": "Lokacje",
+
+    "stash": "Schowki",
+    "st_stash": "Schowek",
+    "st_monolith_stuff_title": "Schowek Monolitu",
+
+    "quest": "Kwestowy łup",
+    "stuff": "Łup",
+    "st_name_habar": "Łup",
+    "stuff_at_location": "Łup na lokacji",
+    "inventory_box": "Łup w skrzyni",
+
+    "destroyable-box": "Łup w skrzyniach",
+    "loot-box-cluster": "Łup w skrzyniach",
+
+    "anomaly-zone": "Źródło artefaktów",
+    "st_name_anomal_zone": "Skupisko anomalii",
+    "anomalySpawnsArtefacts": "Anomalna strefa formuje artefakty",
+
     "acidic": "Obszar kwasowy",
     "psychic": "Promieniowanie psioniczne",
     "radioactive": "Radioaktywność",
     "st_name_radioactive_contamination": "Skażenie promieniotwórcze",
+
     "thermal": "Obszar termiczny",
     "mines": "Miny",
     "st_name_mines": "Miny",
@@ -14,89 +46,36 @@
     "teleport": "Teleporty",
     "st_name_teleport": "Teleport",
 
-    "stash": "Schowki",
-    "st_stash": "Schowek",
-    "st_monolith_stuff_title": "Schowek Monolitu",
-
-    "quest": "Kwestowy łup",
-
-    "stuff": "Łup",
-    "st_name_habar": "Łup",
-    "st_name_habar_desc": "Łup na lokacji",
-    "st_name_habar_in_body": "Łup w trupie",
     "st_name_military_warehouse_title": "Magazyn Wojskowy",
     "st_name_duty_warehouse_title": "Magazyn Powinności",
     "st_name_duty_warehouse_desc": "Magazyn Powinności na Jupiterze",
-    "st_barge_corpse": "Trup Stoga",
     "st_name_joker_stuff_title": "Szczątki Kawalarza",
 
-    "anomaly-zone": "Źródło artefaktów",
-    "st_name_anomal_zone": "Skupisko anomalii",
-    "st_name_anomaly_zone_with_arts": "Anomalna strefa formuje artefakty",
-
-    "anomaly-zone-no-art": "Obszary anomalne",
-
-    "destroyable-box": "Łup w skrzyniach",
-    "physic_destroyable_object": "Skrzynia z łupem",
-    "st_name_habar_in_box": "Łup w skrzyni",
-    "st_name_habar_in_box_desc": "Łup w skrzyni",
-
-    "escape": "Kordon",
-    "garbage": "Wysypisko",
-    "agroprom": "Instytut Agroprom",
-    "darkvalley": "Dolina Mroku",
-    "dark_valley": "Dolina Mroku",
-    "bar": "Bar",
-    "rostok": "Dzicz",
-    "military": "Magazyny Wojskowe",
-    "yantar": "Jantar",
-    "radar": "Mózgozwęglacz", 
-    "pripyat": "Prypeć",
-    "stancia": "CzAES",
-    "stancia_2": "CzAES 2",
-    "hospital": "Opuszczony szpital",
-    "limansk": "Limańsk",
-    "marsh": "Wielkie Bagna",
-    "red_forest": "Czerwony Las",
-    "zaton": "Zaton",
-    "jupiter": "Jupiter",
+    "anomaly-zone-no-art": "Смертельные аномалии",
+    "mutants": "Опасные мутанты",
+    "stalkers": "Анархисты и бандиты",
 
     "traders": "Handlarze",
     "trader": "Handlarz",
-    "stalker": "Samotnik",
-    "duty": "Powinność",
-    "freedom": "Wolność",
-    "bandit": "Bandyt",
-    "science": "Naukowcy",
 
     "hideAll": "Ukryj wszystko",
+    "markLink": "Skopiuj link",
+    "search": "Wyszukaj",
+    "default_description": "Brak szczegółowych informacji.",
 
-    "anomaliesConcentration": "Skupisko anomalii",
-    "anomalySpawnsArtefacts": "Anomalna strefa formuje artefakty",
     "anomaliesCount": "Ilość anomalii: {{count}}",
     "anomalyArtMaxCount": "Maksymalnie artefaktów: {{count}}",
     "anomalyZoneArtMaxCount": "Maksymalnie artefaktów w strefie: {{count}}",
-    "markLink": "Skopiuj link",
+
     "st_name_wrenched": "Skrętak",
     "st_name_fault": "Rozpadlina",
     "st_name_burnt_farmstead": "Spalone gospodarstwo",
     "st_name_symbiont": "Symbiont",
-    "st_zat_b44_name_gravi": "Jaskinie pod spalonym gospodarstwem",
+    "st_zat_b44_name_acid": "Jaskinie pod spalonym gospodarstwem",
     "st_jup_b214_name": "Magazyny podstacji",
-    "st_pri_b302_name": "Wulkan",
-    "st_pri_b307_name": "Anomalia Winorośl",
-
-    "copMapPageTitle": "Lokacje Zewu Prypeci",
-    "csMapPageTitle": "Lokacje Czystego Nieba",
-    "shocMapPageTitle": "Lokacje Cieni Czarnobyla",
-
-    "shocShort": "СС",
-    "csShort": "CzN",
-    "copShort": "ZP",
-
-    "mainTitle": "Interaktywna mapa dla serii gier S.T.A.L.K.E.R.",
-    "search": "Wyszukaj",
-    "default_description": "Brak szczegółowych informacji.",
+    "st_pri_wa_name": "Блукаючі артефакти в Прип'яті",
+    "st_jup_wa_name": "Блукаючі артефакти на Юпітері",
+    "st_zat_wa_name": "Блукаючі артефакти на Затоне",
 
     "zone_mosquito_bald": "Trampolina",
     "zone_mosquito_bald_weak": "Trampolina (słaby)",
@@ -172,7 +151,6 @@
     "zone_mine_static_strong": "Elektro",
     "zone_no_gravity": "Winda",
 
-    "anomaliesCluster": "Skupisko anomalii",
     "meterShort": "m",
     "azimuth": "Azymut: ",
     "length": "Odległość: ",
@@ -187,44 +165,65 @@
     "item-box-size": "Pocisków w opakowaniu: {{boxSize}}",
     "trade-count-chance": "Ilość oraz szansa pojawienia się",
     "trader-must-buy-item-firstly": "Handlarz będzie sprzedawał ten przedmiot dopiero po zakupie od gracza.",
+    "trader-do-not-buy": "Торговець не купляє нічого у гравця",
 
-    "hero-name": {
-      "shoc": "Naznaczony"
-    },
+    "all-traders": "Wszystkie Handlarze",
+    "trader-sell": "Ціна продажу",
+    "trader-buy": "Ціна покупки",
+    "trader-supply": "Асортимент",
+    "discounts": "Скидки",
 
-    "bar_barman": {
-      "name": "Barman",
-      "": "Przed zabraniem dokumentów w X-18",
-      "bar_darklab_document_done": "Po zabraniu dokumentów w X-18",
-      "yan_labx16_switcher_primary_off": "Po wyłączeniu instalacji w X-16"
-    },
+    "sell_default": "Базова",
+    "buy_default": "Базова",
+    "supply_default": "Базовий",
+    "discount_default": "Без скидки",
 
-    "mil_Svoboda_trader": {
-      "name": "Kutwa",
-      "": "Przed likwidacją grupy Czachy",
-      "mil_lukash_dolg_task_complete": "Czacha oraz grupa zlikwidowane",
-      "mil_leader_quest2_complete": "Pawlik oraz informator zlikwidowane"
-    },
+    "esc_kill_bandits_quest_done": "Po rozmowie z Wilkiem na temat szturmu stacji pojazdów",
 
-    "bar_dolg_petrenko": {
-      "name": "Petrenko",
-      "": "Przed wykonaniem \"Odzyskać Buldog 6 od Wolności\"",
-      "bar_svoboda_rg6_done": "Po wykonaniu \"Odzyskać Buldog 6 od Wolności\""
-    },
+    "bar_darklab_document_done": "Po zabraniu dokumentów w X-18",
+    "yan_labx16_switcher_primary_off": "Po wyłączeniu instalacji w X-16",
 
-    "yan_sakharov": {
-      "name": "Prof. Sacharow",
-      "": "Przed wyłączeniem instalacji w X-16",
-      "yan_kill_brain_done": "Po wyłączeniu instalacji w X-16"
-    },
+    "yan_kill_brain_done": "Po wyłączeniu instalacji w X-16",
 
-    "esc_trader": {
-      "name": "Sidorowicz",
-      "": "Przed rozmową z Wilkiem na temat szturmu stacji pojazdów",
-      "esc_kill_bandits_quest_done": "Po rozmowie z Wilkiem na temat szturmu stacji pojazdów"
-    },
+    "bar_svoboda_rg6_done": "Po wykonaniu \"Odzyskać Buldog 6 od Wolności\"",
 
-    "all-traders": {
-      "name": "Wszystkie Handlarze"
-    }
+    "mil_lukash_dolg_task_complete": "Czacha oraz grupa zlikwidowane",
+    "mil_leader_quest2_complete": "Pawlik oraz informator zlikwidowane",
+
+    "big_box_generic": "Дерев'яний ящик",
+    "small_box_generic": "Маленький звичайний ящик",
+    "big_box_dungeons": "Ящик з цінним хабаром",
+    "small_box_ussr": "Маленький радянський ящик",
+    "small_box_nato": "Маленький натовський ящик",
+    "small_box_science": "Маленький науковий ящик",
+    "small_box_army": "Маленький армійський ящик",
+    "big_box_arsenal": "Великий арсенальний ящик",
+
+    "actor_in_stalker": "Гравець в сталкерах",
+    "actor_in_dolg": "Гравець Долгівець",
+    "actor_in_freedom": "Гравець в Волі",
+    "is_faction_friend_to_actor(bandit)": "Друг Бандитів",
+    "is_faction_friend_to_actor(csky)": "Друг Чистого Неба",
+    "is_faction_friend_to_actor(stalker)": "Друг сталкерів",
+
+    "esc_bring_habar_complete": "Після повернення кейса",
+    "gar_story_got_info_from_digger": "Інформація від діггерів отримана",
+
+    "zat_b29_exclusive_conditions": "«Сварог» отримано",
+    "jup_a9_tech_way_info": "Шлях до Прип'яті розвідано",
+    "zat_b22_medic_respawn": "Медика роскрито",
+
+    "counter_greater(jup_a6_actor_help_freedom:3)": "Тричі допоміг Волі",
+    "counter_equal(jup_a6_actor_help_freedom:2)": "Двічі допоміг Волі",
+    "counter_greater(jup_a6_actor_help_duty:3)": "Тричі допоміг Долгу",
+    "counter_equal(jup_a6_actor_help_duty:2)": "Двічі допоміг Долгу",
+    "counter_greater(jup_a6_actor_help_freedom:1)": "Допоміг Волі",
+    "counter_greater(jup_a6_actor_help_duty:1)": "Допоміг Долгу",
+    "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам",
+    "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам",
+
+    "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
+    "smart_terrain_name": "Точки інтересу сталкерів",
+    "ways_between_smart_terrains_name": "Маршрути сталкерів",
+    "anomaly_zone_artefact_way_name": "Маршрути артефактів в аномалії"
 }

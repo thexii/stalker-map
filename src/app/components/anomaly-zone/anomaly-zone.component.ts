@@ -25,6 +25,7 @@ export class AnomalyZoneComponent {
   public anomalies: {anomaly: string, count: number}[];
 
   private async ngOnInit(): Promise<void> {
+
     if (this.anomalZone.anomaliySpawnSections?.length > 0) {
       this.spawnSections = [];
 

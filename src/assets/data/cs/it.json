@@ -277,5 +277,9 @@
   "is_freedom_at_expansion_3_or_higher": "Controlliamo la strada per l\u0027Agroprom",
   "enemy": "Nemico",
   "neutral": "neutrale",
-  "friend": "amico"
+  "friend": "amico",
+  "novice": "Novellino",
+  "experienced": "Esperto",
+  "veteran": "Veterano",
+  "master": "Maestro"
 }

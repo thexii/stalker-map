@@ -26,6 +26,7 @@ import { AnomalySpawnSection } from '../../models/anomaly-zone';
 import { StalkerComponent } from '../stalker/stalker.component';
 import { MapConfig } from '../../models/gamedata/map-config';
 import { TraderSectionsConfig } from '../../models/trader/trader-sections-config.model';
+import { SmartTerrain } from '../../models/smart-terrain.model';
 
 declare const L: any;
 declare var markWidth: number;
@@ -132,6 +133,12 @@ export class MapComponent {
       await this.addScript(
         '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
       );
+      await this.addScript(
+        '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
+      );
+      await this.addScript(
+        '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
+      );
       console.log('Leaflet is loaded');
     }
 
@@ -218,7 +225,6 @@ export class MapComponent {
 
   private async ngOnDestroy(): Promise<void> {
     if (this.map) {
-      console.log('remove');
       this.map.remove();
       this.map = null;
     }
@@ -342,6 +348,10 @@ export class MapComponent {
 
     if (this.gamedata.traders && this.gamedata.traders.length > 0) {
         this.addStalkers();
+    }
+
+    if (this.gamedata.smartTerrains && this.gamedata.smartTerrains.length > 0) {
+        this.addSmartTerrains(this.gamedata.id == 2);
     }
 
     let layersToHide = [];
@@ -662,9 +672,9 @@ export class MapComponent {
               this.translate
             );
 
-            if (stuff.properties.stuff.name == 'st_monolith_stuff_title') {
+            /*if (stuff.properties.stuff.name == 'st_monolith_stuff_title') {
               console.log(stuff.feature.properties.search);
-            }
+            }*/
 
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
@@ -687,8 +697,6 @@ export class MapComponent {
         this.addToCanvas(geoMarks, markType);
       }
     }
-
-    console.log(buggedStrings);
   }
 
   private addLootBoxes() {
@@ -1094,14 +1102,14 @@ export class MapComponent {
           this.translate
         );
 
-        /*if (zone.artefactWays && zone.artefactWays.length > 0) {
+        if (zone.artefactWays && zone.artefactWays.length > 0) {
             for (let way of zone.artefactWays) {
 
                 let latlngs: any[] = [];//= way.points.map(x => [x.z, x.x]);
 
                 for (let point of way.points) {
                     let px = 0.5 - location.xShift + point.x / location.widthInMeters;
-                    let py = 0.5 - location.xShift + point.z / location.widthInMeters;
+                    let py = 0.5 - location.yShift + point.z / location.heightInMeters;
 
                     latlngs.push(
                         [
@@ -1112,9 +1120,9 @@ export class MapComponent {
                 }
 
                 latlngs.push(latlngs[0]);
-                var polyline = L.polyline(latlngs, {color: 'red', weight: 3}).addTo(this.map);
+                var polyline = L.polyline(latlngs, {color: 'green', weight: 1}).addTo(this.map);
             }
-        }*/
+        }
 
         anomalies.features.push(canvasMarker);
 
@@ -1289,7 +1297,7 @@ export class MapComponent {
       this.createProperty(
         canvasMarker.feature.properties,
         'search',
-        [trader.profile.name + '.name'],
+        [trader.profile.name],
         this.translate
       );
 
@@ -1433,6 +1441,269 @@ export class MapComponent {
     this.addToCanvas(stalkers, stalkerIcon);
   }
 
+  private addSmartTerrains(isClearSky: boolean = false) {
+    let smartTerrainIcon = {
+      name: this.translate.instant('smart-terrain'),
+      uniqueName: 'smart-terrain',
+      cssClass: 'smart-terrain',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/sub-location.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let smartTerrains: any = {};
+    smartTerrains.type = 'FeatureCollection';
+    smartTerrains.features = [];
+
+    let handledSmartTerrains: string[] = [];
+
+    for (let smart of this.gamedata.smartTerrains) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == smart.locationId) as Location;
+
+      if (location.isUnderground) {
+        continue;
+      }
+
+      let markerX: number = 0.5 - location.xShift + smart.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + smart.z / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let icon = null;
+
+      if (smart.isMutantLair || smart.respawnSector == 'monster') {
+        icon = L.icon({
+          iconSize: [4, 4],
+          className: 'mark-container stalker-mark-2',
+          animate: false,
+          iconUrl: '/assets/images/svg/marks/monsters.svg',
+          iconSizeInit: [2, 2],
+          iconAnchor: [0, 0],
+        })
+      }
+      else {
+        switch (smart.simType) {
+          case "default" : {
+            icon = L.icon({
+              iconSize: [4, 4],
+              className: 'mark-container stalker-mark-2',
+              animate: false,
+              iconUrl: '/assets/images/svg/marks/smart_terrain_default.svg',
+              iconSizeInit: [1.75, 1.75],
+              iconAnchor: [0, 0],
+            });
+            break;
+          }
+
+          case "territory" : {
+            icon = L.icon({
+              iconSize: [4, 4],
+              className: 'mark-container stalker-mark-2',
+              animate: false,
+              iconUrl: '/assets/images/svg/marks/smart_terrain_territory.svg',
+              iconSizeInit: [2, 2],
+              iconAnchor: [0, 0],
+            });
+            break;
+          }
+
+          case "resource" : {
+            icon = L.icon({
+              iconSize: [4, 4],
+              className: 'mark-container stalker-mark-2',
+              animate: false,
+              iconUrl: '/assets/images/svg/marks/activePoint.svg',
+              iconSizeInit: [1, 1],
+              iconAnchor: [0, 0],
+            });
+            break;
+          }
+
+          case "base" : {
+            switch (smart.respawnSector) {
+              case 'dolg': {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-3',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/duty.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                });
+                break;
+              }
+              case 'stalker': {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-3',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/stalkers.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                });
+                break;
+              }
+              case 'bandit': {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-3',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/bandits.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                });
+                break;
+              }
+              case 'army': {
+                icon = L.icon({
+                  iconSize: [4, 4],
+                  className: 'mark-container stalker-mark-3',
+                  animate: false,
+                  iconUrl: '/assets/images/svg/factions/military.svg',
+                  iconSizeInit: [2, 2],
+                  iconAnchor: [0, 0],
+                });
+                break;
+              }
+              default: {
+                if (location.uniqueName == "darkvalley") {
+                  icon = L.icon({
+                    iconSize: [4, 4],
+                    className: 'mark-container stalker-mark-2',
+                    animate: false,
+                    iconUrl: '/assets/images/svg/factions/freedom.svg',
+                    iconSizeInit: [2, 2],
+                    iconAnchor: [0, 0],
+                  })
+                }
+                else if (location.uniqueName == "marsh") {
+                  icon = L.icon({
+                    iconSize: [4, 4],
+                    className: 'mark-container stalker-mark-2',
+                    animate: false,
+                    iconUrl: '/assets/images/svg/factions/clear-sky.svg',
+                    iconSizeInit: [2, 2],
+                    iconAnchor: [0, 0],
+                  })
+                }
+                else {
+                  icon = L.icon({
+                    iconSize: [4, 4],
+                    className: 'mark-container stalker-mark-2',
+                    animate: false,
+                    iconUrl: '/assets/images/svg/marks/monsters.svg',
+                    iconSizeInit: [1, 1],
+                    iconAnchor: [0, 0],
+                  })
+                }
+                break;
+              }
+            }
+            break;
+          }
+        }
+      }
+
+      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: icon,
+      });
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.smart = smart;
+      canvasMarker.properties.name = smart.localeName;
+      canvasMarker.properties.typeUniqueName = smart.simType;
+      smartTerrains.features.push(canvasMarker);
+
+      canvasMarker.properties.ableToSearch = false;
+      canvasMarker.feature = {};
+      canvasMarker.feature.properties = {};
+
+      let propertiesToSearch: string[] = [smart.localeName];
+
+      this.createProperty(
+        canvasMarker.feature.properties,
+        'search',
+        propertiesToSearch,
+        this.translate
+      );
+
+      if (smart.targets && smart.targets.length > 0) {
+          for (let target of smart.targets) {
+              let targetSmart: SmartTerrain = this.gamedata.smartTerrains.find(x => x.name == target) as SmartTerrain;
+
+              if (target) {
+                let targetLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == targetSmart.locationId) as Location;
+
+                let notSameLocation = location !== targetLocation;
+
+                if (targetLocation.isUnderground) {
+                  continue;
+                }
+
+                let targetX: number = 0.5 - targetLocation.xShift + targetSmart.x / targetLocation.widthInMeters;
+                let targetY: number = 0.5 - targetLocation.yShift + targetSmart.z / targetLocation.heightInMeters;
+
+                let tdx: number = targetLocation.x2 - targetLocation.x1;
+                let tdy: number = targetLocation.y1 - targetLocation.y2;
+                let latlngs: any[] = [];
+
+                latlngs.push([location.y2       + markerY * dy, location.x1       + markerX * dx]);
+                latlngs.push([targetLocation.y2 + targetY * tdy, targetLocation.x1 + targetX * tdx]);
+
+                let color = 'blue';
+
+                if (targetSmart.targets?.includes(smart.name)) {
+                  color = 'red';
+                }
+
+                if (targetSmart.targets?.includes(smart.name) && handledSmartTerrains.includes(target)) {
+                  continue;
+                }
+
+                var polyline = L.polyline(latlngs, {color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : null});
+
+                if (color == 'blue') {
+                  polyline.arrowheads({size: '20px', fill: true, proportionalToTotal: false})
+                }
+
+                polyline.addTo(this.map)
+              }
+          }
+
+          handledSmartTerrains.push(smart.name);
+      }
+
+      canvasMarker.properties.locationUniqueName = location.uniqueName;
+
+      canvasMarker.bindTooltip(
+        (marker: any) =>
+          this.translate.instant(smart.localeName),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+
+      /*canvasMarker
+        .bindPopup(
+          (stalker: any) =>
+            this.createStalkerPopup(stalker),
+          { maxWidth: 500 }
+        )
+        .openPopup();*/
+    }
+
+    this.addToCanvas(smartTerrains, smartTerrainIcon);
+  }
+
   private addToCanvas(geoMarks: any, markType: any) {
     let marksLayer = L.geoJSON(geoMarks);
     marksLayer.ableToSearch = markType.ableToSearch ?? false;
@@ -1473,15 +1744,6 @@ export class MapComponent {
   }
 
   private createeAnomalyZonePopup(zone: any) {
-    const analytics = getAnalytics();
-    logEvent(analytics, 'open-anomaly-zone-popup', {
-      type: zone.properties.typeUniqueName,
-      location: zone.properties.locationUniqueName,
-      coordinates: `${zone._latlng.lat} ${zone._latlng.lng}`,
-      game: this.game,
-      language: this.translate.currentLang,
-    });
-
     zone.getPopup().on('remove', function () {
       zone.getPopup().off('remove');
       componentRef.destroy();

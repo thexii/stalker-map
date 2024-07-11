@@ -152,7 +152,9 @@
                       {{buy.traderName | translate}}
                     </div>
                     <div class="best-trade-trader-condition" *ngIf="buy.conditionSell">
-                      {{ buy.conditionSell | translate}}
+                      <div *ngFor="let cond of buy.conditionSell">
+                        {{ cond | translate}}
+                      </div>
                     </div>
                   </td>
                 </tr>

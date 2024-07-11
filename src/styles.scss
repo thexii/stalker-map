@@ -197,6 +197,17 @@ input[type=checkbox]+label:before {
     }
 }
 
+@for $i from 1 through 10 {
+    .inventory-item-width-#{$i} {
+      grid-column: span $i;
+    }
+
+    .inventory-item-height-#{$i} {
+      grid-row: span $i;
+      height: $i * 50px
+    }
+}
+
 .stalker-avatar.shoc {
   background-image: url(/assets/images/shoc_npc_unique.png)
 }

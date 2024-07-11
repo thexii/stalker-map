@@ -2,7 +2,7 @@
   "markersConfig": [
     {
       "uniqueName": "sub-location",
-      "isShow": true
+      "isShow": false
     },
     {
       "uniqueName": "stash",

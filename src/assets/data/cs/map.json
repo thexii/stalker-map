@@ -19000,7 +19000,7 @@
       "isMedic": false,
       "profile": {
         "name": "agr_barman_name",
-        "bio": "\u041A\u0440\u0443\u0433\u043B\u043E\u043B\u0438\u0446\u044B\u0439 \u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C. \u0425\u043E\u0440\u043E\u0448\u0438\u0439 \u0438 \u0441\u043F\u043E\u043A\u043E\u0439\u043D\u044B\u0439 \u0431\u043E\u0435\u0446, \u043F\u0440\u0435\u0434\u0430\u043D\u043D\u044B\u0439 \u00AB\u0414\u043E\u043B\u0433\u0443\u00BB.",
+        "bio": "\u043A\u0440\u0443\u0433\u043B\u043E\u043B\u0438\u0446\u044B\u0439 \u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C. \u0445\u043E\u0440\u043E\u0448\u0438\u0439 \u0438 \u0441\u043F\u043E\u043A\u043E\u0439\u043D\u044B\u0439 \u0431\u043E\u0435\u0446, \u043F\u0440\u0435\u0434\u0430\u043D\u043D\u044B\u0439 \u00AB\u0434\u043E\u043B\u0433\u0443\u00BB.",
         "iconX": 660,
         "iconY": 864,
         "iconWidth": 165,
@@ -20577,7 +20577,7 @@
       "isMedic": false,
       "profile": {
         "name": "agr_duty_base_trader_name",
-        "bio": "\u0413\u0440\u0443\u0431\u044B\u0439 \u043F\u0440\u043E\u0434\u0430\u0432\u0435\u0446 \u0432\u0440\u0435\u043C\u0435\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u043E\u0433\u043E \u0441\u043E\u0446\u0438\u0430\u043B\u0438\u0437\u043C\u0430. \u0425\u0430\u043C\u0438\u0442, \u0433\u0440\u0443\u0431\u0438\u0442, \u0434\u0435\u043B\u043E\u043C \u043D\u0435 \u0437\u0430\u043D\u0438\u043C\u0430\u0435\u0442\u0441\u044F. \u041F\u0440\u0438\u043D\u0446\u0438\u043F \u00AB\u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u2013 \u043D\u0435 \u0431\u0435\u0440\u0438\u00BB.",
+        "bio": "\u0433\u0440\u0443\u0431\u044B\u0439 \u043F\u0440\u043E\u0434\u0430\u0432\u0435\u0446 \u0432\u0440\u0435\u043C\u0435\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u043E\u0433\u043E \u0441\u043E\u0446\u0438\u0430\u043B\u0438\u0437\u043C\u0430. \u0445\u0430\u043C\u0438\u0442, \u0433\u0440\u0443\u0431\u0438\u0442, \u0434\u0435\u043B\u043E\u043C \u043D\u0435 \u0437\u0430\u043D\u0438\u043C\u0430\u0435\u0442\u0441\u044F. \u043F\u0440\u0438\u043D\u0446\u0438\u043F \u00AB\u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u2013 \u043D\u0435 \u0431\u0435\u0440\u0438\u00BB.",
         "iconX": 495,
         "iconY": 432,
         "iconWidth": 165,
@@ -20858,7 +20858,7 @@
       "isMedic": false,
       "profile": {
         "name": "agr_secret_trader_name",
-        "bio": "\u041C\u043E\u043B\u0447\u0430\u043B\u0438\u0432\u044B\u0439, \u0443\u0433\u0440\u044E\u043C\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440, \u043F\u043B\u043E\u0445\u043E \u0438\u0434\u0443\u0449\u0438\u0439 \u043D\u0430 \u043A\u043E\u043D\u0442\u0430\u043A\u0442. \u0413\u043E\u0432\u043E\u0440\u0438\u0442 \u043A\u043E\u0440\u043E\u0442\u043A\u0438\u043C\u0438 \u0433\u043B\u0443\u0431\u043E\u043A\u043E\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u044B\u043C\u0438 \u0444\u0440\u0430\u0437\u0430\u043C\u0438, \u043D\u043E \u0431\u0435\u0437 \u043F\u0430\u0444\u043E\u0441\u0430.",
+        "bio": "\u043C\u043E\u043B\u0447\u0430\u043B\u0438\u0432\u044B\u0439, \u0443\u0433\u0440\u044E\u043C\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440, \u043F\u043B\u043E\u0445\u043E \u0438\u0434\u0443\u0449\u0438\u0439 \u043D\u0430 \u043A\u043E\u043D\u0442\u0430\u043A\u0442. \u0433\u043E\u0432\u043E\u0440\u0438\u0442 \u043A\u043E\u0440\u043E\u0442\u043A\u0438\u043C\u0438 \u0433\u043B\u0443\u0431\u043E\u043A\u043E\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u044B\u043C\u0438 \u0444\u0440\u0430\u0437\u0430\u043C\u0438, \u043D\u043E \u0431\u0435\u0437 \u043F\u0430\u0444\u043E\u0441\u0430.",
         "iconX": 495,
         "iconY": 324,
         "iconWidth": 165,
@@ -22550,7 +22550,7 @@
       "isMedic": false,
       "profile": {
         "name": "agr_stalker_base_trader_name",
-        "bio": "\u041F\u0430\u0440\u0435\u043D\u044C 22-25 \u043B\u0435\u0442, \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u0439 \u0438 \u0445\u043E\u0440\u043E\u0448\u043E \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0439\u0441\u044F \u0432 \u0432\u043E\u043F\u0440\u043E\u0441\u0430\u0445 \u0441\u0442\u0430\u043B\u043A\u0435\u0440\u0441\u0442\u0432\u0430.",
+        "bio": "\u043F\u0430\u0440\u0435\u043D\u044C 22-25 \u043B\u0435\u0442, \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u0439 \u0438 \u0445\u043E\u0440\u043E\u0448\u043E \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0439\u0441\u044F \u0432 \u0432\u043E\u043F\u0440\u043E\u0441\u0430\u0445 \u0441\u0442\u0430\u043B\u043A\u0435\u0440\u0441\u0442\u0432\u0430.",
         "iconX": 495,
         "iconY": 324,
         "iconWidth": 165,
@@ -26191,7 +26191,7 @@
       "isMedic": false,
       "profile": {
         "name": "esc_trader_stalkerbase_name",
-        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 495,
         "iconY": 324,
         "iconWidth": 165,
@@ -32252,7 +32252,24 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "agr_art_way_1",
+          "points": [
+            {
+              "x": -196.58191,
+              "y": -0.031953,
+              "z": -26.03862
+            },
+            {
+              "x": -205.25876,
+              "y": 0.009668,
+              "z": -25.268269
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 38.48508,
@@ -32283,7 +32300,49 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "agr_art_way_2",
+          "points": [
+            {
+              "x": 47.65126,
+              "y": 2.53601,
+              "z": -16.168856
+            },
+            {
+              "x": 43.450256,
+              "y": 2.50001,
+              "z": -8.322348
+            },
+            {
+              "x": 43.38678,
+              "y": 2.64401,
+              "z": -16.203989
+            }
+          ]
+        },
+        {
+          "name": "agr_art_way_3",
+          "points": [
+            {
+              "x": 44.203194,
+              "y": 7.608,
+              "z": -12.641145
+            },
+            {
+              "x": 42.66005,
+              "y": 7.55736,
+              "z": -16.772524
+            },
+            {
+              "x": 44.299458,
+              "y": 7.608,
+              "z": -8.438485
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -7.754626,
@@ -32309,7 +32368,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "agr_art_way_6",
+          "points": [
+            {
+              "x": -4.955678,
+              "y": -2.182511,
+              "z": -315.04556
+            },
+            {
+              "x": -2.398333,
+              "y": -0.161338,
+              "z": -305.54172
+            },
+            {
+              "x": -8.297493,
+              "y": -2.271289,
+              "z": -304.70383
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 148.2472,
@@ -32335,7 +32416,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "agr_art_way_5",
+          "points": [
+            {
+              "x": 150.49237,
+              "y": 13.75839,
+              "z": 107.15699
+            },
+            {
+              "x": 146.90335,
+              "y": 13.190855,
+              "z": 103.67689
+            },
+            {
+              "x": 144.28445,
+              "y": 15.106473,
+              "z": 112.231445
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -218.46245,
@@ -32361,7 +32464,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": []
     },
     {
       "x": -202.15645,
@@ -32371,7 +32475,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_average": 14
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -188.28227,
@@ -32381,7 +32486,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 22.7567,
@@ -32392,7 +32498,8 @@
       "anomalies": {
         "zone_mine_electric_average": 1,
         "zone_mine_gravitational_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -172.53874,
@@ -32404,7 +32511,8 @@
         "zone_mine_electric_average": 1,
         "zone_mine_gravitational_average": 1,
         "zone_witches_galantine_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -98.17624,
@@ -32414,7 +32522,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 36.848972,
@@ -32424,7 +32533,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -121.33156,
@@ -32435,7 +32545,8 @@
       "anomalies": {
         "zone_mine_electric_weak": 1,
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -13.190151,
@@ -32445,7 +32556,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -13.370527,
@@ -32455,7 +32567,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -200.93623,
@@ -32465,7 +32578,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -6.582163,
@@ -32477,7 +32591,8 @@
         "zone_mine_gravitational_average": 4,
         "zone_mine_gravitational_strong": 1,
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 146.45694,
@@ -32488,7 +32603,8 @@
       "anomalies": {
         "zone_mine_gravitational_average": 4,
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 160.82428,
@@ -32498,7 +32614,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -35.94017,
@@ -32508,7 +32625,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 126.81175,
@@ -32518,7 +32636,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -57.513767,
@@ -32528,7 +32647,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -206.64117,
@@ -32538,7 +32658,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -183.78362,
@@ -32548,7 +32669,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -214.52676,
@@ -32558,7 +32680,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -98.73695,
@@ -32568,7 +32691,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 14.434672,
@@ -32578,7 +32702,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 111.89188,
@@ -32588,7 +32713,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 231.20238,
@@ -32598,7 +32724,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 106.99644,
@@ -32612,7 +32739,8 @@
         "zone_mine_acidic_average": 23,
         "zone_buzz_average": 8,
         "zone_mine_thermal_firetube": 14
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 93.3032,
@@ -32622,7 +32750,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 66.505745,
@@ -32633,7 +32762,8 @@
       "anomalies": {
         "zone_burning_fuzz_strong": 1,
         "zone_buzz_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 123.337524,
@@ -32643,7 +32773,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_firetube": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 119.79213,
@@ -32653,7 +32784,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_firetube": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 130.4855,
@@ -32684,7 +32816,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "val_art_zone",
+          "points": [
+            {
+              "x": 138.50993,
+              "y": 3.835096,
+              "z": -476.71283
+            },
+            {
+              "x": 138.78345,
+              "y": 3.762823,
+              "z": -484.38858
+            },
+            {
+              "x": 133.4103,
+              "y": 3.912948,
+              "z": -487.80096
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -47.64329,
@@ -32710,7 +32864,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "val_art_zone_1",
+          "points": [
+            {
+              "x": -42.086357,
+              "y": -0.128783,
+              "z": 74.11086
+            },
+            {
+              "x": -43.2359,
+              "y": -0.298717,
+              "z": 69.913475
+            },
+            {
+              "x": -47.658867,
+              "y": -0.162373,
+              "z": 70.01197
+            },
+            {
+              "x": -51.86295,
+              "y": 0.0887,
+              "z": 72.81944
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -2.215638,
@@ -32736,7 +32917,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": []
     },
     {
       "x": 121.06451,
@@ -32762,7 +32944,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "val_art_zone_3",
+          "points": [
+            {
+              "x": 125.46568,
+              "y": 7.911009,
+              "z": -49.07786
+            },
+            {
+              "x": 121.718704,
+              "y": 7.91101,
+              "z": -45.170963
+            },
+            {
+              "x": 118.13627,
+              "y": 8.099004,
+              "z": -48.982594
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 174.80183,
@@ -32788,7 +32992,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "val_art_zone_4",
+          "points": [
+            {
+              "x": 169.14177,
+              "y": 3.050959,
+              "z": -312.54965
+            },
+            {
+              "x": 177.83752,
+              "y": 1.304035,
+              "z": -299.4221
+            },
+            {
+              "x": 165.2725,
+              "y": 0.257916,
+              "z": -294.29706
+            },
+            {
+              "x": 156.00359,
+              "y": 0.573078,
+              "z": -303.00577
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 121.64601,
@@ -32798,7 +33029,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_strong": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -0.941902,
@@ -32808,7 +33040,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 127.819374,
@@ -32821,7 +33054,8 @@
         "zone_mine_gravitational_strong": 4,
         "zone_mine_gravitational_weak": 3,
         "zone_mine_thermal_average": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -45.911106,
@@ -32832,7 +33066,8 @@
       "anomalies": {
         "zone_mine_gravitational_average": 4,
         "zone_mine_gravitational_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 167.51868,
@@ -32842,7 +33077,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -247.07132,
@@ -32868,7 +33104,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "esc_anomal_way_1",
+          "points": [
+            {
+              "x": -242.7841,
+              "y": -14.430298,
+              "z": -19.615211
+            },
+            {
+              "x": -248.53404,
+              "y": -13.810939,
+              "z": -10.655396
+            },
+            {
+              "x": -264.6681,
+              "y": -13.419044,
+              "z": -18.976503
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 336.03757,
@@ -32894,7 +33152,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "esc_anomal_way_2",
+          "points": [
+            {
+              "x": 336.16782,
+              "y": 14.092691,
+              "z": 204.9356
+            },
+            {
+              "x": 339.5089,
+              "y": 15.07617,
+              "z": 211.54648
+            },
+            {
+              "x": 344.99237,
+              "y": 15.245399,
+              "z": 206.83096
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 121.64846,
@@ -32920,7 +33200,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "esc_anomal_way_3",
+          "points": [
+            {
+              "x": 124.62231,
+              "y": 2.570612,
+              "z": 526.4521
+            },
+            {
+              "x": 115.41653,
+              "y": 2.222866,
+              "z": 523.75104
+            },
+            {
+              "x": 121.2207,
+              "y": 1.791991,
+              "z": 515.219
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 58.36092,
@@ -32930,7 +33232,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -246.59596,
@@ -32940,7 +33243,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 19
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 336.55743,
@@ -32950,7 +33254,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 10
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 117.24554,
@@ -32960,7 +33265,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -132.49596,
@@ -32970,7 +33276,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -129.79628,
@@ -32980,7 +33287,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -4.722452,
@@ -32990,7 +33298,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -27.991222,
@@ -33000,7 +33309,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -102.397804,
@@ -33010,7 +33320,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -189.85284,
@@ -33020,7 +33331,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -169.13242,
@@ -33030,7 +33342,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -204.0449,
@@ -33040,7 +33353,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -54.572628,
@@ -33050,7 +33364,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -98.93156,
@@ -33060,7 +33375,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -103.00067,
@@ -33070,7 +33386,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -75.257675,
@@ -33080,7 +33397,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -69.89206,
@@ -33090,7 +33408,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -31.455484,
@@ -33100,7 +33419,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -2.214483,
@@ -33110,7 +33430,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -41.36762,
@@ -33120,7 +33441,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -27.623196,
@@ -33130,7 +33452,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -4.574086,
@@ -33140,7 +33463,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 5.0609274,
@@ -33150,7 +33474,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -95.38154,
@@ -33176,7 +33501,49 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_anomal_zone_conc_camp_1_way_1",
+          "points": [
+            {
+              "x": -92.423706,
+              "y": -2.596758,
+              "z": -197.26709
+            },
+            {
+              "x": -91.683846,
+              "y": -2.599998,
+              "z": -202.79732
+            },
+            {
+              "x": -94.761055,
+              "y": -2.600002,
+              "z": -201.04132
+            },
+            {
+              "x": -97.05476,
+              "y": -2.599998,
+              "z": -204.48723
+            },
+            {
+              "x": -99.95217,
+              "y": -2.599998,
+              "z": -199.9866
+            },
+            {
+              "x": -96.35954,
+              "y": -2.6,
+              "z": -200.13591
+            },
+            {
+              "x": -96.5861,
+              "y": -2.589487,
+              "z": -196.9195
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -50.45228,
@@ -33202,7 +33569,54 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_anomal_zone_conc_camp_2_way_1",
+          "points": [
+            {
+              "x": -56.280506,
+              "y": -0.393831,
+              "z": -228.86296
+            },
+            {
+              "x": -57.89466,
+              "y": -1.141626,
+              "z": -225.15034
+            },
+            {
+              "x": -54.60283,
+              "y": -0.754299,
+              "z": -224.68404
+            },
+            {
+              "x": -54.501133,
+              "y": -1.383511,
+              "z": -221.0789
+            },
+            {
+              "x": -50.416306,
+              "y": -1.757744,
+              "z": -218.36893
+            },
+            {
+              "x": -46.184483,
+              "y": -0.956604,
+              "z": -219.81004
+            },
+            {
+              "x": -49.68586,
+              "y": -0.784372,
+              "z": -223.89954
+            },
+            {
+              "x": -53.15004,
+              "y": -0.526569,
+              "z": -226.08194
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -248.83195,
@@ -33228,7 +33642,54 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_anomal_zone_reward_way_1",
+          "points": [
+            {
+              "x": -245.74576,
+              "y": -1.420114,
+              "z": 95.29016
+            },
+            {
+              "x": -251.14844,
+              "y": 1.43782,
+              "z": 91.45849
+            },
+            {
+              "x": -254.20296,
+              "y": 2.341654,
+              "z": 94.73241
+            },
+            {
+              "x": -258.55093,
+              "y": 5.76588,
+              "z": 90.571175
+            },
+            {
+              "x": -258.08194,
+              "y": 4.862514,
+              "z": 100.09383
+            },
+            {
+              "x": -258.84018,
+              "y": 6.869232,
+              "z": 104.817955
+            },
+            {
+              "x": -252.1173,
+              "y": 4.892288,
+              "z": 105.88477
+            },
+            {
+              "x": -244.62112,
+              "y": -0.012737,
+              "z": 102.70052
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 109.85439,
@@ -33249,7 +33710,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_art_way_3",
+          "points": [
+            {
+              "x": 106.554245,
+              "y": -0.463532,
+              "z": -270.48285
+            },
+            {
+              "x": 118.229576,
+              "y": 0.041861,
+              "z": -268.15186
+            },
+            {
+              "x": 114.60358,
+              "y": -0.751303,
+              "z": -258.39066
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 120.88255,
@@ -33275,7 +33758,59 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_art_way_1",
+          "points": [
+            {
+              "x": 124.741806,
+              "y": -0.614159,
+              "z": -150.1302
+            },
+            {
+              "x": 116.49851,
+              "y": -0.857319,
+              "z": -142.23816
+            },
+            {
+              "x": 128.14037,
+              "y": -0.328796,
+              "z": -134.38986
+            },
+            {
+              "x": 131.20808,
+              "y": -0.355598,
+              "z": -145.03412
+            }
+          ]
+        },
+        {
+          "name": "gar_art_way_2",
+          "points": [
+            {
+              "x": 113.07456,
+              "y": -0.948177,
+              "z": -167.44281
+            },
+            {
+              "x": 104.944824,
+              "y": -0.721455,
+              "z": -153.45844
+            },
+            {
+              "x": 100.49242,
+              "y": -0.652092,
+              "z": -155.86696
+            },
+            {
+              "x": 106.81413,
+              "y": -0.382782,
+              "z": -169.25206
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -153.98682,
@@ -33301,7 +33836,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "gar_anomal_zone_west_of_conc_camp_way_1",
+          "points": [
+            {
+              "x": -158.36559,
+              "y": 0.43055,
+              "z": -221.25894
+            },
+            {
+              "x": -150.14069,
+              "y": 0.288738,
+              "z": -219.61983
+            },
+            {
+              "x": -156.54947,
+              "y": 0.4249,
+              "z": -230.5208
+            },
+            {
+              "x": -148.97849,
+              "y": 0.072262,
+              "z": -230.33562
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 117.141556,
@@ -33311,7 +33873,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_average": 60
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 67.36029,
@@ -33321,7 +33884,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -45.84768,
@@ -33331,7 +33895,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -172.7958,
@@ -33341,7 +33906,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -6.735672,
@@ -33351,7 +33917,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -42.90558,
@@ -33361,7 +33928,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -252.15836,
@@ -33372,7 +33940,8 @@
       "anomalies": {
         "zone_mine_electric_average": 13,
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 107.35899,
@@ -33382,7 +33951,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_field_no_damage": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 104.1156,
@@ -33392,7 +33962,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 64.00006,
@@ -33402,7 +33973,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 146.65405,
@@ -33412,7 +33984,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 136.5082,
@@ -33422,7 +33995,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 104.97022,
@@ -33432,7 +34006,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -99.195,
@@ -33442,7 +34017,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -182.64262,
@@ -33452,7 +34028,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -181.37741,
@@ -33462,7 +34039,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -173.69933,
@@ -33472,7 +34050,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 177.18457,
@@ -33482,7 +34061,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 173.07368,
@@ -33492,7 +34072,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 98.53171,
@@ -33502,7 +34083,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 239.14218,
@@ -33512,7 +34094,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 212.47195,
@@ -33522,7 +34105,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -155.73206,
@@ -33532,7 +34116,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -94.941086,
@@ -33543,7 +34128,8 @@
       "anomalies": {
         "zone_mine_thermal_average": 7,
         "zone_mine_thermal_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -52.091072,
@@ -33554,7 +34140,8 @@
       "anomalies": {
         "zone_mine_thermal_average": 6,
         "zone_mine_thermal_weak": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -46.960163,
@@ -33564,7 +34151,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -106.046486,
@@ -33574,7 +34162,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_weak": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 61.724136,
@@ -33584,7 +34173,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -17.463886,
@@ -33594,7 +34184,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -4.4365506,
@@ -33605,7 +34196,8 @@
       "anomalies": {
         "zone_mine_gravitational_average": 1,
         "zone_mine_gravitational_weak": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -65.07467,
@@ -33615,7 +34207,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -52.807972,
@@ -33625,7 +34218,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -24.422691,
@@ -33635,7 +34229,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 5
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 31.349854,
@@ -33645,7 +34240,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -300.76828,
@@ -33666,7 +34262,24 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_1",
+          "points": [
+            {
+              "x": -305.80804,
+              "y": 0.796448,
+              "z": -103.37798
+            },
+            {
+              "x": -305.64383,
+              "y": 0.7635,
+              "z": -104.0117
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 388.86276,
@@ -33692,7 +34305,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": []
     },
     {
       "x": 244.39763,
@@ -33718,7 +34332,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_3",
+          "points": [
+            {
+              "x": 241.99045,
+              "y": 4.233866,
+              "z": 52.58848
+            },
+            {
+              "x": 242.51971,
+              "y": 4.215825,
+              "z": 57.560314
+            },
+            {
+              "x": 246.25842,
+              "y": 4.094566,
+              "z": 57.415546
+            },
+            {
+              "x": 246.1212,
+              "y": 3.935899,
+              "z": 53.178772
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 524.78424,
@@ -33744,7 +34385,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_4",
+          "points": [
+            {
+              "x": 518.747,
+              "y": 0.863485,
+              "z": 304.3832
+            },
+            {
+              "x": 513.5246,
+              "y": 0.840113,
+              "z": 298.53888
+            },
+            {
+              "x": 506.2834,
+              "y": 0.711243,
+              "z": 301.7112
+            },
+            {
+              "x": 509.10867,
+              "y": 0.595047,
+              "z": 306.38925
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 472.56967,
@@ -33770,7 +34438,39 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_5",
+          "points": [
+            {
+              "x": 472.4419,
+              "y": 2.381034,
+              "z": 7.863108
+            },
+            {
+              "x": 478.66055,
+              "y": 0.447294,
+              "z": 2.825084
+            },
+            {
+              "x": 470.61795,
+              "y": 0.476217,
+              "z": -5.293198
+            },
+            {
+              "x": 459.93143,
+              "y": 1.946199,
+              "z": -5.114092
+            },
+            {
+              "x": 465.26117,
+              "y": 2.407457,
+              "z": 1.57266
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -183.49321,
@@ -33796,7 +34496,39 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_6",
+          "points": [
+            {
+              "x": -174.74417,
+              "y": 0.653286,
+              "z": 88.44503
+            },
+            {
+              "x": -177.93675,
+              "y": 0.587345,
+              "z": 81.01939
+            },
+            {
+              "x": -182.8069,
+              "y": 0.531147,
+              "z": 84.01239
+            },
+            {
+              "x": -180.11633,
+              "y": 0.49617,
+              "z": 90.63243
+            },
+            {
+              "x": -175.95547,
+              "y": 0.576206,
+              "z": 95.883934
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -176.76657,
@@ -33822,7 +34554,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mar_art_7",
+          "points": [
+            {
+              "x": -183.1793,
+              "y": 0.857746,
+              "z": 246.7418
+            },
+            {
+              "x": -173.62505,
+              "y": 0.952496,
+              "z": 244.8359
+            },
+            {
+              "x": -169.76936,
+              "y": 0.950123,
+              "z": 250.98718
+            },
+            {
+              "x": -179.19771,
+              "y": 0.949251,
+              "z": 255.21071
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -176.69077,
@@ -33832,7 +34591,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_weak": 15
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -250.59142,
@@ -33842,7 +34602,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_weak": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 333.11392,
@@ -33852,7 +34613,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_weak": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -96.4337,
@@ -33862,7 +34624,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_weak": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 520.3964,
@@ -33872,7 +34635,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 31
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 473.46954,
@@ -33882,7 +34646,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 35
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -48.51,
@@ -33892,7 +34657,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -127.33559,
@@ -33902,7 +34668,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -317.315,
@@ -33912,7 +34679,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -279.69434,
@@ -33922,7 +34690,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 19
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 169.60582,
@@ -33932,7 +34701,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -181.19931,
@@ -33942,7 +34712,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_weak": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 386.5521,
@@ -33952,7 +34723,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 21
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 244.73146,
@@ -33962,7 +34734,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_weak": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 101.61346,
@@ -33988,7 +34761,8 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": []
     },
     {
       "x": -203.60486,
@@ -34014,7 +34788,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mil_zone_field_psychic_strong_1_walk",
+          "points": [
+            {
+              "x": -202.93724,
+              "y": 4.836334,
+              "z": 448.70087
+            },
+            {
+              "x": -209.38725,
+              "y": 3.172939,
+              "z": 438.14624
+            },
+            {
+              "x": -198.15788,
+              "y": 3.243584,
+              "z": 442.379
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -8.364703,
@@ -34040,7 +34836,24 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mil_zone_field_radioactive_strong_1_walk",
+          "points": [
+            {
+              "x": -2.982808,
+              "y": -4.357509,
+              "z": 444.05093
+            },
+            {
+              "x": -11.004517,
+              "y": -2.651337,
+              "z": 454.67368
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -167.75946,
@@ -34066,7 +34879,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mil_zone_field_radioactive_strong_2_walk",
+          "points": [
+            {
+              "x": -170.35646,
+              "y": -3.285641,
+              "z": 0.685015
+            },
+            {
+              "x": -171.41531,
+              "y": -4.886266,
+              "z": 10.401492
+            },
+            {
+              "x": -163.0434,
+              "y": -4.209671,
+              "z": 13.479077
+            },
+            {
+              "x": -162.58427,
+              "y": -2.834899,
+              "z": -2.72551
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -300.99335,
@@ -34092,7 +34932,24 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "mil_zone_field_thermal_strong_1_walk",
+          "points": [
+            {
+              "x": -291.1723,
+              "y": -12.036969,
+              "z": 34.46776
+            },
+            {
+              "x": -300.29163,
+              "y": -11.419866,
+              "z": 28.596676
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -179.20886,
@@ -34103,7 +34960,8 @@
       "anomalies": {
         "zone_burning_fuzz": 2,
         "zone_mine_electric_strong": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -56.101723,
@@ -34113,7 +34971,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 89.93166,
@@ -34123,7 +34982,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_strong": 10
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 102.27762,
@@ -34133,7 +34993,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_strong": 33
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -203.48392,
@@ -34143,7 +35004,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_strong": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -4.5972204,
@@ -34153,7 +35015,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -159.84023,
@@ -34163,7 +35026,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 13
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 37.037567,
@@ -34173,7 +35037,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 92.334915,
@@ -34183,7 +35048,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 70.83698,
@@ -34193,7 +35059,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 108.55466,
@@ -34203,7 +35070,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -271.80527,
@@ -34213,7 +35081,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_strong": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -242.40797,
@@ -34223,7 +35092,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_strong": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -299.6186,
@@ -34233,7 +35103,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_strong": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -300.6449,
@@ -34243,7 +35114,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_thermal_strong": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 44.794327,
@@ -34253,7 +35125,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine_strong": 9
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 11.803884,
@@ -34263,7 +35136,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_witches_galantine_strong": 13
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 62.373016,
@@ -34273,7 +35147,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zharka_static_strong": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -197.30403,
@@ -34283,7 +35158,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_zharka_static_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 216.59941,
@@ -34314,7 +35190,49 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_anomal_zone_1_artefact_way_1",
+          "points": [
+            {
+              "x": 223.65913,
+              "y": -7.877513,
+              "z": -105.56859
+            },
+            {
+              "x": 225.08127,
+              "y": -7.87783,
+              "z": -101.43736
+            },
+            {
+              "x": 220.31566,
+              "y": -8.059734,
+              "z": -97.36521
+            },
+            {
+              "x": 216.22415,
+              "y": -8.076442,
+              "z": -100.22606
+            },
+            {
+              "x": 218.4052,
+              "y": -8.09028,
+              "z": -105.58779
+            },
+            {
+              "x": 220.58252,
+              "y": -7.84181,
+              "z": -106.281075
+            },
+            {
+              "x": 223.58,
+              "y": -8.034338,
+              "z": -98.64289
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 14.845779,
@@ -34340,7 +35258,49 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_art_way_1",
+          "points": [
+            {
+              "x": 5.57849,
+              "y": -1.584295,
+              "z": -198.75354
+            },
+            {
+              "x": 4.16356,
+              "y": -1.682928,
+              "z": -210.2358
+            },
+            {
+              "x": 12.020508,
+              "y": -1.588188,
+              "z": -220.64944
+            },
+            {
+              "x": 20.46254,
+              "y": -0.939133,
+              "z": -221.30255
+            },
+            {
+              "x": 30.850094,
+              "y": -0.207527,
+              "z": -217.46521
+            },
+            {
+              "x": 26.10947,
+              "y": 0.095673,
+              "z": -202.64005
+            },
+            {
+              "x": 13.854751,
+              "y": -1.881121,
+              "z": -206.91791
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 167.97644,
@@ -34366,7 +35326,39 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_art_way_2",
+          "points": [
+            {
+              "x": 168.00586,
+              "y": 1.749184,
+              "z": 94.111595
+            },
+            {
+              "x": 167.84142,
+              "y": 1.005147,
+              "z": 85.69568
+            },
+            {
+              "x": 172.92702,
+              "y": 0.753425,
+              "z": 81.18226
+            },
+            {
+              "x": 159.50108,
+              "y": 1.498059,
+              "z": 72.60306
+            },
+            {
+              "x": 155.52527,
+              "y": 2.213348,
+              "z": 88.031555
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -113.89469,
@@ -34397,7 +35389,64 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_art_way_3",
+          "points": [
+            {
+              "x": -111.22508,
+              "y": -2.550326,
+              "z": -60.26591
+            },
+            {
+              "x": -113.522064,
+              "y": -6.031836,
+              "z": -56.84753
+            },
+            {
+              "x": -111.53795,
+              "y": -5.716243,
+              "z": -55.578255
+            },
+            {
+              "x": -107.60926,
+              "y": -2.479594,
+              "z": -57.745296
+            },
+            {
+              "x": -111.31572,
+              "y": -5.805301,
+              "z": -59.34805
+            }
+          ]
+        },
+        {
+          "name": "red_art_way_4",
+          "points": [
+            {
+              "x": -120.49093,
+              "y": -6.249416,
+              "z": -44.788353
+            },
+            {
+              "x": -120.36753,
+              "y": -6.249418,
+              "z": -42.09221
+            },
+            {
+              "x": -123.21848,
+              "y": -6.249418,
+              "z": -41.971252
+            },
+            {
+              "x": -123.165794,
+              "y": -6.249418,
+              "z": -44.71637
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 134.33238,
@@ -34428,7 +35477,74 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_art_way_5",
+          "points": [
+            {
+              "x": 104.77646,
+              "y": -1.435844,
+              "z": -285.4845
+            },
+            {
+              "x": 96.16902,
+              "y": -1.363152,
+              "z": -292.56912
+            },
+            {
+              "x": 87.67181,
+              "y": -0.645813,
+              "z": -286.15463
+            },
+            {
+              "x": 84.92828,
+              "y": -1.127666,
+              "z": -279.17996
+            },
+            {
+              "x": 93.02825,
+              "y": -0.145031,
+              "z": -273.8577
+            },
+            {
+              "x": 104.37315,
+              "y": 0.028599,
+              "z": -274.00092
+            }
+          ]
+        },
+        {
+          "name": "red_art_way_6",
+          "points": [
+            {
+              "x": 145.41167,
+              "y": 0.273319,
+              "z": -250.42262
+            },
+            {
+              "x": 153.74295,
+              "y": 1.131565,
+              "z": -242.19225
+            },
+            {
+              "x": 160.74275,
+              "y": 0.651993,
+              "z": -236.7015
+            },
+            {
+              "x": 162.68102,
+              "y": -0.325348,
+              "z": -249.79251
+            },
+            {
+              "x": 158.48248,
+              "y": -1.373989,
+              "z": -263.89627
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -80.96516,
@@ -34459,7 +35575,44 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_art_way_7",
+          "points": [
+            {
+              "x": -68.40493,
+              "y": 0.267853,
+              "z": -20.598812
+            },
+            {
+              "x": -77.56359,
+              "y": 0.397671,
+              "z": -19.84959
+            },
+            {
+              "x": -77.99105,
+              "y": 1.453091,
+              "z": -30.091684
+            },
+            {
+              "x": -69.35304,
+              "y": 0.531296,
+              "z": -29.300526
+            },
+            {
+              "x": -62.816914,
+              "y": 0.458527,
+              "z": -31.26777
+            },
+            {
+              "x": -62.69575,
+              "y": 0.21125,
+              "z": -23.003395
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 220.67517,
@@ -34490,7 +35643,54 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "red_anomal_zone_2_artefact_way_1",
+          "points": [
+            {
+              "x": 220.58406,
+              "y": -8.264174,
+              "z": -101.2984
+            },
+            {
+              "x": 212.90276,
+              "y": 0.338823,
+              "z": -96.75196
+            },
+            {
+              "x": 223.62616,
+              "y": 1.012619,
+              "z": -92.23111
+            },
+            {
+              "x": 228.7139,
+              "y": 0.427328,
+              "z": -96.215416
+            },
+            {
+              "x": 229.15123,
+              "y": 0.87969,
+              "z": -104.89878
+            },
+            {
+              "x": 222.56061,
+              "y": 0.905733,
+              "z": -111.56316
+            },
+            {
+              "x": 214.08203,
+              "y": -1.430588,
+              "z": -110.05178
+            },
+            {
+              "x": 209.707,
+              "y": 1.870759,
+              "z": -104.45982
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -37.391705,
@@ -34502,7 +35702,8 @@
         "zone_burning_fuzz": 5,
         "zone_mine_gravitational_average": 8,
         "zone_mine_electric_strong": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 57.58307,
@@ -34512,7 +35713,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 68.01616,
@@ -34522,7 +35724,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 12.33362,
@@ -34532,7 +35735,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 57.24737,
@@ -34542,7 +35746,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 126.10285,
@@ -34554,7 +35759,8 @@
         "zone_burning_fuzz": 3,
         "zone_mine_gravitational_average": 12,
         "zone_mine_gravitational_strong": 6
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 82.58842,
@@ -34564,7 +35770,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 186.82053,
@@ -34574,7 +35781,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 172.54555,
@@ -34584,7 +35792,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 244.21098,
@@ -34595,7 +35804,8 @@
       "anomalies": {
         "zone_burning_fuzz": 1,
         "zone_mine_electric_average": 20
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 217.5028,
@@ -34605,7 +35815,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -3.914795,
@@ -34615,7 +35826,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -44.682747,
@@ -34625,7 +35837,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -73.55155,
@@ -34635,7 +35848,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -73.75821,
@@ -34646,7 +35860,8 @@
       "anomalies": {
         "zone_burning_fuzz": 2,
         "zone_mine_electric_average": 16
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 221.2861,
@@ -34656,7 +35871,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 239.873,
@@ -34666,7 +35882,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 253.9943,
@@ -34676,7 +35893,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 42.75462,
@@ -34686,7 +35904,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 3
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -71.71993,
@@ -34696,7 +35915,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -55.47328,
@@ -34706,7 +35926,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_burning_fuzz": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -125.10789,
@@ -34721,7 +35942,8 @@
         "zone_mine_electric_strong": 1,
         "zone_mine_thermal_weak": 5,
         "zone_mine_electric_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -134.98816,
@@ -34731,7 +35953,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_acidic_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 22.296099,
@@ -34741,7 +35964,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 17
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 173.99976,
@@ -34751,7 +35975,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 19
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -76.55435,
@@ -34761,7 +35986,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_average": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -109.01464,
@@ -34771,7 +35997,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -41.479305,
@@ -34781,7 +36008,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 10
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 218.93465,
@@ -34792,7 +36020,8 @@
       "anomalies": {
         "zone_mine_gravitational_average": 1,
         "zone_mine_thermal_strong": 23
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 169.0853,
@@ -34802,7 +36031,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 8
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 179.49475,
@@ -34812,7 +36042,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 64.20811,
@@ -34822,7 +36053,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_weak": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 89.7346,
@@ -34848,7 +36080,34 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "yan_art_way_2",
+          "points": [
+            {
+              "x": 79.18525,
+              "y": 0.040042,
+              "z": -58.771133
+            },
+            {
+              "x": 84.01605,
+              "y": 0.040041,
+              "z": -55.914177
+            },
+            {
+              "x": 86.17721,
+              "y": 0.040042,
+              "z": -59.438965
+            },
+            {
+              "x": 88.93112,
+              "y": 0.040042,
+              "z": -60.21442
+            }
+          ]
+        }
+      ]
     },
     {
       "x": 88.11299,
@@ -34874,7 +36133,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "yan_art_way_1",
+          "points": [
+            {
+              "x": 90.4093,
+              "y": -0.0044,
+              "z": -15.346633
+            },
+            {
+              "x": 93.7008,
+              "y": -0.004413,
+              "z": -13.29025
+            },
+            {
+              "x": 88.33241,
+              "y": -0.004435,
+              "z": -9.936374
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -49.21624,
@@ -34900,7 +36181,74 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "yan_art_way_3",
+          "points": [
+            {
+              "x": -17.967028,
+              "y": -12.97741,
+              "z": -231.44705
+            },
+            {
+              "x": -19.453543,
+              "y": -12.918094,
+              "z": -236.79161
+            },
+            {
+              "x": -25.8615,
+              "y": -12.93409,
+              "z": -239.7049
+            },
+            {
+              "x": -31.278051,
+              "y": -12.934088,
+              "z": -245.00174
+            },
+            {
+              "x": -37.97824,
+              "y": -12.93409,
+              "z": -247.1764
+            },
+            {
+              "x": -41.67482,
+              "y": -12.93409,
+              "z": -252.22641
+            },
+            {
+              "x": -45.064922,
+              "y": -12.687031,
+              "z": -246.81561
+            },
+            {
+              "x": -46.491013,
+              "y": -12.934092,
+              "z": -240.07776
+            },
+            {
+              "x": -41.373966,
+              "y": -12.934088,
+              "z": -238.18022
+            },
+            {
+              "x": -38.086716,
+              "y": -12.934092,
+              "z": -232.93677
+            },
+            {
+              "x": -30.183706,
+              "y": -12.93409,
+              "z": -233.94386
+            },
+            {
+              "x": -24.762827,
+              "y": -12.93409,
+              "z": -229.05031
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -173.01686,
@@ -34926,7 +36274,29 @@
           ]
         }
       ],
-      "anomalies": null
+      "anomalies": null,
+      "artefactWays": [
+        {
+          "name": "yan_art_way_4",
+          "points": [
+            {
+              "x": -174.2393,
+              "y": 2.077658,
+              "z": -149.78694
+            },
+            {
+              "x": -175.93,
+              "y": 2.389172,
+              "z": -142.42622
+            },
+            {
+              "x": -166.57259,
+              "y": 2.09402,
+              "z": -145.89314
+            }
+          ]
+        }
+      ]
     },
     {
       "x": -36.459152,
@@ -34937,7 +36307,8 @@
       "anomalies": {
         "zone_mine_acidic_strong": 17,
         "zone_mine_gravitational_average": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 83.44673,
@@ -34949,7 +36320,8 @@
         "zone_mine_electric_average": 4,
         "zone_mine_gravitational_average": 2,
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 91.45222,
@@ -34959,7 +36331,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_strong": 7
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -2.1386142,
@@ -34969,7 +36342,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_strong": 4
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 72.02213,
@@ -34979,7 +36353,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 24.944653,
@@ -34989,7 +36364,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_electric_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 100.20166,
@@ -35000,7 +36376,8 @@
       "anomalies": {
         "zone_mine_electric_strong": 1,
         "zone_mine_gravitational_strong": 2
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 22.419807,
@@ -35010,7 +36387,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 110.513336,
@@ -35020,7 +36398,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 1.654894,
@@ -35030,7 +36409,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -178.98012,
@@ -35041,7 +36421,8 @@
       "anomalies": {
         "zone_mine_gravitational_strong": 1,
         "zone_mine_thermal_average": 10
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": 114.69797,
@@ -35051,7 +36432,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -5.066546,
@@ -35061,7 +36443,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_gravitational_strong": 1
-      }
+      },
+      "artefactWays": null
     },
     {
       "x": -86.05503,
@@ -35071,7 +36454,8 @@
       "anomaliySpawnSections": null,
       "anomalies": {
         "zone_mine_field_strong": 34
-      }
+      },
+      "artefactWays": null
     }
   ],
   "levelChangers": [
@@ -35094,7 +36478,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "agr_stalker_base_leader_name",
-        "bio": "\u00AB\u0414\u0443\u0448\u0430 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438\u00BB, \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0432\u044B\u0431\u0440\u0430\u043B\u0438 \u0432 \u043B\u0438\u0434\u0435\u0440\u044B \u0437\u0430 \u0443\u043C\u0435\u043D\u0438\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C \u043A\u043E \u0432\u0441\u0435\u043C \u043F\u043E\u0434\u0445\u043E\u0434. \u0411\u043E\u043B\u044C\u0448\u043E\u0439, \u0441\u0438\u043B\u044C\u043D\u044B\u0439, \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u044B\u0439 \u0432 \u0441\u0435\u0431\u0435, \u0432\u0435\u0441\u0435\u043B\u044B\u0439 \u0438 \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
+        "bio": "\u00AB\u0434\u0443\u0448\u0430 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438\u00BB, \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0432\u044B\u0431\u0440\u0430\u043B\u0438 \u0432 \u043B\u0438\u0434\u0435\u0440\u044B \u0437\u0430 \u0443\u043C\u0435\u043D\u0438\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C \u043A\u043E \u0432\u0441\u0435\u043C \u043F\u043E\u0434\u0445\u043E\u0434. \u0431\u043E\u043B\u044C\u0448\u043E\u0439, \u0441\u0438\u043B\u044C\u043D\u044B\u0439, \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u044B\u0439 \u0432 \u0441\u0435\u0431\u0435, \u0432\u0435\u0441\u0435\u043B\u044B\u0439 \u0438 \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
         "iconX": 495,
         "iconY": 324,
         "iconWidth": 165,
@@ -35116,7 +36500,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "agr_stalker_base_mechanic_name",
-        "bio": "\u041C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C 18-20 \u043B\u0435\u0442, \u0441 \u0431\u0430\u0441\u043E\u0432\u0438\u0442\u044B\u043C \u0433\u043E\u043B\u043E\u0441\u043E\u043C. \u041D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0433\u043B\u043E\u0432\u0430\u0442\u044B\u0439. \u0425\u043E\u0447\u0435\u0442 \u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u0442\u0430\u0440\u0448\u0435, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u0442\u044C \u0445\u043C\u0443\u0440\u044B\u043C \u0438 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u043C. \u041E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439, \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
+        "bio": "\u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C 18-20 \u043B\u0435\u0442, \u0441 \u0431\u0430\u0441\u043E\u0432\u0438\u0442\u044B\u043C \u0433\u043E\u043B\u043E\u0441\u043E\u043C. \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0433\u043B\u043E\u0432\u0430\u0442\u044B\u0439. \u0445\u043E\u0447\u0435\u0442 \u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u0442\u0430\u0440\u0448\u0435, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u0442\u044C \u0445\u043C\u0443\u0440\u044B\u043C \u0438 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u043C. \u043E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439, \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
         "iconX": 495,
         "iconY": 324,
         "iconWidth": 165,
@@ -35138,7 +36522,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "agr_duty_base_commander_name",
-        "bio": "\u041A\u043E\u043C\u043C\u0430\u043D\u0434\u0438\u0440 \u0432\u043E\u0435\u043D\u043D\u044B\u0445 \u0441\u0438\u043B \u0431\u0430\u0437\u044B \u0414\u043E\u043B\u0433\u0430",
+        "bio": "\u043A\u043E\u043C\u043C\u0430\u043D\u0434\u0438\u0440 \u0432\u043E\u0435\u043D\u043D\u044B\u0445 \u0441\u0438\u043B \u0431\u0430\u0437\u044B \u0434\u043E\u043B\u0433\u0430",
         "iconX": 330,
         "iconY": 432,
         "iconWidth": 165,
@@ -35160,7 +36544,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "agr_weaponmaster_name",
-        "bio": "\u041F\u043B\u043E\u0442\u043D\u044B\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430 30-35 \u043B\u0435\u0442 \u0441 \u043F\u043E\u043B\u043D\u044B\u043C\u0438 \u0433\u0443\u0431\u0430\u043C\u0438 \u0438 \u043A\u0440\u0443\u0433\u043B\u044B\u043C\u0438 \u0433\u043B\u0430\u0437\u0430\u043C\u0438. \u041E\u0434\u0435\u0442 \u0432 \u043F\u0430\u0440\u043A\u0443 \u0441 \u043A\u0430\u043F\u044E\u0448\u043E\u043D\u043E\u043C, \u043F\u043E\u0432\u0435\u0440\u0445 \u043A\u0430\u043F\u044E\u0448\u043E\u043D\u0430 \u043E\u0447\u043A\u0438 \u043D\u0430 \u0440\u0435\u0437\u0438\u043D\u043A\u0435. \u041D\u0438\u0437\u043A\u0438\u0439 \u0433\u043E\u043B\u043E\u0441, \u043F\u0440\u044F\u043C\u043E\u0439 \u0432\u0437\u0433\u043B\u044F\u0434, \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0445\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u0435.",
+        "bio": "\u043F\u043B\u043E\u0442\u043D\u044B\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430 30-35 \u043B\u0435\u0442 \u0441 \u043F\u043E\u043B\u043D\u044B\u043C\u0438 \u0433\u0443\u0431\u0430\u043C\u0438 \u0438 \u043A\u0440\u0443\u0433\u043B\u044B\u043C\u0438 \u0433\u043B\u0430\u0437\u0430\u043C\u0438. \u043E\u0434\u0435\u0442 \u0432 \u043F\u0430\u0440\u043A\u0443 \u0441 \u043A\u0430\u043F\u044E\u0448\u043E\u043D\u043E\u043C, \u043F\u043E\u0432\u0435\u0440\u0445 \u043A\u0430\u043F\u044E\u0448\u043E\u043D\u0430 \u043E\u0447\u043A\u0438 \u043D\u0430 \u0440\u0435\u0437\u0438\u043D\u043A\u0435. \u043D\u0438\u0437\u043A\u0438\u0439 \u0433\u043E\u043B\u043E\u0441, \u043F\u0440\u044F\u043C\u043E\u0439 \u0432\u0437\u0433\u043B\u044F\u0434, \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0445\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u0435.",
         "iconX": 495,
         "iconY": 432,
         "iconWidth": 165,
@@ -35253,7 +36637,7 @@
       ],
       "profile": {
         "name": "agr_zooman_name",
-        "bio": "\u041A\u0440\u0435\u043F\u043A\u0438\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430 35-40 \u043B\u0435\u0442, \u0443\u0441\u0430\u0442\u044B\u0439 \u0438 \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0432\u0435\u0441\u0435\u043B\u0435. \u041D\u0438\u0437\u043A\u0438\u0439 \u0433\u0440\u043E\u043C\u043A\u0438\u0439 \u0433\u043E\u043B\u043E\u0441.",
+        "bio": "\u043A\u0440\u0435\u043F\u043A\u0438\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430 35-40 \u043B\u0435\u0442, \u0443\u0441\u0430\u0442\u044B\u0439 \u0438 \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0432\u0435\u0441\u0435\u043B\u0435. \u043D\u0438\u0437\u043A\u0438\u0439 \u0433\u0440\u043E\u043C\u043A\u0438\u0439 \u0433\u043E\u043B\u043E\u0441.",
         "iconX": 495,
         "iconY": 432,
         "iconWidth": 165,
@@ -35371,7 +36755,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_leader_stalkerbase_name",
-        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 330,
         "iconY": 324,
         "iconWidth": 165,
@@ -35393,7 +36777,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_driver_name",
-        "bio": "\u041C\u043E\u043B\u043E\u0434\u043E\u0439 \u0441\u043E\u043B\u0434\u0430\u0442-\u0441\u0440\u043E\u0447\u043D\u0438\u043A. \u041D\u0435\u043E\u043F\u044B\u0442\u043D\u044B\u0439, \u0437\u0435\u043B\u0435\u043D\u044B\u0439 \u0438 \u0442\u0440\u0443\u0441\u043E\u0432\u0430\u0442\u044B\u0439.",
+        "bio": "\u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u0441\u043E\u043B\u0434\u0430\u0442-\u0441\u0440\u043E\u0447\u043D\u0438\u043A. \u043D\u0435\u043E\u043F\u044B\u0442\u043D\u044B\u0439, \u0437\u0435\u043B\u0435\u043D\u044B\u0439 \u0438 \u0442\u0440\u0443\u0441\u043E\u0432\u0430\u0442\u044B\u0439.",
         "iconX": 495,
         "iconY": 648,
         "iconWidth": 165,
@@ -35421,7 +36805,7 @@
       ],
       "profile": {
         "name": "esc_driver_friend_name",
-        "bio": "\u0414\u0440\u0443\u0433 \u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F.",
+        "bio": "\u0434\u0440\u0443\u0433 \u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F.",
         "iconX": 495,
         "iconY": 648,
         "iconWidth": 165,
@@ -35443,7 +36827,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_flashman_name",
-        "bio": "\u041C\u043D\u043E\u0433\u043E\u0435 \u0437\u043D\u0430\u0435\u0442 \u043E\u0431 \u043E\u0440\u0443\u0436\u0438\u0438.",
+        "bio": "\u043C\u043D\u043E\u0433\u043E\u0435 \u0437\u043D\u0430\u0435\u0442 \u043E\u0431 \u043E\u0440\u0443\u0436\u0438\u0438.",
         "iconX": 495,
         "iconY": 648,
         "iconWidth": 165,
@@ -35465,7 +36849,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_flashman_name",
-        "bio": "\u041C\u043D\u043E\u0433\u043E\u0435 \u0437\u043D\u0430\u0435\u0442 \u043E\u0431 \u043E\u0440\u0443\u0436\u0438\u0438.",
+        "bio": "\u043C\u043D\u043E\u0433\u043E\u0435 \u0437\u043D\u0430\u0435\u0442 \u043E\u0431 \u043E\u0440\u0443\u0436\u0438\u0438.",
         "iconX": 495,
         "iconY": 648,
         "iconWidth": 165,
@@ -35498,7 +36882,7 @@
       ],
       "profile": {
         "name": "esc_stalker_novice_quest_name",
-        "bio": "\u041B\u044E\u0431\u0438\u0442 \u0438\u0441\u043A\u0430\u0442\u044C \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F.",
+        "bio": "\u043B\u044E\u0431\u0438\u0442 \u0438\u0441\u043A\u0430\u0442\u044C \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F.",
         "iconX": 0,
         "iconY": 324,
         "iconWidth": 165,
@@ -35520,7 +36904,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_zak_stalkerbase_name",
-        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 165,
         "iconY": 756,
         "iconWidth": 165,
@@ -35542,7 +36926,7 @@
       "inventoryItems": [],
       "profile": {
         "name": "esc_wolf_brother_name",
-        "bio": "\u0411\u0440\u0430\u0442 \u0412\u043E\u043B\u043A\u0430.",
+        "bio": "\u0431\u0440\u0430\u0442 \u0432\u043E\u043B\u043A\u0430.",
         "iconX": 0,
         "iconY": 324,
         "iconWidth": 165,
@@ -35732,7 +37116,7 @@
       ],
       "profile": {
         "name": "generate_name_stalker",
-        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 0,
         "iconY": 756,
         "iconWidth": 165,
@@ -35765,7 +37149,7 @@
       ],
       "profile": {
         "name": "generate_name_stalker",
-        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
         "iconX": 825,
         "iconY": 324,
         "iconWidth": 165,
@@ -35921,6 +37305,3830 @@
       "z": 215.34119,
       "locationId": 8,
       "money": 0
+    }
+  ],
+  "smartTerrains": [
+    {
+      "localeName": "st_name_agr_smart_terrain_1_2",
+      "name": "agr_smart_terrain_1_2",
+      "x": -197.48161,
+      "z": 122.7628,
+      "y": 1.852858,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_1_3",
+        "agr_smart_terrain_2_3",
+        "agr_smart_terrain_2_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_1_3",
+      "name": "agr_smart_terrain_1_3",
+      "x": -209.94638,
+      "z": -8.622881,
+      "y": 2.758696,
+      "locationId": 1,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_1_2",
+        "agr_smart_terrain_2_3",
+        "agr_smart_terrain_2_5"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_1_6",
+      "name": "agr_smart_terrain_1_6",
+      "x": -162.13615,
+      "z": -184.22565,
+      "y": -0.200226,
+      "locationId": 1,
+      "simType": "resource",
+      "simValue": 70,
+      "squadCapacity": 5,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_6",
+        "agr_smart_terrain_1_6_near_1",
+        "agr_smart_terrain_1_6_near_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_1_6_near_1",
+      "name": "agr_smart_terrain_1_6_near_1",
+      "x": -190.78549,
+      "z": -140.13013,
+      "y": -0.200197,
+      "locationId": 1,
+      "simType": "resource",
+      "simValue": 50,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_2_5",
+        "agr_smart_terrain_1_6"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_1_6_near_2",
+      "name": "agr_smart_terrain_1_6_near_2",
+      "x": -135.03831,
+      "z": -199.90424,
+      "y": 10.00008,
+      "locationId": 1,
+      "simType": "base",
+      "simValue": 100,
+      "squadCapacity": 2,
+      "respawnSector": "dolg",
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_1_6"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_2_2",
+      "name": "agr_smart_terrain_2_2",
+      "x": -93.81737,
+      "z": 138.3684,
+      "y": 9.986219,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_2",
+        "agr_smart_terrain_2_3",
+        "agr_smart_terrain_1_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_2_3",
+      "name": "agr_smart_terrain_2_3",
+      "x": -132.55081,
+      "z": 44.133247,
+      "y": 10.999902,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_1_3",
+        "agr_smart_terrain_1_2",
+        "agr_smart_terrain_4_4_near_2",
+        "agr_smart_terrain_2_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_2_5",
+      "name": "agr_smart_terrain_2_5",
+      "x": -146.8271,
+      "z": -90.45967,
+      "y": 6.289456,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_1_6_near_1",
+        "agr_smart_terrain_1_3",
+        "agr_smart_terrain_3_5"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_3_5",
+      "name": "agr_smart_terrain_3_5",
+      "x": -11.477193,
+      "z": -79.30426,
+      "y": 7.277504,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_6",
+        "agr_smart_terrain_2_5",
+        "agr_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_2",
+      "name": "agr_smart_terrain_4_2",
+      "x": -8.447318,
+      "z": 113.09074,
+      "y": 3.772523,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_5_2",
+        "agr_smart_terrain_4_4_near_1",
+        "agr_smart_terrain_2_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_4",
+      "name": "agr_smart_terrain_4_4",
+      "x": -1.39021,
+      "z": 15.261842,
+      "y": 7.5,
+      "locationId": 1,
+      "simType": "resource",
+      "simValue": 90,
+      "squadCapacity": 3,
+      "respawnSector": "stalker",
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_4_near_1",
+        "agr_smart_terrain_4_4_near_2",
+        "agr_smart_terrain_4_4_near_3"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_4_near_1",
+      "name": "agr_smart_terrain_4_4_near_1",
+      "x": 9.104826,
+      "z": 40.52322,
+      "y": 0.976799,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 60,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_4",
+        "agr_smart_terrain_4_2",
+        "agr_smart_terrain_4_4_near_3",
+        "agr_smart_terrain_4_4_near_2"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_4_near_2",
+      "name": "agr_smart_terrain_4_4_near_2",
+      "x": -43.560463,
+      "z": 2.084564,
+      "y": 0,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 40,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_4",
+        "agr_smart_terrain_2_3",
+        "agr_smart_terrain_4_4_near_1"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_4_near_3",
+      "name": "agr_smart_terrain_4_4_near_3",
+      "x": 63.668148,
+      "z": 34.959324,
+      "y": -0.199989,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 60,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_4",
+        "agr_smart_terrain_4_4_near_1",
+        "agr_smart_terrain_5_3",
+        "agr_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_4_6",
+      "name": "agr_smart_terrain_4_6",
+      "x": 20.908785,
+      "z": -146.50374,
+      "y": 0.367436,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_3_5",
+        "agr_smart_terrain_5_7",
+        "agr_smart_terrain_5_4",
+        "agr_smart_terrain_1_6"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_5_2",
+      "name": "agr_smart_terrain_5_2",
+      "x": 69.75497,
+      "z": 146.74455,
+      "y": 15.013191,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_5_3",
+        "agr_smart_terrain_4_2",
+        "yan_smart_terrain_5_6"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_5_3",
+      "name": "agr_smart_terrain_5_3",
+      "x": 147.08595,
+      "z": 53.640125,
+      "y": 0.152092,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_5_2",
+        "agr_smart_terrain_6_4",
+        "agr_smart_terrain_4_4_near_3",
+        "agr_smart_terrain_7_4"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_5_4",
+      "name": "agr_smart_terrain_5_4",
+      "x": 100.01943,
+      "z": -44.427715,
+      "y": 0.411919,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_4_near_3",
+        "agr_smart_terrain_4_6",
+        "agr_smart_terrain_7_5",
+        "agr_smart_terrain_7_4",
+        "agr_smart_terrain_3_5"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_5_7",
+      "name": "agr_smart_terrain_5_7",
+      "x": 80.70424,
+      "z": -237.65839,
+      "y": -0.790862,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_4_6",
+        "agr_smart_terrain_6_6",
+        "mar_smart_terrain_7_3"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_6_4",
+      "name": "agr_smart_terrain_6_4",
+      "x": 251.63211,
+      "z": 66.06107,
+      "y": -0.049977,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_5_3"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_6_6",
+      "name": "agr_smart_terrain_6_6",
+      "x": 232.20216,
+      "z": -254.4216,
+      "y": 0.741362,
+      "locationId": 1,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_5_7",
+        "agr_smart_terrain_7_5",
+        "gar_smart_terrain_1_7"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_7_4",
+      "name": "agr_smart_terrain_7_4",
+      "x": 240.92154,
+      "z": -6.580074,
+      "y": 0.31095,
+      "locationId": 1,
+      "simType": "territory",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_7_5",
+        "agr_smart_terrain_5_4",
+        "gar_smart_terrain_1_5",
+        "agr_smart_terrain_5_3"
+      ]
+    },
+    {
+      "localeName": "st_name_agr_smart_terrain_7_5",
+      "name": "agr_smart_terrain_7_5",
+      "x": 233.5277,
+      "z": -109.40113,
+      "y": 22.908697,
+      "locationId": 1,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "agr_smart_terrain_7_4",
+        "agr_smart_terrain_5_4",
+        "agr_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_agru_smart_terrain_1",
+      "name": "agru_smart_terrain_1",
+      "x": -1.1884,
+      "z": 75.76206,
+      "y": -3.234782,
+      "locationId": 2,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": null
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_1_2",
+      "name": "val_smart_terrain_1_2",
+      "x": 175.27869,
+      "z": -254.45064,
+      "y": 0.166265,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 5,
+      "respawnSector": "{\u002Bval_deliver_pda_done} killer",
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_6",
+        "val_smart_terrain_8_7",
+        "val_smart_terrain_8_9"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_3_0",
+      "name": "val_smart_terrain_3_0",
+      "x": -58.755592,
+      "z": -363.37744,
+      "y": -1.121195,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_4_0",
+        "val_smart_terrain_5_10",
+        "val_smart_terrain_5_8",
+        "val_smart_terrain_7_8",
+        "val_smart_terrain_7_11"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_4_0",
+      "name": "val_smart_terrain_4_0",
+      "x": -118.460915,
+      "z": -504.26468,
+      "y": 0.712203,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_3_0",
+        "val_smart_terrain_7_11",
+        "val_smart_terrain_5_10"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_5_10",
+      "name": "val_smart_terrain_5_10",
+      "x": -157.00455,
+      "z": -383.14447,
+      "y": 0.002346,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_5_8",
+        "val_smart_terrain_3_0",
+        "val_smart_terrain_4_0"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_5_7",
+      "name": "val_smart_terrain_5_7",
+      "x": -164.42497,
+      "z": -179.90147,
+      "y": 2.111789,
+      "locationId": 3,
+      "simType": "territory",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_6_6",
+        "val_smart_terrain_7_8",
+        "val_smart_terrain_5_8",
+        "gar_smart_terrain_8_3"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_5_8",
+      "name": "val_smart_terrain_5_8",
+      "x": -138.28525,
+      "z": -320.45697,
+      "y": -2.185234,
+      "locationId": 3,
+      "simType": "territory",
+      "simValue": 3,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_8",
+        "val_smart_terrain_5_10",
+        "val_smart_terrain_3_0",
+        "val_smart_terrain_5_7",
+        "gar_smart_terrain_8_7"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_6_4",
+      "name": "val_smart_terrain_6_4",
+      "x": -126.49986,
+      "z": -24.349062,
+      "y": 4.369806,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_3",
+        "val_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_6_5",
+      "name": "val_smart_terrain_6_5",
+      "x": -53.391552,
+      "z": -142.7128,
+      "y": -2.843999,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_6",
+        "val_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_6_6",
+      "name": "val_smart_terrain_6_6",
+      "x": -95.329636,
+      "z": -139.32018,
+      "y": -0.864,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_6_4",
+        "val_smart_terrain_5_7",
+        "val_smart_terrain_6_5"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_11",
+      "name": "val_smart_terrain_7_11",
+      "x": -47.097675,
+      "z": -512.35333,
+      "y": 0.362835,
+      "locationId": 3,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_10",
+        "val_smart_terrain_3_0",
+        "val_smart_terrain_9_11",
+        "val_smart_terrain_4_0",
+        "esc_smart_terrain_9_10"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_3",
+      "name": "val_smart_terrain_7_3",
+      "x": 0.70874,
+      "z": 35.668034,
+      "y": 0.093508,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 3,
+      "respawnSector": "freedom",
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_4",
+        "val_smart_terrain_7_5",
+        "val_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_4",
+      "name": "val_smart_terrain_7_4",
+      "x": 6.233509,
+      "z": -29.29669,
+      "y": 1.188,
+      "locationId": 3,
+      "simType": "base",
+      "simValue": 3,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_3",
+        "val_smart_terrain_7_5"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_5",
+      "name": "val_smart_terrain_7_5",
+      "x": 44.324417,
+      "z": 19.191006,
+      "y": 0.087036,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_4",
+        "val_smart_terrain_7_3",
+        "val_smart_terrain_9_4",
+        "val_smart_terrain_9_2",
+        "val_smart_terrain_8_6"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_6",
+      "name": "val_smart_terrain_7_6",
+      "x": -9.731352,
+      "z": -165.70047,
+      "y": 1.399544,
+      "locationId": 3,
+      "simType": "resource",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_8_6",
+        "val_smart_terrain_8_7",
+        "val_smart_terrain_6_5"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_7_8",
+      "name": "val_smart_terrain_7_8",
+      "x": -13.121503,
+      "z": -286.48566,
+      "y": -4.126,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_8_7",
+        "val_smart_terrain_8_9",
+        "val_smart_terrain_5_8",
+        "val_smart_terrain_3_0",
+        "val_smart_terrain_5_7"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_8_6",
+      "name": "val_smart_terrain_8_6",
+      "x": 56.618095,
+      "z": -107.73475,
+      "y": 0.062507,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_4",
+        "val_smart_terrain_9_5",
+        "val_smart_terrain_9_6",
+        "val_smart_terrain_7_5",
+        "val_smart_terrain_7_6"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_8_7",
+      "name": "val_smart_terrain_8_7",
+      "x": 27.066584,
+      "z": -226.14568,
+      "y": 0.0481,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_8",
+        "val_smart_terrain_7_6",
+        "val_smart_terrain_9_6",
+        "val_smart_terrain_1_2"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_8_9",
+      "name": "val_smart_terrain_8_9",
+      "x": 43.935287,
+      "z": -368.86987,
+      "y": -4.866844,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_8",
+        "val_smart_terrain_9_10",
+        "val_smart_terrain_1_2"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_9_10",
+      "name": "val_smart_terrain_9_10",
+      "x": 116.67021,
+      "z": -424.98645,
+      "y": 4.262692,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "val_smart_terrain_8_9",
+        "val_smart_terrain_7_11",
+        "val_smart_terrain_9_11"
+      ]
+    },
+    {
+      "localeName": "val_smart_terrain_9_11",
+      "name": "val_smart_terrain_9_11",
+      "x": 114.27665,
+      "z": -502.05347,
+      "y": 3.259867,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 3,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_10",
+        "val_smart_terrain_7_11"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_9_2",
+      "name": "val_smart_terrain_9_2",
+      "x": 140.04861,
+      "z": 48.9994,
+      "y": -1.001044,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_5",
+        "val_smart_terrain_9_4",
+        "val_smart_terrain_7_5"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_9_4",
+      "name": "val_smart_terrain_9_4",
+      "x": 95.74424,
+      "z": -5.545074,
+      "y": 0.595022,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_7_5",
+        "val_smart_terrain_8_6",
+        "val_smart_terrain_9_2"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_9_5",
+      "name": "val_smart_terrain_9_5",
+      "x": 168.02693,
+      "z": -102.180855,
+      "y": -2.639962,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_9_6",
+        "val_smart_terrain_8_6",
+        "val_smart_terrain_9_2"
+      ]
+    },
+    {
+      "localeName": "st_name_val_smart_terrain_9_6",
+      "name": "val_smart_terrain_9_6",
+      "x": 136.34628,
+      "z": -185.5297,
+      "y": 0.19919,
+      "locationId": 3,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "val_smart_terrain_8_7",
+        "val_smart_terrain_8_6",
+        "val_smart_terrain_9_5",
+        "val_smart_terrain_1_2"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_1_11",
+      "name": "esc_smart_terrain_1_11",
+      "x": -211.76968,
+      "z": -38.908466,
+      "y": -8.996897,
+      "locationId": 4,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_2_12",
+        "esc_smart_terrain_4_11",
+        "esc_smart_terrain_4_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_2_12",
+      "name": "esc_smart_terrain_2_12",
+      "x": -196.47144,
+      "z": -147.17964,
+      "y": -20.14671,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 3,
+      "respawnSector": "stalker",
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_1_11",
+        "esc_smart_terrain_2_14",
+        "esc_smart_terrain_4_13",
+        "esc_smart_terrain_4_11"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_2_14",
+      "name": "esc_smart_terrain_2_14",
+      "x": -223.12367,
+      "z": -244.227,
+      "y": -33.059734,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "esc_smart_terrain_3_16",
+        "esc_smart_terrain_2_12",
+        "esc_smart_terrain_4_13",
+        "mar_smart_terrain_11_11"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_3_16",
+      "name": "esc_smart_terrain_3_16",
+      "x": -134.2417,
+      "z": -377.1674,
+      "y": -30.138016,
+      "locationId": 4,
+      "simType": "base",
+      "simValue": 3,
+      "squadCapacity": 5,
+      "respawnSector": "army",
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_2_14",
+        "esc_smart_terrain_4_13"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_3_6",
+      "name": "esc_smart_terrain_3_6",
+      "x": -155.05284,
+      "z": 306.4064,
+      "y": -2.037762,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_3_7",
+        "gar_smart_terrain_3_8"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_3_7",
+      "name": "esc_smart_terrain_3_7",
+      "x": -130.55675,
+      "z": 222.92285,
+      "y": 4.509924,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_4_8",
+        "esc_smart_terrain_3_6",
+        "mar_smart_terrain_12_2"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_4_10",
+      "name": "esc_smart_terrain_4_10",
+      "x": -89.76058,
+      "z": 33.7524,
+      "y": -5.748928,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_4_9",
+        "esc_smart_terrain_5_9",
+        "esc_smart_terrain_1_11",
+        "esc_smart_terrain_5_10",
+        "esc_smart_terrain_4_11"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_4_11",
+      "name": "esc_smart_terrain_4_11",
+      "x": -89.013,
+      "z": -69.84067,
+      "y": -4.839193,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_1_11",
+        "esc_smart_terrain_2_12",
+        "esc_smart_terrain_4_10",
+        "esc_smart_terrain_5_11",
+        "esc_smart_terrain_5_12"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_4_13",
+      "name": "esc_smart_terrain_4_13",
+      "x": -107.01537,
+      "z": -213.2677,
+      "y": -21.258665,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_12",
+        "esc_smart_terrain_2_12",
+        "esc_smart_terrain_2_14",
+        "esc_smart_terrain_3_16"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_4_8",
+      "name": "esc_smart_terrain_4_8",
+      "x": -61.833652,
+      "z": 199.23425,
+      "y": -1.125656,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_4_9",
+        "esc_smart_terrain_5_7",
+        "esc_smart_terrain_3_7"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_4_9",
+      "name": "esc_smart_terrain_4_9",
+      "x": -80.61401,
+      "z": 113.4925,
+      "y": -1.584812,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_4_8",
+        "esc_smart_terrain_5_9",
+        "esc_smart_terrain_4_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_10",
+      "name": "esc_smart_terrain_5_10",
+      "x": 21.658886,
+      "z": 29.335745,
+      "y": 1.459045,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_7_11",
+        "esc_smart_terrain_5_9",
+        "esc_smart_terrain_7_10",
+        "esc_smart_terrain_5_11",
+        "esc_smart_terrain_4_10",
+        "esc_smart_terrain_6_8"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_11",
+      "name": "esc_smart_terrain_5_11",
+      "x": 24.27573,
+      "z": -68.58194,
+      "y": -0.07547,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_10",
+        "esc_smart_terrain_7_11",
+        "esc_smart_terrain_4_11",
+        "esc_smart_terrain_5_12"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_12",
+      "name": "esc_smart_terrain_5_12",
+      "x": -29.980944,
+      "z": -128.66792,
+      "y": -10.535139,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_11",
+        "esc_smart_terrain_4_13"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_2",
+      "name": "esc_smart_terrain_5_2",
+      "x": 22.841528,
+      "z": 668.88434,
+      "y": 15.97851,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 3,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_3",
+        "gar_smart_terrain_5_8"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_4",
+      "name": "esc_smart_terrain_5_4",
+      "x": 52.71138,
+      "z": 472.40552,
+      "y": 2.887346,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_3",
+        "esc_smart_terrain_6_5",
+        "esc_smart_terrain_5_6"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_6",
+      "name": "esc_smart_terrain_5_6",
+      "x": 53.500477,
+      "z": 374.9167,
+      "y": 1.826086,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_4",
+        "esc_smart_terrain_6_5",
+        "esc_smart_terrain_6_6",
+        "esc_smart_terrain_5_7"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_7",
+      "name": "esc_smart_terrain_5_7",
+      "x": -14.534532,
+      "z": 274.73886,
+      "y": 0.658543,
+      "locationId": 4,
+      "simType": "base",
+      "simValue": 100,
+      "squadCapacity": 3,
+      "respawnSector": "stalker",
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_6",
+        "esc_smart_terrain_6_7",
+        "esc_smart_terrain_4_8",
+        "esc_smart_terrain_6_6",
+        "esc_smart_terrain_6_8"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_5_9",
+      "name": "esc_smart_terrain_5_9",
+      "x": -2.814708,
+      "z": 82.69814,
+      "y": 2.5494,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_8",
+        "esc_smart_terrain_5_10",
+        "esc_smart_terrain_4_10",
+        "esc_smart_terrain_4_9"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_6_3",
+      "name": "esc_smart_terrain_6_3",
+      "x": 68.24483,
+      "z": 609.36804,
+      "y": 8.306015,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_2",
+        "esc_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_6_5",
+      "name": "esc_smart_terrain_6_5",
+      "x": 132.95381,
+      "z": 449.42807,
+      "y": 2.749922,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_4",
+        "esc_smart_terrain_5_6",
+        "esc_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_6_6",
+      "name": "esc_smart_terrain_6_6",
+      "x": 131.15935,
+      "z": 327.1243,
+      "y": -0.63188,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_6",
+        "esc_smart_terrain_6_5",
+        "esc_smart_terrain_8_6",
+        "esc_smart_terrain_6_7",
+        "esc_smart_terrain_5_7"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_6_7",
+      "name": "esc_smart_terrain_6_7",
+      "x": 137.77196,
+      "z": 233.64807,
+      "y": 11.855483,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_6",
+        "esc_smart_terrain_5_7",
+        "esc_smart_terrain_6_8",
+        "esc_smart_terrain_8_6"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_6_8",
+      "name": "esc_smart_terrain_6_8",
+      "x": 54.948326,
+      "z": 157.10632,
+      "y": 1.310566,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_7",
+        "esc_smart_terrain_7_10",
+        "esc_smart_terrain_5_7",
+        "esc_smart_terrain_5_9",
+        "esc_smart_terrain_5_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_7_10",
+      "name": "esc_smart_terrain_7_10",
+      "x": 107.80618,
+      "z": 70.50059,
+      "y": 2.973263,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_7_11",
+        "esc_smart_terrain_6_8",
+        "esc_smart_terrain_5_10",
+        "esc_smart_terrain_8_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_7_11",
+      "name": "esc_smart_terrain_7_11",
+      "x": 115.98976,
+      "z": -16.576399,
+      "y": -7.614707,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 3,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_5_10",
+        "esc_smart_terrain_8_10",
+        "esc_smart_terrain_7_10",
+        "esc_smart_terrain_5_11"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_8_10",
+      "name": "esc_smart_terrain_8_10",
+      "x": 212.31775,
+      "z": 61.720146,
+      "y": 12.592432,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_8_9",
+        "esc_smart_terrain_9_10",
+        "esc_smart_terrain_7_11",
+        "esc_smart_terrain_7_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_8_6",
+      "name": "esc_smart_terrain_8_6",
+      "x": 232.32936,
+      "z": 339.759,
+      "y": 1.466334,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_6_6",
+        "esc_smart_terrain_6_7",
+        "esc_smart_terrain_9_7"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_8_9",
+      "name": "esc_smart_terrain_8_9",
+      "x": 313.03735,
+      "z": 124.12856,
+      "y": 3.321314,
+      "locationId": 4,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "esc_smart_terrain_8_10",
+        "esc_smart_terrain_9_10"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_9_10",
+      "name": "esc_smart_terrain_9_10",
+      "x": 316.71756,
+      "z": -9.693422,
+      "y": 16.319794,
+      "locationId": 4,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_8_9",
+        "esc_smart_terrain_8_10",
+        "val_smart_terrain_7_11"
+      ]
+    },
+    {
+      "localeName": "st_name_esc_smart_terrain_9_7",
+      "name": "esc_smart_terrain_9_7",
+      "x": 325.62543,
+      "z": 277.5445,
+      "y": 16.765606,
+      "locationId": 4,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "esc_smart_terrain_8_6"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_1_5",
+      "name": "gar_smart_terrain_1_5",
+      "x": -204.99329,
+      "z": -28.935106,
+      "y": 0.391544,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_6",
+        "gar_smart_terrain_2_4",
+        "agr_smart_terrain_7_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_1_7",
+      "name": "gar_smart_terrain_1_7",
+      "x": -221.87064,
+      "z": -144.669,
+      "y": -7.551861,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_6",
+        "gar_smart_terrain_3_8",
+        "gar_smart_terrain_3_7",
+        "agr_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_2_3",
+      "name": "gar_smart_terrain_2_3",
+      "x": -215.30772,
+      "z": 145.58939,
+      "y": -4.218009,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_2",
+        "gar_smart_terrain_2_4",
+        "gar_smart_terrain_3_3",
+        "red_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_2_4",
+      "name": "gar_smart_terrain_2_4",
+      "x": -176.8745,
+      "z": 42.21623,
+      "y": 0.448086,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_1_5",
+        "gar_smart_terrain_3_5",
+        "gar_smart_terrain_3_3",
+        "gar_smart_terrain_2_3"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_2",
+      "name": "gar_smart_terrain_3_2",
+      "x": -127.72885,
+      "z": 212.91975,
+      "y": 0.200707,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_2_3",
+        "gar_smart_terrain_4_2"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_3",
+      "name": "gar_smart_terrain_3_3",
+      "x": -127.39296,
+      "z": 104.30249,
+      "y": 1.713321,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_2_3",
+        "gar_smart_terrain_2_4",
+        "gar_smart_terrain_4_2",
+        "gar_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_5",
+      "name": "gar_smart_terrain_3_5",
+      "x": -100.81054,
+      "z": 8.409307,
+      "y": 0.443434,
+      "locationId": 5,
+      "simType": "base",
+      "simValue": 3,
+      "squadCapacity": 4,
+      "respawnSector": "bandit",
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_2_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_6",
+      "name": "gar_smart_terrain_3_6",
+      "x": -105.19472,
+      "z": -101.43191,
+      "y": 5.198362,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_7",
+        "gar_smart_terrain_1_7",
+        "gar_smart_terrain_1_5",
+        "gar_smart_terrain_4_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_7",
+      "name": "gar_smart_terrain_3_7",
+      "x": -76.995674,
+      "z": -212.06303,
+      "y": -2.6,
+      "locationId": 5,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_1_7",
+        "gar_smart_terrain_3_8",
+        "gar_smart_terrain_3_6",
+        "gar_smart_terrain_4_7"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_3_8",
+      "name": "gar_smart_terrain_3_8",
+      "x": -139.34648,
+      "z": -282.77676,
+      "y": -0.021029,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_7",
+        "gar_smart_terrain_1_7",
+        "gar_smart_terrain_5_8",
+        "esc_smart_terrain_3_6"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_4_2",
+      "name": "gar_smart_terrain_4_2",
+      "x": -72.79999,
+      "z": 151.9,
+      "y": 4.664405,
+      "locationId": 5,
+      "simType": "resource",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_2",
+        "gar_smart_terrain_3_3",
+        "gar_smart_terrain_5_2",
+        "gar_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_4_5",
+      "name": "gar_smart_terrain_4_5",
+      "x": 14.699571,
+      "z": -14.715534,
+      "y": 0.401075,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_6",
+        "gar_smart_terrain_5_4",
+        "gar_smart_terrain_5_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_4_7",
+      "name": "gar_smart_terrain_4_7",
+      "x": -9.830259,
+      "z": -149.09445,
+      "y": 2.059784,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_6",
+        "gar_smart_terrain_5_8",
+        "gar_smart_terrain_3_7"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_5_2",
+      "name": "gar_smart_terrain_5_2",
+      "x": 39.759945,
+      "z": 218.03236,
+      "y": 0.492441,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_3",
+        "gar_smart_terrain_6_1",
+        "mil_smart_terrain_7_2"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_5_4",
+      "name": "gar_smart_terrain_5_4",
+      "x": 1.30968,
+      "z": 92.592514,
+      "y": 3.109078,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_4_2",
+        "gar_smart_terrain_3_3",
+        "gar_smart_terrain_4_5",
+        "gar_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_5_5",
+      "name": "gar_smart_terrain_5_5",
+      "x": 79.57304,
+      "z": -19.17706,
+      "y": 3.280492,
+      "locationId": 5,
+      "simType": "resource",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_6",
+        "gar_smart_terrain_6_5",
+        "gar_smart_terrain_4_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_5_6",
+      "name": "gar_smart_terrain_5_6",
+      "x": 81.18684,
+      "z": -134.4153,
+      "y": 0.132694,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_7",
+        "gar_smart_terrain_6_6",
+        "gar_smart_terrain_4_7",
+        "gar_smart_terrain_5_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_5_8",
+      "name": "gar_smart_terrain_5_8",
+      "x": 37.950783,
+      "z": -301.54825,
+      "y": 0.498304,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_3_8",
+        "gar_smart_terrain_6_7",
+        "esc_smart_terrain_5_2",
+        "gar_smart_terrain_4_7"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_1",
+      "name": "gar_smart_terrain_6_1",
+      "x": 163.81548,
+      "z": 256.22964,
+      "y": -3.48237,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_8_3",
+        "gar_smart_terrain_6_3",
+        "gar_smart_terrain_5_2"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_3",
+      "name": "gar_smart_terrain_6_3",
+      "x": 99.408424,
+      "z": 169.39867,
+      "y": 3.739601,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "stalker",
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_2",
+        "gar_smart_terrain_6_4",
+        "gar_smart_terrain_7_3",
+        "gar_smart_terrain_6_1"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_4",
+      "name": "gar_smart_terrain_6_4",
+      "x": 97.89856,
+      "z": 80.742325,
+      "y": 0.565651,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_4",
+        "gar_smart_terrain_6_3",
+        "gar_smart_terrain_7_3",
+        "gar_smart_terrain_7_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_5",
+      "name": "gar_smart_terrain_6_5",
+      "x": 170.30989,
+      "z": -23.0181,
+      "y": 0.612249,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_5",
+        "gar_smart_terrain_6_6",
+        "gar_smart_terrain_7_4",
+        "gar_smart_terrain_8_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_6",
+      "name": "gar_smart_terrain_6_6",
+      "x": 181.321,
+      "z": -120.31403,
+      "y": -1.280825,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_6",
+        "gar_smart_terrain_6_7",
+        "gar_smart_terrain_6_5",
+        "gar_smart_terrain_8_7"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_6_7",
+      "name": "gar_smart_terrain_6_7",
+      "x": 96.607285,
+      "z": -224.65602,
+      "y": 3.508998,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_5_8",
+        "gar_smart_terrain_5_6",
+        "gar_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_7_3",
+      "name": "gar_smart_terrain_7_3",
+      "x": 156.013,
+      "z": 127.286514,
+      "y": -3.948052,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_4",
+        "gar_smart_terrain_6_3",
+        "gar_smart_terrain_7_4",
+        "gar_smart_terrain_8_3"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_7_4",
+      "name": "gar_smart_terrain_7_4",
+      "x": 168.24919,
+      "z": 49.940914,
+      "y": 0.255668,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_4",
+        "gar_smart_terrain_7_3",
+        "gar_smart_terrain_8_5",
+        "gar_smart_terrain_6_5"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_8_3",
+      "name": "gar_smart_terrain_8_3",
+      "x": 242.98262,
+      "z": 157.30402,
+      "y": 0.387131,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_1",
+        "gar_smart_terrain_7_3",
+        "val_smart_terrain_5_7"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_8_5",
+      "name": "gar_smart_terrain_8_5",
+      "x": 280.0445,
+      "z": 6.284298,
+      "y": -6.620898,
+      "locationId": 5,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "gar_smart_terrain_6_5",
+        "gar_smart_terrain_7_4"
+      ]
+    },
+    {
+      "localeName": "st_name_gar_smart_terrain_8_7",
+      "name": "gar_smart_terrain_8_7",
+      "x": 261.9378,
+      "z": -116.19743,
+      "y": -8.571766,
+      "locationId": 5,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "gar_smart_terrain_6_6",
+        "val_smart_terrain_5_8"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_1",
+      "name": "lim_smart_terrain_1",
+      "x": -18.170185,
+      "z": -320.6483,
+      "y": 1.505652,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_2",
+        "lim_smart_terrain_help_smart"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_10",
+      "name": "lim_smart_terrain_10",
+      "x": 76.494125,
+      "z": 257.20102,
+      "y": 3.302251,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": null
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_2",
+      "name": "lim_smart_terrain_2",
+      "x": -39.97458,
+      "z": -243.11087,
+      "y": -5.000026,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_1",
+        "lim_smart_terrain_3",
+        "lim_smart_terrain_help_smart"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_3",
+      "name": "lim_smart_terrain_3",
+      "x": -39.741505,
+      "z": -178.46315,
+      "y": -5.203472,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_2",
+        "lim_smart_terrain_4"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_4",
+      "name": "lim_smart_terrain_4",
+      "x": -23.72367,
+      "z": -106.76855,
+      "y": -5.058939,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_3",
+        "lim_smart_terrain_5"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_5",
+      "name": "lim_smart_terrain_5",
+      "x": 6.074322,
+      "z": -53.218082,
+      "y": -4.999998,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_4",
+        "lim_smart_terrain_6"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_6",
+      "name": "lim_smart_terrain_6",
+      "x": 23.79872,
+      "z": 46.161446,
+      "y": 1.045182,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_5",
+        "lim_smart_terrain_7"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_7",
+      "name": "lim_smart_terrain_7",
+      "x": -66.0089,
+      "z": 69.11456,
+      "y": -6.999992,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_6",
+        "lim_smart_terrain_8"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_8",
+      "name": "lim_smart_terrain_8",
+      "x": -23.06778,
+      "z": 155.91089,
+      "y": -3.986206,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_6",
+        "lim_smart_terrain_7",
+        "lim_smart_terrain_9"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_9",
+      "name": "lim_smart_terrain_9",
+      "x": 35.062298,
+      "z": 190.44151,
+      "y": 13.703252,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 4,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_8",
+        "lim_smart_terrain_10"
+      ]
+    },
+    {
+      "localeName": "st_name_lim_smart_terrain_help_smart",
+      "name": "lim_smart_terrain_help_smart",
+      "x": 34.731735,
+      "z": -281.493,
+      "y": -0.058836,
+      "locationId": 6,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "lim_smart_terrain_1",
+        "lim_smart_terrain_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_10_10",
+      "name": "mar_smart_terrain_10_10",
+      "x": 424.15344,
+      "z": -46.90232,
+      "y": 0.395328,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": null
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_10_5",
+      "name": "mar_smart_terrain_10_5",
+      "x": 417.17514,
+      "z": 254.98524,
+      "y": 2.965467,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_8_4",
+        "mar_smart_terrain_10_7",
+        "mar_smart_terrain_11_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_10_7",
+      "name": "mar_smart_terrain_10_7",
+      "x": 353.44684,
+      "z": 129.69185,
+      "y": 1.849471,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_10_5",
+        "mar_smart_terrain_8_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_11_11",
+      "name": "mar_smart_terrain_11_11",
+      "x": 510.1844,
+      "z": -171.57327,
+      "y": 1.907328,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "{=spawn_smart_captured_by_faction(csky)} csky,renegade",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_9_10"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_11_3",
+      "name": "mar_smart_terrain_11_3",
+      "x": 458.9617,
+      "z": 366.7489,
+      "y": 1.453471,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_10_5",
+        "mar_smart_terrain_12_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_12_2",
+      "name": "mar_smart_terrain_12_2",
+      "x": 599.8819,
+      "z": 431.29834,
+      "y": 2.74947,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "{=spawn_smart_captured_by_faction(csky)} csky,renegade",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_11_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_3_10",
+      "name": "mar_smart_terrain_3_10",
+      "x": -66.812126,
+      "z": -82.94788,
+      "y": 0.89547,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "mar_smart_terrain_5_10"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_3_3",
+      "name": "mar_smart_terrain_3_3",
+      "x": -183.03128,
+      "z": 402.94437,
+      "y": 1.165468,
+      "locationId": 7,
+      "simType": "resource",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_4_5"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_3_7",
+      "name": "mar_smart_terrain_3_7",
+      "x": -152.09229,
+      "z": 86.62503,
+      "y": 0.89547,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_4_7"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_4_5",
+      "name": "mar_smart_terrain_4_5",
+      "x": -54.84916,
+      "z": 291.88416,
+      "y": 0.913468,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_4_7",
+        "mar_smart_terrain_3_3",
+        "mar_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_4_7",
+      "name": "mar_smart_terrain_4_7",
+      "x": -37.056248,
+      "z": 144.27792,
+      "y": 0.89547,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_3_7",
+        "mar_smart_terrain_5_8",
+        "mar_smart_terrain_4_5"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_5_10",
+      "name": "mar_smart_terrain_5_10",
+      "x": 35.562267,
+      "z": -111.967384,
+      "y": 1.172308,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_3_10",
+        "mar_smart_terrain_6_10",
+        "mar_smart_terrain_5_12",
+        "mar_smart_terrain_5_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_5_12",
+      "name": "mar_smart_terrain_5_12",
+      "x": 28.735783,
+      "z": -234.34508,
+      "y": 3.003198,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": "csky",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_5_10",
+        "mar_smart_terrain_6_11"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_5_8",
+      "name": "mar_smart_terrain_5_8",
+      "x": -3.814743,
+      "z": 6.271934,
+      "y": 3.085908,
+      "locationId": 7,
+      "simType": "resource",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_4_7",
+        "mar_smart_terrain_5_10",
+        "mar_smart_terrain_6_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_6_10",
+      "name": "mar_smart_terrain_6_10",
+      "x": 140.66632,
+      "z": -51.882977,
+      "y": -0.065231,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "mar_smart_terrain_5_10"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_6_11",
+      "name": "mar_smart_terrain_6_11",
+      "x": 116.20083,
+      "z": -150.02066,
+      "y": 1.353073,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_5_12",
+        "mar_smart_terrain_8_11"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_6_4",
+      "name": "mar_smart_terrain_6_4",
+      "x": 106.64614,
+      "z": 333.8679,
+      "y": 0.913468,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_4_5",
+        "mar_smart_terrain_7_7",
+        "mar_smart_terrain_8_4",
+        "mar_smart_terrain_7_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_6_7",
+      "name": "mar_smart_terrain_6_7",
+      "x": 85.43095,
+      "z": 119.35959,
+      "y": 0.89547,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": null
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_6_8",
+      "name": "mar_smart_terrain_6_8",
+      "x": 129.78333,
+      "z": 41.67642,
+      "y": 0.806168,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_5_8",
+        "mar_smart_terrain_8_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_7_3",
+      "name": "mar_smart_terrain_7_3",
+      "x": 149.29565,
+      "z": 493.7512,
+      "y": 2.281467,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "{=spawn_smart_captured_by_faction(csky)} csky,renegade",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_6_4",
+        "mar_smart_terrain_8_4",
+        "agr_smart_terrain_5_7"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_7_7",
+      "name": "mar_smart_terrain_7_7",
+      "x": 187.34633,
+      "z": 174.83012,
+      "y": 1.18347,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_8_4",
+        "mar_smart_terrain_8_8",
+        "mar_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_8_11",
+      "name": "mar_smart_terrain_8_11",
+      "x": 286.1701,
+      "z": -160.17604,
+      "y": -0.666672,
+      "locationId": 7,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_6_11",
+        "mar_smart_terrain_8_9",
+        "mar_smart_terrain_9_10"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_8_4",
+      "name": "mar_smart_terrain_8_4",
+      "x": 256.5569,
+      "z": 306.3599,
+      "y": 1.129468,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_6_4",
+        "mar_smart_terrain_7_7",
+        "mar_smart_terrain_10_5",
+        "mar_smart_terrain_7_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_8_8",
+      "name": "mar_smart_terrain_8_8",
+      "x": 274.6025,
+      "z": 61.41599,
+      "y": 3.728938,
+      "locationId": 7,
+      "simType": "resource",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_6_8",
+        "mar_smart_terrain_8_9",
+        "mar_smart_terrain_7_7",
+        "mar_smart_terrain_10_7"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_8_9",
+      "name": "mar_smart_terrain_8_9",
+      "x": 292.98877,
+      "z": -43.549347,
+      "y": 0.179328,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_8_11",
+        "mar_smart_terrain_8_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_9_10",
+      "name": "mar_smart_terrain_9_10",
+      "x": 371.81183,
+      "z": -128.51233,
+      "y": 0.719328,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_8_11",
+        "mar_smart_terrain_11_11"
+      ]
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_csky_base",
+      "name": "mar_smart_terrain_csky_base",
+      "x": -160.5433,
+      "z": -299.6177,
+      "y": 0.500797,
+      "locationId": 7,
+      "simType": "base",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": null
+    },
+    {
+      "localeName": "st_name_mar_smart_terrain_csky_respawn",
+      "name": "mar_smart_terrain_csky_respawn",
+      "x": -196.60742,
+      "z": -147.34424,
+      "y": 1.241913,
+      "locationId": 7,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "{=smart_squad_population(csky:mar_smart_terrain_5_12:3)} csky",
+      "isMutantLair": false,
+      "targets": [
+        "mar_smart_terrain_5_12"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_1",
+      "name": "mil_smart_terrain_2_1",
+      "x": -241.4836,
+      "z": 421.35056,
+      "y": -3.127495,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_2_4",
+        "mil_smart_terrain_2_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_10",
+      "name": "mil_smart_terrain_2_10",
+      "x": 127.95772,
+      "z": 431.97473,
+      "y": -9.169533,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": "monolith",
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_3_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_2",
+      "name": "mil_smart_terrain_2_2",
+      "x": -359.88562,
+      "z": 392.61047,
+      "y": -14.128307,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_2_2",
+        "red_smart_terrain_3_1"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_3",
+      "name": "mil_smart_terrain_2_3",
+      "x": -262.7,
+      "z": 369.40018,
+      "y": -15.381996,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_2_4",
+        "mil_smart_terrain_2_2",
+        "mil_smart_terrain_2_1",
+        "mil_smart_terrain_4_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_4",
+      "name": "mil_smart_terrain_2_4",
+      "x": -176.60004,
+      "z": 374.30017,
+      "y": -16.336004,
+      "locationId": 8,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_2_3",
+        "mil_smart_terrain_3_5",
+        "mil_smart_terrain_2_1"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_2_6",
+      "name": "mil_smart_terrain_2_6",
+      "x": -31.792627,
+      "z": 362.81763,
+      "y": -19.89051,
+      "locationId": 8,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_6",
+        "mil_smart_terrain_3_5",
+        "mil_smart_terrain_3_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_3_2",
+      "name": "mil_smart_terrain_3_2",
+      "x": -339.44904,
+      "z": 305.9706,
+      "y": -20.46976,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_3",
+        "mil_smart_terrain_4_2",
+        "mil_smart_terrain_2_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_3_5",
+      "name": "mil_smart_terrain_3_5",
+      "x": -135.62328,
+      "z": 307.68152,
+      "y": -18.696,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_2_4",
+        "mil_smart_terrain_2_6",
+        "mil_smart_terrain_4_5",
+        "mil_smart_terrain_4_6"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_3_8",
+      "name": "mil_smart_terrain_3_8",
+      "x": 52.517967,
+      "z": 358.40237,
+      "y": -18.609482,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_8",
+        "mil_smart_terrain_2_6",
+        "mil_smart_terrain_4_7",
+        "mil_smart_terrain_4_6"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_2",
+      "name": "mil_smart_terrain_4_2",
+      "x": -331.62366,
+      "z": 208.09105,
+      "y": -22.320518,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_3",
+        "mil_smart_terrain_3_2",
+        "mil_smart_terrain_5_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_3",
+      "name": "mil_smart_terrain_4_3",
+      "x": -247.0516,
+      "z": 286.89868,
+      "y": -22.083387,
+      "locationId": 8,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_2",
+        "mil_smart_terrain_3_2",
+        "mil_smart_terrain_2_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_5",
+      "name": "mil_smart_terrain_4_5",
+      "x": -92.380615,
+      "z": 219.81776,
+      "y": -20.88404,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_5_5",
+        "mil_smart_terrain_4_6",
+        "mil_smart_terrain_3_5",
+        "mil_smart_terrain_5_6"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_6",
+      "name": "mil_smart_terrain_4_6",
+      "x": -32.799988,
+      "z": 268.3001,
+      "y": -24.423992,
+      "locationId": 8,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_3_5",
+        "mil_smart_terrain_2_6",
+        "mil_smart_terrain_4_7",
+        "mil_smart_terrain_5_6",
+        "mil_smart_terrain_4_5",
+        "mil_smart_terrain_3_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_7",
+      "name": "mil_smart_terrain_4_7",
+      "x": 25.723366,
+      "z": 231.76584,
+      "y": -15.27037,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_6",
+        "mil_smart_terrain_4_8",
+        "mil_smart_terrain_5_6"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_4_8",
+      "name": "mil_smart_terrain_4_8",
+      "x": 97.36268,
+      "z": 305.50256,
+      "y": -0.621233,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_7",
+        "mil_smart_terrain_3_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_5_2",
+      "name": "mil_smart_terrain_5_2",
+      "x": -328.62454,
+      "z": 129.27332,
+      "y": -4.849472,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_6_4",
+        "mil_smart_terrain_7_2",
+        "mil_smart_terrain_4_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_5_5",
+      "name": "mil_smart_terrain_5_5",
+      "x": -130.5999,
+      "z": 133.20007,
+      "y": -21.499998,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_5",
+        "mil_smart_terrain_5_6",
+        "mil_smart_terrain_7_4",
+        "mil_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_5_6",
+      "name": "mil_smart_terrain_5_6",
+      "x": -11.021868,
+      "z": 160.0545,
+      "y": -17.5306,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_4_7",
+        "mil_smart_terrain_5_5",
+        "mil_smart_terrain_4_5",
+        "mil_smart_terrain_4_7",
+        "mil_smart_terrain_7_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_6_4",
+      "name": "mil_smart_terrain_6_4",
+      "x": -236.31013,
+      "z": 103.19629,
+      "y": -22.025661,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_5_2",
+        "mil_smart_terrain_5_5",
+        "mil_smart_terrain_7_4",
+        "mil_smart_terrain_7_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_10",
+      "name": "mil_smart_terrain_7_10",
+      "x": -80.72817,
+      "z": 48.360153,
+      "y": -13.072456,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_7"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_11",
+      "name": "mil_smart_terrain_7_11",
+      "x": -120.926125,
+      "z": -35.53317,
+      "y": -10.732899,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_7"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_12",
+      "name": "mil_smart_terrain_7_12",
+      "x": 37.49289,
+      "z": 14.907507,
+      "y": -8.394769,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_7",
+        "mil_smart_terrain_7_9",
+        "mil_smart_terrain_7_8"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_2",
+      "name": "mil_smart_terrain_7_2",
+      "x": -293.45163,
+      "z": 76.62141,
+      "y": -25.154842,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_6_4",
+        "mil_smart_terrain_5_2",
+        "mil_smart_terrain_7_4",
+        "mil_smart_terrain_8_3",
+        "gar_smart_terrain_5_2"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_4",
+      "name": "mil_smart_terrain_7_4",
+      "x": -224.60062,
+      "z": 41.932037,
+      "y": -12.653142,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 2,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_6_4",
+        "mil_smart_terrain_5_5",
+        "mil_smart_terrain_7_2",
+        "mil_smart_terrain_8_3"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_7",
+      "name": "mil_smart_terrain_7_7",
+      "x": -35.423622,
+      "z": -23.363138,
+      "y": -6.722118,
+      "locationId": 8,
+      "simType": "territory",
+      "simValue": 2,
+      "squadCapacity": 3,
+      "respawnSector": "{=spawn_smart_captured_by_faction(freedom)} freedom",
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_8",
+        "mil_smart_terrain_7_9",
+        "mil_smart_terrain_7_11"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_8",
+      "name": "mil_smart_terrain_7_8",
+      "x": -7.003328,
+      "z": 86.7784,
+      "y": -6.106664,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_7",
+        "mil_smart_terrain_5_6",
+        "mil_smart_terrain_7_12"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_7_9",
+      "name": "mil_smart_terrain_7_9",
+      "x": 84.4704,
+      "z": 50.46709,
+      "y": -13.205315,
+      "locationId": 8,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_12"
+      ]
+    },
+    {
+      "localeName": "st_name_mil_smart_terrain_8_3",
+      "name": "mil_smart_terrain_8_3",
+      "x": -249.44473,
+      "z": -17.17731,
+      "y": -17.408932,
+      "locationId": 8,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "mil_smart_terrain_7_2",
+        "mil_smart_terrain_7_4"
+      ]
+    },
+    {
+      "localeName": "st_name_red_bridge_ally_smart",
+      "name": "red_bridge_ally_smart",
+      "x": -190.09505,
+      "z": -200.254,
+      "y": 5.668751,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": -1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_bridge_bandit_smart"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_bridge",
+      "name": "red_bridge_bandit_smart",
+      "x": -160.99797,
+      "z": -289.53964,
+      "y": 0.257349,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_bridge",
+        "lim_smart_terrain_1"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_3_1",
+      "name": "red_smart_terrain_3_1",
+      "x": -66.05719,
+      "z": 59.02597,
+      "y": 3.1E-05,
+      "locationId": 9,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_4_2",
+        "mil_smart_terrain_2_2"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_3_2",
+      "name": "red_smart_terrain_3_2",
+      "x": -151.65479,
+      "z": -35.060394,
+      "y": 2.179531,
+      "locationId": 9,
+      "simType": "resource",
+      "simValue": 5,
+      "squadCapacity": 3,
+      "respawnSector": "monster",
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_4_2",
+        "red_smart_terrain_3_3",
+        "red_smart_terrain_4_3"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_3_3",
+      "name": "red_smart_terrain_3_3",
+      "x": -76.18364,
+      "z": -137.13396,
+      "y": 0.576685,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_4_2",
+        "red_smart_terrain_4_3",
+        "red_smart_terrain_3_2"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_4_2",
+      "name": "red_smart_terrain_4_2",
+      "x": 4.418024,
+      "z": -42.951134,
+      "y": -0.021421,
+      "locationId": 9,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_3_1",
+        "red_smart_terrain_3_2",
+        "red_smart_terrain_3_3",
+        "red_smart_terrain_4_3"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_4_3",
+      "name": "red_smart_terrain_4_3",
+      "x": 18.79897,
+      "z": -153.60844,
+      "y": 4.28203,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_3_3",
+        "red_smart_terrain_4_2",
+        "red_smart_terrain_3_2"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_4_5",
+      "name": "red_smart_terrain_4_5",
+      "x": -31.169949,
+      "z": -218.47813,
+      "y": -2.396448,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_monsters_3",
+        "red_smart_terrain_5_6",
+        "red_smart_terrain_3_3",
+        "red_smart_terrain_4_3",
+        "red_smart_terrain_bridge"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_5_5",
+      "name": "red_smart_terrain_5_5",
+      "x": -49.699642,
+      "z": -333.8936,
+      "y": 2.157507,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_2_4",
+        "red_smart_terrain_5_6",
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_bridge"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_5_6",
+      "name": "red_smart_terrain_5_6",
+      "x": 44.921356,
+      "z": -325.9314,
+      "y": -1.06813,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_monsters_3",
+        "red_smart_terrain_6_6",
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_5_5"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_6_3",
+      "name": "red_smart_terrain_6_3",
+      "x": 200.86266,
+      "z": -123.194695,
+      "y": -7.960616,
+      "locationId": 9,
+      "simType": "resource",
+      "simValue": 3,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_monsters_2",
+        "red_smart_terrain_monsters"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_6_6",
+      "name": "red_smart_terrain_6_6",
+      "x": 193.99443,
+      "z": -297.84042,
+      "y": -1.097263,
+      "locationId": 9,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_5_6",
+        "red_smart_terrain_monsters_2",
+        "gar_smart_terrain_2_3"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_bridge",
+      "name": "red_smart_terrain_bridge",
+      "x": -116.86815,
+      "z": -270.3547,
+      "y": 0.275799,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_5_5",
+        "red_bridge_bandit_smart"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_monsters",
+      "name": "red_smart_terrain_monsters",
+      "x": 224.48518,
+      "z": 72.89917,
+      "y": -5.479111,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "red_smart_terrain_6_3"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_monsters_2",
+      "name": "red_smart_terrain_monsters_2",
+      "x": 177.75998,
+      "z": -194.2667,
+      "y": -0.186733,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "true",
+      "isMutantLair": false,
+      "targets": [
+        "red_smart_terrain_6_3",
+        "red_smart_terrain_6_6"
+      ]
+    },
+    {
+      "localeName": "st_name_red_smart_terrain_monsters_3",
+      "name": "red_smart_terrain_monsters_3",
+      "x": 44.52883,
+      "z": -246.80182,
+      "y": -0.540925,
+      "locationId": 9,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": "monster",
+      "isMutantLair": true,
+      "targets": [
+        "red_smart_terrain_4_5",
+        "red_smart_terrain_5_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_1_6",
+      "name": "yan_smart_terrain_1_6",
+      "x": 138.69603,
+      "z": 49.437782,
+      "y": -1.220852,
+      "locationId": 11,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_2_5",
+        "yan_smart_terrain_3_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_2_4",
+      "name": "yan_smart_terrain_2_4",
+      "x": -8.983375,
+      "z": -12.313483,
+      "y": 0.014993,
+      "locationId": 11,
+      "simType": "territory",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "zombied",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_2_5",
+        "yan_smart_terrain_3_4",
+        "red_smart_terrain_5_5"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_2_5",
+      "name": "yan_smart_terrain_2_5",
+      "x": 89.16684,
+      "z": -31.774517,
+      "y": 0.032654,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "zombied",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_1_6",
+        "yan_smart_terrain_2_4",
+        "yan_smart_terrain_3_4",
+        "yan_smart_terrain_3_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_3_4",
+      "name": "yan_smart_terrain_3_4",
+      "x": 25.503366,
+      "z": -60.692375,
+      "y": 0.080569,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_2_4",
+        "yan_smart_terrain_2_5"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_3_6",
+      "name": "yan_smart_terrain_3_6",
+      "x": 163.5716,
+      "z": -100.33439,
+      "y": -7.929167,
+      "locationId": 11,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_2_5",
+        "yan_smart_terrain_4_5",
+        "yan_smart_terrain_5_5",
+        "yan_smart_terrain_1_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_4_2",
+      "name": "yan_smart_terrain_4_2",
+      "x": -171.03366,
+      "z": -157.45555,
+      "y": 3.001447,
+      "locationId": 11,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_6_2",
+        "yan_smart_terrain_zombi_in_sci_base4",
+        "yan_smart_terrain_quest_saharov"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_4_4",
+      "name": "yan_smart_terrain_4_4",
+      "x": 28.479366,
+      "z": -179.33536,
+      "y": 1.166489,
+      "locationId": 11,
+      "simType": "resource",
+      "simValue": 2,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_5",
+        "yan_smart_terrain_5_5",
+        "yan_smart_terrain_zombi_in_sci_base6",
+        "yan_smart_terrain_6_4",
+        "yan_smart_terrain_zombi_in_sci_base1"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_4_5",
+      "name": "yan_smart_terrain_4_5",
+      "x": 95.59998,
+      "z": -129.37633,
+      "y": 1.031535,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "zombied",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_3_6",
+        "yan_smart_terrain_4_4",
+        "yan_smart_terrain_5_5",
+        "yan_smart_terrain_zombi_in_sci_base6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_5_3",
+      "name": "yan_smart_terrain_5_3",
+      "x": -55.39827,
+      "z": -257.16248,
+      "y": -11.982577,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_6_4",
+        "yan_smart_terrain_6_2"
+      ]
+    },
+    {
+      "localeName": "yan_smart_terrain_5_4",
+      "name": "yan_smart_terrain_5_4",
+      "x": -14.91073,
+      "z": -227.99188,
+      "y": -13.237391,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_6_4"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_5_5",
+      "name": "yan_smart_terrain_5_5",
+      "x": 102.35145,
+      "z": -217.02145,
+      "y": -8.758704,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 2,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_4",
+        "yan_smart_terrain_4_5",
+        "yan_smart_terrain_5_6",
+        "yan_smart_terrain_6_4",
+        "yan_smart_terrain_3_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_5_6",
+      "name": "yan_smart_terrain_5_6",
+      "x": 179.30182,
+      "z": -245.15985,
+      "y": 4.7266,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "stalker",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_5_5",
+        "agr_smart_terrain_5_2"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_6_2",
+      "name": "yan_smart_terrain_6_2",
+      "x": -142.83885,
+      "z": -296.88193,
+      "y": 6.668854,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_2",
+        "yan_smart_terrain_5_3"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_6_4",
+      "name": "yan_smart_terrain_6_4",
+      "x": 14.619853,
+      "z": -266.48178,
+      "y": -11.934454,
+      "locationId": 11,
+      "simType": "territory",
+      "simValue": 5,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_5_3",
+        "yan_smart_terrain_5_5",
+        "yan_smart_terrain_4_4"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_for_squad_levsha",
+      "name": "yan_smart_terrain_for_squad_levsha",
+      "x": -8.140804,
+      "z": -155.43661,
+      "y": 0.998043,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 3,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_3_4",
+        "yan_smart_terrain_1_6"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_quest_saharov",
+      "name": "yan_smart_terrain_quest_saharov",
+      "x": -141.59389,
+      "z": -145.5821,
+      "y": 3.509594,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 1,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_2",
+        "yan_smart_terrain_zombi_in_sci_base3"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_in_sci_base1",
+      "name": "yan_smart_terrain_zombi_in_sci_base1",
+      "x": -63.30314,
+      "z": -150.80142,
+      "y": 1.246713,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_4",
+        "yan_smart_terrain_5_4"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_in_sci_base3",
+      "name": "yan_smart_terrain_zombi_in_sci_base3",
+      "x": -175.7273,
+      "z": -247.67258,
+      "y": 7.303345,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_zombi_in_sci_base4",
+        "yan_smart_terrain_quest_saharov",
+        "yan_smart_terrain_4_2"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_in_sci_base4",
+      "name": "yan_smart_terrain_zombi_in_sci_base4",
+      "x": -100.752975,
+      "z": -209.08038,
+      "y": -6.042098,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_5_3",
+        "yan_smart_terrain_4_2",
+        "yan_smart_terrain_zombi_in_sci_base3"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_in_sci_base5",
+      "name": "yan_smart_terrain_zombi_in_sci_base5",
+      "x": -132.44736,
+      "z": -129.96527,
+      "y": 1.246857,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 1,
+      "respawnSector": null,
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_quest_saharov"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_in_sci_base6",
+      "name": "yan_smart_terrain_zombi_in_sci_base6",
+      "x": 30.18339,
+      "z": -120.86817,
+      "y": 0.34895,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": 100,
+      "squadCapacity": 1,
+      "respawnSector": "zombied",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_4_4",
+        "yan_smart_terrain_4_5"
+      ]
+    },
+    {
+      "localeName": "st_name_yan_smart_terrain_zombi_spawn",
+      "name": "yan_smart_terrain_zombi_spawn",
+      "x": 156.4133,
+      "z": -119.88932,
+      "y": -7.53781,
+      "locationId": 11,
+      "simType": "default",
+      "simValue": -1,
+      "squadCapacity": 1,
+      "respawnSector": "zombied",
+      "isMutantLair": false,
+      "targets": [
+        "yan_smart_terrain_5_5"
+      ]
     }
   ],
   "heightInPixels": 2048,

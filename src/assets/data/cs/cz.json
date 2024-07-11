@@ -1005,5 +1005,9 @@
   "is_freedom_at_expansion_3_or_higher": "Ovl\u00E1d\u00E1me cestu do Agropromu",
   "enemy": "nep\u00F8\u00EDtel",
   "neutral": "neutr\u00E1ln\u00ED",
-  "friend": "p\u00F8\u00EDtel"
+  "friend": "p\u00F8\u00EDtel",
+  "novice": "za\u00E8\u00E1te\u00E8n\u00EDk",
+  "experienced": "zku\u0161en\u00FD",
+  "veteran": "veter\u00E1n",
+  "master": "mistr"
 }

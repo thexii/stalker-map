@@ -52,7 +52,7 @@ export class LootBoxClusterComponent {
         if (box.name ) {
           let lootBox: LootBox = this.lootBoxConfigs.find(x => x.name == box.name) as LootBox;
 
-          if (lootBox) {
+          if (lootBox && this.lootBoxLocationConfig) {
             boxView.boxItems = [];
             boxView.boxConfig = box.name;
 

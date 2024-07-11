@@ -277,5 +277,9 @@
   "is_freedom_at_expansion_3_or_higher": "Nous contr\u00F4lons les acc\u00E8s \u00E0 l\u0027Agroprom",
   "enemy": "ennemi",
   "neutral": "neutre",
-  "friend": "alli\u00E9"
+  "friend": "alli\u00E9",
+  "novice": "D\u00E9butant",
+  "experienced": "Exp\u00E9riment.",
+  "veteran": "v\u00E9t\u00E9ran",
+  "master": "ma\u00EEtre"
 }

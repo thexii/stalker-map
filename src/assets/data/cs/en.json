@@ -277,5 +277,9 @@
   "is_freedom_at_expansion_3_or_higher": "We control the road to Agroprom",
   "enemy": "enemy",
   "neutral": "neutral",
-  "friend": "friend"
+  "friend": "friend",
+  "novice": "Rookie",
+  "experienced": "Experienced",
+  "veteran": "veteran",
+  "master": "master"
 }

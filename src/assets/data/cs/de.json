@@ -855,5 +855,9 @@
   "is_freedom_at_expansion_3_or_higher": "Wir kontrollieren die Stra\u00DFe zum Agroprom-Institut",
   "enemy": "Feind",
   "neutral": "neutral",
-  "friend": "Freund"
+  "friend": "Freund",
+  "novice": "Anf\u00E4nger",
+  "experienced": "Erfahren",
+  "veteran": "Veteran",
+  "master": "Meister"
 }

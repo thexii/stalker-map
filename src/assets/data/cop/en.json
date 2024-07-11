@@ -19,6 +19,7 @@
   "zat_b22_stalker_medic_name": "Tremor",
   "st_zat_b30_owl_stalker_trader_name": "Owl",
   "st_zat_a2_stalker_nimble_name": "Nimble",
+  "stalker": "Stalker",
   "st_zat_b106_stalker_crab_name": "Crab",
   "st_zat_b106_stalker_garmata_name": "Garmata",
   "st_zat_b106_stalker_gonta_name": "Gonta",
@@ -26,6 +27,7 @@
   "zat_b33_stalker_snag": "Snag",
   "st_zat_b38_stalker_cop_name": "Grouse",
   "st_zat_b7_bandit_boss_sultan_name": "Sultan",
+  "bandit": "Bandit",
   "st_zat_a2_name": "Skadovsk",
   "st_zat_b103_name": "Substation workshops",
   "st_zat_b104_name": "Sawmill",
@@ -55,7 +57,9 @@
   "st_jup_a12_stalker_assaulter": "Grizzly",
   "st_jup_a12_stalker_diplomat": "Torba",
   "jup_a6_duty_leader": "Lt Col Shulga",
+  "dolg": "Duty",
   "jup_a6_freedom_leader": "Loki",
+  "freedom": "Freedom",
   "jup_a6_stalker_barmen": "Hawaiian",
   "jup_b10_stalker_drunk": "Senka",
   "st_jup_b43_stalker_assistant": "Garry",
@@ -91,6 +95,7 @@
   "st_pri_b306_name": "Yubileiny service center",
   "st_pri_b307_name": "Volcano anomaly",
   "pri_a18_skorlupko_in_suit_name": "Lt Skelya",
+  "army": "Military",
   "pri_a18_vano_in_suit_reserve_name": "Sgt. Merkulov",
   "pri_a17_military_sergeant_morozov": "Snr. Sgt Morozov",
   "st_pri_a16_name": "Laundromat",
@@ -279,5 +284,7 @@
   "zat_b30_barmen_under_sultan": "Boss",
   "zat_b7_actor_really_helped_bandits": "The hit: attack the stalkers",
   "zat_b7_actor_really_helped_stalkers": "The hit: attack the robbers",
-  "st_zaton_b56_name": "Circus anomaly"
+  "st_zaton_b56_name": "Circus anomaly",
+  "research_man_gained": "Research Assistant",
+  "pioneer_achievement_gained": "Pioneer"
 }

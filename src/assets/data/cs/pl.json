@@ -1005,5 +1005,9 @@
   "is_freedom_at_expansion_3_or_higher": "Kontrolujemy drog\u0119 do Agropromu",
   "enemy": "wr\u00F3g",
   "neutral": "neutralny",
-  "friend": "przyjaciel"
+  "friend": "przyjaciel",
+  "novice": "nowicjusz",
+  "experienced": "do\u015Bwiadczony",
+  "veteran": "weteran",
+  "master": "mistrz"
 }
