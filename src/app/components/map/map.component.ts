@@ -1019,6 +1019,7 @@ export class MapComponent {
 
     anomalies.features = [];
     anomaliesNoArt.features = [];
+    let artefactWays: any[] = [];
 
     for (let zone of this.gamedata.anomalyZones) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == zone.locationId) as Location;
@@ -1116,7 +1117,7 @@ export class MapComponent {
                 }
 
                 latlngs.push(latlngs[0]);
-                var polyline = L.polyline(latlngs, {color: 'green', weight: 1}).addTo(this.map);
+                artefactWays.push(L.polyline(latlngs, {color: 'green', weight: 2}));
             }
         }
 
@@ -1155,6 +1156,10 @@ export class MapComponent {
 
       if (anomaliesNoArt.features.length > 0) {
         this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
+      }
+
+      if (artefactWays.length > 0) {
+          this.addPolyLinesToMap(L.layerGroup(artefactWays), 'artefact-ways');
       }
     } catch (e) {
       console.log(e);
@@ -1457,6 +1462,8 @@ export class MapComponent {
     smartTerrains.type = 'FeatureCollection';
     smartTerrains.features = [];
 
+    let smartTerrainPaths: any[] = [];
+
     let handledSmartTerrains: string[] = [];
 
     for (let smart of this.gamedata.smartTerrains) {
@@ -1669,7 +1676,8 @@ export class MapComponent {
                   polyline.arrowheads({size: '20px', fill: true, proportionalToTotal: false})
                 }
 
-                polyline.addTo(this.map)
+                smartTerrainPaths.push(polyline);
+                //polyline.addTo(this.map)
               }
           }
 
@@ -1698,6 +1706,7 @@ export class MapComponent {
     }
 
     this.addToCanvas(smartTerrains, smartTerrainIcon);
+    this.addPolyLinesToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
   }
 
   private addToCanvas(geoMarks: any, markType: any) {
@@ -1725,6 +1734,32 @@ export class MapComponent {
     };
 
     marksLayer.show(marksLayer);
+  }
+
+  private addPolyLinesToMap(smartTerrainPaths: any, name: any) {
+    let layer = smartTerrainPaths;
+    layer.ableToSearch = false;
+    layer.isShowing = false;
+    layer.name = name;
+    this.layers[name] = layer;
+
+    layer.hide = (layer: { isShowing: boolean; markers: any }) => {
+      if (layer.isShowing) {
+        //this.canvasLayer.removeMarkers(layer.markers);
+
+        layer.isShowing = false;
+      }
+    };
+
+    layer.show = (layer: { isShowing: boolean; _layers: any }) => {
+      if (!layer.isShowing && layer._layers?.length > 0) {
+        //this.canvasLayer.addMarkers(layer.markers);
+
+        layer.isShowing = true;
+      }
+    };
+
+    layer.show(layer);
   }
 
   private createAnomalyZoneTooltip(zone: {
