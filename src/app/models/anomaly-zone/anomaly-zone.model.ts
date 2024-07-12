@@ -1,11 +1,9 @@
 import { AnomalySpawnSection } from ".";
+import { ObjectAtLocation } from "../object-at-location.model";
 import { Way } from "../way.model";
 
-export class AnomalyZone {
-  public x: number;
-  public y: number;
+export class AnomalyZone extends ObjectAtLocation {
   public name: string;
-  public locationId: number;
   public anomaliySpawnSections: AnomalySpawnSection[];
   public anomalies: any;
   public artefactWays: Way[];

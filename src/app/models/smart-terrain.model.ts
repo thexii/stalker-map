@@ -1,10 +1,8 @@
-export class SmartTerrain {
+import { ObjectAtLocation } from "./object-at-location.model";
+
+export class SmartTerrain extends ObjectAtLocation {
   public localeName: string;
   public name: string;
-  public x: number;
-  public y: number;
-  public z: number;
-  public locationId: number;
   public simType: string;
   public simValue: number;
   public squadCapacity: number;

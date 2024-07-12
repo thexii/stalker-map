@@ -1,4 +1,5 @@
 import { AnomalyZone } from "./anomaly-zone";
+import { LevelChanger } from "./level-changer.model";
 import { Location } from "./location.model";
 import { LootBoxCluster } from "./loot-box/loot-box-cluster.model";
 import { Mark } from "./mark.model";
@@ -23,4 +24,5 @@ export class Map {
   public stalkers: Stalker[];
   public smartTerrains: SmartTerrain[];
   public monsterLairs: MonsterLair[];
+  public levelChangers: LevelChanger[];
 }

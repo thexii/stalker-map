@@ -27,6 +27,7 @@ import { StalkerComponent } from '../stalker/stalker.component';
 import { MapConfig } from '../../models/gamedata/map-config';
 import { TraderSectionsConfig } from '../../models/trader/trader-sections-config.model';
 import { SmartTerrain } from '../../models/smart-terrain.model';
+import { UndergroundComponent } from '../undeground/underground.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -355,6 +356,10 @@ export class MapComponent {
         this.addMonsterLairs();
     }
 
+    if (this.gamedata.levelChangers && this.gamedata.levelChangers.length > 0) {
+        this.addLevelChangers();
+    }
+
     let layersToHide = [];
 
     if (
@@ -541,6 +546,11 @@ export class MapComponent {
   private addLocations() {
     let locationsOnMap = [];
     for (let location of this.gamedata.locations) {
+
+      if (location.isUnderground) {
+        continue;
+      }
+
         let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
         let locationBounds = [
           [location.y1, location.x1],
@@ -933,7 +943,7 @@ export class MapComponent {
           }
 
           let markerX: number = 0.5 - location.xShift + mark.x / location.widthInMeters;
-          let markerY: number = 0.5 - location.yShift + mark.y / location.heightInMeters;
+          let markerY: number = 0.5 - location.yShift + mark.z / location.heightInMeters;
 
           let dx: number = location.x2 - location.x1;
           let dy: number = location.y1 - location.y2;
@@ -1045,7 +1055,7 @@ export class MapComponent {
       }
 
       let markerX: number = 0.5 - location.xShift + zone.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + zone.y / location.heightInMeters;
+      let markerY: number = 0.5 - location.yShift + zone.z / location.heightInMeters;
 
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
@@ -1834,6 +1844,88 @@ export class MapComponent {
     this.addToCanvas(monsters, monstersIcon);
   }
 
+  private addLevelChangers() {
+    let levelChangerIcon = {
+      name: this.translate.instant('level-changers'),
+      uniqueName: 'level-changers',
+      cssClass: 'level-changers',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/level_changer.svg',
+        iconSizeInit: [2, 2],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let levelChangers: any = {};
+    levelChangers.type = 'FeatureCollection';
+    levelChangers.features = [];
+
+    for (let levelChanger of this.gamedata.levelChangers) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + levelChanger.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + levelChanger.z / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: levelChangerIcon.icon
+      });
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.levelChanger = levelChanger;
+      canvasMarker.properties.name = 'level-changer';
+      canvasMarker.properties.typeUniqueName = 'level-changers';
+      levelChangers.features.push(canvasMarker);
+      canvasMarker.properties.ableToSearch = false;
+      canvasMarker.feature = {};
+      canvasMarker.feature.properties = {};
+
+      /*let propertiesToSearch: string[] = [e];
+
+      if (stalker.hasUniqueItem) {
+        for (let inv of stalker.inventoryItems) {
+          let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
+          propertiesToSearch.push(item.localeName);
+        }
+      }
+
+      this.createProperty(
+        canvasMarker.feature.properties,
+        'search',
+        propertiesToSearch,
+        this.translate
+      );*/
+
+      canvasMarker.properties.locationUniqueName = location.uniqueName;
+
+      canvasMarker.bindTooltip(
+        (marker: any) =>
+          this.translate.instant(marker.properties.name),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+
+      canvasMarker
+        .bindPopup(
+          (stalker: any) =>
+            this.createUndergroundMapPopup(stalker),
+          { maxWidth: 500 }
+        )
+        .openPopup();
+    }
+
+    this.addToCanvas(levelChangers, levelChangerIcon);
+  }
+
   private addToCanvas(geoMarks: any, markType: any) {
     let marksLayer = L.geoJSON(geoMarks);
     marksLayer.ableToSearch = markType.ableToSearch ?? false;
@@ -1952,6 +2044,23 @@ export class MapComponent {
     componentRef.instance.game = this.game;
     componentRef.instance.allItems = this.items;
     componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+
+    return componentRef.location.nativeElement;
+  }
+
+  private createUndergroundMapPopup(levelChanger: any) {
+    levelChanger.getPopup().on('remove', function () {
+      levelChanger.getPopup().off('remove');
+      componentRef.destroy();
+    });
+
+    const factory = this.resolver.resolveComponentFactory(UndergroundComponent);
+
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.gamedata = this.gamedata;
+    componentRef.instance.location = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+    componentRef.instance.items = this.items;
+    componentRef.instance.game = this.game;
 
     return componentRef.location.nativeElement;
   }

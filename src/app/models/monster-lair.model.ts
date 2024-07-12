@@ -1,7 +1,5 @@
-export class MonsterLair {
-  public x: number;
-  public y: number;
-  public z: number;
-  public locationId: number;
+import { ObjectAtLocation } from "./object-at-location.model";
+
+export class MonsterLair extends ObjectAtLocation {
   public spawnSections: [][];
 }

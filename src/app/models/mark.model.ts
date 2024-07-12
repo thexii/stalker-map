@@ -1,9 +1,7 @@
-export class Mark {
+import { ObjectAtLocation } from "./object-at-location.model";
+
+export class Mark extends ObjectAtLocation {
   public name: string;
   public description: string;
-  public x: number;
-  public y: number;
   public typeId: number;
-
-  public locationId: number;
 }
