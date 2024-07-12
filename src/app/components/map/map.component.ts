@@ -351,6 +351,10 @@ export class MapComponent {
         this.addSmartTerrains(this.gamedata.id == 2);
     }
 
+    if (this.gamedata.monsterLairs && this.gamedata.monsterLairs.length > 0) {
+        this.addMonsterLairs();
+    }
+
     let layersToHide = [];
 
     if (
@@ -1500,10 +1504,18 @@ export class MapComponent {
               iconSize: [4, 4],
               className: 'mark-container stalker-mark-2',
               animate: false,
+              iconUrl: '/assets/images/svg/marks/smart_terrain_default.svg',
+              iconSizeInit: [1.75, 1.75],
+              iconAnchor: [0, 0],
+            });
+            /*icon = L.icon({
+              iconSize: [4, 4],
+              className: 'mark-container stalker-mark-2',
+              animate: false,
               iconUrl: '/assets/images/svg/marks/monsters.svg',
               iconSizeInit: [2, 2],
               iconAnchor: [0, 0],
-            })
+            })*/
           }
           else {
             icon = L.icon({
@@ -1705,7 +1717,6 @@ export class MapComponent {
                 }
 
                 smartTerrainPaths.push(polyline);
-                //polyline.addTo(this.map)
               }
           }
 
@@ -1716,7 +1727,7 @@ export class MapComponent {
 
       canvasMarker.bindTooltip(
         (marker: any) =>
-          this.translate.instant(smart.localeName),
+          `${this.translate.instant(smart.localeName)} (${smart.name})`,
         {
           sticky: true,
           className: 'map-tooltip',
@@ -1735,6 +1746,92 @@ export class MapComponent {
 
     this.addToCanvas(smartTerrains, smartTerrainIcon);
     this.addPolyLinesToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
+  }
+
+  private addMonsterLairs() {
+    let monstersIcon = {
+      name: this.translate.instant('mutants'),
+      uniqueName: 'monsters',
+      cssClass: 'monsters',
+      ableToSearch: true,
+      icon: L.icon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/monsters.svg',
+        iconSizeInit: [2, 2],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let monsters: any = {};
+    monsters.type = 'FeatureCollection';
+    monsters.features = [];
+
+    for (let lair of this.gamedata.monsterLairs) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lair.locationId) as Location;
+
+      if (location.isUnderground) {
+        continue;
+      }
+
+      let markerX: number = 0.5 - location.xShift + lair.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + lair.z / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: monstersIcon.icon
+      });
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.lair = lair;
+      canvasMarker.properties.name = 'mutants-lair';
+      canvasMarker.properties.typeUniqueName = 'monsters';
+      monsters.features.push(canvasMarker);
+      canvasMarker.properties.ableToSearch = false;
+      canvasMarker.feature = {};
+      canvasMarker.feature.properties = {};
+
+      /*let propertiesToSearch: string[] = [e];
+
+      if (stalker.hasUniqueItem) {
+        for (let inv of stalker.inventoryItems) {
+          let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
+          propertiesToSearch.push(item.localeName);
+        }
+      }
+
+      this.createProperty(
+        canvasMarker.feature.properties,
+        'search',
+        propertiesToSearch,
+        this.translate
+      );*/
+
+      canvasMarker.properties.locationUniqueName = location.uniqueName;
+
+      canvasMarker.bindTooltip(
+        (marker: any) =>
+          this.translate.instant(marker.properties.name),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+
+      canvasMarker
+        .bindPopup(
+          (stalker: any) =>
+            this.createStalkerPopup(stalker),
+          { maxWidth: 500 }
+        )
+        .openPopup();
+    }
+
+    this.addToCanvas(monsters, monstersIcon);
   }
 
   private addToCanvas(geoMarks: any, markType: any) {

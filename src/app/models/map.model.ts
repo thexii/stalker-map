@@ -2,6 +2,7 @@ import { AnomalyZone } from "./anomaly-zone";
 import { Location } from "./location.model";
 import { LootBoxCluster } from "./loot-box/loot-box-cluster.model";
 import { Mark } from "./mark.model";
+import { MonsterLair } from "./monster-lair.model";
 import { SmartTerrain } from "./smart-terrain.model";
 import { Stalker } from "./stalker.model";
 import { StuffModel } from "./stuff";
@@ -21,4 +22,5 @@ export class Map {
   public anomalyZones: AnomalyZone[];
   public stalkers: Stalker[];
   public smartTerrains: SmartTerrain[];
+  public monsterLairs: MonsterLair[];
 }

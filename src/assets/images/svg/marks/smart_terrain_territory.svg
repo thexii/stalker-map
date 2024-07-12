@@ -17,6 +17,7 @@
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-90,64,64)"/>
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-120,64,64)"/>
 	<use x='0' y ='0' xlink:href='#line' transform="rotate(-150,64,64)"/>
+	<use x='0' y ='0' xlink:href='#line' transform="rotate(0,64,64)"/>
 	
 	<polyline stroke-width='1' fill="yellow" stroke="#e3c3a7" 
 	points="40,40 40,80 64,95 88,80 88,40 64,50" />

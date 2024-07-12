@@ -39427,6 +39427,394 @@
       ]
     }
   ],
+  "monsterLairs": [
+    {
+      "x": -93.81737,
+      "z": 138.3684,
+      "y": 9.986219,
+      "locationId": 1,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_strong"
+        ]
+      ]
+    },
+    {
+      "x": -11.477193,
+      "z": -79.30426,
+      "y": 7.277504,
+      "locationId": 1,
+      "spawnSections": [
+        [
+          "agr_snork_jumper_1",
+          "agr_snork_jumper_1",
+          "agr_snork_jumper_1"
+        ]
+      ]
+    },
+    {
+      "x": 69.75497,
+      "z": 146.74455,
+      "y": 15.013191,
+      "locationId": 1,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_strong"
+        ]
+      ]
+    },
+    {
+      "x": 233.5277,
+      "z": -109.40113,
+      "y": 22.908697,
+      "locationId": 1,
+      "spawnSections": [
+        [
+          "gigant_normal"
+        ]
+      ]
+    },
+    {
+      "x": -157.00455,
+      "z": -383.14447,
+      "y": 0.002346,
+      "locationId": 3,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": -13.121503,
+      "z": -286.48566,
+      "y": -4.126,
+      "locationId": 3,
+      "spawnSections": [
+        [
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal"
+        ]
+      ]
+    },
+    {
+      "x": 43.935287,
+      "z": -368.86987,
+      "y": -4.866844,
+      "locationId": 3,
+      "spawnSections": [
+        [
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal",
+          "flesh_normal"
+        ]
+      ]
+    },
+    {
+      "x": -223.12367,
+      "z": -244.227,
+      "y": -33.059734,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal"
+        ]
+      ]
+    },
+    {
+      "x": -89.76058,
+      "z": 33.7524,
+      "y": -5.748928,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": 52.71138,
+      "z": 472.40552,
+      "y": 2.887346,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": 53.500477,
+      "z": 374.9167,
+      "y": 1.826086,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": 68.24483,
+      "z": 609.36804,
+      "y": 8.306015,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal"
+        ]
+      ]
+    },
+    {
+      "x": 132.95381,
+      "z": 449.42807,
+      "y": 2.749922,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": 212.31775,
+      "z": 61.720146,
+      "y": 12.592432,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": 232.32936,
+      "z": 339.759,
+      "y": 1.466334,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal"
+        ]
+      ]
+    },
+    {
+      "x": 325.62543,
+      "z": 277.5445,
+      "y": 16.765606,
+      "locationId": 4,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal"
+        ]
+      ]
+    },
+    {
+      "x": -127.72885,
+      "z": 212.91975,
+      "y": 0.200707,
+      "locationId": 5,
+      "spawnSections": [
+        [
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal",
+          "dog_normal"
+        ]
+      ]
+    },
+    {
+      "x": 156.013,
+      "z": 127.286514,
+      "y": -3.948052,
+      "locationId": 5,
+      "spawnSections": [
+        [
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal",
+          "boar_normal"
+        ]
+      ]
+    },
+    {
+      "x": -66.812126,
+      "z": -82.94788,
+      "y": 0.89547,
+      "locationId": 7,
+      "spawnSections": [
+        [
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak"
+        ]
+      ]
+    },
+    {
+      "x": -152.09229,
+      "z": 86.62503,
+      "y": 0.89547,
+      "locationId": 7,
+      "spawnSections": [
+        [
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak"
+        ]
+      ]
+    },
+    {
+      "x": 35.562267,
+      "z": -111.967384,
+      "y": 1.172308,
+      "locationId": 7,
+      "spawnSections": [
+        [
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak"
+        ]
+      ]
+    },
+    {
+      "x": 140.66632,
+      "z": -51.882977,
+      "y": -0.065231,
+      "locationId": 7,
+      "spawnSections": [
+        [
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak",
+          "boar_weak"
+        ]
+      ]
+    },
+    {
+      "x": -241.4836,
+      "z": 421.35056,
+      "y": -3.127495,
+      "locationId": 8,
+      "spawnSections": [
+        [
+          "pseudodog_strong",
+          "pseudodog_strong",
+          "pseudodog_strong"
+        ],
+        [
+          "pseudodog_strong",
+          "pseudodog_strong",
+          "pseudodog_strong"
+        ]
+      ]
+    },
+    {
+      "x": -7.003328,
+      "z": 86.7784,
+      "y": -6.106664,
+      "locationId": 8,
+      "spawnSections": [
+        [
+          "dog_strong",
+          "dog_strong",
+          "dog_strong",
+          "dog_strong",
+          "dog_strong"
+        ]
+      ]
+    },
+    {
+      "x": 177.75998,
+      "z": -194.2667,
+      "y": -0.186733,
+      "locationId": 9,
+      "spawnSections": [
+        [
+          "snork_weak",
+          "snork_weak",
+          "snork_normal",
+          "snork_normal",
+          "snork_normal",
+          "snork_strong"
+        ]
+      ]
+    },
+    {
+      "x": 44.52883,
+      "z": -246.80182,
+      "y": -0.540925,
+      "locationId": 9,
+      "spawnSections": [
+        [
+          "psy_dog",
+          "pseudodog_normal",
+          "pseudodog_normal"
+        ]
+      ]
+    }
+  ],
   "heightInPixels": 2048,
   "widthInPixels": 1024
 }

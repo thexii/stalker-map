@@ -37,6 +37,10 @@
       "isShow": false
     },
     {
+      "uniqueName": "monsters",
+      "isShow": false
+    },
+    {
       "uniqueName": "stalkers",
       "isShow": false
     },
