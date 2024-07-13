@@ -262,13 +262,6 @@ export class MapComponent {
 
     this.map.setMaxBounds(bounds);
 
-    /*this.canvasLayer = new L.MarkersCanvas();
-    this.canvasLayer.addTo(this.map);*/
-
-    /*this.map.redraw = () => {
-        this.canvasLayer.redraw();
-    };*/
-
     this.map.on('zoomend', () => {
         markWidth = 3 * Math.pow(2, this.map.getZoom());
         document.documentElement.style.setProperty(
@@ -682,7 +675,8 @@ export class MapComponent {
 
           let stuff = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
             icon: markType.icon,
-            renderer: this.canvasRenderer
+            renderer: this.canvasRenderer,
+            radius: markType.icon.options.iconSizeInit[0] * 10
           });
 
           stuff.properties = {};
@@ -746,7 +740,7 @@ export class MapComponent {
           markers.push(stuff);
         }
 
-        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName);
+        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
   }
@@ -837,7 +831,7 @@ export class MapComponent {
         markers.push(lootBoxMarker);
     }
 
-    this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName);
+    this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
   }
 
   private addMarks() {
@@ -1049,7 +1043,7 @@ export class MapComponent {
           );
         }
 
-        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName);
+        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
   }
@@ -2062,8 +2056,8 @@ export class MapComponent {
     this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
   }
 
-  private addLayerToMap(layer: any, name: any) {
-    layer.ableToSearch = false;
+  private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
+    layer.ableToSearch = ableToSearch;
     layer.isShowing = false;
     layer.name = name;
     this.layers[name] = layer;
