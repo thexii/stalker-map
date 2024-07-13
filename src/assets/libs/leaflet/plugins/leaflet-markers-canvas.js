@@ -337,7 +337,7 @@
       var y = ref.y;
 
       var ref$1 = marker.options.icon.options;
-      var rotationAngle = ref$1.rotationAngle;
+      var rotationAngle = marker.options.rotationAngle;
       var iconAnchor = ref$1.iconAnchor;
       var iconSize = ref$1.iconSize;
       var angle = rotationAngle || 0;

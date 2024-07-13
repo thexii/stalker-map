@@ -35309,8 +35309,36 @@
   ],
   "levelChangers": [
     {
+      "destinationLocationId": 5,
+      "azimut": 45,
+      "locale": "st_lchanger_to_garbage",
+      "x": 261.48193,
+      "y": 2.564185,
+      "z": -249.93394,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 45,
+      "locale": "st_lchanger_to_garbage",
+      "x": 286.99997,
+      "y": 0,
+      "z": 9.999999,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": 180,
+      "locale": "st_lchanger_to_marsh",
+      "x": 7.628086,
+      "y": -1.511205,
+      "z": -335.55197,
+      "locationId": 1
+    },
+    {
       "destinationLocationId": 2,
       "azimut": 0,
+      "locale": null,
       "x": 65.504166,
       "y": -4.2512,
       "z": -271.84244,
@@ -35319,10 +35347,317 @@
     {
       "destinationLocationId": 2,
       "azimut": 0,
+      "locale": null,
       "x": -79.297295,
       "y": 11.639737,
       "z": -113.272095,
       "locationId": 1
+    },
+    {
+      "destinationLocationId": 11,
+      "azimut": 0,
+      "locale": "st_lchanger_to_yantar",
+      "x": -233.93732,
+      "y": 16.087425,
+      "z": 216.71048,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 11,
+      "azimut": 0,
+      "locale": "st_lchanger_to_yantar",
+      "x": 69.23982,
+      "y": 11.705192,
+      "z": 212.05153,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": 0,
+      "locale": "st_lchanger_to_agroprom",
+      "x": 25.564955,
+      "y": 24.046244,
+      "z": 32.671062,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": -135,
+      "locale": "st_lchanger_to_escape",
+      "x": -44.6,
+      "y": 1.8,
+      "z": -547.4999,
+      "locationId": 3
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": -90,
+      "locale": "st_lchanger_to_garbage",
+      "x": -176.68584,
+      "y": 6.480257,
+      "z": -300.1968,
+      "locationId": 3
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": -90,
+      "locale": "st_lchanger_to_garbage",
+      "x": -196.84013,
+      "y": 3.344486,
+      "z": -187.32735,
+      "locationId": 3
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": 45,
+      "locale": "st_lchanger_to_darkvalley",
+      "x": 361.71753,
+      "y": 15.155826,
+      "z": -37.57074,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 0,
+      "locale": "st_lchanger_to_garbage",
+      "x": 26.381771,
+      "y": 16.519125,
+      "z": 685.5776,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 0,
+      "locale": "st_lchanger_to_garbage",
+      "x": -166.17575,
+      "y": -5.413265,
+      "z": 350.03134,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": -135,
+      "locale": "st_lchanger_to_marsh",
+      "x": -273.1785,
+      "y": -21.684465,
+      "z": -274.25354,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": -90,
+      "locale": "st_lchanger_to_marsh",
+      "x": -206.10277,
+      "y": 29.255848,
+      "z": 231.65565,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": -135,
+      "locale": "st_lchanger_to_agroprom",
+      "x": -278.82553,
+      "y": -7.1123,
+      "z": -182.41193,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": -135,
+      "locale": "st_lchanger_to_agroprom",
+      "x": -294.8201,
+      "y": 6.298046,
+      "z": -25.302214,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": 90,
+      "locale": "st_lchanger_to_darkvalley",
+      "x": 301.1152,
+      "y": 13.662905,
+      "z": -84.543274,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": 90,
+      "locale": "st_lchanger_to_darkvalley",
+      "x": 296.4712,
+      "y": 5.892223,
+      "z": 143.95448,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": 180,
+      "locale": "st_lchanger_to_escape",
+      "x": 36.31317,
+      "y": 0.498356,
+      "z": -340.8311,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": 180,
+      "locale": "st_lchanger_to_escape",
+      "x": -153.97945,
+      "y": 2.244439,
+      "z": -307.27917,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 8,
+      "azimut": 0,
+      "locale": "st_lchanger_to_military",
+      "x": 22.616344,
+      "y": 0.417547,
+      "z": 235.97815,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 9,
+      "azimut": 0,
+      "locale": "st_lchanger_to_red_forest",
+      "x": -256.28522,
+      "y": 13.606143,
+      "z": 194.76192,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 12,
+      "azimut": 0,
+      "locale": "st_lchanger_to_hospital",
+      "x": 61.307365,
+      "y": 3.30023,
+      "z": 357.29028,
+      "locationId": 6
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": 0,
+      "locale": "st_lchanger_to_agroprom",
+      "x": 174.4179,
+      "y": 9.348364,
+      "z": 589.86444,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": 45,
+      "locale": "st_lchanger_to_escape",
+      "x": 565.5113,
+      "y": 3.22909,
+      "z": -180.9306,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": 0,
+      "locale": null,
+      "x": 583.32776,
+      "y": 2.122706,
+      "z": -207.89833,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 4,
+      "azimut": 90,
+      "locale": "st_lchanger_to_escape",
+      "x": 659.0406,
+      "y": 7.796443,
+      "z": 425.06595,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 180,
+      "locale": "st_lchanger_to_garbage",
+      "x": -332.97055,
+      "y": -22.710005,
+      "z": 46.777905,
+      "locationId": 8
+    },
+    {
+      "destinationLocationId": 9,
+      "azimut": -45,
+      "locale": "st_lchanger_to_red_forest",
+      "x": -409.24713,
+      "y": -8.513357,
+      "z": 396.2921,
+      "locationId": 8
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 180,
+      "locale": "st_lchanger_to_garbage",
+      "x": 265.09784,
+      "y": 0.033531,
+      "z": -313.14844,
+      "locationId": 9
+    },
+    {
+      "destinationLocationId": 6,
+      "azimut": -45,
+      "locale": "st_lchanger_to_limansk",
+      "x": -183.8112,
+      "y": 2.238191,
+      "z": -289.4683,
+      "locationId": 9
+    },
+    {
+      "destinationLocationId": 8,
+      "azimut": 0,
+      "locale": "st_lchanger_to_military",
+      "x": -45.19073,
+      "y": 3.570024,
+      "z": 103.24859,
+      "locationId": 9
+    },
+    {
+      "destinationLocationId": 11,
+      "azimut": 180,
+      "locale": "st_lchanger_to_yantar",
+      "x": -12.427864,
+      "y": 4.90752,
+      "z": -436.37518,
+      "locationId": 9
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": 180,
+      "locale": "st_lchanger_to_agroprom",
+      "x": -58.967842,
+      "y": 18.10735,
+      "z": -363.47052,
+      "locationId": 11
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": 180,
+      "locale": "st_lchanger_to_agroprom",
+      "x": 232.25217,
+      "y": 14.072907,
+      "z": -264.1342,
+      "locationId": 11
+    },
+    {
+      "destinationLocationId": 9,
+      "azimut": 0,
+      "locale": "st_lchanger_to_red_forest",
+      "x": -27.035885,
+      "y": 0.677132,
+      "z": 0.072898,
+      "locationId": 11
+    },
+    {
+      "destinationLocationId": 10,
+      "azimut": 0,
+      "locale": "st_lchanger_to_aes",
+      "x": -73.327866,
+      "y": 20.622318,
+      "z": 567.0549,
+      "locationId": 12
     }
   ],
   "stalkers": [

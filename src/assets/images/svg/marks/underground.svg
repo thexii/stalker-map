@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+		<!--<path id="leaf" viewBox="0 0 64 64" d=" M 10,0.5 H 46 A 18 18 90 0 0 55 15 L 37,47 A 54 54 90 0 1 10,0.5" stroke="none"  fill="#523d32" stroke-width="1" />-->
+		<path id="leaf" viewBox="0 0 4 24" d="M 4,0 L 0,4 0,20 4,24" stroke="black"  fill="#D9BDA7" stroke-width="0.5" />
+		<svg id="dots" viewBox="0 0 5 5" >
+			<circle cx="2.5" cy="0" r="0.5"/>
+			
+			<circle cx="1.5" cy="1.74" r="0.5"/>
+			<circle cx="3.5" cy="1.74" r="0.5"/>
+			
+			<circle cx="0.5" cy="3.48" r="0.5"/>
+			<circle cx="2.5" cy="3.48" r="0.5"/>
+			<circle cx="4.5" cy="3.48" r="0.5"/>
+			
+			<circle cx="-0.5" cy="5.22" r="0.5"/>
+			<circle cx="1.5" cy="5.22" r="0.5"/>
+			<circle cx="3.5" cy="5.22" r="0.5"/>
+			<circle cx="5.5" cy="5.22" r="0.5"/>
+			
+			<circle cx="-1.5" cy="6.96" r="0.5"/>
+			<circle cx="0.5" cy="6.96" r="0.5"/>
+			<circle cx="2.5" cy="6.96" r="0.5"/>
+			<circle cx="4.5" cy="6.96" r="0.5"/>
+			<circle cx="6.5" cy="6.96" r="0.5"/>
+			
+			<circle cx="-2.5" cy="8.7" r="0.5"/>
+			<circle cx="-0.5" cy="8.7" r="0.5"/>
+			<circle cx="1.5" cy="8.7" r="0.5"/>
+			<circle cx="3.5" cy="8.7" r="0.5"/>
+			<circle cx="5.5" cy="8.7" r="0.5"/>
+			<circle cx="7.5" cy="8.7" r="0.5"/>
+		</svg>
+		
+		<svg id="dots2" viewBox="0 0 5 5" >
+			<circle cx="2.5" cy="8.7" r="0.5"/>
+			
+			<circle cx="1.5" cy="6.96" r="0.5"/>
+			<circle cx="3.5" cy="6.96" r="0.5"/>
+			
+			<circle cx="0.5" cy="5.22" r="0.5"/>
+			<circle cx="2.5" cy="5.22" r="0.5"/>
+			<circle cx="4.5" cy="5.22" r="0.5"/>
+			
+			<circle cx="-0.5" cy="3.48" r="0.5"/>
+			<circle cx="1.5" cy="3.48" r="0.5"/>
+			<circle cx="3.5" cy="3.48" r="0.5"/>
+			<circle cx="5.5" cy="3.48" r="0.5"/>
+			
+			<circle cx="-1.5" cy="1.74" r="0.5"/>
+			<circle cx="0.5" cy="1.74" r="0.5"/>
+			<circle cx="2.5" cy="1.74" r="0.5"/>
+			<circle cx="4.5" cy="1.74" r="0.5"/>
+			<circle cx="6.5" cy="1.74" r="0.5"/>
+			
+			<circle cx="-2.5" cy="0" r="0.5"/>
+			<circle cx="-0.5" cy="0" r="0.5"/>
+			<circle cx="1.5" cy="0" r="0.5"/>
+			<circle cx="3.5" cy="0" r="0.5"/>
+			<circle cx="5.5" cy="0" r="0.5"/>
+			<circle cx="7.5" cy="0" r="0.5"/>
+		</svg>
+		<svg id="door" viewBox="0 0 5 5">
+			<rect x="32" y="10" width="64" height="108" stroke="red" rx="10" fill="#F6D6BB" stroke-width="1"/>
+			<rect x="33" y="11" width="62" height="106" stroke="#D9BDA7" rx="9" fill="none" stroke-width="1"/>
+			<rect x="33.5" y="11.5" width="61" height="105" stroke="black" rx="9" fill="none" stroke-width="0.5"/>
+			<rect x="36.75" y="14.75" width="54.5" height="98.5" stroke="#D9BDA7" rx="5.5" fill="none" stroke-width="6"/>
+			<rect x="40.25" y="36" width="47.5" height="16" stroke="black" fill="#B6907E" stroke-width="0.5"/>
+			<rect x="40.25" y="78" width="47.5" height="16" stroke="black" fill="#B6907E" stroke-width="0.5"/>
+			<rect x="40" y="18" width="48" height="92" stroke="black" rx="2" fill="none" stroke-width="0.5"/>
+			<use x='90.75' y ='32' width="4" height="24" xlink:href='#leaf' />
+			<use x='90.75' y ='74' width="4" height="24" xlink:href='#leaf' />
+			<rect x="32" y="40" width="4" height="8" stroke="black" fill="#B6907E" stroke-width="0.25"/>
+			<rect x="32" y="82" width="4" height="8" stroke="black" fill="#B6907E" stroke-width="0.25"/>
+			<use x='61.5' y ='15' width="4" height="24" xlink:href='#dots' />
+			<use x='61.5' y ='88' width="4" height="24" xlink:href='#dots2' />
+			<rect x="54" y="40" width="20" height="8" stroke="#938777" rx="2" fill="#E5D9CD" stroke-width="3"/>
+		</svg>
+	</defs>
+	
+			<rect x="32" y="10" width="64" height="108" stroke="red" rx="10" fill="#F6D6BB" stroke-width="1"/>
+			<rect x="33" y="11" width="62" height="106" stroke="#D9BDA7" rx="9" fill="none" stroke-width="1"/>
+			<rect x="33.5" y="11.5" width="61" height="105" stroke="black" rx="9" fill="none" stroke-width="0.5"/>
+			<rect x="36.75" y="14.75" width="54.5" height="98.5" stroke="#D9BDA7" rx="5.5" fill="none" stroke-width="6"/>
+			<rect x="40.25" y="36" width="47.5" height="16" stroke="black" fill="#B6907E" stroke-width="0.5"/>
+			<rect x="40.25" y="78" width="47.5" height="16" stroke="black" fill="#B6907E" stroke-width="0.5"/>
+			<rect x="40" y="18" width="48" height="92" stroke="black" rx="2" fill="none" stroke-width="0.5"/>
+			<use x='90.75' y ='32' width="4" height="24" xlink:href='#leaf' />
+			<use x='90.75' y ='74' width="4" height="24" xlink:href='#leaf' />
+			<rect x="32" y="40" width="4" height="8" stroke="black" fill="#B6907E" stroke-width="0.25"/>
+			<rect x="32" y="82" width="4" height="8" stroke="black" fill="#B6907E" stroke-width="0.25"/>
+			<use x='61.5' y ='15' width="4" height="24" xlink:href='#dots' />
+			<use x='61.5' y ='88' width="4" height="24" xlink:href='#dots2' />
+			<rect x="54" y="40" width="20" height="8" stroke="#938777" rx="2" fill="#E5D9CD" stroke-width="3"/>
+</svg>
