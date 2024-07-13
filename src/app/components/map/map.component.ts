@@ -2028,7 +2028,7 @@ export class MapComponent {
       });
 
       if (!destLocation.isUnderground) {
-        canvasMarker.setRotationAngle(levelChanger.azimut);
+        //canvasMarker.setRotationAngle(levelChanger.azimut);
       }
 
       canvasMarker.properties = {};
