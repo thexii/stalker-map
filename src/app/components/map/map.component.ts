@@ -68,6 +68,8 @@ export class MapComponent {
   private items: Item[];
   private lootBoxConfig: LootBoxConfig;
   private mapConfig: MapConfig;
+  private svgMarker: any;
+  private canvasRenderer: any;// = L.canvas();
 
   constructor(
     private translate: TranslateService,
@@ -263,19 +265,14 @@ export class MapComponent {
 
     this.map.setMaxBounds(bounds);
 
-    this.canvasLayer = new L.MarkersCanvas();
-    this.canvasLayer.addTo(this.map);
-
-    this.map.redraw = () => {
-        this.canvasLayer.redraw();
-    };
-
     this.map.on('zoomend', () => {
         markWidth = 3 * Math.pow(2, this.map.getZoom());
         document.documentElement.style.setProperty(
             `--map-mark-width`,
 `${markWidth}px`);
     });
+
+    this.svgMarker = this.setCanvasMarkers();
 
     if (this.gamedata.locations && this.gamedata.locations.length > 0) {
         this.addLocations();
@@ -499,7 +496,6 @@ export class MapComponent {
             this.map.removeLayer(h);
             h.hide(h);
         }
-        this.map.redraw();
     }
 
     const analytics = getAnalytics();
@@ -544,6 +540,34 @@ export class MapComponent {
                     this.gamedata.widthInPixels / 2,
                 ]);
     });
+  }
+
+  private setCanvasMarkers(): any {
+    let imagesCahce: {src: string, image: any, width: number, height: number, widthShift: number, heightShift: number}[] = [];
+    L.Canvas.include({
+      _updateSvgMarker: function (layer: any) {
+        if (!this._drawing || layer._empty()) {
+          return;
+        }
+
+        this._ctx.drawImage(
+            layer.properties.image,
+            layer._point.x - layer.options.icon.options.iconSizeInit[0] / 2 * markWidth,
+            layer._point.y - layer.options.icon.options.iconSizeInit[1] / 2 * markWidth,
+            layer.options.icon.options.iconSizeInit[0] * markWidth,
+            layer.options.icon.options.iconSizeInit[1] * markWidth);
+      }
+    })
+
+    this.canvasRenderer = L.canvas();
+
+    return L.CircleMarker.extend(
+      {
+        _updatePath: function() {
+          this._renderer._updateSvgMarker(this);
+        }
+      }
+    )
   }
 
   private addLocations() {
@@ -635,9 +659,9 @@ export class MapComponent {
       );
 
       if (stuffsAtLocation.length > 0) {
-        let geoMarks: any = {};
-        geoMarks.type = 'FeatureCollection';
-        geoMarks.features = [];
+        let markers: any = [];
+        let markerImage = new Image();
+        markerImage.src = markType.icon.options.iconUrl;
 
         for (let stuffModel of stuffsAtLocation) {
           let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stuffModel.locationId) as Location;
@@ -652,8 +676,10 @@ export class MapComponent {
           let dx: number = location.x2 - location.x1;
           let dy: number = location.y1 - location.y2;
 
-          let stuff = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          let stuff = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
             icon: markType.icon,
+            renderer: this.canvasRenderer,
+            radius: markType.icon.options.iconSizeInit[0] * 10
           });
 
           stuff.properties = {};
@@ -661,6 +687,7 @@ export class MapComponent {
           stuff.properties.markType = markType.name;
           stuff.properties.typeUniqueName = markType.uniqueName;
           stuff.properties.ableToSearch = markType.ableToSearch;
+          stuff.properties.image = markerImage;
 
           if (stuff.properties.ableToSearch) {
             let localesToFind = [];
@@ -697,10 +724,6 @@ export class MapComponent {
               this.translate
             );
 
-            /*if (stuff.properties.stuff.name == 'st_monolith_stuff_title') {
-              console.log(stuff.feature.properties.search);
-            }*/
-
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
             );
@@ -715,11 +738,12 @@ export class MapComponent {
             className: 'map-tooltip',
             offset: new Point(0, 50),
           });
-          stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup(),
-            geoMarks.features.push(stuff);
+          stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup();
+
+          markers.push(stuff);
         }
 
-        this.addToCanvas(geoMarks, markType);
+        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
   }
@@ -741,9 +765,9 @@ export class MapComponent {
       }),
     };
 
-    let geoMarks: any = {};
-    geoMarks.type = 'FeatureCollection';
-    geoMarks.features = [];
+    let markers: any[] = [];
+    let markerImage = new Image();
+    markerImage.src = lootBoxType.icon.options.iconUrl;
 
     for (let lootBox of this.gamedata.lootBoxes) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.locationId) as Location;
@@ -758,8 +782,9 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let lootBoxMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let lootBoxMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: lootBoxType.icon,
+        renderer: this.canvasRenderer
       });
 
       lootBoxMarker.properties = {};
@@ -767,6 +792,7 @@ export class MapComponent {
       lootBoxMarker.properties.name = lootBoxType.name;
       lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
       lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
+      lootBoxMarker.properties.image = markerImage;
 
       if (lootBoxMarker.properties.ableToSearch) {
         let p = [];
@@ -805,10 +831,10 @@ export class MapComponent {
         }
       );
       lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p)).openPopup(),
-        geoMarks.features.push(lootBoxMarker);
+        markers.push(lootBoxMarker);
     }
 
-    this.addToCanvas(geoMarks, lootBoxType);
+    this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
   }
 
   private addMarks() {
@@ -928,15 +954,16 @@ export class MapComponent {
     this.gamedata.marks = this.gamedata.marks.sort(
       (c: { typeId: number }, l: { typeId: number }) => c.typeId - l.typeId
     );
+
     for (let markType of markTypes) {
       let marks = this.gamedata.marks.filter(
         (u: { typeId: number }) => u.typeId == markType.id
       );
 
       if (marks.length > 0) {
-        let geoMarks: any = {};
-        geoMarks.type = 'FeatureCollection';
-        geoMarks.features = [];
+        let markers = [];
+        let markerImage = new Image();
+        markerImage.src = markType.icon.options.iconUrl;
 
         for (let mark of marks) {
           let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mark.locationId) as Location;
@@ -951,8 +978,9 @@ export class MapComponent {
           let dx: number = location.x2 - location.x1;
           let dy: number = location.y1 - location.y2;
 
-          let marker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          let marker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
             icon: markType.icon,
+            renderer: this.canvasRenderer
           });
 
           marker.properties = {};
@@ -961,6 +989,10 @@ export class MapComponent {
           marker.properties.markType = markType.name;
           marker.properties.typeUniqueName = markType.uniqueName;
           marker.properties.ableToSearch = markType.ableToSearch;
+          marker.properties.image = markerImage;
+
+          marker.addTo(this.map);
+          markers.push(marker);
 
           if (marker.properties.ableToSearch) {
             let p = [];
@@ -1003,10 +1035,18 @@ export class MapComponent {
               offset: [0, 50],
             }
           );
-          geoMarks.features.push(marker);
+
+          marker.bindTooltip(
+            (marker: any) => this.translate.instant(marker.properties.name),
+            {
+              sticky: true,
+              className: 'map-tooltip',
+              offset: [0, 50],
+            }
+          );
         }
 
-        this.addToCanvas(geoMarks, markType);
+        this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
   }
@@ -1040,15 +1080,15 @@ export class MapComponent {
       }),
     };
 
-    let anomalies: any = {};
-    let anomaliesNoArt: any = {};
-
-    anomalies.type = 'FeatureCollection';
-    anomaliesNoArt.type = 'FeatureCollection';
-
-    anomalies.features = [];
-    anomaliesNoArt.features = [];
+    let anomalies: any[] = [];
+    let anomaliesNoArt: any[] = [];
     let artefactWays: any[] = [];
+
+    let markerImage = new Image();
+    markerImage.src = anomalyZoneIcon.icon.options.iconUrl;
+
+    let markerImageNoArt = new Image();
+    markerImageNoArt.src = anomalyZoneNoArtIcon.icon.options.iconUrl;
 
     for (let zone of this.gamedata.anomalyZones) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == zone.locationId) as Location;
@@ -1066,20 +1106,28 @@ export class MapComponent {
       const defaultType: string = 'anomaly-zone';
 
       let canvasMarker;
+
       if (
         zone.anomaliySpawnSections != null &&
         zone.anomaliySpawnSections.length > 0
       ) {
-        canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
           icon: anomalyZoneIcon.icon,
+          renderer: this.canvasRenderer
         });
+
+        canvasMarker.properties = {};
+        canvasMarker.properties.image = markerImage;
       } else {
-        canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
           icon: anomalyZoneNoArtIcon.icon,
+          renderer: this.canvasRenderer
         });
+
+        canvasMarker.properties = {};
+        canvasMarker.properties.image = markerImageNoArt;
       }
 
-      canvasMarker.properties = {};
       canvasMarker.properties.zoneModel = zone;
 
       if (
@@ -1150,7 +1198,7 @@ export class MapComponent {
             }
         }
 
-        anomalies.features.push(canvasMarker);
+        anomalies.push(canvasMarker);
 
         let locationFromL = this.locations.locations.find(
           (x: { id: any }) => x.id == zone.locationId
@@ -1160,7 +1208,7 @@ export class MapComponent {
           canvasMarker.properties.locationName = locationFromL.name;
         }
       } else {
-        anomaliesNoArt.features.push(canvasMarker);
+        anomaliesNoArt.push(canvasMarker);
         canvasMarker.properties.ableToSearch = false;
         canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
       }
@@ -1181,14 +1229,14 @@ export class MapComponent {
     }
 
     try {
-      this.addToCanvas(anomalies, anomalyZoneIcon);
+      this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
 
-      if (anomaliesNoArt.features.length > 0) {
-        this.addToCanvas(anomaliesNoArt, anomalyZoneNoArtIcon);
+      if (anomaliesNoArt.length > 0) {
+        this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
       }
 
       if (artefactWays.length > 0) {
-          this.addPolyLinesToMap(L.layerGroup(artefactWays), 'artefact-ways');
+          this.addLayerToMap(L.layerGroup(artefactWays), 'artefact-ways');
       }
     } catch (e) {
       console.log(e);
@@ -1295,9 +1343,13 @@ export class MapComponent {
       iconAnchor: [0, 0],
     })
 
-    let traders: any = {};
-    traders.type = 'FeatureCollection';
-    traders.features = [];
+    let markers: any[] = [];
+
+    let markerImage = new Image();
+    markerImage.src = traderIcon.icon.options.iconUrl;
+
+    let markerImageMedic = new Image();
+    markerImageMedic.src = medicIcon.options.iconUrl;
 
     for (let trader of this.gamedata.traders) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == trader.locationId) as Location;
@@ -1312,15 +1364,18 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: trader.isMedic ? medicIcon : traderIcon.icon,
+        renderer: this.canvasRenderer
       });
 
       canvasMarker.properties = {};
       canvasMarker.properties.traderConfig = trader;
       canvasMarker.properties.name = trader.profile.name;
       canvasMarker.properties.typeUniqueName = traderIcon.uniqueName;
-      traders.features.push(canvasMarker);
+      canvasMarker.properties.image = trader.isMedic ? markerImageMedic : markerImage;
+
+      markers.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
@@ -1352,7 +1407,7 @@ export class MapComponent {
         .openPopup();
     }
 
-    this.addToCanvas(traders, traderIcon);
+    this.addLayerToMap(L.layerGroup(markers), traderIcon.uniqueName);
   }
 
   private addStalkers() {
@@ -1401,9 +1456,16 @@ export class MapComponent {
       }),
     };
 
-    let stalkers: any = {};
-    stalkers.type = 'FeatureCollection';
-    stalkers.features = [];
+    let markers: any[] = [];
+
+    let markerImage = new Image();
+    markerImage.src = stalkerIcon.icon.options.iconUrl;
+
+    let markerImageDead = new Image();
+    markerImageDead.src = stalkerIconDead.icon.options.iconUrl;
+
+    let markerImageQuestItem = new Image();
+    markerImageQuestItem.src = stalkerIconQuestItem.icon.options.iconUrl;
 
     for (let stalker of this.gamedata.stalkers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == stalker.locationId) as Location;
@@ -1418,15 +1480,18 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
+        renderer: this.canvasRenderer
       });
 
       canvasMarker.properties = {};
       canvasMarker.properties.stalker = stalker;
       canvasMarker.properties.name = stalker.profile.name;
       canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
-      stalkers.features.push(canvasMarker);
+      canvasMarker.properties.image = stalker.alive ? (stalker.hasUniqueItem ? markerImageQuestItem : markerImage) : markerImageDead;
+
+      markers.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
@@ -1468,7 +1533,8 @@ export class MapComponent {
         .openPopup();
     }
 
-    this.addToCanvas(stalkers, stalkerIcon);
+
+    this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName);
   }
 
   private addSmartTerrains(isClearSky: boolean = false) {
@@ -1487,11 +1553,11 @@ export class MapComponent {
       }),
     };
 
-    let smartTerrains: any = {};
-    smartTerrains.type = 'FeatureCollection';
-    smartTerrains.features = [];
+    let markers: any[] = [];
 
-    let smartTerrainPaths: any[] = [];
+    let images: any[] = [];
+
+    let smartTerrainPaths: { name: string, image: any}[] = [];
 
     let handledSmartTerrains: string[] = [];
 
@@ -1508,7 +1574,8 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let icon = null;
+      let icon: any = null;
+      let imageMarker = null;
 
       switch (smart.simType) {
         case "default" : {
@@ -1521,14 +1588,20 @@ export class MapComponent {
               iconSizeInit: [1.75, 1.75],
               iconAnchor: [0, 0],
             });
-            /*icon = L.icon({
-              iconSize: [4, 4],
-              className: 'mark-container stalker-mark-2',
-              animate: false,
-              iconUrl: '/assets/images/svg/marks/monsters.svg',
-              iconSizeInit: [2, 2],
-              iconAnchor: [0, 0],
-            })*/
+
+            imageMarker = images.find(x => x.name == 'monsters')?.image
+
+            if (!imageMarker) {
+                let newImage =
+                    {
+                        name: 'monsters',
+                        image: new Image()
+                    };
+
+                newImage.image.src = icon.options.iconUrl
+                imageMarker = newImage.image;
+                images.push(newImage);
+            }
           }
           else {
             icon = L.icon({
@@ -1539,6 +1612,20 @@ export class MapComponent {
               iconSizeInit: [1.75, 1.75],
               iconAnchor: [0, 0],
             });
+
+            imageMarker = images.find(x => x.name == smart.simType)?.image
+
+            if (!imageMarker) {
+                let newImage =
+                    {
+                        name: smart.simType,
+                        image: new Image()
+                    };
+
+                newImage.image.src = icon.options.iconUrl
+                imageMarker = newImage.image;
+                images.push(newImage);
+            }
           }
 
           break;
@@ -1553,6 +1640,20 @@ export class MapComponent {
             iconSizeInit: [2, 2],
             iconAnchor: [0, 0],
           });
+
+          imageMarker = images.find(x => x.name == smart.simType)?.image
+
+          if (!imageMarker) {
+              let newImage =
+                  {
+                      name: smart.simType,
+                      image: new Image()
+                  };
+
+                newImage.image.src = icon.options.iconUrl
+                imageMarker = newImage.image;
+                images.push(newImage);
+          }
           break;
         }
 
@@ -1565,6 +1666,20 @@ export class MapComponent {
             iconSizeInit: [2, 2],
             iconAnchor: [0, 0],
           });
+
+          imageMarker = images.find(x => x.name == smart.simType)?.image
+
+          if (!imageMarker) {
+              let newImage =
+                  {
+                      name: smart.simType,
+                      image: new Image()
+                  };
+
+                newImage.image.src = icon.options.iconUrl
+              imageMarker = newImage.image;
+              images.push(newImage);
+          }
           break;
         }
 
@@ -1648,19 +1763,35 @@ export class MapComponent {
               break;
             }
           }
+
+          imageMarker = images.find(x => x.name == icon.options.iconUrl)?.image
+
+          if (!imageMarker) {
+              let newImage =
+                  {
+                      name: icon.options.iconUrl,
+                      image: new Image()
+                  };
+
+                  newImage.image.src = icon.options.iconUrl
+              imageMarker = newImage.image;
+              images.push(newImage);
+          }
           break;
         }
       }
 
-      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: icon,
+        renderer: this.canvasRenderer
       });
 
       canvasMarker.properties = {};
       canvasMarker.properties.smart = smart;
       canvasMarker.properties.name = smart.localeName;
       canvasMarker.properties.typeUniqueName = smart.simType;
-      smartTerrains.features.push(canvasMarker);
+      canvasMarker.properties.image = imageMarker;
+      markers.push(canvasMarker);
 
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
@@ -1747,18 +1878,10 @@ export class MapComponent {
           offset: [0, 50],
         }
       );
-
-      /*canvasMarker
-        .bindPopup(
-          (stalker: any) =>
-            this.createStalkerPopup(stalker),
-          { maxWidth: 500 }
-        )
-        .openPopup();*/
     }
 
-    this.addToCanvas(smartTerrains, smartTerrainIcon);
-    this.addPolyLinesToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
+    this.addLayerToMap(L.layerGroup(markers), smartTerrainIcon.uniqueName);
+    this.addLayerToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
   }
 
   private addMonsterLairs() {
@@ -1777,9 +1900,9 @@ export class MapComponent {
       }),
     };
 
-    let monsters: any = {};
-    monsters.type = 'FeatureCollection';
-    monsters.features = [];
+    let markers: any[] = [];
+    let markerImage = new Image();
+    markerImage.src = monstersIcon.icon.options.iconUrl;
 
     for (let lair of this.gamedata.monsterLairs) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lair.locationId) as Location;
@@ -1794,15 +1917,18 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
-        icon: monstersIcon.icon
+      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: monstersIcon.icon,
+        renderer: this.canvasRenderer
       });
 
       canvasMarker.properties = {};
       canvasMarker.properties.lair = lair;
       canvasMarker.properties.name = 'mutants-lair';
       canvasMarker.properties.typeUniqueName = 'monsters';
-      monsters.features.push(canvasMarker);
+      canvasMarker.properties.image = markerImage;
+
+      markers.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
@@ -1844,7 +1970,7 @@ export class MapComponent {
         .openPopup();
     }
 
-    this.addToCanvas(monsters, monstersIcon);
+    this.addLayerToMap(L.layerGroup(markers), monstersIcon.uniqueName);
   }
 
   private addLevelChangers() {
@@ -1862,7 +1988,6 @@ export class MapComponent {
         iconAnchor: [0, 0],
       }),
     };
-
     let undergroundDoorIcon = L.icon({
       iconSize: [4, 4],
       className: 'mark-container stalker-mark-2',
@@ -1881,9 +2006,10 @@ export class MapComponent {
       iconAnchor: [0, 0],
     });
 
-    let levelChangers: any = {};
-    levelChangers.type = 'FeatureCollection';
-    levelChangers.features = [];
+    let markers: any[] = [];
+
+    let markerImage = new Image();
+    markerImage.src = levelChangerIcon.icon.options.iconUrl;
 
 
     for (let levelChanger of this.gamedata.levelChangers) {
@@ -1896,22 +2022,22 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
-      let canvasMarker = L.marker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
-        icon: destLocation.isUnderground ? undergroundDoorIcon : levelChangerIcon.icon,
-        rotationOrigin: 'center'
+      let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: levelChangerIcon.icon,
+        renderer: this.canvasRenderer
       });
 
       if (!destLocation.isUnderground) {
-        canvasMarker.setRotationAngle(levelChanger.azimut);
+        //canvasMarker.setRotationAngle(levelChanger.azimut);
       }
 
       canvasMarker.properties = {};
       canvasMarker.properties.levelChanger = levelChanger;
       canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
       canvasMarker.properties.typeUniqueName = 'level-changers';
-      canvasMarker.properties.parentLocation = location;
+      canvasMarker.properties.image = markerImage;
 
-      levelChangers.features.push(canvasMarker);
+      markers.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
@@ -1940,39 +2066,11 @@ export class MapComponent {
       }
     }
 
-    this.addToCanvas(levelChangers, levelChangerIcon);
+    this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
   }
 
-  private addToCanvas(geoMarks: any, markType: any) {
-    let marksLayer = L.geoJSON(geoMarks);
-    marksLayer.ableToSearch = markType.ableToSearch ?? false;
-    marksLayer.isShowing = false;
-    marksLayer.markers = geoMarks.features;
-    marksLayer.name = markType.uniqueName;
-    this.layers[markType.name] = marksLayer;
-
-    marksLayer.hide = (layer: { isShowing: boolean; markers: any }) => {
-      if (layer.isShowing) {
-        this.canvasLayer.removeMarkers(layer.markers);
-
-        layer.isShowing = false;
-      }
-    };
-
-    marksLayer.show = (layer: { isShowing: boolean; markers: any }) => {
-      if (!layer.isShowing && layer.markers?.length > 0) {
-        this.canvasLayer.addMarkers(layer.markers);
-
-        layer.isShowing = true;
-      }
-    };
-
-    marksLayer.show(marksLayer);
-  }
-
-  private addPolyLinesToMap(smartTerrainPaths: any, name: any) {
-    let layer = smartTerrainPaths;
-    layer.ableToSearch = false;
+  private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
+    layer.ableToSearch = ableToSearch;
     layer.isShowing = false;
     layer.name = name;
     this.layers[name] = layer;
