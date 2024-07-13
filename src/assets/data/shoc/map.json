@@ -29238,8 +29238,54 @@
   ],
   "levelChangers": [
     {
+      "destinationLocationId": 2,
+      "azimut": 1.4709393,
+      "locale": null,
+      "x": 29.346415,
+      "y": 16.556196,
+      "z": 686.24164,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": -1.2215532,
+      "locale": null,
+      "x": -293.0513,
+      "y": 11.196,
+      "z": -20.98037,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": 0.39511666,
+      "locale": null,
+      "x": -11.487938,
+      "y": 9.863998,
+      "z": 297.52512,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 1.7868463,
+      "locale": null,
+      "x": 298.92627,
+      "y": 9.900001,
+      "z": 143.49748,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": -2.553546,
+      "locale": null,
+      "x": 33.571747,
+      "y": 0.48402405,
+      "z": -310.03452,
+      "locationId": 2
+    },
+    {
       "destinationLocationId": 4,
-      "azimut": 0,
+      "azimut": -2.2943058,
+      "locale": null,
       "x": -130.18697,
       "y": -2.9103417,
       "z": -139.16734,
@@ -29247,7 +29293,8 @@
     },
     {
       "destinationLocationId": 4,
-      "azimut": 0,
+      "azimut": 2.9503195,
+      "locale": null,
       "x": -105.93052,
       "y": -2.5933397,
       "z": -143.62944,
@@ -29255,35 +29302,255 @@
     },
     {
       "destinationLocationId": 4,
-      "azimut": 0,
+      "azimut": -1.839651,
+      "locale": null,
       "x": -76.887726,
       "y": -1.5466086,
       "z": 12.659302,
       "locationId": 3
     },
     {
+      "destinationLocationId": 2,
+      "azimut": 0.7182602,
+      "locale": null,
+      "x": 286.31766,
+      "y": 0.3266495,
+      "z": 11.299014,
+      "locationId": 3
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": -0.98197645,
+      "locale": null,
+      "x": -130.0939,
+      "y": -0.03237635,
+      "z": -139.03525,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 3,
+      "azimut": -0.21079949,
+      "locale": null,
+      "x": -38.978718,
+      "y": 1.7262505,
+      "z": 39.849224,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 1,
+      "azimut": -3.1085691,
+      "locale": null,
+      "x": -44.624187,
+      "y": 0.43477154,
+      "z": -548.7734,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 2,
+      "azimut": -1.0612204,
+      "locale": null,
+      "x": -193.99693,
+      "y": 1.3640585,
+      "z": -190.33572,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 6,
+      "azimut": -0.8239593,
+      "locale": null,
+      "x": 119.24313,
+      "y": -2.6538844,
+      "z": -255.8446,
+      "locationId": 5
+    },
+    {
+      "destinationLocationId": 5,
+      "azimut": 2.9000828,
+      "locale": null,
+      "x": -2.1274056,
+      "y": 10.560664,
+      "z": -13.889828,
+      "locationId": 6
+    },
+    {
+      "destinationLocationId": 2,
+      "azimut": 1.5357144,
+      "locale": null,
+      "x": 350.91635,
+      "y": 8.641159,
+      "z": -162.8699,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 9,
+      "azimut": 0.07647302,
+      "locale": null,
+      "x": 56.190422,
+      "y": -0.19793892,
+      "z": 215.04703,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 8,
+      "azimut": -1.5551877,
+      "locale": null,
+      "x": 43.924095,
+      "y": -0.43654633,
+      "z": 142.14732,
+      "locationId": 7
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": 1.6072245,
+      "locale": null,
+      "x": 37.95379,
+      "y": -0.5972581,
+      "z": 139.85379,
+      "locationId": 8
+    },
+    {
+      "destinationLocationId": 10,
+      "azimut": -2.5513027,
+      "locale": null,
+      "x": -82.76425,
+      "y": -15.755406,
+      "z": -220.94266,
+      "locationId": 8
+    },
+    {
+      "destinationLocationId": 7,
+      "azimut": -2.4734623,
+      "locale": null,
+      "x": -372.62363,
+      "y": -21.69933,
+      "z": -4.806515,
+      "locationId": 9
+    },
+    {
+      "destinationLocationId": 11,
+      "azimut": 1.8965626,
+      "locale": null,
+      "x": 102.5617,
+      "y": -13.809427,
+      "z": 404.135,
+      "locationId": 9
+    },
+    {
       "destinationLocationId": 17,
-      "azimut": 0,
+      "azimut": 1.987194,
+      "locale": null,
       "x": 3.4358163,
       "y": -5.5929523,
       "z": -12.539941,
       "locationId": 10
     },
     {
+      "destinationLocationId": 8,
+      "azimut": 1.9994715,
+      "locale": null,
+      "x": 216.43958,
+      "y": 6.5478134,
+      "z": -250.47778,
+      "locationId": 10
+    },
+    {
+      "destinationLocationId": 9,
+      "azimut": -2.632487,
+      "locale": null,
+      "x": 562.4259,
+      "y": -53.76309,
+      "z": -421.76242,
+      "locationId": 11
+    },
+    {
+      "destinationLocationId": 12,
+      "azimut": -0.01519167,
+      "locale": null,
+      "x": 382.29623,
+      "y": -33.28724,
+      "z": 162.17755,
+      "locationId": 11
+    },
+    {
+      "destinationLocationId": 11,
+      "azimut": -2.6763256,
+      "locale": null,
+      "x": 13.294301,
+      "y": -2.3906355,
+      "z": -297.2907,
+      "locationId": 12
+    },
+    {
+      "destinationLocationId": 13,
+      "azimut": -0.037459116,
+      "locale": null,
+      "x": 30.927809,
+      "y": -0.6813431,
+      "z": 456.90967,
+      "locationId": 12
+    },
+    {
+      "destinationLocationId": 16,
+      "azimut": -1.0777142,
+      "locale": null,
+      "x": 367.90158,
+      "y": 0.4436283,
+      "z": 37.063137,
+      "locationId": 13
+    },
+    {
       "destinationLocationId": 15,
-      "azimut": 0,
+      "azimut": 1.6109687,
+      "locale": null,
       "x": 9.499008,
       "y": 3.5779915,
       "z": 65.02772,
       "locationId": 14
     },
     {
+      "destinationLocationId": 16,
+      "azimut": -0.12441867,
+      "locale": null,
+      "x": -17.95043,
+      "y": -34.57341,
+      "z": -0.8782527,
+      "locationId": 15
+    },
+    {
+      "destinationLocationId": 14,
+      "azimut": -0.040229697,
+      "locale": null,
+      "x": 36.634968,
+      "y": -30.73563,
+      "z": 27.204744,
+      "locationId": 15
+    },
+    {
       "destinationLocationId": 15,
-      "azimut": 0,
+      "azimut": 1.5879452,
+      "locale": null,
       "x": 68.76104,
       "y": 16.685278,
       "z": 28.516146,
       "locationId": 16
+    },
+    {
+      "destinationLocationId": 10,
+      "azimut": 0.74596214,
+      "locale": null,
+      "x": -122.48158,
+      "y": 15.213863,
+      "z": -17.249409,
+      "locationId": 17
+    },
+    {
+      "destinationLocationId": 10,
+      "azimut": 1.8450987,
+      "locale": null,
+      "x": 151.061,
+      "y": 39.93321,
+      "z": -14.88694,
+      "locationId": 17
     }
   ],
   "stalkers": [

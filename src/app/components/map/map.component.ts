@@ -139,6 +139,9 @@ export class MapComponent {
       await this.addScript(
         '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
       );
+      await this.addScript(
+        '/assets/libs/leaflet/plugins/leaflet.rotatedMarker.js'
+      );
       console.log('Leaflet is loaded');
     }
 
@@ -1985,14 +1988,33 @@ export class MapComponent {
         iconAnchor: [0, 0],
       }),
     };
+    let undergroundDoorIcon = L.icon({
+      iconSize: [4, 4],
+      className: 'mark-container stalker-mark-2',
+      animate: false,
+      iconUrl: '/assets/images/svg/marks/underground.svg',
+      iconSizeInit: [2, 2],
+      iconAnchor: [0, 0],
+    });
+
+    let rostokIcon = L.icon({
+      iconSize: [4, 4],
+      className: 'mark-container stalker-mark-2',
+      animate: false,
+      iconUrl: '/assets/images/svg/marks/level_changer_rostok.svg',
+      iconSizeInit: [2, 2],
+      iconAnchor: [0, 0],
+    });
 
     let markers: any[] = [];
 
     let markerImage = new Image();
     markerImage.src = levelChangerIcon.icon.options.iconUrl;
 
+
     for (let levelChanger of this.gamedata.levelChangers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.locationId) as Location;
+      let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
 
       let markerX: number = 0.5 - location.xShift + levelChanger.x / location.widthInMeters;
       let markerY: number = 0.5 - location.yShift + levelChanger.z / location.heightInMeters;
@@ -2005,9 +2027,13 @@ export class MapComponent {
         renderer: this.canvasRenderer
       });
 
+      if (!destLocation.isUnderground) {
+        canvasMarker.setRotationAngle(levelChanger.azimut);
+      }
+
       canvasMarker.properties = {};
       canvasMarker.properties.levelChanger = levelChanger;
-      canvasMarker.properties.name = 'level-changer';
+      canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
       canvasMarker.properties.typeUniqueName = 'level-changers';
       canvasMarker.properties.image = markerImage;
 
@@ -2015,22 +2041,6 @@ export class MapComponent {
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
-
-      /*let propertiesToSearch: string[] = [e];
-
-      if (stalker.hasUniqueItem) {
-        for (let inv of stalker.inventoryItems) {
-          let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
-          propertiesToSearch.push(item.localeName);
-        }
-      }
-
-      this.createProperty(
-        canvasMarker.feature.properties,
-        'search',
-        propertiesToSearch,
-        this.translate
-      );*/
 
       canvasMarker.properties.locationUniqueName = location.uniqueName;
 
@@ -2044,13 +2054,16 @@ export class MapComponent {
         }
       );
 
-      canvasMarker
-        .bindPopup(
-          (stalker: any) =>
-            this.createUndergroundMapPopup(stalker),
-          { maxWidth: 500 }
-        )
-        .openPopup();
+      if (destLocation.isUnderground) {
+
+        canvasMarker
+          .bindPopup(
+            (stalker: any) =>
+              this.createUndergroundMapPopup(stalker),
+            { maxWidth: 500 }
+          )
+          .openPopup();
+      }
     }
 
     this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
@@ -2163,6 +2176,9 @@ export class MapComponent {
     componentRef.instance.location = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
     componentRef.instance.items = this.items;
     componentRef.instance.game = this.game;
+    componentRef.instance.parentLocation = levelChanger.properties.parentLocation;
+    componentRef.instance.mapConfig = this.mapConfig;
+    componentRef.instance.lootBoxConfig = this.lootBoxConfig;
 
     return componentRef.location.nativeElement;
   }
