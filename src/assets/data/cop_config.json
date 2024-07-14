@@ -33,6 +33,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "level-changers",
+      "isShow": true
+    },
+    {
       "uniqueName": "anomaly-zone-no-art",
       "isShow": false
     },
@@ -268,6 +272,13 @@
     {
       "rank": 90,
       "rankName": "master"
+    }
+  ],
+  "undergroundLevelsConfig": [
+    {
+      "name": "labx8",
+      "levels": ["map_labx8", "map_labx8_0", "map_labx8_1", "map_labx8_2", "map_labx8_3"],
+      "baseLevel": "map_labx8"
     }
   ]
 }

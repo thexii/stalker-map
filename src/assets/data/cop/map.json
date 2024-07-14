@@ -30372,7 +30372,98 @@
       "locationId": 5
     }
   ],
-  "levelChangers": null,
+  "levelChangers": [
+    {
+      "destinationLocationId": 2,
+      "direction": null,
+      "locale": null,
+      "x": 467.3069,
+      "y": 55.52762,
+      "z": 12.904409,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 4,
+      "direction": null,
+      "locale": null,
+      "x": 467.20688,
+      "y": 55.52762,
+      "z": 3.204408,
+      "locationId": 1
+    },
+    {
+      "destinationLocationId": 1,
+      "direction": null,
+      "locale": null,
+      "x": -7.123868,
+      "y": 14.484339,
+      "z": 154.08546,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 4,
+      "direction": null,
+      "locale": null,
+      "x": -16.323872,
+      "y": 14.484339,
+      "z": 142.78546,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 3,
+      "direction": null,
+      "locale": null,
+      "x": 460.0058,
+      "y": 46.06889,
+      "z": -295.4608,
+      "locationId": 2
+    },
+    {
+      "destinationLocationId": 4,
+      "direction": null,
+      "locale": null,
+      "x": 82.2065,
+      "y": 35.31701,
+      "z": -222.36333,
+      "locationId": 3
+    },
+    {
+      "destinationLocationId": 1,
+      "direction": null,
+      "locale": null,
+      "x": 150.91048,
+      "y": 22.345695,
+      "z": -287.92285,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 2,
+      "direction": null,
+      "locale": null,
+      "x": 139.08171,
+      "y": 22.345707,
+      "z": -287.87003,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 5,
+      "direction": null,
+      "locale": null,
+      "x": -78.03601,
+      "y": -7.041134,
+      "z": 100.68492,
+      "locationId": 4
+    },
+    {
+      "destinationLocationId": 4,
+      "direction": null,
+      "locale": null,
+      "x": -78.062874,
+      "y": 23.804554,
+      "z": 100.718994,
+      "locationId": 5
+    }
+  ],
   "stalkers": [
     {
       "alive": false,
