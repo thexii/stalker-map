@@ -13,6 +13,7 @@ import { MapConfig } from "../../models/gamedata/map-config";
 import { LootBoxClusterComponent } from "../loot-box-cluster/loot-box-cluster.component";
 import { LootBox } from "../../models/loot-box/loot-box-section.model";
 import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
+import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
 
 declare const L: any;
 
@@ -29,7 +30,6 @@ export class UndergroundComponent {
     container: ViewContainerRef;
 
     @Input() public location: Location;
-    @Input() public parentLocation: Location;
     @Input() public gamedata: Map;
     @Input() public items: Item[];
     @Input() public game: string;
@@ -42,29 +42,33 @@ export class UndergroundComponent {
     private xShift: number = 0;
     private zShift: number = 0;
 
+    public undergroundConfig: UndergroundLevelsConfig;
+    public selectedLevel: string;
+    public currentLevelImageOverlay: any;
+
     constructor(
         private translate: TranslateService,
         private resolver: ComponentFactoryResolver) { }
 
+    public setLayer(newLyaer: string): void {
+      if (this.selectedLevel == newLyaer) {
+        return;
+      }
+
+      console.log(newLyaer);
+
+      this.currentLevelImageOverlay.remove();
+      this.selectedLevel = newLyaer;
+
+      this.addLocation();
+    }
+
     private async ngOnInit(): Promise<void> {
         console.log(this.location)
-        console.log(this.parentLocation)
 
-        this.map = L.map('underground-map', {
-            center: [this.location.heightInMeters / 2, this.location.widthInMeters / 2],
-            zoom: 1.5,
-            minZoom: 1,
-            maxZoom: 3,
-            crs: L.CRS.Simple,
-            markerZoomAnimation: !0,
-            zoomAnimation: !0,
-            zoomControl: !1
-        });
-
-        let bounds = [
-            [0, 0],
-            [this.location.heightInMeters, this.location.widthInMeters],
-        ];
+        let minZoom = 1;
+        let maxZoom = 3;
+        let zoom = 1.5;
 
         switch (this.location.uniqueName) {
           case "l03u_agr_underground": {
@@ -82,7 +86,36 @@ export class UndergroundComponent {
             this.zShift = 37.991;
             break;
           }
+          case "agroprom_underground": {
+            this.xShift = 16.294;
+            this.zShift = 220.231;
+            break;
+          }
+          case "jupiter_underground": {
+            this.xShift = 391.152;
+            this.zShift = 264.704;
+            minZoom = 1;
+            maxZoom = 3;
+            zoom = 1;
+            break;
+          }
         }
+
+        this.map = L.map('underground-map', {
+            center: [this.location.heightInMeters / 2, this.location.widthInMeters / 2],
+            zoom: zoom,
+            minZoom: minZoom,
+            maxZoom: maxZoom,
+            crs: L.CRS.Simple,
+            markerZoomAnimation: !0,
+            zoomAnimation: !0,
+            zoomControl: !1
+        });
+
+        let bounds = [
+            [0, 0],
+            [this.location.heightInMeters, this.location.widthInMeters],
+        ];
 
         let printClickCoordinates = true;
 
@@ -93,6 +126,15 @@ export class UndergroundComponent {
               var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
               console.log(`[${latlng.lat}, ${latlng.lng}]`);
             });
+        }
+
+        this.undergroundConfig = this.mapConfig.undergroundLevelsConfig?.find( x => x.name == this.location.uniqueName) as UndergroundLevelsConfig;
+
+        if (this.undergroundConfig == null) {
+          this.selectedLevel = `map_${this.location.uniqueName}`;
+        }
+        else {
+          this.selectedLevel = this.undergroundConfig.baseLevel;
         }
 
         this.addLocation();
@@ -107,17 +149,23 @@ export class UndergroundComponent {
     }
 
     private addLocation() {
-        let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${this.location.uniqueName}.png`;
+        let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/${this.selectedLevel}.png`;
+
         let locationBounds = [
             [0, 0],
             [this.location.heightInMeters, this.location.widthInMeters],
         ];
-        let locationImageOverlay = L.imageOverlay(locationImage, locationBounds, {
+
+        this.currentLevelImageOverlay = L.imageOverlay(locationImage, locationBounds, {
             interactive: !0,
             className: 'location-on-map',
         });
 
-        locationImageOverlay.addTo(this.map);
+        this.currentLevelImageOverlay.addTo(this.map);
+    }
+
+    private setLevelOverlay(): void {
+
     }
 
     private addMarks() {

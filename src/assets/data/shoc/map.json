@@ -29239,8 +29239,8 @@
   "levelChangers": [
     {
       "destinationLocationId": 2,
-      "azimut": 1.4709393,
-      "locale": null,
+      "direction": "level_changer_up",
+      "locale": "to_garbage",
       "x": 29.346415,
       "y": 16.556196,
       "z": 686.24164,
@@ -29248,8 +29248,8 @@
     },
     {
       "destinationLocationId": 3,
-      "azimut": -1.2215532,
-      "locale": null,
+      "direction": "level_changer_left",
+      "locale": "to_agroprom",
       "x": -293.0513,
       "y": 11.196,
       "z": -20.98037,
@@ -29257,8 +29257,8 @@
     },
     {
       "destinationLocationId": 7,
-      "azimut": 0.39511666,
-      "locale": null,
+      "direction": "level_changer_up",
+      "locale": "to_bar",
       "x": -11.487938,
       "y": 9.863998,
       "z": 297.52512,
@@ -29266,7 +29266,7 @@
     },
     {
       "destinationLocationId": 5,
-      "azimut": 1.7868463,
+      "direction": null,
       "locale": null,
       "x": 298.92627,
       "y": 9.900001,
@@ -29275,8 +29275,8 @@
     },
     {
       "destinationLocationId": 1,
-      "azimut": -2.553546,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_escape",
       "x": 33.571747,
       "y": 0.48402405,
       "z": -310.03452,
@@ -29284,7 +29284,7 @@
     },
     {
       "destinationLocationId": 4,
-      "azimut": -2.2943058,
+      "direction": null,
       "locale": null,
       "x": -130.18697,
       "y": -2.9103417,
@@ -29293,7 +29293,7 @@
     },
     {
       "destinationLocationId": 4,
-      "azimut": 2.9503195,
+      "direction": null,
       "locale": null,
       "x": -105.93052,
       "y": -2.5933397,
@@ -29302,7 +29302,7 @@
     },
     {
       "destinationLocationId": 4,
-      "azimut": -1.839651,
+      "direction": null,
       "locale": null,
       "x": -76.887726,
       "y": -1.5466086,
@@ -29311,7 +29311,7 @@
     },
     {
       "destinationLocationId": 2,
-      "azimut": 0.7182602,
+      "direction": null,
       "locale": null,
       "x": 286.31766,
       "y": 0.3266495,
@@ -29320,7 +29320,7 @@
     },
     {
       "destinationLocationId": 3,
-      "azimut": -0.98197645,
+      "direction": null,
       "locale": null,
       "x": -130.0939,
       "y": -0.03237635,
@@ -29329,7 +29329,7 @@
     },
     {
       "destinationLocationId": 3,
-      "azimut": -0.21079949,
+      "direction": null,
       "locale": null,
       "x": -38.978718,
       "y": 1.7262505,
@@ -29338,8 +29338,8 @@
     },
     {
       "destinationLocationId": 1,
-      "azimut": -3.1085691,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_escape",
       "x": -44.624187,
       "y": 0.43477154,
       "z": -548.7734,
@@ -29347,8 +29347,8 @@
     },
     {
       "destinationLocationId": 2,
-      "azimut": -1.0612204,
-      "locale": null,
+      "direction": "level_changer_left",
+      "locale": "to_garbage",
       "x": -193.99693,
       "y": 1.3640585,
       "z": -190.33572,
@@ -29356,7 +29356,7 @@
     },
     {
       "destinationLocationId": 6,
-      "azimut": -0.8239593,
+      "direction": null,
       "locale": null,
       "x": 119.24313,
       "y": -2.6538844,
@@ -29365,7 +29365,7 @@
     },
     {
       "destinationLocationId": 5,
-      "azimut": 2.9000828,
+      "direction": null,
       "locale": null,
       "x": -2.1274056,
       "y": 10.560664,
@@ -29374,8 +29374,8 @@
     },
     {
       "destinationLocationId": 2,
-      "azimut": 1.5357144,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_garbage",
       "x": 350.91635,
       "y": 8.641159,
       "z": -162.8699,
@@ -29383,8 +29383,8 @@
     },
     {
       "destinationLocationId": 9,
-      "azimut": 0.07647302,
-      "locale": null,
+      "direction": "level_changer_up",
+      "locale": "to_military",
       "x": 56.190422,
       "y": -0.19793892,
       "z": 215.04703,
@@ -29392,8 +29392,8 @@
     },
     {
       "destinationLocationId": 8,
-      "azimut": -1.5551877,
-      "locale": null,
+      "direction": "level_changer_rostok",
+      "locale": "bar_rostok",
       "x": 43.924095,
       "y": -0.43654633,
       "z": 142.14732,
@@ -29401,7 +29401,7 @@
     },
     {
       "destinationLocationId": 7,
-      "azimut": 1.6072245,
+      "direction": null,
       "locale": null,
       "x": 37.95379,
       "y": -0.5972581,
@@ -29410,8 +29410,8 @@
     },
     {
       "destinationLocationId": 10,
-      "azimut": -2.5513027,
-      "locale": null,
+      "direction": "level_changer_down_left",
+      "locale": "to_yantar",
       "x": -82.76425,
       "y": -15.755406,
       "z": -220.94266,
@@ -29419,8 +29419,8 @@
     },
     {
       "destinationLocationId": 7,
-      "azimut": -2.4734623,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_bar",
       "x": -372.62363,
       "y": -21.69933,
       "z": -4.806515,
@@ -29428,7 +29428,7 @@
     },
     {
       "destinationLocationId": 11,
-      "azimut": 1.8965626,
+      "direction": null,
       "locale": null,
       "x": 102.5617,
       "y": -13.809427,
@@ -29437,7 +29437,7 @@
     },
     {
       "destinationLocationId": 17,
-      "azimut": 1.987194,
+      "direction": null,
       "locale": null,
       "x": 3.4358163,
       "y": -5.5929523,
@@ -29446,8 +29446,8 @@
     },
     {
       "destinationLocationId": 8,
-      "azimut": 1.9994715,
-      "locale": null,
+      "direction": "level_changer_right",
+      "locale": "to_rostok",
       "x": 216.43958,
       "y": 6.5478134,
       "z": -250.47778,
@@ -29455,8 +29455,8 @@
     },
     {
       "destinationLocationId": 9,
-      "azimut": -2.632487,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_military",
       "x": 562.4259,
       "y": -53.76309,
       "z": -421.76242,
@@ -29464,8 +29464,8 @@
     },
     {
       "destinationLocationId": 12,
-      "azimut": -0.01519167,
-      "locale": null,
+      "direction": "level_changer_up",
+      "locale": "to_pripyat",
       "x": 382.29623,
       "y": -33.28724,
       "z": 162.17755,
@@ -29473,8 +29473,8 @@
     },
     {
       "destinationLocationId": 11,
-      "azimut": -2.6763256,
-      "locale": null,
+      "direction": "level_changer_down",
+      "locale": "to_radar",
       "x": 13.294301,
       "y": -2.3906355,
       "z": -297.2907,
@@ -29482,8 +29482,8 @@
     },
     {
       "destinationLocationId": 13,
-      "azimut": -0.037459116,
-      "locale": null,
+      "direction": "level_changer_up",
+      "locale": "to_aes",
       "x": 30.927809,
       "y": -0.6813431,
       "z": 456.90967,
@@ -29491,7 +29491,7 @@
     },
     {
       "destinationLocationId": 16,
-      "azimut": -1.0777142,
+      "direction": null,
       "locale": null,
       "x": 367.90158,
       "y": 0.4436283,
@@ -29500,7 +29500,7 @@
     },
     {
       "destinationLocationId": 15,
-      "azimut": 1.6109687,
+      "direction": null,
       "locale": null,
       "x": 9.499008,
       "y": 3.5779915,
@@ -29509,7 +29509,7 @@
     },
     {
       "destinationLocationId": 16,
-      "azimut": -0.12441867,
+      "direction": null,
       "locale": null,
       "x": -17.95043,
       "y": -34.57341,
@@ -29518,7 +29518,7 @@
     },
     {
       "destinationLocationId": 14,
-      "azimut": -0.040229697,
+      "direction": null,
       "locale": null,
       "x": 36.634968,
       "y": -30.73563,
@@ -29527,7 +29527,7 @@
     },
     {
       "destinationLocationId": 15,
-      "azimut": 1.5879452,
+      "direction": null,
       "locale": null,
       "x": 68.76104,
       "y": 16.685278,
@@ -29536,7 +29536,7 @@
     },
     {
       "destinationLocationId": 10,
-      "azimut": 0.74596214,
+      "direction": null,
       "locale": null,
       "x": -122.48158,
       "y": 15.213863,
@@ -29545,7 +29545,7 @@
     },
     {
       "destinationLocationId": 10,
-      "azimut": 1.8450987,
+      "direction": null,
       "locale": null,
       "x": 151.061,
       "y": 39.93321,

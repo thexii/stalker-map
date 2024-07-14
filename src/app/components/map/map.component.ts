@@ -543,19 +543,23 @@ export class MapComponent {
   }
 
   private setCanvasMarkers(): any {
-    let imagesCahce: {src: string, image: any, width: number, height: number, widthShift: number, heightShift: number}[] = [];
     L.Canvas.include({
       _updateSvgMarker: function (layer: any) {
         if (!this._drawing || layer._empty()) {
           return;
         }
 
-        this._ctx.drawImage(
-            layer.properties.image,
-            layer._point.x - layer.options.icon.options.iconSizeInit[0] / 2 * markWidth,
-            layer._point.y - layer.options.icon.options.iconSizeInit[1] / 2 * markWidth,
-            layer.options.icon.options.iconSizeInit[0] * markWidth,
-            layer.options.icon.options.iconSizeInit[1] * markWidth);
+        try {
+          this._ctx.drawImage(
+              layer.properties.image,
+              layer._point.x - layer.options.icon.options.iconSizeInit[0] / 2 * markWidth,
+              layer._point.y - layer.options.icon.options.iconSizeInit[1] / 2 * markWidth,
+              layer.options.icon.options.iconSizeInit[0] * markWidth,
+              layer.options.icon.options.iconSizeInit[1] * markWidth);
+        }
+        catch (ex) {
+          console.log(layer);
+        }
       }
     })
 
@@ -1983,7 +1987,7 @@ export class MapComponent {
         iconSize: [4, 4],
         className: 'mark-container stalker-mark-2',
         animate: false,
-        iconUrl: '/assets/images/svg/marks/level_changer.svg',
+        iconUrl: '/assets/images/svg/marks/level_changers/level_changer_up.svg',
         iconSizeInit: [2, 2],
         iconAnchor: [0, 0],
       }),
@@ -2001,8 +2005,8 @@ export class MapComponent {
       iconSize: [4, 4],
       className: 'mark-container stalker-mark-2',
       animate: false,
-      iconUrl: '/assets/images/svg/marks/level_changer_rostok.svg',
-      iconSizeInit: [2, 2],
+      iconUrl: '/assets/images/svg/marks/level_changers/level_changer_rostok.svg',
+      iconSizeInit: [2, 3],
       iconAnchor: [0, 0],
     });
 
@@ -2011,6 +2015,7 @@ export class MapComponent {
     let markerImage = new Image();
     markerImage.src = levelChangerIcon.icon.options.iconUrl;
 
+    let imagesCahce: {src: string, image: any}[] = [];
 
     for (let levelChanger of this.gamedata.levelChangers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.locationId) as Location;
@@ -2022,12 +2027,27 @@ export class MapComponent {
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
+      let cachedIcon = imagesCahce.find(x => x.src == levelChanger.direction)?.image;
+
+      if (!cachedIcon) {
+        cachedIcon = new Image();
+        let dir = levelChanger.direction
+        if (dir == null) {
+            dir = 'level_changer_up';
+        }
+
+        cachedIcon.src = `/assets/images/svg/marks/level_changers/${dir}.svg`
+
+        imagesCahce.push({src: dir, image: cachedIcon})
+      }
+
       let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: levelChangerIcon.icon,
         renderer: this.canvasRenderer
       });
 
       if (!destLocation.isUnderground) {
+        cachedIcon = imagesCahce.find(x => x.src == levelChanger.direction)?.image;
         //canvasMarker.setRotationAngle(levelChanger.azimut);
       }
 
@@ -2035,7 +2055,7 @@ export class MapComponent {
       canvasMarker.properties.levelChanger = levelChanger;
       canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
       canvasMarker.properties.typeUniqueName = 'level-changers';
-      canvasMarker.properties.image = markerImage;
+      canvasMarker.properties.image = cachedIcon;
 
       markers.push(canvasMarker);
       canvasMarker.properties.ableToSearch = false;
@@ -2176,7 +2196,6 @@ export class MapComponent {
     componentRef.instance.location = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
     componentRef.instance.items = this.items;
     componentRef.instance.game = this.game;
-    componentRef.instance.parentLocation = levelChanger.properties.parentLocation;
     componentRef.instance.mapConfig = this.mapConfig;
     componentRef.instance.lootBoxConfig = this.lootBoxConfig;
 

@@ -53,6 +53,10 @@
       "isShow": false
     },
     {
+      "uniqueName": "level-changers",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },
@@ -411,6 +415,13 @@
           "enabledBuies": null
         }
       ]
+    }
+  ],
+  "undergroundLevelsConfig": [
+    {
+      "name": "agroprom_underground",
+      "levels": ["map_agroprom_underground", "map_agroprom_underground_0"],
+      "baseLevel": "map_agroprom_underground"
     }
   ]
 }

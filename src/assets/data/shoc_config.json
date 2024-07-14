@@ -37,6 +37,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "level-changers",
+      "isShow": true
+    },
+    {
       "uniqueName": "acidic",
       "isShow": false
     },

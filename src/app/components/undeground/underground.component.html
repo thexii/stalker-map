@@ -1,4 +1,13 @@
 <div class="underground-popup">
+    <div class="undeground-settings">
+      <div *ngIf="undergroundConfig">
+        <div class="levels">
+          <div *ngFor="let layer of undergroundConfig.levels" class="level" (click)="setLayer(layer)">
+            {{ layer }}
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="underground-map"></div>
 </div>
 <div [hidden]="true">
