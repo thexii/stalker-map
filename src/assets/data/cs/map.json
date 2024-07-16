@@ -8823,6 +8823,25 @@
       "locationId": 7
     },
     {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "wpn_vintorez",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 165.01044,
+      "y": 10.969232,
+      "z": 536.77203,
+      "locationId": 7
+    },
+    {
       "name": "st_mil_q10_n",
       "uniqueName": "mil_quest_treasure_10",
       "description": "st_mil_q10_n_descr",

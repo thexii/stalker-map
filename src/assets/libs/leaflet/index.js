@@ -1,4 +1,5 @@
 var markWidth = 1;
+var markWidthUnderground = 1;
 
 function copyLink(element) {
   let game = element.getAttribute('link-game');

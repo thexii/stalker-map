@@ -10,10 +10,22 @@
 
 .level {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.level.selected {
+  color: black;
+  background-color: rgba($color: white, $alpha: .6);
 }
 
 #underground-map {
     width: 100%;
     height: 100%;
     background-color: #090a0a;
+}
+
+.location-name {
+  color: white;
+  font-size: 1.5rem;
 }
