@@ -8996,56 +8996,21 @@
           "probability": 1
         },
         {
-          "uniqueName": "bandage",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_antidot",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_coagulant",
-          "count": 1,
-          "probability": 1
-        },
-        {
           "uniqueName": "energy_drink",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_army",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_scientic",
           "count": 1,
           "probability": 1
         },
         {
           "uniqueName": "vodka",
-          "count": 4,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_booster",
-          "count": 1,
+          "count": 2,
           "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": 56.867416,
-      "y": 4.991073,
-      "z": -2.0276475,
+      "x": 56.78429,
+      "y": 1.9557704,
+      "z": -12.028672,
       "locationId": 3
     },
     {
@@ -9057,11 +9022,6 @@
         {
           "uniqueName": "af_mincer_meat",
           "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_og-7b",
-          "count": 2,
           "probability": 1
         },
         {
@@ -9077,9 +9037,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -52.877,
-      "y": 4.463904,
-      "z": 0.8323266,
+      "x": -57.495647,
+      "y": 4.042468,
+      "z": 3.050118,
       "locationId": 3
     },
     {
@@ -9181,21 +9141,6 @@
           "probability": 1
         },
         {
-          "uniqueName": "drug_antidot",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_coagulant",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "energy_drink",
-          "count": 1,
-          "probability": 1
-        },
-        {
           "uniqueName": "grenade_f1",
           "count": 1,
           "probability": 1
@@ -9204,33 +9149,13 @@
           "uniqueName": "grenade_rgd5",
           "count": 2,
           "probability": 1
-        },
-        {
-          "uniqueName": "medkit_army",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "vodka",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_9x39_pab9",
-          "count": 90,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_pkm_100",
-          "count": 100,
-          "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": 7.7210636,
-      "y": 9.294705,
-      "z": 286.1674,
+      "x": 10.962046,
+      "y": 9.290602,
+      "z": 277.5615,
       "locationId": 3
     },
     {
@@ -9277,63 +9202,13 @@
           "uniqueName": "ammo_5.56x45_ss190",
           "count": 120,
           "probability": 1
-        },
-        {
-          "uniqueName": "grenade_f1",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "grenade_rgd5",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_antidot",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "energy_drink",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_army",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit_scientic",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "vodka",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "bandage",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_coagulant",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit",
-          "count": 2,
-          "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": 38.09229,
-      "y": 4.164281,
-      "z": 180.35852,
+      "x": 19.532335,
+      "y": 9.678157,
+      "z": 194.59056,
       "locationId": 3
     },
     {
@@ -9367,46 +9242,64 @@
       "typeId": 3,
       "items": [
         {
-          "uniqueName": "bandage",
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 90,
+          "probability": 1
+        },
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 5.6828785,
+      "y": 9.761499,
+      "z": 299.09464,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_og-7b",
           "count": 2,
           "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -43.639713,
+      "y": 5.306777,
+      "z": -3.6032565,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
-          "uniqueName": "drug_antidot",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "energy_drink",
-          "count": 1,
+          "uniqueName": "bandage",
+          "count": 2,
           "probability": 1
         },
         {
           "uniqueName": "medkit",
           "count": 2,
           "probability": 1
-        },
-        {
-          "uniqueName": "medkit_army",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "vodka",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "drug_coagulant",
-          "count": 1,
-          "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": 7.1709704,
-      "y": 8.728572,
-      "z": 417.9012,
+      "x": 3.8134544,
+      "y": 8.12745,
+      "z": 424.06918,
       "locationId": 3
     },
     {
@@ -9446,6 +9339,89 @@
       "items": [
         {
           "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 47.805756,
+      "y": 1.4024183,
+      "z": 171.48392,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 65.26339,
+      "y": 3.825449,
+      "z": -0.83748114,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "bandage",
           "count": 3,
           "probability": 1
         },
@@ -9465,6 +9441,166 @@
       "x": 57.595642,
       "y": 4.2270956,
       "z": -139.0272,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 9.856982,
+      "y": 9.20947,
+      "z": 412.9668,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 4.814234,
+      "y": 8.927015,
+      "z": 287.87393,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_booster",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "drug_coagulant",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 45.00817,
+      "y": 11.414112,
+      "z": -1.423643,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 58.797276,
+      "y": 2.416798,
+      "z": 8.518102,
+      "locationId": 3
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "grenade_f1",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 34.796936,
+      "y": 4.8645973,
+      "z": 186.09436,
       "locationId": 3
     },
     {
@@ -10667,21 +10803,64 @@
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
-      "typeId": 1,
+      "typeId": 3,
       "items": [
         {
           "uniqueName": "ammo_11.43x23_fmj",
-          "count": 200,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_5.45x39_ap",
-          "count": 90,
+          "count": 100,
           "probability": 1
         },
         {
           "uniqueName": "ammo_5.56x45_ss190",
-          "count": 300,
+          "count": 180,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_colt1911",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -93.25827,
+      "y": -15.373515,
+      "z": 81.691895,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "ammo_11.43x23_fmj",
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x18_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -55.337994,
+      "y": -21.509623,
+      "z": 91.24416,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 90,
           "probability": 1
         },
         {
@@ -10695,38 +10874,18 @@
           "probability": 1
         },
         {
-          "uniqueName": "ammo_pkm_100",
-          "count": 100,
-          "probability": 1
-        },
-        {
           "uniqueName": "ammo_vog-25",
           "count": 3,
           "probability": 1
         },
         {
           "uniqueName": "antirad",
-          "count": 5,
-          "probability": 1
-        },
-        {
-          "uniqueName": "bread",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "conserva",
           "count": 4,
           "probability": 1
         },
         {
-          "uniqueName": "drug_anabiotic",
-          "count": 3,
-          "probability": 1
-        },
-        {
           "uniqueName": "grenade_f1",
-          "count": 3,
+          "count": 2,
           "probability": 1
         },
         {
@@ -10736,7 +10895,7 @@
         },
         {
           "uniqueName": "medkit",
-          "count": 8,
+          "count": 3,
           "probability": 1
         },
         {
@@ -10746,11 +10905,11 @@
         },
         {
           "uniqueName": "medkit_scientic",
-          "count": 4,
+          "count": 2,
           "probability": 1
         },
         {
-          "uniqueName": "pri_a19_lab_x7_info",
+          "uniqueName": "vodka",
           "count": 1,
           "probability": 1
         },
@@ -10760,73 +10919,147 @@
           "probability": 1
         },
         {
-          "uniqueName": "wpn_colt1911",
-          "count": 1,
-          "probability": 1
-        },
-        {
           "uniqueName": "wpn_fort",
           "count": 4,
-          "probability": 1
-        },
-        {
-          "uniqueName": "vodka",
-          "count": 8,
           "probability": 1
         },
         {
           "uniqueName": "wpn_addon_grenade_launcher",
           "count": 1,
           "probability": 1
-        },
-        {
-          "uniqueName": "wpn_groza",
-          "count": 1,
-          "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -80.722755,
+      "y": -14.891298,
+      "z": 76.98667,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
           "uniqueName": "ammo_5.45x39_fmj",
           "count": 180,
           "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -111.19989,
+      "y": -31.502092,
+      "z": 90.83219,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ss190",
+          "count": 120,
+          "probability": 1
         },
         {
-          "uniqueName": "drug_antidot",
+          "uniqueName": "medkit",
           "count": 1,
           "probability": 1
         },
         {
-          "uniqueName": "pri_a19_lab_x10_info",
+          "uniqueName": "antirad",
           "count": 1,
           "probability": 1
-        },
-        {
-          "uniqueName": "bandage",
-          "count": 3,
-          "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -99.6196,
+      "y": -32.05645,
+      "z": 90.89305,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
           "uniqueName": "ammo_7.62x54_7h1",
           "count": 20,
           "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -77.92618,
+      "y": -23.731028,
+      "z": 56.052563,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
           "uniqueName": "ammo_9x39_pab9",
           "count": 60,
           "probability": 1
         },
         {
-          "uniqueName": "wpn_pkm",
+          "uniqueName": "medkit",
           "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -67.24707,
+      "y": -15.144397,
+      "z": 56.343357,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_pkm_100",
+          "count": 100,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -89.68265,
+      "y": -30.739882,
+      "z": 93.85978,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 2,
           "probability": 1
         },
         {
-          "uniqueName": "pri_a19_lab_x18_info",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "pri_a19_american_experiment_info",
-          "count": 1,
+          "uniqueName": "drug_anabiotic",
+          "count": 2,
           "probability": 1
         },
         {
@@ -10835,12 +11068,79 @@
           "probability": 1
         },
         {
+          "uniqueName": "medkit_scientic",
+          "count": 2,
+          "probability": 1
+        },
+        {
           "uniqueName": "energy_drink",
-          "count": 3,
+          "count": 2,
           "probability": 1
         },
         {
           "uniqueName": "lx8_service_instruction",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -57.214245,
+      "y": -16.790289,
+      "z": 102.05391,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "bandage",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -63.40873,
+      "y": -24.204124,
+      "z": 75.08213,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "bread",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -82.76525,
+      "y": -15.293513,
+      "z": 93.85269,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "conserva",
           "count": 1,
           "probability": 1
         },
@@ -10852,9 +11152,247 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -79.38553,
-      "y": -18.775896,
-      "z": 81.301094,
+      "x": -80.190155,
+      "y": -15.039967,
+      "z": 114.05376,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "conserva",
+          "count": 3,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -84.195404,
+      "y": -15.772029,
+      "z": 89.08068,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "drug_anabiotic",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -89.75085,
+      "y": -31.58284,
+      "z": 90.053734,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "drug_antidot",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x10_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -111.15427,
+      "y": -31.141582,
+      "z": 80.46541,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -73.09169,
+      "y": -15.928617,
+      "z": 112.83397,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -67.92646,
+      "y": -15.912121,
+      "z": 70.14334,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "pri_a19_lab_x7_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -88.04823,
+      "y": -31.647715,
+      "z": 80.56355,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -110.01486,
+      "y": -31.624195,
+      "z": 72.93478,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -61.220985,
+      "y": -22.72973,
+      "z": 73.51855,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 1,
+      "items": [
+        {
+          "uniqueName": "pri_a19_american_experiment_info",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -43.19888,
+      "y": -19.5261,
+      "z": 67.329285,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "vodka",
+          "count": 6,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -75.30837,
+      "y": -23.842482,
+      "z": 59.40404,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "wpn_groza",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -86.20034,
+      "y": -15.188098,
+      "z": 79.615845,
+      "locationId": 5
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "wpn_pkm",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -76.43026,
+      "y": -10.365425,
+      "z": 55.80796,
       "locationId": 5
     }
   ],
@@ -29141,36 +29679,204 @@
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_mine_acidic_average": 4
+        "zone_mine_acidic_average": 1
       },
       "artefactWays": null,
-      "x": -6.2490687,
-      "y": 0.00786825,
-      "z": -67.27263,
+      "x": -0.557171,
+      "y": 0.007869,
+      "z": -61.45349,
       "locationId": 3
     },
     {
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_mine_gravitational_average": 3
+        "zone_mine_acidic_average": 1
       },
       "artefactWays": null,
-      "x": 39.09653,
-      "y": 1.590895,
-      "z": 2.407099,
+      "x": -6.320588,
+      "y": 0.007868,
+      "z": -64.45273,
       "locationId": 3
     },
     {
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_mine_gravitational_strong": 10
+        "zone_mine_acidic_average": 1
       },
       "artefactWays": null,
-      "x": 13.085307,
-      "y": 9.835028,
-      "z": 264.4396,
+      "x": -7.848186,
+      "y": 0.007868,
+      "z": -67.983315,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_average": 1
+      },
+      "artefactWays": null,
+      "x": -10.270329,
+      "y": 0.007868,
+      "z": -75.20097,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_average": 1
+      },
+      "artefactWays": null,
+      "x": 35.18399,
+      "y": 1.592071,
+      "z": 5.628744,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_average": 1
+      },
+      "artefactWays": null,
+      "x": 42.052807,
+      "y": 1.590307,
+      "z": 7.896272,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_average": 1
+      },
+      "artefactWays": null,
+      "x": 40.052795,
+      "y": 1.590307,
+      "z": -6.30372,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 18.564507,
+      "y": 11.528549,
+      "z": 278.1862,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 21.25158,
+      "y": 9.438261,
+      "z": 253.91554,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 25.298004,
+      "y": 10.815639,
+      "z": 265.26288,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 15.202547,
+      "y": 8.663568,
+      "z": 251.44693,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": -5.94251,
+      "y": 12.524873,
+      "z": 263.25604,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": -1.94288,
+      "y": 9.548653,
+      "z": 268.15433,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 13.654787,
+      "y": 9.408164,
+      "z": 274.39148,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 30.634966,
+      "y": 9.408164,
+      "z": 268.46066,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 4.891367,
+      "y": 7.951505,
+      "z": 256.9788,
+      "locationId": 3
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_gravitational_strong": 1
+      },
+      "artefactWays": null,
+      "x": 9.240691,
+      "y": 9.062901,
+      "z": 264.34305,
       "locationId": 3
     },
     {
@@ -30337,14 +31043,84 @@
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_mine_acidic_average": 2,
-        "zone_mine_acidic_strong": 4,
+        "zone_mine_acidic_average": 1
+      },
+      "artefactWays": null,
+      "x": -66.75392,
+      "y": -28.257963,
+      "z": 72.74728,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_average": 1
+      },
+      "artefactWays": null,
+      "x": -84.4551,
+      "y": -16.070091,
+      "z": 77.56583,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_strong": 1
+      },
+      "artefactWays": null,
+      "x": -76.0339,
+      "y": -20.05983,
+      "z": 59.94648,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_strong": 1
+      },
+      "artefactWays": null,
+      "x": -54.94951,
+      "y": -24.462593,
+      "z": 81.67029,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_strong": 1
+      },
+      "artefactWays": null,
+      "x": -69.63701,
+      "y": -28.483183,
+      "z": 68.52576,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_mine_acidic_strong": 1
+      },
+      "artefactWays": null,
+      "x": -62.057438,
+      "y": -28.781252,
+      "z": 78.866135,
+      "locationId": 5
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
         "zone_mine_gravitational_weak": 1
       },
       "artefactWays": null,
-      "x": -73.61308,
-      "y": -23.71072,
-      "z": 72.50282,
+      "x": -101.40473,
+      "y": -19.860132,
+      "z": 68.19801,
       "locationId": 5
     },
     {

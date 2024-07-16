@@ -16,6 +16,7 @@ import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
 import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
 
 declare const L: any;
+declare var markWidthUnderground: number;
 
 @Component({
     selector: 'app-underground',
@@ -94,9 +95,14 @@ export class UndergroundComponent {
           case "jupiter_underground": {
             this.xShift = 391.152;
             this.zShift = 264.704;
-            minZoom = 1;
-            maxZoom = 3;
+            minZoom = 0;
+            maxZoom = 2;
             zoom = 1;
+            break;
+          }
+          case "labx8": {
+            this.xShift = 121.657;
+            this.zShift = -44.509;
             break;
           }
         }
@@ -116,6 +122,15 @@ export class UndergroundComponent {
             [0, 0],
             [this.location.heightInMeters, this.location.widthInMeters],
         ];
+
+        markWidthUnderground = 3 * Math.pow(2, this.map.getZoom());
+
+        this.map.on('zoomend', () => {
+          markWidthUnderground = 3 * Math.pow(2, this.map.getZoom());
+          document.documentElement.style.setProperty(
+              `--map-mark-width-underground`,
+    `${markWidthUnderground}px`);
+      });
 
         let printClickCoordinates = true;
 
@@ -183,7 +198,7 @@ export class UndergroundComponent {
           markName: 'sub-location',
           icon: L.icon({
             iconSizeInit: [4, 4],
-            className: 'mark-container stalker-mark-4',
+            className: 'mark-container stalker-mark-4 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/sub-location.svg',
             iconAnchor: [0, 0],
@@ -196,7 +211,7 @@ export class UndergroundComponent {
           markName: 'acidic',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/chemical.svg',
             iconAnchor: [0, 0],
@@ -209,7 +224,7 @@ export class UndergroundComponent {
           markName: 'psychic',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/psi.svg',
             iconAnchor: [0, 0],
@@ -222,7 +237,7 @@ export class UndergroundComponent {
           markName: 'st_name_radioactive_contamination',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/radiation.svg',
             iconAnchor: [0, 0],
@@ -235,7 +250,7 @@ export class UndergroundComponent {
           markName: 'thermal_zone',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/fire.svg',
             iconAnchor: [0, 0],
@@ -248,7 +263,7 @@ export class UndergroundComponent {
           markName: 'electro_zone',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/electro.svg',
             iconAnchor: [0, 0],
@@ -261,7 +276,7 @@ export class UndergroundComponent {
           markName: 'st_name_teleport',
           icon: L.icon({
             iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2',
+            className: 'mark-container stalker-mark-2 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/portal.svg',
             iconAnchor: [0, 0],
@@ -274,7 +289,7 @@ export class UndergroundComponent {
           markName: 'mines',
           icon: L.icon({
             iconSizeInit: [1.5, 1.5],
-            className: 'mark-container stalker-mark-1.5',
+            className: 'mark-container stalker-mark-1.5 underground',
             animate: !1,
             iconUrl: '/assets/images/svg/marks/mines.svg',
             iconAnchor: [0, 0],
@@ -296,8 +311,7 @@ export class UndergroundComponent {
           geoMarks.features = [];
 
           for (let mark of marks.filter(x => x.locationId == this.location.id)) {
-
-            let marker = L.marker([mark.z, mark.x], {
+            let marker = L.marker([mark.z + this.zShift, mark.x + this.xShift], {
               icon: markType.icon,
             });
 
@@ -498,7 +512,7 @@ export class UndergroundComponent {
         ableToSearch: true,
         icon: L.icon({
           iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5',
+          className: 'mark-container stalker-mark-1.5 underground',
           animate: false,
           iconUrl: '/assets/images/svg/marks/character.svg',
           iconSizeInit: [1, 1],
@@ -513,7 +527,7 @@ export class UndergroundComponent {
         ableToSearch: true,
         icon: L.icon({
           iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5',
+          className: 'mark-container stalker-mark-1.5 underground',
           animate: false,
           iconUrl: '/assets/images/svg/marks/character_dead.svg',
           iconSizeInit: [1, 1],
@@ -528,7 +542,7 @@ export class UndergroundComponent {
         ableToSearch: true,
         icon: L.icon({
           iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5',
+          className: 'mark-container stalker-mark-1.5 underground',
           animate: false,
           iconUrl: '/assets/images/svg/marks/character_quest.svg',
           iconSizeInit: [1, 1],

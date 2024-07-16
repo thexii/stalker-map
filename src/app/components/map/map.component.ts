@@ -258,7 +258,7 @@ export class MapComponent {
         bounds).addTo(this.map);
     this.map.fitBounds(bounds);
 
-    markWidth = Math.exp(1.3615 + 0.6117 * this.map.getZoom());
+    markWidth = 3 * Math.pow(2, this.map.getZoom());
     document.documentElement.style.setProperty(
         `--map-mark-width`,
 `${markWidth}px`);
@@ -567,6 +567,7 @@ export class MapComponent {
 
     return L.CircleMarker.extend(
       {
+
         _updatePath: function() {
           this._renderer._updateSvgMarker(this);
         }
@@ -727,6 +728,8 @@ export class MapComponent {
               localesToFind,
               this.translate
             );
+
+            //console.log(stuff.feature.properties.search);
 
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
@@ -986,6 +989,8 @@ export class MapComponent {
             icon: markType.icon,
             renderer: this.canvasRenderer
           });
+
+          let markerSvg
 
           marker.properties = {};
           marker.properties.name = mark.name ? mark.name : markType.markName;
@@ -1996,8 +2001,8 @@ export class MapComponent {
       iconSize: [4, 4],
       className: 'mark-container stalker-mark-2',
       animate: false,
-      iconUrl: '/assets/images/svg/marks/underground.svg',
-      iconSizeInit: [2, 2],
+      iconUrl: '/assets/images/svg/marks/underground_2.svg',
+      iconSizeInit: [1, 1],
       iconAnchor: [0, 0],
     });
 
@@ -2006,7 +2011,7 @@ export class MapComponent {
       className: 'mark-container stalker-mark-2',
       animate: false,
       iconUrl: '/assets/images/svg/marks/level_changers/level_changer_rostok.svg',
-      iconSizeInit: [2, 3],
+      iconSizeInit: [2, 4],
       iconAnchor: [0, 0],
     });
 
@@ -2016,6 +2021,11 @@ export class MapComponent {
     markerImage.src = levelChangerIcon.icon.options.iconUrl;
 
     let imagesCahce: {src: string, image: any}[] = [];
+
+    let underIcon = new Image();
+    underIcon.src = `/assets/images/svg/marks/level_changers/underground_2.svg`
+
+    imagesCahce.push({src: 'underground', image: underIcon});
 
     for (let levelChanger of this.gamedata.levelChangers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.locationId) as Location;
@@ -2041,6 +2051,15 @@ export class MapComponent {
         imagesCahce.push({src: dir, image: cachedIcon})
       }
 
+      let markerIcon = null;
+
+      if (destLocation.isUnderground) {
+        markerIcon = undergroundDoorIcon;
+      }
+      else if (levelChanger.direction == "level_changer_rostok") {
+        markerIcon = rostokIcon;
+      }
+
       let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
         icon: levelChangerIcon.icon,
         renderer: this.canvasRenderer
@@ -2049,6 +2068,9 @@ export class MapComponent {
       if (!destLocation.isUnderground) {
         cachedIcon = imagesCahce.find(x => x.src == levelChanger.direction)?.image;
         //canvasMarker.setRotationAngle(levelChanger.azimut);
+      }
+      else {
+        cachedIcon = imagesCahce.find(x => x.src == 'underground')?.image;
       }
 
       canvasMarker.properties = {};
@@ -2080,7 +2102,11 @@ export class MapComponent {
           .bindPopup(
             (stalker: any) =>
               this.createUndergroundMapPopup(stalker),
-            { maxWidth: 500 }
+            {
+              maxWidth: 500,
+              closeOnClick: false,
+              autoClose: false
+            }
           )
           .openPopup();
       }
@@ -2090,6 +2116,7 @@ export class MapComponent {
   }
 
   private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
+    console.log(name, ableToSearch);
     layer.ableToSearch = ableToSearch;
     layer.isShowing = false;
     layer.name = name;
@@ -2104,7 +2131,7 @@ export class MapComponent {
     };
 
     layer.show = (layer: { isShowing: boolean; _layers: any }) => {
-      if (!layer.isShowing && layer._layers?.length > 0) {
+      if (!layer.isShowing && Object.keys(layer._layers).length > 0) {
         //this.canvasLayer.addMarkers(layer.markers);
 
         layer.isShowing = true;

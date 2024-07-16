@@ -37,6 +37,22 @@ body {
   width:calc(var(--map-mark-width)) !important;
 }
 
+.stalker-mark-4.underground {
+  width:calc(var(--map-mark-width-underground) * 4) !important;
+}
+
+.stalker-mark-2.underground {
+  width:calc(var(--map-mark-width-underground) * 2) !important;
+}
+
+.stalker-mark-1\.5.underground {
+  width:calc(var(--map-mark-width-underground) * 1.5) !important;
+}
+
+.stalker-mark.underground {
+  width:calc(var(--map-mark-width-underground)) !important;
+}
+
 .sub-header-container {
   margin-top: -5px;
   margin-bottom: 5px;
@@ -165,6 +181,10 @@ input[type=checkbox]+label:before {
 
 .icon-duty::before, .icon-dolg::before {
   background-image: url(/assets/images/svg/factions/duty.svg);
+}
+
+.icon-undeground-door::before {
+  background-image: url(/assets/images/svg/marks/level_changers/underground_door.svg);
 }
 
 .icon-stalker::before, .icon-trader::before {

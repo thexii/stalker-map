@@ -583,10 +583,11 @@
           console.warn(`propertyName '${propName}' not found in feature`);
         }
       } else if (layer instanceof L.LayerGroup) {
-        if (layer.markers != null && layer.ableToSearch && layer.isShowing) {
-            for (let marker of layer.markers) {
+        if (layer._layers != null && layer.ableToSearch && layer.isShowing) {
+            for (let marker of Object.values(layer._layers)) {
                 self._searchInLayer(marker, retRecords, propName)
             }
+            console.log(retRecords);
         }
       }
     },
