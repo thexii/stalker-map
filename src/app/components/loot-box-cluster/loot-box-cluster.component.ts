@@ -65,9 +65,6 @@ export class LootBoxClusterComponent {
                   item1.probability = Math.floor(item.probability * 100);
                   boxView.boxItems.push(item1);
                 }
-                else {
-                  console.log(item.uniqueName)
-                }
               }
             }
 
