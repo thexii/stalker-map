@@ -22,19 +22,19 @@ body {
 }
 
 .stalker-mark-4 {
-  width:calc(var(--map-mark-width) * 4) !important;
+  width:calc(var(--map-mark-width) * 4);
 }
 
 .stalker-mark-2 {
-  width:calc(var(--map-mark-width) * 2) !important;
+  width:calc(var(--map-mark-width) * 2);
 }
 
 .stalker-mark-1\.5 {
-  width:calc(var(--map-mark-width) * 1.5) !important;
+  width:calc(var(--map-mark-width) * 1.5);
 }
 
 .stalker-mark {
-  width:calc(var(--map-mark-width)) !important;
+  width:calc(var(--map-mark-width));
 }
 
 .stalker-mark-4.underground {

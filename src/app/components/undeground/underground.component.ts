@@ -47,6 +47,7 @@ export class UndergroundComponent {
     private layers: any[] = [];
     private xShift: number = 0;
     private zShift: number = 0;
+    private markWidthFactor: number = 3;
     private canvasRenderer: any;
 
     public undergroundConfig: UndergroundLevelsConfig;
@@ -75,17 +76,39 @@ export class UndergroundComponent {
         let maxZoom = 3;
         let zoom = 1.5;
 
-        this.canvasRenderer = L.canvas();
+        let canvasRenderer = 
+        L.Canvas.extend({
+          _updateSvgMarker: function (layer: any) {
+            if (!this._drawing || layer._empty() || layer.doNotRender) {
+              return;
+            }
+    
+            try {
+              this._ctx.drawImage(
+                layer.options.icon._image,
+                layer._point.x - layer.options.icon.shiftX * markWidthUnderground,
+                layer._point.y - layer.options.icon.shiftY * markWidthUnderground,
+                layer.options.icon.options.iconSizeInit[0] * markWidthUnderground,
+                layer.options.icon.options.iconSizeInit[1] * markWidthUnderground);
+            }
+            catch (ex) {
+              console.log(layer);
+              console.log(ex);
+            }
+          }
+        })
+
+        this.canvasRenderer = new canvasRenderer();
 
         switch (this.location.uniqueName) {
           case "l03u_agr_underground": {
-            this.xShift = 135.342;
-            this.zShift = 147.589;
+            this.xShift = 136.842;
+            this.zShift = 147.089;
             break;
           }
           case "l08u_brainlab": {
             this.xShift = 146.401;
-            this.zShift = 40.508;
+            this.zShift = 41.508;
             break;
           }
           case "l04u_labx18": {
@@ -101,6 +124,7 @@ export class UndergroundComponent {
           case "jupiter_underground": {
             this.xShift = 391.152;
             this.zShift = 264.704;
+            this.markWidthFactor = 6;
             minZoom = 0;
             maxZoom = 2;
             zoom = 1;
@@ -129,10 +153,11 @@ export class UndergroundComponent {
             [this.location.heightInMeters, this.location.widthInMeters],
         ];
 
-        markWidthUnderground = 3 * Math.pow(2, this.map.getZoom());
+        markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
 
         this.map.on('zoomend', () => {
-          markWidthUnderground = 3 * Math.pow(2, this.map.getZoom());
+          console.log("this.map.on('zoomend')");
+          markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
           document.documentElement.style.setProperty(
               `--map-mark-width-underground`,
     `${markWidthUnderground}px`);
@@ -167,8 +192,6 @@ export class UndergroundComponent {
         this.addLootBoxes();
 
         this.addStalkers();
-
-        //let layerControl = L.control.layers(null, this.layers).addTo(this.map);
 
         let layersToHide = [];
 
@@ -322,8 +345,6 @@ export class UndergroundComponent {
           }
 
           this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
-
-          //this.addToCanvas(geoMarks, markType);
         }
       }
     }
@@ -348,8 +369,9 @@ export class UndergroundComponent {
             let markers: any[] = [];
 
             for (let stuffModel of stuffsAtLocation) {
-              let stuff = L.marker([stuffModel.z + this.zShift, stuffModel.x + this.xShift], {
+              let stuff = new this.mapComponent.svgMarker([stuffModel.z + this.zShift, stuffModel.x + this.xShift], {
                 icon: markType.icon,
+                renderer: this.canvasRenderer
               });
 
               stuff.properties = {};
@@ -385,8 +407,6 @@ export class UndergroundComponent {
                     buggedStrings.push(...bugged);
                   }
                 }
-
-                //stuff.addTo(this.map);
               }
 
               stuff.bindTooltip((p: any) => this.createStuffTooltip(p), {
@@ -404,65 +424,22 @@ export class UndergroundComponent {
       }
 
     private addStalkers() {
-      let stalkerIcon = {
-        name: this.translate.instant('stalkers-layer'),
-        uniqueName: 'stalkers',
-        cssClass: 'stalkers',
-        ableToSearch: true,
-        icon: L.icon({
-          iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5 underground',
-          animate: false,
-          iconUrl: '/assets/images/svg/marks/character.svg',
-          iconSizeInit: [1, 1],
-          iconAnchor: [0, 0],
-        }),
-      };
+      let stalkerIcon, stalkerIconDead, stalkerIconQuestItem;
+      [stalkerIcon, stalkerIconDead, stalkerIconQuestItem]= this.mapComponent.getStalkersIcon();
 
-      let stalkerIconDead = {
-        name: this.translate.instant('stalkers-layer'),
-        uniqueName: 'stalkers',
-        cssClass: 'stalkers',
-        ableToSearch: true,
-        icon: L.icon({
-          iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5 underground',
-          animate: false,
-          iconUrl: '/assets/images/svg/marks/character_dead.svg',
-          iconSizeInit: [1, 1],
-          iconAnchor: [0, 0],
-        }),
-      };
-
-      let stalkerIconQuestItem = {
-        name: this.translate.instant('stalkers-layer'),
-        uniqueName: 'stalkers',
-        cssClass: 'stalkers',
-        ableToSearch: true,
-        icon: L.icon({
-          iconSize: [4, 4],
-          className: 'mark-container stalker-mark-1.5 underground',
-          animate: false,
-          iconUrl: '/assets/images/svg/marks/character_quest.svg',
-          iconSizeInit: [1, 1],
-          iconAnchor: [0, 0],
-        }),
-      };
-
-      let stalkers: any = {};
-      stalkers.type = 'FeatureCollection';
-      stalkers.features = [];
+      let markers: any[] = [];
 
       for (let stalker of this.gamedata.stalkers.filter(x => x.locationId == this.location.id)) {
-        let canvasMarker = L.marker([stalker.z + this.zShift, stalker.x + this.xShift], {
+        let canvasMarker = new this.mapComponent.svgMarker([stalker.z + this.zShift, stalker.x + this.xShift], {
           icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
+          renderer: this.canvasRenderer
         });
 
         canvasMarker.properties = {};
         canvasMarker.properties.stalker = stalker;
         canvasMarker.properties.name = stalker.profile.name;
         canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
-        stalkers.features.push(canvasMarker);
+        markers.push(canvasMarker);
         canvasMarker.properties.ableToSearch = false;
         canvasMarker.feature = {};
         canvasMarker.feature.properties = {};
@@ -493,8 +470,6 @@ export class UndergroundComponent {
           }
         );
 
-        canvasMarker.addTo(this.map);
-
         canvasMarker
           .bindPopup(
             (stalker: any) =>
@@ -504,33 +479,20 @@ export class UndergroundComponent {
           .openPopup();
       }
 
-      //this.addToCanvas(stalkers, stalkerIcon);
+      if (markers.length > 0) {
+        this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName, stalkerIcon.ableToSearch);
+      }
     }
 
     private addLootBoxes() {
-      let lootBoxType =
-      {
-        id: 2,
-        ableToSearch: false,
-        itemableToSearch: false,
-        name: this.translate.instant('destroyable-box'),
-        uniqueName: 'destroyable-box',
-        icon: L.icon({
-          iconSizeInit: [1, 1],
-          className: 'mark-container stalker-mark',
-          animate: !1,
-          iconUrl: '/assets/images/svg/marks/items.svg',
-          iconAnchor: [0, 0],
-        }),
-      };
+      let lootBoxType = this.mapComponent.getLootBoxIcon();
 
-      let geoMarks: any = {};
-      geoMarks.type = 'FeatureCollection';
-      geoMarks.features = [];
+      let markers: any[] = [];
 
       for (let lootBox of this.gamedata.lootBoxes.filter(x => x.locationId == this.location.id)) {
-        let lootBoxMarker = L.marker([lootBox.z + this.zShift, lootBox.x + this.xShift], {
+        let lootBoxMarker = new this.mapComponent.svgMarker([lootBox.z + this.zShift, lootBox.x + this.xShift], {
           icon: lootBoxType.icon,
+          renderer: this.canvasRenderer
         });
 
         //stuffModel.z + this.zShift, stuffModel.x + this.xShift
@@ -576,9 +538,11 @@ export class UndergroundComponent {
           }
         );
         lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p)).openPopup(),
-          geoMarks.features.push(lootBoxMarker);
+          markers.push(lootBoxMarker);
+      }
 
-          lootBoxMarker.addTo(this.map);
+      if (markers.length > 0) {
+        this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
       }
     }
 

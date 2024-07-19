@@ -825,21 +825,7 @@ export class MapComponent {
   }
 
   private addLootBoxes() {
-    let lootBoxType =
-    {
-      id: 2,
-      ableToSearch: false,
-      itemableToSearch: false,
-      name: this.translate.instant('destroyable-box'),
-      uniqueName: 'destroyable-box',
-      icon: new this.svgIcon({
-        iconSizeInit: [1, 1],
-        className: 'mark-container stalker-mark',
-        animate: !1,
-        iconUrl: '/assets/images/svg/marks/items.svg',
-        iconAnchor: [0, 0],
-      }),
-    };
+    let lootBoxType = this.getLootBoxIcon();
 
     let markers: any[] = [];
     let index =0;
@@ -1358,50 +1344,8 @@ export class MapComponent {
   }
 
   private addStalkers() {
-    let stalkerIcon = {
-      name: this.translate.instant('stalkers-layer'),
-      uniqueName: 'stalkers',
-      cssClass: 'stalkers',
-      ableToSearch: true,
-      icon: new this.svgIcon({
-        iconSize: [4, 4],
-        className: 'mark-container stalker-mark-1.5',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/character.svg',
-        iconSizeInit: [1, 1],
-        iconAnchor: [0, 0],
-      }),
-    };
-
-    let stalkerIconDead = {
-      name: this.translate.instant('stalkers-layer'),
-      uniqueName: 'stalkers',
-      cssClass: 'stalkers',
-      ableToSearch: true,
-      icon: new this.svgIcon({
-        iconSize: [4, 4],
-        className: 'mark-container stalker-mark-1.5',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/character_dead.svg',
-        iconSizeInit: [1, 1],
-        iconAnchor: [0, 0],
-      }),
-    };
-
-    let stalkerIconQuestItem = {
-      name: this.translate.instant('stalkers-layer'),
-      uniqueName: 'stalkers',
-      cssClass: 'stalkers',
-      ableToSearch: true,
-      icon: new this.svgIcon({
-        iconSize: [4, 4],
-        className: 'mark-container stalker-mark-1.5',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/character_quest.svg',
-        iconSizeInit: [1, 1],
-        iconAnchor: [0, 0],
-      }),
-    };
+    let stalkerIcon, stalkerIconDead, stalkerIconQuestItem;
+    [stalkerIcon, stalkerIconDead, stalkerIconQuestItem]= this.getStalkersIcon();
 
     let markers: any[] = [];
 
@@ -2308,5 +2252,76 @@ export class MapComponent {
         }),
       },
     ];
+  }
+
+  public getLootBoxIcon(): any {
+    let icon = 
+    {
+      id: 2,
+      ableToSearch: false,
+      itemableToSearch: false,
+      name: this.translate.instant('destroyable-box'),
+      uniqueName: 'destroyable-box',
+      icon: new this.svgIcon({
+        iconSizeInit: [1, 1],
+        className: 'mark-container stalker-mark',
+        animate: !1,
+        iconUrl: '/assets/images/svg/marks/items.svg',
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    return icon;
+  }
+
+  
+
+  public getStalkersIcon(): any[] {
+    let stalkerIcon = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: new this.svgIcon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let stalkerIconDead = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: new this.svgIcon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character_dead.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let stalkerIconQuestItem = {
+      name: this.translate.instant('stalkers-layer'),
+      uniqueName: 'stalkers',
+      cssClass: 'stalkers',
+      ableToSearch: true,
+      icon: new this.svgIcon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-1.5',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/character_quest.svg',
+        iconSizeInit: [1, 1],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    return [stalkerIcon, stalkerIconDead, stalkerIconQuestItem];
   }
 }
