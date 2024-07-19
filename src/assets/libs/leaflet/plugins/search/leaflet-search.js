@@ -587,7 +587,6 @@
             for (let marker of Object.values(layer._layers)) {
                 self._searchInLayer(marker, retRecords, propName)
             }
-            console.log(retRecords);
         }
       }
     },
@@ -795,6 +794,10 @@
       }
     },
 
+    _handleUndergroundMark: function (loc, self) {
+
+    },
+
     _handleSubmit: function () { // button and tooltip click and enter submit
       this._hideAutoType()
 
@@ -812,12 +815,18 @@
           if (!loc) {
             this.showAlert()
           } else {
-            this.showLocation(loc, this._input.value)
-            this.fire('search:locationfound', {
-              latlng: loc,
-              text: this._input.value,
-              layer: loc.layer ? loc.layer : null
-            })
+            if (loc.layer.undergroundLocation) {
+              const self = this
+              this._handleUndergroundMark(loc, self);
+            }
+            else {
+              this.showLocation(loc, this._input.value)
+              this.fire('search:locationfound', {
+                latlng: loc,
+                text: this._input.value,
+                layer: loc.layer ? loc.layer : null
+              })
+            }
           }
         }
       }
