@@ -3566,6 +3566,33 @@
       "y": 49.034103,
       "z": 12.278325,
       "locationId": 16
+    },
+    {
+      "name": null,
+      "description": null,
+      "typeId": 102,
+      "x": -52.54904,
+      "y": -23.591593,
+      "z": -2.7384489,
+      "locationId": 18
+    },
+    {
+      "name": null,
+      "description": null,
+      "typeId": 102,
+      "x": -2.7330766,
+      "y": -9.765294,
+      "z": 16.091272,
+      "locationId": 18
+    },
+    {
+      "name": null,
+      "description": null,
+      "typeId": 102,
+      "x": -24.643318,
+      "y": -8.988091,
+      "z": 12.776839,
+      "locationId": 18
     }
   ],
   "stuffs": [
@@ -12661,6 +12688,35 @@
       "y": 23.802345,
       "z": -34.67447,
       "locationId": 17
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 4,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 7.280247,
+      "y": -22.621202,
+      "z": 7.6243596,
+      "locationId": 18
     }
   ],
   "lootBoxes": [
@@ -15773,6 +15829,216 @@
       "y": 6.7685933,
       "z": 8.904882,
       "locationId": 17
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 3
+        },
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 1
+        }
+      ],
+      "x": 1.6753294,
+      "y": -7.327457,
+      "z": -61.89038,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        },
+        {
+          "items": [],
+          "name": "big_box_dungeons",
+          "count": 1
+        }
+      ],
+      "x": -23.711689,
+      "y": -8.989729,
+      "z": 6.915073,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -8.5638895,
+      "y": -9.974054,
+      "z": 18.294348,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -9.42045,
+      "y": -9.05423,
+      "z": -22.5126,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -2.7279296,
+      "y": -9.287707,
+      "z": -49.000336,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        },
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 2
+        }
+      ],
+      "x": -25.746536,
+      "y": -22.933462,
+      "z": -14.118321,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 2
+        }
+      ],
+      "x": -56.61477,
+      "y": -21.550346,
+      "z": 17.612389,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_dungeons",
+          "count": 2
+        }
+      ],
+      "x": 10.249308,
+      "y": -21.90514,
+      "z": 51.628387,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_dungeons",
+          "count": 1
+        }
+      ],
+      "x": -24.70923,
+      "y": -17.43752,
+      "z": 53.958275,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": 6.307078,
+      "y": -21.905703,
+      "z": 39.861877,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 1
+        }
+      ],
+      "x": 14.833851,
+      "y": -7.633121,
+      "z": 24.481548,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 1
+        }
+      ],
+      "x": -7.469609,
+      "y": -8.173013,
+      "z": 37.823444,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 2
+        }
+      ],
+      "x": -36.680573,
+      "y": -23.51868,
+      "z": -21.093155,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -56.447315,
+      "y": -23.593798,
+      "z": -14.919933,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 1
+        }
+      ],
+      "x": -67.0581,
+      "y": -20.681602,
+      "z": 33.82994,
+      "locationId": 18
     }
   ],
   "traders": [
@@ -22533,6 +22799,19 @@
       "x2": 174,
       "y1": 794.63025,
       "y2": 793.0752
+    },
+    {
+      "id": 18,
+      "uniqueName": "l10u_bunker",
+      "isUnderground": true,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 588,
+      "x2": 590,
+      "y1": 1206.7183,
+      "y2": 1205.1632
     }
   ],
   "anomalyZones": [
@@ -29454,6 +29733,15 @@
       "locationId": 10
     },
     {
+      "destinationLocationId": 18,
+      "direction": null,
+      "locale": null,
+      "x": 147.62964,
+      "y": -9.269529,
+      "z": -32.658417,
+      "locationId": 11
+    },
+    {
       "destinationLocationId": 9,
       "direction": "level_changer_down",
       "locale": "to_military",
@@ -29551,6 +29839,15 @@
       "y": 39.93321,
       "z": -14.88694,
       "locationId": 17
+    },
+    {
+      "destinationLocationId": 11,
+      "direction": null,
+      "locale": null,
+      "x": -0.24346176,
+      "y": -7.45012,
+      "z": -88.20115,
+      "locationId": 18
     }
   ],
   "stalkers": [
