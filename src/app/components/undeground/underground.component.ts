@@ -14,6 +14,8 @@ import { LootBoxClusterComponent } from "../loot-box-cluster/loot-box-cluster.co
 import { LootBox } from "../../models/loot-box/loot-box-section.model";
 import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
 import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
+import { MarkerToSearch } from "../../models/marker-to-search.model";
+import { MapComponent } from "../map/map.component";
 
 declare const L: any;
 declare var markWidthUnderground: number;
@@ -36,12 +38,16 @@ export class UndergroundComponent {
     @Input() public game: string;
     @Input() public mapConfig: MapConfig;
     @Input() public lootBoxConfig: LootBoxConfig;
+    @Input() public markerToSearch: MarkerToSearch;
+    @Input() public mapComponent: MapComponent;
 
     private map: any;
     private canvasLayer: any;
 
+    private layers: any[] = [];
     private xShift: number = 0;
     private zShift: number = 0;
+    private canvasRenderer: any;
 
     public undergroundConfig: UndergroundLevelsConfig;
     public selectedLevel: string;
@@ -65,11 +71,11 @@ export class UndergroundComponent {
     }
 
     private async ngOnInit(): Promise<void> {
-        console.log(this.location)
-
         let minZoom = 1;
         let maxZoom = 3;
         let zoom = 1.5;
+
+        this.canvasRenderer = L.canvas();
 
         switch (this.location.uniqueName) {
           case "l03u_agr_underground": {
@@ -161,6 +167,71 @@ export class UndergroundComponent {
         this.addLootBoxes();
 
         this.addStalkers();
+
+        //let layerControl = L.control.layers(null, this.layers).addTo(this.map);
+
+        let layersToHide = [];
+
+        if (
+            this.mapConfig.markersConfig != null &&
+            this.mapConfig.markersConfig.length > 0 &&
+            this.layers != null) {
+            let allLayers = Object.values(this.layers);
+            let newLayers: any = {};
+            for (let config of this.mapConfig.markersConfig) {
+                if (allLayers.some((y) => y.name == config.uniqueName)) {
+                    let currentLayer = allLayers.filter(
+                            (D) => D.name == config.uniqueName)[0];
+                    newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
+
+                    if (!config.isShow) {
+                        layersToHide.push(currentLayer);
+                    }
+                    else {
+                      currentLayer.addTo(this.map);
+                    }
+                }
+            }
+
+            this.layers = newLayers;
+        }
+
+        let layerControl = L.control.layers(null, this.layers)
+        layerControl.isUnderground = true;
+        layerControl.searchName = "underground";
+        layerControl.addTo(this.map);
+
+        if (this.markerToSearch) {
+          let layer = Object.values(this.layers).find(x => x.name == this.markerToSearch.type);
+
+          if (layer) {
+            console.log(layer)
+            console.log(this.markerToSearch)
+            let sLat = this.markerToSearch.lat + this.zShift;
+            let sLng = this.markerToSearch.lng + this.xShift;
+
+            for (let marker of Object.values(layer._layers) as any[]) {
+              if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
+                console.log(marker);
+
+                this.fireSearchedMarker(marker);
+
+                break;
+              }
+            }
+          }
+        }
+    }
+
+    private fireSearchedMarker(marker: any): void {
+      setTimeout(() => {
+          if (this.container == null) {
+              this.fireSearchedMarker(marker);
+          }
+          else {
+            marker.openPopup();
+          }
+      }, 250);
     }
 
     private addLocation() {
@@ -184,135 +255,23 @@ export class UndergroundComponent {
     }
 
     private addMarks() {
-      let markTypes = [
-        {
-          id: 0,
-          ableToSearch: !0,
-          name: 'none',
-        },
-        {
-          id: 1,
-          ableToSearch: !0,
-          name: this.translate.instant('sub-location'),
-          uniqueName: 'sub-location',
-          markName: 'sub-location',
-          icon: L.icon({
-            iconSizeInit: [4, 4],
-            className: 'mark-container stalker-mark-4 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/sub-location.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 100,
-          name: this.translate.instant('acidic'),
-          uniqueName: 'acidic',
-          markName: 'acidic',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/chemical.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 101,
-          name: this.translate.instant('psychic'),
-          uniqueName: 'psychic',
-          markName: 'psychic',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/psi.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 102,
-          name: this.translate.instant('radioactive'),
-          uniqueName: 'radioactive',
-          markName: 'st_name_radioactive_contamination',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/radiation.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 103,
-          name: this.translate.instant('thermal'),
-          uniqueName: 'thermal',
-          markName: 'thermal_zone',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/fire.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 104,
-          name: this.translate.instant('electro'),
-          uniqueName: 'electro',
-          markName: 'electro_zone',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/electro.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 200,
-          name: this.translate.instant('teleport'),
-          uniqueName: 'teleport',
-          markName: 'st_name_teleport',
-          icon: L.icon({
-            iconSizeInit: [2, 2],
-            className: 'mark-container stalker-mark-2 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/portal.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-        {
-          id: 201,
-          name: this.translate.instant('mines'),
-          uniqueName: 'mines',
-          markName: 'mines',
-          icon: L.icon({
-            iconSizeInit: [1.5, 1.5],
-            className: 'mark-container stalker-mark-1.5 underground',
-            animate: !1,
-            iconUrl: '/assets/images/svg/marks/mines.svg',
-            iconAnchor: [0, 0],
-          }),
-        },
-      ];
+      let markTypes = this.mapComponent.getMarkTypes();
 
       this.gamedata.marks = this.gamedata.marks.sort(
         (c: { typeId: number }, l: { typeId: number }) => c.typeId - l.typeId
       );
       for (let markType of markTypes) {
         let marks = this.gamedata.marks.filter(
-          (u: { typeId: number }) => u.typeId == markType.id
+          (u: any) => u.locationId == this.location.id && u.typeId == markType.id
         );
 
         if (marks.length > 0) {
-          let geoMarks: any = {};
-          geoMarks.type = 'FeatureCollection';
-          geoMarks.features = [];
+          let markers: any[] = [];
 
           for (let mark of marks.filter(x => x.locationId == this.location.id)) {
-            let marker = L.marker([mark.z + this.zShift, mark.x + this.xShift], {
+            let marker = new this.mapComponent.svgMarker([mark.z + this.zShift, mark.x + this.xShift], {
               icon: markType.icon,
+              renderer: this.canvasRenderer
             });
 
             marker.properties = {};
@@ -351,8 +310,6 @@ export class UndergroundComponent {
               marker.properties.locationUniqueName = this.location.uniqueName;
             }
 
-            marker.addTo(this.map);
-
             marker.bindTooltip(
               (marker: any) => this.translate.instant(marker.properties.name),
               {
@@ -361,8 +318,10 @@ export class UndergroundComponent {
                 offset: [0, 50],
               }
             );
-            geoMarks.features.push(marker);
+            markers.push(marker);
           }
+
+          this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
 
           //this.addToCanvas(geoMarks, markType);
         }
@@ -370,50 +329,7 @@ export class UndergroundComponent {
     }
 
     private addStuffs() {
-        let stuffTypes = [
-          {
-            id: 0,
-            ableToSearch: !0,
-            itemableToSearch: !0,
-            name: this.translate.instant('stash'),
-            uniqueName: 'stash',
-            icon: L.icon({
-              iconSizeInit: [1, 1],
-              className: 'mark-container stalker-mark',
-              animate: !1,
-              iconUrl: '/assets/images/svg/marks/stash.svg',
-              iconAnchor: [0, 0],
-            }),
-          },
-          {
-            id: 1,
-            ableToSearch: !0,
-            itemableToSearch: !0,
-            name: this.translate.instant('quest'),
-            uniqueName: 'quest',
-            icon: L.icon({
-              iconSizeInit: [1, 1],
-              className: 'mark-container stalker-mark',
-              animate: !1,
-              iconUrl: '/assets/images/svg/marks/quest-item.svg',
-              iconAnchor: [0, 0],
-            }),
-          },
-          {
-            id: 3,
-            ableToSearch: !0,
-            itemableToSearch: !0,
-            name: this.translate.instant('stuff'),
-            uniqueName: 'stuff',
-            icon: L.icon({
-              iconSizeInit: [1, 1],
-              className: 'mark-container stalker-mark',
-              animate: !1,
-              iconUrl: '/assets/images/svg/marks/stuff.svg',
-              iconAnchor: [0, 0],
-            }),
-          },
-        ];
+        let stuffTypes = this.mapComponent.getStuffTypes();
 
         this.gamedata.stuffs = this.gamedata.stuffs.sort(
           (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
@@ -429,9 +345,7 @@ export class UndergroundComponent {
           );
 
           if (stuffsAtLocation.length > 0) {
-            let geoMarks: any = {};
-            geoMarks.type = 'FeatureCollection';
-            geoMarks.features = [];
+            let markers: any[] = [];
 
             for (let stuffModel of stuffsAtLocation) {
               let stuff = L.marker([stuffModel.z + this.zShift, stuffModel.x + this.xShift], {
@@ -472,22 +386,7 @@ export class UndergroundComponent {
                   }
                 }
 
-                /*this.createProperty(
-                  stuff.feature.properties,
-                  'search',
-                  localesToFind,
-                  this.translate
-                );*/
-
-                stuff.addTo(this.map);
-
-                /*if (stuff.properties.stuff.name == 'st_monolith_stuff_title') {
-                  console.log(stuff.feature.properties.search);
-                }*/
-
-                /*stuff.properties.locationUniqueName = location.uniqueName;
-                stuff.properties.locationName = location.name;
-                stuff.properties.name = stuff.properties.stuff.name;*/
+                //stuff.addTo(this.map);
               }
 
               stuff.bindTooltip((p: any) => this.createStuffTooltip(p), {
@@ -496,10 +395,10 @@ export class UndergroundComponent {
                 offset: new Point(0, 50),
               });
               stuff.bindPopup((p: any) => this.createStashPopup(p)),
-                geoMarks.features.push(stuff);
+              markers.push(stuff)
             }
 
-            //this.addToCanvas(geoMarks, markType);
+            this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
           }
         }
       }
@@ -773,6 +672,31 @@ export class UndergroundComponent {
       componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
 
       return componentRef.location.nativeElement;
+    }
+
+    private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
+      console.log(name, ableToSearch);
+      layer.ableToSearch = ableToSearch;
+      layer.isShowing = false;
+      layer.name = name;
+      layer.isUnderground = true;
+      this.layers[name] = layer;
+      let mapComponent = this;
+      let layers = mapComponent.layers;
+
+      layer.hide = (layer: { isShowing: boolean; markers: any }) => {
+        if (layer.isShowing) {
+          layer.isShowing = false;
+        }
+      };
+
+      layer.show = (layer: { isShowing: boolean; _layers: any }) => {
+        if (!layer.isShowing && Object.keys(layer._layers).length > 0) {
+          layer.isShowing = true;
+        }
+      };
+
+      layer.show(layer);
     }
 
     private async ngOnDestroy(): Promise<void> {
