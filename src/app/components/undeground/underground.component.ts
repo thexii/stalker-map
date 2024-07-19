@@ -16,6 +16,8 @@ import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
 import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
 import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
+import { AnomalySpawnSection } from "../../models/anomaly-zone";
+import { AnomalyZoneComponent } from "../anomaly-zone/anomaly-zone.component";
 
 declare const L: any;
 declare var markWidthUnderground: number;
@@ -190,6 +192,8 @@ export class UndergroundComponent {
         this.addStuffs();
 
         this.addLootBoxes();
+
+        this.addAnomalyZones();
 
         this.addStalkers();
 
@@ -546,6 +550,93 @@ export class UndergroundComponent {
       }
     }
 
+    private addAnomalyZones(): void {
+      let anomalyZoneIcon, anomalyZoneNoArtIcon;
+      [anomalyZoneIcon, anomalyZoneNoArtIcon] = this.mapComponent.getAnomaliesIcons();
+  
+      let anomalies: any[] = [];
+      let anomaliesNoArt: any[] = [];
+      let artefactWays: any[] = [];
+  
+      for (let zone of this.gamedata.anomalyZones.filter(x => x.locationId == this.location.id)) {
+  
+        const defaultType: string = 'anomaly-zone';
+  
+        let canvasMarker;
+  
+        if (
+          zone.anomaliySpawnSections != null &&
+          zone.anomaliySpawnSections.length > 0
+        ) {
+          canvasMarker = new this.mapComponent.svgMarker([zone.z + this.zShift, zone.x + this.xShift], {
+            icon: anomalyZoneIcon.icon,
+            renderer: this.canvasRenderer
+          });
+        } else {
+          canvasMarker = new this.mapComponent.svgMarker([zone.z + this.zShift, zone.x + this.xShift], {
+            icon: anomalyZoneNoArtIcon.icon,
+            renderer: this.canvasRenderer
+          });
+        }
+  
+        canvasMarker.properties = {};
+        canvasMarker.properties.zoneModel = zone;
+  
+        if (
+          zone.anomaliySpawnSections != null &&
+          zone.anomaliySpawnSections.length > 0
+        ) {
+          canvasMarker.properties.anomaliySpawnSections =
+            zone.anomaliySpawnSections;
+          canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
+          canvasMarker.properties.ableToSearch = true;
+          canvasMarker.properties.typeUniqueName = defaultType;
+          canvasMarker.properties.name = zone.name ? zone.name : defaultType;
+  
+          anomalies.push(canvasMarker);
+
+          if (location) {
+            canvasMarker.properties.locationUniqueName = this.location.uniqueName;
+            canvasMarker.properties.locationName = this.location.uniqueName;
+          }
+        } else {
+          anomaliesNoArt.push(canvasMarker);
+          canvasMarker.properties.ableToSearch = false;
+          canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
+        }
+  
+        canvasMarker.properties.zoneModel.name = canvasMarker.properties.name;
+  
+        canvasMarker.bindTooltip(
+          (zone: any) => {
+            return this.createAnomalyZoneTooltip(zone);
+          },
+          { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
+        );
+        canvasMarker
+          .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
+            maxWidth: 400,
+          })
+          .openPopup();
+      }
+  
+      try {
+        if (anomalies.length > 0) {
+          this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
+        }
+  
+        if (anomaliesNoArt.length > 0) {
+          this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
+        }
+  
+        if (artefactWays.length > 0) {
+            this.addLayerToMap(L.layerGroup(artefactWays), 'artefact-ways');
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
     private createProperty(
       object: any,
       propertyName: string,
@@ -635,6 +726,34 @@ export class UndergroundComponent {
       componentRef.instance.lootBoxConfigs = this.lootBoxConfig.boxes;
       componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
 
+      return componentRef.location.nativeElement;
+    }
+
+    private createAnomalyZoneTooltip(zone: {
+      properties: { name: any; description: any };
+      description: any;
+    }) {
+      let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(zone.properties.name)}</p></div>`;
+      if (zone.description) {
+        html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
+      }
+  
+      return html;
+    }
+  
+    private createeAnomalyZonePopup(zone: any) {
+      zone.getPopup().on('remove', function () {
+        zone.getPopup().off('remove');
+        componentRef.destroy();
+      });
+  
+      const factory = this.resolver.resolveComponentFactory(AnomalyZoneComponent);
+  
+      const componentRef = this.container.createComponent(factory);
+      componentRef.instance.anomalZone = zone.properties.zoneModel;
+      componentRef.instance.game = this.game;
+      componentRef.instance.allItems = this.items;
+  
       return componentRef.location.nativeElement;
     }
 
