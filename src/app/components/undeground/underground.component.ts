@@ -74,6 +74,7 @@ export class UndergroundComponent {
     }
 
     private async ngOnInit(): Promise<void> {
+        console.log(this.location)
         let minZoom = 1;
         let maxZoom = 3;
         let zoom = 1.5;
@@ -137,6 +138,16 @@ export class UndergroundComponent {
             this.zShift = -44.509;
             break;
           }
+          case "l10u_bunker": {
+            this.xShift = 83;
+            this.zShift = 99.25;
+            break;
+          }
+          case "l12u_control_monolith": {
+            this.xShift = 50;
+            this.zShift = 49.625;
+            break;
+          }
         }
 
         this.map = L.map('underground-map', {
@@ -196,6 +207,8 @@ export class UndergroundComponent {
         this.addAnomalyZones();
 
         this.addStalkers();
+
+        this.addLevelChangers();
 
         let layersToHide = [];
 
@@ -548,6 +561,64 @@ export class UndergroundComponent {
       if (markers.length > 0) {
         this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
       }
+    }
+
+    private addLevelChangers() {
+      let levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection: any[];
+      [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection] = this.mapComponent.getLevelChangerIcons();
+  
+      let markers: any[] = [];
+  
+      for (let levelChanger of this.gamedata.levelChangers.filter(x => x.locationId == this.location.id)) {
+        let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
+  
+        let markerIcon = null;
+  
+        if (destLocation.isUnderground) {
+          markerIcon = undergroundDoorIcon;
+        }
+        else if (levelChanger.direction == "level_changer_rostok") {
+          markerIcon = rostokIcon;
+        }
+        else {
+          markerIcon = levelChangerDirection.find(x => x.name == levelChanger.direction)?.icon;
+  
+          if (!markerIcon) {
+              markerIcon = levelChangerIcon.icon;
+          }
+        }
+  
+        let canvasMarker = new this.mapComponent.svgMarker([levelChanger.z + this.zShift, levelChanger.x + this.xShift], {
+          icon: markerIcon,
+          renderer: this.canvasRenderer
+        });
+  
+        canvasMarker.properties = {};
+        canvasMarker.properties.levelChanger = levelChanger;
+        canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
+        canvasMarker.properties.typeUniqueName = 'level-changers';
+  
+        markers.push(canvasMarker);
+        canvasMarker.properties.ableToSearch = false;
+        canvasMarker.feature = {};
+        canvasMarker.feature.properties = {};
+        canvasMarker.isUnderground = true;
+  
+        canvasMarker.properties.destination = destLocation.uniqueName;
+  
+        canvasMarker.bindTooltip(
+          (marker: any) =>
+            this.translate.instant(marker.properties.name),
+          {
+            sticky: true,
+            className: 'map-tooltip',
+            offset: [0, 50],
+          }
+        );
+      }
+  
+      console.log(markers)
+      this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
     }
 
     private addAnomalyZones(): void {
