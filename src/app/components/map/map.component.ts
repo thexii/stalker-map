@@ -1782,67 +1782,8 @@ export class MapComponent {
   }
 
   private addLevelChangers() {
-    let levelChangerIcon = {
-      name: this.translate.instant('level-changers'),
-      uniqueName: 'level-changers',
-      cssClass: 'level-changers',
-      ableToSearch: true,
-      icon: new this.svgIcon({
-        iconSize: [4, 4],
-        className: 'mark-container stalker-mark-2',
-        animate: false,
-        iconUrl: '/assets/images/svg/marks/level_changers/level_changer_up.svg',
-        iconSizeInit: [2, 2],
-        iconAnchor: [0, 0],
-      }),
-    };
-    let undergroundDoorIcon = new this.svgIcon({
-      iconSize: [4, 4],
-      className: 'mark-container stalker-mark-2',
-      animate: false,
-      iconUrl: '/assets/images/svg/marks/level_changers/underground_2.svg',
-      iconSizeInit: [1.5, 1.5],
-      iconAnchor: [0, 0],
-    });
-
-    let rostokIcon = new this.svgIcon({
-      iconSize: [4, 4],
-      className: 'mark-container stalker-mark-2',
-      animate: false,
-      iconUrl: '/assets/images/svg/marks/level_changers/level_changer_rostok.svg',
-      iconSizeInit: [4, 2],
-      iconAnchor: [0, 0],
-    });
-
-    let levelChangerDirection: {name: string, icon: any}[] = [];
-
-    let directions: string[] =
-    [
-        "level_changer_down",
-        "level_changer_down_left",
-        "level_changer_down_right",
-        "level_changer_left",
-        "level_changer_left_up",
-        "level_changer_right",
-        "level_changer_up",
-        "level_changer_up_right",
-    ];
-
-    for (let src of directions) {
-        levelChangerDirection.push(
-            {
-                name: src,
-                icon: new this.svgIcon({
-                    iconSize: [4, 4],
-                    className: 'mark-container stalker-mark-2',
-                    animate: false,
-                    iconUrl: `/assets/images/svg/marks/level_changers/${src}.svg`,
-                    iconSizeInit: [2, 2],
-                    iconAnchor: [0, 0],
-                  })
-            }
-        )
-    }
+    let levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection: any[];
+    [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection] = this.getLevelChangerIcons();
 
     let markers: any[] = [];
 
@@ -2364,5 +2305,71 @@ export class MapComponent {
     };
 
     return [anomalyZoneIcon, anomalyZoneNoArtIcon];
+  }
+
+  public getLevelChangerIcons(): any[] {
+    let levelChangerIcon = {
+      name: this.translate.instant('level-changers'),
+      uniqueName: 'level-changers',
+      cssClass: 'level-changers',
+      ableToSearch: true,
+      icon: new this.svgIcon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/level_changers/level_changer_up.svg',
+        iconSizeInit: [2, 2],
+        iconAnchor: [0, 0],
+      }),
+    };
+    let undergroundDoorIcon = new this.svgIcon({
+      iconSize: [4, 4],
+      className: 'mark-container stalker-mark-2',
+      animate: false,
+      iconUrl: '/assets/images/svg/marks/level_changers/underground_2.svg',
+      iconSizeInit: [1.5, 1.5],
+      iconAnchor: [0, 0],
+    });
+
+    let rostokIcon = new this.svgIcon({
+      iconSize: [4, 4],
+      className: 'mark-container stalker-mark-2',
+      animate: false,
+      iconUrl: '/assets/images/svg/marks/level_changers/level_changer_rostok.svg',
+      iconSizeInit: [4, 2],
+      iconAnchor: [0, 0],
+    });
+
+    let levelChangerDirection: {name: string, icon: any}[] = [];
+
+    let directions: string[] =
+    [
+        "level_changer_down",
+        "level_changer_down_left",
+        "level_changer_down_right",
+        "level_changer_left",
+        "level_changer_left_up",
+        "level_changer_right",
+        "level_changer_up",
+        "level_changer_up_right",
+    ];
+
+    for (let src of directions) {
+        levelChangerDirection.push(
+            {
+                name: src,
+                icon: new this.svgIcon({
+                    iconSize: [4, 4],
+                    className: 'mark-container stalker-mark-2',
+                    animate: false,
+                    iconUrl: `/assets/images/svg/marks/level_changers/${src}.svg`,
+                    iconSizeInit: [2, 2],
+                    iconAnchor: [0, 0],
+                  })
+            }
+        )
+    }
+
+    return [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection];
   }
 }
