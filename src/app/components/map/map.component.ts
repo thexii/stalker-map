@@ -29,6 +29,8 @@ import { TraderSectionsConfig } from '../../models/trader/trader-sections-config
 import { SmartTerrain } from '../../models/smart-terrain.model';
 import { UndergroundComponent } from '../undeground/underground.component';
 import { MarkerToSearch } from '../../models/marker-to-search.model';
+import { Mechanic } from '../../models/mechanic.model';
+import { MechanicComponent } from '../mechanic/mechanic.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -76,6 +78,8 @@ export class MapComponent {
   private mapInitialized: boolean = false;
   private markersToSearch: any[] = [];
   public undergroundMarkerToSearch: any[] = [];
+
+  private openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
 
   constructor(
     private translate: TranslateService,
@@ -291,8 +295,12 @@ export class MapComponent {
         this.addTraders();
     }
 
-    if (this.gamedata.traders && this.gamedata.traders.length > 0) {
+    if (this.gamedata.stalkers && this.gamedata.stalkers.length > 0) {
         this.addStalkers();
+    }
+
+    if (this.gamedata.mechanics && this.gamedata.mechanics.length > 0) {
+        this.addMechanics();
     }
 
     if (this.gamedata.smartTerrains && this.gamedata.smartTerrains.length > 0) {
@@ -400,7 +408,29 @@ export class MapComponent {
         self._moveToLocation(levelChanger._latlng, '', self._map)
         //self.showLocation(loc, self._input.value)
         levelChanger.properties.markerToSearch = loc;
-        levelChanger.openPopup();
+        let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+
+        if (this.openedUndergroundPopup) {
+          if (this.openedUndergroundPopup.component.location.id == destinationLocation.id) {
+            if (levelChanger.properties.markerToSearch) {
+              this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
+              this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
+              this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
+              this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
+              levelChanger.properties.markerToSearch = undefined;
+              this.openedUndergroundPopup.component.goToMarker();
+              return;
+            }
+          }
+          else {
+            this.openedUndergroundPopup.levelChanger.closePopup();
+
+            levelChanger.openPopup();
+          }
+        }
+        else {
+          levelChanger.openPopup();
+        }
         /*self.fire('search:locationfound', {
           latlng: levelChanger._latlng,
           text: self._input.value,
@@ -1344,14 +1374,14 @@ export class MapComponent {
 
             canvasMarker.feature = {};
             canvasMarker.feature.properties = {};
-      
+
             this.createProperty(
               canvasMarker.feature.properties,
               'search',
               propertiesToSearch,
               this.translate
             );
-            
+
             canvasMarker.doNotRender = true;
             canvasMarker.undergroundLocation = location;
 
@@ -1425,6 +1455,83 @@ export class MapComponent {
 
 
     this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName, stalkerIcon.ableToSearch);
+  }
+
+  private addMechanics() {
+    let mechanicIcon = {
+      name: this.translate.instant('mechanic'),
+      uniqueName: 'mechanics',
+      cssClass: 'mechanic',
+      ableToSearch: true,
+      icon: new this.svgIcon({
+        iconSize: [4, 4],
+        className: 'mark-container stalker-mark-2',
+        animate: false,
+        iconUrl: '/assets/images/svg/marks/tech.svg',
+        iconSizeInit: [1.5, 1.5],
+        iconAnchor: [0, 0],
+      }),
+    };
+
+    let markers: any[] = [];
+    let index = 0;
+
+    for (let mechanic of this.gamedata.mechanics) {
+      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mechanic.locationId) as Location;
+
+      let markerX: number = 0.5 - location.xShift + mechanic.x / location.widthInMeters;
+      let markerY: number = 0.5 - location.yShift + mechanic.z / location.heightInMeters;
+
+      let dx: number = location.x2 - location.x1;
+      let dy: number = location.y1 - location.y2;
+
+      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        icon: mechanicIcon.icon,
+        renderer: this.canvasRenderer
+      });
+
+      canvasMarker.properties = {};
+      canvasMarker.properties.mechanic = mechanic;
+      canvasMarker.properties.name = mechanic.profile.name;
+      canvasMarker.properties.typeUniqueName = mechanicIcon.uniqueName;
+
+      markers.push(canvasMarker);
+      canvasMarker.properties.ableToSearch = false;
+      canvasMarker.feature = {};
+      canvasMarker.feature.properties = {};
+
+      let propertiesToSearch: string[] = [mechanic.profile.name];
+
+      this.createProperty(
+        canvasMarker.feature.properties,
+        'search',
+        propertiesToSearch,
+        this.translate
+      );
+
+      canvasMarker.properties.locationUniqueName = location.uniqueName;
+
+      canvasMarker.bindTooltip(
+        (marker: any) =>
+          this.translate.instant(marker.properties.mechanic.profile.name),
+        {
+          sticky: true,
+          className: 'map-tooltip',
+          offset: [0, 50],
+        }
+      );
+
+      /*canvasMarker
+        .bindPopup(
+          (stalker: any) =>
+            this.createMechanicPopup(stalker),
+          { maxWidth: 2000 }
+        )
+        .openPopup();*/
+    }
+
+
+    this.addLayerToMap(L.layerGroup(markers), mechanicIcon.uniqueName, mechanicIcon.ableToSearch);
   }
 
   private addSmartTerrains(isClearSky: boolean = false) {
@@ -1682,7 +1789,7 @@ export class MapComponent {
 
       canvasMarker.bindTooltip(
         (marker: any) =>
-          `${this.translate.instant(smart.localeName)} (${smart.name})`,
+          `${this.translate.instant(smart.localeName)}`,
         {
           sticky: true,
           className: 'map-tooltip',
@@ -1909,10 +2016,12 @@ export class MapComponent {
         }
     }
 
-    newUndergroundLayer = L.layerGroup(undergroundMarkers);
-    newUndergroundLayer.ableToSearch = true;
-    newUndergroundLayer.isShowing = true;
-    newLayers['underground'] = newUndergroundLayer;
+    if (Object.values(layers).some((x: any) => x.name == "level-changers" && x.isShowing)) {
+      newUndergroundLayer = L.layerGroup(undergroundMarkers);
+      newUndergroundLayer.ableToSearch = true;
+      newUndergroundLayer.isShowing = true;
+      newLayers['underground'] = newUndergroundLayer;
+    }
     return L.featureGroup(Object.values(newLayers));
   }
 
@@ -1968,6 +2077,27 @@ export class MapComponent {
     return componentRef.location.nativeElement;
   }
 
+  private createMechanicPopup(mechanicMarker: any) {
+    let mechanic: Mechanic = mechanicMarker.properties.mechanic;
+
+    mechanicMarker.getPopup().on('remove', function () {
+      mechanicMarker.getPopup().off('remove');
+      componentRef.destroy();
+    });
+
+    const factory = this.resolver.resolveComponentFactory(MechanicComponent);
+
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.mechanic = mechanic;
+    componentRef.instance.game = this.game;
+    componentRef.instance.allItems = this.items;
+    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+    componentRef.instance.relationType = this.mapConfig.traderRelationType;
+    componentRef.instance.actor = this.mapConfig.actor;
+
+    return componentRef.location.nativeElement;
+  }
+
   private createStalkerPopup(stalkerMarker: any) {
     stalkerMarker.getPopup().on('remove', function () {
       stalkerMarker.getPopup().off('remove');
@@ -1986,8 +2116,29 @@ export class MapComponent {
   }
 
   private createUndergroundMapPopup(levelChanger: any) {
+    let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+
+    if (this.openedUndergroundPopup) {
+      if (this.openedUndergroundPopup.component.location.id == destinationLocation.id) {
+        if (levelChanger.properties.markerToSearch) {
+          this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
+          this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
+          this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
+          this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
+          levelChanger.properties.markerToSearch = undefined;
+          this.openedUndergroundPopup.component.goToMarker();
+          return;
+        }
+      }
+      else {
+        this.openedUndergroundPopup.levelChanger.fire('remove');
+      }
+    }
+
+    let mapComponent = this;
     levelChanger.getPopup().on('remove', function () {
       levelChanger.getPopup().off('remove');
+      componentRef.instance.mapComponent.openedUndergroundPopup = null as unknown as {component: UndergroundComponent, levelChanger: any};
       componentRef.destroy();
     });
 
@@ -1995,7 +2146,7 @@ export class MapComponent {
 
     const componentRef = this.container.createComponent(factory);
     componentRef.instance.gamedata = this.gamedata;
-    componentRef.instance.location = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+    componentRef.instance.location = destinationLocation;
     componentRef.instance.items = this.items;
     componentRef.instance.game = this.game;
     componentRef.instance.mapConfig = this.mapConfig;
@@ -2003,14 +2154,14 @@ export class MapComponent {
     componentRef.instance.mapComponent = this;
 
     if (levelChanger.properties.markerToSearch) {
-      console.log(levelChanger.properties.markerToSearch)
       componentRef.instance.markerToSearch = new MarkerToSearch();
       componentRef.instance.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
       componentRef.instance.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
       componentRef.instance.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
-      console.log(componentRef.instance.markerToSearch)
       levelChanger.properties.markerToSearch = undefined;
     }
+
+    this.openedUndergroundPopup = {component: componentRef.instance, levelChanger: levelChanger};
 
     return componentRef.location.nativeElement;
   }
@@ -2204,7 +2355,7 @@ export class MapComponent {
   }
 
   public getLootBoxIcon(): any {
-    let icon = 
+    let icon =
     {
       id: 2,
       ableToSearch: false,
@@ -2223,7 +2374,7 @@ export class MapComponent {
     return icon;
   }
 
-  
+
 
   public getStalkersIcon(): any[] {
     let stalkerIcon = {
@@ -2275,7 +2426,7 @@ export class MapComponent {
   }
 
   public getAnomaliesIcons(): any[] {
-    
+
     let anomalyZoneIcon = {
       name: this.translate.instant('anomaly-zone'),
       uniqueName: 'anomaly-zone',

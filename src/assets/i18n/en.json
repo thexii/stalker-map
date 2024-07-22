@@ -225,5 +225,7 @@
   "is_faction_resource_greater": "Faction has enough resources",
   "smart-terrains": "Camps",
   "smart-paths": "Stalker paths",
-  "artefact-ways": "Artefact ways"
+  "artefact-ways": "Artefact ways",
+  "level-changers": "Level changers",
+  "mechanics": "Mechanics"
 }

@@ -73,19 +73,40 @@ export class UndergroundComponent {
       this.addLocation();
     }
 
+    public goToMarker(): void {
+      let layer = Object.values(this.layers).find(x => x.name == this.markerToSearch.type);
+
+      if (layer) {
+        console.log(layer)
+        console.log(this.markerToSearch)
+        let sLat = this.markerToSearch.lat + this.zShift;
+        let sLng = this.markerToSearch.lng + this.xShift;
+
+        for (let marker of Object.values(layer._layers) as any[]) {
+          if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
+            console.log(marker);
+
+            this.fireSearchedMarker(marker);
+
+            break;
+          }
+        }
+      }
+    }
+
     private async ngOnInit(): Promise<void> {
         console.log(this.location)
         let minZoom = 1;
         let maxZoom = 3;
         let zoom = 1.5;
 
-        let canvasRenderer = 
+        let canvasRenderer =
         L.Canvas.extend({
           _updateSvgMarker: function (layer: any) {
             if (!this._drawing || layer._empty() || layer.doNotRender) {
               return;
             }
-    
+
             try {
               this._ctx.drawImage(
                 layer.options.icon._image,
@@ -242,24 +263,7 @@ export class UndergroundComponent {
         layerControl.addTo(this.map);
 
         if (this.markerToSearch) {
-          let layer = Object.values(this.layers).find(x => x.name == this.markerToSearch.type);
-
-          if (layer) {
-            console.log(layer)
-            console.log(this.markerToSearch)
-            let sLat = this.markerToSearch.lat + this.zShift;
-            let sLng = this.markerToSearch.lng + this.xShift;
-
-            for (let marker of Object.values(layer._layers) as any[]) {
-              if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
-                console.log(marker);
-
-                this.fireSearchedMarker(marker);
-
-                break;
-              }
-            }
-          }
+          this.goToMarker();
         }
     }
 
@@ -566,14 +570,14 @@ export class UndergroundComponent {
     private addLevelChangers() {
       let levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection: any[];
       [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection] = this.mapComponent.getLevelChangerIcons();
-  
+
       let markers: any[] = [];
-  
+
       for (let levelChanger of this.gamedata.levelChangers.filter(x => x.locationId == this.location.id)) {
         let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
-  
+
         let markerIcon = null;
-  
+
         if (destLocation.isUnderground) {
           markerIcon = undergroundDoorIcon;
         }
@@ -582,30 +586,30 @@ export class UndergroundComponent {
         }
         else {
           markerIcon = levelChangerDirection.find(x => x.name == levelChanger.direction)?.icon;
-  
+
           if (!markerIcon) {
               markerIcon = levelChangerIcon.icon;
           }
         }
-  
+
         let canvasMarker = new this.mapComponent.svgMarker([levelChanger.z + this.zShift, levelChanger.x + this.xShift], {
           icon: markerIcon,
           renderer: this.canvasRenderer
         });
-  
+
         canvasMarker.properties = {};
         canvasMarker.properties.levelChanger = levelChanger;
         canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
         canvasMarker.properties.typeUniqueName = 'level-changers';
-  
+
         markers.push(canvasMarker);
         canvasMarker.properties.ableToSearch = false;
         canvasMarker.feature = {};
         canvasMarker.feature.properties = {};
         canvasMarker.isUnderground = true;
-  
+
         canvasMarker.properties.destination = destLocation.uniqueName;
-  
+
         canvasMarker.bindTooltip(
           (marker: any) =>
             this.translate.instant(marker.properties.name),
@@ -616,7 +620,7 @@ export class UndergroundComponent {
           }
         );
       }
-  
+
       console.log(markers)
       this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
     }
@@ -624,17 +628,17 @@ export class UndergroundComponent {
     private addAnomalyZones(): void {
       let anomalyZoneIcon, anomalyZoneNoArtIcon;
       [anomalyZoneIcon, anomalyZoneNoArtIcon] = this.mapComponent.getAnomaliesIcons();
-  
+
       let anomalies: any[] = [];
       let anomaliesNoArt: any[] = [];
       let artefactWays: any[] = [];
-  
+
       for (let zone of this.gamedata.anomalyZones.filter(x => x.locationId == this.location.id)) {
-  
+
         const defaultType: string = 'anomaly-zone';
-  
+
         let canvasMarker;
-  
+
         if (
           zone.anomaliySpawnSections != null &&
           zone.anomaliySpawnSections.length > 0
@@ -649,10 +653,10 @@ export class UndergroundComponent {
             renderer: this.canvasRenderer
           });
         }
-  
+
         canvasMarker.properties = {};
         canvasMarker.properties.zoneModel = zone;
-  
+
         if (
           zone.anomaliySpawnSections != null &&
           zone.anomaliySpawnSections.length > 0
@@ -663,7 +667,7 @@ export class UndergroundComponent {
           canvasMarker.properties.ableToSearch = true;
           canvasMarker.properties.typeUniqueName = defaultType;
           canvasMarker.properties.name = zone.name ? zone.name : defaultType;
-  
+
           anomalies.push(canvasMarker);
 
           if (location) {
@@ -675,9 +679,9 @@ export class UndergroundComponent {
           canvasMarker.properties.ableToSearch = false;
           canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
         }
-  
+
         canvasMarker.properties.zoneModel.name = canvasMarker.properties.name;
-  
+
         canvasMarker.bindTooltip(
           (zone: any) => {
             return this.createAnomalyZoneTooltip(zone);
@@ -690,16 +694,16 @@ export class UndergroundComponent {
           })
           .openPopup();
       }
-  
+
       try {
         if (anomalies.length > 0) {
           this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
         }
-  
+
         if (anomaliesNoArt.length > 0) {
           this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
         }
-  
+
         if (artefactWays.length > 0) {
             this.addLayerToMap(L.layerGroup(artefactWays), 'artefact-ways');
         }
@@ -808,23 +812,23 @@ export class UndergroundComponent {
       if (zone.description) {
         html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
       }
-  
+
       return html;
     }
-  
+
     private createeAnomalyZonePopup(zone: any) {
       zone.getPopup().on('remove', function () {
         zone.getPopup().off('remove');
         componentRef.destroy();
       });
-  
+
       const factory = this.resolver.resolveComponentFactory(AnomalyZoneComponent);
-  
+
       const componentRef = this.container.createComponent(factory);
       componentRef.instance.anomalZone = zone.properties.zoneModel;
       componentRef.instance.game = this.game;
       componentRef.instance.allItems = this.items;
-  
+
       return componentRef.location.nativeElement;
     }
 

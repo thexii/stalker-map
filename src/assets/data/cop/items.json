@@ -22,7 +22,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -51,7 +55,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 317,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 302,
+    "upgr_icon_height": 130
   },
   {
     "id": 0,
@@ -76,7 +84,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 304,
+    "upgr_icon_y": 627,
+    "upgr_icon_width": 295,
+    "upgr_icon_height": 110
   },
   {
     "id": 0,
@@ -101,7 +113,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -126,7 +142,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 855,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 161,
+    "upgr_icon_height": 120
   },
   {
     "id": 0,
@@ -151,7 +171,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -176,7 +200,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 918,
+    "upgr_icon_y": 857,
+    "upgr_icon_width": 68,
+    "upgr_icon_height": 128
   },
   {
     "id": 0,
@@ -201,7 +229,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 300,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 258,
+    "upgr_icon_height": 138
   },
   {
     "id": 0,
@@ -226,7 +258,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 830,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 133,
+    "upgr_icon_height": 118
   },
   {
     "id": 0,
@@ -251,7 +287,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -276,7 +316,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -301,7 +345,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -326,7 +374,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -351,7 +403,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -376,7 +432,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -401,7 +461,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -426,7 +490,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -451,7 +519,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -476,7 +548,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -501,7 +577,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -526,7 +606,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -551,7 +635,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -576,7 +664,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -601,7 +693,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -626,7 +722,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -651,7 +751,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -676,7 +780,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -701,7 +809,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -726,7 +838,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -751,7 +867,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -776,7 +896,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -801,7 +925,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -826,7 +954,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -851,7 +983,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -876,7 +1012,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -901,7 +1041,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -926,7 +1070,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -951,7 +1099,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -976,7 +1128,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1001,7 +1157,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1026,7 +1186,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1051,7 +1215,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1076,7 +1244,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1101,7 +1273,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1126,7 +1302,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1151,7 +1331,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1176,7 +1360,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1201,7 +1389,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1226,7 +1418,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1251,7 +1447,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1276,7 +1476,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1301,7 +1505,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1326,7 +1534,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1351,7 +1563,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1376,7 +1592,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1401,7 +1621,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1426,7 +1650,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1451,7 +1679,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1476,7 +1708,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1501,7 +1737,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1526,7 +1766,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1551,7 +1795,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1576,7 +1824,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1601,7 +1853,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 924,
+    "upgr_icon_y": 384,
+    "upgr_icon_width": 60,
+    "upgr_icon_height": 132
   },
   {
     "id": 0,
@@ -1626,7 +1882,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1651,7 +1911,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1676,7 +1940,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 462,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 255,
+    "upgr_icon_height": 101
   },
   {
     "id": 0,
@@ -1701,7 +1969,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 600,
+    "upgr_icon_y": 614,
+    "upgr_icon_width": 192,
+    "upgr_icon_height": 122
   },
   {
     "id": 0,
@@ -1726,7 +1998,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 265,
+    "upgr_icon_height": 98
   },
   {
     "id": 0,
@@ -1751,7 +2027,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 569,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 249,
+    "upgr_icon_height": 117
   },
   {
     "id": 0,
@@ -1776,7 +2056,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 257,
+    "upgr_icon_height": 100
   },
   {
     "id": 0,
@@ -1801,7 +2085,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 268,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 192,
+    "upgr_icon_height": 123
   },
   {
     "id": 0,
@@ -1826,7 +2114,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 720,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 255,
+    "upgr_icon_height": 109
   },
   {
     "id": 0,
@@ -1851,7 +2143,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 794,
+    "upgr_icon_y": 614,
+    "upgr_icon_width": 203,
+    "upgr_icon_height": 132
   },
   {
     "id": 0,
@@ -1876,7 +2172,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 599,
+    "upgr_icon_y": 559,
+    "upgr_icon_width": 272,
+    "upgr_icon_height": 54
   },
   {
     "id": 0,
@@ -1901,7 +2201,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 9,
+    "upgr_icon_y": 815,
+    "upgr_icon_width": 286,
+    "upgr_icon_height": 95
   },
   {
     "id": 0,
@@ -1926,7 +2230,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 533,
+    "upgr_icon_width": 293,
+    "upgr_icon_height": 59
   },
   {
     "id": 0,
@@ -1951,7 +2259,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 475,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 57
   },
   {
     "id": 0,
@@ -1976,7 +2288,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 561,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 114
   },
   {
     "id": 0,
@@ -2001,7 +2317,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 591,
+    "upgr_icon_y": 748,
+    "upgr_icon_width": 291,
+    "upgr_icon_height": 115
   },
   {
     "id": 0,
@@ -2026,7 +2346,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 303,
+    "upgr_icon_y": 515,
+    "upgr_icon_width": 294,
+    "upgr_icon_height": 110
   },
   {
     "id": 0,
@@ -2051,7 +2375,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 297,
+    "upgr_icon_y": 840,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 98
   },
   {
     "id": 0,
@@ -2076,7 +2404,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 909,
+    "upgr_icon_width": 297,
+    "upgr_icon_height": 113
   },
   {
     "id": 0,
@@ -2101,7 +2433,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 598,
+    "upgr_icon_y": 476,
+    "upgr_icon_width": 296,
+    "upgr_icon_height": 81
   },
   {
     "id": 0,
@@ -2126,7 +2462,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 128,
+    "upgr_icon_width": 291,
+    "upgr_icon_height": 107
   },
   {
     "id": 0,
@@ -2151,7 +2491,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 297,
+    "upgr_icon_y": 739,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 99
   },
   {
     "id": 0,
@@ -2176,7 +2520,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 78
   },
   {
     "id": 0,
@@ -2201,7 +2549,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 594,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 294,
+    "upgr_icon_height": 80
   },
   {
     "id": 0,
@@ -2226,7 +2578,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 677,
+    "upgr_icon_width": 287,
+    "upgr_icon_height": 135
   },
   {
     "id": 0,
@@ -2251,7 +2607,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 596,
+    "upgr_icon_y": 864,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 141
   },
   {
     "id": 0,
@@ -2276,7 +2636,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 29,
+    "upgr_icon_y": 811,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 124
   },
   {
     "id": 0,
@@ -2301,7 +2665,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 275,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 120
   },
   {
     "id": 0,
@@ -2326,7 +2694,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 300,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 118
   },
   {
     "id": 0,
@@ -2351,7 +2723,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 593,
+    "upgr_icon_width": 294,
+    "upgr_icon_height": 83
   },
   {
     "id": 0,
@@ -2376,7 +2752,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2401,7 +2781,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2426,7 +2810,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2451,7 +2839,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2476,7 +2868,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2501,7 +2897,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2526,7 +2926,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2551,7 +2955,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2576,7 +2984,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2601,7 +3013,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2626,7 +3042,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2651,7 +3071,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2676,7 +3100,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 636,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 303,
+    "upgr_icon_height": 162
   },
   {
     "id": 0,
@@ -2701,7 +3129,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 318,
+    "upgr_icon_y": 163,
+    "upgr_icon_width": 303,
+    "upgr_icon_height": 126
   },
   {
     "id": 0,
@@ -2726,7 +3158,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 648,
+    "upgr_icon_y": 353,
+    "upgr_icon_width": 280,
+    "upgr_icon_height": 145
   },
   {
     "id": 0,
@@ -2751,7 +3187,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 317,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 302,
+    "upgr_icon_height": 130
   },
   {
     "id": 0,
@@ -2776,7 +3216,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 646,
+    "upgr_icon_y": 172,
+    "upgr_icon_width": 285,
+    "upgr_icon_height": 159
   },
   {
     "id": 0,
@@ -2801,7 +3245,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 334,
+    "upgr_icon_y": 450,
+    "upgr_icon_width": 303,
+    "upgr_icon_height": 159
   },
   {
     "id": 0,
@@ -2826,7 +3274,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 6,
+    "upgr_icon_y": 455,
+    "upgr_icon_width": 302,
+    "upgr_icon_height": 117
   },
   {
     "id": 0,
@@ -2851,7 +3303,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 317,
+    "upgr_icon_y": 308,
+    "upgr_icon_width": 303,
+    "upgr_icon_height": 127
   },
   {
     "id": 0,
@@ -2876,7 +3332,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 4,
+    "upgr_icon_y": 304,
+    "upgr_icon_width": 305,
+    "upgr_icon_height": 131
   },
   {
     "id": 0,
@@ -2901,7 +3361,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 161,
+    "upgr_icon_width": 302,
+    "upgr_icon_height": 130
   },
   {
     "id": 0,
@@ -2926,7 +3390,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 301,
+    "upgr_icon_height": 157
   },
   {
     "id": 0,
@@ -2951,7 +3419,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 20,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 106,
+    "upgr_icon_height": 149
   },
   {
     "id": 0,
@@ -2976,7 +3448,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 474,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 149,
+    "upgr_icon_height": 143
   },
   {
     "id": 0,
@@ -3001,7 +3477,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 639,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 119,
+    "upgr_icon_height": 148
   },
   {
     "id": 0,
@@ -3026,7 +3506,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 325,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 136,
+    "upgr_icon_height": 143
   },
   {
     "id": 0,
@@ -3051,7 +3535,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 150,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 162,
+    "upgr_icon_height": 143
   },
   {
     "id": 0,
@@ -3076,7 +3564,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3101,7 +3593,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3126,7 +3622,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3151,7 +3651,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 830,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 133,
+    "upgr_icon_height": 118
   },
   {
     "id": 0,
@@ -3176,7 +3680,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 598,
+    "upgr_icon_y": 476,
+    "upgr_icon_width": 296,
+    "upgr_icon_height": 81
   },
   {
     "id": 0,
@@ -3201,7 +3709,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 593,
+    "upgr_icon_width": 294,
+    "upgr_icon_height": 83
   },
   {
     "id": 0,
@@ -3226,7 +3738,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 533,
+    "upgr_icon_width": 293,
+    "upgr_icon_height": 59
   },
   {
     "id": 0,
@@ -3251,7 +3767,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 794,
+    "upgr_icon_y": 614,
+    "upgr_icon_width": 203,
+    "upgr_icon_height": 132
   },
   {
     "id": 0,
@@ -3276,7 +3796,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 128,
+    "upgr_icon_width": 291,
+    "upgr_icon_height": 107
   },
   {
     "id": 0,
@@ -3301,7 +3825,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 561,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 114
   },
   {
     "id": 0,
@@ -3326,7 +3854,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 257,
+    "upgr_icon_height": 100
   },
   {
     "id": 0,
@@ -3351,7 +3883,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 475,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 57
   },
   {
     "id": 0,
@@ -3376,7 +3912,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 677,
+    "upgr_icon_width": 287,
+    "upgr_icon_height": 135
   },
   {
     "id": 0,
@@ -3401,7 +3941,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 594,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 294,
+    "upgr_icon_height": 80
   },
   {
     "id": 0,
@@ -3426,7 +3970,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 720,
+    "upgr_icon_y": 270,
+    "upgr_icon_width": 255,
+    "upgr_icon_height": 109
   },
   {
     "id": 0,
@@ -3451,7 +3999,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 8,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 290,
+    "upgr_icon_height": 78
   },
   {
     "id": 0,
@@ -3476,7 +4028,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 275,
+    "upgr_icon_y": 8,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 120
   },
   {
     "id": 0,
@@ -3501,7 +4057,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 300,
+    "upgr_icon_y": 395,
+    "upgr_icon_width": 292,
+    "upgr_icon_height": 118
   },
   {
     "id": 0,
@@ -3526,7 +4086,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 909,
+    "upgr_icon_width": 297,
+    "upgr_icon_height": 113
   },
   {
     "id": 0,
@@ -3554,7 +4118,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 20,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 106,
+    "upgr_icon_height": 149
   },
   {
     "id": 0,
@@ -3581,7 +4149,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 474,
+    "upgr_icon_y": 619,
+    "upgr_icon_width": 149,
+    "upgr_icon_height": 143
   },
   {
     "id": 0,
@@ -3608,7 +4180,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 300,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 258,
+    "upgr_icon_height": 138
   },
   {
     "id": 0,
@@ -3636,7 +4212,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 855,
+    "upgr_icon_y": 129,
+    "upgr_icon_width": 161,
+    "upgr_icon_height": 120
   },
   {
     "id": 0,
@@ -3661,7 +4241,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3686,7 +4270,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3711,7 +4299,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3736,7 +4328,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3761,7 +4357,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3786,7 +4386,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3811,7 +4415,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3836,7 +4444,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3861,7 +4473,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3886,7 +4502,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3911,7 +4531,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3936,7 +4560,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3961,7 +4589,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3986,7 +4618,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4011,7 +4647,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4036,7 +4676,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4061,7 +4705,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4086,7 +4734,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4111,7 +4763,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4136,7 +4792,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4161,7 +4821,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4186,7 +4850,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4211,7 +4879,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4236,7 +4908,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4261,7 +4937,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4286,7 +4966,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4311,7 +4995,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4336,7 +5024,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4361,7 +5053,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4386,7 +5082,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4411,7 +5111,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4436,6 +5140,10 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   }
 ]

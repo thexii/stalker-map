@@ -33,6 +33,10 @@
       "isShow": true
     },
     {
+      "uniqueName": "mechanics",
+      "isShow": true
+    },
+    {
       "uniqueName": "anomaly-zone-no-art",
       "isShow": false
     },

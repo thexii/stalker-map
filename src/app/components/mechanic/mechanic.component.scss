@@ -1,0 +1,28 @@
+
+$trader-columns: 9;
+$cell: 50px;
+
+.mechanic-container {
+  display: flex;
+  color: white;
+  min-width: 1400px;
+}
+
+.container {
+  max-height: 800px;
+}
+
+.inventory {
+  max-height: round(up, var(--wrapper-height) / 2, $cell);
+  overflow-y: auto;
+  overflow-x: hidden;
+  grid-template-columns: repeat($trader-columns, $cell);
+}
+
+.upgrade-item-image {
+  background-image: url(/assets/images/mechanic/cop/ui_actor_weapons.png)
+}
+
+.upgrade-item-image.E_STLK,.upgrade-item-image.E_HLMET,.upgrade-item-image.WP_RPG7 {
+  background-image: url(/assets/images/mechanic/cop/ui_actor_armor.png)
+}

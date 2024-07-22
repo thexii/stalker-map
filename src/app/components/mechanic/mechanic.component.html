@@ -1,0 +1,84 @@
+<div class="mechanic-container">
+  <div class="mechanic-container-section">
+    <stalker-profile [profile]="mechanic.profile" [game]="game" [rankSetting]="rankSetting"></stalker-profile>
+    <div class="mechanic-upgrades" *ngIf="selectedItem">
+      <div *ngIf="game == 'cop'" class='upgrade-item-image {{selectedItem.category}}'
+      [ngStyle]="{
+        'width': selectedItem.upgr_icon_width + 'px',
+        'height': selectedItem.upgr_icon_height + 'px',
+        'background-position': 'left -' + selectedItem.upgr_icon_x + 'px top -' + selectedItem.upgr_icon_y + 'px'}">
+
+      </div>
+    </div>
+  </div>
+  <div class="mechanic-container-section section-info">
+    <div class="info container">
+      <div class="sections-select-container" *ngIf="mechanic.discounts.length > 0">
+        <table style="width: 100%;">
+          <tr>
+            <ng-container>
+              <td class="section-td">{{ 'discounts' | translate}}</td>
+            </ng-container>
+          </tr>
+          <ng-container *ngFor="let discount of mechanic.discounts">
+            <tr>
+              <td class="section" (click)="selectDiscount(discount)" [ngClass]="{'selected': selectedDiscount && selectedDiscount.condition == discount.condition}">
+                <ng-container *ngIf="!discount.condition">{{ "discount_default" | translate}}</ng-container>
+                <ng-container *ngIf="discount.condition">{{ discount.condition }}</ng-container>
+              </td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="mechanic-container-section">
+    <div class="buy container">
+      <div class="mechanic-info">
+        <div class="mechanic-bio">
+          <div class="mechanic-name">{{ 'actor_name' | translate}}</div>
+          <div class="profile-data-info">
+            <select class="select-relation" #relation (change)="setRelationSelect(relation.value)" *ngIf="relationType == relationTypeEnum.selector">
+              <option class="language-selector-option" [value]="0">{{ 'enemy' | translate }}</option>
+              <option class="language-selector-option" [value]="1" selected>{{ 'neutral' | translate }}</option>
+              <option class="language-selector-option" [value]="2">{{ 'friend' | translate }}</option>
+            </select>
+            <div class="relation-range" *ngIf="relationType == relationTypeEnum.range">
+              <input type="range" min="0" max="1" step="0.01" list="relations-det" [value]="relation" #ranger (input)="setRelationSelectRange(ranger.value)">
+
+              <datalist id="relations-det">
+                <option *ngFor="let relId of [0, 1, 2]" [value]="relations[relId]"></option>
+              </datalist>
+              <div class="range-labels">
+                <div *ngFor="let relId of [0, 1, 2]">{{relationsTitle[relId] | translate}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stalker-avatar {{game}}" [ngStyle]="{'width': actor.iconWidth + 'px', 'height': actor.iconHeight + 'px', 'background-position': 'left ' + (-actor.iconX) + 'px top ' + (-actor.iconY) + 'px'}"></div>
+      </div>
+      <div class="buy inventory">
+          <ng-container *ngFor="let item of itemsToRepait">
+            <div class="inventory-item inventory-item-width-{{item.width}} inventory-item-height-{{item.height}}" (click)="selectItem(item)">
+              <div class="item-additional-info">
+                <div class="inventory-item-count">
+                  <span class="stalker-icon icon-bug" *ngIf="item.price == 0"></span>
+                </div>
+                <div class="inventory-item-upgrade" *ngIf="item.installedUpgrades && item.installedUpgrades.length > 0"></div>
+              </div>
+              <div class="inventory-item-image {{game}} inventory-item-x-{{item.gridX}} inventory-item-y-{{item.gridY}}" title="{{item.localeName | translate}}">
+                <div *ngIf="item.hasScope && item.scopeX > -1000 && item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="item.scopeX" [style.top.px]="item.scopeY"></div>
+                <div *ngIf="item.hasSilencer && item.silencerX > -1000 && item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="item.silencerX" [style.top.px]="item.silencerY"></div>
+                <div *ngIf="item.hasGrenadeLauncher && item.grenadeLauncherX > -1000 && item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="item.grenadeLauncherX" [style.top.px]="item.grenadeLauncherY"></div>
+              </div>
+            </div>
+          </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+<div class="button url-button">
+  <span>Mark link</span>
+</div>
+</div>
