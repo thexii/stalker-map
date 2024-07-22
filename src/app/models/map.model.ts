@@ -3,6 +3,7 @@ import { LevelChanger } from "./level-changer.model";
 import { Location } from "./location.model";
 import { LootBoxCluster } from "./loot-box/loot-box-cluster.model";
 import { Mark } from "./mark.model";
+import { Mechanic } from "./mechanic.model";
 import { MonsterLair } from "./monster-lair.model";
 import { SmartTerrain } from "./smart-terrain.model";
 import { Stalker } from "./stalker.model";
@@ -22,6 +23,7 @@ export class Map {
   public lootBoxes: LootBoxCluster[];
   public anomalyZones: AnomalyZone[];
   public stalkers: Stalker[];
+  public mechanics: Mechanic[];
   public smartTerrains: SmartTerrain[];
   public monsterLairs: MonsterLair[];
   public levelChangers: LevelChanger[];

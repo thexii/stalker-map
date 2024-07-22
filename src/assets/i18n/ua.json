@@ -225,5 +225,7 @@
     "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
     "smart-terrains": "Точки інтересу сталкерів",
     "smart-paths": "Маршрути сталкерів",
-    "artefact-ways": "Маршрути артефактів"
+    "artefact-ways": "Маршрути артефактів",
+    "level-changers": "Переходи між локаціями",
+    "mechanics": "Техніки"
 }

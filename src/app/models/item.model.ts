@@ -4,6 +4,7 @@ export class Item {
     public width: number;
     public height: number;
     public area: number;
+    public category: string;
 
     public gridX: number;
     public gridY: number;
@@ -24,4 +25,9 @@ export class Item {
 
     public price: number;
     public boxSize: number;
+
+    public upgr_icon_x : number;
+    public upgr_icon_y : number;
+    public upgr_icon_width : number;
+    public upgr_icon_height : number;
 }

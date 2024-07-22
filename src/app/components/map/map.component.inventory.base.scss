@@ -108,6 +108,16 @@
   background-size: contain
 }
 
+.stalker-search-item.mechanics {
+  background: url(/assets/images/svg/marks/tech.svg)no-repeat;
+  background-size: contain
+}
+
+.stalker-search-item.level-changers {
+  background: url(/assets/images/svg/marks/level_changers/level_changer_up_right.svg)no-repeat;
+  background-size: contain
+}
+
 .search-tooltip {
   background-color: #090a0a
 }
