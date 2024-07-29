@@ -1,0 +1,21 @@
+{
+  "yantar": "Yantar",
+  "red_forest": "Red forest",
+  "yaniv": "Yaniv",
+  "aes": "CNPP",
+
+  "st_yaniv_name": "Yaniv",
+  "st_plavni_name": "Plavni",
+  "st_polustanok_name": "Substation",
+  "st_yantar_name": "Yantar plant",
+  "st_rostok_name": "Rostok plant",
+  "st_ventilation_name": "Ventilation complex",
+  "st_red_forest_brige_to_limansk_name": "Bridge to Limansk",
+  "st_red_forest_forester_name": "Caper",
+  "st_aes_4_reactor_name": "Block №4",
+  "st_yaniv_bunker_name": "Scientists' bunker near to Yaniv",
+  "st_yantar_bunker_name": "Scientists' bunker near to Yantar",
+  "st_vehicle_graveyard_name": "Vehicle graveyard",
+  "st_east_limansk_name": "East district of Limansk",
+  "st_yaniv_quarry_name": "Quarry"
+}

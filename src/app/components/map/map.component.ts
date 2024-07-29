@@ -31,6 +31,7 @@ import { UndergroundComponent } from '../undeground/underground.component';
 import { MarkerToSearch } from '../../models/marker-to-search.model';
 import { Mechanic } from '../../models/mechanic.model';
 import { MechanicComponent } from '../mechanic/mechanic.component';
+import { ItemUpgrade } from '../../models/upgrades/upgrades';
 
 declare const L: any;
 declare var markWidth: number;
@@ -72,6 +73,7 @@ export class MapComponent {
   private layers: any[] = [];
   private items: Item[];
   private lootBoxConfig: LootBoxConfig;
+  private upgrades: ItemUpgrade[];
   private mapConfig: MapConfig;
   private svgIcon: any;
   private searchContoller: any;
@@ -157,7 +159,8 @@ export class MapComponent {
       this.addStyle('/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css'),
       this.loadLocales(this.translate.currentLang),
       this.loadItems(),
-      this.loadLootBoxConfig()
+      this.loadLootBoxConfig(),
+      this.loadUpgrades(),
     ]);
 
     this.translate.onLangChange.subscribe((i) => {
@@ -165,14 +168,19 @@ export class MapComponent {
     });
 
     fetch(`/assets/data/${this.game}/map.json`)
-      .then((response) => response.json())
-      .then((gamedata: Map) => {
-        fetch(`/assets/data/${this.game}_config.json`)
-          .then((response) => response.json())
-          .then((gameConfig: MapConfig) => {
-            this.loadMap(gamedata, gameConfig);
+      .then((response) => {
+        if (response.ok) {
+          response.json()
+          .then((gamedata: Map) => {
+            fetch(`/assets/data/${this.game}_config.json`)
+              .then((response) => response.json())
+              .then((gameConfig: MapConfig) => {
+                this.loadMap(gamedata, gameConfig);
+              });
           });
-      });
+        }
+      })
+
 
     let body = document.body,
       html = document.documentElement;
@@ -198,21 +206,43 @@ export class MapComponent {
 
   private async loadItems(): Promise<void> {
     await fetch(`/assets/data/${this.game}/items.json`)
-      .then((response) => response.json())
-      .then((items: Item[]) => {
-        if (items) {
-          this.items = items;
+      .then((response) => {
+        if (response.ok) {
+          response.json()
+          .then((items: Item[]) => {
+            if (items) {
+              this.items = items;
+            }
+          });
         }
-      });
+      })
   }
 
   private async loadLootBoxConfig(): Promise<void> {
     if (this.game != 'cop') {
       await fetch(`/assets/data/${this.game}/lootBoxConfig.json`)
-        .then((response) => response.json())
-        .then((config: LootBoxConfig) => {
-          if (config) {
-            this.lootBoxConfig = config;
+        .then((response) => {
+          if (response.ok) {
+            response.json().then((config: LootBoxConfig) => {
+              if (config) {
+                this.lootBoxConfig = config;
+              }
+            })
+          }
+        });
+    }
+  }
+
+  private async loadUpgrades(): Promise<void> {
+    if (this.game != 'shoc') {
+      await fetch(`/assets/data/${this.game}/upgrades.json`)
+        .then((response) => {
+          if (response.ok) {
+            response.json().then((config: ItemUpgrade[]) => {
+              if (config) {
+                this.upgrades = config;
+              }
+            })
           }
         });
     }
@@ -220,12 +250,16 @@ export class MapComponent {
 
   private async loadLocales(language: string): Promise<void> {
     await fetch(`/assets/data/${this.game}/${this.translate.currentLang}.json`)
-      .then((response) => response.json())
-      .then((locales: any) => {
-        if (locales) {
-          this.translate.setTranslation(language, locales, true);
+      .then((response) => {
+        if (response.ok) {
+          response.json().then((locales: any) => {
+            if (locales) {
+              this.translate.setTranslation(language, locales, true);
+            }
+          });
         }
-      });
+      })
+
   }
 
   private async ngOnDestroy(): Promise<void> {
@@ -315,6 +349,10 @@ export class MapComponent {
         this.addLevelChangers();
     }
 
+    if (this.gamedata.roads && this.gamedata.roads.length > 0) {
+        this.addRoads();
+    }
+
     let layersToHide = [];
 
     if (
@@ -356,15 +394,26 @@ export class MapComponent {
 
     if (printClickCoordinates) {
         let tempMap = this.map;
+        let coorsAll = '';
 
         this.map.on('click', function (ev: any) {
           var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
-          console.log(`[${latlng.lat}, ${latlng.lng}]`);
+          //console.log(`[${latlng.lat}, ${latlng.lng}]`);
+          //console.log(`[${latlng.lng}, ${latlng.lat}]`);
+
+          let coors = '{\n';
+          coors+= `\"x\": ${latlng.lng},\n`;
+          coors+= `\"y\": 0,\n`;
+          coors+= `\"z\": ${latlng.lat}\n},\n`;
+          /*
+          "x": 561.02637,
+          "y": -2.586868,
+          "z": 797.3273,
+          */
+          coorsAll += coors;
+         //console.log(coorsAll)
         });
     }
-
-    //let searchLayersOrdered = this.reorderSearchingLayers(searchLayers);
-    //console.log(this.markersToSearch);
 
     this.searchContoller = L.control.search({
         layer: searchLayers,
@@ -395,18 +444,21 @@ export class MapComponent {
         },
     });
 
+    this.createProperty(
+        this.searchContoller.options,
+        'textPlaceholder',
+        ['search'],
+        this.translate
+    );
+
     this.searchContoller._handleUndergroundMark = (loc: any, self: any) => {
-      console.log(loc, self);
       let location = loc.layer.undergroundLocation;
 
       let levelChangers = this.layers[this.translate.instant('level-changers')];
       let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.destination == location.uniqueName);
 
       if (levelChanger) {
-        console.log(levelChanger);
-
         self._moveToLocation(levelChanger._latlng, '', self._map)
-        //self.showLocation(loc, self._input.value)
         levelChanger.properties.markerToSearch = loc;
         let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
 
@@ -453,35 +505,38 @@ export class MapComponent {
       if (self.options.autoCollapse) { self.collapse() }
     }
 
-    if (gameConfig.rulerEnabled) {
-        var options = {
-            position: 'topright', // Leaflet control position option
-            circleMarker: {
-                // Leaflet circle marker options for points used in this plugin
-                color: 'red',
-                radius: 2,
-            },
-            lineStyle: {
-                // Leaflet polyline options for lines used in this plugin
-                color: 'red',
-                dashArray: '1,6',
-            },
-            lengthUnit: {
-                factor: gameConfig.lengthFactor, //  from km to nm
-                display: this.translate.instant('meterShort'),
-                decimal: 2,
-                label: this.translate.instant('length'),
-            },
-            angleUnit: {
-                display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
-                decimal: 2, // Bearing result will be fixed to this value.
-                factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
-                label: this.translate.instant('azimuth'),
-            },
-        };
+    let ruler: any = null;
 
-        L.control.ruler(options).addTo(this.map);
+    if (gameConfig.rulerEnabled) {
+      ruler = this.addRuler();
     }
+
+    this.translate.onLangChange.subscribe(i=>{
+      let newLayers: any = {};
+
+      for (let layer of Object.values(this.layers)) {
+        newLayers[this.translate.instant(layer.name)] = layer;
+      }
+
+      this.layers = newLayers;
+
+      layerControl.remove();
+      let addRuler = false;
+
+      if (ruler) {
+        ruler.remove();
+        addRuler = true;
+      }
+
+      layerControl = L.control.layers(null, this.layers);
+      layerControl.searchName = "layerControl";
+      layerControl.isUnderground = false;
+      layerControl.addTo(this.map)
+
+      if (addRuler) {
+        ruler = this.addRuler();
+      }
+    });
 
     this.searchContoller.on(
         'search:locationfound',
@@ -531,17 +586,13 @@ export class MapComponent {
                         duration: 0.3,
                     }),
                     h.type)) {
-                let m = this.layers[this.translate.instant(h.type)].markers.find(
-                        (y: {
-                            _latlng: {
-                                lat: number;
-                                lng: number
-                            }
-                        }) =>
+                      let layer = this.layers[this.translate.instant(h.type)];
+                      let marker: any = Object.values(layer._layers).find(
+                        (y: any) =>
                         Math.abs(y._latlng.lat - h.lat) < 1 &&
                         Math.abs(y._latlng.lng - h.lng) < 1);
-                if (m) {
-                    m.fireEvent('click');
+                if (marker) {
+                  marker.fireEvent('click');
 
                     logEvent(analytics, 'open-map-queryParams', {
                         game: this.gamedata.uniqueName,
@@ -561,6 +612,41 @@ export class MapComponent {
     });
 
     this.mapInitialized = true;
+  }
+
+  private addRuler(): any {
+    let ruler;
+
+    var options = {
+        position: 'topright', // Leaflet control position option
+        circleMarker: {
+            // Leaflet circle marker options for points used in this plugin
+            color: 'red',
+            radius: 2,
+        },
+        lineStyle: {
+            // Leaflet polyline options for lines used in this plugin
+            color: 'red',
+            dashArray: '1,6',
+        },
+        lengthUnit: {
+            factor: this.mapConfig.lengthFactor, //  from km to nm
+            display: this.translate.instant('meterShort'),
+            decimal: 2,
+            label: this.translate.instant('length'),
+        },
+        angleUnit: {
+            display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+            decimal: 2, // Bearing result will be fixed to this value.
+            factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+            label: this.translate.instant('azimuth'),
+        },
+    };
+
+    ruler = L.control.ruler(options);//.addTo(this.map);
+    ruler.addTo(this.map);
+
+    return ruler;
   }
 
   private setCanvasMarkers(): any {
@@ -622,12 +708,8 @@ export class MapComponent {
 
   private addLocations() {
     let locationsOnMap = [];
+
     for (let location of this.gamedata.locations) {
-
-      if (location.isUnderground) {
-        continue;
-      }
-
         let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
         let locationBounds = [
           [location.y1, location.x1],
@@ -723,13 +805,7 @@ export class MapComponent {
             continue;
           }
 
-          let markerX: number = 0.5 - location.xShift + stuffModel.x / location.widthInMeters;
-          let markerY: number = 0.5 - location.yShift + stuffModel.z / location.heightInMeters;
-
-          let dx: number = location.x2 - location.x1;
-          let dy: number = location.y1 - location.y2;
-
-          let stuff = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          let stuff = new this.svgMarker([stuffModel.z, stuffModel.x], {
             icon: markType.icon,
             renderer: this.canvasRenderer,
             radius: markType.icon.options.iconSizeInit[0] * 10
@@ -773,8 +849,6 @@ export class MapComponent {
               this.translate
             );
 
-            //console.log(stuff.feature.properties.search);
-
             let location = this.locations.locations.find(
               (y: { id: any }) => y.id == stuffModel.locationId
             );
@@ -809,65 +883,58 @@ export class MapComponent {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.locationId) as Location;
 
       if (location.isUnderground) {
-        if (lootBoxType.ableToSearch) {
-            let lootBoxMarker = new this.svgMarker([lootBox.z, lootBox.x], {renderer: this.canvasRenderer});
+        let lootBoxMarker = new this.svgMarker([lootBox.z, lootBox.x], {renderer: this.canvasRenderer});
 
-            lootBoxMarker.properties = {};
-            lootBoxMarker.properties.lootBox = lootBox;
-            lootBoxMarker.properties.markType = lootBoxType.name;
-            lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
-            lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
+        lootBoxMarker.properties = {};
+        lootBoxMarker.properties.lootBox = lootBox;
+        lootBoxMarker.properties.markType = lootBoxType.name;
+        lootBoxMarker.properties.name = lootBoxType.name;
+        lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
+        lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
 
-            let localesToFind: string[] = [];
+        let localesToFind: string[] = [];
 
-            if (lootBox.lootBoxes?.length > 0) {
-              for (let box of lootBox.lootBoxes) {
-                let names = box.items?.map((x: { uniqueName: string; }) => {
-                  return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
-              } );
+        if (lootBox.lootBoxes?.length > 0) {
+          for (let box of lootBox.lootBoxes) {
+            let names = box.items?.map((x: { uniqueName: string; }) => {
+              return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
+          } );
 
-                if (names.length > 0) {
-                  localesToFind.push(...(names as string[]));
-                }
-              }
+            if (names.length > 0) {
+              localesToFind.push(...(names as string[]));
             }
-
-            if (localesToFind.length == 0) {
-              continue;
-            }
-
-            lootBoxMarker.feature = {};
-            lootBoxMarker.feature.properties = {};
-            lootBoxMarker.doNotRender = true;
-            lootBoxMarker.undergroundLocation = location;
-
-            localesToFind.push(index.toString());
-            index++;
-
-            this.createProperty(
-                lootBoxMarker.feature.properties,
-                'search',
-                localesToFind,
-                this.translate
-            );
-
-            lootBoxMarker.properties.locationUniqueName = location.uniqueName;
-            lootBoxMarker.properties.locationName = location.uniqueName;
-            lootBoxMarker.properties.name = lootBoxMarker.properties.lootBox.name;
-
-            this.undergroundMarkerToSearch.push(lootBoxMarker);
+          }
         }
+
+        if (localesToFind.length == 0) {
+          continue;
+        }
+
+        lootBoxMarker.feature = {};
+        lootBoxMarker.feature.properties = {};
+        lootBoxMarker.doNotRender = true;
+        lootBoxMarker.undergroundLocation = location;
+
+        localesToFind.push(index.toString());
+        index++;
+
+        this.createProperty(
+            lootBoxMarker.feature.properties,
+            'search',
+            localesToFind,
+            this.translate
+        );
+
+        lootBoxMarker.properties.locationUniqueName = location.uniqueName;
+        lootBoxMarker.properties.locationName = location.uniqueName;
+        //lootBoxMarker.properties.name = lootBoxMarker.properties.lootBox.name;
+
+        this.undergroundMarkerToSearch.push(lootBoxMarker);
 
         continue;
       }
 
-      let markerX: number = 0.5 - location.xShift + lootBox.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + lootBox.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
-
-      let lootBoxMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let lootBoxMarker = new this.svgMarker([lootBox.z, lootBox.x], {
         icon: lootBoxType.icon,
         renderer: this.canvasRenderer
       });
@@ -946,13 +1013,7 @@ export class MapComponent {
             continue;
           }
 
-          let markerX: number = 0.5 - location.xShift + mark.x / location.widthInMeters;
-          let markerY: number = 0.5 - location.yShift + mark.z / location.heightInMeters;
-
-          let dx: number = location.x2 - location.x1;
-          let dy: number = location.y1 - location.y2;
-
-          let marker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+          let marker = new this.svgMarker([mark.z, mark.x], {
             icon: markType.icon,
             renderer: this.canvasRenderer
           });
@@ -973,6 +1034,8 @@ export class MapComponent {
             let p = [];
 
             p.push(marker.properties.name);
+            p.push(markType.uniqueName);
+            p.push(location.uniqueName);
 
             if (
               marker.properties.description &&
@@ -995,11 +1058,8 @@ export class MapComponent {
               this.translate
             );
 
-            let location = this.locations.locations.find(
-              (y: { id: any }) => y.id == mark.locationId
-            );
             marker.properties.locationUniqueName = location.uniqueName;
-            marker.properties.locationName = location.name;
+            marker.properties.locationName = location.uniqueName;
           }
 
           marker.bindTooltip(
@@ -1012,7 +1072,9 @@ export class MapComponent {
           );
 
           marker.bindTooltip(
-            (marker: any) => this.translate.instant(marker.properties.name),
+            (marker: any) => {
+              return this.translate.instant(marker.properties.name);
+            } ,
             {
               sticky: true,
               className: 'map-tooltip',
@@ -1041,9 +1103,6 @@ export class MapComponent {
         continue;
       }
 
-      let markerX: number = 0.5 - location.xShift + zone.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + zone.z / location.heightInMeters;
-
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
 
@@ -1055,12 +1114,12 @@ export class MapComponent {
         zone.anomaliySpawnSections != null &&
         zone.anomaliySpawnSections.length > 0
       ) {
-        canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        canvasMarker = new this.svgMarker([zone.z, zone.x], {
           icon: anomalyZoneIcon.icon,
           renderer: this.canvasRenderer
         });
       } else {
-        canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+        canvasMarker = new this.svgMarker([zone.z, zone.x], {
           icon: anomalyZoneNoArtIcon.icon,
           renderer: this.canvasRenderer
         });
@@ -1105,9 +1164,14 @@ export class MapComponent {
           }
         }
 
-        canvasMarker.feature = {
+
+        searchFields.push(anomalyZoneIcon.uniqueName);
+        searchFields.push(location.uniqueName);
+
+        canvasMarker.feature = {};/* = {
           properties: { search: searchFields.join(', ') },
-        };
+        };*/
+        canvasMarker.feature.properties = {};
         this.createProperty(
           canvasMarker.feature.properties,
           'search',
@@ -1133,7 +1197,7 @@ export class MapComponent {
                 }
 
                 latlngs.push(latlngs[0]);
-                artefactWays.push(L.polyline(latlngs, {color: 'green', weight: 2}));
+                artefactWays.push(L.polyline(latlngs, {color: 'yellow', weight: 2}));
             }
         }
 
@@ -1283,6 +1347,8 @@ export class MapComponent {
       iconAnchor: [0, 0],
     })
 
+    medicIcon.uniqueName = 'medic';
+
     let markers: any[] = [];
 
     for (let trader of this.gamedata.traders) {
@@ -1292,13 +1358,7 @@ export class MapComponent {
         continue;
       }
 
-      let markerX: number = 0.5 - location.xShift + trader.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + trader.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
-
-      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([trader.z, trader.x], {
         icon: trader.isMedic ? medicIcon : traderIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -1315,7 +1375,7 @@ export class MapComponent {
       this.createProperty(
         canvasMarker.feature.properties,
         'search',
-        [trader.profile.name],
+        [trader.profile.name, trader.isMedic ? medicIcon.uniqueName : traderIcon.uniqueName],
         this.translate
       );
 
@@ -1395,13 +1455,7 @@ export class MapComponent {
         continue;
       }
 
-      let markerX: number = 0.5 - location.xShift + stalker.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + stalker.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
-
-      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([stalker.z, stalker.x], {
         icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
         renderer: this.canvasRenderer
       });
@@ -1479,13 +1533,7 @@ export class MapComponent {
     for (let mechanic of this.gamedata.mechanics) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mechanic.locationId) as Location;
 
-      let markerX: number = 0.5 - location.xShift + mechanic.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + mechanic.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
-
-      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([mechanic.z, mechanic.x], {
         icon: mechanicIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -1500,7 +1548,7 @@ export class MapComponent {
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
 
-      let propertiesToSearch: string[] = [mechanic.profile.name];
+      let propertiesToSearch: string[] = [mechanic.profile.name, mechanicIcon.uniqueName];
 
       this.createProperty(
         canvasMarker.feature.properties,
@@ -1564,12 +1612,6 @@ export class MapComponent {
       if (location.isUnderground) {
         continue;
       }
-
-      let markerX: number = 0.5 - location.xShift + smart.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + smart.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
 
       let icon: any = null;
 
@@ -1700,7 +1742,7 @@ export class MapComponent {
         }
       }
 
-      let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker = new this.svgMarker([smart.z, smart.x], {
         icon: icon,
         renderer: this.canvasRenderer
       });
@@ -1737,15 +1779,10 @@ export class MapComponent {
                   continue;
                 }
 
-                let targetX: number = 0.5 - targetLocation.xShift + targetSmart.x / targetLocation.widthInMeters;
-                let targetY: number = 0.5 - targetLocation.yShift + targetSmart.z / targetLocation.heightInMeters;
-
-                let tdx: number = targetLocation.x2 - targetLocation.x1;
-                let tdy: number = targetLocation.y1 - targetLocation.y2;
                 let latlngs: any[] = [];
 
-                latlngs.push([location.y2       + markerY * dy, location.x1       + markerX * dx]);
-                latlngs.push([targetLocation.y2 + targetY * tdy, targetLocation.x1 + targetX * tdx]);
+                latlngs.push([smart.z, smart.x]);
+                latlngs.push([targetSmart.z, targetSmart.x]);
 
                 let color = 'blue';
 
@@ -1759,7 +1796,7 @@ export class MapComponent {
 
                 if (smart.name == "mil_smart_terrain_2_2" && targetSmart.name == "red_smart_terrain_3_1") {
                   latlngs = [];
-                  latlngs.push([location.y2       + markerY * dy, location.x1       + markerX * dx]);
+                  latlngs.push([smart.z, smart.x]);
 
                   latlngs.push([1091.7000007629395, 433.02499997615814]);
                   latlngs.push([1194.9500007629395, 428.27499997615814]);
@@ -1769,7 +1806,7 @@ export class MapComponent {
                   latlngs.push([1236.900001525879, 274.2999999523163]);
                   latlngs.push([1230.900001525879, 260.0499999523163]);
 
-                  latlngs.push([targetLocation.y2 + targetY * tdy, targetLocation.x1 + targetX * tdx]);
+                  latlngs.push([targetSmart.z, targetSmart.x]);
                 }
 
                 var polyline = L.polyline(latlngs, {color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : null});
@@ -1788,8 +1825,9 @@ export class MapComponent {
       canvasMarker.properties.locationUniqueName = location.uniqueName;
 
       canvasMarker.bindTooltip(
-        (marker: any) =>
-          `${this.translate.instant(smart.localeName)}`,
+        (marker: any) => {
+          return this.translate.instant(smart.localeName);
+        },
         {
           sticky: true,
           className: 'map-tooltip',
@@ -1827,13 +1865,7 @@ export class MapComponent {
         continue;
       }
 
-      let markerX: number = 0.5 - location.xShift + lair.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + lair.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
-
-      let canvasMarker =  new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker =  new this.svgMarker([lair.z, lair.x], {
         icon: monstersIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -1876,13 +1908,13 @@ export class MapComponent {
         }
       );
 
-      canvasMarker
+      /*canvasMarker
         .bindPopup(
           (stalker: any) =>
             this.createStalkerPopup(stalker),
           { maxWidth: 500 }
         )
-        .openPopup();
+        .openPopup();*/
     }
 
     this.addLayerToMap(L.layerGroup(markers), monstersIcon.uniqueName);
@@ -1896,13 +1928,12 @@ export class MapComponent {
 
     for (let levelChanger of this.gamedata.levelChangers) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.locationId) as Location;
+
+      if (location.isUnderground) {
+        continue;
+      }
+
       let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
-
-      let markerX: number = 0.5 - location.xShift + levelChanger.x / location.widthInMeters;
-      let markerY: number = 0.5 - location.yShift + levelChanger.z / location.heightInMeters;
-
-      let dx: number = location.x2 - location.x1;
-      let dy: number = location.y1 - location.y2;
 
       let markerIcon = null;
 
@@ -1920,7 +1951,7 @@ export class MapComponent {
         }
       }
 
-      let canvasMarker = new this.svgMarker([location.y2 + markerY * dy, location.x1 + markerX * dx], {
+      let canvasMarker = new this.svgMarker([levelChanger.z, levelChanger.x], {
         icon: markerIcon,
         renderer: this.canvasRenderer
       });
@@ -1966,6 +1997,23 @@ export class MapComponent {
     }
 
     this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
+  }
+
+  private addRoads() {
+    let roads: any[] = [];
+
+    for (let road of this.gamedata.roads) {
+      var polyline = L.polyline(road.points.map(x =>
+        {
+          let geo: any = {};
+          geo.lng = x.x;
+          geo.lat = x.z;
+          return geo;
+        }), {color: 'grey', weight: 2});
+      roads.push(polyline);
+    }
+
+    this.addLayerToMap(L.layerGroup(roads), 'roads');
   }
 
   private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
@@ -2094,6 +2142,7 @@ export class MapComponent {
     componentRef.instance.rankSetting = this.mapConfig.rankSetting;
     componentRef.instance.relationType = this.mapConfig.traderRelationType;
     componentRef.instance.actor = this.mapConfig.actor;
+    componentRef.instance.upgrades = this.upgrades;
 
     return componentRef.location.nativeElement;
   }
@@ -2128,6 +2177,15 @@ export class MapComponent {
           levelChanger.properties.markerToSearch = undefined;
           this.openedUndergroundPopup.component.goToMarker();
           return;
+        }
+        else {
+          let popup = this.openedUndergroundPopup.levelChanger.getPopup();
+
+          popup.setLatLng(levelChanger._latlng);
+          return;
+          /*this.openedUndergroundPopup.levelChanger.closePopup();
+
+          levelChanger.openPopup();*/
         }
       }
       else {

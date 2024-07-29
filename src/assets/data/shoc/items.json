@@ -13,7 +13,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -22,7 +24,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -38,7 +44,9 @@
     "price": 250,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -47,7 +55,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -63,7 +75,9 @@
     "price": 220,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -72,7 +86,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -88,7 +106,9 @@
     "price": 3000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -97,7 +117,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -113,7 +137,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -122,7 +148,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -138,7 +168,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -147,7 +179,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -163,7 +199,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -172,7 +210,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -188,7 +230,9 @@
     "price": 150,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -197,7 +241,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -213,7 +261,9 @@
     "price": 20,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -222,7 +272,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -238,7 +292,9 @@
     "price": 100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -247,7 +303,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -263,7 +323,9 @@
     "price": 80,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -272,7 +334,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -288,7 +354,9 @@
     "price": 300,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -297,7 +365,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -313,7 +385,9 @@
     "price": 70,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -322,7 +396,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -338,7 +416,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -347,7 +427,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -363,7 +447,9 @@
     "price": 300,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -372,7 +458,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -388,7 +478,9 @@
     "price": 100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -397,7 +489,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -413,7 +509,9 @@
     "price": 400,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -422,7 +520,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -438,7 +540,9 @@
     "price": 60,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -447,7 +551,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -463,7 +571,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -472,7 +582,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -488,7 +602,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -497,7 +613,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -513,7 +633,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -522,7 +644,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -538,7 +664,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -547,7 +675,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -563,7 +695,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -572,7 +706,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -588,7 +726,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -597,7 +737,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -613,7 +757,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -622,7 +768,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -638,7 +788,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -647,7 +799,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -663,7 +819,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -672,7 +830,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -688,7 +850,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -697,7 +861,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -713,7 +881,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -722,7 +892,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -738,7 +912,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -747,7 +923,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -763,7 +943,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -772,7 +954,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -788,7 +974,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -797,7 +985,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -813,7 +1005,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -822,7 +1016,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -838,7 +1036,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -847,7 +1047,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -863,7 +1067,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -872,7 +1078,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -888,7 +1098,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -897,7 +1109,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -913,7 +1129,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -922,7 +1140,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -938,7 +1160,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -947,7 +1171,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -963,7 +1191,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -972,7 +1202,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -988,7 +1222,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -997,7 +1233,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1013,7 +1253,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1022,7 +1264,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1038,7 +1284,9 @@
     "price": 120,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1047,7 +1295,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1063,7 +1315,9 @@
     "price": 100,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1072,7 +1326,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1088,7 +1346,9 @@
     "price": 215,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1097,7 +1357,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1113,7 +1377,9 @@
     "price": 200,
     "boxSize": 20,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1122,7 +1388,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1138,7 +1408,9 @@
     "price": 50,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1147,7 +1419,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1163,7 +1439,9 @@
     "price": 100,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1172,7 +1450,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1188,7 +1470,9 @@
     "price": 200,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1197,7 +1481,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1213,7 +1501,9 @@
     "price": 375,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1222,7 +1512,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1238,7 +1532,9 @@
     "price": 400,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1247,7 +1543,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1263,7 +1563,9 @@
     "price": 340,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1272,7 +1574,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1288,7 +1594,9 @@
     "price": 320,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1297,7 +1605,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1313,7 +1625,9 @@
     "price": 380,
     "boxSize": 30,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1322,7 +1636,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1338,7 +1656,9 @@
     "price": 1000,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1347,7 +1667,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1363,7 +1687,9 @@
     "price": 900,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1372,7 +1698,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1388,7 +1718,9 @@
     "price": 950,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1397,7 +1729,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1413,7 +1749,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1422,7 +1760,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1438,7 +1780,9 @@
     "price": 170,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1447,7 +1791,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1463,7 +1811,9 @@
     "price": 150,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1472,7 +1822,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1488,7 +1842,9 @@
     "price": 210,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1497,7 +1853,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1513,7 +1873,9 @@
     "price": 100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1522,7 +1884,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1538,7 +1904,9 @@
     "price": 155,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1547,7 +1915,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1563,7 +1935,9 @@
     "price": 280,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1572,7 +1946,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1588,7 +1966,9 @@
     "price": 350,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1597,7 +1977,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1613,7 +1997,9 @@
     "price": 500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1622,7 +2008,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1638,7 +2028,9 @@
     "price": 900,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1647,7 +2039,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1663,7 +2059,9 @@
     "price": 800,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1672,7 +2070,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1688,7 +2090,9 @@
     "price": 1200,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1697,7 +2101,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1713,7 +2121,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1722,7 +2132,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1738,7 +2152,9 @@
     "price": 1500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1747,7 +2163,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1763,7 +2183,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1772,7 +2194,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1788,7 +2214,9 @@
     "price": 2150,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1797,7 +2225,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1813,7 +2245,9 @@
     "price": 2000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1822,7 +2256,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1838,7 +2276,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1847,7 +2287,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1863,7 +2307,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1872,7 +2318,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1888,7 +2338,9 @@
     "price": 2000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1897,7 +2349,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1913,7 +2369,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1922,7 +2380,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1938,7 +2400,9 @@
     "price": 4000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1947,7 +2411,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1963,7 +2431,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1972,7 +2442,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -1988,7 +2462,9 @@
     "price": 6500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -1997,7 +2473,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2013,7 +2493,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2022,7 +2504,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2038,7 +2524,9 @@
     "price": 9000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2047,7 +2535,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2063,7 +2555,9 @@
     "price": 12000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2072,7 +2566,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2088,7 +2586,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2097,7 +2597,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2113,7 +2617,9 @@
     "price": 15000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2122,7 +2628,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2138,7 +2648,9 @@
     "price": 12000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2147,7 +2659,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2163,7 +2679,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2172,7 +2690,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2188,7 +2710,9 @@
     "price": 18000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2197,7 +2721,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2213,7 +2741,9 @@
     "price": 17000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2222,7 +2752,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2238,7 +2772,9 @@
     "price": 200,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2247,7 +2783,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2263,7 +2803,9 @@
     "price": 200,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2272,7 +2814,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2288,7 +2834,9 @@
     "price": 100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2297,7 +2845,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2313,7 +2865,9 @@
     "price": 250,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2322,7 +2876,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2338,7 +2896,9 @@
     "price": 250,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2347,7 +2907,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2363,7 +2927,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2372,7 +2938,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2388,7 +2958,9 @@
     "price": 6000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2397,7 +2969,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2413,7 +2989,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2422,7 +3000,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2438,7 +3020,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2447,7 +3031,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2463,7 +3051,9 @@
     "price": 12000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2472,7 +3062,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2488,7 +3082,9 @@
     "price": 40000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2497,7 +3093,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2513,7 +3113,9 @@
     "price": 15000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2522,7 +3124,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2538,7 +3144,9 @@
     "price": 30000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2547,7 +3155,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2563,7 +3175,9 @@
     "price": 50000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2572,7 +3186,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2588,7 +3206,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2597,7 +3217,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2613,7 +3237,9 @@
     "price": 12500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2622,7 +3248,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2638,7 +3268,9 @@
     "price": 14000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2647,7 +3279,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2663,7 +3299,9 @@
     "price": 25000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2672,7 +3310,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2688,7 +3330,9 @@
     "price": 15000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2697,7 +3341,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2713,7 +3361,9 @@
     "price": 24000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2722,7 +3372,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2738,7 +3392,9 @@
     "price": 200,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2747,7 +3403,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2763,7 +3423,9 @@
     "price": 20,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2772,7 +3434,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2788,7 +3454,9 @@
     "price": 50,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2797,7 +3465,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2813,7 +3485,9 @@
     "price": 75,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2822,7 +3496,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2838,7 +3516,9 @@
     "price": 20,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2847,7 +3527,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2863,7 +3547,9 @@
     "price": 35,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2872,7 +3558,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2888,7 +3578,9 @@
     "price": 35,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2897,7 +3589,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2913,7 +3609,9 @@
     "price": 3000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2922,7 +3620,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2938,7 +3640,9 @@
     "price": 14000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2947,7 +3651,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2963,7 +3671,9 @@
     "price": 6000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2972,7 +3682,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -2988,7 +3702,9 @@
     "price": 12000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -2997,7 +3713,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3013,7 +3733,9 @@
     "price": 15000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3022,7 +3744,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3038,7 +3764,9 @@
     "price": 18000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3047,7 +3775,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3063,7 +3795,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3072,7 +3806,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3088,7 +3826,9 @@
     "price": 50000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3097,7 +3837,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3113,7 +3857,9 @@
     "price": 2000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3122,7 +3868,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3138,7 +3888,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3147,7 +3899,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3163,7 +3919,9 @@
     "price": 350,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3172,7 +3930,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3188,7 +3950,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3197,7 +3961,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3213,7 +3981,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3222,7 +3992,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3238,7 +4012,9 @@
     "price": 10000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3247,7 +4023,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3263,7 +4043,9 @@
     "price": 2000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3272,7 +4054,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3288,7 +4074,9 @@
     "price": 2150,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3297,7 +4085,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3313,7 +4105,9 @@
     "price": 4000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3322,7 +4116,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3338,7 +4136,9 @@
     "price": 5000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3347,7 +4147,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3363,7 +4167,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3372,7 +4178,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3388,7 +4198,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3397,7 +4209,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3413,7 +4229,9 @@
     "price": 9000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3422,7 +4240,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3438,7 +4260,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3447,7 +4271,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3463,7 +4291,9 @@
     "price": 2500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3472,7 +4302,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3488,7 +4322,9 @@
     "price": 4000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3497,7 +4333,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3513,7 +4353,9 @@
     "price": 6500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3522,7 +4364,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3538,7 +4384,9 @@
     "price": 800,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3547,7 +4395,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3563,7 +4415,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3572,7 +4426,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3588,7 +4446,9 @@
     "price": 50,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3597,7 +4457,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3613,7 +4477,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3622,7 +4488,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3638,7 +4508,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3647,7 +4519,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3663,7 +4539,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3672,7 +4550,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3688,7 +4570,9 @@
     "price": 20,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3697,7 +4581,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3713,7 +4601,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3722,7 +4612,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3738,7 +4632,9 @@
     "price": 1000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3747,7 +4643,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3763,7 +4663,9 @@
     "price": 1500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3772,7 +4674,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3788,7 +4694,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3797,7 +4705,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3813,7 +4725,9 @@
     "price": 400,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3822,7 +4736,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3838,7 +4756,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3847,7 +4767,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3863,7 +4787,9 @@
     "price": 300,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3872,7 +4798,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3888,7 +4818,9 @@
     "price": 800,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3897,7 +4829,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3913,7 +4849,9 @@
     "price": 500,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3922,7 +4860,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3938,7 +4880,9 @@
     "price": 3000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3947,7 +4891,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3963,7 +4911,9 @@
     "price": 1100,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3972,7 +4922,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -3988,7 +4942,9 @@
     "price": 50,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -3997,7 +4953,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4013,7 +4973,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -4022,7 +4984,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4038,7 +5004,9 @@
     "price": 200,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -4047,7 +5015,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4063,7 +5035,9 @@
     "price": 0,
     "boxSize": 1,
     "isQuest": true,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -4072,7 +5046,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4088,7 +5066,9 @@
     "price": 550,
     "boxSize": 10,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -4097,7 +5077,11 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   },
   {
     "id": 0,
@@ -4113,7 +5097,9 @@
     "price": 25000,
     "boxSize": 1,
     "isQuest": false,
+    "upgrades": null,
     "installedUpgrades": null,
+    "upgradeScheme": null,
     "hasScope": false,
     "hasSilencer": false,
     "hasGrenadeLauncher": false,
@@ -4122,6 +5108,10 @@
     "silencerX": 0,
     "silencerY": 0,
     "grenadeLauncherX": 0,
-    "grenadeLauncherY": 0
+    "grenadeLauncherY": 0,
+    "upgr_icon_x": 0,
+    "upgr_icon_y": 0,
+    "upgr_icon_width": 0,
+    "upgr_icon_height": 0
   }
 ]

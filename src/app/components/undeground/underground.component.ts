@@ -65,8 +65,6 @@ export class UndergroundComponent {
         return;
       }
 
-      console.log(newLyaer);
-
       this.currentLevelImageOverlay.remove();
       this.selectedLevel = newLyaer;
 
@@ -77,14 +75,11 @@ export class UndergroundComponent {
       let layer = Object.values(this.layers).find(x => x.name == this.markerToSearch.type);
 
       if (layer) {
-        console.log(layer)
-        console.log(this.markerToSearch)
         let sLat = this.markerToSearch.lat + this.zShift;
         let sLng = this.markerToSearch.lng + this.xShift;
 
         for (let marker of Object.values(layer._layers) as any[]) {
           if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
-            console.log(marker);
 
             this.fireSearchedMarker(marker);
 
@@ -95,7 +90,6 @@ export class UndergroundComponent {
     }
 
     private async ngOnInit(): Promise<void> {
-        console.log(this.location)
         let minZoom = 1;
         let maxZoom = 3;
         let zoom = 1.5;
@@ -190,14 +184,13 @@ export class UndergroundComponent {
         markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
 
         this.map.on('zoomend', () => {
-          console.log("this.map.on('zoomend')");
           markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
           document.documentElement.style.setProperty(
               `--map-mark-width-underground`,
     `${markWidthUnderground}px`);
       });
 
-        let printClickCoordinates = true;
+        let printClickCoordinates = false;
 
         if (printClickCoordinates) {
             let tempMap = this.map;
@@ -229,7 +222,7 @@ export class UndergroundComponent {
 
         this.addStalkers();
 
-        this.addLevelChangers();
+        //this.addLevelChangers();
 
         let layersToHide = [];
 
@@ -265,7 +258,46 @@ export class UndergroundComponent {
         if (this.markerToSearch) {
           this.goToMarker();
         }
+
+        this.addRuler();
     }
+
+
+
+  private addRuler(): any {
+    let ruler;
+
+    var options = {
+        position: 'topright', // Leaflet control position option
+        circleMarker: {
+            // Leaflet circle marker options for points used in this plugin
+            color: 'red',
+            radius: 2,
+        },
+        lineStyle: {
+            // Leaflet polyline options for lines used in this plugin
+            color: 'red',
+            dashArray: '1,6',
+        },
+        lengthUnit: {
+            factor: 1, //  from km to nm
+            display: this.translate.instant('meterShort'),
+            decimal: 2,
+            label: this.translate.instant('length'),
+        },
+        angleUnit: {
+            display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+            decimal: 2, // Bearing result will be fixed to this value.
+            factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+            label: this.translate.instant('azimuth'),
+        },
+    };
+
+    ruler = L.control.ruler(options);//.addTo(this.map);
+    ruler.addTo(this.map);
+
+    return ruler;
+  }
 
     private fireSearchedMarker(marker: any): void {
       setTimeout(() => {
@@ -558,7 +590,9 @@ export class UndergroundComponent {
             offset: [0, 50],
           }
         );
-        lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p)).openPopup(),
+        lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p), {
+          minWidth: 300,
+        }).openPopup(),
           markers.push(lootBoxMarker);
       }
 
@@ -621,7 +655,6 @@ export class UndergroundComponent {
         );
       }
 
-      console.log(markers)
       this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
     }
 
@@ -690,7 +723,7 @@ export class UndergroundComponent {
         );
         canvasMarker
           .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
-            maxWidth: 400,
+            minWidth: 300,
           })
           .openPopup();
       }
@@ -833,7 +866,6 @@ export class UndergroundComponent {
     }
 
     private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
-      console.log(name, ableToSearch);
       layer.ableToSearch = ableToSearch;
       layer.isShowing = false;
       layer.name = name;

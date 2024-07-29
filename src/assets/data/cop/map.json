@@ -7,3330 +7,3330 @@
       "name": "st_zat_a2_name",
       "description": null,
       "typeId": 1,
-      "x": 143.49185,
+      "x": 561.02637,
       "y": -2.586868,
-      "z": 184.98213,
+      "z": 797.3273,
       "locationId": 1
     },
     {
       "name": "st_zat_b100_name",
       "description": null,
       "typeId": 1,
-      "x": -376.63318,
+      "x": 383.317,
       "y": 39.816605,
-      "z": -353.64056,
+      "z": 613.2978,
       "locationId": 1
     },
     {
       "name": "st_zat_b101_name",
       "description": null,
       "typeId": 1,
-      "x": -433.9988,
+      "x": 363.71707,
       "y": -6.701874,
-      "z": 171.7429,
+      "z": 792.80383,
       "locationId": 1
     },
     {
       "name": "st_zat_b103_name",
       "description": null,
       "typeId": 1,
-      "x": -129.36186,
+      "x": 467.80136,
       "y": 24.158802,
-      "z": -401.26556,
+      "z": 597.02594,
       "locationId": 1
     },
     {
       "name": "st_zat_b104_name",
       "description": null,
       "typeId": 1,
-      "x": -337.01477,
+      "x": 396.85327,
       "y": 9.234135,
-      "z": 385.6001,
+      "z": 865.8717,
       "locationId": 1
     },
     {
       "name": "st_zat_b106_name",
       "description": null,
       "typeId": 1,
-      "x": -171.39989,
+      "x": 453.43835,
       "y": 7.265869,
-      "z": 107.6696,
+      "z": 770.9121,
       "locationId": 1
     },
     {
       "name": "st_zat_b12_name",
       "description": null,
       "typeId": 1,
-      "x": 429.42285,
+      "x": 658.7195,
       "y": 39.98378,
-      "z": -223.29526,
+      "z": 657.83246,
       "locationId": 1
     },
     {
       "name": "st_zat_b14_name",
       "description": null,
       "typeId": 1,
-      "x": 402.37146,
+      "x": 649.4769,
       "y": -5.735779,
-      "z": 229.34863,
+      "z": 812.4858,
       "locationId": 1
     },
     {
       "name": "st_zat_b18_name",
       "description": null,
       "typeId": 1,
-      "x": 151.45041,
+      "x": 563.74554,
       "y": 2.510297,
-      "z": -138.38408,
+      "z": 686.84375,
       "locationId": 1
     },
     {
       "name": "st_zat_b20_name",
       "description": null,
       "typeId": 1,
-      "x": -29.679195,
+      "x": 501.85962,
       "y": 23.292591,
-      "z": 334.56,
+      "z": 848.433,
       "locationId": 1
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -24.507042,
+      "x": 503.62677,
       "y": 30.948023,
-      "z": -441.7107,
+      "z": 583.20715,
       "locationId": 1
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -11.76,
+      "x": 507.982,
       "y": 20.88,
-      "z": 283.17,
+      "z": 830.87476,
       "locationId": 1
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -11.763377,
+      "x": 507.98083,
       "y": 20.877878,
-      "z": 283.17322,
+      "z": 830.87585,
       "locationId": 1
     },
     {
       "name": "st_zat_b28_name",
       "description": null,
       "typeId": 1,
-      "x": 85.46702,
+      "x": 541.20123,
       "y": 42.128143,
-      "z": -424.32416,
+      "z": 589.1476,
       "locationId": 1
     },
     {
       "name": "st_zat_b33_name",
       "description": null,
       "typeId": 1,
-      "x": -161.08434,
+      "x": 456.96286,
       "y": 26.512573,
-      "z": -178.4516,
+      "z": 673.15405,
       "locationId": 1
     },
     {
       "name": "st_zat_b38_name",
       "description": null,
       "typeId": 1,
-      "x": -399.98334,
+      "x": 375.33902,
       "y": 25.126514,
-      "z": -14.971585,
+      "z": 729.0097,
       "locationId": 1
     },
     {
       "name": "st_zat_b39_name",
       "description": null,
       "typeId": 1,
-      "x": -306.03552,
+      "x": 407.43787,
       "y": 36.825348,
-      "z": -162.65009,
+      "z": 678.55286,
       "locationId": 1
     },
     {
       "name": "st_zat_b40_name",
       "description": null,
       "typeId": 1,
-      "x": 324.53683,
+      "x": 622.8834,
       "y": 33.242775,
-      "z": -383.10156,
+      "z": 603.23193,
       "locationId": 1
     },
     {
       "name": "st_zat_b52_name",
       "description": null,
       "typeId": 1,
-      "x": 217.82707,
+      "x": 586.42426,
       "y": 7.331444,
-      "z": -5.39862,
+      "z": 732.28046,
       "locationId": 1
     },
     {
       "name": "st_zat_b53_name",
       "description": null,
       "typeId": 1,
-      "x": 396.20187,
+      "x": 647.369,
       "y": -4.665146,
-      "z": 437.21594,
+      "z": 883.5071,
       "locationId": 1
     },
     {
       "name": "st_zat_b54_name",
       "description": null,
       "typeId": 1,
-      "x": 282.70145,
+      "x": 608.58966,
       "y": 4.008667,
-      "z": -263.19507,
+      "z": 644.2,
       "locationId": 1
     },
     {
       "name": "st_zat_b55_name",
       "description": null,
       "typeId": 1,
-      "x": -67.34701,
+      "x": 488.98978,
       "y": 0.752623,
-      "z": -167.77621,
+      "z": 676.80145,
       "locationId": 1
     },
     {
       "name": "st_zat_b56_name",
       "description": null,
       "typeId": 1,
-      "x": 11.387787,
+      "x": 515.89087,
       "y": 9.170811,
-      "z": -395.05023,
+      "z": 599.1495,
       "locationId": 1
     },
     {
       "name": "st_zat_b5_name",
       "description": null,
       "typeId": 1,
-      "x": 427.00113,
+      "x": 657.892,
       "y": 36.263344,
-      "z": -0.51699,
+      "z": 733.94836,
       "locationId": 1
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": 442.28317,
+      "x": 663.1134,
       "y": 36.872105,
-      "z": 4.625171,
+      "z": 735.70526,
       "locationId": 1
     },
     {
       "name": "st_zat_b7_name",
       "description": null,
       "typeId": 1,
-      "x": 35.81997,
+      "x": 524.23846,
       "y": -5.213918,
-      "z": 36.482555,
+      "z": 746.58984,
       "locationId": 1
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": 140.00266,
+      "x": 559.8342,
       "y": -6.893998,
-      "z": 211.30855,
+      "z": 806.3221,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -283.2985,
+      "x": 415.20636,
       "y": 6.777145,
-      "z": -170.97215,
+      "z": 675.7095,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -308.87015,
+      "x": 406.46936,
       "y": 11.654698,
-      "z": -162.90648,
+      "z": 678.4653,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -326.46323,
+      "x": 400.4584,
       "y": 8.737056,
-      "z": -141.9325,
+      "z": 685.6314,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -123.602,
+      "x": 469.76932,
       "y": -1.753909,
-      "z": 202.18167,
+      "z": 803.20374,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -93.01152,
+      "x": 480.22107,
       "y": -3.398582,
-      "z": 211.48991,
+      "z": 806.38403,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -100.17613,
+      "x": 477.77313,
       "y": 1.409939,
-      "z": 233.04016,
+      "z": 813.7471,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -94.35268,
+      "x": 479.76282,
       "y": 4.879544,
-      "z": 281.64764,
+      "z": 830.3546,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -110.38172,
+      "x": 474.28625,
       "y": 3.245155,
-      "z": 280.726,
+      "z": 830.0397,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -43.25303,
+      "x": 497.2219,
       "y": 6.36041,
-      "z": 255.48889,
+      "z": 821.417,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -468.80078,
+      "x": 351.82642,
       "y": -5.958276,
-      "z": 196.44183,
+      "z": 801.2426,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -454.51968,
+      "x": 356.70578,
       "y": -7.275174,
-      "z": 134.26823,
+      "z": 780,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -390.85895,
+      "x": 378.45654,
       "y": -7.39165,
-      "z": 154.95216,
+      "z": 787.067,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -407.29752,
+      "x": 372.84003,
       "y": -7.046982,
-      "z": 211.1072,
+      "z": 806.2533,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -378.2307,
+      "x": 382.77118,
       "y": -7.898139,
-      "z": 192.06166,
+      "z": 799.7461,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -442.59714,
+      "x": 360.7793,
       "y": -6.965509,
-      "z": 192.37633,
+      "z": 799.8536,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -430.20816,
+      "x": 365.0122,
       "y": -7.65399,
-      "z": 177.49915,
+      "z": 794.7705,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -433.8024,
+      "x": 363.78418,
       "y": -6.841304,
-      "z": 195.5623,
+      "z": 800.94214,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -441.2209,
+      "x": 361.24954,
       "y": -6.805073,
-      "z": 205.18102,
+      "z": 804.2285,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -450.89392,
+      "x": 357.94458,
       "y": -7.26701,
-      "z": 234.02711,
+      "z": 814.0842,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -413.17606,
+      "x": 370.8315,
       "y": -7.127758,
-      "z": 181.579,
+      "z": 796.1645,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -425.7244,
+      "x": 366.54416,
       "y": -7.188637,
-      "z": 160.67697,
+      "z": 789.02295,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -328.9521,
+      "x": 399.60803,
       "y": 11.898042,
-      "z": -181.68759,
+      "z": 672.0484,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 265.4255,
+      "x": 602.6871,
       "y": 24.100414,
-      "z": -305.19403,
+      "z": 629.85034,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 274.73386,
+      "x": 605.86743,
       "y": 15.406221,
-      "z": -283.24146,
+      "z": 637.3508,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 284.31598,
+      "x": 609.1413,
       "y": 8.887198,
-      "z": -255.92822,
+      "z": 646.68286,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 295.7027,
+      "x": 613.03174,
       "y": -2.362805,
-      "z": -231.24956,
+      "z": 655.11475,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 284.14087,
+      "x": 609.0814,
       "y": 10.669503,
-      "z": -238.65163,
+      "z": 652.5857,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 297.8591,
+      "x": 613.76855,
       "y": 11.841661,
-      "z": -243.64902,
+      "z": 650.87823,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 273.78705,
+      "x": 605.5439,
       "y": 20.164566,
-      "z": -265.2826,
+      "z": 643.48676,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 286.7215,
+      "x": 609.96313,
       "y": 20.568834,
-      "z": -269.9284,
+      "z": 641.8994,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 276.04852,
+      "x": 606.3166,
       "y": 27.555761,
-      "z": -295.83047,
+      "z": 633.04956,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 265.28696,
+      "x": 602.6397,
       "y": 28.054129,
-      "z": -291.00156,
+      "z": 634.69946,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 280.64554,
+      "x": 607.8872,
       "y": 5.777414,
-      "z": -271.3593,
+      "z": 641.4106,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": 277.76794,
+      "x": 606.90405,
       "y": 5.777414,
-      "z": -270.6892,
+      "z": 641.6395,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -339.43332,
+      "x": 396.02695,
       "y": 40.08008,
-      "z": -374.7041,
+      "z": 606.1011,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -68.04141,
+      "x": 488.7525,
       "y": 0.741196,
-      "z": -168.10297,
+      "z": 676.6898,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -149.5654,
+      "x": 460.8985,
       "y": 19.98685,
-      "z": -208.33183,
+      "z": 662.94495,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 430.28912,
+      "x": 659.01544,
       "y": 42.415215,
-      "z": -202.55855,
+      "z": 664.9175,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -170.7449,
+      "x": 453.66217,
       "y": 19.961199,
-      "z": -152.1955,
+      "z": 682.1249,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -361.7987,
+      "x": 388.38544,
       "y": 40.02318,
-      "z": -308.25763,
+      "z": 628.80365,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -362.95776,
+      "x": 387.98944,
       "y": 41.973736,
-      "z": -367.50995,
+      "z": 608.5591,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 372.71494,
+      "x": 639.34424,
       "y": 28.117058,
-      "z": -330.96497,
+      "z": 621.0453,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -157.24269,
+      "x": 458.27542,
       "y": 23.351988,
-      "z": -155.04738,
+      "z": 681.15045,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 301.00668,
+      "x": 614.84393,
       "y": 28.861961,
-      "z": -356.39273,
+      "z": 612.3575,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 275.12094,
+      "x": 605.99963,
       "y": 28.091993,
-      "z": -360.09827,
+      "z": 611.09143,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 305.72092,
+      "x": 616.45465,
       "y": 28.491999,
-      "z": -374.4025,
+      "z": 606.20416,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 314.76825,
+      "x": 619.5458,
       "y": 28.491999,
-      "z": -352.5114,
+      "z": 613.6836,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 290.63873,
+      "x": 611.3016,
       "y": 28.091993,
-      "z": -352.29907,
+      "z": 613.75616,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 337.09128,
+      "x": 627.17285,
       "y": 28.091991,
-      "z": -357.11487,
+      "z": 612.1108,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 331.13898,
+      "x": 625.13916,
       "y": 28.091991,
-      "z": -350.50916,
+      "z": 614.3677,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 354.16388,
+      "x": 633.006,
       "y": 28.09199,
-      "z": -362.54187,
+      "z": 610.25653,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 372.55334,
+      "x": 639.28906,
       "y": 28.091991,
-      "z": -350.25916,
+      "z": 614.4531,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 170.88622,
+      "x": 570.3861,
       "y": -6.165302,
-      "z": 18.485535,
+      "z": 740.4409,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 411.80045,
+      "x": 652.6985,
       "y": -6.799996,
-      "z": 197.59999,
+      "z": 801.6383,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 401.30002,
+      "x": 649.11084,
       "y": -11.500001,
-      "z": 248.59995,
+      "z": 819.0633,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 418.3,
+      "x": 654.9192,
       "y": 3.899999,
-      "z": 253.09999,
+      "z": 820.6008,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 419.8998,
+      "x": 655.46576,
       "y": -6.799996,
-      "z": 232.60019,
+      "z": 813.5967,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 423.99976,
+      "x": 656.8666,
       "y": -10.800003,
-      "z": 221.20003,
+      "z": 809.70166,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 412.9001,
+      "x": 653.0742,
       "y": -5.399998,
-      "z": 219.09998,
+      "z": 808.98413,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 413.10013,
+      "x": 653.1426,
       "y": -5.399998,
-      "z": 225.10004,
+      "z": 811.0342,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 378.3002,
+      "x": 641.25256,
       "y": -7.999998,
-      "z": 202.20024,
+      "z": 803.2101,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 366.30026,
+      "x": 637.1526,
       "y": -7.699997,
-      "z": 241.4001,
+      "z": 816.6034,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 384.2003,
+      "x": 643.26843,
       "y": -5.799999,
-      "z": 271.99973,
+      "z": 827.0582,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -347.38962,
+      "x": 393.30853,
       "y": 5.049068,
-      "z": 151.22968,
+      "z": 785.79517,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -376.59952,
+      "x": 383.3285,
       "y": 11.739665,
-      "z": -12.077421,
+      "z": 729.99854,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -380.39862,
+      "x": 382.0305,
       "y": 11.105852,
-      "z": -20.01184,
+      "z": 727.2876,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -322.76785,
+      "x": 401.72098,
       "y": 41.80872,
-      "z": -329.3938,
+      "z": 621.5821,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -323.26135,
+      "x": 401.55237,
       "y": 41.80872,
-      "z": -353.64233,
+      "z": 613.2972,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -362.33447,
+      "x": 388.2024,
       "y": 41.38183,
-      "z": -340.82898,
+      "z": 617.6751,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -325.2887,
+      "x": 400.85968,
       "y": 18.73894,
-      "z": 335.39108,
+      "z": 848.7169,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -335.2274,
+      "x": 397.464,
       "y": 18.73894,
-      "z": 337.9359,
+      "z": 849.5864,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -292.72574,
+      "x": 411.98538,
       "y": 18.934658,
-      "z": 355.6266,
+      "z": 855.63074,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -314.34833,
+      "x": 404.59766,
       "y": 10.246356,
-      "z": 398.33438,
+      "z": 870.2226,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -210.88483,
+      "x": 439.9477,
       "y": 29.923887,
-      "z": -304.53622,
+      "z": 630.07513,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -407.48184,
+      "x": 372.77704,
       "y": 40.011482,
-      "z": -318.98563,
+      "z": 625.13824,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -312.12256,
+      "x": 405.35812,
       "y": 40.25725,
-      "z": -409.11618,
+      "z": 594.3436,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -317.16772,
+      "x": 403.63437,
       "y": 40.25725,
-      "z": -398.11993,
+      "z": 598.1007,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -296.3664,
+      "x": 410.7415,
       "y": 41.946766,
-      "z": -434.65564,
+      "z": 585.6177,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -175.62706,
+      "x": 451.99408,
       "y": 19.92027,
-      "z": -181.81546,
+      "z": 672.0047,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -163.11917,
+      "x": 456.26764,
       "y": 26.631039,
-      "z": -192.30312,
+      "z": 668.42145,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -155.61668,
+      "x": 458.83096,
       "y": 26.503225,
-      "z": -179.28885,
+      "z": 672.868,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -162.5495,
+      "x": 456.46225,
       "y": 26.587912,
-      "z": -177.61807,
+      "z": 673.43884,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -169.93164,
+      "x": 453.94,
       "y": 26.587912,
-      "z": -179.46931,
+      "z": 672.8063,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -88.00842,
+      "x": 481.93045,
       "y": 7.294024,
-      "z": -108.020966,
+      "z": 697.21783,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 397.63705,
+      "x": 647.8593,
       "y": 36.82059,
-      "z": 0.473721,
+      "z": 734.28687,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 407.33957,
+      "x": 651.1743,
       "y": 35.8327,
-      "z": 14.81551,
+      "z": 739.18695,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 430.4797,
+      "x": 659.08057,
       "y": 35.25191,
-      "z": 48.93464,
+      "z": 750.84436,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -343.18768,
+      "x": 394.7442,
       "y": 41.083595,
-      "z": -289.89273,
+      "z": 635.0783,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -337.8097,
+      "x": 396.58167,
       "y": 41.126656,
-      "z": -303.29025,
+      "z": 630.50085,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 280.38428,
+      "x": 607.798,
       "y": 18.806217,
-      "z": 135.22697,
+      "z": 780.3275,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -187.09203,
+      "x": 448.0769,
       "y": -3.455082,
-      "z": 12.875201,
+      "z": 738.52405,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -160.01097,
+      "x": 457.3296,
       "y": 6.57318,
-      "z": -27.159534,
+      "z": 724.84546,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": 10.239902,
+      "x": 515.49866,
       "y": 16.762291,
-      "z": -392.87784,
+      "z": 599.8917,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": -22.930243,
+      "x": 504.1655,
       "y": 24.617636,
-      "z": 295.69522,
+      "z": 835.1542,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": -19.232452,
+      "x": 505.4289,
       "y": 24.691595,
-      "z": 323.55627,
+      "z": 844.6734,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": -49.380314,
+      "x": 495.1284,
       "y": 24.61763,
-      "z": 328.19525,
+      "z": 846.25836,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": -38.78025,
+      "x": 498.7501,
       "y": 24.61763,
-      "z": 355.3252,
+      "z": 855.52783,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": 392.23538,
+      "x": 646.0138,
       "y": -24.465101,
-      "z": 438.12195,
+      "z": 883.81665,
       "locationId": 1
     },
     {
       "name": null,
       "description": null,
       "typeId": 200,
-      "x": -11.76,
+      "x": 507.982,
       "y": 22.42801,
-      "z": 283.17,
+      "z": 830.87476,
       "locationId": 1
     },
     {
       "name": "st_jup_a10_name",
       "description": null,
       "typeId": 1,
-      "x": 43.5771,
+      "x": 287.88885,
       "y": 23.77816,
-      "z": -187.0795,
+      "z": 192.08118,
       "locationId": 2
     },
     {
       "name": "st_jup_a12_name",
       "description": null,
       "typeId": 1,
-      "x": -413.96866,
+      "x": 131.5607,
       "y": 0.007401,
-      "z": -352.88828,
+      "z": 135.42984,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -13.654728,
+      "x": 268.33466,
       "y": 3.440113,
-      "z": 194.6815,
+      "z": 322.51617,
       "locationId": 2
     },
     {
       "name": "st_jup_a6_name",
       "description": null,
       "typeId": 1,
-      "x": -34.58608,
+      "x": 261.1831,
       "y": 3.559986,
-      "z": 197.96819,
+      "z": 323.63913,
       "locationId": 2
     },
     {
       "name": "st_jup_a9_name",
       "description": null,
       "typeId": 1,
-      "x": 357.30133,
+      "x": 395.07794,
       "y": 37.894745,
-      "z": -350.37573,
+      "z": 136.28828,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -57.682076,
+      "x": 253.29196,
       "y": 18.184788,
-      "z": -317.0658,
+      "z": 147.66919,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -126.27693,
+      "x": 229.85538,
       "y": 17.085705,
-      "z": -320.98444,
+      "z": 146.33032,
       "locationId": 2
     },
     {
       "name": "st_jup_b19_name",
       "description": null,
       "typeId": 1,
-      "x": -341.29633,
+      "x": 156.39041,
       "y": -4.103607,
-      "z": 223.68208,
+      "z": 332.4247,
       "locationId": 2
     },
     {
       "name": "st_jup_b1_name",
       "description": null,
       "typeId": 1,
-      "x": -393.6723,
+      "x": 138.4953,
       "y": 14.492844,
-      "z": 343.86987,
+      "z": 373.4889,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -203.54202,
+      "x": 203.45647,
       "y": -3.711806,
-      "z": 66.45288,
+      "z": 278.70474,
       "locationId": 2
     },
     {
       "name": "st_jup_b200_name",
       "description": null,
       "typeId": 1,
-      "x": 383.09036,
+      "x": 403.88922,
       "y": 3.350235,
-      "z": 338.29575,
+      "z": 371.58438,
       "locationId": 2
     },
     {
       "name": "st_jup_b201_name",
       "description": null,
       "typeId": 1,
-      "x": 234.14946,
+      "x": 353.00107,
       "y": 15.171013,
-      "z": -316.69193,
+      "z": 147.79694,
       "locationId": 2
     },
     {
       "name": "st_jup_b202_name",
       "description": null,
       "typeId": 1,
-      "x": 78.44033,
+      "x": 299.80045,
       "y": 4.638961,
-      "z": 329.819,
+      "z": 368.68817,
       "locationId": 2
     },
     {
       "name": "st_jup_b205_name",
       "description": null,
       "typeId": 1,
-      "x": -351.9524,
+      "x": 152.7496,
       "y": 11.049515,
-      "z": -1.46401,
+      "z": 255.49979,
       "locationId": 2
     },
     {
       "name": "st_jup_b206_name",
       "description": null,
       "typeId": 1,
-      "x": 84.71564,
+      "x": 301.94452,
       "y": 5.163366,
-      "z": 25.483765,
+      "z": 264.70697,
       "locationId": 2
     },
     {
       "name": "st_jup_b208_name",
       "description": null,
       "typeId": 1,
-      "x": 401.5894,
+      "x": 410.2097,
       "y": 4.315815,
-      "z": -80.55947,
+      "z": 228.47551,
       "locationId": 2
     },
     {
       "name": "st_jup_b209_name",
       "description": null,
       "typeId": 1,
-      "x": 229.77248,
+      "x": 351.50558,
       "y": 8.08062,
-      "z": -113.3383,
+      "z": 217.27608,
       "locationId": 2
     },
     {
       "name": "st_jup_b211_name",
       "description": null,
       "typeId": 1,
-      "x": 237.06929,
+      "x": 353.9987,
       "y": -5.550003,
-      "z": 439.27933,
+      "z": 406.0871,
       "locationId": 2
     },
     {
       "name": "st_jup_b212_name",
       "description": null,
       "typeId": 1,
-      "x": -78.52741,
+      "x": 246.1698,
       "y": 23.894829,
-      "z": -317.43988,
+      "z": 147.54138,
       "locationId": 2
     },
     {
       "name": "st_jup_b25_name",
       "description": null,
       "typeId": 1,
-      "x": 236.90384,
+      "x": 353.94214,
       "y": -29.63514,
-      "z": 93.8846,
+      "z": 288.07724,
       "locationId": 2
     },
     {
       "name": "st_jup_b32_name",
       "description": null,
       "typeId": 1,
-      "x": -95.09942,
+      "x": 240.5077,
       "y": -0.38876,
-      "z": -149.08904,
+      "z": 205.06125,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -202.9249,
+      "x": 203.66731,
       "y": -3.722699,
-      "z": 64.1372,
+      "z": 277.91354,
       "locationId": 2
     },
     {
       "name": "st_jup_b46_name",
       "description": null,
       "typeId": 1,
-      "x": -169.20255,
+      "x": 215.18913,
       "y": -16.551025,
-      "z": 353.80795,
+      "z": 376.8844,
       "locationId": 2
     },
     {
       "name": "st_jup_b6_name",
       "description": null,
       "typeId": 1,
-      "x": -220.43076,
+      "x": 197.68617,
       "y": 6.253242,
-      "z": 74.41213,
+      "z": 281.42413,
       "locationId": 2
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": -200.84207,
+      "x": 204.37895,
       "y": -3.734575,
-      "z": 65.75305,
+      "z": 278.46564,
       "locationId": 2
     },
     {
       "name": "st_jup_b9_name",
       "description": null,
       "typeId": 1,
-      "x": -139.42899,
+      "x": 225.36177,
       "y": 26.802643,
-      "z": -469.0257,
+      "z": 95.74956,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 236.16835,
+      "x": 353.69086,
       "y": 15.193414,
-      "z": -292.08472,
+      "z": 156.2044,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 238.50003,
+      "x": 354.48752,
       "y": 15.193413,
-      "z": -297.35126,
+      "z": 154.40498,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.94632,
+      "x": 356.34833,
       "y": 15.193414,
-      "z": -306.89728,
+      "z": 151.14343,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.8423,
+      "x": 356.31277,
       "y": 15.193414,
-      "z": -301.26532,
+      "z": 153.06769,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.99016,
+      "x": 356.3633,
       "y": 15.193416,
-      "z": -311.81754,
+      "z": 149.46234,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 239.82396,
+      "x": 354.93985,
       "y": 15.193414,
-      "z": -302.9588,
+      "z": 152.48907,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 234.40858,
+      "x": 353.0896,
       "y": 15.193413,
-      "z": -300.66412,
+      "z": 153.2731,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.55717,
+      "x": 351.43204,
       "y": 15.193414,
-      "z": -309.84427,
+      "z": 150.13654,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.7272,
+      "x": 356.27347,
       "y": 15.193414,
-      "z": -295.91687,
+      "z": 154.89507,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.28098,
+      "x": 351.33765,
       "y": 15.193414,
-      "z": -299.07022,
+      "z": 153.81766,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 232.8372,
+      "x": 352.5527,
       "y": 15.193414,
-      "z": -295.78043,
+      "z": 154.94168,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 234.38933,
+      "x": 353.083,
       "y": 15.193414,
-      "z": -305.59122,
+      "z": 151.58966,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.36975,
+      "x": 351.368,
       "y": 15.193416,
-      "z": -304.33435,
+      "z": 152.0191,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 233.85504,
+      "x": 352.90045,
       "y": 15.193415,
-      "z": -311.88647,
+      "z": 149.43878,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 238.65361,
+      "x": 354.53998,
       "y": 15.193414,
-      "z": -312.60248,
+      "z": 149.19415,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 239.12502,
+      "x": 354.70105,
       "y": 15.193414,
-      "z": -308.02652,
+      "z": 150.7576,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 241.28893,
+      "x": 355.4404,
       "y": 15.193414,
-      "z": -316.9106,
+      "z": 147.7222,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 234.99165,
+      "x": 353.28882,
       "y": 15.193415,
-      "z": -316.89224,
+      "z": 147.72849,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.6874,
+      "x": 351.4765,
       "y": 15.193414,
-      "z": -315.37088,
+      "z": 148.24829,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 244.44743,
+      "x": 356.51953,
       "y": 15.193414,
-      "z": -322.2906,
+      "z": 145.88405,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 239.62373,
+      "x": 354.87143,
       "y": 15.193414,
-      "z": -321.28165,
+      "z": 146.22876,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 235.20705,
+      "x": 353.3624,
       "y": 15.193414,
-      "z": -321.99057,
+      "z": 145.98656,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.5143,
+      "x": 351.4174,
       "y": 15.193414,
-      "z": -320.29016,
+      "z": 146.56754,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.39447,
+      "x": 356.15976,
       "y": 15.193414,
-      "z": -328.68707,
+      "z": 143.69858,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 238.03403,
+      "x": 354.3283,
       "y": 15.193414,
-      "z": -327.4459,
+      "z": 144.12265,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 232.23566,
+      "x": 352.3472,
       "y": 15.193414,
-      "z": -325.70633,
+      "z": 144.71701,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.54564,
+      "x": 351.4281,
       "y": 15.193414,
-      "z": -325.64304,
+      "z": 144.73863,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 243.29367,
+      "x": 356.12534,
       "y": 15.193416,
-      "z": -334.41385,
+      "z": 141.74194,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 237.71954,
+      "x": 354.22086,
       "y": 15.193414,
-      "z": -332.64264,
+      "z": 142.3471,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 232.82,
+      "x": 352.54684,
       "y": 15.193414,
-      "z": -331.64645,
+      "z": 142.68747,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.4737,
+      "x": 351.4035,
       "y": 15.193414,
-      "z": -330.921,
+      "z": 142.93533,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 244.39215,
+      "x": 356.50064,
       "y": 15.193414,
-      "z": -338.93185,
+      "z": 140.19827,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 238.98602,
+      "x": 354.65356,
       "y": 15.193414,
-      "z": -337.6494,
+      "z": 140.63644,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 232.87454,
+      "x": 352.56546,
       "y": 15.193414,
-      "z": -337.98917,
+      "z": 140.52037,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 229.4688,
+      "x": 351.40182,
       "y": 15.193414,
-      "z": -335.06598,
+      "z": 141.51912,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 236.73358,
+      "x": 353.88397,
       "y": 15.193414,
-      "z": -342.2439,
+      "z": 139.06667,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 84.91391,
+      "x": 302.01224,
       "y": 6.290766,
-      "z": 23.961807,
+      "z": 264.18695,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 237.59851,
+      "x": 354.1795,
       "y": -5.13464,
-      "z": 442.1933,
+      "z": 407.0827,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 263.25827,
+      "x": 362.9466,
       "y": -29.524483,
-      "z": 60.71832,
+      "z": 276.74542,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": 259.99655,
+      "x": 361.83215,
       "y": -29.829752,
-      "z": 105.425766,
+      "z": 292.02045,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 101,
-      "x": -365.19693,
+      "x": 148.2244,
       "y": 4.232987,
-      "z": 390.01843,
+      "z": 389.2563,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -93.46606,
+      "x": 241.06577,
       "y": -0.388763,
-      "z": -158.03929,
+      "z": 202.00323,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -104.553406,
+      "x": 237.27759,
       "y": -0.388762,
-      "z": -139.70486,
+      "z": 208.2675,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -370.96457,
+      "x": 146.25378,
       "y": -3.022865,
-      "z": 210.98862,
+      "z": 328.0878,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -361.93518,
+      "x": 149.3388,
       "y": -2.114694,
-      "z": 169.13474,
+      "z": 313.7877,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -314.9588,
+      "x": 165.38908,
       "y": -1.584724,
-      "z": 215.52649,
+      "z": 329.6382,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -339.6881,
+      "x": 156.9399,
       "y": -4.411419,
-      "z": 204.0864,
+      "z": 325.7295,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -352.44373,
+      "x": 152.58173,
       "y": -1.322172,
-      "z": 225.86563,
+      "z": 333.17075,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -346.5844,
+      "x": 154.58365,
       "y": -3.632635,
-      "z": 238.31064,
+      "z": 337.4228,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -320.32706,
+      "x": 163.55492,
       "y": -0.530594,
-      "z": 243.1466,
+      "z": 339.0751,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -327.72656,
+      "x": 161.02676,
       "y": 2.029265,
-      "z": 247.61449,
+      "z": 340.60162,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -304.37442,
+      "x": 169.0054,
       "y": -1.195076,
-      "z": 254.70204,
+      "z": 343.0232,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -350.66318,
+      "x": 153.19008,
       "y": -4.01073,
-      "z": 193.46843,
+      "z": 322.1017,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -331.40707,
+      "x": 159.76926,
       "y": 11.325899,
-      "z": 13.348015,
+      "z": 260.56058,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -332.56085,
+      "x": 159.37505,
       "y": 9.079721,
-      "z": 23.060116,
+      "z": 263.87888,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -203.66058,
+      "x": 203.41597,
       "y": 0.279564,
-      "z": -285.31186,
+      "z": 158.51845,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 156.82718,
+      "x": 326.5826,
       "y": -13.171652,
-      "z": 69.43586,
+      "z": 279.72394,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 251.63725,
+      "x": 358.97607,
       "y": -26.94094,
-      "z": 20.971539,
+      "z": 263.16528,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 229.84204,
+      "x": 351.52936,
       "y": -29.8,
-      "z": 36.377007,
+      "z": 268.4288,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 244.94939,
+      "x": 356.69104,
       "y": -29.8,
-      "z": 48.853622,
+      "z": 272.69165,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 265.17642,
+      "x": 363.60193,
       "y": 27.183182,
-      "z": -240.53073,
+      "z": 173.81866,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 294.36987,
+      "x": 373.5764,
       "y": 28.601654,
-      "z": -189.86137,
+      "z": 191.13069,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 228.53064,
+      "x": 351.0813,
       "y": -10.12911,
-      "z": 191.33093,
+      "z": 321.3714,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 225.85487,
+      "x": 350.16708,
       "y": 28.36708,
-      "z": -417.0219,
+      "z": 113.51751,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 224.9865,
+      "x": 349.8704,
       "y": 30.231264,
-      "z": -432.5835,
+      "z": 108.20064,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 212.52357,
+      "x": 345.6122,
       "y": 28.155455,
-      "z": -428.56528,
+      "z": 109.57353,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 92.99022,
+      "x": 304.77167,
       "y": 20.629013,
-      "z": -390.68552,
+      "z": 122.51578,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 120.08628,
+      "x": 314.02948,
       "y": 16.98902,
-      "z": -439.39734,
+      "z": 105.872574,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 412.6977,
+      "x": 414.00504,
       "y": 27.269676,
-      "z": -449.44174,
+      "z": 102.440735,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 416.45142,
+      "x": 415.28757,
       "y": 28.063557,
-      "z": -454.52222,
+      "z": 100.70491,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 415.76657,
+      "x": 415.0536,
       "y": 28.345505,
-      "z": -460.3995,
+      "z": 98.69684,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 416.01117,
+      "x": 415.13715,
       "y": 27.25118,
-      "z": -466.87836,
+      "z": 96.48323,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 431.83582,
+      "x": 420.54388,
       "y": 27.401146,
-      "z": -459.36984,
+      "z": 99.04863,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 428.25314,
+      "x": 419.31982,
       "y": 27.766058,
-      "z": -454.02728,
+      "z": 100.87401,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 417.86917,
+      "x": 415.77194,
       "y": 28.29867,
-      "z": -428.43744,
+      "z": 109.61721,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 424.85742,
+      "x": 418.15964,
       "y": 30.263723,
-      "z": -435.51764,
+      "z": 107.198135,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 403.90988,
+      "x": 411.00256,
       "y": 27.269676,
-      "z": -446.78195,
+      "z": 103.3495,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 405.0745,
+      "x": 411.40045,
       "y": 27.269676,
-      "z": -451.86563,
+      "z": 101.61258,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 404.28122,
+      "x": 411.12943,
       "y": 27.235134,
-      "z": -441.0658,
+      "z": 105.30251,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 411.7949,
+      "x": 413.6966,
       "y": 27.661621,
-      "z": -426.87393,
+      "z": 110.15141,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 444.62585,
+      "x": 424.91382,
       "y": 28.917439,
-      "z": -441.65814,
+      "z": 105.10013,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 434.85648,
+      "x": 421.57596,
       "y": 27.836256,
-      "z": -399.0634,
+      "z": 119.65334,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 401.8642,
+      "x": 410.3036,
       "y": 27.61684,
-      "z": -464.11554,
+      "z": 97.42719,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 339.4167,
+      "x": 388.96738,
       "y": 27.659897,
-      "z": -247.01945,
+      "z": 171.60168,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 386.29175,
+      "x": 404.983,
       "y": 26.892694,
-      "z": -258.5082,
+      "z": 167.67636,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 475.34082,
+      "x": 435.4081,
       "y": 28.966902,
-      "z": -379.95303,
+      "z": 126.18271,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 495.62192,
+      "x": 442.33746,
       "y": 27.408548,
-      "z": -396.17163,
+      "z": 120.64136,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 501.9277,
+      "x": 444.49197,
       "y": 27.408548,
-      "z": -409.92776,
+      "z": 115.941345,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 481.15402,
+      "x": 437.3943,
       "y": 36.93254,
-      "z": -406.8003,
+      "z": 117.009895,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 468.4411,
+      "x": 433.05072,
       "y": 36.899006,
-      "z": -406.76086,
+      "z": 117.02338,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 492.72095,
+      "x": 441.3463,
       "y": 27.408548,
-      "z": -434.80496,
+      "z": 107.441635,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 469.12177,
+      "x": 433.28326,
       "y": 27.080011,
-      "z": -445.81998,
+      "z": 103.67818,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 457.13123,
+      "x": 429.1865,
       "y": 30.583014,
-      "z": -383.72736,
+      "z": 124.89315,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 464.51654,
+      "x": 431.7098,
       "y": 30.081722,
-      "z": -384.3389,
+      "z": 124.684204,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 453.14963,
+      "x": 427.8261,
       "y": 27.381334,
-      "z": -343.66287,
+      "z": 138.58185,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 114.22257,
+      "x": 312.02603,
       "y": 18.07832,
-      "z": -330.82837,
+      "z": 142.96698,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -70.14112,
+      "x": 249.03511,
       "y": -0.388758,
-      "z": -147.36017,
+      "z": 205.65195,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -378.42844,
+      "x": 143.70361,
       "y": 0.180206,
-      "z": 235.92911,
+      "z": 336.6091,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 99.381004,
+      "x": 306.95517,
       "y": 18.26441,
-      "z": -395.90167,
+      "z": 120.7336,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 137.28928,
+      "x": 319.90717,
       "y": 19.832146,
-      "z": -467.6457,
+      "z": 96.221054,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 123.09889,
+      "x": 315.05878,
       "y": 18.202805,
-      "z": -466.47897,
+      "z": 96.61969,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 108.11525,
+      "x": 309.9394,
       "y": 17.45074,
-      "z": -466.67242,
+      "z": 96.55359,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 94.485054,
+      "x": 305.2824,
       "y": 20.51146,
-      "z": -466.48166,
+      "z": 96.61876,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 147.2677,
+      "x": 323.31647,
       "y": 23.963867,
-      "z": -465.57523,
+      "z": 96.92847,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 161.85428,
+      "x": 328.3002,
       "y": 23.963867,
-      "z": -466.0817,
+      "z": 96.75542,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 173.11568,
+      "x": 332.14783,
       "y": 29.00825,
-      "z": -467.4771,
+      "z": 96.278656,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 405.5319,
+      "x": 411.55673,
       "y": 27.211868,
-      "z": -478.5445,
+      "z": 92.4973,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 416.68344,
+      "x": 415.36682,
       "y": 27.211868,
-      "z": -478.42667,
+      "z": 92.53756,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 430.44025,
+      "x": 420.06708,
       "y": 26.935724,
-      "z": -478.69003,
+      "z": 92.44758,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 439.3321,
+      "x": 423.10513,
       "y": 28.264753,
-      "z": -466.10828,
+      "z": 96.74634,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -110.135635,
+      "x": 235.37032,
       "y": -0.388758,
-      "z": -138.34244,
+      "z": 208.733,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -380.0184,
+      "x": 143.16037,
       "y": -1.791103,
-      "z": 190.49046,
+      "z": 321.08426,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -363.35767,
+      "x": 148.85278,
       "y": -0.522158,
-      "z": 190.20222,
+      "z": 320.98578,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -319.9463,
+      "x": 163.68501,
       "y": -3.083748,
-      "z": 171.05902,
+      "z": 314.44516,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -340.35617,
+      "x": 156.71164,
       "y": 0.114864,
-      "z": 149.661,
+      "z": 307.13416,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -370.95706,
+      "x": 146.25635,
       "y": -0.797318,
-      "z": 145.69075,
+      "z": 305.77765,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -385.76523,
+      "x": 141.19687,
       "y": -1.457481,
-      "z": 170.2152,
+      "z": 314.15686,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -366.85733,
+      "x": 147.65707,
       "y": 0.828766,
-      "z": 262.41528,
+      "z": 345.65857,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -335.0352,
+      "x": 158.52963,
       "y": -3.894409,
-      "z": 228.19165,
+      "z": 333.96545,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -265.12378,
+      "x": 182.41605,
       "y": -0.817934,
-      "z": 202.46994,
+      "z": 325.17725,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -282.93738,
+      "x": 176.32974,
       "y": -0.013603,
-      "z": 215.97816,
+      "z": 329.79254,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -281.18195,
+      "x": 176.9295,
       "y": -0.293398,
-      "z": 187.22278,
+      "z": 319.96777,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -293.20996,
+      "x": 172.81995,
       "y": -1.149149,
-      "z": 159.83875,
+      "z": 310.61157,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -327.4322,
+      "x": 161.12732,
       "y": -2.664598,
-      "z": 191.0264,
+      "z": 321.26733,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -325.25702,
+      "x": 161.87051,
       "y": -3.008316,
-      "z": 204.26987,
+      "z": 325.7922,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -304.9224,
+      "x": 168.81818,
       "y": -1.028055,
-      "z": 135.46928,
+      "z": 302.28534,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -283.8472,
+      "x": 176.01888,
       "y": -0.758499,
-      "z": 136.26561,
+      "z": 302.5574,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -270.54025,
+      "x": 180.56541,
       "y": -1.271055,
-      "z": 167.88516,
+      "z": 313.36078,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -236.18929,
+      "x": 192.302,
       "y": 1.424274,
-      "z": 195.78223,
+      "z": 322.89227,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -389.22067,
+      "x": 140.01627,
       "y": -1.038647,
-      "z": 216.30609,
+      "z": 329.90457,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -267.5213,
+      "x": 181.5969,
       "y": 1.631914,
-      "z": 269.4354,
+      "z": 348.0571,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -281.2475,
+      "x": 176.9071,
       "y": -0.971128,
-      "z": 231.54955,
+      "z": 335.11276,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -333.7381,
+      "x": 158.97281,
       "y": 3.456419,
-      "z": -1.340335,
+      "z": 255.54205,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -322.6466,
+      "x": 162.76242,
       "y": 8.512734,
-      "z": 22.811275,
+      "z": 263.79385,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -326.28876,
+      "x": 161.518,
       "y": 9.790793,
-      "z": -24.33638,
+      "z": 247.68507,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -356.71097,
+      "x": 151.12375,
       "y": 0.102793,
-      "z": -168.29161,
+      "z": 198.50037,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -315.63474,
+      "x": 165.15814,
       "y": 0.332211,
-      "z": -383.46982,
+      "z": 124.98115,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -333.765,
+      "x": 158.96362,
       "y": 1.689793,
-      "z": -347.36847,
+      "z": 137.31578,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -191.87444,
+      "x": 207.4429,
       "y": -0.138472,
-      "z": -263.72235,
+      "z": 165.89487,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 388.26938,
+      "x": 405.65872,
       "y": 3.585407,
-      "z": 329.69562,
+      "z": 368.646,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 374.16028,
+      "x": 400.8381,
       "y": 5.535671,
-      "z": 327.13138,
+      "z": 367.7699,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 404.85693,
+      "x": 411.3261,
       "y": 3.374039,
-      "z": 329.48175,
+      "z": 368.5729,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 146.46257,
+      "x": 323.04138,
       "y": 2.44364,
-      "z": 198.1583,
+      "z": 323.7041,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 40.827824,
+      "x": 286.9495,
       "y": 4.37953,
-      "z": 2.102074,
+      "z": 256.7182,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 53.80484,
+      "x": 291.3833,
       "y": 24.678528,
-      "z": -168.60686,
+      "z": 198.39265,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 39.28353,
+      "x": 286.42188,
       "y": 24.525364,
-      "z": -201.84837,
+      "z": 187.03514,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 125.41674,
+      "x": 315.8507,
       "y": 16.779186,
-      "z": -250.30301,
+      "z": 170.4798,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 34.022846,
+      "x": 284.62448,
       "y": 24.820942,
-      "z": -208.08102,
+      "z": 184.90565,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 66.95973,
+      "x": 295.87793,
       "y": 24.117496,
-      "z": -171.98035,
+      "z": 197.24005,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 146.44142,
+      "x": 323.03418,
       "y": 16.794691,
-      "z": -250.78958,
+      "z": 170.31357,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 202.84329,
+      "x": 342.3048,
       "y": 16.8181,
-      "z": -256.6144,
+      "z": 168.32341,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 204.62999,
+      "x": 342.91522,
       "y": 17.532215,
-      "z": -327.07303,
+      "z": 144.25005,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 298.07333,
+      "x": 374.8417,
       "y": 28.457685,
-      "z": -188.90582,
+      "z": 191.45717,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 216.90503,
+      "x": 347.10922,
       "y": 30.38248,
-      "z": -416.27786,
+      "z": 113.77173,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 234.92508,
+      "x": 353.26608,
       "y": 30.23749,
-      "z": -415.19568,
+      "z": 114.14147,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 115.76259,
+      "x": 312.55222,
       "y": 18.80171,
-      "z": -380.87778,
+      "z": 125.86675,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 104.60675,
+      "x": 308.74063,
       "y": 24.79377,
-      "z": -349.57242,
+      "z": 136.56276,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 124.95812,
+      "x": 315.69403,
       "y": 17.895372,
-      "z": -362.1697,
+      "z": 132.25868,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 112.196236,
+      "x": 311.3337,
       "y": 18.462004,
-      "z": -367.52014,
+      "z": 130.43062,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -389.01056,
+      "x": 140.08804,
       "y": -2.934624,
-      "z": -222.89883,
+      "z": 179.8429,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -401.85483,
+      "x": 135.69962,
       "y": -2.93462,
-      "z": -227.77878,
+      "z": 178.1756,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -317.67007,
+      "x": 164.46272,
       "y": -2.91112,
-      "z": -232.82738,
+      "z": 176.45064,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 377.1661,
+      "x": 401.86508,
       "y": -5.548098,
-      "z": 380.5393,
+      "z": 386.0176,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 420.93124,
+      "x": 416.81818,
       "y": 28.327938,
-      "z": -474.70105,
+      "z": 93.81048,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 428.6015,
+      "x": 419.43887,
       "y": 27.758774,
-      "z": -441.75388,
+      "z": 105.06742,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 419.29178,
+      "x": 416.25803,
       "y": 27.856113,
-      "z": -440.67795,
+      "z": 105.43503,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -220.23187,
+      "x": 197.7541,
       "y": 3.495671,
-      "z": -365.53992,
+      "z": 131.1072,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 2.386347,
+      "x": 273.81537,
       "y": 3.826726,
-      "z": 201.16605,
+      "z": 324.73172,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -38.33404,
+      "x": 259.90253,
       "y": 5.432896,
-      "z": 93.019005,
+      "z": 287.7815,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -31.970388,
+      "x": 262.07678,
       "y": 4.772459,
-      "z": 104.30594,
+      "z": 291.63788,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -25.551266,
+      "x": 264.27,
       "y": 5.273163,
-      "z": 110.129875,
+      "z": 293.6277,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": -396.6265,
+      "x": 137.48595,
       "y": 14.395043,
-      "z": 344.127,
+      "z": 373.57672,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 103,
-      "x": 230.03627,
+      "x": 351.59573,
       "y": 9.283638,
-      "z": -116.80615,
+      "z": 216.09123,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -130.51718,
+      "x": 228.40663,
       "y": 26.787813,
-      "z": -406.81836,
+      "z": 117.00372,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -123.630394,
+      "x": 230.75961,
       "y": 26.914597,
-      "z": -431.46997,
+      "z": 108.58109,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -99.98517,
+      "x": 238.8384,
       "y": 27.092043,
-      "z": -436.0432,
+      "z": 107.01857,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -151.75471,
+      "x": 221.15047,
       "y": 26.85071,
-      "z": -424.67783,
+      "z": 110.90173,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -149.49579,
+      "x": 221.92227,
       "y": 27.13021,
-      "z": -397.9279,
+      "z": 120.041306,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -162.65012,
+      "x": 217.42787,
       "y": 26.800444,
-      "z": -428.54196,
+      "z": 109.5815,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -147.35986,
+      "x": 222.65205,
       "y": 26.74994,
-      "z": -422.039,
+      "z": 111.80334,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -160.50111,
+      "x": 218.16212,
       "y": 26.979618,
-      "z": -434.05316,
+      "z": 107.6985,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -142.37521,
+      "x": 224.35513,
       "y": 26.676785,
-      "z": -424.44556,
+      "z": 110.9811,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -156.7258,
+      "x": 219.45201,
       "y": 26.945398,
-      "z": -416.4792,
+      "z": 113.70294,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -156.28831,
+      "x": 219.60149,
       "y": 26.800438,
-      "z": -408.40182,
+      "z": 116.46271,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -131.24004,
+      "x": 228.15965,
       "y": 26.820164,
-      "z": -399.38773,
+      "z": 119.54253,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -160.32979,
+      "x": 218.22066,
       "y": 26.972183,
-      "z": -412.102,
+      "z": 115.19849,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -135.49416,
+      "x": 226.70616,
       "y": 26.85188,
-      "z": -425.6692,
+      "z": 110.563034,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -152.77202,
+      "x": 220.80289,
       "y": 26.957666,
-      "z": -412.67996,
+      "z": 115.001015,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -142.82231,
+      "x": 224.20238,
       "y": 26.845398,
-      "z": -415.9628,
+      "z": 113.87938,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -161.65562,
+      "x": 217.76765,
       "y": 26.800468,
-      "z": -419.49496,
+      "z": 112.67256,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -140.63707,
+      "x": 224.94899,
       "y": 27.008413,
-      "z": -409.90637,
+      "z": 115.948654,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -135.92105,
+      "x": 226.5603,
       "y": 26.94167,
-      "z": -404.45322,
+      "z": 117.81181,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -142.75995,
+      "x": 224.22368,
       "y": 26.867657,
-      "z": -397.58945,
+      "z": 120.15694,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -120.70874,
+      "x": 231.75784,
       "y": 26.816872,
-      "z": -404.96997,
+      "z": 117.63526,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -138.75208,
+      "x": 225.59305,
       "y": 26.696714,
-      "z": -420.34924,
+      "z": 112.38068,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -160.1369,
+      "x": 218.28656,
       "y": 26.800497,
-      "z": -404.35507,
+      "z": 117.84535,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -139.52524,
+      "x": 225.32889,
       "y": 26.822105,
-      "z": -429.82684,
+      "z": 109.14249,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -141.49533,
+      "x": 224.65576,
       "y": 26.880026,
-      "z": -434.85153,
+      "z": 107.42573,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -143.13533,
+      "x": 224.09543,
       "y": 26.9506,
-      "z": -404.98788,
+      "z": 117.62914,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -121.80388,
+      "x": 231.38368,
       "y": 26.755558,
-      "z": -396.074,
+      "z": 120.67471,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -118.830315,
+      "x": 232.39964,
       "y": 26.7793,
-      "z": -412.58047,
+      "z": 115.035,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -125.210976,
+      "x": 230.21957,
       "y": 26.789173,
-      "z": -410.273,
+      "z": 115.82339,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -125.102974,
+      "x": 230.25648,
       "y": 26.804623,
-      "z": -400.38605,
+      "z": 119.20144,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -135.13657,
+      "x": 226.82834,
       "y": 26.923283,
-      "z": -412.61774,
+      "z": 115.02228,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -105.92359,
+      "x": 236.80945,
       "y": 26.962912,
-      "z": -430.4549,
+      "z": 108.92792,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -128.12247,
+      "x": 229.22482,
       "y": 26.787815,
-      "z": -417.3834,
+      "z": 113.394,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -119.72297,
+      "x": 232.09465,
       "y": 26.787811,
-      "z": -420.17578,
+      "z": 112.43994,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -111.41904,
+      "x": 234.93182,
       "y": 26.841587,
-      "z": -422.21146,
+      "z": 111.744415,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -109.887024,
+      "x": 235.45526,
       "y": 26.787598,
-      "z": -437.50586,
+      "z": 106.51883,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -136.30093,
+      "x": 226.43051,
       "y": 26.967606,
-      "z": -397.7325,
+      "z": 120.10806,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -120.09494,
+      "x": 231.96756,
       "y": 26.980331,
-      "z": -436.0908,
+      "z": 107.00232,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -114.70311,
+      "x": 233.80977,
       "y": 26.80046,
-      "z": -430.23227,
+      "z": 109.00398,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -146.82639,
+      "x": 222.83432,
       "y": 26.85802,
-      "z": -429.9999,
+      "z": 109.08336,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -130.67995,
+      "x": 228.35101,
       "y": 26.81923,
-      "z": -434.10095,
+      "z": 107.682175,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -130.15236,
+      "x": 228.53128,
       "y": 26.486778,
-      "z": -426.5368,
+      "z": 110.2666,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -123.39338,
+      "x": 230.84059,
       "y": 26.785286,
-      "z": -425.45724,
+      "z": 110.63544,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -136.3195,
+      "x": 226.42416,
       "y": 26.877071,
-      "z": -437.2695,
+      "z": 106.599594,
       "locationId": 2
     },
     {
       "name": null,
       "description": null,
       "typeId": 201,
-      "x": -154.05383,
+      "x": 220.36493,
       "y": 26.94415,
-      "z": -436.8236,
+      "z": 106.75194,
       "locationId": 2
     },
     {
@@ -3544,1071 +3544,1071 @@
       "name": "st_pri_a16_name",
       "description": null,
       "typeId": 1,
-      "x": 141.68793,
+      "x": 815.1739,
       "y": 11.409023,
-      "z": -186.04816,
+      "z": 209.74362,
       "locationId": 4
     },
     {
       "name": "st_pri_a17_name",
       "description": null,
       "typeId": 1,
-      "x": 203.16351,
+      "x": 836.07556,
       "y": -0.706955,
-      "z": 26.365128,
+      "z": 281.96414,
       "locationId": 4
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": 110.91876,
+      "x": 804.7124,
       "y": -0.093644,
-      "z": -191.57773,
+      "z": 207.86359,
       "locationId": 4
     },
     {
       "name": "st_pri_a18_name",
       "description": null,
       "typeId": 1,
-      "x": -180.02274,
+      "x": 705.79224,
       "y": 8.148033,
-      "z": -356.81125,
+      "z": 151.68417,
       "locationId": 4
     },
     {
       "name": "st_pri_a21_name",
       "description": null,
       "typeId": 1,
-      "x": -193.80168,
+      "x": 701.1074,
       "y": 5.369312,
-      "z": -200.99059,
+      "z": 204.66321,
       "locationId": 4
     },
     {
       "name": "st_pri_a25_name",
       "description": null,
       "typeId": 1,
-      "x": -78.81257,
+      "x": 740.20374,
       "y": 8.688965,
-      "z": -93.67555,
+      "z": 241.15031,
       "locationId": 4
     },
     {
       "name": "st_pri_a28_name",
       "description": null,
       "typeId": 1,
-      "x": 64.38617,
+      "x": 788.8913,
       "y": 0.179013,
-      "z": 367.68195,
+      "z": 398.01184,
       "locationId": 4
     },
     {
       "name": "st_pri_b301_name",
       "description": null,
       "typeId": 1,
-      "x": 39.413467,
+      "x": 780.4006,
       "y": 9.059399,
-      "z": 147.46773,
+      "z": 323.13904,
       "locationId": 4
     },
     {
       "name": "st_pri_b303_name",
       "description": null,
       "typeId": 1,
-      "x": 8.022982,
+      "x": 769.72784,
       "y": 9.332054,
-      "z": 272.78137,
+      "z": 365.74567,
       "locationId": 4
     },
     {
       "name": "st_pri_b304_name",
       "description": null,
       "typeId": 1,
-      "x": -108.58474,
+      "x": 730.0812,
       "y": 5.8432,
-      "z": -252.08914,
+      "z": 187.2897,
       "locationId": 4
     },
     {
       "name": "st_pri_b306_name",
       "description": null,
       "typeId": 1,
-      "x": -61.06946,
+      "x": 746.2364,
       "y": 20.902199,
-      "z": 94.43179,
+      "z": 305.1068,
       "locationId": 4
     },
     {
       "name": "st_pri_b35_name",
       "description": null,
       "typeId": 1,
-      "x": 43.426632,
+      "x": 781.7651,
       "y": -0.506813,
-      "z": -222.91309,
+      "z": 197.20953,
       "locationId": 4
     },
     {
       "name": "st_pri_b36_name",
       "description": null,
       "typeId": 1,
-      "x": 272.36328,
+      "x": 859.6035,
       "y": 5.851868,
-      "z": 273.5663,
+      "z": 366.01257,
       "locationId": 4
     },
     {
       "name": "st_name_teleport",
       "description": null,
       "typeId": 200,
-      "x": 100.60828,
+      "x": 801.2068,
       "y": -0.288,
-      "z": -193.30585,
+      "z": 207.27602,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -140.4474,
+      "x": 719.24786,
       "y": -11.176518,
-      "z": -210.8772,
+      "z": 201.30176,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -139.83234,
+      "x": 719.45703,
       "y": -11.176518,
-      "z": -216.23296,
+      "z": 199.4808,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -140.70056,
+      "x": 719.1618,
       "y": -11.177017,
-      "z": -222.17372,
+      "z": 197.46094,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -134.27748,
+      "x": 721.34564,
       "y": -11.177887,
-      "z": -225.03375,
+      "z": 196.48853,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -138.33008,
+      "x": 719.9678,
       "y": -11.177887,
-      "z": -227.31639,
+      "z": 195.71243,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -129.17384,
+      "x": 723.0809,
       "y": -11.17702,
-      "z": -226.12473,
+      "z": 196.11758,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -123.87391,
+      "x": 724.8829,
       "y": -11.176456,
-      "z": -225.78525,
+      "z": 196.23302,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -121.07192,
+      "x": 725.8356,
       "y": -11.178059,
-      "z": -230.8449,
+      "z": 194.51273,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -114.87498,
+      "x": 727.9425,
       "y": -11.177305,
-      "z": -230.88985,
+      "z": 194.49747,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -114.359,
+      "x": 728.1179,
       "y": -11.177267,
-      "z": -225.68658,
+      "z": 196.26657,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -110.009895,
+      "x": 729.5966,
       "y": -11.177267,
-      "z": -224.76105,
+      "z": 196.58124,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -118.76135,
+      "x": 726.62115,
       "y": -11.176456,
-      "z": -225.55771,
+      "z": 196.31038,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -138.57253,
+      "x": 719.8854,
       "y": -11.176518,
-      "z": -205.51039,
+      "z": 203.12646,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -135.45999,
+      "x": 720.9436,
       "y": -11.177017,
-      "z": -219.90907,
+      "z": 198.23091,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 100,
-      "x": -143.94249,
+      "x": 718.0596,
       "y": -11.176518,
-      "z": -206.51187,
+      "z": 202.78596,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 150.98239,
+      "x": 818.334,
       "y": 2.111962,
-      "z": -26.17475,
+      "z": 264.1006,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 129.18645,
+      "x": 810.9234,
       "y": -0.351816,
-      "z": 162.44025,
+      "z": 328.22968,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 129.14697,
+      "x": 810.91,
       "y": -0.202629,
-      "z": -81.21826,
+      "z": 245.38579,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 269.08234,
+      "x": 858.48804,
       "y": -0.223046,
-      "z": 267.16495,
+      "z": 363.8361,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 240.24922,
+      "x": 848.68475,
       "y": -0.178907,
-      "z": 271.18094,
+      "z": 365.20154,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 176.95447,
+      "x": 827.16455,
       "y": -0.507109,
-      "z": -80.52947,
+      "z": 245.61998,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 128.58087,
+      "x": 810.71747,
       "y": -0.442676,
-      "z": -140.02364,
+      "z": 225.39197,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 125.06899,
+      "x": 809.52344,
       "y": 0.623729,
-      "z": -134.09718,
+      "z": 227.40697,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 124.92772,
+      "x": 809.4754,
       "y": 0.623729,
-      "z": -136.14162,
+      "z": 226.71185,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 175.23506,
+      "x": 826.57996,
       "y": -0.508167,
-      "z": -190.3947,
+      "z": 208.2658,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 169.90395,
+      "x": 824.76733,
       "y": -0.446498,
-      "z": -213.37871,
+      "z": 200.45123,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 185.32484,
+      "x": 830.01044,
       "y": -0.482252,
-      "z": -232.66635,
+      "z": 193.89343,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 189.74165,
+      "x": 831.51215,
       "y": -0.482252,
-      "z": -234.34518,
+      "z": 193.32263,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 189.11002,
+      "x": 831.2974,
       "y": -0.473206,
-      "z": -229.56653,
+      "z": 194.94739,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 194.88693,
+      "x": 833.26154,
       "y": -0.454293,
-      "z": -233.06776,
+      "z": 193.75696,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 180.62418,
+      "x": 828.41223,
       "y": 0.588289,
-      "z": -233.94965,
+      "z": 193.45712,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 173.64893,
+      "x": 826.04065,
       "y": -0.446508,
-      "z": -211.3796,
+      "z": 201.13092,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 102.858444,
+      "x": 801.97186,
       "y": 0.787027,
-      "z": -76.97046,
+      "z": 246.83005,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 106.215454,
+      "x": 803.1133,
       "y": 0.483238,
-      "z": -74.185265,
+      "z": 247.77701,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 111.369125,
+      "x": 804.8655,
       "y": 0.469159,
-      "z": -84.0688,
+      "z": 244.41661,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 10.554968,
+      "x": 770.5887,
       "y": 1.110571,
-      "z": -284.544,
+      "z": 176.25504,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 4.067414,
+      "x": 768.38293,
       "y": 0.808336,
-      "z": -341.72174,
+      "z": 156.8146,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 136.49638,
+      "x": 813.40875,
       "y": -0.304424,
-      "z": -57.575153,
+      "z": 253.42445,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 90.23433,
+      "x": 797.6797,
       "y": 0.263453,
-      "z": -47.32478,
+      "z": 256.90958,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -102.94486,
+      "x": 731.9988,
       "y": 0.729936,
-      "z": 103.93552,
+      "z": 308.33807,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -22.213257,
+      "x": 759.4475,
       "y": -0.047159,
-      "z": 150.14148,
+      "z": 324.0481,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 240.60158,
+      "x": 848.80457,
       "y": 0.500052,
-      "z": 305.70673,
+      "z": 376.9403,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 24.808369,
+      "x": 775.4349,
       "y": 0.141477,
-      "z": -46.773277,
+      "z": 257.0971,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 29.950142,
+      "x": 777.18304,
       "y": 0.141477,
-      "z": -44.650154,
+      "z": 257.81894,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 35.164886,
+      "x": 778.95605,
       "y": 0.141477,
-      "z": -40.092796,
+      "z": 259.36847,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 41.586994,
+      "x": 781.1396,
       "y": 0.141477,
-      "z": -40.239243,
+      "z": 259.31866,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -25.254648,
+      "x": 758.41345,
       "y": 0.748292,
-      "z": -339.3003,
+      "z": 157.63791,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 0.366341,
+      "x": 767.1245,
       "y": 1.488787,
-      "z": -339.5031,
+      "z": 157.56894,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 24.975914,
+      "x": 775.4918,
       "y": 2.111333,
-      "z": 274.6871,
+      "z": 366.39362,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 21.802795,
+      "x": 774.41296,
       "y": 0.630949,
-      "z": 282.89896,
+      "z": 369.18564,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 17.946388,
+      "x": 773.1018,
       "y": 1.253334,
-      "z": 287.49326,
+      "z": 370.7477,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 11.709778,
+      "x": 770.9813,
       "y": 1.290964,
-      "z": 287.53323,
+      "z": 370.7613,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.411256,
+      "x": 769.51984,
       "y": 2.076946,
-      "z": 284.4362,
+      "z": 369.7083,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -1.637032,
+      "x": 766.4434,
       "y": 2.220946,
-      "z": 265.64865,
+      "z": 363.32053,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -5.742256,
+      "x": 765.0476,
       "y": 2.220946,
-      "z": 265.76523,
+      "z": 363.36017,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -3.300639,
+      "x": 765.8778,
       "y": 0.676969,
-      "z": 272.267,
+      "z": 365.57077,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -5.392007,
+      "x": 765.16675,
       "y": 0.952208,
-      "z": 276.93695,
+      "z": 367.15857,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -5.877588,
+      "x": 765.0016,
       "y": 0.844672,
-      "z": 285.96005,
+      "z": 370.2264,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 6.27398,
+      "x": 769.1332,
       "y": 0.770539,
-      "z": 278.1251,
+      "z": 367.56253,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 9.057067,
+      "x": 770.0794,
       "y": 1.707153,
-      "z": 266.23544,
+      "z": 363.52005,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 15.552341,
+      "x": 772.28784,
       "y": 1.166426,
-      "z": 271.0529,
+      "z": 365.15796,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 21.92595,
+      "x": 774.45483,
       "y": 0.819591,
-      "z": 262.876,
+      "z": 362.37784,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 11.012247,
+      "x": 770.74414,
       "y": 0.671521,
-      "z": 258.6371,
+      "z": 360.93658,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 9.064329,
+      "x": 770.08185,
       "y": 0.682518,
-      "z": 258.55737,
+      "z": 360.90952,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 4.114822,
+      "x": 768.39905,
       "y": 2.164786,
-      "z": 263.5857,
+      "z": 362.61914,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 18.29544,
+      "x": 773.22046,
       "y": 4.495299,
-      "z": 257.86194,
+      "z": 360.67307,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -2.629048,
+      "x": 766.10614,
       "y": 4.619898,
-      "z": 258.03052,
+      "z": 360.73038,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 10.837788,
+      "x": 770.6848,
       "y": 4.665,
-      "z": 258.5938,
+      "z": 360.92188,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 8.928824,
+      "x": 770.0358,
       "y": 4.665,
-      "z": 258.53796,
+      "z": 360.90292,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 10.001761,
+      "x": 770.40063,
       "y": 5.272432,
-      "z": 275.67474,
+      "z": 366.7294,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 9.906162,
+      "x": 770.3681,
       "y": 6.958346,
-      "z": 275.69595,
+      "z": 366.7366,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 14.842957,
+      "x": 772.04663,
       "y": 5.272446,
-      "z": 280.92093,
+      "z": 368.51312,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 14.814203,
+      "x": 772.0368,
       "y": 5.272434,
-      "z": 282.66162,
+      "z": 369.10495,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 14.818988,
+      "x": 772.03845,
       "y": 6.958346,
-      "z": 282.5433,
+      "z": 369.0647,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 14.739709,
+      "x": 772.0115,
       "y": 6.958359,
-      "z": 280.8353,
+      "z": 368.484,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.715986,
+      "x": 769.6234,
       "y": 5.272444,
-      "z": 280.8167,
+      "z": 368.47766,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.711011,
+      "x": 769.6217,
       "y": 6.958358,
-      "z": 280.82333,
+      "z": 368.47995,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.481772,
+      "x": 769.5438,
       "y": 4.528068,
-      "z": 282.69107,
+      "z": 369.11496,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.78127,
+      "x": 769.6456,
       "y": 6.958346,
-      "z": 282.51117,
+      "z": 369.05377,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -3.994884,
+      "x": 765.6417,
       "y": 4.53818,
-      "z": 286.0733,
+      "z": 370.26492,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -6.019292,
+      "x": 764.9534,
       "y": 4.619377,
-      "z": 286.1655,
+      "z": 370.29626,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 25.307653,
+      "x": 775.6046,
       "y": 4.698184,
-      "z": 280.06897,
+      "z": 368.22345,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -3.84002,
+      "x": 765.6944,
       "y": 0.774216,
-      "z": 286.11484,
+      "z": 370.27905,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 13.594168,
+      "x": 771.622,
       "y": 1.321334,
-      "z": 255.1028,
+      "z": 359.73495,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 9.352402,
+      "x": 770.1798,
       "y": 1.9087,
-      "z": 254.78572,
+      "z": 359.62717,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 7.209162,
+      "x": 769.4511,
       "y": -3.45395,
-      "z": 255.17894,
+      "z": 359.76083,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 46.63403,
+      "x": 782.8556,
       "y": -0.390127,
-      "z": 246.14394,
+      "z": 356.68893,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 47.135445,
+      "x": 783.02606,
       "y": 0.493623,
-      "z": 248.89082,
+      "z": 357.62286,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 47.26541,
+      "x": 783.07025,
       "y": 0.421623,
-      "z": 251.74704,
+      "z": 358.594,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 61.841946,
+      "x": 788.02625,
       "y": -1.641887,
-      "z": 284.4127,
+      "z": 369.70032,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 94.64181,
+      "x": 799.1782,
       "y": -0.419777,
-      "z": -1.986938,
+      "z": 272.32443,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 107.97567,
+      "x": 803.71173,
       "y": 2.151278,
-      "z": 8.150126,
+      "z": 275.77106,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 101.06781,
+      "x": 801.36304,
       "y": 0.854836,
-      "z": -88.08428,
+      "z": 243.05135,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 55.262966,
+      "x": 785.7894,
       "y": 0.675254,
-      "z": -149.29993,
+      "z": 222.23802,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -84.5075,
+      "x": 738.26746,
       "y": 0.751012,
-      "z": 78.01793,
+      "z": 299.52612,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 243.85837,
+      "x": 849.91187,
       "y": 1.527508,
-      "z": 300.74188,
+      "z": 375.25226,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 283.2099,
+      "x": 863.2914,
       "y": 0.885524,
-      "z": 255.29762,
+      "z": 359.80118,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 276.93765,
+      "x": 861.1588,
       "y": 0.764605,
-      "z": 282.31717,
+      "z": 368.98785,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 203.80994,
+      "x": 836.2954,
       "y": -0.133946,
-      "z": 193.46059,
+      "z": 338.7766,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -168.53098,
+      "x": 709.69946,
       "y": -0.084227,
-      "z": -288.3389,
+      "z": 174.96478,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 131.6848,
+      "x": 811.7728,
       "y": 0.013554,
-      "z": 294.5945,
+      "z": 373.16214,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 125.28809,
+      "x": 809.59796,
       "y": 0.666803,
-      "z": 296.6139,
+      "z": 373.84872,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": 144.34116,
+      "x": 816.076,
       "y": 0.968116,
-      "z": 311.49002,
+      "z": 378.9066,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -128.00061,
+      "x": 723.4798,
       "y": 3.839362,
-      "z": -147.59416,
+      "z": 222.818,
       "locationId": 4
     },
     {
       "name": null,
       "description": null,
       "typeId": 102,
-      "x": -11.18451,
+      "x": 763.19727,
       "y": 0.601643,
-      "z": -0.128354,
+      "z": 272.95636,
       "locationId": 4
     },
     {
@@ -4680,7 +4680,7 @@
         },
         {
           "uniqueName": "ammo_9x18_pmm",
-          "count": 1,
+          "count": 50,
           "probability": 0
         },
         {
@@ -4696,9 +4696,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -447.11,
+      "x": 359.23743,
       "y": -6.13,
-      "z": 183.64,
+      "z": 796.86865,
       "locationId": 1
     },
     {
@@ -4715,9 +4715,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -308.66742,
+      "x": 406.53864,
       "y": 35.397408,
-      "z": -156.5353,
+      "z": 680.6421,
       "locationId": 1
     },
     {
@@ -4734,9 +4734,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -87.75251,
+      "x": 482.01788,
       "y": 7.980204,
-      "z": -174.42804,
+      "z": 674.52875,
       "locationId": 1
     },
     {
@@ -4753,9 +4753,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 412.92,
+      "x": 653.081,
       "y": 0.14,
-      "z": 232.43,
+      "z": 813.5386,
       "locationId": 1
     },
     {
@@ -4797,9 +4797,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -413.8215,
+      "x": 370.611,
       "y": 34.530537,
-      "z": -346.1447,
+      "z": 615.8589,
       "locationId": 1
     },
     {
@@ -4871,9 +4871,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -316.23093,
+      "x": 403.95444,
       "y": 13.5333605,
-      "z": 420.33075,
+      "z": 877.73804,
       "locationId": 1
     },
     {
@@ -4925,9 +4925,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 430.292,
+      "x": 659.0164,
       "y": 34.378544,
-      "z": -244.27574,
+      "z": 650.6641,
       "locationId": 1
     },
     {
@@ -4979,9 +4979,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 334.06845,
+      "x": 626.1401,
       "y": 37.866848,
-      "z": -402.1531,
+      "z": 596.72266,
       "locationId": 1
     },
     {
@@ -5033,9 +5033,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 29.985315,
+      "x": 522.245,
       "y": 5.274947,
-      "z": 365.8994,
+      "z": 859.1406,
       "locationId": 1
     },
     {
@@ -5097,9 +5097,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 121.125,
+      "x": 553.3844,
       "y": -4.84859,
-      "z": 184.38184,
+      "z": 797.12213,
       "locationId": 1
     },
     {
@@ -5131,9 +5131,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -435.20822,
+      "x": 363.30386,
       "y": 2.969249,
-      "z": 61.25553,
+      "z": 755.05396,
       "locationId": 1
     },
     {
@@ -5155,9 +5155,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -417.09155,
+      "x": 369.4937,
       "y": 11.454626,
-      "z": 3.2202575,
+      "z": 735.2252,
       "locationId": 1
     },
     {
@@ -5179,9 +5179,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -411.16495,
+      "x": 371.51865,
       "y": 0.7763844,
-      "z": 21.553246,
+      "z": 741.489,
       "locationId": 1
     },
     {
@@ -5203,9 +5203,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -305.57184,
+      "x": 407.59628,
       "y": 24.723534,
-      "z": -205.57843,
+      "z": 663.8857,
       "locationId": 1
     },
     {
@@ -5222,9 +5222,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -142.52602,
+      "x": 463.30362,
       "y": 25.508883,
-      "z": -414.99457,
+      "z": 592.3352,
       "locationId": 1
     },
     {
@@ -5241,9 +5241,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -426.5636,
+      "x": 366.25745,
       "y": 26.070286,
-      "z": -383.57068,
+      "z": 603.07166,
       "locationId": 1
     },
     {
@@ -5265,9 +5265,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -62.968365,
+      "x": 490.4858,
       "y": 21.950935,
-      "z": -271.7456,
+      "z": 641.27856,
       "locationId": 1
     },
     {
@@ -5289,9 +5289,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -427.61563,
+      "x": 365.89798,
       "y": 40.74432,
-      "z": -391.38782,
+      "z": 600.4008,
       "locationId": 1
     },
     {
@@ -5313,9 +5313,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -390.8185,
+      "x": 378.47034,
       "y": 7.016863,
-      "z": -26.413458,
+      "z": 725.1004,
       "locationId": 1
     },
     {
@@ -5362,9 +5362,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -179.67262,
+      "x": 450.61188,
       "y": 10.885625,
-      "z": -128.4338,
+      "z": 690.2434,
       "locationId": 1
     },
     {
@@ -5386,9 +5386,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 375.82968,
+      "x": 640.40845,
       "y": 38.038925,
-      "z": -8.722992,
+      "z": 731.14465,
       "locationId": 1
     },
     {
@@ -5410,9 +5410,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 213.3872,
+      "x": 584.90735,
       "y": -6.943629,
-      "z": 288.87012,
+      "z": 832.82227,
       "locationId": 1
     },
     {
@@ -5434,9 +5434,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 82.4376,
+      "x": 540.16614,
       "y": 10.072173,
-      "z": 373.9714,
+      "z": 861.89856,
       "locationId": 1
     },
     {
@@ -5458,9 +5458,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -117.56701,
+      "x": 471.83127,
       "y": 24.416756,
-      "z": -382.991,
+      "z": 603.2698,
       "locationId": 1
     },
     {
@@ -5482,9 +5482,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 425.44354,
+      "x": 657.35986,
       "y": 36.643646,
-      "z": -39.88543,
+      "z": 720.49744,
       "locationId": 1
     },
     {
@@ -5511,9 +5511,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 522.8428,
+      "x": 690.63794,
       "y": 7.94238,
-      "z": -287.84998,
+      "z": 635.77625,
       "locationId": 1
     },
     {
@@ -5530,9 +5530,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 215.62871,
+      "x": 585.67316,
       "y": 21.204176,
-      "z": 19.208578,
+      "z": 740.6879,
       "locationId": 1
     },
     {
@@ -5564,9 +5564,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 55.09016,
+      "x": 530.82245,
       "y": 1.992927,
-      "z": 573.6841,
+      "z": 930.1337,
       "locationId": 1
     },
     {
@@ -5598,9 +5598,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -425.2782,
+      "x": 366.69662,
       "y": 18.05725,
-      "z": 464.1266,
+      "z": 892.70154,
       "locationId": 1
     },
     {
@@ -5632,9 +5632,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -111.874664,
+      "x": 473.77615,
       "y": -2.7101436,
-      "z": 664.5875,
+      "z": 961.1924,
       "locationId": 1
     },
     {
@@ -5656,9 +5656,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -342.88522,
+      "x": 394.84753,
       "y": 41.144676,
-      "z": -290.01355,
+      "z": 635.03705,
       "locationId": 1
     },
     {
@@ -5680,9 +5680,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -130.75784,
+      "x": 467.3244,
       "y": 27.525427,
-      "z": -449.8706,
+      "z": 580.4192,
       "locationId": 1
     },
     {
@@ -5704,9 +5704,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 188.56078,
+      "x": 576.4249,
       "y": -5.294222,
-      "z": -45.627106,
+      "z": 718.53577,
       "locationId": 1
     },
     {
@@ -5733,9 +5733,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -162.42757,
+      "x": 456.5039,
       "y": 7.4786296,
-      "z": 102.954,
+      "z": 769.3009,
       "locationId": 1
     },
     {
@@ -5762,9 +5762,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 58.198784,
+      "x": 531.8846,
       "y": 9.05303,
-      "z": 751.9421,
+      "z": 991.0386,
       "locationId": 1
     },
     {
@@ -5786,9 +5786,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -292.56458,
+      "x": 412.04044,
       "y": 17.126905,
-      "z": 564.8943,
+      "z": 927.13055,
       "locationId": 1
     },
     {
@@ -5805,9 +5805,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -403.87122,
+      "x": 374.01068,
       "y": 13.462785,
-      "z": 4.083908,
+      "z": 735.5203,
       "locationId": 1
     },
     {
@@ -5829,9 +5829,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 513.9517,
+      "x": 687.6002,
       "y": 13.805919,
-      "z": 313.8049,
+      "z": 841.3417,
       "locationId": 1
     },
     {
@@ -5853,9 +5853,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 385.06512,
+      "x": 643.5639,
       "y": -6.4598527,
-      "z": 260.71808,
+      "z": 823.2037,
       "locationId": 1
     },
     {
@@ -5882,9 +5882,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -107.66053,
+      "x": 475.216,
       "y": 6.2207704,
-      "z": 291.3625,
+      "z": 833.6738,
       "locationId": 1
     },
     {
@@ -5906,9 +5906,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 231.38104,
+      "x": 591.0552,
       "y": 8.464966,
-      "z": -17.86277,
+      "z": 728.02185,
       "locationId": 1
     },
     {
@@ -5930,9 +5930,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 374.38135,
+      "x": 639.9136,
       "y": 34.398018,
-      "z": -23.051147,
+      "z": 726.2492,
       "locationId": 1
     },
     {
@@ -5954,9 +5954,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -398.55493,
+      "x": 375.82706,
       "y": 11.922311,
-      "z": -31.522186,
+      "z": 723.3549,
       "locationId": 1
     },
     {
@@ -5978,9 +5978,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -421.55698,
+      "x": 367.96805,
       "y": 35.66986,
-      "z": -321.08984,
+      "z": 624.4193,
       "locationId": 1
     },
     {
@@ -6002,9 +6002,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 397.32648,
+      "x": 647.7532,
       "y": 35.376266,
-      "z": -426.54196,
+      "z": 588.38983,
       "locationId": 1
     },
     {
@@ -6021,9 +6021,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -1.164616,
+      "x": 511.6021,
       "y": 26.330303,
-      "z": -303.93274,
+      "z": 630.2813,
       "locationId": 1
     },
     {
@@ -6050,9 +6050,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 164.86356,
+      "x": 568.32837,
       "y": 10.226157,
-      "z": 535.496,
+      "z": 917.0861,
       "locationId": 1
     },
     {
@@ -6079,9 +6079,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -520.5614,
+      "x": 334.1415,
       "y": 6.1215644,
-      "z": 97.307884,
+      "z": 767.3718,
       "locationId": 1
     },
     {
@@ -6103,9 +6103,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 422.83197,
+      "x": 656.4676,
       "y": 8.569797,
-      "z": -295.83057,
+      "z": 633.04956,
       "locationId": 1
     },
     {
@@ -6127,9 +6127,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 313.29492,
+      "x": 619.0424,
       "y": 40.637775,
-      "z": -421.1073,
+      "z": 590.24664,
       "locationId": 1
     },
     {
@@ -6151,9 +6151,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -222.1869,
+      "x": 436.08612,
       "y": 29.006075,
-      "z": -440.2247,
+      "z": 583.7149,
       "locationId": 1
     },
     {
@@ -6185,9 +6185,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -139.87907,
+      "x": 464.208,
       "y": 28.445648,
-      "z": -421.4894,
+      "z": 590.1161,
       "locationId": 1
     },
     {
@@ -6219,9 +6219,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -429.86105,
+      "x": 365.1308,
       "y": 3.5886493,
-      "z": 4.858255,
+      "z": 735.7849,
       "locationId": 1
     },
     {
@@ -6253,9 +6253,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -515.5656,
+      "x": 335.84842,
       "y": 34.430943,
-      "z": -230.11855,
+      "z": 655.50116,
       "locationId": 1
     },
     {
@@ -6282,9 +6282,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -57.375164,
+      "x": 492.39682,
       "y": 17.684753,
-      "z": 209.96008,
+      "z": 805.8613,
       "locationId": 1
     },
     {
@@ -6306,9 +6306,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 22.182629,
+      "x": 519.5791,
       "y": -2.8992944,
-      "z": 176.97392,
+      "z": 794.59106,
       "locationId": 1
     },
     {
@@ -6335,9 +6335,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 29.084595,
+      "x": 521.93726,
       "y": -0.6571937,
-      "z": 611.0818,
+      "z": 942.91125,
       "locationId": 1
     },
     {
@@ -6359,9 +6359,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -361.27432,
+      "x": 388.5646,
       "y": 19.758379,
-      "z": 341.73938,
+      "z": 850.886,
       "locationId": 1
     },
     {
@@ -6398,9 +6398,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -185.69315,
+      "x": 448.55487,
       "y": 9.412934,
-      "z": 76.445274,
+      "z": 760.2438,
       "locationId": 1
     },
     {
@@ -6417,9 +6417,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 431.35178,
+      "x": 659.37854,
       "y": 35.393124,
-      "z": 47.34199,
+      "z": 750.3002,
       "locationId": 1
     },
     {
@@ -6441,9 +6441,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 413.1466,
+      "x": 653.15845,
       "y": -5.228014,
-      "z": 232.07225,
+      "z": 813.4164,
       "locationId": 1
     },
     {
@@ -6465,9 +6465,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 420.40942,
+      "x": 655.6399,
       "y": 3.335331,
-      "z": 179.81664,
+      "z": 795.5624,
       "locationId": 1
     },
     {
@@ -6489,9 +6489,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -263.79214,
+      "x": 421.87103,
       "y": 6.0506144,
-      "z": 302.61758,
+      "z": 837.51935,
       "locationId": 1
     },
     {
@@ -6508,9 +6508,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 169.10283,
+      "x": 569.7768,
       "y": 15.206394,
-      "z": -264.83258,
+      "z": 643.6405,
       "locationId": 1
     },
     {
@@ -6527,9 +6527,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 346.77682,
+      "x": 630.48206,
       "y": -6.923033,
-      "z": 402.12524,
+      "z": 871.5178,
       "locationId": 1
     },
     {
@@ -6546,9 +6546,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -29.771576,
+      "x": 501.82803,
       "y": 0.934674,
-      "z": -183.00159,
+      "z": 671.5994,
       "locationId": 1
     },
     {
@@ -6570,9 +6570,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -168.57098,
+      "x": 454.4049,
       "y": 24.703487,
-      "z": -174.253,
+      "z": 674.58856,
       "locationId": 1
     },
     {
@@ -6594,9 +6594,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 40.34149,
+      "x": 525.7833,
       "y": -6.9105806,
-      "z": -85.67534,
+      "z": 704.8526,
       "locationId": 1
     },
     {
@@ -6613,9 +6613,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 62.873608,
+      "x": 533.4818,
       "y": -4.704099,
-      "z": 28.848501,
+      "z": 743.98157,
       "locationId": 1
     },
     {
@@ -6632,9 +6632,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -170.9784,
+      "x": 453.5824,
       "y": 15.69163,
-      "z": 140.7828,
+      "z": 782.22577,
       "locationId": 1
     },
     {
@@ -6651,9 +6651,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -44.376587,
+      "x": 496.838,
       "y": 28.73162,
-      "z": 354.78156,
+      "z": 855.34204,
       "locationId": 1
     },
     {
@@ -6670,9 +6670,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -32.84247,
+      "x": 261.7788,
       "y": 17.59562,
-      "z": -324.80023,
+      "z": 145.02658,
       "locationId": 2
     },
     {
@@ -6749,9 +6749,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -358.80713,
+      "x": 150.40756,
       "y": 5.208212,
-      "z": 387.28708,
+      "z": 388.3231,
       "locationId": 2
     },
     {
@@ -6793,9 +6793,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -395.4633,
+      "x": 137.88338,
       "y": 12.40796,
-      "z": -15.473128,
+      "z": 250.71335,
       "locationId": 2
     },
     {
@@ -6872,9 +6872,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 171.39568,
+      "x": 331.56018,
       "y": -7.940074,
-      "z": 208.97557,
+      "z": 327.4,
       "locationId": 2
     },
     {
@@ -6911,9 +6911,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -222.80745,
+      "x": 196.87411,
       "y": -2.1754427,
-      "z": 83.49193,
+      "z": 284.52643,
       "locationId": 2
     },
     {
@@ -6945,9 +6945,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 120.21537,
+      "x": 314.0736,
       "y": 18.264908,
-      "z": -387.94507,
+      "z": 123.4521,
       "locationId": 2
     },
     {
@@ -6979,9 +6979,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -56.55598,
+      "x": 253.67671,
       "y": 5.690709,
-      "z": 213.854,
+      "z": 329.0668,
       "locationId": 2
     },
     {
@@ -6998,9 +6998,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 417.89517,
+      "x": 415.78085,
       "y": 32.373734,
-      "z": -360.51358,
+      "z": 132.82452,
       "locationId": 2
     },
     {
@@ -7017,9 +7017,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 347.2604,
+      "x": 391.6473,
       "y": 28.583363,
-      "z": -370.35812,
+      "z": 129.46097,
       "locationId": 2
     },
     {
@@ -7036,9 +7036,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 313.67703,
+      "x": 380.173,
       "y": 35.636116,
-      "z": -234.31465,
+      "z": 175.9425,
       "locationId": 2
     },
     {
@@ -7055,9 +7055,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 418.06598,
+      "x": 415.8392,
       "y": 28.98837,
-      "z": -230.86234,
+      "z": 177.12204,
       "locationId": 2
     },
     {
@@ -7074,9 +7074,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 358.2604,
+      "x": 395.40564,
       "y": 35.0373,
-      "z": -275.04034,
+      "z": 162.02788,
       "locationId": 2
     },
     {
@@ -7093,9 +7093,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 324.44168,
+      "x": 383.85092,
       "y": 32.42467,
-      "z": -302.7291,
+      "z": 152.56757,
       "locationId": 2
     },
     {
@@ -7112,9 +7112,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 447.93082,
+      "x": 426.043,
       "y": 31.894257,
-      "z": -451.7822,
+      "z": 101.64108,
       "locationId": 2
     },
     {
@@ -7151,9 +7151,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 393.98032,
+      "x": 407.60995,
       "y": 15.765756,
-      "z": 357.31442,
+      "z": 378.08243,
       "locationId": 2
     },
     {
@@ -7170,9 +7170,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -394.75482,
+      "x": 138.12543,
       "y": 12.328432,
-      "z": 10.205453,
+      "z": 259.48688,
       "locationId": 2
     },
     {
@@ -7189,9 +7189,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -183.87863,
+      "x": 210.1748,
       "y": 5.526909,
-      "z": -64.001945,
+      "z": 234.13268,
       "locationId": 2
     },
     {
@@ -7208,9 +7208,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 197.08923,
+      "x": 340.3388,
       "y": 36.722527,
-      "z": -442.9929,
+      "z": 104.6441,
       "locationId": 2
     },
     {
@@ -7227,9 +7227,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -6.17531,
+      "x": 270.8901,
       "y": 23.351715,
-      "z": 246.15514,
+      "z": 340.103,
       "locationId": 2
     },
     {
@@ -7261,9 +7261,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -90.95227,
+      "x": 241.92464,
       "y": 26.183466,
-      "z": -298.52832,
+      "z": 154.00282,
       "locationId": 2
     },
     {
@@ -7295,9 +7295,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -315.27414,
+      "x": 165.28134,
       "y": 0.5004975,
-      "z": -382.2976,
+      "z": 125.38165,
       "locationId": 2
     },
     {
@@ -7349,9 +7349,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 172.17326,
+      "x": 331.82587,
       "y": 24.07206,
-      "z": -445.20078,
+      "z": 103.88974,
       "locationId": 2
     },
     {
@@ -7388,9 +7388,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -105.43072,
+      "x": 236.97784,
       "y": 0.07932914,
-      "z": -139.87697,
+      "z": 208.2087,
       "locationId": 2
     },
     {
@@ -7432,9 +7432,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -432.97195,
+      "x": 125.06792,
       "y": 12.110308,
-      "z": 269.17023,
+      "z": 347.9665,
       "locationId": 2
     },
     {
@@ -7496,9 +7496,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 151.96909,
+      "x": 324.9228,
       "y": 16.722446,
-      "z": -308.13937,
+      "z": 150.71906,
       "locationId": 2
     },
     {
@@ -7535,9 +7535,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 162.36357,
+      "x": 328.4742,
       "y": 21.299805,
-      "z": -419.06485,
+      "z": 112.8195,
       "locationId": 2
     },
     {
@@ -7564,9 +7564,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 332.1205,
+      "x": 386.47452,
       "y": 26.193735,
-      "z": -114.83663,
+      "z": 216.76414,
       "locationId": 2
     },
     {
@@ -7598,9 +7598,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -224.53043,
+      "x": 196.28543,
       "y": -3.0534885,
-      "z": 217.16592,
+      "z": 330.19836,
       "locationId": 2
     },
     {
@@ -7627,9 +7627,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 420.25977,
+      "x": 416.58878,
       "y": 27.720362,
-      "z": -475.31992,
+      "z": 93.59903,
       "locationId": 2
     },
     {
@@ -7656,9 +7656,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 406.6827,
+      "x": 411.94992,
       "y": 39.448303,
-      "z": -205.67133,
+      "z": 185.72896,
       "locationId": 2
     },
     {
@@ -7685,9 +7685,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 151.44574,
+      "x": 324.74396,
       "y": 25.97261,
-      "z": -196.89064,
+      "z": 188.72902,
       "locationId": 2
     },
     {
@@ -7729,9 +7729,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -164.87944,
+      "x": 216.66618,
       "y": 2.9805477,
-      "z": 413.67242,
+      "z": 397.33807,
       "locationId": 2
     },
     {
@@ -7758,9 +7758,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -0.43123302,
+      "x": 272.85266,
       "y": 3.966362,
-      "z": 190.86461,
+      "z": 321.2121,
       "locationId": 2
     },
     {
@@ -7787,9 +7787,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 44.616837,
+      "x": 288.24408,
       "y": -5.4457583,
-      "z": 423.76822,
+      "z": 400.78748,
       "locationId": 2
     },
     {
@@ -7826,9 +7826,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 312.6224,
+      "x": 379.81265,
       "y": 27.60013,
-      "z": -238.87396,
+      "z": 174.38474,
       "locationId": 2
     },
     {
@@ -7860,9 +7860,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 366.31415,
+      "x": 398.15735,
       "y": 27.55844,
-      "z": -359.41467,
+      "z": 133.19998,
       "locationId": 2
     },
     {
@@ -7884,9 +7884,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -304.21204,
+      "x": 169.06088,
       "y": -1.1710085,
-      "z": -249.25505,
+      "z": 170.83786,
       "locationId": 2
     },
     {
@@ -7933,9 +7933,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 102.53848,
+      "x": 308.034,
       "y": 2.926261,
-      "z": 146.14691,
+      "z": 305.93353,
       "locationId": 2
     },
     {
@@ -7967,9 +7967,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -32.790485,
+      "x": 261.79657,
       "y": 4.8021126,
-      "z": 103.69877,
+      "z": 291.43042,
       "locationId": 2
     },
     {
@@ -8001,9 +8001,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 184.823,
+      "x": 336.14786,
       "y": 29.584446,
-      "z": -457.71072,
+      "z": 99.61551,
       "locationId": 2
     },
     {
@@ -8025,9 +8025,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 131.39378,
+      "x": 317.89288,
       "y": 4.143849,
-      "z": 211.032,
+      "z": 328.1026,
       "locationId": 2
     },
     {
@@ -8054,9 +8054,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 434.5538,
+      "x": 421.47253,
       "y": 1.0520784,
-      "z": 403.2662,
+      "z": 393.78262,
       "locationId": 2
     },
     {
@@ -8078,9 +8078,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -27.48823,
+      "x": 263.6082,
       "y": 23.904282,
-      "z": -361.70993,
+      "z": 132.41577,
       "locationId": 2
     },
     {
@@ -8112,9 +8112,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 129.9884,
+      "x": 317.41272,
       "y": -3.4260738,
-      "z": 448.6189,
+      "z": 409.27814,
       "locationId": 2
     },
     {
@@ -8151,9 +8151,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -231.50749,
+      "x": 193.90161,
       "y": 1.3654207,
-      "z": 434.93613,
+      "z": 404.60318,
       "locationId": 2
     },
     {
@@ -8185,9 +8185,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 466.17355,
+      "x": 432.27594,
       "y": 28.156073,
-      "z": -384.10446,
+      "z": 124.76431,
       "locationId": 2
     },
     {
@@ -8214,9 +8214,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -398.93677,
+      "x": 136.6966,
       "y": 11.002257,
-      "z": 7.970077,
+      "z": 258.7231,
       "locationId": 2
     },
     {
@@ -8238,9 +8238,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -370.5449,
+      "x": 146.39716,
       "y": 4.276137,
-      "z": 387.0519,
+      "z": 388.24274,
       "locationId": 2
     },
     {
@@ -8262,9 +8262,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 410.2692,
+      "x": 413.1753,
       "y": 7.631323,
-      "z": 111.50278,
+      "z": 294.0968,
       "locationId": 2
     },
     {
@@ -8286,9 +8286,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -174.09477,
+      "x": 213.51762,
       "y": 9.748525,
-      "z": -27.917387,
+      "z": 246.46156,
       "locationId": 2
     },
     {
@@ -8315,9 +8315,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 328.29263,
+      "x": 385.16666,
       "y": -0.9085447,
-      "z": -50.72514,
+      "z": 238.6689,
       "locationId": 2
     },
     {
@@ -8354,9 +8354,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 393.68942,
+      "x": 407.51056,
       "y": 31.86581,
-      "z": 361.11816,
+      "z": 379.38205,
       "locationId": 2
     },
     {
@@ -8393,9 +8393,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 63.48844,
+      "x": 294.6919,
       "y": 24.30805,
-      "z": -105.45152,
+      "z": 219.97073,
       "locationId": 2
     },
     {
@@ -8422,9 +8422,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -419.34613,
+      "x": 129.7234,
       "y": 1.2704966,
-      "z": -323.78024,
+      "z": 145.37509,
       "locationId": 2
     },
     {
@@ -8446,9 +8446,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -42.984478,
+      "x": 258.31366,
       "y": 1.9334644,
-      "z": 439.76987,
+      "z": 406.2547,
       "locationId": 2
     },
     {
@@ -8475,9 +8475,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 400.74368,
+      "x": 409.92078,
       "y": 28.082842,
-      "z": -180.76575,
+      "z": 194.23837,
       "locationId": 2
     },
     {
@@ -8504,9 +8504,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -376.58673,
+      "x": 144.33287,
       "y": -2.9694948,
-      "z": 166.66121,
+      "z": 312.94257,
       "locationId": 2
     },
     {
@@ -8528,9 +8528,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -331.40833,
+      "x": 159.76883,
       "y": 8.568759,
-      "z": 22.282812,
+      "z": 263.61328,
       "locationId": 2
     },
     {
@@ -8562,9 +8562,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -323.19272,
+      "x": 162.57584,
       "y": 0.4805326,
-      "z": 176.15105,
+      "z": 316.18494,
       "locationId": 2
     },
     {
@@ -8586,9 +8586,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 385.56815,
+      "x": 404.7358,
       "y": 0.79302394,
-      "z": 316.6001,
+      "z": 364.1717,
       "locationId": 2
     },
     {
@@ -8610,9 +8610,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 486.33707,
+      "x": 439.16516,
       "y": 35.272453,
-      "z": -408.65048,
+      "z": 116.37775,
       "locationId": 2
     },
     {
@@ -8634,9 +8634,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -71.66043,
+      "x": 248.51602,
       "y": -0.14928725,
-      "z": -148.6987,
+      "z": 205.19461,
       "locationId": 2
     },
     {
@@ -8673,9 +8673,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -323.38446,
+      "x": 162.51031,
       "y": -1.7738354,
-      "z": 244.13438,
+      "z": 339.41257,
       "locationId": 2
     },
     {
@@ -8717,9 +8717,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -356.1676,
+      "x": 151.3094,
       "y": 1.301724,
-      "z": -166.34132,
+      "z": 199.16672,
       "locationId": 2
     },
     {
@@ -8751,9 +8751,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 465.85117,
+      "x": 432.16583,
       "y": -4.441881,
-      "z": -29.925491,
+      "z": 245.77547,
       "locationId": 2
     },
     {
@@ -8795,9 +8795,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 230.94081,
+      "x": 351.90475,
       "y": -28.637123,
-      "z": 35.64506,
+      "z": 268.1787,
       "locationId": 2
     },
     {
@@ -8834,9 +8834,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -44.8339,
+      "x": 257.68176,
       "y": 0.4269889,
-      "z": 312.55203,
+      "z": 362.7886,
       "locationId": 2
     },
     {
@@ -8863,9 +8863,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -198.56448,
+      "x": 205.15712,
       "y": 3.5364192,
-      "z": -435.51492,
+      "z": 107.199066,
       "locationId": 2
     },
     {
@@ -8892,9 +8892,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -417.31375,
+      "x": 130.4178,
       "y": 14.973704,
-      "z": 323.92355,
+      "z": 366.6739,
       "locationId": 2
     },
     {
@@ -8905,12 +8905,12 @@
       "items": [
         {
           "uniqueName": "ammo_12x70_buck",
-          "count": 4,
+          "count": 40,
           "probability": 0
         },
         {
           "uniqueName": "ammo_12x76_zhekan",
-          "count": 2,
+          "count": 20,
           "probability": 0
         }
       ],
@@ -8934,7 +8934,7 @@
         },
         {
           "uniqueName": "ammo_7.62x54_7h1",
-          "count": 1,
+          "count": 10,
           "probability": 0
         },
         {
@@ -8958,22 +8958,22 @@
       "items": [
         {
           "uniqueName": "ammo_9x39_pab9",
-          "count": 2,
+          "count": 60,
           "probability": 0
         },
         {
           "uniqueName": "ammo_5.45x39_fmj",
-          "count": 1,
+          "count": 60,
           "probability": 0
         },
         {
           "uniqueName": "ammo_5.56x45_ss190",
-          "count": 2,
+          "count": 120,
           "probability": 0
         },
         {
           "uniqueName": "ammo_5.56x45_ap",
-          "count": 1,
+          "count": 60,
           "probability": 0
         }
       ],
@@ -9729,9 +9729,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 9.243364,
+      "x": 770.14276,
       "y": 5.243792,
-      "z": 269.92453,
+      "z": 364.77435,
       "locationId": 4
     },
     {
@@ -9763,9 +9763,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 62.685165,
+      "x": 788.313,
       "y": 0.8756163,
-      "z": 170.91794,
+      "z": 331.11212,
       "locationId": 4
     },
     {
@@ -9787,9 +9787,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 196.55855,
+      "x": 833.8299,
       "y": 5.3323197,
-      "z": -20.230825,
+      "z": 266.12152,
       "locationId": 4
     },
     {
@@ -9816,9 +9816,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 131.32797,
+      "x": 811.6515,
       "y": 29.506298,
-      "z": 236.87556,
+      "z": 353.5377,
       "locationId": 4
     },
     {
@@ -9840,9 +9840,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 105.860435,
+      "x": 802.99255,
       "y": 4.039592,
-      "z": 143.84512,
+      "z": 321.90735,
       "locationId": 4
     },
     {
@@ -9859,9 +9859,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -104.03125,
+      "x": 731.6294,
       "y": -2.676594,
-      "z": -232.96013,
+      "z": 193.79356,
       "locationId": 4
     },
     {
@@ -9878,9 +9878,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 145.71974,
+      "x": 816.54474,
       "y": 0.551144,
-      "z": -194.44824,
+      "z": 206.8876,
       "locationId": 4
     },
     {
@@ -9897,9 +9897,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 193.28188,
+      "x": 832.7158,
       "y": 2.7051008,
-      "z": 76.12383,
+      "z": 298.8821,
       "locationId": 4
     },
     {
@@ -9926,9 +9926,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 93.753456,
+      "x": 798.87616,
       "y": 0.5345342,
-      "z": 0.0916,
+      "z": 273.03113,
       "locationId": 4
     },
     {
@@ -9960,9 +9960,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 204.41171,
+      "x": 836.5,
       "y": -0.060493,
-      "z": 192.86426,
+      "z": 338.57385,
       "locationId": 4
     },
     {
@@ -9984,9 +9984,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -19.663044,
+      "x": 760.3146,
       "y": -0.36380526,
-      "z": -352.5791,
+      "z": 153.12311,
       "locationId": 4
     },
     {
@@ -10008,9 +10008,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -31.869612,
+      "x": 756.1643,
       "y": 2.5453124,
-      "z": -274.8121,
+      "z": 179.56389,
       "locationId": 4
     },
     {
@@ -10027,9 +10027,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 229.8468,
+      "x": 845.14795,
       "y": 0.65400535,
-      "z": 21.081556,
+      "z": 280.16772,
       "locationId": 4
     },
     {
@@ -10056,9 +10056,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -83.04123,
+      "x": 738.766,
       "y": 13.232386,
-      "z": 105.721954,
+      "z": 308.94547,
       "locationId": 4
     },
     {
@@ -10085,9 +10085,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 98.70321,
+      "x": 800.5591,
       "y": 2.7772126,
-      "z": 369.01312,
+      "z": 398.46448,
       "locationId": 4
     },
     {
@@ -10124,9 +10124,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -172.23062,
+      "x": 708.4416,
       "y": -2.1829329,
-      "z": 66.45224,
+      "z": 295.59375,
       "locationId": 4
     },
     {
@@ -10143,9 +10143,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 321.1269,
+      "x": 876.1831,
       "y": -8.31704,
-      "z": 270.84415,
+      "z": 365.087,
       "locationId": 4
     },
     {
@@ -10167,9 +10167,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -241.489,
+      "x": 684.89374,
       "y": -0.3411155,
-      "z": -44.664993,
+      "z": 257.8139,
       "locationId": 4
     },
     {
@@ -10201,9 +10201,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -186.0928,
+      "x": 703.72845,
       "y": 3.3807237,
-      "z": -358.9145,
+      "z": 150.96907,
       "locationId": 4
     },
     {
@@ -10230,9 +10230,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 44.63269,
+      "x": 782.1751,
       "y": 5.334812,
-      "z": 134.16096,
+      "z": 318.61475,
       "locationId": 4
     },
     {
@@ -10249,9 +10249,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 205.8801,
+      "x": 836.99927,
       "y": 7.8150444,
-      "z": -26.703892,
+      "z": 263.9207,
       "locationId": 4
     },
     {
@@ -10273,9 +10273,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -100.40498,
+      "x": 732.8623,
       "y": -0.198578,
-      "z": -99.35234,
+      "z": 239.2202,
       "locationId": 4
     },
     {
@@ -10302,9 +10302,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 208.4703,
+      "x": 837.8799,
       "y": 0.69987,
-      "z": -21.211649,
+      "z": 265.78802,
       "locationId": 4
     },
     {
@@ -10326,9 +10326,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -13.434163,
+      "x": 762.4324,
       "y": -0.213311,
-      "z": 0.6036107,
+      "z": 273.2052,
       "locationId": 4
     },
     {
@@ -10350,9 +10350,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 10.542276,
+      "x": 770.58435,
       "y": 5.9239216,
-      "z": 126.61397,
+      "z": 316.04877,
       "locationId": 4
     },
     {
@@ -10389,9 +10389,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 125.09876,
+      "x": 809.53357,
       "y": 0.7186057,
-      "z": -38.62887,
+      "z": 259.86618,
       "locationId": 4
     },
     {
@@ -10413,9 +10413,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 104.7439,
+      "x": 802.6129,
       "y": -0.37673935,
-      "z": 51.272755,
+      "z": 290.43274,
       "locationId": 4
     },
     {
@@ -10442,9 +10442,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -249.16357,
+      "x": 682.28436,
       "y": -2.765007,
-      "z": -238.1213,
+      "z": 192.03876,
       "locationId": 4
     },
     {
@@ -10466,9 +10466,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 305.42563,
+      "x": 870.8447,
       "y": 6.4936686,
-      "z": 228.96057,
+      "z": 350.8466,
       "locationId": 4
     },
     {
@@ -10490,9 +10490,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 274.59473,
+      "x": 860.3622,
       "y": 18.84167,
-      "z": 312.2881,
+      "z": 379.17795,
       "locationId": 4
     },
     {
@@ -10514,9 +10514,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -53.68361,
+      "x": 748.74756,
       "y": 4.2675333,
-      "z": -97.070984,
+      "z": 239.99586,
       "locationId": 4
     },
     {
@@ -10538,9 +10538,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 194.74004,
+      "x": 833.2116,
       "y": 5.1860256,
-      "z": 54.878834,
+      "z": 291.6588,
       "locationId": 4
     },
     {
@@ -10557,9 +10557,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 106.417244,
+      "x": 803.1819,
       "y": 3.331712,
-      "z": 142.89995,
+      "z": 321.586,
       "locationId": 4
     },
     {
@@ -10576,9 +10576,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 22.561745,
+      "x": 774.671,
       "y": -1.464268,
-      "z": 381.93323,
+      "z": 402.8573,
       "locationId": 4
     },
     {
@@ -10600,9 +10600,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -169.20325,
+      "x": 709.4709,
       "y": -8.761518,
-      "z": -195.58133,
+      "z": 206.50235,
       "locationId": 4
     },
     {
@@ -10624,9 +10624,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 137.06653,
+      "x": 813.60266,
       "y": 29.045628,
-      "z": 240.82767,
+      "z": 354.8814,
       "locationId": 4
     },
     {
@@ -10643,9 +10643,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -10.087676,
+      "x": 763.5702,
       "y": 0.6525128,
-      "z": 257.75275,
+      "z": 360.63596,
       "locationId": 4
     },
     {
@@ -10677,9 +10677,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -98.09068,
+      "x": 733.6492,
       "y": -2.8605874,
-      "z": -4.8042603,
+      "z": 271.36658,
       "locationId": 4
     },
     {
@@ -10711,9 +10711,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -173.91896,
+      "x": 707.86755,
       "y": -0.238971,
-      "z": -383.0138,
+      "z": 142.77531,
       "locationId": 4
     },
     {
@@ -10755,9 +10755,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 63.065964,
+      "x": 788.44244,
       "y": 1.4909616,
-      "z": 115.321396,
+      "z": 312.2093,
       "locationId": 4
     },
     {
@@ -10794,9 +10794,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": -45.0141,
+      "x": 751.6952,
       "y": -1.5918334,
-      "z": 183.94754,
+      "z": 335.54214,
       "locationId": 4
     },
     {
@@ -12235,9 +12235,9 @@
         "faction": "stalker"
       },
       "money": 480000,
-      "x": 124.55,
+      "x": 554.55457,
       "y": -7.34,
-      "z": 177.83,
+      "z": 794.88354,
       "locationId": 1
     },
     {
@@ -12428,9 +12428,9 @@
         "faction": "stalker"
       },
       "money": 480000,
-      "x": 118.514915,
+      "x": 552.4926,
       "y": -3.934826,
-      "z": 190.41264,
+      "z": 799.1826,
       "locationId": 1
     },
     {
@@ -19311,9 +19311,9 @@
         "faction": "stalker"
       },
       "money": 480000,
-      "x": 109.9,
+      "x": 549.5492,
       "y": -3.93,
-      "z": 188.31,
+      "z": 798.46423,
       "locationId": 1
     },
     {
@@ -24724,9 +24724,9 @@
         "faction": "stalker"
       },
       "money": 480000,
-      "x": -56.33,
+      "x": 253.75392,
       "y": 3.49,
-      "z": 204.95,
+      "z": 326.0246,
       "locationId": 2
     },
     {
@@ -25232,9 +25232,9 @@
         "faction": "stalker"
       },
       "money": 480000,
-      "x": -58.75642,
+      "x": 252.92488,
       "y": 3.488476,
-      "z": 217.34732,
+      "z": 330.26035,
       "locationId": 2
     },
     {
@@ -25544,9 +25544,9 @@
         "faction": "ecolog"
       },
       "money": 100000,
-      "x": -226.15067,
+      "x": 195.73186,
       "y": -3.376499,
-      "z": 80.64864,
+      "z": 283.55496,
       "locationId": 2
     }
   ],
@@ -25752,9 +25752,9 @@
           ]
         }
       ],
-      "x": -359.65564,
+      "x": 389.11765,
       "y": 39.98621,
-      "z": -353.1016,
+      "z": 613.48193,
       "locationId": 1
     },
     {
@@ -25800,9 +25800,9 @@
       ],
       "anomalies": null,
       "artefactWays": [],
-      "x": -348.50006,
+      "x": 392.92914,
       "y": 5.038158,
-      "z": 159.54466,
+      "z": 788.6361,
       "locationId": 1
     },
     {
@@ -25929,9 +25929,9 @@
           ]
         }
       ],
-      "x": 403.26456,
+      "x": 649.78204,
       "y": -5.73583,
-      "z": 231.11052,
+      "z": 813.08777,
       "locationId": 1
     },
     {
@@ -26058,9 +26058,9 @@
           ]
         }
       ],
-      "x": -36.670456,
+      "x": 499.47095,
       "y": 24.300348,
-      "z": 308.28842,
+      "z": 839.4569,
       "locationId": 1
     },
     {
@@ -26202,9 +26202,9 @@
           ]
         }
       ],
-      "x": -296.84653,
+      "x": 410.57745,
       "y": 20.69913,
-      "z": -142.9273,
+      "z": 685.2915,
       "locationId": 1
     },
     {
@@ -26343,9 +26343,9 @@
           ]
         }
       ],
-      "x": -75.31515,
+      "x": 486.26733,
       "y": 6.929241,
-      "z": 244.16333,
+      "z": 817.5475,
       "locationId": 1
     },
     {
@@ -26386,9 +26386,9 @@
       ],
       "anomalies": null,
       "artefactWays": [],
-      "x": 419.9567,
+      "x": 655.4852,
       "y": -4.510916,
-      "z": 411.25418,
+      "z": 874.63684,
       "locationId": 1
     },
     {
@@ -26434,9 +26434,9 @@
       ],
       "anomalies": null,
       "artefactWays": [],
-      "x": 272.86414,
+      "x": 605.2286,
       "y": 10.859612,
-      "z": -286.8995,
+      "z": 636.101,
       "locationId": 1
     },
     {
@@ -26528,9 +26528,9 @@
           ]
         }
       ],
-      "x": -51.024616,
+      "x": 494.5666,
       "y": 1.623243,
-      "z": -184.05057,
+      "z": 671.241,
       "locationId": 1
     },
     {
@@ -27327,9 +27327,9 @@
           ]
         }
       ],
-      "x": 52.026695,
+      "x": 529.77576,
       "y": -6.918304,
-      "z": 7.968361,
+      "z": 736.84753,
       "locationId": 1
     },
     {
@@ -27456,9 +27456,9 @@
           ]
         }
       ],
-      "x": 11.301344,
+      "x": 515.86127,
       "y": 10.293056,
-      "z": -378.82465,
+      "z": 604.69324,
       "locationId": 1
     },
     {
@@ -27468,9 +27468,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 339.4071,
+      "x": 627.9641,
       "y": 32.054386,
-      "z": -368.39972,
+      "z": 608.25507,
       "locationId": 1
     },
     {
@@ -27481,9 +27481,9 @@
         "zone_burning_fuzz_weak": 1
       },
       "artefactWays": null,
-      "x": 321.6631,
+      "x": 621.90155,
       "y": 32.841938,
-      "z": -392.88977,
+      "z": 599.88763,
       "locationId": 1
     },
     {
@@ -27493,9 +27493,9 @@
         "zone_burning_fuzz_strong": 1
       },
       "artefactWays": null,
-      "x": 417.84866,
+      "x": 654.76495,
       "y": 41.630444,
-      "z": -106.00065,
+      "z": 697.9081,
       "locationId": 1
     },
     {
@@ -27505,9 +27505,9 @@
         "zone_burning_fuzz_strong": 1
       },
       "artefactWays": null,
-      "x": -204.71832,
+      "x": 442.05457,
       "y": 5.552146,
-      "z": 19.112413,
+      "z": 740.6551,
       "locationId": 1
     },
     {
@@ -27517,9 +27517,9 @@
         "zone_burning_fuzz_weak": 2
       },
       "artefactWays": null,
-      "x": -322.89203,
+      "x": 401.67856,
       "y": 13.324236,
-      "z": 411.3335,
+      "z": 874.66394,
       "locationId": 1
     },
     {
@@ -27531,9 +27531,9 @@
         "zone_mine_gravitational_average": 2
       },
       "artefactWays": null,
-      "x": -67.31509,
+      "x": 489.00067,
       "y": 6.475652,
-      "z": 264.3815,
+      "z": 824.4553,
       "locationId": 1
     },
     {
@@ -27545,9 +27545,9 @@
         "zone_mine_gravitational_weak": 15
       },
       "artefactWays": null,
-      "x": -421.12247,
+      "x": 368.1165,
       "y": -6.651269,
-      "z": 178.35666,
+      "z": 795.06354,
       "locationId": 1
     },
     {
@@ -27557,9 +27557,9 @@
         "zone_mine_acidic_weak": 33
       },
       "artefactWays": null,
-      "x": -311.81668,
+      "x": 405.46265,
       "y": 13.840426,
-      "z": -162.99442,
+      "z": 678.43524,
       "locationId": 1
     },
     {
@@ -27570,9 +27570,9 @@
         "zone_mine_electric_weak": 12
       },
       "artefactWays": null,
-      "x": -341.76312,
+      "x": 395.23093,
       "y": 39.979027,
-      "z": -378.4513,
+      "z": 604.8208,
       "locationId": 1
     },
     {
@@ -27582,9 +27582,9 @@
         "zone_mine_electric_weak": 2
       },
       "artefactWays": null,
-      "x": 269.9073,
+      "x": 604.2184,
       "y": 19.782877,
-      "z": -294.75543,
+      "z": 633.4169,
       "locationId": 1
     },
     {
@@ -27594,9 +27594,9 @@
         "zone_mine_gravitational_average": 1
       },
       "artefactWays": null,
-      "x": -456.43832,
+      "x": 356.05023,
       "y": -5.126189,
-      "z": 124.92615,
+      "z": 776.8081,
       "locationId": 1
     },
     {
@@ -27606,9 +27606,9 @@
         "zone_mine_gravitational_average": 2
       },
       "artefactWays": null,
-      "x": -107.05768,
+      "x": 475.42194,
       "y": -3.0445867,
-      "z": 204.75668,
+      "z": 804.0835,
       "locationId": 1
     },
     {
@@ -27618,9 +27618,9 @@
         "zone_mine_gravitational_average": 1
       },
       "artefactWays": null,
-      "x": -85.333046,
+      "x": 482.84454,
       "y": 4.674342,
-      "z": 227.74873,
+      "z": 811.93915,
       "locationId": 1
     },
     {
@@ -27632,9 +27632,9 @@
         "zone_mine_gravitational_strong": 1
       },
       "artefactWays": null,
-      "x": -71.804,
+      "x": 487.46698,
       "y": 6.767783,
-      "z": -167.4581,
+      "z": 676.91016,
       "locationId": 1
     },
     {
@@ -27644,9 +27644,9 @@
         "zone_mine_gravitational_average": 4
       },
       "artefactWays": null,
-      "x": 427.4463,
+      "x": 658.0441,
       "y": 32.9651,
-      "z": -294.3493,
+      "z": 633.55566,
       "locationId": 1
     },
     {
@@ -27656,9 +27656,9 @@
         "zone_mine_gravitational_average": 4
       },
       "artefactWays": null,
-      "x": 429.61252,
+      "x": 658.7843,
       "y": 33.329018,
-      "z": -150.96848,
+      "z": 682.5441,
       "locationId": 1
     },
     {
@@ -27668,9 +27668,9 @@
         "zone_mine_gravitational_average": 6
       },
       "artefactWays": null,
-      "x": 429.73434,
+      "x": 658.8259,
       "y": 35.624496,
-      "z": -202.12756,
+      "z": 665.06476,
       "locationId": 1
     },
     {
@@ -27682,9 +27682,9 @@
         "zone_mine_thermal_weak": 12
       },
       "artefactWays": null,
-      "x": 12.920543,
+      "x": 516.4145,
       "y": 10.731618,
-      "z": -395.0342,
+      "z": 599.15497,
       "locationId": 1
     },
     {
@@ -27694,9 +27694,9 @@
         "zone_mine_gravitational_weak": 22
       },
       "artefactWays": null,
-      "x": 409.42978,
+      "x": 651.8885,
       "y": -6.712066,
-      "z": 219.94322,
+      "z": 809.2722,
       "locationId": 1
     },
     {
@@ -27706,9 +27706,9 @@
         "zone_mine_thermal_average": 66
       },
       "artefactWays": null,
-      "x": -26.596786,
+      "x": 502.91278,
       "y": 23.964405,
-      "z": 317.77396,
+      "z": 842.69775,
       "locationId": 1
     },
     {
@@ -27820,9 +27820,9 @@
           ]
         }
       ],
-      "x": -387.29346,
+      "x": 140.67474,
       "y": 11.545892,
-      "z": 315.80228,
+      "z": 363.8991,
       "locationId": 2
     },
     {
@@ -27879,9 +27879,9 @@
           ]
         }
       ],
-      "x": 395.9313,
+      "x": 408.27652,
       "y": 3.569617,
-      "z": 357.00214,
+      "z": 377.97574,
       "locationId": 2
     },
     {
@@ -27927,9 +27927,9 @@
       ],
       "anomalies": null,
       "artefactWays": [],
-      "x": 223.792,
+      "x": 349.46228,
       "y": 16.36942,
-      "z": -304.3537,
+      "z": 152.01248,
       "locationId": 2
     },
     {
@@ -28051,9 +28051,9 @@
           ]
         }
       ],
-      "x": 52.487576,
+      "x": 290.9333,
       "y": 6.895769,
-      "z": 20.689842,
+      "z": 263.06903,
       "locationId": 2
     },
     {
@@ -28195,9 +28195,9 @@
           ]
         }
       ],
-      "x": 221.1628,
+      "x": 348.56396,
       "y": 5.716388,
-      "z": -91.293,
+      "z": 224.80823,
       "locationId": 2
     },
     {
@@ -28314,9 +28314,9 @@
           ]
         }
       ],
-      "x": 262.3783,
+      "x": 362.6459,
       "y": -5.269504,
-      "z": 459.36743,
+      "z": 412.95053,
       "locationId": 2
     },
     {
@@ -28383,9 +28383,9 @@
           ]
         }
       ],
-      "x": 243.76474,
+      "x": 356.2863,
       "y": 35.694443,
-      "z": -435.8013,
+      "z": 107.10122,
       "locationId": 2
     },
     {
@@ -28507,9 +28507,9 @@
           ]
         }
       ],
-      "x": 265.46652,
+      "x": 363.70105,
       "y": -33.74888,
-      "z": 84.24965,
+      "z": 284.7853,
       "locationId": 2
     },
     {
@@ -28611,9 +28611,9 @@
           ]
         }
       ],
-      "x": -72.9817,
+      "x": 248.06459,
       "y": -0.388752,
-      "z": -144.71329,
+      "z": 206.55629,
       "locationId": 2
     },
     {
@@ -29325,9 +29325,9 @@
           ]
         }
       ],
-      "x": -12.593841,
+      "x": 268.6971,
       "y": 2.657898,
-      "z": -15.241943,
+      "z": 250.79233,
       "locationId": 2
     },
     {
@@ -29338,9 +29338,9 @@
         "zone_mine_acidic_strong": 2
       },
       "artefactWays": null,
-      "x": 402.19165,
+      "x": 410.4155,
       "y": 32.51169,
-      "z": -227.37163,
+      "z": 178.3147,
       "locationId": 2
     },
     {
@@ -29350,9 +29350,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 323.92758,
+      "x": 383.67526,
       "y": 33.0763,
-      "z": -359.6041,
+      "z": 133.13527,
       "locationId": 2
     },
     {
@@ -29362,9 +29362,9 @@
         "zone_burning_fuzz_average": 2
       },
       "artefactWays": null,
-      "x": 455.75427,
+      "x": 428.71603,
       "y": 32.58573,
-      "z": -458.59766,
+      "z": 99.31247,
       "locationId": 2
     },
     {
@@ -29374,9 +29374,9 @@
         "zone_burning_fuzz_average": 2
       },
       "artefactWays": null,
-      "x": 398.62372,
+      "x": 409.19644,
       "y": 36.973885,
-      "z": -192.3609,
+      "z": 190.2767,
       "locationId": 2
     },
     {
@@ -29386,9 +29386,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 314.2301,
+      "x": 380.36197,
       "y": 32.787125,
-      "z": -302.33133,
+      "z": 152.70346,
       "locationId": 2
     },
     {
@@ -29398,9 +29398,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 352.80414,
+      "x": 393.54144,
       "y": 37.7885,
-      "z": -275.00717,
+      "z": 162.03922,
       "locationId": 2
     },
     {
@@ -29410,9 +29410,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 336.0232,
+      "x": 387.8079,
       "y": 37.635853,
-      "z": -247.14616,
+      "z": 171.55838,
       "locationId": 2
     },
     {
@@ -29422,9 +29422,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 319.45297,
+      "x": 382.14642,
       "y": 39.21736,
-      "z": -226.8401,
+      "z": 178.4963,
       "locationId": 2
     },
     {
@@ -29437,9 +29437,9 @@
         "zone_mine_thermal_average": 1
       },
       "artefactWays": null,
-      "x": 390.22006,
+      "x": 406.3252,
       "y": 19.464813,
-      "z": 360.2092,
+      "z": 379.07147,
       "locationId": 2
     },
     {
@@ -29450,9 +29450,9 @@
         "zone_burning_fuzz_weak": 1
       },
       "artefactWays": null,
-      "x": -358.74625,
+      "x": 150.42838,
       "y": 8.131066,
-      "z": 404.7275,
+      "z": 394.2819,
       "locationId": 2
     },
     {
@@ -29463,9 +29463,9 @@
         "zone_burning_fuzz_strong": 2
       },
       "artefactWays": null,
-      "x": -221.11609,
+      "x": 197.452,
       "y": 9.560233,
-      "z": -383.16592,
+      "z": 125.08498,
       "locationId": 2
     },
     {
@@ -29475,9 +29475,9 @@
         "zone_burning_fuzz_strong": 1
       },
       "artefactWays": null,
-      "x": -62.721478,
+      "x": 251.57016,
       "y": 10.353641,
-      "z": 153.48357,
+      "z": 308.44022,
       "locationId": 2
     },
     {
@@ -29487,9 +29487,9 @@
         "zone_burning_fuzz_weak": 6
       },
       "artefactWays": null,
-      "x": -198.56694,
+      "x": 205.1563,
       "y": 7.3711543,
-      "z": -84.34374,
+      "z": 227.18256,
       "locationId": 2
     },
     {
@@ -29500,9 +29500,9 @@
         "zone_mine_electric_average": 13
       },
       "artefactWays": null,
-      "x": 221.75153,
+      "x": 348.7651,
       "y": 36.33736,
-      "z": -443.47745,
+      "z": 104.478546,
       "locationId": 2
     },
     {
@@ -29512,9 +29512,9 @@
         "zone_burning_fuzz_weak": 1
       },
       "artefactWays": null,
-      "x": -53.74444,
+      "x": 254.63733,
       "y": 6.753294,
-      "z": 135.70125,
+      "z": 302.3646,
       "locationId": 2
     },
     {
@@ -29524,9 +29524,9 @@
         "zone_burning_fuzz_weak": 2
       },
       "artefactWays": null,
-      "x": -341.36328,
+      "x": 156.36755,
       "y": 2.8456361,
-      "z": 263.79303,
+      "z": 346.1293,
       "locationId": 2
     },
     {
@@ -29536,9 +29536,9 @@
         "zone_burning_fuzz_weak": 2
       },
       "artefactWays": null,
-      "x": -383.0644,
+      "x": 142.11966,
       "y": 5.187414,
-      "z": 16.169434,
+      "z": 261.52454,
       "locationId": 2
     },
     {
@@ -29548,9 +29548,9 @@
         "zone_burning_fuzz_weak": 1
       },
       "artefactWays": null,
-      "x": -411.57376,
+      "x": 132.37897,
       "y": 5.638938,
-      "z": 16.142221,
+      "z": 261.51526,
       "locationId": 2
     },
     {
@@ -29560,9 +29560,9 @@
         "zone_mine_acidic_average": 1
       },
       "artefactWays": null,
-      "x": 224.00966,
+      "x": 349.53662,
       "y": -9.700571,
-      "z": 166.282,
+      "z": 312.81302,
       "locationId": 2
     },
     {
@@ -29572,9 +29572,9 @@
         "zone_mine_acidic_average": 3
       },
       "artefactWays": null,
-      "x": 473.35428,
+      "x": 434.72937,
       "y": 24.591352,
-      "z": -406.3208,
+      "z": 117.17373,
       "locationId": 2
     },
     {
@@ -29584,9 +29584,9 @@
         "zone_mine_acidic_average": 47
       },
       "artefactWays": null,
-      "x": 235.56801,
+      "x": 353.48575,
       "y": 15.175412,
-      "z": -317.38687,
+      "z": 147.55948,
       "locationId": 2
     },
     {
@@ -29596,9 +29596,9 @@
         "zone_mine_acidic_average": 47
       },
       "artefactWays": null,
-      "x": 85.89239,
+      "x": 302.34656,
       "y": 4.9884787,
-      "z": 23.977247,
+      "z": 264.1922,
       "locationId": 2
     },
     {
@@ -29608,9 +29608,9 @@
         "zone_mine_acidic_average": 30
       },
       "artefactWays": null,
-      "x": 239.91182,
+      "x": 354.96985,
       "y": -5.1412296,
-      "z": 439.7458,
+      "z": 406.2465,
       "locationId": 2
     },
     {
@@ -29621,9 +29621,9 @@
         "zone_mine_gravitational_average": 1
       },
       "artefactWays": null,
-      "x": 259.99237,
+      "x": 361.83072,
       "y": -29.616638,
-      "z": 98.93909,
+      "z": 289.8042,
       "locationId": 2
     },
     {
@@ -29633,9 +29633,9 @@
         "zone_mine_acidic_strong": 3
       },
       "artefactWays": null,
-      "x": 371.93155,
+      "x": 400.0766,
       "y": -5.6933684,
-      "z": 369.92883,
+      "z": 382.39236,
       "locationId": 2
     },
     {
@@ -29645,9 +29645,9 @@
         "zone_mine_electric_average": 23
       },
       "artefactWays": null,
-      "x": -72.94311,
+      "x": 248.07777,
       "y": -0.1971338,
-      "z": -149.46323,
+      "z": 204.9334,
       "locationId": 2
     },
     {
@@ -29658,9 +29658,9 @@
         "zone_mine_thermal_average": 12
       },
       "artefactWays": null,
-      "x": 230.80145,
+      "x": 351.85715,
       "y": 8.295878,
-      "z": -113.21994,
+      "z": 217.31651,
       "locationId": 2
     },
     {
@@ -29670,9 +29670,9 @@
         "zone_mine_thermal_average": 44
       },
       "artefactWays": null,
-      "x": -394.925,
+      "x": 138.06729,
       "y": 14.696448,
-      "z": 343.43277,
+      "z": 373.33954,
       "locationId": 2
     },
     {
@@ -29963,9 +29963,9 @@
           ]
         }
       ],
-      "x": 63.035927,
+      "x": 788.43225,
       "y": 13.139473,
-      "z": 124.54397,
+      "z": 315.34494,
       "locationId": 4
     },
     {
@@ -30011,9 +30011,9 @@
       ],
       "anomalies": null,
       "artefactWays": [],
-      "x": 136.07076,
+      "x": 813.26404,
       "y": 28.908287,
-      "z": 237.29257,
+      "z": 353.67947,
       "locationId": 4
     },
     {
@@ -30115,9 +30115,9 @@
           ]
         }
       ],
-      "x": 28.86558,
+      "x": 776.8143,
       "y": -0.487028,
-      "z": 290.0587,
+      "z": 371.61996,
       "locationId": 4
     },
     {
@@ -30204,9 +30204,9 @@
           ]
         }
       ],
-      "x": -138.21968,
+      "x": 720.0053,
       "y": -11.177805,
-      "z": -223.69214,
+      "z": 196.94467,
       "locationId": 4
     },
     {
@@ -30328,9 +30328,9 @@
           ]
         }
       ],
-      "x": -63.941963,
+      "x": 745.2597,
       "y": 20.902199,
-      "z": 94.02126,
+      "z": 304.96722,
       "locationId": 4
     },
     {
@@ -30422,9 +30422,9 @@
           ]
         }
       ],
-      "x": -168.97017,
+      "x": 709.5502,
       "y": -0.506596,
-      "z": -49.34616,
+      "z": 256.2223,
       "locationId": 4
     },
     {
@@ -30921,9 +30921,9 @@
           ]
         }
       ],
-      "x": 25.176485,
+      "x": 775.56,
       "y": -0.506866,
-      "z": 68.6331,
+      "z": 296.33527,
       "locationId": 4
     },
     {
@@ -30933,9 +30933,9 @@
         "zone_burning_fuzz_average": 1
       },
       "artefactWays": null,
-      "x": 34.731476,
+      "x": 778.8087,
       "y": 4.9077,
-      "z": 182.43245,
+      "z": 335.02704,
       "locationId": 4
     },
     {
@@ -30947,9 +30947,9 @@
         "zone_mine_acidic_weak": 2
       },
       "artefactWays": null,
-      "x": -32.21951,
+      "x": 756.04535,
       "y": 0.58870804,
-      "z": -279.7483,
+      "z": 177.88559,
       "locationId": 4
     },
     {
@@ -30959,9 +30959,9 @@
         "zone_burning_fuzz_strong": 1
       },
       "artefactWays": null,
-      "x": 36.097233,
+      "x": 779.2731,
       "y": 9.07431,
-      "z": 357.66272,
+      "z": 394.60532,
       "locationId": 4
     },
     {
@@ -30971,9 +30971,9 @@
         "zone_mine_acidic_strong": 14
       },
       "artefactWays": null,
-      "x": 125.147865,
+      "x": 809.5503,
       "y": 3.343647,
-      "z": 220.80649,
+      "z": 348.07422,
       "locationId": 4
     },
     {
@@ -30983,9 +30983,9 @@
         "zone_mine_acidic_strong": 1
       },
       "artefactWays": null,
-      "x": 144.41345,
+      "x": 816.1006,
       "y": 32.558643,
-      "z": 203.33089,
+      "z": 342.1325,
       "locationId": 4
     },
     {
@@ -30996,9 +30996,9 @@
         "zone_mine_electric_strong": 11
       },
       "artefactWays": null,
-      "x": 7.468699,
+      "x": 769.53937,
       "y": 1.2295603,
-      "z": 272.3891,
+      "z": 365.61227,
       "locationId": 4
     },
     {
@@ -31009,9 +31009,9 @@
         "zone_mine_electric_strong": 8
       },
       "artefactWays": null,
-      "x": -58.565468,
+      "x": 747.08777,
       "y": 20.902191,
-      "z": 88.20839,
+      "z": 302.99084,
       "locationId": 4
     },
     {
@@ -31022,9 +31022,9 @@
         "zone_mine_gravitational_weak": 1
       },
       "artefactWays": null,
-      "x": 60.217415,
+      "x": 787.47394,
       "y": 10.908859,
-      "z": 125.80647,
+      "z": 315.7742,
       "locationId": 4
     },
     {
@@ -31034,9 +31034,9 @@
         "zone_mine_thermal_average": 14
       },
       "artefactWays": null,
-      "x": -202.85843,
+      "x": 698.02814,
       "y": -2.048424,
-      "z": -48.253803,
+      "z": 256.5937,
       "locationId": 4
     },
     {
@@ -31150,90 +31150,36 @@
   ],
   "levelChangers": [
     {
-      "destinationLocationId": 2,
-      "direction": null,
-      "locale": null,
-      "x": 467.3069,
-      "y": 55.52762,
-      "z": 12.904409,
-      "locationId": 1
-    },
-    {
-      "destinationLocationId": 4,
-      "direction": null,
-      "locale": null,
-      "x": 467.20688,
-      "y": 55.52762,
-      "z": 3.204408,
-      "locationId": 1
-    },
-    {
-      "destinationLocationId": 1,
-      "direction": null,
-      "locale": null,
-      "x": -7.123868,
-      "y": 14.484339,
-      "z": 154.08546,
-      "locationId": 2
-    },
-    {
-      "destinationLocationId": 4,
-      "direction": null,
-      "locale": null,
-      "x": -16.323872,
-      "y": 14.484339,
-      "z": 142.78546,
-      "locationId": 2
-    },
-    {
       "destinationLocationId": 3,
       "direction": null,
-      "locale": null,
-      "x": 460.0058,
+      "locale": "jupiter_underground",
+      "x": 430.16864,
       "y": 46.06889,
-      "z": -295.4608,
+      "z": 155.0509,
       "locationId": 2
     },
     {
       "destinationLocationId": 4,
       "direction": null,
-      "locale": null,
+      "locale": "level-changer-to-up",
       "x": 82.2065,
       "y": 35.31701,
       "z": -222.36333,
       "locationId": 3
     },
     {
-      "destinationLocationId": 1,
-      "direction": null,
-      "locale": null,
-      "x": 150.91048,
-      "y": 22.345695,
-      "z": -287.92285,
-      "locationId": 4
-    },
-    {
-      "destinationLocationId": 2,
-      "direction": null,
-      "locale": null,
-      "x": 139.08171,
-      "y": 22.345707,
-      "z": -287.87003,
-      "locationId": 4
-    },
-    {
       "destinationLocationId": 5,
       "direction": null,
-      "locale": null,
-      "x": -78.03601,
+      "locale": "labx8",
+      "x": 740.4678,
       "y": -7.041134,
-      "z": 100.68492,
+      "z": 307.23288,
       "locationId": 4
     },
     {
       "destinationLocationId": 4,
       "direction": null,
-      "locale": null,
+      "locale": "level-changer-to-up",
       "x": -78.062874,
       "y": 23.804554,
       "z": 100.718994,
@@ -31294,9 +31240,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -80.691635,
+      "x": 484.43036,
       "y": 6.113034,
-      "z": 274.68094,
+      "z": 827.9743,
       "locationId": 1
     },
     {
@@ -31342,9 +31288,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": -397.0225,
+      "x": 376.35065,
       "y": 40.22056,
-      "z": -339.47275,
+      "z": 618.1385,
       "locationId": 1
     },
     {
@@ -31390,9 +31336,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 125.860016,
+      "x": 555.00214,
       "y": 40.10902,
-      "z": -457.1904,
+      "z": 577.9183,
       "locationId": 1
     },
     {
@@ -31438,9 +31384,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 80.57865,
+      "x": 539.531,
       "y": 38.807743,
-      "z": -470.42413,
+      "z": 573.3967,
       "locationId": 1
     },
     {
@@ -31481,9 +31427,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": -413.2162,
+      "x": 370.8178,
       "y": 40.261967,
-      "z": -329.09906,
+      "z": 621.6828,
       "locationId": 1
     },
     {
@@ -31529,9 +31475,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 71.18518,
+      "x": 536.3216,
       "y": 37.651882,
-      "z": -478.91232,
+      "z": 570.49664,
       "locationId": 1
     },
     {
@@ -31577,9 +31523,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": -405.17383,
+      "x": 373.5656,
       "y": 40.426468,
-      "z": -320.99933,
+      "z": 624.4502,
       "locationId": 1
     },
     {
@@ -31620,9 +31566,9 @@
         "faction": "stalker"
       },
       "money": 10000,
-      "x": 106.1423,
+      "x": 548.26526,
       "y": -1.338761,
-      "z": 186.64462,
+      "z": 797.89526,
       "locationId": 1
     },
     {
@@ -31663,9 +31609,9 @@
         "faction": "stalker"
       },
       "money": 1000,
-      "x": 118.25422,
+      "x": 552.40356,
       "y": -3.402002,
-      "z": 185.44603,
+      "z": 797.4857,
       "locationId": 1
     },
     {
@@ -31711,9 +31657,9 @@
         "faction": "stalker"
       },
       "money": 1000,
-      "x": 122.51,
+      "x": 553.8576,
       "y": -7.34,
-      "z": 186.16,
+      "z": 797.7296,
       "locationId": 1
     },
     {
@@ -31759,9 +31705,9 @@
         "faction": "stalker"
       },
       "money": 1000,
-      "x": 123.53,
+      "x": 554.20605,
       "y": -7.34,
-      "z": 187.82,
+      "z": 798.2969,
       "locationId": 1
     },
     {
@@ -31807,9 +31753,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": 129.94,
+      "x": 556.3962,
       "y": -7.34,
-      "z": 186.1,
+      "z": 797.70917,
       "locationId": 1
     },
     {
@@ -31850,9 +31796,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": 135.75998,
+      "x": 558.38464,
       "y": -7.34,
-      "z": 187.51,
+      "z": 798.1909,
       "locationId": 1
     },
     {
@@ -31893,9 +31839,9 @@
         "faction": "stalker"
       },
       "money": 8000,
-      "x": 125.04,
+      "x": 554.722,
       "y": -7.32,
-      "z": 189.8,
+      "z": 798.9733,
       "locationId": 1
     },
     {
@@ -31926,9 +31872,9 @@
         "faction": "bandit"
       },
       "money": 0,
-      "x": 139.32,
+      "x": 559.601,
       "y": -7.34,
-      "z": 178.61,
+      "z": 795.1501,
       "locationId": 1
     },
     {
@@ -31984,9 +31930,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": 153.92406,
+      "x": 564.5907,
       "y": -6.812592,
-      "z": -141.404,
+      "z": 685.81195,
       "locationId": 1
     },
     {
@@ -32032,9 +31978,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": -152.54344,
+      "x": 220.88098,
       "y": 26.924686,
-      "z": -428.64313,
+      "z": 109.54692,
       "locationId": 2
     },
     {
@@ -32080,9 +32026,9 @@
         "faction": "bandit"
       },
       "money": 10000,
-      "x": 14.02352,
+      "x": 277.79138,
       "y": 24.616806,
-      "z": -187.86176,
+      "z": 191.81389,
       "locationId": 2
     },
     {
@@ -32128,9 +32074,9 @@
         "faction": "stalker"
       },
       "money": 3000,
-      "x": -42.837807,
+      "x": 258.36377,
       "y": 3.488537,
-      "z": 187.12108,
+      "z": 319.933,
       "locationId": 2
     },
     {
@@ -32176,9 +32122,9 @@
         "faction": "stalker"
       },
       "money": 3000,
-      "x": -44.71,
+      "x": 257.7241,
       "y": 3.49,
-      "z": 187.62,
+      "z": 320.10352,
       "locationId": 2
     },
     {
@@ -32214,9 +32160,9 @@
         "faction": "dolg"
       },
       "money": 1550,
-      "x": -57.1871,
+      "x": 253.46107,
       "y": 3.488694,
-      "z": 176.65562,
+      "z": 316.35736,
       "locationId": 2
     },
     {
@@ -32252,9 +32198,9 @@
         "faction": "freedom"
       },
       "money": 750,
-      "x": -46.258976,
+      "x": 257.19482,
       "y": 3.488365,
-      "z": 219.49133,
+      "z": 330.99286,
       "locationId": 2
     },
     {
@@ -32295,9 +32241,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -41.089996,
+      "x": 258.9609,
       "y": 3.49,
-      "z": 179.3,
+      "z": 317.26083,
       "locationId": 2
     },
     {
@@ -32343,9 +32289,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -56.69,
+      "x": 253.63092,
       "y": 3.49,
-      "z": 194.57,
+      "z": 322.4781,
       "locationId": 2
     },
     {
@@ -32391,9 +32337,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -47.599922,
+      "x": 256.7367,
       "y": 3.488476,
-      "z": 196.5799,
+      "z": 323.1648,
       "locationId": 2
     },
     {
@@ -32434,9 +32380,9 @@
         "faction": "stalker"
       },
       "money": 100000,
-      "x": -58.102116,
+      "x": 253.14844,
       "y": -0.619068,
-      "z": 201.61278,
+      "z": 324.88437,
       "locationId": 2
     },
     {
@@ -32492,9 +32438,9 @@
         "faction": "stalker"
       },
       "money": 10000,
-      "x": -43.62,
+      "x": 258.0965,
       "y": 3.488392,
-      "z": 202.0339,
+      "z": 325.02826,
       "locationId": 2
     },
     {
@@ -32540,9 +32486,9 @@
         "faction": "freedom"
       },
       "money": 3750,
-      "x": -45.61,
+      "x": 257.41656,
       "y": 3.46,
-      "z": 207.65,
+      "z": 326.94708,
       "locationId": 2
     },
     {
@@ -32593,9 +32539,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -7.72,
+      "x": 270.36234,
       "y": 23.28,
-      "z": 243.88,
+      "z": 339.32568,
       "locationId": 2
     },
     {
@@ -32641,9 +32587,9 @@
         "faction": "freedom"
       },
       "money": 750,
-      "x": -48.96,
+      "x": 256.272,
       "y": 3.49,
-      "z": 202.45,
+      "z": 325.1704,
       "locationId": 2
     },
     {
@@ -32663,9 +32609,9 @@
         "faction": "ecolog"
       },
       "money": 10000,
-      "x": -222.13788,
+      "x": 197.10289,
       "y": -3.344626,
-      "z": 81.83187,
+      "z": 283.95923,
       "locationId": 2
     },
     {
@@ -32711,9 +32657,9 @@
         "faction": "bandit"
       },
       "money": 3000,
-      "x": -419.12103,
+      "x": 129.80032,
       "y": -0.010025,
-      "z": -341.93033,
+      "z": 139.1738,
       "locationId": 2
     },
     {
@@ -32744,9 +32690,9 @@
         "faction": "bandit"
       },
       "money": 3000,
-      "x": -449.2977,
+      "x": 119.48996,
       "y": 0.101519,
-      "z": -370.53192,
+      "z": 129.4016,
       "locationId": 2
     },
     {
@@ -32792,9 +32738,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": 333.60162,
+      "x": 386.98053,
       "y": 20.541992,
-      "z": -331.7049,
+      "z": 142.6675,
       "locationId": 2
     },
     {
@@ -32840,9 +32786,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 148.7,
+      "x": 817.558,
       "y": -0.1,
-      "z": -194.75,
+      "z": 206.785,
       "locationId": 4
     },
     {
@@ -32888,9 +32834,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 157.25764,
+      "x": 820.4676,
       "y": -0.095597,
-      "z": -189.2546,
+      "z": 208.65344,
       "locationId": 4
     },
     {
@@ -32936,9 +32882,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 161.04,
+      "x": 821.7536,
       "y": -0.32,
-      "z": -35.67,
+      "z": 260.8722,
       "locationId": 4
     },
     {
@@ -32984,9 +32930,9 @@
         "faction": "army"
       },
       "money": 0,
-      "x": 186.01605,
+      "x": 830.2455,
       "y": 0.32579,
-      "z": 3.498719,
+      "z": 274.18958,
       "locationId": 4
     }
   ],
@@ -35712,9 +35658,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": 100.872665,
+      "x": 546.46484,
       "y": -3.934742,
-      "z": 182.46431,
+      "z": 796.467,
       "locationId": 1
     },
     {
@@ -38570,9 +38516,9 @@
         "faction": "stalker"
       },
       "money": 0,
-      "x": -48.373,
+      "x": 256.47256,
       "y": 3.488477,
-      "z": 193.13795,
+      "z": 321.9888,
       "locationId": 2
     },
     {
@@ -41113,9 +41059,9 @@
         "faction": "ecolog"
       },
       "money": 0,
-      "x": -219.9911,
+      "x": 197.83638,
       "y": -3.565013,
-      "z": 74.44202,
+      "z": 281.43436,
       "locationId": 2
     }
   ],

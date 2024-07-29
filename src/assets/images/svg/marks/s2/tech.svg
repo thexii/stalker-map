@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<svg id="leaf" viewBox="0 0 128 128">
+			<polyline points="64,0 64,30 80,38 80,65" fill="none" stroke-width="16" stroke="#DFB620" />
+			<polyline points="64,0 64,30 48,38 48,65" fill="none" stroke-width="16" stroke="#DFB620" />
+		</svg>
+	</defs>
+	
+	<polyline points="7,64 64,7 121,64 64,121 7,64 64,7" fill="none" stroke-width="10" stroke="#DFB620" />
+	<use x='-64' y ='-128' width="128" height="128" xlink:href='#leaf' transform="rotate(135,0,0)"/>
+</svg>

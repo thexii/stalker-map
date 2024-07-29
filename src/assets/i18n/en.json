@@ -73,9 +73,9 @@
   "st_name_symbiont": "Symbiont",
   "st_zat_b44_name_acid": "Caves under the farmstead",
   "st_jup_b214_name": "Workshop attic",
-  "st_pri_wa_name": "Блукаючі артефакти в Прип'яті",
-  "st_jup_wa_name": "Блукаючі артефакти на Юпітері",
-  "st_zat_wa_name": "Блукаючі артефакти на Затоне",
+  "st_pri_wa_name": "Wandering artifacts in Pripyat",
+  "st_jup_wa_name": "Wandering artifacts on Jupiter",
+  "st_zat_wa_name": "Wandering artifacts on Zaton",
 
   "zone_mosquito_bald": "Springboard",
   "zone_mosquito_bald_weak": "Springboard (weak)",

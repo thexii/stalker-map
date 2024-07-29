@@ -74,8 +74,6 @@ export class TraderComponent {
   }
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.trader);
-    console.log(this.traderConfig);
     let allItems = this.allItems;
 
     this.traderBuySections = this.trader.buy.map(x => {
@@ -174,13 +172,12 @@ export class TraderComponent {
     this.selectedSupplySection = this.copy(this.traderSupplySections.find(x => x.sectionConditions == "") as TradeSection<TraderSupplyItemView>);
 
     this.traderSectionIndexes = Array.from(Array(Math.max(this.traderBuySections.length, this.traderSellSections.length, this.traderSupplySections.length)).keys())
-    console.log(this.traderSectionIndexes);
 
     this.recalculateSection();
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.trader.y}&lng=${this.trader.x}&type=traders`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.trader.z}&lng=${this.trader.x}&type=traders`;
     console.log(link);
     navigator.clipboard.writeText(link)
   }
@@ -506,7 +503,6 @@ export class TraderComponent {
       bestBuy[0].traderName = 'all-traders';
     }
 
-    console.log(bestSell);
     newSelectedItem.bestSell = bestSell;
     newSelectedItem.bestBuy = bestBuy;
     newSelectedItem.supply = this.selectedSupplySection.items.find(x => x.item.uniqueName == item.uniqueName) as TraderSupplyItemView;

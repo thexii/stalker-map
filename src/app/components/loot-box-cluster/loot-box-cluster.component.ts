@@ -25,6 +25,7 @@ export class LootBoxClusterComponent {
 
   private async ngOnInit(): Promise<void> {
     if (this.cluster.lootBoxes && this.cluster.lootBoxes.length > 0) {
+      console.log(this.cluster);
       this.boxes = [];
 
       for (let box of this.cluster.lootBoxes) {
@@ -86,9 +87,7 @@ export class LootBoxClusterComponent {
   }
 
   public copyLink(): void {
-    console.log(this.cluster);
-
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.y}&lng=${this.cluster.x}&type=loot-box`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box`;
     console.log(link);
     navigator.clipboard.writeText(link)
   }

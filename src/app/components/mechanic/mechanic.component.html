@@ -9,11 +9,26 @@
         'background-position': 'left -' + selectedItem.upgr_icon_x + 'px top -' + selectedItem.upgr_icon_y + 'px'}">
 
       </div>
+      <div class="selected-item-upgrades" *ngIf="selectedItem && selectedItemUpgrade">
+        <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
+          <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
+            <div class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}}" [ngStyle]="{
+              'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + 'px',
+              'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
+              'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
+            }">
+              <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
+              <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
+              <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
     </div>
   </div>
   <div class="mechanic-container-section section-info">
     <div class="info container">
-      <div class="sections-select-container" *ngIf="mechanic.discounts.length > 0">
+      <div class="sections-select-container" *ngIf="mechanic.discounts && mechanic.discounts.length > 0">
         <table style="width: 100%;">
           <tr>
             <ng-container>
@@ -37,23 +52,6 @@
       <div class="mechanic-info">
         <div class="mechanic-bio">
           <div class="mechanic-name">{{ 'actor_name' | translate}}</div>
-          <div class="profile-data-info">
-            <select class="select-relation" #relation (change)="setRelationSelect(relation.value)" *ngIf="relationType == relationTypeEnum.selector">
-              <option class="language-selector-option" [value]="0">{{ 'enemy' | translate }}</option>
-              <option class="language-selector-option" [value]="1" selected>{{ 'neutral' | translate }}</option>
-              <option class="language-selector-option" [value]="2">{{ 'friend' | translate }}</option>
-            </select>
-            <div class="relation-range" *ngIf="relationType == relationTypeEnum.range">
-              <input type="range" min="0" max="1" step="0.01" list="relations-det" [value]="relation" #ranger (input)="setRelationSelectRange(ranger.value)">
-
-              <datalist id="relations-det">
-                <option *ngFor="let relId of [0, 1, 2]" [value]="relations[relId]"></option>
-              </datalist>
-              <div class="range-labels">
-                <div *ngFor="let relId of [0, 1, 2]">{{relationsTitle[relId] | translate}}</div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="stalker-avatar {{game}}" [ngStyle]="{'width': actor.iconWidth + 'px', 'height': actor.iconHeight + 'px', 'background-position': 'left ' + (-actor.iconX) + 'px top ' + (-actor.iconY) + 'px'}"></div>
       </div>
@@ -62,7 +60,7 @@
             <div class="inventory-item inventory-item-width-{{item.width}} inventory-item-height-{{item.height}}" (click)="selectItem(item)">
               <div class="item-additional-info">
                 <div class="inventory-item-count">
-                  <span class="stalker-icon icon-bug" *ngIf="item.price == 0"></span>
+                  {{Math.floor(item.price * repairPriceFactor * selectedDiscount.value)}}
                 </div>
                 <div class="inventory-item-upgrade" *ngIf="item.installedUpgrades && item.installedUpgrades.length > 0"></div>
               </div>

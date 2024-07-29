@@ -1,0 +1,21 @@
+{
+  "yantar": "Янтарь",
+  "red_forest": "Рыжий лес",
+  "aes": "ЧАЭС",
+
+  "yaniv": "Янов",
+  "st_yaniv_name": "Янов",
+  "st_plavni_name": "Плавни",
+  "st_polustanok_name": "Полустанок",
+  "st_yantar_name": "Завод «Янтарь»",
+  "st_rostok_name": "Завод «Росток»",
+  "st_ventilation_name": "Вентиляционный коплекс",
+  "st_red_forest_brige_to_limansk_name": "Мост в Лиманськ",
+  "st_red_forest_forester_name": "Копёр Лесника",
+  "st_aes_4_reactor_name": "Блок №4",
+  "st_yaniv_bunker_name": "Бункер ученых на «Янове»",
+  "st_yantar_bunker_name": "Бункер ученых на «Янтаре»",
+  "st_vehicle_graveyard_name": "Кладбище техники",
+  "st_east_limansk_name": "Восточный район Лиманска",
+  "st_yaniv_quarry_name": "Карьер"
+}

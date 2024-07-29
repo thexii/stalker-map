@@ -3,12 +3,12 @@
 </div>
 <div *ngFor="let box of boxes">
   <div *ngIf="box.items && box.items.length > 0">
-    <div class="items-title">{{ 'Гарантовані предмети' | translate}}</div>
+    <div class="items-title">{{ 'loot-box-100-percent-items' | translate}}</div>
 
     <div class="inventory">
       <div *ngFor="let stuffItem of box.items" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
         <div class="item-additional-info">
-          <div *ngIf="stuffItem.count > 1" class="inventory-item-count">x{{stuffItem.count}}</div>
+          <div *ngIf="stuffItem.count > 1 " class="inventory-item-count">x{{stuffItem.count}}</div>
           <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
         </div>
         <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}" title="{{stuffItem.item.localeName | translate}}">

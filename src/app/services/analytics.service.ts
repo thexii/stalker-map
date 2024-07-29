@@ -19,7 +19,7 @@ export class AnalyticsService {
 
   constructor()
   {
-    console.log('constructor');
+
   }
 
   public init(): void {
