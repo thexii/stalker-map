@@ -33,10 +33,7 @@ any contributions is welcome <3
       autoCollapse: true,
       minLength: 2
     },
-    /* onAdd: function (map) {
-    L.Control.Search.prototype.onAdd.call(this, map);
-    console.log('Geocoder',this.options)
-  }, */
+
     geocoders: {
       /*
           'google': {

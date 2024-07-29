@@ -140,12 +140,13 @@
   border-bottom: 3px solid;
   border-left: 40px solid;
   border-right: 40px solid;
-  width: 240px;
+  max-width: 240px;
   margin: -1px 0 -1px -37px;
   display: flex;
   justify-content: center;
   -webkit-user-select: none;
   user-select: none;
+  flex-grow: 1;
 }
 .header-nav-item:hover {
   border-image: url(/assets/images/svg/interface/header-nav-button-selected.svg)

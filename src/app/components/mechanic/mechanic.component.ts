@@ -7,6 +7,7 @@ import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslateModule } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { ItemUpgrade, ItemUpgradeView } from '../../models/upgrades/upgrades';
 
 @Component({
   selector: 'app-mechanic',
@@ -22,6 +23,7 @@ export class MechanicComponent {
   @Input() public rankSetting: RankSetting[];
   @Input() public relationType: RelationType;
   @Input() public actor: CharacterProfile;
+  @Input() public upgrades: ItemUpgrade[];
 
   public readonly relations: number[] = [0, 0.5, 1];
   public readonly relationsTitle: string[] = ['enemy', 'neutral', 'friend'];
@@ -29,9 +31,13 @@ export class MechanicComponent {
   public relation: number = this.relations[1];
   public selectedDiscount: MechanicDiscount;
   public selectedItem: Item;
+  public selectedItemUpgrade: ItemUpgrade;
 
   public relationTypeEnum = RelationType;
   public itemsToRepait: Item[];
+  public Math: Math = Math;
+
+  public repairPriceFactor: number = 0.6;
 
   private async ngOnInit(): Promise<void> {
     console.log(this.mechanic);
@@ -56,9 +62,11 @@ export class MechanicComponent {
 
         return y.area - x.area;
       })
-
-      console.log(this.itemsToRepait);
     }
+
+    this.selectedDiscount = new MechanicDiscount();
+    this.selectedDiscount.condition = '';
+    this.selectedDiscount.value = 1;
   }
 
   public selectDiscount(discount: MechanicDiscount): void {
@@ -66,9 +74,41 @@ export class MechanicComponent {
   }
 
   public selectItem(item: Item): void {
-      console.log(item);
       this.selectedItem = item;
+      let selectedItemUpgrade = this.upgrades.find(x => x.item == item.uniqueName) as ItemUpgrade;
+
+      if (selectedItemUpgrade) {
+        this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
+
+        if (this.selectedItem.installedUpgrades && this.selectedItem.installedUpgrades.length > 0) {
+          for (let section of this.selectedItemUpgrade.upgradeSections) {
+            let isBlocked = false;
+            for (let upgrade of section.elements) {
+              upgrade.isBlocked = isBlocked;
+              upgrade.isInstalled = this.selectedItem.installedUpgrades.includes(upgrade.name);
+              if (upgrade.isInstalled) {
+                isBlocked = true;
+              }
+            }
+
+            if (isBlocked) {
+              section.elements.filter(x => !x.isInstalled).forEach(x => x.isBlocked = true);
+            }
+          }
+        }
+      }
+      else {
+        this.selectedItemUpgrade = undefined as unknown as ItemUpgrade;
+      }
+
+      console.log(item);
+      console.log(this.selectedItemUpgrade);
       //math.floor(cost*(1-item_condition)*cof * cur_price_percent)
+  }
+
+  public selectedItemHasUpgrade(upgrade: string): boolean {
+    console.log(upgrade)
+    return this.selectedItem.installedUpgrades?.includes(upgrade);
   }
 
   public setRelationSelect(relation: string): void {

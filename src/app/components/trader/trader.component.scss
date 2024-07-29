@@ -49,11 +49,17 @@ $cell: 50px;
   vertical-align: top;
   overflow-y: auto;
   overflow-x: hidden;
+  min-width: $trader-columns * $cell;
 }
 
 .trader-container-section.section-info {
   margin-right: 1rem;
   flex-grow: 1;
+  min-width: unset;
+}
+
+.trader-container-section.actor-section {
+  min-width: $trader-columns * $cell + 20;
 }
 
 .container {

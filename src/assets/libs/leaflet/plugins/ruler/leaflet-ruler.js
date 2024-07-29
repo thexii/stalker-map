@@ -156,7 +156,6 @@
       // distance
 
       let unitFactor = this.options.lengthUnit.factor ? this.options.lengthUnit.factor : 1;
-      console.log(unitFactor);
       var distance = Math.sqrt((f1 - f2) * (f1 - f2) + (l1 - l2) * (l1 - l2)) * unitFactor;
       this._result = {
         Bearing: brng,

@@ -57,7 +57,7 @@ export class AnomalyZoneComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.y}&lng=${this.anomalZone.x}&type=${this.stuffType}`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.z}&lng=${this.anomalZone.x}&type=anomaly-zone`;
     navigator.clipboard.writeText(link)
   }
 }

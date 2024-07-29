@@ -23,8 +23,6 @@ export class StalkerComponent {
   public inventory: StuffItem[];
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.stalker);
-
     if (this.stalker.inventoryItems?.length > 0) {
       this.inventory = [];
 
@@ -44,8 +42,11 @@ export class StalkerComponent {
 
         return y.item.area - x.item.area;
       })
-
-      console.log(this.inventory);
     }
+  }
+
+  public copyLink(): void {
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.stalker.z}&lng=${this.stalker.x}&type=stalkers`;
+    navigator.clipboard.writeText(link)
   }
 }
