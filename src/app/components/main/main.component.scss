@@ -17,6 +17,16 @@
   padding: 0 15px;
 }
 
+.sub-header {
+  color: white;
+  border-image: url(/assets/images/svg/interface/header.svg) 21 24 12 19;
+  border-top: 21px solid;
+  border-right: 24px solid;
+  border-bottom: 12px solid;
+  border-left: 19px solid;
+  display: flex;
+}
+
 .panel {
   height: 100%;
   border-image: url(/assets/images/svg/interface/header.svg) 21 24 12 19;

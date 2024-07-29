@@ -32,6 +32,7 @@ import { MarkerToSearch } from '../../models/marker-to-search.model';
 import { Mechanic } from '../../models/mechanic.model';
 import { MechanicComponent } from '../mechanic/mechanic.component';
 import { ItemUpgrade } from '../../models/upgrades/upgrades';
+import { Title } from '@angular/platform-browser';
 
 declare const L: any;
 declare var markWidth: number;
@@ -86,7 +87,8 @@ export class MapComponent {
   constructor(
     private translate: TranslateService,
     private route: ActivatedRoute,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    private titleService:Title
   ) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
@@ -536,6 +538,8 @@ export class MapComponent {
       if (addRuler) {
         ruler = this.addRuler();
       }
+
+      this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
     });
 
     this.searchContoller.on(
@@ -577,6 +581,7 @@ export class MapComponent {
         game: this.gamedata.uniqueName,
         language: this.translate.currentLang,
     });
+    this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
 
     this.route.queryParams.subscribe((h: any) => {
         if (h.lat != null && h.lng != null) {
