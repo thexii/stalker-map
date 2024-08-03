@@ -17,6 +17,7 @@ export class StuffComponent {
   @Input() public game: string;
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
+  @Input() public isUnderground: boolean;
 
   public items: StuffItem[];
   public condition: {
@@ -82,7 +83,7 @@ export class StuffComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
 }

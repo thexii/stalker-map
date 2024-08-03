@@ -21,9 +21,11 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "chart.js": "^4.4.3",
+    "express": "^4.19.2",
     "firebase": "^10.12.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "xmlbuilder": "^15.1.1",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {

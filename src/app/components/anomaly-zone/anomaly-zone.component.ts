@@ -18,6 +18,7 @@ export class AnomalyZoneComponent {
   @Input() public game: string;
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
+  @Input() public isUnderground: boolean;
 
   public Math: Math = Math;
 
@@ -57,7 +58,7 @@ export class AnomalyZoneComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.z}&lng=${this.anomalZone.x}&type=anomaly-zone`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.anomalZone.z}&lng=${this.anomalZone.x}&type=anomaly-zone${this.isUnderground ? `&underground=${this.anomalZone.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
 }

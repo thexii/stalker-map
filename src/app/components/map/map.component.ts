@@ -485,20 +485,6 @@ export class MapComponent {
         else {
           levelChanger.openPopup();
         }
-        /*self.fire('search:locationfound', {
-          latlng: levelChanger._latlng,
-          text: self._input.value,
-          layer: levelChanger
-        })*/
-
-        /*self._map.once('moveend zoomend', function (e: any) {
-          if (self._markerSearch) {
-            self._markerSearch.addTo(self._map).setLatLng(levelChanger._latlng)
-          }
-        })
-
-        */
-        // FIXME autoCollapse option hide self._markerSearch before visualized!!
       }
       else {
         console.error(`cant find level changer for ${location.uniqueName}`);
@@ -585,6 +571,25 @@ export class MapComponent {
 
     this.route.queryParams.subscribe((h: any) => {
         if (h.lat != null && h.lng != null) {
+          if (h.underground > 0) {
+            let levelChangers = this.layers[this.translate.instant('level-changers')];
+            let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.levelChanger.destinationLocationId == h.underground);
+
+            if (levelChanger) {
+              this.map.flyTo(levelChanger._latlng, this.map.getMaxZoom());
+
+              levelChanger.properties.markerToSearch = {};
+              levelChanger.properties.markerToSearch.lat = +h.lat;
+              levelChanger.properties.markerToSearch.lng = +h.lng;
+              levelChanger.properties.markerToSearch.type = h.type;
+
+              levelChanger.openPopup();
+            }
+            else {
+              console.error(`cant find underground mark! (${h.lat},${h.lng},${h.type},${h.underground})`);
+            }
+          }
+          else {
             if (
                 (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
                         animate: !0,
@@ -609,6 +614,7 @@ export class MapComponent {
                     return;
                 }
             }
+          }
         } else
             this.map.setView([
                     this.gamedata.heightInPixels / 2,
@@ -2178,7 +2184,7 @@ export class MapComponent {
           this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
           this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
           this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
-          this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
+          this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.type ? levelChanger.properties.markerToSearch.type : levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
           levelChanger.properties.markerToSearch = undefined;
           this.openedUndergroundPopup.component.goToMarker();
           return;
@@ -2220,7 +2226,7 @@ export class MapComponent {
       componentRef.instance.markerToSearch = new MarkerToSearch();
       componentRef.instance.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
       componentRef.instance.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
-      componentRef.instance.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
+      componentRef.instance.markerToSearch.type = levelChanger.properties.markerToSearch.type ? levelChanger.properties.markerToSearch.type : levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
       levelChanger.properties.markerToSearch = undefined;
     }
 
