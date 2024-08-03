@@ -13,7 +13,7 @@
         <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
           <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
             <div class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}}" [ngStyle]="{
-              'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + 'px',
+              'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
               'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
               'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
             }">

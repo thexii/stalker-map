@@ -20,6 +20,7 @@ export class LootBoxClusterComponent {
   @Input() public allItems: Item[];
   @Input() public lootBoxLocationConfig: LootBox;
   @Input() public lootBoxConfigs: LootBox[];
+  @Input() public isUnderground: boolean;
 
   public boxes: LootBoxView[];
 
@@ -87,7 +88,7 @@ export class LootBoxClusterComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box${this.isUnderground ? `&underground=${this.cluster.locationId}` : ''}`;
     console.log(link);
     navigator.clipboard.writeText(link)
   }

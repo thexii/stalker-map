@@ -36,6 +36,11 @@
   border-color: red;
   font-size: smaller;
 }
+
+.ruler-tooltip {
+  min-width: unset;
+}
+
 .plus-length{
   padding-left: 45px;
 }

@@ -8,6 +8,20 @@ $cell: 50px;
   min-width: 1400px;
 }
 
+.mechanic-info {
+  display: flex;
+  height: 150px;
+}
+
+.mechanic-bio {
+  flex-grow: 1;
+}
+
+.mechanic-name {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
 .container {
   max-height: 800px;
 }
@@ -97,4 +111,30 @@ $cell: 50px;
       display: block;
     }
   }
+}
+
+.section.selected {
+  border: 1px solid white;
+}
+
+.section {
+  text-align: center;
+  border: 1px solid #4d4d4d;
+  cursor: pointer;
+}
+
+.section:hover {
+  background-color: rgba(white, 0.2);
+}
+
+.section-td {
+  text-align: center;
+}
+
+.section div:nth-child(n) {
+  border-bottom: 1px solid rgba(white, 0.2);
+}
+
+.section div:last-child {
+  border-bottom: unset;
 }

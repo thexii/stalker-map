@@ -27,6 +27,10 @@
   display: flex;
 }
 
+.sub-header-panel-widthless {
+  width: unset;
+}
+
 .panel {
   height: 100%;
   border-image: url(/assets/images/svg/interface/header.svg) 21 24 12 19;

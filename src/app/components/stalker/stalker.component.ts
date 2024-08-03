@@ -19,6 +19,7 @@ export class StalkerComponent {
   @Input() public game: string;
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
+  @Input() public isUnderground: boolean;
 
   public inventory: StuffItem[];
 
@@ -46,7 +47,7 @@ export class StalkerComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.stalker.z}&lng=${this.stalker.x}&type=stalkers`;
+    let link = `${window.location.origin}/map/${this.game}?lat=${this.stalker.z}&lng=${this.stalker.x}&type=stalkers${this.isUnderground ? `&underground=${this.stalker.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
 }

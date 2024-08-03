@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from "firebase/app";
-import { Analytics, getAnalytics } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 
 @Injectable({
   providedIn: 'root'

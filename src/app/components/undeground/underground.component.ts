@@ -16,7 +16,6 @@ import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
 import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
 import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
-import { AnomalySpawnSection } from "../../models/anomaly-zone";
 import { AnomalyZoneComponent } from "../anomaly-zone/anomaly-zone.component";
 
 declare const L: any;
@@ -794,6 +793,7 @@ export class UndergroundComponent {
       componentRef.instance.game = this.game;
       componentRef.instance.allItems = this.items;
       componentRef.instance.stuffType = stash.properties.typeUniqueName;
+      componentRef.instance.isUnderground = true;
 
       return componentRef.location.nativeElement;
     }
@@ -811,6 +811,7 @@ export class UndergroundComponent {
       componentRef.instance.game = this.game;
       componentRef.instance.allItems = this.items;
       componentRef.instance.rankSetting = this.mapConfig.rankSetting;
+      componentRef.instance.isUnderground = true;
 
       return componentRef.location.nativeElement;
     }
@@ -827,6 +828,7 @@ export class UndergroundComponent {
       componentRef.instance.cluster = lootBox.properties.lootBox;
       componentRef.instance.game = this.game;
       componentRef.instance.allItems = this.items;
+      componentRef.instance.isUnderground = true;
 
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.properties.lootBox.locationId) as Location;
       let lootBoxLocationConfig = this.lootBoxConfig.locations.find(x => x.name == location.uniqueName);
@@ -861,6 +863,7 @@ export class UndergroundComponent {
       componentRef.instance.anomalZone = zone.properties.zoneModel;
       componentRef.instance.game = this.game;
       componentRef.instance.allItems = this.items;
+      componentRef.instance.isUnderground = true;
 
       return componentRef.location.nativeElement;
     }
