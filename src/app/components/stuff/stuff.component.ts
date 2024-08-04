@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgFor, NgIf } from '@angular/common';
 import { Item } from '../../models/item.model';
 import { LootBox } from '../../models/loot-box/loot-box-section.model';
+import { MapService } from '../../services/map.service';
 
 @Component({
   selector: 'app-stuff',
@@ -27,6 +28,8 @@ export class StuffComponent {
 
   private actorOnLevel = /actor_on_level\(([^\)]+)\)/;
   private npcRank = /npc_rank\(([^\)]+)\)/;
+
+  constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
     if (this.stuff.items) {

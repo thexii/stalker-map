@@ -5,6 +5,7 @@ import {
   ViewEncapsulation,
   ViewContainerRef,
   ViewChild,
+  Inject,
 } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -58,37 +59,38 @@ export class MapComponent {
   public svgMarker: any;
   public canvasRenderer: any;
 
-  private readonly avaliableGames: string[] = [
+  protected readonly avaliableGames: string[] = [
     'shoc',
     'cs',
     'cop',
     's2_2011',
     'hoc',
   ];
-  private readonly defaultGame: string = 'shoc';
+  protected readonly defaultGame: string = 'shoc';
 
-  private gamedata: Map;
-  private map: any;
-  private locations: any;
-  private canvasLayer: any;
-  private layers: any[] = [];
-  private items: Item[];
-  private lootBoxConfig: LootBoxConfig;
-  private upgrades: ItemUpgrade[];
-  private mapConfig: MapConfig;
-  private svgIcon: any;
-  private searchContoller: any;
-  private mapInitialized: boolean = false;
-  private markersToSearch: any[] = [];
+  protected gamedata: Map;
+  protected map: any;
+  protected locations: any;
+  protected canvasLayer: any;
+  protected layers: any[] = [];
+  protected items: Item[];
+  protected lootBoxConfig: LootBoxConfig;
+  protected upgrades: ItemUpgrade[];
+  protected mapConfig: MapConfig;
+  protected svgIcon: any;
+  protected searchContoller: any;
+  protected mapInitialized: boolean = false;
+  protected markersToSearch: any[] = [];
   public undergroundMarkerToSearch: any[] = [];
 
-  private openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
+  protected openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
+  protected overlaysListTop: string = 'layers-control';
 
   constructor(
-    private translate: TranslateService,
-    private route: ActivatedRoute,
-    private resolver: ComponentFactoryResolver,
-    private titleService:Title
+    protected translate: TranslateService,
+    protected route: ActivatedRoute,
+    protected resolver: ComponentFactoryResolver,
+    protected titleService:Title
   ) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
@@ -131,6 +133,7 @@ export class MapComponent {
   }
 
   private async ngOnInit(): Promise<void> {
+    console.log('MapComponent');
     if (typeof L === 'undefined') {
       await this.addScript('/assets/libs/leaflet/index.js');
       await this.addScript('/assets/libs/leaflet/leaflet.js');
@@ -378,7 +381,7 @@ export class MapComponent {
         this.layers = newLayers;
     }
 
-    let layerControl = L.control.layers(null, this.layers);
+    let layerControl = L.control.layers(null, this.layers, {overlaysListTop: this.overlaysListTop});
     layerControl.searchName = "layerControl";
     layerControl.isUnderground = false;
     layerControl.addTo(this.map)
@@ -388,6 +391,8 @@ export class MapComponent {
             animate: false
         });
     });
+
+    this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
 
     let searchLayers = this.reorderSearchingLayers(this.layers);
     let translate = this.translate;
@@ -546,14 +551,16 @@ export class MapComponent {
     })
     .addTo(this.map);
 
-    let carousel = document.getElementById('layers-control')as HTMLElement;
+    if (this.overlaysListTop) {
+      let carousel = document.getElementById('layers-control')as HTMLElement;
 
-    carousel.addEventListener('wheel', function (e) {
-        if (e.deltaY > 0)
-            carousel.scrollLeft += 100;
-        else
-            carousel.scrollLeft -= 100;
-    });
+      carousel.addEventListener('wheel', function (e) {
+          if (e.deltaY > 0)
+              carousel.scrollLeft += 100;
+          else
+              carousel.scrollLeft -= 100;
+      });
+    }
 
     if (layersToHide.length > 0) {
         for (let h of layersToHide) {
