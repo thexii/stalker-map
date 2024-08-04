@@ -1088,17 +1088,6 @@ export class MapComponent {
               offset: [0, 50],
             }
           );
-
-          marker.bindTooltip(
-            (marker: any) => {
-              return this.translate.instant(marker.properties.name);
-            } ,
-            {
-              sticky: true,
-              className: 'map-tooltip',
-              offset: [0, 50],
-            }
-          );
         }
 
         this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
