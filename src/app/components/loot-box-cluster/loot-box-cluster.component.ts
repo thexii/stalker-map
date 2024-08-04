@@ -6,6 +6,8 @@ import { LootBoxView } from '../../models/loot-box/loot-box-veiw.model';
 import { Item } from '../../models/item.model';
 import { LootBox } from '../../models/loot-box/loot-box-section.model';
 import { StuffItem } from '../../models/stuff';
+import { MapService } from '../../services/map.service';
+import { HiddenMarker } from '../../models/hidden-marker.model';
 
 @Component({
   selector: 'app-loot-box-cluster',
@@ -23,8 +25,13 @@ export class LootBoxClusterComponent {
   @Input() public isUnderground: boolean;
 
   public boxes: LootBoxView[];
+  public isMarkerHidden: boolean = false;
+
+  constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
+    this.isMarkerHidden = this.mapService.isMarkHidden(HiddenMarker.lootBox(this.cluster))
+
     if (this.cluster.lootBoxes && this.cluster.lootBoxes.length > 0) {
       console.log(this.cluster);
       this.boxes = [];
@@ -85,6 +92,16 @@ export class LootBoxClusterComponent {
         this.boxes.push(boxView);
       }
     }
+  }
+
+  public hideMarker(): void {
+    this.mapService.hideMark(HiddenMarker.lootBox(this.cluster));
+    this.isMarkerHidden = true;
+  }
+
+  public unHideMarker(): void {
+    this.mapService.unhideMark(HiddenMarker.lootBox(this.cluster));
+    this.isMarkerHidden = false;
   }
 
   public copyLink(): void {

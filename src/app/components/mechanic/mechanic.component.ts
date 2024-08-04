@@ -1,3 +1,4 @@
+import { MapService } from './../../services/map.service';
 import { Component, Input } from '@angular/core';
 import { Mechanic, MechanicDiscount } from '../../models/mechanic.model';
 import { Item } from '../../models/item.model';
@@ -38,6 +39,8 @@ export class MechanicComponent {
   public Math: Math = Math;
 
   public repairPriceFactor: number = 0.6;
+
+  constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
     console.log(this.mechanic);

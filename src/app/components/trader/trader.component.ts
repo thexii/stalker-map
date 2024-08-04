@@ -10,6 +10,7 @@ import { TraderSectionsConfig } from '../../models/trader/trader-sections-config
 import { TraderDiscounts } from '../../models/trader/trader-discount.model';
 import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
+import { MapService } from '../../services/map.service';
 
 @Component({
     selector: 'app-trader',
@@ -66,7 +67,9 @@ export class TraderComponent {
   private infoPortionRegex = new RegExp(/[-+~=!]/);
   private is_faction_resource_greater_regex = new RegExp(/(is_faction_resource_greater)\([^\)]+\)/);
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private mapService: MapService) {
     if (TraderComponent.factorialCache == null) {
       TraderComponent.factorialCache = new Map<number, number>();
       this.factorial(20);

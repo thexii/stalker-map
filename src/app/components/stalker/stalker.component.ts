@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgFor, NgIf } from '@angular/common';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { RankSetting } from '../../models/rank-settings.model';
+import { MapService } from '../../services/map.service';
 
 @Component({
     selector: 'app-stalker',
@@ -22,6 +23,8 @@ export class StalkerComponent {
   @Input() public isUnderground: boolean;
 
   public inventory: StuffItem[];
+
+  constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
     if (this.stalker.inventoryItems?.length > 0) {

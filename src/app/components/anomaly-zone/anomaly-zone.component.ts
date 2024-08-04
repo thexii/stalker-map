@@ -5,6 +5,8 @@ import { KeyValuePipe, NgFor, NgIf } from '@angular/common';
 import { AnomalySpawnSectionView } from '../../models/anomaly-zone/anomaly-spawn-section.view.model';
 import { Item } from '../../models/item.model';
 import { StuffItem } from '../../models/stuff';
+import { MapService } from '../../services/map.service';
+import { HiddenMarker } from '../../models/hidden-marker.model';
 
 @Component({
   selector: 'app-anomaly-zone',
@@ -24,8 +26,12 @@ export class AnomalyZoneComponent {
 
   public spawnSections: AnomalySpawnSectionView[];
   public anomalies: {anomaly: string, count: number}[];
+  public isMarkerHidden: boolean = false;
+
+  constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
+    this.isMarkerHidden = this.mapService.isMarkHidden(HiddenMarker.anomalZone(this.anomalZone))
 
     if (this.anomalZone.anomaliySpawnSections?.length > 0) {
       this.spawnSections = [];
@@ -55,6 +61,16 @@ export class AnomalyZoneComponent {
         this.anomalies.push({anomaly: anomaly, count: this.anomalZone.anomalies[anomaly] as number});
       }
     }
+  }
+
+  public hideMarker(): void {
+    this.mapService.hideMark(HiddenMarker.anomalZone(this.anomalZone));
+    this.isMarkerHidden = true;
+  }
+
+  public unHideMarker(): void {
+    this.mapService.unhideMark(HiddenMarker.anomalZone(this.anomalZone));
+    this.isMarkerHidden = false;
   }
 
   public copyLink(): void {
