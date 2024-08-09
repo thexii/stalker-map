@@ -153,13 +153,18 @@ export class UndergroundComponent {
             break;
           }
           case "l10u_bunker": {
-            this.xShift = 83;
-            this.zShift = 99.25;
+            this.xShift = 67.5;
+            this.zShift = 89.6;
             break;
           }
           case "l12u_control_monolith": {
-            this.xShift = 50;
-            this.zShift = 49.625;
+            this.xShift = 43.796768;
+            this.zShift = 44.2057;
+            break;
+          }
+          case "l12u_sarcofag": {
+            this.xShift = 32.9166755676;
+            this.zShift = 45.0416660309;
             break;
           }
         }
@@ -189,7 +194,7 @@ export class UndergroundComponent {
     `${markWidthUnderground}px`);
       });
 
-        let printClickCoordinates = false;
+        let printClickCoordinates = true;
 
         if (printClickCoordinates) {
             let tempMap = this.map;

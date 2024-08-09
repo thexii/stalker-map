@@ -318,5 +318,17 @@
         }
       ]
     }
+  ],
+  "undergroundLevelsConfig": [
+    {
+      "name": "l10u_bunker",
+      "levels": ["map_l10u_bunker", "map_l10u_bunker_0"],
+      "baseLevel": "map_l10u_bunker"
+    },
+    {
+      "name": "l12u_sarcofag",
+      "levels": ["map_l12u_sarcofag", "map_l12u_sarcofag_0", "map_l12u_sarcofag_1", "map_l12u_sarcofag_2"],
+      "baseLevel": "map_l12u_sarcofag"
+    }
   ]
 }
