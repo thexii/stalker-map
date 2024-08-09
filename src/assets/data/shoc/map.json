@@ -7881,6 +7881,83 @@
       "locationId": 5
     },
     {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_12x70_buck",
+          "count": 4,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_12x76_zhekan",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 799.8363,
+      "y": 2.060771,
+      "z": 689.9971,
+      "locationId": 5
+    },
+    {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 4,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 799.5641,
+      "y": 1.0227599,
+      "z": 686.9821,
+      "locationId": 5
+    },
+    {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_5.45x39_fmj",
+          "count": 3,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_9x19_fmj",
+          "count": 4,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 799.2976,
+      "y": 0.9719997,
+      "z": 688.2922,
+      "locationId": 5
+    },
+    {
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
@@ -8154,6 +8231,40 @@
       "locationId": 5
     },
     {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_5.45x39_ap",
+          "count": 2,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -50.322456,
+      "y": -12.860178,
+      "z": -23.699596,
+      "locationId": 6
+    },
+    {
       "name": "x18_secret_0001_name",
       "uniqueName": "x18_secret_0001",
       "description": "x18_secret_0001_description",
@@ -8187,6 +8298,40 @@
       "x": 42.41241,
       "y": -5.1999254,
       "z": -19.782488,
+      "locationId": 6
+    },
+    {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "grenade_rgd5",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "bread",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "kolbasa",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "vodka",
+          "count": 2,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 28.27998,
+      "y": -12.495129,
+      "z": 39.004128,
       "locationId": 6
     },
     {
@@ -10650,6 +10795,59 @@
       "locationId": 9
     },
     {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "wpn_rg-6",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_vog-25p",
+          "count": 6,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 537.761,
+      "y": -5.4890985,
+      "z": 980.13965,
+      "locationId": 9
+    },
+    {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "outfit_svoboda_m1",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "svoboda_light_outfit",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "svoboda_heavy_outfit",
+          "count": 2,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 538.21375,
+      "y": -5.4890995,
+      "z": 980.5981,
+      "locationId": 9
+    },
+    {
       "name": "stuff_at_location",
       "uniqueName": null,
       "description": null,
@@ -12581,6 +12779,60 @@
       "y": -34.476,
       "z": 21.82608,
       "locationId": 15
+    },
+    {
+      "name": "inventory_box",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "exo_outfit",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "medkit_scientic",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "medkit_army",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "bandage",
+          "count": 4,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_5.56x45_ap",
+          "count": 3,
+          "probability": 0
+        },
+        {
+          "uniqueName": "ammo_9x39_pab9",
+          "count": 4,
+          "probability": 0
+        },
+        {
+          "uniqueName": "grenade_f1",
+          "count": 3,
+          "probability": 0
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 13.178866,
+      "y": -4.519499,
+      "z": 7.8353443,
+      "locationId": 16
     },
     {
       "name": "stuff_at_location",
