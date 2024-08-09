@@ -6783,25 +6783,53 @@
       "items": [
         {
           "uniqueName": "af_electra_flash",
-          "count": 3,
+          "count": 2,
           "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -38.54592,
+      "y": -5.4271173,
+      "z": -29.390871,
+      "locationId": 4
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
-          "uniqueName": "af_electra_moonlight",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_vyvert",
+          "uniqueName": "af_electra_flash",
           "count": 1,
           "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": -41.75883,
-      "y": -7.0404067,
-      "z": -29.547113,
+      "x": -46.923035,
+      "y": -3.9215343,
+      "z": -31.115583,
+      "locationId": 4
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "af_electra_moonlight",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -40.501846,
+      "y": -3.9637856,
+      "z": -16.359169,
       "locationId": 4
     },
     {
@@ -6814,18 +6842,13 @@
           "uniqueName": "af_electra_sparkler",
           "count": 1,
           "probability": 1
-        },
-        {
-          "uniqueName": "af_rusty_sea-urchin",
-          "count": 1,
-          "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": -111.06082,
-      "y": -15.642841,
-      "z": -25.529623,
+      "x": -105.67391,
+      "y": -16.302265,
+      "z": -22.407345,
       "locationId": 4
     },
     {
@@ -6838,7 +6861,82 @@
           "uniqueName": "af_fireball",
           "count": 1,
           "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -76.84366,
+      "y": -5.6497927,
+      "z": -65.75051,
+      "locationId": 4
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "af_rusty_sea-urchin",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -116.44774,
+      "y": -14.983417,
+      "z": -28.651901,
+      "locationId": 4
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "af_vyvert",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -44.277428,
+      "y": -16.46248,
+      "z": -41.479065,
+      "locationId": 4
         },
+        },
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "af_vyvert",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -72.091675,
+      "y": -14.850537,
+      "z": -47.72435,
+      "locationId": 4
+        },
+        },
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
           "uniqueName": "bandit_outfit",
           "count": 1,
@@ -6850,26 +6948,37 @@
           "probability": 1
         },
         {
-          "uniqueName": "gunslinger_flash",
-          "count": 1,
-          "probability": 1
-        },
-        {
           "uniqueName": "wpn_ak74u",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "af_vyvert",
           "count": 1,
           "probability": 1
         }
       ],
       "condlist": null,
       "communities": null,
-      "x": -72.87098,
-      "y": -7.425388,
-      "z": -67.2683,
+      "x": -72.85315,
+      "y": -6.112164,
+      "z": -75.09819,
+      "locationId": 4
+        },
+        },
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "gunslinger_flash",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": -69.73111,
+      "y": -5.7155046,
+      "z": -64.840385,
       "locationId": 4
     },
     {
@@ -8370,42 +8479,21 @@
           "uniqueName": "af_ameba_slug",
           "count": 1,
           "probability": 1
-        },
-        {
-          "uniqueName": "antirad",
-          "count": 4,
-          "probability": 1
-        },
-        {
-          "uniqueName": "medkit",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "monolit_outfit",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "dar_document4",
-          "count": 1,
-          "probability": 1
-        },
-        {
-          "uniqueName": "energy_drink",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "ammo_vog-25",
-          "count": 2,
-          "probability": 1
-        },
-        {
-          "uniqueName": "wpn_ak74",
-          "count": 1,
-          "probability": 1
-        },
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 0.8452829,
+      "y": 5.5062656,
+      "z": -11.776409,
+      "locationId": 6
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
         {
           "uniqueName": "af_vyvert",
           "count": 1,
@@ -8414,9 +8502,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 12.536936,
-      "y": 3.3355708,
-      "z": -0.22477968,
+      "x": -6.315507,
+      "y": 1.896162,
+      "z": 15.545117,
       "locationId": 6
     },
     {
@@ -8449,8 +8537,127 @@
       "condlist": null,
       "communities": null,
       "x": 41.814686,
-      "y": -5.362277,
-      "z": -35.79907,
+      "y": -5.3622766,
+      "z": -35.799072,
+      "locationId": 6
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "ammo_vog-25",
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "medkit",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "wpn_ak74",
+          "count": 1,
+          "probability": 1
+        },
+        {
+          "uniqueName": "monolit_outfit",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 10.390283,
+      "y": 5.3505254,
+      "z": 6.373138,
+      "locationId": 6
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 11.678898,
+      "y": 4.2031736,
+      "z": -25.2655,
+      "locationId": 6
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "antirad",
+          "count": 2,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 23.917305,
+      "y": 5.0377703,
+      "z": 20.819265,
+      "locationId": 6
+        },
+        },
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "dar_document4",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 20.603168,
+      "y": -5.644738,
+      "z": -18.218317,
+      "locationId": 6
+        },
+        },
+    },
+    {
+      "name": "stuff_at_location",
+      "uniqueName": null,
+      "description": null,
+      "typeId": 3,
+      "items": [
+        {
+          "uniqueName": "energy_drink",
+          "count": 1,
+          "probability": 1
+        }
+      ],
+      "condlist": null,
+      "communities": null,
+      "x": 26.850054,
+      "y": -5.6447372,
+      "z": -18.043661,
       "locationId": 6
     },
     {
@@ -13971,12 +14178,31 @@
             }
           ],
           "name": "def_bpx",
-          "count": 4
+          "count": 1
         }
       ],
-      "x": -74.70221,
-      "y": -6.5090775,
-      "z": -74.24503,
+      "x": -79.78117,
+      "y": -6.8732424,
+      "z": -73.659904,
+      "locationId": 4
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [
+            {
+              "uniqueName": "medkit",
+              "count": 3,
+              "probability": 0
+            }
+          ],
+          "name": "def_bpx",
+          "count": 3
+        }
+      ],
+      "x": -73.00922,
+      "y": -6.3876896,
+      "z": -74.44007,
       "locationId": 4
     },
     {
@@ -14273,12 +14499,12 @@
         {
           "items": [],
           "name": "big_box_dungeons",
-          "count": 2
+          "count": 1
         }
       ],
-      "x": 18.193546,
-      "y": -15.28542,
-      "z": 66.060905,
+      "x": 13.9590845,
+      "y": -16.343067,
+      "z": 68.41451,
       "locationId": 6
     },
     {
@@ -14292,6 +14518,19 @@
       "x": 28.613708,
       "y": -12.697501,
       "z": 39.867767,
+      "locationId": 6
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_dungeons",
+          "count": 1
+        }
+      ],
+      "x": 22.428009,
+      "y": -14.227774,
+      "z": 63.7073,
       "locationId": 6
     },
     {
@@ -15809,16 +16048,11 @@
           "items": [],
           "name": "big_box_dungeons",
           "count": 1
-        },
-        {
-          "items": [],
-          "name": "small_box_generic",
-          "count": 1
         }
       ],
-      "x": 4.6892676,
-      "y": 12.453996,
-      "z": 18.920149,
+      "x": 7.671626,
+      "y": 12.205197,
+      "z": 20.15775,
       "locationId": 16
     },
     {
@@ -15838,13 +16072,39 @@
       "lootBoxes": [
         {
           "items": [],
-          "name": "big_box_arsenal",
-          "count": 2
+          "name": "small_box_generic",
+          "count": 1
         }
       ],
-      "x": 32.47977,
-      "y": 15.042583,
-      "z": 28.35242,
+      "x": 1.7069092,
+      "y": 12.702794,
+      "z": 17.682549,
+      "locationId": 16
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_arsenal",
+          "count": 1
+        }
+      ],
+      "x": 29.976164,
+      "y": 11.846818,
+      "z": 30.064846,
+      "locationId": 16
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_arsenal",
+          "count": 1
+        }
+      ],
+      "x": 34.983376,
+      "y": 18.238348,
+      "z": 26.639996,
       "locationId": 16
     },
     {
@@ -15912,12 +16172,41 @@
             }
           ],
           "name": null,
-          "count": 2
+          "count": 1
         }
       ],
-      "x": 10.968468,
-      "y": -2.4631672,
-      "z": 9.760047,
+      "x": 10.92084,
+      "y": -0.43200803,
+      "z": 7.316899,
+      "locationId": 16
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [
+            {
+              "uniqueName": "af_soul",
+              "count": 1,
+              "probability": 0
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "count": 1,
+              "probability": 0
+            },
+            {
+              "uniqueName": "af_night_star",
+              "count": 1,
+              "probability": 0
+            }
+          ],
+          "name": null,
+          "count": 1
+        }
+      ],
+      "x": 11.016094,
+      "y": -4.494326,
+      "z": 12.203196,
       "locationId": 16
     },
     {
@@ -15963,7 +16252,7 @@
             }
           ],
           "name": "big_box_dungeons",
-          "count": 2
+          "count": 1
         },
         {
           "items": [
@@ -15975,16 +16264,11 @@
           ],
           "name": null,
           "count": 1
-        },
-        {
-          "items": [],
-          "name": "small_box_science",
-          "count": 2
         }
       ],
-      "x": 49.126343,
-      "y": 6.517789,
-      "z": 16.365479,
+      "x": 44.413372,
+      "y": 6.1658964,
+      "z": 17.731564,
       "locationId": 17
     },
     {
@@ -16073,6 +16357,32 @@
       "lootBoxes": [
         {
           "items": [],
+          "name": "big_box_dungeons",
+          "count": 1
+        }
+      ],
+      "x": 51.586708,
+      "y": 5.584779,
+      "z": 9.119322,
+      "locationId": 17
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "small_box_science",
+          "count": 2
+        }
+      ],
+      "x": 52.60913,
+      "y": 7.3361864,
+      "z": 18.62247,
+      "locationId": 17
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
           "name": "small_box_science",
           "count": 1
         }
@@ -16087,17 +16397,25 @@
         {
           "items": [],
           "name": "big_box_generic",
-          "count": 3
-        },
+          "count": 2
+        }
+      ],
+      "x": 2.5548363,
+      "y": -7.450824,
+      "z": -66.18445,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
         {
           "items": [],
-          "name": "small_box_science",
+          "name": "big_box_generic",
           "count": 1
         }
       ],
-      "x": 1.6753294,
-      "y": -7.327457,
-      "z": -61.89038,
+      "x": -3.3482354,
+      "y": -7.4508953,
+      "z": -59.704025,
       "locationId": 18
     },
     {
@@ -16163,16 +16481,11 @@
           "items": [],
           "name": "big_box_generic",
           "count": 1
-        },
-        {
-          "items": [],
-          "name": "small_box_science",
-          "count": 2
         }
       ],
-      "x": -25.746536,
-      "y": -22.933462,
-      "z": -14.118321,
+      "x": -22.719522,
+      "y": -23.356241,
+      "z": -11.879805,
       "locationId": 18
     },
     {
@@ -16232,6 +16545,19 @@
         {
           "items": [],
           "name": "small_box_science",
+          "count": 2
+        }
+      ],
+      "x": -27.260044,
+      "y": -22.722073,
+      "z": -15.23758,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "small_box_science",
           "count": 1
         }
       ],
@@ -16257,13 +16583,39 @@
       "lootBoxes": [
         {
           "items": [],
-          "name": "big_box_generic",
-          "count": 2
+          "name": "small_box_science",
+          "count": 1
         }
       ],
-      "x": -36.680573,
-      "y": -23.51868,
-      "z": -21.093155,
+      "x": 4.9398804,
+      "y": -6.957285,
+      "z": -55.48861,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -34.084557,
+      "y": -23.517576,
+      "z": -24.599184,
+      "locationId": 18
+    },
+    {
+      "lootBoxes": [
+        {
+          "items": [],
+          "name": "big_box_generic",
+          "count": 1
+        }
+      ],
+      "x": -39.276585,
+      "y": -23.519785,
+      "z": -17.587128,
       "locationId": 18
     },
     {
@@ -26118,7 +26470,7 @@
       "anomaliySpawnSections": [
         {
           "maxCapacity": 1,
-          "count": 6,
+          "count": 1,
           "anomalyUniqueName": "zone_witches_galantine_strong",
           "anomalySpawnItems": [
             {
@@ -26141,45 +26493,270 @@
       ],
       "anomalies": null,
       "artefactWays": null,
-      "x": -38.80998,
-      "y": -3.6404295,
-      "z": -19.309378,
+      "x": -38.743313,
+      "y": -3.673763,
+      "z": -33.759373,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_witches_galantine_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -38.743313,
+      "y": -3.6737628,
+      "z": -27.959372,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_witches_galantine_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -38.743313,
+      "y": -3.573763,
+      "z": -22.159376,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_witches_galantine_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -38.743313,
+      "y": -3.573763,
+      "z": -16.359379,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_witches_galantine_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -38.94331,
+      "y": -3.6737628,
+      "z": -10.659379,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_witches_galantine_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -38.94331,
+      "y": -3.6737628,
+      "z": -4.959379,
       "locationId": 4
     },
     {
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_buzz": 3
+        "zone_buzz": 1
       },
       "artefactWays": null,
-      "x": -56.829956,
-      "y": -15.59581,
-      "z": -40.773342,
+      "x": -66.20692,
+      "y": -16.431705,
+      "z": -39.267403,
       "locationId": 4
     },
     {
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_buzz": 9
+        "zone_buzz": 1
       },
       "artefactWays": null,
-      "x": -107.17089,
-      "y": -16.220758,
-      "z": -48.959896,
+      "x": -58.72164,
+      "y": -16.40672,
+      "z": -39.92777,
       "locationId": 4
     },
     {
       "name": null,
       "anomaliySpawnSections": null,
       "anomalies": {
-        "zone_buzz": 8
+        "zone_buzz": 1
       },
       "artefactWays": null,
-      "x": -83.04833,
-      "y": -16.900179,
-      "z": 5.0834885,
+      "x": -98.82309,
+      "y": -16.378485,
+      "z": -41.372227,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -88.470764,
+      "y": -16.293196,
+      "z": -35.033524,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -45.561302,
+      "y": -13.949006,
+      "z": -43.124844,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -103.982864,
+      "y": -16.465088,
+      "z": -57.251587,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -108.42283,
+      "y": -16.296192,
+      "z": -84.988014,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -82.10777,
+      "y": -22.459099,
+      "z": 13.78365,
       "locationId": 4
     },
     {
@@ -26192,6 +26769,150 @@
       "x": -42.360157,
       "y": -7.613558,
       "z": 12.168655,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -109.13916,
+      "y": -16.38932,
+      "z": -67.59955,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -117.1335,
+      "y": -16.396412,
+      "z": -55.338303,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -104.536606,
+      "y": -16.461418,
+      "z": -28.635353,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -118.85217,
+      "y": -14.997226,
+      "z": -37.4096,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -115.17708,
+      "y": -16.309507,
+      "z": -33.010918,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -102.7552,
+      "y": -16.461416,
+      "z": -11.874174,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -92.59147,
+      "y": -16.421675,
+      "z": -7.4797926,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -77.01231,
+      "y": -16.340578,
+      "z": 18.837952,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -82.93175,
+      "y": -16.26406,
+      "z": 11.1654415,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -78.98216,
+      "y": -16.465088,
+      "z": 4.021246,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -84.16551,
+      "y": -16.450798,
+      "z": -0.55735993,
+      "locationId": 4
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": null,
+      "anomalies": {
+        "zone_buzz": 1
+      },
+      "artefactWays": null,
+      "x": -63.84052,
+      "y": -14.338722,
+      "z": 12.770948,
       "locationId": 4
     },
     {
@@ -26677,7 +27398,18 @@
               "probability": 0.2
             }
           ]
-        },
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": 0.69173187,
+      "y": 6.190328,
+      "z": 8.527795,
+      "locationId": 6
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
         {
           "maxCapacity": 1,
           "count": 3,
@@ -26694,10 +27426,21 @@
               "probability": 0.4
             }
           ]
-        },
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": 18.213495,
+      "y": 4.1902466,
+      "z": 6.947035,
+      "locationId": 6
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
         {
           "maxCapacity": 1,
-          "count": 3,
+          "count": 1,
           "anomalyUniqueName": "zone_zharka_static_strong",
           "anomalySpawnItems": [
             {
@@ -26720,9 +27463,42 @@
       ],
       "anomalies": null,
       "artefactWays": null,
-      "x": 15.017999,
-      "y": 4.478583,
-      "z": 11.616066,
+      "x": 22.145271,
+      "y": 4.217358,
+      "z": 20.507494,
+      "locationId": 6
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 2,
+          "anomalyUniqueName": "zone_zharka_static_strong",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_cristall",
+              "count": 0,
+              "probability": 0.2
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": 13.824251,
+      "y": 4.185828,
+      "z": 15.718037,
       "locationId": 6
     },
     {
@@ -29687,7 +30463,7 @@
       "anomaliySpawnSections": [
         {
           "maxCapacity": 1,
-          "count": 10,
+          "count": 1,
           "anomalyUniqueName": "zone_zharka_static_average",
           "anomalySpawnItems": [
             {
@@ -29705,9 +30481,261 @@
       ],
       "anomalies": null,
       "artefactWays": null,
-      "x": -42.643276,
-      "y": -6.7018538,
-      "z": -9.992616,
+      "x": -43.38212,
+      "y": 3.4682822,
+      "z": 4.135183,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -39.29921,
+      "y": -7.8334,
+      "z": -0.07383227,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -37.61961,
+      "y": -7.8334,
+      "z": -5.9275446,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -39.731762,
+      "y": -7.81962,
+      "z": -15.189764,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -32.717,
+      "y": -7.8334002,
+      "z": -18.204304,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -42.99178,
+      "y": -7.8334002,
+      "z": -20.955824,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -54.433548,
+      "y": -7.8334,
+      "z": -19.69563,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -52.435036,
+      "y": -7.8334,
+      "z": -10.865764,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -48.293186,
+      "y": -7.8334,
+      "z": -1.5679188,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -35.529537,
+      "y": -7.833396,
+      "z": -11.580756,
       "locationId": 17
     },
     {
@@ -29743,7 +30771,7 @@
       "anomaliySpawnSections": [
         {
           "maxCapacity": 1,
-          "count": 2,
+          "count": 1,
           "anomalyUniqueName": "zone_zharka_static_average",
           "anomalySpawnItems": [
             {
@@ -29761,9 +30789,37 @@
       ],
       "anomalies": null,
       "artefactWays": null,
-      "x": -104.02021,
-      "y": 21.565233,
-      "z": -28.942139,
+      "x": -105.10865,
+      "y": 21.565226,
+      "z": -34.576107,
+      "locationId": 17
+    },
+    {
+      "name": null,
+      "anomaliySpawnSections": [
+        {
+          "maxCapacity": 1,
+          "count": 1,
+          "anomalyUniqueName": "zone_zharka_static_average",
+          "anomalySpawnItems": [
+            {
+              "uniqueName": "af_drops",
+              "count": 0,
+              "probability": 0.6
+            },
+            {
+              "uniqueName": "af_fireball",
+              "count": 0,
+              "probability": 0.4
+            }
+          ]
+        }
+      ],
+      "anomalies": null,
+      "artefactWays": null,
+      "x": -102.93177,
+      "y": 21.56524,
+      "z": -23.308168,
       "locationId": 17
     }
   ],
