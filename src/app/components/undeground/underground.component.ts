@@ -163,8 +163,8 @@ export class UndergroundComponent {
             break;
           }
           case "l12u_sarcofag": {
-            this.xShift = 32.9166755676;
-            this.zShift = 45.0416660309;
+            this.xShift = 34.9166755676;
+            this.zShift = 43.0416660309;
             break;
           }
         }
