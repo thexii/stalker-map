@@ -10,6 +10,7 @@ export class UpgradeSection {
   public name: string;
   public textureName: string;
   public elements: Upgrade[];
+  public branch: number = -1;
 }
 
 export class Upgrade {

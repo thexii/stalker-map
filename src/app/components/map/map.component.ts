@@ -1576,13 +1576,13 @@ export class MapComponent {
         }
       );
 
-      /*canvasMarker
+      canvasMarker
         .bindPopup(
           (stalker: any) =>
             this.createMechanicPopup(stalker),
           { maxWidth: 2000 }
         )
-        .openPopup();*/
+        .openPopup();
     }
 
 
@@ -1843,8 +1843,8 @@ export class MapComponent {
       );
     }
 
-    this.addLayerToMap(L.layerGroup(markers), smartTerrainIcon.uniqueName);
     this.addLayerToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
+    this.addLayerToMap(L.layerGroup(markers), smartTerrainIcon.uniqueName);
   }
 
   private addMonsterLairs() {

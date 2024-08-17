@@ -1,7 +1,7 @@
 {
   "id": 0,
   "uniqueName": "hoc",
-  "widthInPixels": 1500,
+  "widthInPixels": 1561,
   "heightInPixels": 1154,
   "heightInMeters": 7883.983,
   "widthInMeters": 8128,
@@ -17,6 +17,18 @@
     "x2": 779,
     "y1": 606,
     "y2": 948
+  },{
+    "id": 6,
+    "uniqueName": "pda2",
+    "isUnderground": false,
+    "widthInMeters": 1200,
+    "heightInMeters": 1200,
+    "xShift": 0,
+    "yShift": -0.0125,
+    "x1": 758,
+    "x2": 1500,
+    "y1": 0,
+    "y2": 342
   },
   {
     "id": 15,

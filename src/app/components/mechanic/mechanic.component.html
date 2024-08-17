@@ -2,44 +2,64 @@
   <div class="mechanic-container-section">
     <stalker-profile [profile]="mechanic.profile" [game]="game" [rankSetting]="rankSetting"></stalker-profile>
     <div class="mechanic-upgrades" *ngIf="selectedItem">
-      <div *ngIf="game == 'cop'" class='upgrade-item-image {{selectedItem.category}}'
-      [ngStyle]="{
-        'width': selectedItem.upgr_icon_width + 'px',
-        'height': selectedItem.upgr_icon_height + 'px',
-        'background-position': 'left -' + selectedItem.upgr_icon_x + 'px top -' + selectedItem.upgr_icon_y + 'px'}">
+      <div class="upgrade-item-image-container">
+        <div *ngIf="game == 'cs'"
+        class="inventory-item-image {{game}} inventory-item-x-{{selectedItem.gridX}} inventory-item-y-{{selectedItem.gridY}}"
+        [ngStyle]="{'width': selectedItem.width * 50 + 'px', 'height': selectedItem.height * 50 + 'px'}"></div>
+        <div *ngIf="game == 'cop'" class='upgrade-item-image {{selectedItem.category}}'
+        [ngStyle]="{
+          'width': selectedItem.upgr_icon_width + 'px',
+          'height': selectedItem.upgr_icon_height + 'px',
+          'background-position': 'left -' + selectedItem.upgr_icon_x + 'px top -' + selectedItem.upgr_icon_y + 'px'}">
 
+        </div>
       </div>
       <div class="selected-item-upgrades" *ngIf="selectedItem && selectedItemUpgrade">
         <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
-          <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
-            <div class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}}" [ngStyle]="{
-              'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
-              'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
-              'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
-            }">
-              <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
-              <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
-              <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
-            </div>
-          </ng-container>
+          <div id="section-{{sectionIndex}}" class="upgrade-section">
+            <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
+              <div class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
+                'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
+                'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
+                'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
+              }">
+                <ng-container *ngIf="!upgrade.isLocked">
+                  <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
+                  <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
+                  <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
+                  <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
+                </ng-container>
+                <div class="upgrade-item-highlight upgrade-item-highlight-locked" [ngClass]="{'active': upgrade.isLocked}"></div>
+              </div>
+            </ng-container>
+          </div>
         </ng-container>
       </div>
     </div>
   </div>
   <div class="mechanic-container-section section-info">
     <div class="info container">
-      <div class="sections-select-container" *ngIf="mechanic.discounts && mechanic.discounts.length > 0">
+      <div class="sections-select-container" *ngIf="discounts && discounts.length > 0">
         <table style="width: 100%;">
           <tr>
             <ng-container>
               <td class="section-td">{{ 'discounts' | translate}}</td>
             </ng-container>
           </tr>
-          <ng-container *ngFor="let discount of mechanic.discounts">
+          <ng-container *ngFor="let discount of discounts">
             <tr>
               <td class="section" (click)="selectDiscount(discount)" [ngClass]="{'selected': selectedDiscount && selectedDiscount.condition == discount.condition}">
                 <ng-container *ngIf="!discount.condition">{{ "discount_default" | translate}}</ng-container>
-                <ng-container *ngIf="discount.condition">{{ discount.condition }}</ng-container>
+                <ng-container *ngIf="discount.conditions">
+                  <ng-container *ngFor="let cond of discount.conditions">
+                    <div>{{ cond | translate}}</div>
+                  </ng-container>
+                </ng-container>
+
+                  <ng-container *ngIf="discount.value != 1">
+                    <div *ngIf="discount.value > 1">Націнка за ремонт: +{{ Math.round((discount.value - 1) * 100)}}%</div>
+                    <div *ngIf="discount.value < 1">Скидка за ремонт: {{ Math.round((discount.value - 1) * 100)}}%</div>
+                  </ng-container>
               </td>
             </tr>
           </ng-container>

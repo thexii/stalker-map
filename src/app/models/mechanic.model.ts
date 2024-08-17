@@ -13,5 +13,6 @@ export class UpgradeCondition {
 
 export class MechanicDiscount {
   public condition: string;
+  public conditions: string[];
   public value: number;
 }
