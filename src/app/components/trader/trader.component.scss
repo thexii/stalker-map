@@ -1,5 +1,5 @@
 
-$trader-columns: 9;
+$trader-columns: 8;
 $cell: 50px;
 
 .trader-container {
@@ -27,6 +27,7 @@ $cell: 50px;
   overflow-y: auto;
   overflow-x: hidden;
   grid-template-columns: repeat($trader-columns, $cell);
+  min-width: calc($trader-columns * $cell);
 }
 
 .best-sell-item {
@@ -49,17 +50,13 @@ $cell: 50px;
   vertical-align: top;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: $trader-columns * $cell;
+  //min-width: $trader-columns * $cell;
 }
 
 .trader-container-section.section-info {
   margin-right: 1rem;
   flex-grow: 1;
   min-width: unset;
-}
-
-.trader-container-section.actor-section {
-  min-width: $trader-columns * $cell + 20;
 }
 
 .container {

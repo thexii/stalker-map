@@ -8,6 +8,10 @@ $cell: 50px;
   min-width: 1400px;
 }
 
+.mechanic-container-section {
+  min-width: 350px;
+}
+
 .mechanic-info {
   display: flex;
   height: 150px;
@@ -31,6 +35,14 @@ $cell: 50px;
   overflow-y: auto;
   overflow-x: hidden;
   grid-template-columns: repeat($trader-columns, $cell);
+}
+
+.upgrade-item-image-container {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .upgrade-item-image {
@@ -96,7 +108,7 @@ $cell: 50px;
     }
   }
 
-  &.upgrade-item-highlight-disabled {
+  &.upgrade-item-highlight-disabled,&.upgrade-item-highlight-disabled-hover {
     background-position: left -825px top 0;
 
     &.active {
@@ -104,12 +116,32 @@ $cell: 50px;
     }
   }
 
-  &.upgrade-item-highlight-hover {
-    background-position: left -830px top 0;
+  &.upgrade-item-highlight-locked {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#161E23, 0.8);
+    background-image: none;
+    top: 0;
+    left: 0;
+  }
 
-    &.active {
+  &.active {
+    display: block;
+  }
+}
+
+.upgrade-item {
+  &:hover {
+    .upgrade-item-highlight-hover {
+      background-position: left -830px top 0;
       display: block;
     }
+  }
+}
+
+.upgrade-section:has(.upgrade-item:hover) {
+  .upgrade-item-highlight-disabled-hover {
+    display: block;
   }
 }
 

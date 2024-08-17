@@ -77,6 +77,14 @@
                     <ng-container *ngFor="let cond of traderDiscounts[index].sectionConditions">
                       <div>{{ cond | translate}}</div>
                     </ng-container>
+                    <ng-container *ngIf="traderDiscounts[index].buy != 1">
+                      <div *ngIf="traderDiscounts[index].buy > 1">Вигідно продавати: +{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].buy < 1">Не вигідно продавати: {{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                    </ng-container>
+                    <ng-container *ngIf="traderDiscounts[index].sell != 1">
+                      <div *ngIf="traderDiscounts[index].sell < 1">Скидка на товари: {{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].sell > 1">Націнка товари: +{{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                    </ng-container>
                   </td>
                   <td *ngIf="!traderDiscounts[index]"></td>
                 </ng-container>

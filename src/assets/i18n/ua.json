@@ -219,13 +219,33 @@
     "counter_equal(jup_a6_actor_help_duty:2)": "Двічі допоміг Долгу",
     "counter_greater(jup_a6_actor_help_freedom:1)": "Допоміг Волі",
     "counter_greater(jup_a6_actor_help_duty:1)": "Допоміг Долгу",
-    "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам",
-    "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам",
+    "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам на Янові",
+    "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам на Янові",
 
     "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
     "smart-terrains": "Точки інтересу сталкерів",
     "smart-paths": "Маршрути сталкерів",
     "artefact-ways": "Маршрути артефактів",
     "level-changers": "Переходи між локаціями",
-    "mechanics": "Техніки"
+    "mechanics": "Техніки",
+
+    "item-trader-chance": "Шанс появи предмета у торговця",
+
+    "jup_b200_tech_materials_brought_counter_1": "Знайдено радіоматеріалів: 1",
+    "jup_b200_tech_materials_brought_counter_2": "Знайдено радіоматеріалів: 2",
+    "jup_b200_tech_materials_brought_counter_3": "Знайдено радіоматеріалів: 3",
+    "jup_b200_tech_materials_brought_counter_4": "Знайдено радіоматеріалів: 4",
+    "jup_b200_tech_materials_brought_counter_5": "Знайдено радіоматеріалів: 5",
+    "jup_b200_tech_materials_brought_counter_6": "Знайдено радіоматеріалів: 6",
+    "jup_b200_tech_materials_brought_counter_7": "Знайдено радіоматеріалів: 7",
+    "jup_b200_tech_materials_brought_counter_8": "Знайдено радіоматеріалів: 8",
+    "jup_b200_tech_materials_brought_counter_9": "Знайдено радіоматеріалів: 9",
+
+    "counter_equal(jup_a6_actor_help_freedom:4)": "Перевага «Волі» на Янові",
+    "counter_equal(jup_a6_actor_help_duty:4)": "Перевага «Долга» на Янові",
+    "counter_equal(jup_a6_actor_help_stalkers:3)": "Тричі допоміг сталкерам на Янові",
+
+    "zat_b3_tech_discount_1": "Кардан випив горілки",
+    "zat_b3_tech_discount_2": "Кардан випив двічі",
+    "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити"
 }

@@ -8,7 +8,7 @@ import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslateModule } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { ItemUpgrade, ItemUpgradeView } from '../../models/upgrades/upgrades';
+import { ItemUpgrade, ItemUpgradeView, Upgrade } from '../../models/upgrades/upgrades';
 
 @Component({
   selector: 'app-mechanic',
@@ -31,6 +31,7 @@ export class MechanicComponent {
   public selectedRelationId: number = 1;
   public relation: number = this.relations[1];
   public selectedDiscount: MechanicDiscount;
+  public discounts: MechanicDiscount[];
   public selectedItem: Item;
   public selectedItemUpgrade: ItemUpgrade;
 
@@ -70,6 +71,21 @@ export class MechanicComponent {
     this.selectedDiscount = new MechanicDiscount();
     this.selectedDiscount.condition = '';
     this.selectedDiscount.value = 1;
+
+    if (this.mechanic.discounts?.length > 0) {
+      this.discounts = [];
+
+      for (let discount of this.mechanic.discounts) {
+        let discountNew = JSON.parse(JSON.stringify(discount));
+        discountNew.conditions = discount.condition.split(' ').map(x => x.replace('+', '').replace('=', ''));
+        this.discounts.push(discountNew);
+      }
+
+      if (this.discounts.length > 0) {
+        this.discounts.push(this.selectedDiscount);
+        this.discounts.reverse();
+      }
+    }
   }
 
   public selectDiscount(discount: MechanicDiscount): void {
@@ -79,6 +95,13 @@ export class MechanicComponent {
   public selectItem(item: Item): void {
       this.selectedItem = item;
       let selectedItemUpgrade = this.upgrades.find(x => x.item == item.uniqueName) as ItemUpgrade;
+      let lockedUpgrades = this.mechanic.upgradeConditions.filter(x => x.condition == 'false');
+
+      for (let up of lockedUpgrades) {
+        up.upgrade = up.upgrade.replace('_sect_', '_');
+      }
+
+      console.log(lockedUpgrades);
 
       if (selectedItemUpgrade) {
         this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
@@ -99,14 +122,54 @@ export class MechanicComponent {
             }
           }
         }
+
+        let branchId: number = 0;
+
+        for (let section of this.selectedItemUpgrade.upgradeSections) {
+          if (section.branch == null || section.branch < 0) {
+            section.branch = branchId++;
+
+            if (section.elements) {
+              let branchElements: Upgrade[] = [];
+
+              for (let element of section.elements) {
+                branchElements.push(element);
+                if (lockedUpgrades.some(x => x.upgrade == element.name)) {
+                  element.isLocked = true;
+                }
+              }
+
+              for (let element of branchElements) {
+                if (element.effects) {
+                  for (let effect of element.effects) {
+                    let anotherSection = this.selectedItemUpgrade.upgradeSections.find(x => x.name == effect);
+
+                    if (anotherSection) {
+                      anotherSection.branch = section.branch;
+
+                      if (anotherSection.elements) {
+                        for (let aElement of anotherSection.elements) {
+                          branchElements.push(aElement);
+
+                          if (lockedUpgrades.some(x => x.upgrade == aElement.name)) {
+                            aElement.isLocked = true;
+                          }
+                        }
+                      }
+                    }
+                    else {
+                      console.log(section, effect);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       else {
         this.selectedItemUpgrade = undefined as unknown as ItemUpgrade;
       }
-
-      console.log(item);
-      console.log(this.selectedItemUpgrade);
-      //math.floor(cost*(1-item_condition)*cof * cur_price_percent)
   }
 
   public selectedItemHasUpgrade(upgrade: string): boolean {

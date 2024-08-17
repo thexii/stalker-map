@@ -525,7 +525,7 @@ export class TraderComponent {
         data: {
           labels: labels,
           datasets: [{
-            label: 'Шанс появи',
+            label: this.translate.instant('item-trader-chance'),
             data: values,
             fill: false,
             borderColor: 'white',
