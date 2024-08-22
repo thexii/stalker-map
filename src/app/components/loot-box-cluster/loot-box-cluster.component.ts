@@ -8,11 +8,13 @@ import { LootBox } from '../../models/loot-box/loot-box-section.model';
 import { StuffItem } from '../../models/stuff';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
 
 @Component({
   selector: 'app-loot-box-cluster',
   standalone: true,
-  imports: [TranslateModule, NgIf, NgFor],
+  imports: [TranslateModule, NgIf, NgFor, TooltipDirective],
   templateUrl: './loot-box-cluster.component.html',
   styleUrl: './loot-box-cluster.component.scss'
 })
@@ -23,6 +25,7 @@ export class LootBoxClusterComponent {
   @Input() public lootBoxLocationConfig: LootBox;
   @Input() public lootBoxConfigs: LootBox[];
   @Input() public isUnderground: boolean;
+  public itemTooltipComponent: any = ItemTooltipComponent;
 
   public boxes: LootBoxView[];
   public isMarkerHidden: boolean = false;

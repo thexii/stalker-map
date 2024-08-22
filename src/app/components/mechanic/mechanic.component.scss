@@ -12,6 +12,11 @@ $cell: 50px;
   min-width: 350px;
 }
 
+.sections-select-container {
+  max-height: 300px;
+    overflow-y: auto;
+}
+
 .mechanic-info {
   display: flex;
   height: 150px;

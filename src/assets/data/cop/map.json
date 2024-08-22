@@ -41043,7 +41043,7 @@
       ],
       "discounts": [
         {
-          "condition": "=counter_equal(jup_b1_sci_task_controller_count:4)",
+          "condition": "research_man_gained",
           "value": 0.75
         }
       ],

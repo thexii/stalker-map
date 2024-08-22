@@ -1,0 +1,14 @@
+<div class="tooltip-directive">
+  <div class="item-title">
+    {{ item.localeName | translate}}
+  </div>
+  <div class="item-price margin-top">
+    {{'price' | translate:{price: item.price} }}
+  </div>
+  <div class="item-weight margin-top">
+    {{'weight' | translate:{price: item.weight} }}
+  </div>
+  <div class="item-description margin-top">
+    {{ item.description | translate}}
+  </div>
+</div>

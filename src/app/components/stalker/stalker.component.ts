@@ -7,13 +7,15 @@ import { NgFor, NgIf } from '@angular/common';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { RankSetting } from '../../models/rank-settings.model';
 import { MapService } from '../../services/map.service';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 
 @Component({
     selector: 'app-stalker',
     standalone: true,
     templateUrl: './stalker.component.html',
     styleUrl: './stalker.component.scss',
-    imports: [TranslateModule, NgFor, NgIf, StalkerProfileComponent]
+    imports: [TranslateModule, NgFor, NgIf, StalkerProfileComponent, TooltipDirective]
 })
 export class StalkerComponent {
   @Input() public stalker: Stalker;
@@ -21,6 +23,8 @@ export class StalkerComponent {
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
   @Input() public isUnderground: boolean;
+  public itemTooltipComponent: any = ItemTooltipComponent;
+
 
   public inventory: StuffItem[];
 

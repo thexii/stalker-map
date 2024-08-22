@@ -239,3 +239,26 @@ input[type=checkbox]+label:before {
 .stalker-avatar.cop {
   background-image: url(/assets/images/cop_npc_unique.png)
 }
+
+.tooltip-directive {
+  display: none;
+  padding: 1rem;
+  z-index: 100500;
+  color:white;
+
+
+  position: absolute;
+  border: 11px solid;
+  border-image: url(/assets/images/svg/interface/map-info-solid.svg) 11 stretch stretch;
+  border-image-slice: 11 fill;
+  background-size: contain;
+  background-color: transparent;
+  max-width: 296px;
+  min-width: 268px;
+  height: auto;
+}
+
+.tooltip-show {
+  display: block;
+  animation-delay: 0s;
+}

@@ -5,11 +5,13 @@ import { NgFor, NgIf } from '@angular/common';
 import { Item } from '../../models/item.model';
 import { LootBox } from '../../models/loot-box/loot-box-section.model';
 import { MapService } from '../../services/map.service';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
 
 @Component({
   selector: 'app-stuff',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf],
+  imports: [TranslateModule, NgFor, NgIf, TooltipDirective],
   templateUrl: './stuff.component.html',
   styleUrl: './stuff.component.scss'
 })
@@ -19,6 +21,7 @@ export class StuffComponent {
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
+  public itemTooltipComponent: any = ItemTooltipComponent;
 
   public items: StuffItem[];
   public condition: {

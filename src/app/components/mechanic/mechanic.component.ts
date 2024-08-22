@@ -8,12 +8,15 @@ import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslateModule } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { ItemUpgrade, ItemUpgradeView, Upgrade } from '../../models/upgrades/upgrades';
+import { ItemUpgrade, Upgrade } from '../../models/upgrades/upgrades';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 
 @Component({
   selector: 'app-mechanic',
   standalone: true,
-  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass],
+  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective],
   templateUrl: './mechanic.component.html',
   styleUrl: './mechanic.component.scss'
 })
@@ -38,6 +41,8 @@ export class MechanicComponent {
   public relationTypeEnum = RelationType;
   public itemsToRepait: Item[];
   public Math: Math = Math;
+  public upgradeTooltipComponent: any = UpgradeTooltipComponent;
+  public itemTooltipComponent: any = ItemTooltipComponent;
 
   public repairPriceFactor: number = 0.6;
 
@@ -95,6 +100,7 @@ export class MechanicComponent {
   public selectItem(item: Item): void {
       this.selectedItem = item;
       let selectedItemUpgrade = this.upgrades.find(x => x.item == item.uniqueName) as ItemUpgrade;
+      console.log(selectedItemUpgrade);
       let lockedUpgrades = this.mechanic.upgradeConditions.filter(x => x.condition == 'false');
 
       for (let up of lockedUpgrades) {

@@ -17,9 +17,9 @@
     </div>
     <div class="inventory" *ngIf="section.anomalySpawnItems">
       <ng-container *ngFor="let artefact of section.anomalySpawnItems">
-        <div class="inventory-item inventory-item-width-1 inventory-item-height-1">
+        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}" class="inventory-item inventory-item-width-1 inventory-item-height-1">
           <div class="inventory-item-percentage">{{Math.floor(artefact.probability * 100)}}%</div>
-          <div class="inventory-item-image {{this.game}} inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}" title="{{artefact.item.localeName | translate}}"></div>
+          <div class="inventory-item-image {{this.game}} inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}"></div>
         </div>
       </ng-container>
     </div>
