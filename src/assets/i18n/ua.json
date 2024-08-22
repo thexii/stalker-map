@@ -247,5 +247,6 @@
 
     "zat_b3_tech_discount_1": "Кардан випив горілки",
     "zat_b3_tech_discount_2": "Кардан випив двічі",
-    "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити"
+    "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити",
+    "price": "Вартість {{price}}"
 }

@@ -1,8 +1,10 @@
 export class Item {
     public uniqueName: string;
     public localeName: string;
+    public description: string;
     public width: number;
     public height: number;
+    public weight: number;
     public area: number;
     public category: string;
 

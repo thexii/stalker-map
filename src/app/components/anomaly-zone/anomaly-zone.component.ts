@@ -7,11 +7,13 @@ import { Item } from '../../models/item.model';
 import { StuffItem } from '../../models/stuff';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 
 @Component({
   selector: 'app-anomaly-zone',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, KeyValuePipe],
+  imports: [TranslateModule, NgFor, NgIf, KeyValuePipe, TooltipDirective],
   templateUrl: './anomaly-zone.component.html',
   styleUrl: './anomaly-zone.component.scss'
 })
@@ -21,6 +23,7 @@ export class AnomalyZoneComponent {
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
+  public itemTooltipComponent: any = ItemTooltipComponent;
 
   public Math: Math = Math;
 

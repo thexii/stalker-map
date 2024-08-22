@@ -11,13 +11,16 @@ import { TraderDiscounts } from '../../models/trader/trader-discount.model';
 import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
 import { MapService } from '../../services/map.service';
+import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
+import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
+import { TooltipDirective } from '../tooltips/tooltip.directive';
 
 @Component({
     selector: 'app-trader',
     standalone: true,
     templateUrl: './trader.component.html',
     styleUrl: './trader.component.scss',
-    imports: [NgFor, NgIf, TranslateModule, NgClass, NgStyle, StalkerProfileComponent]
+    imports: [NgFor, NgIf, TranslateModule, NgClass, NgStyle, StalkerProfileComponent, TooltipDirective]
 })
 
 export class TraderComponent {
@@ -30,6 +33,7 @@ export class TraderComponent {
   @Input() public relationType: RelationType;
   @Input() public traderConfigs: TraderSectionsConfig[];
   @Input() public traderConfig: TraderSectionsConfig;
+  public itemTooltipComponent: any = ItemTooltipComponent;
 
   public readonly relations: number[] = [0, 0.5, 1];
   public readonly relationsTitle: string[] = ['enemy', 'neutral', 'friend'];
@@ -234,6 +238,10 @@ export class TraderComponent {
     this.checkDiscount(sectionConfig?.enabledDicounts);
 
     this.recalculateSection();
+
+    if (this.selectedItem && this.selectedItem.item) {
+      this.selectItem(this.selectedItem.item);
+    }
   }
 
   public selectDiscount(discount: TraderDiscounts) {

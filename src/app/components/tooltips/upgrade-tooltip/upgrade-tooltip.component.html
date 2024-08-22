@@ -1,0 +1,20 @@
+<div class="tooltip-directive">
+  <div class="upgrade-title">
+    {{ title | translate}}
+  </div>
+  <div class="upgrade-installed margin-top" *ngIf="installed">
+    {{'st_upgr_installed' | translate }}
+  </div>
+  <div class="upgrade-locked margin-top" *ngIf="locked">
+    {{'st_upgr_cant_do' | translate }}
+  </div>
+  <div class="upgrade-locked margin-top" *ngIf="blocked">
+    {{'st_upgr_group' | translate }}
+  </div>
+  <div class="upgrade-price margin-top">
+    {{'price' | translate:{price: price} }}
+  </div>
+  <div class="upgrade-description margin-top">
+    {{ description | translate}}
+  </div>
+</div>

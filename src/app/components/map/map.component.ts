@@ -6,6 +6,7 @@ import {
   ViewContainerRef,
   ViewChild,
   Inject,
+  Type,
 } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -1430,7 +1431,7 @@ export class MapComponent {
             canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
             canvasMarker.properties.ableToSearch = stalkerIcon.ableToSearch;
 
-            let propertiesToSearch: string[] = [stalker.profile.name];
+            let propertiesToSearch: string[] = [stalker.profile.name, stalker.profile.faction];
 
             if (stalker.hasUniqueItem) {
               for (let inv of stalker.inventoryItems) {
@@ -1477,7 +1478,7 @@ export class MapComponent {
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
 
-      let propertiesToSearch: string[] = [stalker.profile.name];
+      let propertiesToSearch: string[] = [stalker.profile.name, stalker.profile.faction];
 
       if (stalker.hasUniqueItem) {
         for (let inv of stalker.inventoryItems) {
