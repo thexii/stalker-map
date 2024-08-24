@@ -22,6 +22,16 @@ $cell: 50px;
   font-size: 1.2rem;
 }
 
+.sell {
+  width: fit-content;
+}
+
+.inventory-container {
+  min-width: calc(($trader-columns + 1 ) * $cell);
+  display: flex;
+  justify-content: center;
+}
+
 .inventory {
   max-height: round(up, var(--wrapper-height) / 2, $cell);
   overflow-y: auto;

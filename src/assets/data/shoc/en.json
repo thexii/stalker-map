@@ -910,5 +910,7 @@
   "master": "expert",
   "medkit": "Medkit",
   "vodka": "Cossacks vodka",
-  "antirad": "Antiradiation drugs"
+  "antirad": "Antiradiation drugs",
+  "st_base_cost": "price",
+  "st_weight": "weight"
 }

@@ -1268,5 +1268,10 @@
   "novice": "Novato",
   "experienced": "Experimentado",
   "veteran": "veteran",
-  "master": "maestro"
+  "master": "maestro",
+  "st_upgr_installed": "Instalado",
+  "st_upgr_group": "Este componente ya se ha actualizado",
+  "st_upgr_cant_do": "No se puede instalar",
+  "st_base_cost": "precio",
+  "st_weight": "peso"
 }

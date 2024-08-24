@@ -1268,5 +1268,10 @@
   "novice": "nowicjusz",
   "experienced": "do\u015Bwiadczony",
   "veteran": "weteran",
-  "master": "mistrz"
+  "master": "mistrz",
+  "st_upgr_installed": "Zamontowano",
+  "st_upgr_group": "Ta cz\u0119\u015B\u0107 zosta\u0142a ju\u017C ulepszona",
+  "st_upgr_cant_do": "Monta\u017C niemo\u017Cliwy",
+  "st_base_cost": "cena",
+  "st_weight": "waga"
 }

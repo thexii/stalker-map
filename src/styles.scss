@@ -241,13 +241,21 @@ input[type=checkbox]+label:before {
 }
 
 .tooltip-directive {
+}
+
+.tooltip-show {
+  display: block;
+  animation-delay: 2s;
+}
+
+app-item-tooltip, app-upgrade-tooltip {
+  position: absolute;
   display: none;
   padding: 1rem;
   z-index: 100500;
   color:white;
-
-
-  position: absolute;
+  top: 0;
+  left: 0;
   border: 11px solid;
   border-image: url(/assets/images/svg/interface/map-info-solid.svg) 11 stretch stretch;
   border-image-slice: 11 fill;
@@ -256,9 +264,5 @@ input[type=checkbox]+label:before {
   max-width: 296px;
   min-width: 268px;
   height: auto;
-}
-
-.tooltip-show {
-  display: block;
-  animation-delay: 0s;
+  pointer-events: none;
 }

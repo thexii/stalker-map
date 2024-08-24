@@ -1268,5 +1268,10 @@
   "novice": "D\u00E9butant",
   "experienced": "Exp\u00E9riment.",
   "veteran": "v\u00E9t\u00E9ran",
-  "master": "ma\u00EEtre"
+  "master": "ma\u00EEtre",
+  "st_upgr_installed": "Install\u00E9",
+  "st_upgr_group": "Composant d\u00E9j\u00E0 am\u00E9lior\u00E9",
+  "st_upgr_cant_do": "Installation impossible",
+  "st_base_cost": "prix",
+  "st_weight": "poids"
 }

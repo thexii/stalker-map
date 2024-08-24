@@ -100,14 +100,14 @@ export class MechanicComponent {
   public selectItem(item: Item): void {
       this.selectedItem = item;
       let selectedItemUpgrade = this.upgrades.find(x => x.item == item.uniqueName) as ItemUpgrade;
-      console.log(selectedItemUpgrade);
       let lockedUpgrades = this.mechanic.upgradeConditions.filter(x => x.condition == 'false');
 
       for (let up of lockedUpgrades) {
         up.upgrade = up.upgrade.replace('_sect_', '_');
       }
 
-      console.log(lockedUpgrades);
+      let height = 0;
+      let cellHeight = 44;
 
       if (selectedItemUpgrade) {
         this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
@@ -121,6 +121,8 @@ export class MechanicComponent {
               if (upgrade.isInstalled) {
                 isBlocked = true;
               }
+
+              height = Math.max(selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y, height);
             }
 
             if (isBlocked) {
@@ -128,6 +130,8 @@ export class MechanicComponent {
             }
           }
         }
+
+        console.log(height + cellHeight);
 
         let branchId: number = 0;
 

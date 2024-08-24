@@ -910,5 +910,7 @@
   "master": "ekspert",
   "medkit": "Apteczka",
   "vodka": "W\u00F3dka \u0022Kozak\u0022",
-  "antirad": "Leki przeciwpromienne"
+  "antirad": "Leki przeciwpromienne",
+  "st_base_cost": "cena",
+  "st_weight": "waga"
 }

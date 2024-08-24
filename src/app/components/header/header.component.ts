@@ -24,6 +24,7 @@ export class HeaderComponent {
 
   public ngOnInit(): void {
         let lastLanguage = localStorage.getItem(this.lastLanguageCacheKeyString);
+        this.translate.setDefaultLang(this.defaultLocale);
 
         if (lastLanguage != null) {
           this.translate.use(lastLanguage);

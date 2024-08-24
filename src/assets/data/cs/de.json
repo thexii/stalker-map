@@ -1268,5 +1268,10 @@
   "novice": "Anf\u00E4nger",
   "experienced": "Erfahren",
   "veteran": "Veteran",
-  "master": "Meister"
+  "master": "Meister",
+  "st_upgr_installed": "Installiert",
+  "st_upgr_group": "Diese Komponente wurde bereits verbessert",
+  "st_upgr_cant_do": "Nicht m\u00F6glich",
+  "st_base_cost": "Preis",
+  "st_weight": "Gewicht"
 }

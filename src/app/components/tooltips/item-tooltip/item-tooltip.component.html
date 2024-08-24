@@ -1,14 +1,21 @@
-<div class="tooltip-directive">
-  <div class="item-title">
+<div class="item-title">
+  <div class="item-title-name">
     {{ item.localeName | translate}}
   </div>
-  <div class="item-price margin-top">
-    {{'price' | translate:{price: item.price} }}
+  <div class="item-unque-name">
+    {{ item.uniqueName | translate}}
   </div>
-  <div class="item-weight margin-top">
-    {{'weight' | translate:{price: item.weight} }}
+</div>
+
+<div class="item-info margin-top">
+  <div>
+    {{'st_base_cost' | translate }}: {{item.price}}
   </div>
-  <div class="item-description margin-top">
-    {{ item.description | translate}}
+  <div>
+    {{'st_weight' | translate }}: {{item.weight}}
   </div>
+</div>
+
+<div class="item-description margin-top">
+  {{ item.description | translate}}
 </div>

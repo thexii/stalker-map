@@ -910,5 +910,7 @@
   "master": "expert",
   "medkit": "L\u00E9k\u00E1rni\u00E8ka",
   "vodka": "Koz\u00E1ck\u00E1 vodka",
-  "antirad": "Protiradia\u00E8n\u00ED drogy"
+  "antirad": "Protiradia\u00E8n\u00ED drogy",
+  "st_base_cost": "cena",
+  "st_weight": "v\u00E1ha"
 }
