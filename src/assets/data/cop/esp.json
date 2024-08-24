@@ -1068,5 +1068,10 @@
   "novice": "Principiante",
   "experienced": "Experimentado",
   "veteran": "Veterano",
-  "master": "Maestro"
+  "master": "Maestro",
+  "st_upgr_installed": "Instalada",
+  "st_upgr_group": "Esta pieza ya ha sido modificada",
+  "st_upgr_cant_do": "El t\u00E9cnico no puede realizar esta modificaci\u00F3n",
+  "st_base_cost": "Precio",
+  "st_weight": "Peso"
 }

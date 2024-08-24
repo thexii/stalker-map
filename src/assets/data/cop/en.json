@@ -1060,5 +1060,10 @@
   "zat_b7_actor_really_helped_stalkers": "The hit: attack the robbers",
   "st_zaton_b56_name": "Circus anomaly",
   "research_man_gained": "Research Assistant",
-  "pioneer_achievement_gained": "Pioneer"
+  "pioneer_achievement_gained": "Pioneer",
+  "st_upgr_installed": "Installed",
+  "st_upgr_group": "This part has already been modified",
+  "st_upgr_cant_do": "The technician cannot perform this modification",
+  "st_base_cost": "Price",
+  "st_weight": "Wgt."
 }

@@ -11,7 +11,9 @@ export class TooltipDirective {
   private componentRef: ComponentRef<any>;
   private hasTooltip: boolean = false;
   private tooltipWidth: number = 300;
-  private tooltipDirective: any;
+  private windowMargin: number = 100;
+  private tooltipBorder: number = 22;
+  private tooltipPadding: number = 16 * 2;
 
   constructor(
     private resolver: ComponentFactoryResolver,
@@ -33,24 +35,28 @@ export class TooltipDirective {
   }
 
   @HostListener('mousemove', ['$event']) moveTooltip(event: any) {
+    let toolTipWidth: number = Math.max(this.componentRef.location.nativeElement.clientWidth, this.tooltipWidth + this.tooltipPadding);
 
-    if (event.clientX + this.tooltipDirective.clientWidth + 100 < document.body.clientWidth) {
+    let toolTipHeight: number = 200;
+    if (this.componentRef.location.nativeElement.clientHeight > 0) {
+      toolTipHeight = this.componentRef.location.nativeElement.clientHeight
+    }
+
+    if (event.clientX + toolTipWidth + this.tooltipBorder + this.windowMargin < document.body.clientWidth) {
       this.componentRef.location.nativeElement.style.left = event.clientX + 10 + 'px';
     }
     else {
-      this.componentRef.location.nativeElement.style.left = (event.clientX - this.tooltipDirective.clientWidth - 50) + 'px';
-      //console.log(this.tooltipDirective.clientHeight);
-      //console.log(this.tooltipDirective.clientWidth);
+      this.componentRef.location.nativeElement.style.left = (event.clientX - toolTipWidth - this.tooltipPadding ) + 'px';
     }
 
-    if (event.clientY + this.tooltipDirective.clientHeight + 100 < document.body.clientHeight) {
+    if (event.clientY + toolTipHeight + this.windowMargin < document.body.clientHeight) {
       this.componentRef.location.nativeElement.style.top = event.clientY + 'px';
     }
     else {
-      this.componentRef.location.nativeElement.style.top = event.clientY - this.tooltipDirective.clientHeight - 50 + 'px';
+      this.componentRef.location.nativeElement.style.top = event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
     }
 
-    //console.log(,document.body.clientHeight)
+    this.componentRef.location.nativeElement.style.display = 'block';
   }
 
   private createTooltip(): void {
@@ -58,16 +64,10 @@ export class TooltipDirective {
 
     this.componentRef = this.viewContainerRef.createComponent(factory);
     document.body.appendChild(this.componentRef.location.nativeElement);
-    this.componentRef.location.nativeElement.style.position = 'absolute';
     this.componentRef.location.nativeElement.style.maxWidth = `${this.tooltipWidth}px`;
+    this.componentRef.location.nativeElement.style.position = 'absolute';
 
     this.hasTooltip = true;
-
-    this.tooltipDirective = this.componentRef.location.nativeElement.querySelector('.tooltip-directive');
-
-    if (this.tooltipDirective) {
-      this.tooltipDirective.classList.add('tooltip-show');
-    }
 
     if (this.componentData) {
       Object.assign(this.componentRef.instance, this.componentData);

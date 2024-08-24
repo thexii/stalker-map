@@ -910,5 +910,7 @@
   "master": "Experte",
   "medkit": "Medkit",
   "vodka": "Kosakenwodka",
-  "antirad": "Strahlenschutzmittel"
+  "antirad": "Strahlenschutzmittel",
+  "st_base_cost": "Preis",
+  "st_weight": "Gewicht"
 }

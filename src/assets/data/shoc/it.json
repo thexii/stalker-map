@@ -910,5 +910,7 @@
   "master": "esperto",
   "medkit": "Kit medico",
   "vodka": "Vodka del Cosacco",
-  "antirad": "Farmaci antirad."
+  "antirad": "Farmaci antirad.",
+  "st_base_cost": "prezzo",
+  "st_weight": "peso"
 }

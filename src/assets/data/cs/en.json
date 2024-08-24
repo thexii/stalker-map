@@ -1268,5 +1268,10 @@
   "novice": "Rookie",
   "experienced": "Experienced",
   "veteran": "veteran",
-  "master": "master"
+  "master": "master",
+  "st_upgr_installed": "Installed",
+  "st_upgr_group": "This component has already been upgraded",
+  "st_upgr_cant_do": "Cannot install",
+  "st_base_cost": "price",
+  "st_weight": "weight"
 }

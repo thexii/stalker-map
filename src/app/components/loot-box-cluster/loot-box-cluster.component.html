@@ -6,7 +6,7 @@
     <div class="items-title">{{ 'loot-box-100-percent-items' | translate}}</div>
 
     <div class="inventory">
-      <div *ngFor="let stuffItem of box.items" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+      <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngFor="let stuffItem of box.items" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
         <div class="item-additional-info">
           <div *ngIf="stuffItem.count > 1 " class="inventory-item-count">x{{stuffItem.count}}</div>
           <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>

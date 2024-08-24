@@ -910,5 +910,7 @@
   "master": "experto",
   "medkit": "Botiqu\u00EDn",
   "vodka": "Vodka cosaco",
-  "antirad": "F\u00E1rmacos antirrad."
+  "antirad": "F\u00E1rmacos antirrad.",
+  "st_base_cost": "precio",
+  "st_weight": "peso"
 }

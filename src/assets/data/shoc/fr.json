@@ -910,5 +910,7 @@
   "master": "expert",
   "medkit": "Kit m\u00E9dical",
   "vodka": "La vodka cosaque",
-  "antirad": "M\u00E9dicaments antirad"
+  "antirad": "M\u00E9dicaments antirad",
+  "st_base_cost": "prix",
+  "st_weight": "poids"
 }

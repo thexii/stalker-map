@@ -1268,5 +1268,10 @@
   "novice": "Novellino",
   "experienced": "Esperto",
   "veteran": "Veterano",
-  "master": "Maestro"
+  "master": "Maestro",
+  "st_upgr_installed": "Installato",
+  "st_upgr_group": "Questo componente \u00E8 gi\u00E0 stato potenziato",
+  "st_upgr_cant_do": "Impossibile installare",
+  "st_base_cost": "Prezzo",
+  "st_weight": "Peso"
 }

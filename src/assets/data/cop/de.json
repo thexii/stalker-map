@@ -1060,5 +1060,10 @@
   "zat_b7_actor_really_helped_stalkers": "Der \u00DCberfall: R\u00E4uber angreifen",
   "st_zaton_b56_name": "Rundkreis-Anomalie",
   "research_man_gained": "Wissenschaftlicher Mitarbeiter",
-  "pioneer_achievement_gained": "Pionier"
+  "pioneer_achievement_gained": "Pionier",
+  "st_upgr_installed": "Installiert",
+  "st_upgr_group": "Dieses Teil wurde bereits modifiziert",
+  "st_upgr_cant_do": "Der Techniker kann diese Modifikation nicht durchf\u00FChren",
+  "st_base_cost": "Preis",
+  "st_weight": "G."
 }

@@ -1,7 +1,7 @@
-<div class="tooltip-directive">
-  <div class="upgrade-title">
-    {{ title | translate}}
-  </div>
+<div class="upgrade-title">
+  {{ title | translate}}
+</div>
+<ng-container *ngIf="installed || locked || blocked; else upgradePrice">
   <div class="upgrade-installed margin-top" *ngIf="installed">
     {{'st_upgr_installed' | translate }}
   </div>
@@ -11,10 +11,12 @@
   <div class="upgrade-locked margin-top" *ngIf="blocked">
     {{'st_upgr_group' | translate }}
   </div>
+</ng-container>
+<ng-template #upgradePrice>
   <div class="upgrade-price margin-top">
-    {{'price' | translate:{price: price} }}
+    {{'st_base_cost' | translate }}: {{price}}
   </div>
-  <div class="upgrade-description margin-top">
-    {{ description | translate}}
-  </div>
+</ng-template>
+<div class="upgrade-description margin-top">
+  {{ description | translate}}
 </div>

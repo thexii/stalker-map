@@ -2,6 +2,12 @@
   font-size: 0.9rem;
 }
 
+.item-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .item-description {
   font-size: 0.8rem;
   text-align: justify;
@@ -11,3 +17,21 @@
 .margin-top {
   margin-top: 0.5rem;
 }
+
+.item-info {
+  display: flex;
+
+  div {
+    margin-left: 0.5rem;
+  }
+
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.item-unque-name {
+  color: gray;
+  font-size: 0.6rem;
+}
+

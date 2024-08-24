@@ -1269,5 +1269,10 @@
   "novice": "za\u00E8\u00E1te\u00E8n\u00EDk",
   "experienced": "zku\u0161en\u00FD",
   "veteran": "veter\u00E1n",
-  "master": "mistr"
+  "master": "mistr",
+  "st_upgr_installed": "Nainstalov\u00E1no",
+  "st_upgr_group": "Tato komponenta ji\u017E byla modifikov\u00E1na",
+  "st_upgr_cant_do": "Nelze nainstalovat",
+  "st_base_cost": "cena",
+  "st_weight": "v\u00E1ha"
 }

@@ -1068,5 +1068,10 @@
   "novice": "Nowicjusz",
   "experienced": "Ma do\u015Bwiadczenie",
   "veteran": "Weteran",
-  "master": "Mistrz"
+  "master": "Mistrz",
+  "st_upgr_installed": "Zainstalowano",
+  "st_upgr_group": "Ta cz\u0119\u015B\u0107 jest ju\u017C zmodyfikowana",
+  "st_upgr_cant_do": "Technik nie mo\u017Ce wykona\u0107 tej modyfikacji",
+  "st_base_cost": "Cena",
+  "st_weight": "-"
 }
