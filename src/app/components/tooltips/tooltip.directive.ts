@@ -56,7 +56,8 @@ export class TooltipDirective {
       this.componentRef.location.nativeElement.style.top = event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
     }
 
-    this.componentRef.location.nativeElement.style.display = 'block';
+    this.componentRef.location.nativeElement.classList.add("tooltip-show");
+    //this.componentRef.location.nativeElement.style.display = 'block';
   }
 
   private createTooltip(): void {

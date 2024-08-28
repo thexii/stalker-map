@@ -1,21 +1,17 @@
-import { NgIf, NgStyle } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Upgrade } from '../../../models/upgrades/upgrades';
 
 @Component({
   selector: 'app-upgrade-tooltip',
   standalone: true,
-  imports: [TranslateModule, NgStyle, NgIf],
+  imports: [TranslateModule, NgStyle, NgIf, NgFor],
   templateUrl: './upgrade-tooltip.component.html',
   styleUrl: './upgrade-tooltip.component.scss'
 })
 export class UpgradeTooltipComponent {
-  @Input() title: string;
-  @Input() price: number;
-  @Input() description: string;
-
-  @Input() installed: boolean;
-  @Input() locked: boolean;
-  @Input() blocked: boolean;
-  @Input() condition: string;
+  @Input() upgrade: Upgrade;
+  @Input() discount: number;
+  public math = Math;
 }
