@@ -5,7 +5,6 @@ $cell: 50px;
 .trader-container {
   display: flex;
   color: white;
-  min-width: 1400px;
 }
 
 .trader-info {
@@ -68,7 +67,7 @@ $cell: 50px;
 }
 
 .trader-container-section.section-info {
-  margin-right: 1rem;
+  margin-inline: 1rem;
   flex-grow: 1;
   min-width: unset;
 }
@@ -78,7 +77,6 @@ $cell: 50px;
 }
 
 .container.info {
-  margin-left: 1rem;
   max-height: round(up, (var(--wrapper-height) / 2 ) + 150px, $cell);
 }
 

@@ -244,13 +244,13 @@ input[type=checkbox]+label:before {
 }
 
 .tooltip-show {
-  display: block;
-  animation-delay: 2s;
+  visibility: visible;
+  opacity: 1;
 }
 
 app-item-tooltip, app-upgrade-tooltip {
   position: absolute;
-  display: none;
+  display: block;
   padding: 1rem;
   z-index: 100500;
   color:white;
@@ -265,4 +265,9 @@ app-item-tooltip, app-upgrade-tooltip {
   min-width: 268px;
   height: auto;
   pointer-events: none;
+  transition: visibility 0s, opacity 0s linear;
+  transition-delay: 0s, 0;
+
+  visibility: hidden;
+  opacity: 0;
 }

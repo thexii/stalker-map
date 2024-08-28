@@ -18,7 +18,7 @@
         <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
           <div id="section-{{sectionIndex}}" class="upgrade-section">
             <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
-              <div tooltip [component]="upgradeTooltipComponent" [componentData]="{title: upgrade.localeName, description: upgrade.description, price: Math.floor(upgrade.cost * selectedDiscount.value), installed: upgrade.isInstalled, locked: upgrade.isLocked, blocked: upgrade.isBlocked }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
+              <div tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
                 'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
                 'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
                 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'

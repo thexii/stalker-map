@@ -17,7 +17,10 @@ export class Upgrade {
   public name: string;
   public localeName: string;
   public description: string;
+  public value: string;
   public effects: string[];
+  public properties: string[];
+  public propertiesEffects: Map<string, string>;
   public cost: number;
   public schemeIndexX: number;
   public schemeIndexY: number;

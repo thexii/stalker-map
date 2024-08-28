@@ -1,22 +1,28 @@
 <div class="upgrade-title">
-  {{ title | translate}}
+  {{ upgrade.localeName | translate}}
 </div>
-<ng-container *ngIf="installed || locked || blocked; else upgradePrice">
-  <div class="upgrade-installed margin-top" *ngIf="installed">
+<ng-container *ngIf="upgrade.isInstalled || upgrade.isLocked || upgrade.isBlocked; else upgradePrice">
+  <div class="upgrade-installed margin-top" *ngIf="upgrade.isInstalled">
     {{'st_upgr_installed' | translate }}
   </div>
-  <div class="upgrade-locked margin-top" *ngIf="locked">
+  <div class="upgrade-locked margin-top" *ngIf="upgrade.isLocked">
     {{'st_upgr_cant_do' | translate }}
   </div>
-  <div class="upgrade-locked margin-top" *ngIf="blocked">
+  <div class="upgrade-locked margin-top" *ngIf="upgrade.isBlocked">
     {{'st_upgr_group' | translate }}
   </div>
 </ng-container>
 <ng-template #upgradePrice>
   <div class="upgrade-price margin-top">
-    {{'st_base_cost' | translate }}: {{price}}
+    {{'st_base_cost' | translate }}: {{math.floor(upgrade.cost * discount)}}
   </div>
 </ng-template>
 <div class="upgrade-description margin-top">
-  {{ description | translate}}
+  {{ upgrade.description | translate}}
+</div>
+<div class="upgrade-properties">
+  <div class="upgrade-property" *ngFor="let prop of upgrade.properties">
+    <div class="upgrade-property-name {{prop}}">{{prop}}</div>
+    <div class="upgrade-property-value">{{upgrade.value}}</div>
+  </div>
 </div>

@@ -18,3 +18,22 @@
 .upgrade-locked {
   color: red;
 }
+
+.upgrade-properties {
+  border-top: 1px dashed white;
+  margin-top: 1rem;
+}
+
+.upgrade-property {
+  display: flex;
+}
+
+.upgrade-property-name::before {
+  width: 1rem;
+  height: 1rem;
+  background-color: aqua;
+}
+
+.upgrade-property-value {
+  margin-left: 1rem;
+}

@@ -82,6 +82,7 @@ export class TraderComponent {
 
   private async ngOnInit(): Promise<void> {
     let allItems = this.allItems;
+    console.log(this.trader);
 
     this.traderBuySections = this.trader.buy.map(x => {
       let section: TradeSection<TraderBuySellItemView> = new TradeSection<TraderBuySellItemView>();
