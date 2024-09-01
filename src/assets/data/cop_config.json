@@ -94,6 +94,7 @@
   "traderConfigs": [
     {
       "trader": "st_zat_b30_owl_stalker_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -182,12 +183,14 @@
     },
     {
       "trader": "zat_a2_stalker_barmen_name",
+      "enableRelationSelector": true,
       "sell": [],
       "buy": [],
       "supply": []
     },
     {
       "trader": "jup_a6_stalker_barmen",
+      "enableRelationSelector": true,
       "sell": [],
       "buy": [],
       "supply": [],
@@ -195,6 +198,7 @@
     },
     {
       "trader": "jup_a6_stalker_medik",
+      "enableRelationSelector": true,
       "sell": [],
       "buy": [],
       "supply": [],
@@ -208,12 +212,14 @@
     },
     {
       "trader": "zat_b22_stalker_medic_name",
+      "enableRelationSelector": true,
       "sell": [],
       "buy": [],
       "supply": []
     },
     {
       "trader": "jup_b6_scientist_nuclear_physicist",
+      "enableRelationSelector": true,
       "sell": null,
       "buy": null,
       "supply": [

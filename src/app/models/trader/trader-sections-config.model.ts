@@ -2,6 +2,7 @@ import { TraderSectionBuyConfig, TraderSectionDicountConfig, TraderSectionSellCo
 
 export class TraderSectionsConfig {
   public trader: string;
+  public enableRelationSelector: boolean = true;
   public sell: TraderSectionSellConfig[];
   public buy: TraderSectionBuyConfig[];
   public supply: TraderSectionSupplyConfig[];

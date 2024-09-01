@@ -143,6 +143,7 @@
     },
     {
       "trader": "esc_trader_stalkerbase_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -187,6 +188,7 @@
     },
     {
       "trader": "gar_bandit_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -231,6 +233,7 @@
     },
     {
       "trader": "agr_duty_base_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -280,6 +283,7 @@
     },
     {
       "trader": "agr_stalker_base_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -329,6 +333,7 @@
     },
     {
       "trader": "val_freedom_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -378,6 +383,7 @@
     },
     {
       "trader": "mar_csky_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",

@@ -228,5 +228,32 @@
   "smart-paths": "Stalker paths",
   "artefact-ways": "Artefact ways",
   "level-changers": "Level changers",
-  "mechanics": "Mechanics"
+  "mechanics": "Mechanics",
+
+  "item-trader-chance": "Chance",
+
+  "jup_b200_tech_materials_brought_counter_1": "Radio materials brought: 1",
+  "jup_b200_tech_materials_brought_counter_2": "Radio materials brought: 2",
+  "jup_b200_tech_materials_brought_counter_3": "Radio materials brought: 3",
+  "jup_b200_tech_materials_brought_counter_4": "Radio materials brought: 4",
+  "jup_b200_tech_materials_brought_counter_5": "Radio materials brought: 5",
+  "jup_b200_tech_materials_brought_counter_6": "Radio materials brought: 6",
+  "jup_b200_tech_materials_brought_counter_7": "Radio materials brought: 7",
+  "jup_b200_tech_materials_brought_counter_8": "Radio materials brought: 8",
+  "jup_b200_tech_materials_brought_counter_9": "Radio materials brought: 9",
+
+  "counter_equal(jup_a6_actor_help_freedom:4)": "Freedom's advantage on Yanov",
+  "counter_equal(jup_a6_actor_help_duty:4)": "Duty's advantage on Yanov",
+  "counter_equal(jup_a6_actor_help_stalkers:3)": "Help stalkers on Yanov three times",
+
+  "zat_b3_tech_discount_1": "Cardan drank",
+  "zat_b3_tech_discount_2": "Cardan drank twice",
+  "zat_a23_actor_has_access_card_to_testing_workshop": "Cardan quit drinking",
+
+  "bad_mechanic_price": "Repair surcharge",
+  "good_mechanic_price": "Discount for repairs",
+  "bad_trader_buy_price": "Reduced purchase price",
+  "good_trader_buy_price": "The purchase price has been increased",
+  "bad_trader_sell_price": "Markup on goods",
+  "good_trader_sell_price": "Discount on goods"
 }

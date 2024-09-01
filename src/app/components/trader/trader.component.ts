@@ -82,7 +82,6 @@ export class TraderComponent {
 
   private async ngOnInit(): Promise<void> {
     let allItems = this.allItems;
-    console.log(this.trader);
 
     this.traderBuySections = this.trader.buy.map(x => {
       let section: TradeSection<TraderBuySellItemView> = new TradeSection<TraderBuySellItemView>();
@@ -186,7 +185,6 @@ export class TraderComponent {
 
   public copyLink(): void {
     let link = `${window.location.origin}/map/${this.game}?lat=${this.trader.z}&lng=${this.trader.x}&type=traders`;
-    console.log(link);
     navigator.clipboard.writeText(link)
   }
 
@@ -274,14 +272,12 @@ export class TraderComponent {
   }
 
   private checkSell(enabledSells: string[] | undefined): void {
-    if (enabledSells) {
-      if (!enabledSells.includes(this.selectedSellSection.sectionConditions)) {
-        for (let sellConfig of enabledSells) {
-          for (let traderSell of this.traderSellSections) {
-            if (traderSell.sectionConditions == sellConfig) {
-              this.selectedSellSection = this.copy(traderSell);
-              return;
-            }
+    if (enabledSells && !enabledSells.includes(this.selectedSellSection.sectionConditions)) {
+      for (let sellConfig of enabledSells) {
+        for (let traderSell of this.traderSellSections) {
+          if (traderSell.sectionConditions == sellConfig) {
+            this.selectedSellSection = this.copy(traderSell);
+            return;
           }
         }
       }
@@ -292,14 +288,12 @@ export class TraderComponent {
   }
 
   private checkBuy(enabledBuies: string[] | undefined): void {
-    if (enabledBuies) {
-      if (!enabledBuies.includes(this.selectedBuySection.sectionConditions)) {
-        for (let buyConfig of enabledBuies) {
-          for (let traderBuy of this.traderBuySections) {
-            if (traderBuy.sectionConditions == buyConfig) {
-              this.selectedBuySection = this.copy(traderBuy);
-              return;
-            }
+    if (enabledBuies && !enabledBuies.includes(this.selectedBuySection.sectionConditions)) {
+      for (let buyConfig of enabledBuies) {
+        for (let traderBuy of this.traderBuySections) {
+          if (traderBuy.sectionConditions == buyConfig) {
+            this.selectedBuySection = this.copy(traderBuy);
+            return;
           }
         }
       }
@@ -310,8 +304,7 @@ export class TraderComponent {
   }
 
   public checkSupply(enabledSupplies: string[] | undefined): void {
-    if (enabledSupplies) {
-      if (!enabledSupplies.includes(this.selectedSupplySection.sectionConditions)) {
+    if (enabledSupplies && !enabledSupplies.includes(this.selectedSupplySection.sectionConditions)) {
         for (let supplyConfig of enabledSupplies) {
           for (let traderSupply of this.traderSupplySections) {
             if (traderSupply.sectionConditions == supplyConfig) {
@@ -320,7 +313,6 @@ export class TraderComponent {
             }
           }
         }
-      }
     }
     else {
       this.selectedSupplySection = this.copy(this.traderSupplySections.find(x => x.sectionConditions == this.selectedSupplySection.sectionConditions) as TradeSection<TraderSupplyItemView>);
@@ -328,14 +320,12 @@ export class TraderComponent {
   }
 
   public checkDiscount(enabledDicounts: string[] | undefined): void {
-    if (enabledDicounts) {
-      if (!enabledDicounts.includes(this.selectedDiscount.conditions)) {
-        for (let discount of enabledDicounts) {
-          for (let traderDiscount of this.traderDiscounts) {
-            if (traderDiscount.conditions == discount) {
-              this.selectedDiscount = this.copy(traderDiscount);
-              return;
-            }
+    if (enabledDicounts && !enabledDicounts.includes(this.selectedDiscount.conditions)) {
+      for (let discount of enabledDicounts) {
+        for (let traderDiscount of this.traderDiscounts) {
+          if (traderDiscount.conditions == discount) {
+            this.selectedDiscount = this.copy(traderDiscount);
+            return;
           }
         }
       }
@@ -375,7 +365,19 @@ export class TraderComponent {
                   let bestAssortement: BestBuySellModel = new BestBuySellModel();
                   bestAssortement.item = sellItem;
                   bestAssortement.conditionSell = section.sectionConditions;
-                  bestAssortement.conditionSupply = [supply.sectionConditions];
+                  bestAssortement.conditionsSell = section.sectionConditions.split(' ');
+                  bestAssortement.conditionSupply = [...supply.sectionConditions.split(' ')];
+
+                  bestAssortement.conditionSupply = bestAssortement.conditionSupply.map(
+                    x => {
+                      if (this.is_faction_resource_greater_regex.test(x)) {
+                        x = (this.is_faction_resource_greater_regex.exec(x) as RegExpExecArray)[1];
+                      }
+
+                      return x;
+                    }
+                  )
+
                   bestAssortement.traderName = trader.profile.name;
 
                   traderSell.push(bestAssortement);
@@ -396,6 +398,7 @@ export class TraderComponent {
           let bestHeroSell: BestBuySellModel = new BestBuySellModel();
           bestHeroSell.item = buyItem;
           bestHeroSell.conditionSell = section.sectionConditions;
+          bestHeroSell.conditionsSell = section.sectionConditions.split(' ');
           bestHeroSell.traderName = trader.profile.name;
 
           traderBuy.push(bestHeroSell);
@@ -411,6 +414,7 @@ export class TraderComponent {
               let bestAssortement: BestBuySellModel = new BestBuySellModel();
               bestAssortement.item = sameSellCoeffSupply[0].item;
               bestAssortement.conditionSell = sell.sectionConditions;
+              bestAssortement.conditionsSell = sell.sectionConditions.split(' ');
               bestAssortement.traderName = trader.profile.name;
               bestAssortement.conditionSupply = [];
 

@@ -271,3 +271,18 @@ app-item-tooltip, app-upgrade-tooltip {
   visibility: hidden;
   opacity: 0;
 }
+
+.custom-scroll::-webkit-scrollbar-track {
+	background-color: rgba(9,10,10,1);
+  border: 1px solid #555656;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+	background-color:rgba(9,10,10,1);
+  border: 1px solid white;
+  margin: 3px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  border: 1px solid white;
+}

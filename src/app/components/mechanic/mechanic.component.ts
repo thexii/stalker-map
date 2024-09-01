@@ -49,8 +49,6 @@ export class MechanicComponent {
   constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.mechanic);
-
     if (this.mechanic.itemsForUpgrader?.length > 0) {
       this.itemsToRepait = [];
 
@@ -106,9 +104,6 @@ export class MechanicComponent {
         up.upgrade = up.upgrade.replace('_sect_', '_');
       }
 
-      let height = 0;
-      let cellHeight = 44;
-
       if (selectedItemUpgrade) {
         this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
 
@@ -121,8 +116,6 @@ export class MechanicComponent {
               if (upgrade.isInstalled) {
                 isBlocked = true;
               }
-
-              height = Math.max(selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y, height);
             }
 
             if (isBlocked) {
@@ -130,8 +123,6 @@ export class MechanicComponent {
             }
           }
         }
-
-        console.log(height + cellHeight);
 
         let branchId: number = 0;
 
@@ -167,9 +158,6 @@ export class MechanicComponent {
                         }
                       }
                     }
-                    else {
-                      console.log(section, effect);
-                    }
                   }
                 }
               }
@@ -183,7 +171,6 @@ export class MechanicComponent {
   }
 
   public selectedItemHasUpgrade(upgrade: string): boolean {
-    console.log(upgrade)
     return this.selectedItem.installedUpgrades?.includes(upgrade);
   }
 
