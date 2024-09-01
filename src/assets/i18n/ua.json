@@ -248,6 +248,11 @@
     "zat_b3_tech_discount_1": "Кардан випив горілки",
     "zat_b3_tech_discount_2": "Кардан випив двічі",
     "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити",
-    "price": "Вартість: {{price}}",
-    "weight": "Вага: {{weight}} кг"
+
+    "bad_mechanic_price": "Націнка за ремонт",
+    "good_mechanic_price": "Скидка за ремонт",
+    "bad_trader_buy_price": "Знижена ціна скупки",
+    "good_trader_buy_price": "Збільшена ціна закупки",
+    "bad_trader_sell_price": "Націнка на товари",
+    "good_trader_sell_price": "Скидка на товари"
 }

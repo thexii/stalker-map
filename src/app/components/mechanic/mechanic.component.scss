@@ -5,16 +5,39 @@ $cell: 50px;
 .mechanic-container {
   display: flex;
   color: white;
-  min-width: 1400px;
+  height: 800px;
+  max-width: 1200px;
 }
 
 .mechanic-container-section {
   min-width: 350px;
+
+  &.section-info.cs {
+    min-width: 0;
+    width: 0;
+    margin-left: 0;
+  }
+}
+
+.mechanic-container-section.actor {
+  margin-left: 1rem;
+  width: calc(($trader-columns + 1 ) * $cell);
+  min-width: calc(($trader-columns + 1 ) * $cell);
 }
 
 .sections-select-container {
-  max-height: 300px;
+  max-height: inherit;
     overflow-y: auto;
+}
+
+.section-info {
+  margin-left: 1rem;
+}
+
+.inventory-container {
+  min-width: calc(($trader-columns + 1 ) * $cell);
+  display: flex;
+  justify-content: center;
 }
 
 .mechanic-info {
@@ -33,6 +56,10 @@ $cell: 50px;
 
 .container {
   max-height: 800px;
+}
+
+.buy.container {
+  min-width: calc(($trader-columns + 1 ) * $cell);
 }
 
 .inventory {

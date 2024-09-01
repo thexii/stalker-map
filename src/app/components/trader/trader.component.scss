@@ -5,6 +5,8 @@ $cell: 50px;
 .trader-container {
   display: flex;
   color: white;
+  flex-direction: row;
+  height: 800px;
 }
 
 .trader-info {
@@ -63,13 +65,14 @@ $cell: 50px;
   vertical-align: top;
   overflow-y: auto;
   overflow-x: hidden;
-  //min-width: $trader-columns * $cell;
+  width: ($trader-columns + 1) * $cell;
 }
 
 .trader-container-section.section-info {
   margin-inline: 1rem;
   flex-grow: 1;
-  min-width: unset;
+  min-width: $trader-columns * $cell;
+  max-width: ($trader-columns + 2) * $cell;
 }
 
 .container {
@@ -77,7 +80,7 @@ $cell: 50px;
 }
 
 .container.info {
-  max-height: round(up, (var(--wrapper-height) / 2 ) + 150px, $cell);
+  max-height: inherit;
 }
 
 .trader-sections-container {
@@ -166,36 +169,6 @@ $cell: 50px;
   border: 1px solid grey;
 }
 
-.sections-select-container::-webkit-scrollbar-track {
-	background-color: rgba(9,10,10,1);
-  border: 1px solid #555656;
-}
-
-.sections-select-container::-webkit-scrollbar-thumb {
-	background-color:rgba(9,10,10,1);
-  border: 1px solid white;
-  margin: 3px;
-}
-
-.sections-select-container::-webkit-scrollbar {
-  border: 1px solid white;
-}
-
-.trader-container-section::-webkit-scrollbar-track {
-	background-color: rgba(9,10,10,1);
-  border: 1px solid #555656;
-}
-
-.trader-container-section::-webkit-scrollbar-thumb {
-	background-color:rgba(9,10,10,1);
-  border: 1px solid white;
-  margin: 3px;
-}
-
-.trader-container-section::-webkit-scrollbar {
-  border: 1px solid white;
-}
-
 .select-relation {
   color: white;
   background: transparent;
@@ -204,4 +177,16 @@ $cell: 50px;
 
 .select-relation option {
   color: black;
+}
+
+.best-sell-item:nth-child(even) {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.best-sell-item-price {
+  flex-basis: 3rem;
+}
+
+.best-sell-container,.best-buy-container {
+  margin-left: 1rem;
 }

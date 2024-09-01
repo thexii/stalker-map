@@ -24,9 +24,9 @@
         </div>
       </div>
     </div>
-    <div class="trader-container-section section-info">
+    <div class="trader-container-section section-info custom-scroll">
       <div class="info container">
-        <div class="sections-select-container" *ngIf="hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies">
+        <div class="sections-select-container custom-scroll" *ngIf="hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies">
           <div class="trader-sections-title">{{'trader-sections-title' | translate}}</div>
           <table style="width: 100%;">
             <tr>
@@ -80,12 +80,12 @@
                       <div>{{ cond | translate}}</div>
                     </ng-container>
                     <ng-container *ngIf="traderDiscounts[index].buy != 1">
-                      <div *ngIf="traderDiscounts[index].buy > 1">Вигідно продавати: +{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
-                      <div *ngIf="traderDiscounts[index].buy < 1">Не вигідно продавати: {{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].buy > 1">{{ 'bad_trader_buy_price' | translate}}: -{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].buy < 1">{{ 'good_trader_buy_price' | translate}}: +{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
                     </ng-container>
                     <ng-container *ngIf="traderDiscounts[index].sell != 1">
-                      <div *ngIf="traderDiscounts[index].sell < 1">Скидка на товари: {{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
-                      <div *ngIf="traderDiscounts[index].sell > 1">Націнка товари: +{{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].sell < 1">{{ 'good_trader_sell_price' | translate}}: {{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                      <div *ngIf="traderDiscounts[index].sell > 1">{{ 'bad_trader_sell_price' | translate}}: +{{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
                     </ng-container>
                   </td>
                   <td *ngIf="!traderDiscounts[index]"></td>
@@ -123,41 +123,52 @@
         </div>
         <ng-container *ngIf="selectedItem">
           <div class="best-trade-container">
-            <table>
-              <ng-container *ngIf="selectedItem.supply == null">
-                <tr>
-                  <td colspan="2" *ngIf="selectedItem.traderHasNoSellItem">{{ 'trader-dont-sell-item' | translate}}</td>
-                  <td colspan="2" *ngIf="selectedItem.traderHasNoSellItemInSection">{{ 'trader-dont-sell-item-in-section' | translate}}</td>
-                </tr>
-              </ng-container>
-              <ng-container *ngIf="selectedItem.bestSell.length > 0">
-                <tr><td colspan="2">{{ 'best-sell-title' | translate}}</td></tr>
-                <tr *ngFor="let sell of selectedItem.bestSell">
-                  <td class="best-trade-price">
+            <div *ngIf="selectedItem.supply == null">
+              <div *ngIf="selectedItem.traderHasNoSellItem">
+                {{ 'trader-dont-sell-item' | translate}}
+              </div>
+              <div *ngIf="selectedItem.traderHasNoSellItemInSection">
+                {{ 'trader-dont-sell-item-in-section' | translate}}
+              </div>
+            </div>
+            <div class="best-sells" *ngIf="selectedItem.bestSell.length > 0">
+              <div class="best-sell-title">
+                {{ 'best-sell-title' | translate}}
+              </div>
+              <div class="best-sell-container">
+                <div class="best-sell-item" *ngFor="let sell of selectedItem.bestSell">
+                  <div class="best-sell-item-price">
                     {{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) / 2) * selectedItem.item.price) }}
-                  </td>
-                  <td>
+                  </div>
+                  <div class="best-sell-item-info">
                     <div class="best-trade-trader-name">
                       {{sell.traderName | translate}}
                     </div>
                     <div class="best-trade-trader-condition" *ngIf="sell.conditionSell != allwaysCondition">
-                      {{ sell.conditionSell | translate}}
+                      <div *ngFor="let cond of sell.conditionsSell">
+                        {{ cond | translate}}
+                      </div>
                     </div>
                     <div class="best-trade-trader-condition" *ngIf="sell.conditionSupply && sell.conditionSupply.length > 0">
                       <div *ngFor="let cond of sell.conditionSupply">
                         {{ cond | translate}}
                       </div>
                     </div>
-                  </td>
-                </tr>
-              </ng-container>
-              <ng-container *ngIf="selectedItem.bestBuy.length > 0">
-                <tr><td colspan="2">{{ 'best-buy-title' | translate}}</td></tr>
-                <tr *ngFor="let buy of selectedItem.bestBuy">
-                  <td>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="best-buy">
+              <div class="best-sell-title">
+                {{ 'best-buy-title' | translate}}
+              </div>
+              <div class="best-buy-container">
+                <div class="best-sell-item" *ngFor="let buy of selectedItem.bestBuy">
+                  <div class="best-sell-item-price">
                     {{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) / 2) * selectedItem.item.price) }}
-                  </td>
-                  <td>
+                  </div>
+
+                  <div class="best-sell-item-info">
                     <div class="best-trade-trader-name">
                       {{buy.traderName | translate}}
                     </div>
@@ -166,20 +177,20 @@
                         {{ cond | translate}}
                       </div>
                     </div>
-                  </td>
-                </tr>
-              </ng-container>
-            </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </ng-container>
       </div>
     </div>
-    <div class="trader-container-section actor-section">
+    <div class="trader-container-section custom-scroll actor-section">
       <div class="buy container">
         <div class="trader-info">
           <div class="trader-bio">
             <div class="trader-name">{{ 'actor_name' | translate}}</div>
-            <div class="profile-data-info">
+            <div class="profile-data-info"  *ngIf="traderConfig == null || traderConfig.enableRelationSelector">
               <select class="select-relation" #relation (change)="setRelationSelect(relation.value)" *ngIf="relationType == relationTypeEnum.selector">
                 <option class="language-selector-option" [value]="0">{{ 'enemy' | translate }}</option>
                 <option class="language-selector-option" [value]="1" selected>{{ 'neutral' | translate }}</option>

@@ -227,5 +227,32 @@
   "smart-paths": "Маршруты сталкеров",
   "artefact-ways": "Маршруты артефактов",
   "level-changers": "Переходы между локациями",
-  "mechanics": "Техники"
+  "mechanics": "Техники",
+
+  "item-trader-chance": "Шанс появления у торговца",
+
+  "jup_b200_tech_materials_brought_counter_1": "Найдено радиоматериалов: 1",
+  "jup_b200_tech_materials_brought_counter_2": "Найдено радиоматериалов: 2",
+  "jup_b200_tech_materials_brought_counter_3": "Найдено радиоматериалов: 3",
+  "jup_b200_tech_materials_brought_counter_4": "Найдено радиоматериалов: 4",
+  "jup_b200_tech_materials_brought_counter_5": "Найдено радиоматериалов: 5",
+  "jup_b200_tech_materials_brought_counter_6": "Найдено радиоматериалов: 6",
+  "jup_b200_tech_materials_brought_counter_7": "Найдено радиоматериалов: 7",
+  "jup_b200_tech_materials_brought_counter_8": "Найдено радиоматериалов: 8",
+  "jup_b200_tech_materials_brought_counter_9": "Найдено радиоматериалов: 9",
+
+  "counter_equal(jup_a6_actor_help_freedom:4)": "Преимущество «Свободы» на Янове",
+  "counter_equal(jup_a6_actor_help_duty:4)": "Преимущество «Долга» на Янове",
+  "counter_equal(jup_a6_actor_help_stalkers:3)": "Трижды помочь сталкерам на Янове",
+
+  "zat_b3_tech_discount_1": "Кардан выпил",
+  "zat_b3_tech_discount_2": "Кардан выпил дважды",
+  "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан бросил пить",
+
+  "bad_mechanic_price": "Наценка за ремонт",
+  "good_mechanic_price": "Скидка за ремонт",
+  "bad_trader_buy_price": "Снижена цена скупки",
+  "good_trader_buy_price": "Увеличена цена скупки",
+  "bad_trader_sell_price": "Наценка на товары",
+  "good_trader_sell_price": "Скидка на товары"
 }

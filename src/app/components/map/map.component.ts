@@ -134,25 +134,25 @@ export class MapComponent {
   }
 
   private async ngOnInit(): Promise<void> {
-    console.log('MapComponent');
     if (typeof L === 'undefined') {
       await this.addScript('/assets/libs/leaflet/index.js');
       await this.addScript('/assets/libs/leaflet/leaflet.js');
-      await this.addScript(
-        '/assets/libs/leaflet/plugins/search/leaflet-search.js'
-      );
-      await this.addScript(
-        '/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js'
-      );
-      await this.addScript(
-        '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
-      );
-      await this.addScript(
-        '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
-      );
-      await this.addScript(
-        '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
-      );
+      await this.addScript('/assets/libs/leaflet/plugins/search/leaflet-search.js');
+
+      await Promise.all([
+        this.addScript(
+          '/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
+        )
+      ]);
       console.log('Leaflet is loaded');
     }
 
@@ -1577,11 +1577,17 @@ export class MapComponent {
         }
       );
 
+      let minWidth = 850;
+
+      if (this.game == 'cop') {
+        minWidth = 1200;
+      }
+
       canvasMarker
         .bindPopup(
           (stalker: any) =>
             this.createMechanicPopup(stalker),
-          { maxWidth: 2000 }
+          { minWidth: minWidth }
         )
         .openPopup();
     }
@@ -2238,8 +2244,13 @@ export class MapComponent {
       script.type = 'text/javascript';
       script.src = scriptUrl;
       document.body.appendChild(script);
+
       script.onload = () => {
-        console.log(`${scriptUrl} is loaded.`);
+        resolve();
+      }
+
+      script.onerror = () => {
+        console.error(`Can not load ${scriptUrl}.`);
         resolve();
       };
     });
@@ -2251,8 +2262,13 @@ export class MapComponent {
       style.rel = 'stylesheet';
       style.href = styleUrl;
       document.body.appendChild(style);
+
       style.onload = () => {
-        console.log(`${styleUrl} is loaded.`);
+        resolve();
+      }
+
+      style.onerror = () => {
+        console.error(`Can not load ${styleUrl}.`);
         resolve();
       };
     });

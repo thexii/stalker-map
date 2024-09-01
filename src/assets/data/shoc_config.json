@@ -188,6 +188,7 @@
     },
     {
       "trader": "bar_petrenko_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -227,6 +228,7 @@
     },
     {
       "trader": "yan_saharov_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
@@ -266,6 +268,7 @@
     },
     {
       "trader": "mil_svoboda_trader_name",
+      "enableRelationSelector": true,
       "sell": [
         {
           "condition": "",
