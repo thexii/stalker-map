@@ -28860,6 +28860,3977 @@
       "locationId": 5
     },
     {
+      "infinitiveMoney": false,
+      "buy": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.25,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_pm",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pb",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_hpsa",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_beretta",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_walther",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig220",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_usp",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_desert_eagle",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_bm16",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_toz34",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_wincheaster1300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_spas12",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74u",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_mp5",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_l85",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_groza",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_val",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svu",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svd",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rg-6",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rpg7",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_g36",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fn2000",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "novice_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandit_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "specops_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "military_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "stalker_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "scientific_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "exo_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_light_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_heavy_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "dolg_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "wpn_ak74_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_9x19",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "stalker_outfit_up_stalk",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.25,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            }
+          ]
+        }
+      ],
+      "sell": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 2,
+              "maxCoeficient": 3
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 2,
+              "maxCoeficient": 3
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_vog-25",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "count": 2,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "count": 5,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "count": 5,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "count": 5,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "count": 5,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "count": 3,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "count": 2,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "count": 2,
+              "probability": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "detector_simple",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "count": 2,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "detector_elite",
+              "count": 2,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "wpn_beretta",
+              "count": 1,
+              "probability": 1
+            }
+          ]
+        }
+      ],
+      "discounts": null,
+      "isMedic": false,
+      "profile": {
+        "name": "gar_stalker_night_trader",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 200,
+        "faction": "stalker"
+      },
+      "money": 5000,
+      "x": 499.2022,
+      "y": -3.508623,
+      "z": 632.14923,
+      "locationId": 5
+    },
+    {
+      "infinitiveMoney": false,
+      "buy": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.15,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_pm",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pb",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_hpsa",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_beretta",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_walther",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig220",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_usp",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_desert_eagle",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_bm16",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_toz34",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_wincheaster1300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_spas12",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74u",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_mp5",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_l85",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_groza",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_val",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svu",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svd",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rg-6",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rpg7",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_g36",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fn2000",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "novice_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandit_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "specops_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "military_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "stalker_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "scientific_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "exo_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_light_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_heavy_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "dolg_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "wpn_ak74_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_9x19",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "stalker_outfit_up_stalk",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.15,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            }
+          ]
+        }
+      ],
+      "sell": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 2,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 2,
+              "maxCoeficient": 3
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 2,
+              "maxCoeficient": 3
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "count": 2,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 5,
+              "probability": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "wpn_hpsa",
+              "count": 1,
+              "probability": 1
+            }
+          ]
+        }
+      ],
+      "discounts": null,
+      "isMedic": false,
+      "profile": {
+        "name": "gar_stalker_evening_trader",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 200,
+        "faction": "stalker"
+      },
+      "money": 5000,
+      "x": 499.9446,
+      "y": 8.615111,
+      "z": 635.373,
+      "locationId": 5
+    },
+    {
+      "infinitiveMoney": false,
+      "buy": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.15,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_pm",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pb",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_hpsa",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_beretta",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_walther",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig220",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_usp",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_desert_eagle",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_bm16",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_toz34",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_wincheaster1300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_spas12",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74u",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_mp5",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_l85",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_groza",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_val",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svu",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_svd",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rg-6",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_rpg7",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_g36",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fn2000",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "novice_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandit_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "specops_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "military_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "stalker_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "scientific_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "exo_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_light_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "svoboda_heavy_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "dolg_outfit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "wpn_ak74_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_ak74_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_abakan_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_colt1911_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_pm_9x19",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_lr300_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_fort_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_sig550_up2",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "wpn_vintorez_up",
+              "minCoeficient": 0.1,
+              "maxCoeficient": 0.05
+            },
+            {
+              "uniqueName": "stalker_outfit_up_stalk",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 0.15,
+              "maxCoeficient": 0.1
+            },
+            {
+              "uniqueName": "wpn_addon_scope",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_scope_susat",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_silencer",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "wpn_addon_grenade_launcher_m203",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.7,
+              "maxCoeficient": 0.5
+            }
+          ]
+        }
+      ],
+      "sell": [
+        {
+          "sectionConditions": "gar_quest_liberate_conc_camp_done",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 0.9,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            }
+          ]
+        },
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1.1,
+              "maxCoeficient": 1.2
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1.1,
+              "maxCoeficient": 1.2
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 1.1,
+              "maxCoeficient": 1.2
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1.1,
+              "maxCoeficient": 1.2
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1.1,
+              "maxCoeficient": 1.2
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 1.5,
+              "maxCoeficient": 2
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "count": 2,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "count": 2,
+              "probability": 0.2
+            },
+            {
+              "uniqueName": "medkit",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "bandage",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "conserva",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "vodka",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "wpn_colt1911",
+              "count": 1,
+              "probability": 1
+            }
+          ]
+        }
+      ],
+      "discounts": null,
+      "isMedic": false,
+      "profile": {
+        "name": "gar_stalker_24h_trader",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 200,
+        "faction": "stalker"
+      },
+      "money": 5000,
+      "x": 498.46326,
+      "y": 3.776537,
+      "z": 634.37164,
+      "locationId": 5
+    },
+    {
       "infinitiveMoney": true,
       "buy": [
         {
@@ -30122,6 +34093,503 @@
       "y": 0.932461,
       "z": 175.10663,
       "locationId": 7
+    },
+    {
+      "infinitiveMoney": false,
+      "buy": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_cristall",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fireball",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_glassbeads",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_eye",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fire",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_medusa",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_cristall_flower",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_night_star",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_vyvert",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gravi",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_gold_fish",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_soul",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_fuzz_kolobok",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_baloon",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_glass",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_electra_moonlight",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_battery",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_dummy_dummy",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "af_ice",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x18_pmm",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x19_pbp",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x19_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_11.43x23_hydro",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_11.43x23_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_12x70_buck",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_12x76_dart",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_12x76_zhekan",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_5.45x39_fmj",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x39_sp5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ss190",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_7.62x54_ap",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_og-7b",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_vog-25p",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "grenade_f1",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "grenade_rgd5",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "medkit_scientic",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "bread",
+              "minCoeficient": 2,
+              "maxCoeficient": 1
+            },
+            {
+              "uniqueName": "kolbasa",
+              "minCoeficient": 2,
+              "maxCoeficient": 1
+            },
+            {
+              "uniqueName": "conserva",
+              "minCoeficient": 2,
+              "maxCoeficient": 1
+            },
+            {
+              "uniqueName": "vodka",
+              "minCoeficient": 2,
+              "maxCoeficient": 1
+            },
+            {
+              "uniqueName": "detector_simple",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_advanced",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            },
+            {
+              "uniqueName": "detector_elite",
+              "minCoeficient": 0.5,
+              "maxCoeficient": 0.3
+            }
+          ]
+        }
+      ],
+      "sell": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_blood",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.3
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.3
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.3
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "minCoeficient": 1.2,
+              "maxCoeficient": 1.3
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_vog-25",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_m209",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "specops_outfit",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "military_outfit",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "scientific_outfit",
+              "minCoeficient": 1,
+              "maxCoeficient": 2
+            },
+            {
+              "uniqueName": "bandage",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "medkit_army",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            },
+            {
+              "uniqueName": "antirad",
+              "minCoeficient": 1,
+              "maxCoeficient": 1.5
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "sectionConditions": "",
+          "items": [
+            {
+              "uniqueName": "af_blood",
+              "count": 1,
+              "probability": 0.01
+            },
+            {
+              "uniqueName": "af_mincer_meat",
+              "count": 1,
+              "probability": 0.01
+            },
+            {
+              "uniqueName": "af_electra_sparkler",
+              "count": 1,
+              "probability": 0.01
+            },
+            {
+              "uniqueName": "af_electra_flash",
+              "count": 1,
+              "probability": 0.01
+            },
+            {
+              "uniqueName": "ammo_9x39_ap",
+              "count": 10,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "ammo_9x39_pab9",
+              "count": 10,
+              "probability": 1
+            },
+            {
+              "uniqueName": "ammo_5.56x45_ap",
+              "count": 10,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "ammo_5.45x39_ap",
+              "count": 10,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "ammo_7.62x54_7h14",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "ammo_pkm_100",
+              "count": 5,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "wpn_groza",
+              "count": 1,
+              "probability": 1
+            },
+            {
+              "uniqueName": "scientific_outfit",
+              "count": 1,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "specops_outfit",
+              "count": 1,
+              "probability": 0.8
+            },
+            {
+              "uniqueName": "military_outfit",
+              "count": 1,
+              "probability": 0.7
+            },
+            {
+              "uniqueName": "bandage",
+              "count": 15,
+              "probability": 0.5
+            },
+            {
+              "uniqueName": "medkit_army",
+              "count": 15,
+              "probability": 0.3
+            },
+            {
+              "uniqueName": "antirad",
+              "count": 15,
+              "probability": 0.8
+            }
+          ]
+        }
+      ],
+      "discounts": null,
+      "isMedic": false,
+      "profile": {
+        "name": "red_forest_underground_trader",
+        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 0,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 200,
+        "faction": "stalker"
+      },
+      "money": 5000,
+      "x": 234.00052,
+      "y": 2.17953,
+      "z": 1204.2234,
+      "locationId": 9
     },
     {
       "infinitiveMoney": true,
@@ -35699,28 +40167,6 @@
       "stalkerType": null,
       "inventoryItems": [],
       "profile": {
-        "name": "agr_stalker_base_mechanic_name",
-        "bio": "\u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C 18-20 \u043B\u0435\u0442, \u0441 \u0431\u0430\u0441\u043E\u0432\u0438\u0442\u044B\u043C \u0433\u043E\u043B\u043E\u0441\u043E\u043C. \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0433\u043B\u043E\u0432\u0430\u0442\u044B\u0439. \u0445\u043E\u0447\u0435\u0442 \u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u0442\u0430\u0440\u0448\u0435, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u0442\u044C \u0445\u043C\u0443\u0440\u044B\u043C \u0438 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u043C. \u043E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439, \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
-        "iconX": 495,
-        "iconY": 324,
-        "iconWidth": 165,
-        "iconHeight": 108,
-        "description": null,
-        "rank": 300,
-        "faction": "stalker"
-      },
-      "money": 5000,
-      "x": 239.70067,
-      "y": 2.50001,
-      "z": 560.9642,
-      "locationId": 1
-    },
-    {
-      "alive": true,
-      "hasUniqueItem": false,
-      "stalkerType": null,
-      "inventoryItems": [],
-      "profile": {
         "name": "agr_duty_base_commander_name",
         "bio": "\u043A\u043E\u043C\u043C\u0430\u043D\u0434\u0438\u0440 \u0432\u043E\u0435\u043D\u043D\u044B\u0445 \u0441\u0438\u043B \u0431\u0430\u0437\u044B \u0434\u043E\u043B\u0433\u0430",
         "iconX": 330,
@@ -35954,28 +40400,6 @@
       "stalkerType": null,
       "inventoryItems": [],
       "profile": {
-        "name": "esc_leader_stalkerbase_name",
-        "bio": "\u043E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
-        "iconX": 330,
-        "iconY": 324,
-        "iconWidth": 165,
-        "iconHeight": 108,
-        "description": null,
-        "rank": 600,
-        "faction": "stalker"
-      },
-      "money": 5000,
-      "x": 453.27914,
-      "y": 0.849637,
-      "z": 344.6322,
-      "locationId": 4
-    },
-    {
-      "alive": true,
-      "hasUniqueItem": false,
-      "stalkerType": null,
-      "inventoryItems": [],
-      "profile": {
         "name": "esc_driver_name",
         "bio": "\u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u0441\u043E\u043B\u0434\u0430\u0442-\u0441\u0440\u043E\u0447\u043D\u0438\u043A. \u043D\u0435\u043E\u043F\u044B\u0442\u043D\u044B\u0439, \u0437\u0435\u043B\u0435\u043D\u044B\u0439 \u0438 \u0442\u0440\u0443\u0441\u043E\u0432\u0430\u0442\u044B\u0439.",
         "iconX": 495,
@@ -36187,6 +40611,28 @@
       "x": 395.40045,
       "y": -19.870346,
       "z": 260.30872,
+      "locationId": 4
+    },
+    {
+      "alive": true,
+      "hasUniqueItem": false,
+      "stalkerType": null,
+      "inventoryItems": [],
+      "profile": {
+        "name": "esc_leader_stalkerbase_name",
+        "bio": "\u041E\u043F\u044B\u0442\u043D\u044B\u0439 \u0441\u0442\u0430\u043B\u043A\u0435\u0440. \u0414\u0435\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442.",
+        "iconX": 330,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 600,
+        "faction": "stalker"
+      },
+      "money": 0,
+      "x": 453.25314,
+      "y": 0.849638,
+      "z": 344.62775,
       "locationId": 4
     },
     {
@@ -36508,6 +40954,194 @@
     }
   ],
   "mechanics": [
+    {
+      "itemsForUpgrader": [
+        "wpn_pm",
+        "wpn_pm_up",
+        "wpn_pm_9x19",
+        "wpn_pb",
+        "wpn_fort",
+        "wpn_fort_up",
+        "wpn_hpsa",
+        "wpn_beretta",
+        "wpn_walther",
+        "wpn_walther_up2",
+        "wpn_colt1911",
+        "wpn_colt1911_up2",
+        "wpn_usp",
+        "wpn_sig220",
+        "wpn_desert_eagle",
+        "wpn_bm16",
+        "wpn_toz34",
+        "wpn_wincheaster1300",
+        "wpn_spas12",
+        "wpn_ak74u",
+        "wpn_mp5",
+        "wpn_ak74",
+        "wpn_l85",
+        "wpn_lr300",
+        "wpn_lr300_up2",
+        "wpn_sig550",
+        "wpn_sig550_up2",
+        "stalker_outfit",
+        "specops_outfit"
+      ],
+      "upgradeConditions": [
+        {
+          "upgrade": "up_sect_ac_mp5",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_mp5",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_wincheaster1300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_wincheaster1300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_ak74u",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_aceg_scientific_outfit",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bdfh_scientific_outfit",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_eg_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_aceg_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_eg_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_aceg_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_eg_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_aceg_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_eg_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_aceg_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_fh_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bdfh_ak74",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_fh_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bdfh_l85",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_fh_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bdfh_lr300",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bd_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_fh_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_bdfh_sig550",
+          "condition": "false"
+        },
+        {
+          "upgrade": "up_sect_ac_desert_eagle",
+          "condition": "{\u002Binfo_up_ac_desert_eagle}"
+        },
+        {
+          "upgrade": "up_sect_bd_desert_eagle",
+          "condition": "{\u002Binfo_up_bd_desert_eagle}"
+        },
+        {
+          "upgrade": "up_sect_ac_spas12",
+          "condition": "{\u002Binfo_up_ac_spas12}"
+        }
+      ],
+      "discounts": null,
+      "profile": {
+        "name": "agr_stalker_base_mechanic_name",
+        "bio": "\u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C 18-20 \u043B\u0435\u0442, \u0441 \u0431\u0430\u0441\u043E\u0432\u0438\u0442\u044B\u043C \u0433\u043E\u043B\u043E\u0441\u043E\u043C. \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043D\u0430\u0433\u043B\u043E\u0432\u0430\u0442\u044B\u0439. \u0445\u043E\u0447\u0435\u0442 \u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u0442\u0430\u0440\u0448\u0435, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u0442\u044C \u0445\u043C\u0443\u0440\u044B\u043C \u0438 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u043C. \u043E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439, \u043D\u0435\u0437\u043B\u043E\u0431\u043D\u044B\u0439.",
+        "iconX": 495,
+        "iconY": 324,
+        "iconWidth": 165,
+        "iconHeight": 108,
+        "description": null,
+        "rank": 300,
+        "faction": "stalker"
+      },
+      "money": 0,
+      "x": 239.70067,
+      "y": 2.50001,
+      "z": 560.9642,
+      "locationId": 1
+    },
     {
       "itemsForUpgrader": [
         "wpn_pm",

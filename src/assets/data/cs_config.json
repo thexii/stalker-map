@@ -425,6 +425,115 @@
           "enabledBuies": null
         }
       ]
+    },
+    {
+      "trader": "gar_stalker_night_trader",
+      "enableRelationSelector": true,
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledBuies": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledSells": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "gar_stalker_24h_trader",
+      "enableRelationSelector": true,
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledBuies": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledSells": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "gar_stalker_evening_trader",
+      "enableRelationSelector": true,
+      "sell": [
+        {
+          "condition": "",
+          "enabledBuies": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledBuies": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "buy": [
+        {
+          "condition": "",
+          "enabledSells": [""],
+          "enabledSupplies": [""]
+        },
+        {
+          "condition": "gar_quest_liberate_conc_camp_done",
+          "enabledSells": ["gar_quest_liberate_conc_camp_done"],
+          "enabledSupplies": [""]
+        }
+      ],
+      "supply": [
+        {
+          "condition": "",
+          "enabledSells": null,
+          "enabledBuies": null
+        }
+      ]
+    },
+    {
+      "trader": "red_forest_underground_trader",
+      "enableRelationSelector": true
     }
   ],
   "undergroundLevelsConfig": [

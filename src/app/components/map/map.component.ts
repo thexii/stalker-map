@@ -944,7 +944,7 @@ export class MapComponent {
         },
     };
 
-    ruler = L.control.ruler(options);//.addTo(this.map);
+    ruler = L.control.ruler(options);
     ruler.addTo(this.map);
 
     return ruler;
@@ -1319,8 +1319,6 @@ export class MapComponent {
             renderer: this.canvasRenderer
           });
 
-          let markerSvg
-
           marker.properties = {};
           marker.properties.name = mark.name ? mark.name : markType.markName;
           marker.properties.description = mark.description;
@@ -1328,7 +1326,6 @@ export class MapComponent {
           marker.properties.typeUniqueName = markType.uniqueName;
           marker.properties.ableToSearch = markType.ableToSearch;
 
-          marker.addTo(this.map);
           markers.push(marker);
 
           if (marker.properties.ableToSearch) {
@@ -2319,28 +2316,6 @@ export class MapComponent {
     this.layers[name] = layer;
     let mapComponent = this;
     let layers = mapComponent.layers;
-
-    /*layer.hide = (layer: { isShowing: boolean; markers: any }) => {
-      if (layer.isShowing) {
-        layer.isShowing = false;
-
-        if (this.mapInitialized) {
-            this.searchContoller.setLayer(mapComponent.reorderSearchingLayers(layers));
-        }
-      }
-    };
-
-    layer.show = (layer: { isShowing: boolean; _layers: any }) => {
-      if (!layer.isShowing && Object.keys(layer._layers).length > 0) {
-        layer.isShowing = true;
-
-        if (this.mapInitialized) {
-            this.searchContoller.setLayer(mapComponent.reorderSearchingLayers(layers));
-        }
-      }
-    };
-
-    layer.show(layer);*/
   }
 
   private reorderSearchingLayers(layers: any): any {
@@ -2351,7 +2326,7 @@ export class MapComponent {
 
     for (let layerKeyValue of Object.entries(layers)) {
         let layer: any = layerKeyValue[1];
-        if (layer.isShowing) {
+        if (this.map.hasLayer(layer)) {
             let markers: any[] = Object.values(layer._layers);
             newLayers[layerKeyValue[0]] = layer;
             if (markers[0] && markers[0].properties && markers[0].properties.typeUniqueName) {
@@ -2737,8 +2712,6 @@ export class MapComponent {
 
     return icon;
   }
-
-
 
   public getStalkersIcon(): any[] {
     let stalkerIcon = {
