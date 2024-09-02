@@ -255,5 +255,11 @@
   "bad_trader_buy_price": "Reduced purchase price",
   "good_trader_buy_price": "The purchase price has been increased",
   "bad_trader_sell_price": "Markup on goods",
-  "good_trader_sell_price": "Discount on goods"
+  "good_trader_sell_price": "Discount on goods",
+
+  "gar_stalker_24h_trader": "Flea market 24-hour trader",
+  "gar_stalker_evening_trader": "Flea market evening trader",
+  "gar_stalker_night_trader": "Flea market night trader",
+  "gar_quest_liberate_conc_camp_done": "Stalkers liberated from bandit expluatation on vehicle graveyard",
+  "red_forest_underground_trader": "Trader in a mine in Red Forest"
 }

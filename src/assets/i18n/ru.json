@@ -254,5 +254,11 @@
   "bad_trader_buy_price": "Снижена цена скупки",
   "good_trader_buy_price": "Увеличена цена скупки",
   "bad_trader_sell_price": "Наценка на товары",
-  "good_trader_sell_price": "Скидка на товары"
+  "good_trader_sell_price": "Скидка на товары",
+
+  "gar_stalker_24h_trader": "Круглосуточный торговец с Барахолки",
+  "gar_stalker_evening_trader": "Вечерний торговец с Барахолки",
+  "gar_stalker_night_trader": "Ночной торговец с Барахолки",
+  "gar_quest_liberate_conc_camp_done": "Освободить сталкеров с концлагеря бандитов",
+  "red_forest_underground_trader": "Торговец в казарме в шахтах"
 }
