@@ -357,7 +357,7 @@ export class TraderComponent {
         let sellItem = section.items.find(x => x.uniqueName == item.uniqueName);
         if (sellItem) {
           for (let supply of trader.supplies) {
-            let supplyConfig = traderSectionConfig?.supply.find(x => x.condition == supply.sectionConditions);
+            let supplyConfig = traderSectionConfig?.supply?.find(x => x.condition == supply.sectionConditions);
 
             if (supplyConfig == null || supplyConfig.enabledSells == null || supplyConfig.enabledSells.includes(section.sectionConditions)) {
                 let supplyItem = supply.items.find(x => x.uniqueName == item.uniqueName);
@@ -472,6 +472,7 @@ export class TraderComponent {
             let bestAssortement: BestBuySellModel = new BestBuySellModel();
             bestAssortement.item = sameBuyCoeffSupply[0].item;
             bestAssortement.conditionSell = buy.sectionConditions;
+            bestAssortement.conditionsSell = buy.sectionConditions.split(' ');
             bestAssortement.traderName = trader.profile.name;
             /*bestAssortement.conditionSupply = [];
 
