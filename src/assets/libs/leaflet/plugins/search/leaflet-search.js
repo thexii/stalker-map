@@ -583,7 +583,7 @@
           console.warn(`propertyName '${propName}' not found in feature`);
         }
       } else if (layer instanceof L.LayerGroup) {
-        if (layer._layers != null && layer.ableToSearch && layer.isShowing) {
+        if (layer._layers != null && layer.ableToSearch && this._map.hasLayer(layer)) {
             for (let marker of Object.values(layer._layers)) {
                 self._searchInLayer(marker, retRecords, propName)
             }
