@@ -25,97 +25,102 @@
 }
 
 .stalker-search-item {
-  padding-left: 18px
-}
+  padding-left: 18px;
 
-.stalker-search-item.anomaly-zone {
-  background: url(/assets/images/svg/marks/anomaly.svg)no-repeat;
-  background-size: contain
-}
+  &.anomaly-zone {
+    background: url(/assets/images/svg/marks/anomaly.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.radioactive {
-  background: url(/assets/images/svg/marks/radiation.svg)no-repeat;
-  background-size: contain
-}
+  &.artefact-ways {
+    background: url(/assets/images/svg/marks/artefact-ways.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.acidic {
-  background: url(/assets/images/svg/marks/chemical.svg)no-repeat;
-  background-size: contain
-}
+  &.radioactive {
+    background: url(/assets/images/svg/marks/radiation.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.psychic {
-  background: url(/assets/images/svg/marks/psi.svg)no-repeat;
-  background-size: contain
-}
+  &.acidic {
+    background: url(/assets/images/svg/marks/chemical.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.thermal {
-  background: url(/assets/images/svg/marks/fire.svg)no-repeat;
-  background-size: contain
-}
+  &.psychic {
+    background: url(/assets/images/svg/marks/psi.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.mines {
-  background: url(/assets/images/svg/marks/mines.svg)no-repeat;
-  background-size: contain
-}
+  &.thermal {
+    background: url(/assets/images/svg/marks/fire.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.stalkers {
-  background: url(/assets/images/svg/marks/character.svg)no-repeat;
-  background-size: contain
-}
+  &.mines {
+    background: url(/assets/images/svg/marks/mines.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.monsters {
-  background: url(/assets/images/svg/marks/monsters.svg)no-repeat;
-  background-size: contain
-}
+  &.stalkers {
+    background: url(/assets/images/svg/marks/character.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.smart-terrains {
-  background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
-  background-size: contain
-}
+  &.monsters {
+    background: url(/assets/images/svg/marks/monsters.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.default {
-  background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
-  background-size: contain
-}
+  &.smart-terrains {
+    background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.resource {
-  background: url(/assets/images/svg/marks/smart_terrain_resource.svg)no-repeat;
-  background-size: contain
-}
+  &.default {
+    background: url(/assets/images/svg/marks/smart_terrain_default.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.base {
-  background: url(/assets/images/svg/marks/smart_terrain_territory.svg)no-repeat;
-  background-size: contain
-}
+  &.resource {
+    background: url(/assets/images/svg/marks/smart_terrain_resource.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.smart-paths {
-  background: url(/assets/images/svg/marks/pre-mark.svg)no-repeat;
-  background-size: contain
-}
+  &.base {
+    background: url(/assets/images/svg/marks/smart_terrain_territory.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.anomaly-zone-no-art {
-  background: url(/assets/images/svg/marks/anomaly_noart.svg)no-repeat;
-  background-size: contain
-}
+  &.smart-paths {
+    background: url(/assets/images/svg/marks/pre-mark.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.teleport {
-  background: url(/assets/images/svg/marks/portal.svg)no-repeat;
-  background-size: contain
-}
+  &.anomaly-zone-no-art {
+    background: url(/assets/images/svg/marks/anomaly_noart.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.traders {
-  background: url(/assets/images/svg/marks/trader.svg)no-repeat;
-  background-size: contain
-}
+  &.teleport {
+    background: url(/assets/images/svg/marks/portal.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.mechanics {
-  background: url(/assets/images/svg/marks/tech.svg)no-repeat;
-  background-size: contain
-}
+  &.traders {
+    background: url(/assets/images/svg/marks/trader.svg)no-repeat;
+    background-size: contain
+  }
 
-.stalker-search-item.level-changers {
-  background: url(/assets/images/svg/marks/level_changers/level_changer_up_right.svg)no-repeat;
-  background-size: contain
+  &.mechanics {
+    background: url(/assets/images/svg/marks/tech.svg)no-repeat;
+    background-size: contain
+  }
+
+  &.level-changers {
+    background: url(/assets/images/svg/marks/level_changers/level_changer_up_right.svg)no-repeat;
+    background-size: contain
+  }
 }
 
 .search-tooltip {

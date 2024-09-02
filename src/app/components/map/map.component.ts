@@ -780,7 +780,7 @@ export class MapComponent {
             subHeaderSpan.appendChild(subHeaderSpanName);
 
             input.id = `layer-${layerId}`;
-            inputTop.id = `layer-${layerId}`;
+            inputTop.id = `layer-top-${layerId}`;
             labelInsideCheck.setAttribute('for', inputTop.id);
 
             if (!obj.layer.isUnderground && this.options.overlaysListTop) {
@@ -2130,7 +2130,7 @@ export class MapComponent {
     }
 
     this.addLayerToMap(L.layerGroup(smartTerrainPaths), 'smart-paths');
-    this.addLayerToMap(L.layerGroup(markers), smartTerrainIcon.uniqueName);
+    this.addLayerToMap(L.layerGroup(markers), smartTerrainIcon.uniqueName, true);
   }
 
   private addMonsterLairs() {
@@ -2311,7 +2311,6 @@ export class MapComponent {
 
   private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
     layer.ableToSearch = ableToSearch;
-    layer.isShowing = false;
     layer.name = name;
     this.layers[name] = layer;
     let mapComponent = this;
@@ -2335,10 +2334,9 @@ export class MapComponent {
         }
     }
 
-    if (Object.values(layers).some((x: any) => x.name == "level-changers" && x.isShowing)) {
+    if (Object.values(layers).some((x: any) => x.name == "level-changers" && this.map.hasLayer(x))) {
       newUndergroundLayer = L.layerGroup(undergroundMarkers);
       newUndergroundLayer.ableToSearch = true;
-      newUndergroundLayer.isShowing = true;
       newLayers['underground'] = newUndergroundLayer;
     }
     return L.featureGroup(Object.values(newLayers));

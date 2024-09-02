@@ -297,7 +297,7 @@ export class UndergroundComponent {
         },
     };
 
-    ruler = L.control.ruler(options);//.addTo(this.map);
+    ruler = L.control.ruler(options);
     ruler.addTo(this.map);
 
     return ruler;
