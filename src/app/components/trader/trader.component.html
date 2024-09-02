@@ -143,6 +143,11 @@
                   <div class="best-sell-item-info">
                     <div class="best-trade-trader-name">
                       {{sell.traderName | translate}}
+                      <span *ngIf="sell.item.maxCoeficient != sell.item.minCoeficient">(
+                        <span class="best-sell-item-price-value good">{{ Math.floor(sell.item.minCoeficient * selectedItem.item.price) }}</span> -
+                        <span class="best-sell-item-price-value">{{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) / 2) * selectedItem.item.price) }}</span> -
+                        <span class="best-sell-item-price-value bad">{{ Math.floor((sell.item.maxCoeficient * selectedItem.item.price)) }}</span> )
+                      </span>
                     </div>
                     <div class="best-trade-trader-condition" *ngIf="sell.conditionSell != allwaysCondition">
                       <div *ngFor="let cond of sell.conditionsSell">
@@ -171,6 +176,11 @@
                   <div class="best-sell-item-info">
                     <div class="best-trade-trader-name">
                       {{buy.traderName | translate}}
+                      <span *ngIf="buy.item.maxCoeficient != buy.item.minCoeficient">(
+                        <span class="best-sell-item-price-value good">{{ Math.floor(buy.item.minCoeficient * selectedItem.item.price) }}</span> -
+                        <span class="best-sell-item-price-value">{{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) / 2) * selectedItem.item.price) }}</span> -
+                        <span class="best-sell-item-price-value bad">{{ Math.floor((buy.item.maxCoeficient * selectedItem.item.price)) }}</span> )
+                      </span>
                     </div>
                     <div class="best-trade-trader-condition" *ngIf="buy.conditionsSell">
                       <div *ngFor="let cond of buy.conditionsSell">

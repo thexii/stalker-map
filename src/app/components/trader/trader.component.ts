@@ -432,7 +432,16 @@ export class TraderComponent {
                         }))
                     ).flat(2))
                 );
+
+                if (bestAssortement.conditionsSell.length > 0) {
+                  bestAssortement.conditionSupply = bestAssortement.conditionSupply.filter(
+                    x => {
+                      return !bestAssortement.conditionsSell.includes(x);
+                    }
+                  )
+                }
               }
+
 
               bestSell.push(bestAssortement);
           }
@@ -441,11 +450,29 @@ export class TraderComponent {
         if (uniqueSellCoefs.length == 1) {
           if (trader.sell.length == traderSell.length) {
             traderSell[0].conditionSell = this.allwaysCondition;
+
+            if (traderSell[0].conditionsSell?.length > 0 && traderSell[0].conditionSupply?.length > 0) {
+              traderSell[0].conditionSupply = traderSell[0].conditionSupply.filter(
+                x => {
+                  return !traderSell[0].conditionsSell.includes(x);
+                }
+              )
+            }
+
             bestSell.push(traderSell[0]);
           }
           else {
             traderSell[0].conditionSell = '';
             traderSell[0].conditionSupply = [''];
+
+            if (traderSell[0].conditionsSell?.length > 0 && traderSell[0].conditionSupply?.length > 0) {
+              traderSell[0].conditionSupply = traderSell[0].conditionSupply.filter(
+                x => {
+                  return !traderSell[0].conditionsSell.includes(x);
+                }
+              )
+            }
+
             bestSell.push(traderSell[0]);
           }
         }
@@ -456,6 +483,18 @@ export class TraderComponent {
             }
             else if (newSelectedItem.sell == null) {
               newSelectedItem.traderHasNoSellItemInSection = true;
+            }
+          }
+
+          if (traderSell.length > 0) {
+            for (let bestAssortement of traderSell) {
+              if (bestAssortement.conditionsSell.length > 0) {
+                bestAssortement.conditionSupply = bestAssortement.conditionSupply.filter(
+                  x => {
+                    return !bestAssortement.conditionsSell.includes(x);
+                  }
+                )
+              }
             }
           }
 
@@ -474,11 +513,6 @@ export class TraderComponent {
             bestAssortement.conditionSell = buy.sectionConditions;
             bestAssortement.conditionsSell = buy.sectionConditions.split(' ');
             bestAssortement.traderName = trader.profile.name;
-            /*bestAssortement.conditionSupply = [];
-
-            if (sameBuyCoeffSupply.length != trader.supplies.length) {
-              bestAssortement.conditionSupply.push(...sameBuyCoeffSupply.map(x => x.conditionSupply.map(x => x.trim())).flat(1));
-            }*/
 
             bestBuy.push(bestAssortement);
         }
@@ -558,6 +592,10 @@ export class TraderComponent {
     }
 
     this.selectedItem = newSelectedItem;
+  }
+
+  private onlyUnique(value: any, index: any, array: any[]): boolean {
+    return array.indexOf(value) === index;
   }
 
   private recalculateSection(): void {
