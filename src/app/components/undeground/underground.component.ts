@@ -226,10 +226,6 @@ export class UndergroundComponent {
 
         this.addStalkers();
 
-        //this.addLevelChangers();
-
-        let layersToHide = [];
-
         if (
             this.mapConfig.markersConfig != null &&
             this.mapConfig.markersConfig.length > 0 &&
@@ -242,10 +238,7 @@ export class UndergroundComponent {
                             (D) => D.name == config.uniqueName)[0];
                     newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
 
-                    if (!config.isShow) {
-                        layersToHide.push(currentLayer);
-                    }
-                    else {
+                    if (config.isShow) {
                       currentLayer.addTo(this.map);
                     }
                 }
@@ -254,7 +247,7 @@ export class UndergroundComponent {
             this.layers = newLayers;
         }
 
-        let layerControl = L.control.layers(null, this.layers)
+        let layerControl = L.control.customLayers(null, this.layers)
         layerControl.isUnderground = true;
         layerControl.searchName = "underground";
         layerControl.addTo(this.map);

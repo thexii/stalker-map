@@ -1447,7 +1447,11 @@ export class MapComponent {
 
         for (let artefactsSection of artefactsSections) {
           for (let art of artefactsSection) {
-            searchFields.push(art);
+            let item = this.items.find(x => x.uniqueName == art);
+
+            if (item) {
+              searchFields.push(item.localeName);
+            }
           }
         }
 
@@ -1520,7 +1524,7 @@ export class MapComponent {
     }
 
     try {
-      this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
+      this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName, true);
 
       if (anomaliesNoArt.length > 0) {
         this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
