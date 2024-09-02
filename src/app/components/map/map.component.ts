@@ -520,7 +520,7 @@ export class MapComponent {
         addRuler = true;
       }
 
-      layerControl = L.control.layers(null, this.layers);
+      layerControl = L.control.customLayers(null, this.layers, {overlaysListTop: this.overlaysListTop});
       layerControl.searchName = "layerControl";
       layerControl.isUnderground = false;
       layerControl.addTo(this.map)
@@ -551,7 +551,23 @@ export class MapComponent {
     .addTo(this.map);
 
     if (this.overlaysListTop) {
-      let carousel = document.getElementById('layers-control')as HTMLElement;
+      let carousel = document.getElementById(this.overlaysListTop)as HTMLElement;
+
+      if (carousel.scrollWidth > carousel.clientWidth) {
+        let arrows: any = document.getElementsByClassName('sub-header-panel-scroll');
+
+        for (let arrow of arrows) {
+          arrow.style.display = 'block';
+        }
+
+        arrows[0].addEventListener('click', function (e: any) {
+          carousel.scrollLeft -= 100
+        });
+
+        arrows[1].addEventListener('click', function (e: any) {
+          carousel.scrollLeft += 100
+        });
+      }
 
       carousel.addEventListener('wheel', function (e) {
           if (e.deltaY > 0)
@@ -2109,7 +2125,8 @@ export class MapComponent {
                 var polyline = L.polyline(latlngs, {color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : null});
 
                 if (color == 'blue') {
-                  polyline.arrowheads({size: '20px', fill: true, proportionalToTotal: false})
+                  polyline.arrowheads({size: '20px', fill: true, proportionalToTotal: false});
+                  polyline.bringToFront();
                 }
 
                 smartTerrainPaths.push(polyline);
