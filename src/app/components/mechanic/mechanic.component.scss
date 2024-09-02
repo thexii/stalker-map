@@ -23,6 +23,7 @@ $cell: 50px;
   margin-left: 1rem;
   width: calc(($trader-columns + 1 ) * $cell);
   min-width: calc(($trader-columns + 1 ) * $cell);
+  max-height: var(--wrapper-height);
 }
 
 .sections-select-container {

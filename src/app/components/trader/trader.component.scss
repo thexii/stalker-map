@@ -7,6 +7,7 @@ $cell: 50px;
   color: white;
   flex-direction: row;
   height: 800px;
+  max-height: var(--wrapper-height);
 }
 
 .trader-info {
@@ -189,4 +190,20 @@ $cell: 50px;
 
 .best-sell-container,.best-buy-container {
   margin-left: 1rem;
+}
+
+.best-sell-item-price-value {
+  color: yellow;
+}
+
+.good {
+  color: green;
+}
+
+.bad {
+  color: red;
+}
+
+.best-sell-title {
+  border-bottom: 3px solid white;
 }
