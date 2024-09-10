@@ -1,0 +1,41 @@
+.content-container {
+  color: white;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-item {
+  border: 11px solid !important;
+  border-image: url(/assets/images/svg/interface/map-info-solid.svg) 11 stretch stretch !important;
+  border-image-slice: 11 fill !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  display: inline-block;
+  margin-top: 1rem;
+  width: 350px;
+  margin-inline: 0.5rem;
+}
+
+.item-title {
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.item-desc {
+  text-align: justify;
+}
+
+.inventory-container {
+  display: flex;
+  justify-content: center;
+  margin-block: 1rem;
+}
+
+.item-location-name {
+  font-size: 0.8rem;
+}

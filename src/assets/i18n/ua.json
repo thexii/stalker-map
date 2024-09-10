@@ -260,5 +260,11 @@
     "gar_stalker_evening_trader": "Вечірній торговець з Барахолки",
     "gar_stalker_night_trader": "Нічний торговець з Барахолки",
     "gar_quest_liberate_conc_camp_done": "Звільнити сталкерів з концтабору бандитів",
-    "red_forest_underground_trader": "Торговець в казармі в шахтах"
+    "red_forest_underground_trader": "Торговець в казармі в шахтах",
+
+    "synonyms": {
+      "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
+      "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
+      "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"]
+    }
 }

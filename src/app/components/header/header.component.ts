@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,11 +19,30 @@ export class HeaderComponent {
 
   private languageChanged: boolean = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    protected route: ActivatedRoute) {
 
   }
 
   public ngOnInit(): void {
+    this.translate.onLangChange.subscribe(i=>{
+      this.selectedLanguage = i.lang;
+      localStorage.removeItem(this.lastLanguageCacheKeyString);
+      localStorage.setItem(this.lastLanguageCacheKeyString, i.lang);
+
+      if (this.languageChanged) {
+        window.location.reload();
+        this.languageChanged = false;
+      }
+    });
+
+    this.route.queryParams.subscribe((h: any) => {
+      if (h.lang != null && this.avaliableLanguages.includes(h.lang)) {
+        this.selectedLanguage = h.lang;
+        this.translate.use(h.lang);
+      }
+      else {
         let lastLanguage = localStorage.getItem(this.lastLanguageCacheKeyString);
         this.translate.setDefaultLang(this.defaultLocale);
 
@@ -34,17 +54,22 @@ export class HeaderComponent {
           this.translate.use(this.defaultLocale);
           this.translate.currentLang = this.defaultLocale;
         }
+      }
+    });
+  }
 
-        this.translate.onLangChange.subscribe(i=>{
-          this.selectedLanguage = i.lang;
-          localStorage.removeItem(this.lastLanguageCacheKeyString);
-          localStorage.setItem(this.lastLanguageCacheKeyString, i.lang);
+  private createLanguager(): void {
+    let output = '';
 
-          if (this.languageChanged) {
-            window.location.reload();
-            this.languageChanged = false;
-          }
-        });
+    for (let lang of this.avaliableLanguages) {
+      output +=
+	  `<xhtml:link
+    rel="alternate"
+    hreflang="${lang}"
+    href="https://stalker-map.online/map/hoc?lang=${lang}"/>\n`;
+    }
+
+    console.log(output);
   }
 
 
