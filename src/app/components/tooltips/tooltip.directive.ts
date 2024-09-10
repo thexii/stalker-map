@@ -49,15 +49,14 @@ export class TooltipDirective {
       this.componentRef.location.nativeElement.style.left = (event.clientX - toolTipWidth - this.tooltipPadding ) + 'px';
     }
 
-    if (event.clientY + toolTipHeight + this.windowMargin < document.body.clientHeight) {
-      this.componentRef.location.nativeElement.style.top = event.clientY + 'px';
+    if (event.clientY + toolTipHeight + this.windowMargin < window.innerHeight) {
+      this.componentRef.location.nativeElement.style.top = window.scrollY + event.clientY + 'px';
     }
     else {
-      this.componentRef.location.nativeElement.style.top = event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
+      this.componentRef.location.nativeElement.style.top = window.scrollY + event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
     }
 
     this.componentRef.location.nativeElement.classList.add("tooltip-show");
-    //this.componentRef.location.nativeElement.style.display = 'block';
   }
 
   private createTooltip(): void {

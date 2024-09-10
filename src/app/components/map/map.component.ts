@@ -34,7 +34,7 @@ import { MarkerToSearch } from '../../models/marker-to-search.model';
 import { Mechanic } from '../../models/mechanic.model';
 import { MechanicComponent } from '../mechanic/mechanic.component';
 import { ItemUpgrade } from '../../models/upgrades/upgrades';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 declare const L: any;
 declare var markWidth: number;
@@ -60,14 +60,14 @@ export class MapComponent {
   public svgMarker: any;
   public canvasRenderer: any;
 
-  protected readonly avaliableGames: string[] = [
+  public static readonly avaliableGames: string[] = [
     'shoc',
     'cs',
     'cop',
     's2_2011',
     'hoc',
   ];
-  protected readonly defaultGame: string = 'shoc';
+  public static readonly defaultGame: string = 'shoc';
 
   protected gamedata: Map;
   protected map: any;
@@ -91,14 +91,14 @@ export class MapComponent {
     protected translate: TranslateService,
     protected route: ActivatedRoute,
     protected resolver: ComponentFactoryResolver,
-    protected titleService:Title
-  ) {
+    protected titleService:Title,
+    protected meta: Meta) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
-    if (this.avaliableGames.includes(urlGame)) {
+    if (MapComponent.avaliableGames.includes(urlGame)) {
       this.game = urlGame;
     } else {
-      this.game = this.defaultGame;
+      this.game = MapComponent.defaultGame;
     }
   }
 
@@ -206,6 +206,13 @@ export class MapComponent {
         `${wrapperHeight}px`
       );
     }
+
+    this.configureSeo();
+  }
+
+  private configureSeo(): void {
+    this.meta.addTag({ name: 'description', content: `stalker ${this.translate.instant(`${this.game}MapPageTitle`)}`})
+    this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
   }
 
   private async loadItems(): Promise<void> {
@@ -263,7 +270,6 @@ export class MapComponent {
           });
         }
       })
-
   }
 
   private async ngOnDestroy(): Promise<void> {
@@ -295,7 +301,7 @@ export class MapComponent {
         [this.gamedata.heightInPixels, this.gamedata.widthInPixels],
     ];
     L.imageOverlay(`/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
-    this.map.fitBounds(bounds);
+    //this.map.fitBounds(bounds);
 
     markWidth = 3 * Math.pow(2, this.map.getZoom());
     document.documentElement.style.setProperty(
@@ -528,8 +534,6 @@ export class MapComponent {
       if (addRuler) {
         ruler = this.addRuler();
       }
-
-      this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
     });
 
     this.searchContoller.on(
@@ -582,7 +586,6 @@ export class MapComponent {
         game: this.gamedata.uniqueName,
         language: this.translate.currentLang,
     });
-    this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
 
     this.route.queryParams.subscribe((h: any) => {
         if (h.lat != null && h.lng != null) {
@@ -607,7 +610,7 @@ export class MapComponent {
           else {
             if (
                 (this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
-                        animate: !0,
+                        animate: false,
                         duration: 0.3,
                     }),
                     h.type)) {
@@ -1086,13 +1089,22 @@ export class MapComponent {
                 }
 
                 if (stuff.properties.description) {
-                localesToFind.push(stuff.properties.stuff.description);
+                  localesToFind.push(stuff.properties.stuff.description);
                 }
 
                 if (stuff.properties.stuff.items?.length > 0) {
-                    localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
-                        return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
-                    } ));
+                    let itemsToFind: any[] = [];
+
+                    stuff.properties.stuff.items.forEach((element: any) => {
+                      let item = this.items.find(y => y.uniqueName == element.uniqueName);
+
+                      if (item) {
+                        itemsToFind.push(item?.localeName);
+                        itemsToFind.push(`synonyms.${item?.uniqueName}`);
+                      }
+                    });
+
+                    localesToFind.push(...itemsToFind);
                 }
 
                 stuff.feature = {};

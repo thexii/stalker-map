@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="content-container" *ngIf="display">
+  <div class="content category" *ngIf="stuffs">
+    <div class="content-item stuff" *ngFor="let stuff of stuffs; index as i" id="stuff-{{i}}">
+      <div class="item-info-text">
+        <a class="item-title stalker-search-item {{stuffTypes[stuff.typeId]}}" href="{{stuff.link}}">
+          {{ stuff.name | translate}} ({{ stuff.locaton | translate}})
+        </a>
+        <!--<div class="item-location-name">
+          {{ stuff.locaton | translate}}
+        </div>-->
+        <div class="item-desc" *ngIf="stuff.description">
+          {{ stuff.description | translate}}
+        </div>
+      </div>
+      <div class="inventory-container">
+        <div class="inventory inventory-columns-6">
+          <ng-container *ngFor="let stuffItem of stuff.items">
+            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+              <div class="item-additional-info">
+                <div *ngIf="stuffItem.count > 1" class="inventory-item-count">x{{stuffItem.count}}</div>
+                <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
+              </div>
+              <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+                <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+                <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="summary-price">
+        {{ 'nominal-price' | translate:{price: stuff.summaryPrice} }}
+      </div>
+    </div>
+  </div>
+</div>
