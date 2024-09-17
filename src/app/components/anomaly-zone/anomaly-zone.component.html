@@ -39,11 +39,6 @@ anomalZone.anomaliySpawnSections.length > 0
   <div class="button url-button" (click)="copyLink()">
     <span>Mark link</span>
   </div>
-  <!--<div class="button url-button" (click)="unHideMarker()" *ngIf="isMarkerHidden">
-    <span>Unhide marker</span>
-  </div>
-  <div class="button url-button" (click)="hideMarker()" *ngIf="!isMarkerHidden">
-    <span>Hide marker</span>
-  </div>-->
+  <app-hide-unhide [marker]="hiddenMarker.anomalZone(anomalZone)"></app-hide-unhide>
 </div>
 

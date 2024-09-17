@@ -3,6 +3,7 @@ import { MapComponent } from '../map/map.component';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { MapService } from '../../services/map.service';
 
 @Component({
   selector: 'app-map-export',
@@ -23,6 +24,7 @@ export class MapExportComponent extends MapComponent {
     protected override route: ActivatedRoute,
     protected override resolver: ComponentFactoryResolver,
     protected override titleService:Title,
+    protected override mapService: MapService,
     protected override meta: Meta
   ) {
     super(
@@ -30,6 +32,7 @@ export class MapExportComponent extends MapComponent {
       route,
       resolver,
       titleService,
+      mapService,
       meta);
 
     this.overlaysListTop = '';

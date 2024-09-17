@@ -1,5 +1,6 @@
 import { AnomalyZone } from "./anomaly-zone";
 import { LootBoxCluster } from "./loot-box/loot-box-cluster.model";
+import { StuffModel } from "./stuff";
 
 export class HiddenMarker {
   public lat: number;
@@ -17,6 +18,16 @@ export class HiddenMarker {
   }
 
   public static lootBox(lootBox: LootBoxCluster): HiddenMarker {
+    let markToHide: HiddenMarker = new HiddenMarker();
+
+    markToHide.lat = lootBox.z;
+    markToHide.lng = lootBox.x;
+    markToHide.type = 'destroyable-box';
+
+    return markToHide;
+  }
+
+  public static stuff(lootBox: StuffModel): HiddenMarker {
     let markToHide: HiddenMarker = new HiddenMarker();
 
     markToHide.lat = lootBox.z;

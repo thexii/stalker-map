@@ -118,7 +118,12 @@
   }
 
   &.level-changers {
-    background: url(/assets/images/svg/marks/level_changers/level_changer_up_right.svg)no-repeat;
+    background: url(/assets/images/svg/marks/level_changers/level_changer_up.svg)no-repeat;
+    background-size: contain
+  }
+
+  &.hidden-markers {
+    background: url(/assets/images/svg/interface/icons/error.svg)no-repeat;
     background-size: contain
   }
 }

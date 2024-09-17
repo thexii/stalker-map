@@ -3,15 +3,15 @@ import { StuffItem, StuffModel } from '../../models/stuff';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgFor, NgIf } from '@angular/common';
 import { Item } from '../../models/item.model';
-import { LootBox } from '../../models/loot-box/loot-box-section.model';
 import { MapService } from '../../services/map.service';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 
 @Component({
   selector: 'app-stuff',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, TooltipDirective],
+  imports: [TranslateModule, NgFor, NgIf, TooltipDirective, HideUnhideComponent],
   templateUrl: './stuff.component.html',
   styleUrl: './stuff.component.scss'
 })
@@ -92,5 +92,13 @@ export class StuffComponent {
   public copyLink(): void {
     let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
+  }
+
+  public hide(): void {
+
+  }
+
+  public unhide(): void {
+
   }
 }

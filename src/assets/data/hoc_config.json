@@ -55,6 +55,10 @@
     {
       "uniqueName": "anomaly-zone-no-art",
       "isShow": false
+    },
+    {
+      "uniqueName": "hidden-markers",
+      "isShow": false
     }
   ],
   "minZoom": 0,
