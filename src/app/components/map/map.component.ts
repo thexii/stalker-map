@@ -35,6 +35,8 @@ import { Mechanic } from '../../models/mechanic.model';
 import { MechanicComponent } from '../mechanic/mechanic.component';
 import { ItemUpgrade } from '../../models/upgrades/upgrades';
 import { Meta, Title } from '@angular/platform-browser';
+import { MapService } from '../../services/map.service';
+import { HiddenMarker } from '../../models/hidden-marker.model';
 
 declare const L: any;
 declare var markWidth: number;
@@ -73,7 +75,7 @@ export class MapComponent {
   protected map: any;
   protected locations: any;
   protected canvasLayer: any;
-  protected layers: any[] = [];
+  protected layers: any = {};
   protected items: Item[];
   protected lootBoxConfig: LootBoxConfig;
   protected upgrades: ItemUpgrade[];
@@ -86,12 +88,15 @@ export class MapComponent {
 
   protected openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
   protected overlaysListTop: string = 'layers-control';
+  protected readonly hiddenLayerName: string = 'hidden-markers';
+  protected readonly hiddenMarkerOpacity: number = .5;
 
   constructor(
     protected translate: TranslateService,
     protected route: ActivatedRoute,
     protected resolver: ComponentFactoryResolver,
     protected titleService:Title,
+    protected mapService: MapService,
     protected meta: Meta) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
@@ -113,6 +118,19 @@ export class MapComponent {
         this.map.removeLayer(o);
       }
     }
+  }
+
+  public hideMarker(markerToHide: HiddenMarker): void {
+    console.log(markerToHide);
+
+    this.map.eachLayer(function(layer: any){
+      if (layer.properties?.typeUniqueName == markerToHide.type) {
+        if (layer._latlng.lat == markerToHide.lat && layer._latlng.lng == markerToHide.lng) {
+          console.log(layer);
+          layer.remove();
+        }
+      }
+  })
   }
 
   @HostListener('window:resize', ['$event'])
@@ -294,6 +312,8 @@ export class MapComponent {
         zoomControl: !1
     });
 
+    this.mapService.setMapComponent(this);
+
     this.createCustomLayersControl();
 
     let bounds = [
@@ -317,6 +337,8 @@ export class MapComponent {
 
     this.svgMarker = this.setCanvasMarkers();
 
+    let markersToHide: any[] = [];
+
     if (this.gamedata.locations && this.gamedata.locations.length > 0) {
         this.addLocations();
     }
@@ -326,7 +348,11 @@ export class MapComponent {
     }
 
     if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
-        this.addStuffs();
+      let hiddenstuffs = this.addStuffs();
+
+      if (hiddenstuffs.length > 0) {
+        markersToHide.push(...hiddenstuffs);
+      }
     }
 
     if (this.gamedata.lootBoxes && this.gamedata.lootBoxes.length > 0) {
@@ -334,7 +360,11 @@ export class MapComponent {
     }
 
     if (this.gamedata.anomalyZones && this.gamedata.anomalyZones.length > 0) {
-        this.addAnomalyZones();
+        let hiddenAnomalies = this.addAnomalyZones();
+
+        if (hiddenAnomalies.length > 0) {
+          markersToHide.push(...hiddenAnomalies);
+        }
     }
 
     if (this.gamedata.traders && this.gamedata.traders.length > 0) {
@@ -365,6 +395,10 @@ export class MapComponent {
         this.addRoads();
     }
 
+    if (markersToHide.length > 0) {
+      this.addHiddenMarkers(markersToHide);
+    }
+
     if (
         gameConfig.markersConfig != null &&
         gameConfig.markersConfig.length > 0 &&
@@ -372,9 +406,9 @@ export class MapComponent {
         let allLayers = Object.values(this.layers);
         let newLayers: any = {};
         for (let config of gameConfig.markersConfig) {
-            if (allLayers.some((y) => y.name == config.uniqueName)) {
-                let currentLayer = allLayers.filter(
-                        (D) => D.name == config.uniqueName)[0];
+            if (allLayers.some((y: any) => y.name == config.uniqueName)) {
+                let currentLayer: any = allLayers.filter(
+                        (D: any) => D.name == config.uniqueName)[0];
                 newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
 
                 if (config.isShow) {
@@ -513,7 +547,7 @@ export class MapComponent {
       let newLayers: any = {};
 
       for (let layer of Object.values(this.layers)) {
-        newLayers[this.translate.instant(layer.name)] = layer;
+        newLayers[this.translate.instant((layer as any).name)] = layer;
       }
 
       this.layers = newLayers;
@@ -977,6 +1011,8 @@ export class MapComponent {
         }
 
         try {
+          this._ctx.globalAlpha = layer.options.opacity;
+
           this._ctx.drawImage(
             layer.options.icon._image,
             layer._point.x - layer.options.icon.shiftX * markWidth,
@@ -1021,6 +1057,12 @@ export class MapComponent {
       {
         _updatePath: function() {
           this._renderer._updateSvgMarker(this);
+        },
+        setOpacity: function(opacity: number) {
+          this.setStyle({
+              opacity: opacity,
+              fillOpacity: opacity
+          })
         }
       }
     )
@@ -1051,8 +1093,9 @@ export class MapComponent {
     this.locations.addTo(this.map);
   }
 
-  private addStuffs() {
+  private addStuffs(): any[] {
     let stuffTypes = this.getStuffTypes();
+    let markersToHide: any[] = [];
 
     this.gamedata.stuffs = this.gamedata.stuffs.sort(
       (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
@@ -1061,7 +1104,10 @@ export class MapComponent {
     let ignoredNames: string[] = ['stuff_at_location'];
     let index = 0;
 
+    console.log(this.mapService.getAllHiddenMarkers())
     for (let markType of stuffTypes) {
+      let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.type == markType.uniqueName);
+      console.log(hiddenMarkers)
       let stuffsAtLocation = this.gamedata.stuffs.filter(
         (u: { typeId: number }) => u.typeId == markType.id
       );
@@ -1194,12 +1240,22 @@ export class MapComponent {
           });
           stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup();
 
-          markers.push(stuff);
+
+
+          if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
+            markersToHide.push(stuff);
+          }
+          else {
+            markers.push(stuff);
+          }
+
         }
 
         this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
+
+    return markersToHide;
   }
 
   private addLootBoxes() {
@@ -1403,13 +1459,19 @@ export class MapComponent {
     }
   }
 
-  private addAnomalyZones() {
+  private addAnomalyZones(): any[] {
     let anomalyZoneIcon, anomalyZoneNoArtIcon;
     [anomalyZoneIcon, anomalyZoneNoArtIcon] = this.getAnomaliesIcons();
 
     let anomalies: any[] = [];
     let anomaliesNoArt: any[] = [];
     let artefactWays: any[] = [];
+
+    const defaultType: string = 'anomaly-zone';
+
+    let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.type == defaultType);
+
+    let markersToHide: any[] = [];
 
     for (let zone of this.gamedata.anomalyZones) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == zone.locationId) as Location;
@@ -1420,8 +1482,6 @@ export class MapComponent {
 
       let dx: number = location.x2 - location.x1;
       let dy: number = location.y1 - location.y2;
-
-      const defaultType: string = 'anomaly-zone';
 
       let canvasMarker;
 
@@ -1520,7 +1580,12 @@ export class MapComponent {
             }
         }
 
-        anomalies.push(canvasMarker);
+        if (hiddenMarkers.some(x => x.lat == zone.z && x.lng == zone.x)) {
+          markersToHide.push(canvasMarker);
+        }
+        else {
+          anomalies.push(canvasMarker);
+        }
 
         let locationFromL = this.locations.locations.find(
           (x: { id: any }) => x.id == zone.locationId
@@ -1564,6 +1629,8 @@ export class MapComponent {
     } catch (e) {
       console.log(e);
     }
+
+    return markersToHide;
   }
 
   private createProperty(
@@ -2323,6 +2390,20 @@ export class MapComponent {
     }
 
     this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
+  }
+
+  private addHiddenMarkers(markersToHide: any[]): void {
+    let hiddenLayer = L.layerGroup(markersToHide);
+
+    hiddenLayer.onAdd = function(map: any) {
+      L.LayerGroup.prototype.onAdd.call(this, map);
+
+      this.eachLayer(function(layer: any) {
+        layer.setOpacity(0.5);
+      });
+    }
+
+    this.addLayerToMap(hiddenLayer, this.hiddenLayerName);
   }
 
   private addRoads() {

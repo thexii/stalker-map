@@ -9,11 +9,12 @@ import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
+import { HideUnhideComponent } from '../hide-unhide/hide-unhide.component';
 
 @Component({
   selector: 'app-anomaly-zone',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, KeyValuePipe, TooltipDirective],
+  imports: [TranslateModule, NgFor, NgIf, KeyValuePipe, TooltipDirective, HideUnhideComponent],
   templateUrl: './anomaly-zone.component.html',
   styleUrl: './anomaly-zone.component.scss'
 })
@@ -24,6 +25,7 @@ export class AnomalyZoneComponent {
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
   public itemTooltipComponent: any = ItemTooltipComponent;
+  public hiddenMarker: any = HiddenMarker;
 
   public Math: Math = Math;
 
@@ -31,11 +33,9 @@ export class AnomalyZoneComponent {
   public anomalies: {anomaly: string, count: number}[];
   public isMarkerHidden: boolean = false;
 
-  constructor(private mapService: MapService) { }
+  constructor() { }
 
   private async ngOnInit(): Promise<void> {
-    this.isMarkerHidden = this.mapService.isMarkHidden(HiddenMarker.anomalZone(this.anomalZone))
-
     if (this.anomalZone.anomaliySpawnSections?.length > 0) {
       this.spawnSections = [];
 
@@ -64,16 +64,6 @@ export class AnomalyZoneComponent {
         this.anomalies.push({anomaly: anomaly, count: this.anomalZone.anomalies[anomaly] as number});
       }
     }
-  }
-
-  public hideMarker(): void {
-    this.mapService.hideMark(HiddenMarker.anomalZone(this.anomalZone));
-    this.isMarkerHidden = true;
-  }
-
-  public unHideMarker(): void {
-    this.mapService.unhideMark(HiddenMarker.anomalZone(this.anomalZone));
-    this.isMarkerHidden = false;
   }
 
   public copyLink(): void {
