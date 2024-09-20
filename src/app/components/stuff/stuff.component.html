@@ -32,7 +32,7 @@
 </div>-->
 <div class="bottom">
   <div class="button url-button" (click)="copyLink()">
-    <span>Mark link</span>
+    <span>{{ 'markLink' | translate}}</span>
   </div>
-  <app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, type: stuffType}"></app-hide-unhide>
+  <app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game, isUnderground: isUnderground}"></app-hide-unhide>
 </div>

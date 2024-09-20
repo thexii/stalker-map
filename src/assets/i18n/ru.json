@@ -260,5 +260,9 @@
   "gar_stalker_evening_trader": "Вечерний торговец с Барахолки",
   "gar_stalker_night_trader": "Ночной торговец с Барахолки",
   "gar_quest_liberate_conc_camp_done": "Освободить сталкеров с концлагеря бандитов",
-  "red_forest_underground_trader": "Торговец в казарме в шахтах"
+  "red_forest_underground_trader": "Торговец в казарме в шахтах",
+
+  "hide-marker": "Скрыть",
+  "unhide-marker": "Показать",
+  "hidden-markers": "Скрытые метки"
 }

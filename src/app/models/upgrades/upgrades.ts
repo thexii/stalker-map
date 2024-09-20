@@ -47,3 +47,10 @@ export class UpgradeSectionColumn {
 export class UpgradeSectionRow {
   public upgradeRow: Upgrade[];
 }
+
+export class UpgradeProperty {
+  public name: string;
+  public localeName: string;
+  public icon: string;
+  public params: string[];
+}

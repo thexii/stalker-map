@@ -388,3 +388,331 @@ app-item-tooltip, app-upgrade-tooltip {
 .custom-scroll::-webkit-scrollbar {
   border: 1px solid white;
 }
+
+.upgrade-property-icon {
+  margin-right: 0.25rem;
+  width: 19px;
+  height: 19px;
+
+  &.cs {
+    background-image: url(/assets/images/mechanic/ui_ingame2_common.png);
+
+    &.ui_wp_propery_01 {
+      background-position-x: -78px;
+      background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_02 {
+      background-position-x: -78px;
+      background-position-y: -543px;
+    }
+
+    &.ui_wp_propery_03 {
+      background-position-x: -78px;
+      background-position-y: -562px;
+    }
+
+    &.ui_wp_propery_04 {
+      background-position-x: -78px;
+      background-position-y: -581px;
+    }
+
+    &.ui_wp_propery_05 {
+      background-position-x: -78px;
+      background-position-y: -600px;
+    }
+
+
+    &.ui_wp_propery_06 {
+      background-position-x: -97px;
+      background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_07 {
+      background-position-x: -97px;
+      background-position-y: -543px;
+    }
+
+    &.ui_wp_propery_08 {
+      background-position-x: -97px;
+      background-position-y: -562px;
+    }
+
+    &.ui_wp_propery_09 {
+      background-position-x: -97px;
+      background-position-y: -581px;
+    }
+
+    &.ui_wp_propery_10 {
+      background-position-x: -97px;
+      background-position-y: -600px;
+    }
+
+
+    &.ui_wp_propery_11 {
+      background-position-x: -116px;
+      background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_12 {
+      background-position-x: -116px;
+      background-position-y: -543px;
+    }
+
+    &.ui_wp_propery_13 {
+      background-position-x: -116px;
+      background-position-y: -562px;
+    }
+
+    &.ui_wp_propery_14 {
+      background-position-x: -116px;
+      background-position-y: -581px;
+    }
+
+
+
+    &.ui_am_propery_01 {
+      background-position-x: -135px;
+      background-position-y: -524px;
+    }
+
+    &.ui_am_propery_02 {
+      background-position-x: -135px;
+      background-position-y: -543px;
+    }
+
+    &.ui_am_propery_03 {
+      background-position-x: -135px;
+      background-position-y: -562px;
+    }
+
+    &.ui_am_propery_04 {
+      background-position-x: -135px;
+      background-position-y: -581px;
+    }
+
+    &.ui_am_propery_05 {
+      background-position-x: -135px;
+      background-position-y: -600px;
+    }
+
+
+    &.ui_am_propery_06 {
+      background-position-x: -154px;
+      background-position-y: -524px;
+    }
+
+    &.ui_am_propery_07 {
+      background-position-x: -154px;
+      background-position-y: -543px;
+    }
+
+    &.ui_am_propery_08 {
+      background-position-x: -154px;
+      background-position-y: -562px;
+    }
+
+    &.ui_am_propery_09 {
+      background-position-x: -154px;
+      background-position-y: -581px;
+    }
+
+    &.ui_am_propery_10 {
+      background-position-x: -154px;
+      background-position-y: -600px;
+    }
+
+
+    &.ui_am_propery_11 {
+      background-position-x: -173px;
+      background-position-y: -524px;
+    }
+
+  }
+
+  &.cop {
+    background-image: url(/assets/images/mechanic/cop/ui_actor_sleep_screen.png);
+
+    &.ui_wp_prop_scope_1\.5x {
+      background-position-x: -730px;
+      background-position-y: -510px;
+    }
+
+    &.ui_wp_prop_autolockscope {
+      background-position-x: -692px;
+      background-position-y: -528px;
+    }
+
+    &.ui_wp_prop_scope_6x {
+      background-position-x: -711px;
+      background-position-y: -528px;
+    }
+
+    &.ui_wp_prop_scope_5x {
+      background-position-x: -730px;
+      background-position-y: -528px;
+    }
+
+    &.ui_wp_prop_scope_attach {
+      background-position-x: -692px;
+      background-position-y: -548px;
+    }
+
+    &.ui_wp_prop_scope {
+      background-position-x: -711px;
+      background-position-y: -548px;
+    }
+
+    &.ui_wp_prop_contrast {
+      background-position-x: -730px;
+      background-position-y: -547px;
+    }
+
+    &.ui_wp_prop_nightvision {
+      background-position-x: -692px;
+      background-position-y: -566px;
+    }
+
+    &.ui_wp_prop_autofire {
+      background-position-x: -711px;
+      background-position-y: -567px;
+    }
+
+    &.ui_wp_prop_3xfire {
+      background-position-x: -730px;
+      background-position-y: -567px;
+    }
+
+    &.ui_wp_prop_skorostrelnost {
+      background-position-x: -673px;
+      background-position-y: -433px;
+    }
+
+    &.ui_wp_prop_otdacha {
+      background-position-x: -673px;
+      background-position-y: -452px;
+    }
+
+    &.ui_wp_prop_nadezhnost {
+      background-position-x: -673px;
+      background-position-y: -471px;
+    }
+
+    &.ui_wp_prop_ergonomics {
+      background-position-x: -673px;
+      background-position-y: -490px;
+    }
+
+    &.ui_wp_prop_nastilnost {
+      background-position-x: -673px;
+      background-position-y: -509px;
+    }
+
+    &.ui_wp_prop_tochnost {
+      background-position-x: -673px;
+      background-position-y: -528px;
+    }
+
+    &.ui_wp_prop_weight {
+      background-position-x: -673px;
+      background-position-y: -547px;
+    }
+
+    &.ui_wp_prop_optics {
+      background-position-x: -673px;
+      background-position-y: -566px;
+    }
+
+    &.ui_wp_prop_damage {
+      background-position-x: -654px;
+      background-position-y: -566px;
+    }
+
+    &.ui_am_prop_radio_restore {
+      background-position-x: -806px;
+      background-position-y: -433px;
+    }
+
+    &.ui_am_prop_chem {
+      background-position-x: -787px;
+      background-position-y: -452px;
+    }
+
+    &.ui_am_prop_restore_bleeding {
+      background-position-x: -749px;
+      background-position-y: -452px;
+    }
+
+    &.ui_am_prop_thermo {
+      background-position-x: -787px;
+      background-position-y: -471px;
+    }
+
+    &.ui_am_prop_autolock {
+      background-position-x: -787px;
+      background-position-y: -490px;
+    }
+
+    &.ui_am_prop_sprint {
+      background-position-x: -787px;
+      background-position-y: -509px;
+    }
+
+    &.ui_am_prop_scanner {
+      background-position-x: -749px;
+      background-position-y: -528px;
+    }
+
+    &.ui_am_prop_night_vision {
+      background-position-x: -768px;
+      background-position-y: -528px;
+    }
+
+    &.ui_am_prop_night_vision_2 {
+      background-position-x: -787px;
+      background-position-y: -528px;
+    }
+
+    &.ui_am_prop_night_vision_3 {
+      background-position-x: -787px;
+      background-position-y: -547px;
+    }
+
+    &.ui_am_prop_electro {
+      background-position-x: -749px;
+      background-position-y: -547px;
+    }
+
+    &.ui_am_prop_artefact {
+      background-position-x: -768px;
+      background-position-y: -547px;
+    }
+
+    &.ui_am_prop_satiety_restore_speed {
+      background-position-x: -768px;
+      background-position-y: -566px;
+    }
+
+    &.ui_am_prop_weightoutfit {
+      background-position-x: -787px;
+      background-position-y: -566px;
+    }
+
+    &.ui_am_prop_damage {
+      background-position-x: -806px;
+      background-position-y: -566px;
+    }
+
+
+    &.ui_am_prop_time_period {
+      background-position-x: -825px;
+      background-position-y: -433px;
+    }
+
+    &.ui_am_prop_Vibros {
+      background-position-x: -806px;
+      background-position-y: -547px;
+    }
+
+  }
+}

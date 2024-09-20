@@ -33,7 +33,7 @@ import { UndergroundComponent } from '../undeground/underground.component';
 import { MarkerToSearch } from '../../models/marker-to-search.model';
 import { Mechanic } from '../../models/mechanic.model';
 import { MechanicComponent } from '../mechanic/mechanic.component';
-import { ItemUpgrade } from '../../models/upgrades/upgrades';
+import { ItemUpgrade, UpgradeProperty } from '../../models/upgrades/upgrades';
 import { Meta, Title } from '@angular/platform-browser';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
@@ -75,20 +75,22 @@ export class MapComponent {
   protected map: any;
   protected locations: any;
   protected canvasLayer: any;
-  protected layers: any = {};
+  protected layers: any[] = [];
   protected items: Item[];
   protected lootBoxConfig: LootBoxConfig;
   protected upgrades: ItemUpgrade[];
+  protected upgradeProperties: UpgradeProperty[];
   protected mapConfig: MapConfig;
   protected svgIcon: any;
   protected searchContoller: any;
+  protected layerContoller: any;
   protected mapInitialized: boolean = false;
   protected markersToSearch: any[] = [];
   public undergroundMarkerToSearch: any[] = [];
 
   protected openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
   protected overlaysListTop: string = 'layers-control';
-  protected readonly hiddenLayerName: string = 'hidden-markers';
+  public static readonly hiddenLayerName: string = 'hidden-markers';
   protected readonly hiddenMarkerOpacity: number = .5;
 
   constructor(
@@ -108,29 +110,68 @@ export class MapComponent {
   }
 
   public showHideAll(n: any = null) {
-    let i = Object.values(this.layers);
     if (n.target.checked) {
-      for (let o of i) {
+      for (let o of this.layers) {
         this.map.addLayer(o);
       }
     } else {
-      for (let o of i) {
+      for (let o of this.layers) {
         this.map.removeLayer(o);
       }
     }
   }
 
   public hideMarker(markerToHide: HiddenMarker): void {
-    console.log(markerToHide);
+    if (markerToHide.isUnderground) {
+      this.openedUndergroundPopup.component.hideMarker(markerToHide);
+    }
+    else {
+      let marker: any;
 
-    this.map.eachLayer(function(layer: any){
-      if (layer.properties?.typeUniqueName == markerToHide.type) {
+      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+      let markerLayer: any = this.layers.find(x => x.name == markerToHide.layerName);
+
+      markerLayer.eachLayer(function(layer: any){
         if (layer._latlng.lat == markerToHide.lat && layer._latlng.lng == markerToHide.lng) {
-          console.log(layer);
-          layer.remove();
+            marker = layer;
         }
+      });
+
+      markerLayer.removeLayer(marker);
+
+      if (this.map.hasLayer(hiddenLayer)) {
+        hiddenLayer.addLayer(marker);
+        marker.setOpacity(0.5);
       }
-  })
+      else {
+        hiddenLayer.addLayer(marker);
+        this.map.removeLayer(marker);
+      }
+    }
+  }
+
+  public unhideMarker(markerShow: HiddenMarker): void {
+    let marker: any;
+
+    let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+    let markerLayer: any = this.layers.find(x => x.name == markerShow.layerName);
+
+    hiddenLayer.eachLayer(function(layer: any){
+      if (layer._latlng.lat == markerShow.lat && layer._latlng.lng == markerShow.lng) {
+          marker = layer;
+      }
+    });
+
+    hiddenLayer.removeLayer(marker);
+
+    if (this.map.hasLayer(markerLayer)) {
+      markerLayer.addLayer(marker);
+      marker.setOpacity(1);
+    }
+    else {
+      markerLayer.addLayer(marker);
+      this.map.removeLayer(marker);
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -183,6 +224,7 @@ export class MapComponent {
       this.loadItems(),
       this.loadLootBoxConfig(),
       this.loadUpgrades(),
+      this.loadUpgradeProperties()
     ]);
 
     this.translate.onLangChange.subscribe((i) => {
@@ -270,6 +312,21 @@ export class MapComponent {
             response.json().then((config: ItemUpgrade[]) => {
               if (config) {
                 this.upgrades = config;
+              }
+            })
+          }
+        });
+    }
+  }
+
+  private async loadUpgradeProperties(): Promise<void> {
+    if (this.game != 'shoc') {
+      await fetch(`/assets/data/${this.game}/upgrade_properties.json`)
+        .then((response) => {
+          if (response.ok) {
+            response.json().then((config: UpgradeProperty[]) => {
+              if (config) {
+                this.upgradeProperties = config;
               }
             })
           }
@@ -395,24 +452,24 @@ export class MapComponent {
         this.addRoads();
     }
 
-    if (markersToHide.length > 0) {
-      this.addHiddenMarkers(markersToHide);
-    }
+    this.addHiddenMarkers(markersToHide);
 
     if (
         gameConfig.markersConfig != null &&
         gameConfig.markersConfig.length > 0 &&
-        this.layers != null) {
-        let allLayers = Object.values(this.layers);
-        let newLayers: any = {};
+        this.layers.length > 0) {
+        let newLayers: any[] = [];
         for (let config of gameConfig.markersConfig) {
-            if (allLayers.some((y: any) => y.name == config.uniqueName)) {
-                let currentLayer: any = allLayers.filter(
-                        (D: any) => D.name == config.uniqueName)[0];
-                newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
+            if (this.layers.some((y: any) => y.name == config.uniqueName)) {
+                let currentLayer: any = this.layers.find(
+                        (D: any) => D.name == config.uniqueName);
 
-                if (config.isShow) {
-                    currentLayer.addTo(this.map);
+                if (currentLayer) {
+                  newLayers.push(currentLayer);
+
+                  if (config.isShow) {
+                      currentLayer.addTo(this.map);
+                  }
                 }
             }
         }
@@ -420,10 +477,11 @@ export class MapComponent {
         this.layers = newLayers;
     }
 
-    let layerControl = L.control.customLayers(null, this.layers, {overlaysListTop: this.overlaysListTop});
-    layerControl.searchName = "layerControl";
-    layerControl.isUnderground = false;
-    layerControl.addTo(this.map)
+    let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
+    this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl), {overlaysListTop: this.overlaysListTop});
+    this.layerContoller.searchName = "layerControl";
+    this.layerContoller.isUnderground = false;
+    this.layerContoller.addTo(this.map)
 
     this.map.on('drag', () => {
         this.map.panInsideBounds(bounds, {
@@ -432,9 +490,6 @@ export class MapComponent {
     });
 
     this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
-
-    let searchLayers = this.reorderSearchingLayers(this.layers);
-    let translate = this.translate;
 
     let printClickCoordinates = false;
 
@@ -461,98 +516,18 @@ export class MapComponent {
         });
     }
 
-    this.searchContoller = L.control.search({
-        layer: searchLayers,
-        initial: false,
-        propertyName: 'search',
-        delayType: 0,
-        collapsed: false,
-        autoCollapseTime: 10000,
-        textPlaceholder: this.translate.instant('search'),
-        buildTip: function (text: string, val: any) {
-            try {
-                let type = val.layer.properties.typeUniqueName;
-                let translated = translate.instant(val.layer.properties.name);
-                let location = translate.instant(
-                        val.layer.properties.locationUniqueName);
-                return (
-                    '<a href="#"><span class="stalker-search-item ' +
-                    type +
-                    '">' +
-                    translated +
-                    '</span> <b>(' +
-                    location +
-                    ')</b></a>');
-            } catch (ex) {
-                console.error(text, val, val.layer.properties);
-                throw ex;
-            }
-        },
-    });
-
-    this.createProperty(
-        this.searchContoller.options,
-        'textPlaceholder',
-        ['search'],
-        this.translate
-    );
-
-    this.searchContoller._handleUndergroundMark = (loc: any, self: any) => {
-      let location = loc.layer.undergroundLocation;
-
-      let levelChangers = this.layers[this.translate.instant('level-changers')];
-      let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.destination == location.uniqueName);
-
-      if (levelChanger) {
-        self._moveToLocation(levelChanger._latlng, '', self._map)
-        levelChanger.properties.markerToSearch = loc;
-        let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
-
-        if (this.openedUndergroundPopup) {
-          if (this.openedUndergroundPopup.component.location.id == destinationLocation.id) {
-            if (levelChanger.properties.markerToSearch) {
-              this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
-              this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
-              this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
-              this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
-              levelChanger.properties.markerToSearch = undefined;
-              this.openedUndergroundPopup.component.goToMarker();
-              return;
-            }
-          }
-          else {
-            this.openedUndergroundPopup.levelChanger.closePopup();
-
-            levelChanger.openPopup();
-          }
-        }
-        else {
-          levelChanger.openPopup();
-        }
-      }
-      else {
-        console.error(`cant find level changer for ${location.uniqueName}`);
-      }
-
-      if (self.options.autoCollapse) { self.collapse() }
-    }
-
     let ruler: any = null;
 
     if (gameConfig.rulerEnabled) {
       ruler = this.addRuler();
     }
 
+    this.createSearchController();
+
     this.translate.onLangChange.subscribe(i=>{
-      let newLayers: any = {};
+      let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
 
-      for (let layer of Object.values(this.layers)) {
-        newLayers[this.translate.instant((layer as any).name)] = layer;
-      }
-
-      this.layers = newLayers;
-
-      layerControl.remove();
+      this.layerContoller.remove();
       let addRuler = false;
 
       if (ruler) {
@@ -560,27 +535,17 @@ export class MapComponent {
         addRuler = true;
       }
 
-      layerControl = L.control.customLayers(null, this.layers, {overlaysListTop: this.overlaysListTop});
-      layerControl.searchName = "layerControl";
-      layerControl.isUnderground = false;
-      layerControl.addTo(this.map)
+      this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl), {overlaysListTop: this.overlaysListTop});
+      this.layerContoller.searchName = "layerControl";
+      this.layerContoller.isUnderground = false;
+      this.layerContoller.addTo(this.map)
 
       if (addRuler) {
         ruler = this.addRuler();
       }
-    });
 
-    this.searchContoller.on(
-        'search:locationfound',
-        function (e: {
-            layer: {
-                openPopup: () => void
-            }
-        }) {
-        e.layer.openPopup();
+      this.createSearchController();
     });
-
-    this.map.addControl(this.searchContoller);
 
     L.control
     .zoom({
@@ -675,6 +640,96 @@ export class MapComponent {
     });
 
     this.mapInitialized = true;
+  }
+
+  private createSearchController(): void {
+    if (this.searchContoller) {
+      this.searchContoller.remove();
+    }
+
+    let searchLayers = this.reorderSearchingLayers(this.layers);
+    let translate = this.translate;
+
+    this.searchContoller = L.control.search({
+        layer: searchLayers,
+        initial: false,
+        propertyName: 'search',
+        delayType: 0,
+        collapsed: false,
+        autoCollapseTime: 10000,
+        textPlaceholder: this.translate.instant('search'),
+        buildTip: function (text: string, val: any) {
+            try {
+                let type = val.layer.properties.typeUniqueName;
+                let translated = translate.instant(val.layer.properties.name);
+                let location = translate.instant(
+                        val.layer.properties.locationUniqueName);
+                return (
+                    '<a href="#"><span class="stalker-search-item ' +
+                    type +
+                    '">' +
+                    translated +
+                    '</span> <b>(' +
+                    location +
+                    ')</b></a>');
+            } catch (ex) {
+                console.error(text, val, val.layer.properties);
+                throw ex;
+            }
+        },
+    });
+
+    this.searchContoller._handleUndergroundMark = (loc: any, self: any) => {
+      let location = loc.layer.undergroundLocation;
+
+      let levelChangers = this.layers.find(x => x.name == 'level-changers');
+      let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.destination == location.uniqueName);
+
+      if (levelChanger) {
+        self._moveToLocation(levelChanger._latlng, '', self._map)
+        levelChanger.properties.markerToSearch = loc;
+        let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+
+        if (this.openedUndergroundPopup) {
+          if (this.openedUndergroundPopup.component.location.id == destinationLocation.id) {
+            if (levelChanger.properties.markerToSearch) {
+              this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
+              this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
+              this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
+              this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
+              levelChanger.properties.markerToSearch = undefined;
+              this.openedUndergroundPopup.component.goToMarker();
+              return;
+            }
+          }
+          else {
+            this.openedUndergroundPopup.levelChanger.closePopup();
+
+            levelChanger.openPopup();
+          }
+        }
+        else {
+          levelChanger.openPopup();
+        }
+      }
+      else {
+        console.error(`cant find level changer for ${location.uniqueName}`);
+      }
+
+      if (self.options.autoCollapse) { self.collapse() }
+    }
+
+    this.searchContoller.on(
+        'search:locationfound',
+        function (e: {
+            layer: {
+                openPopup: () => void
+            }
+        }) {
+        e.layer.openPopup();
+    });
+
+    this.map.addControl(this.searchContoller);
   }
 
   private createCustomLayersControl(): void {
@@ -1104,10 +1159,8 @@ export class MapComponent {
     let ignoredNames: string[] = ['stuff_at_location'];
     let index = 0;
 
-    console.log(this.mapService.getAllHiddenMarkers())
     for (let markType of stuffTypes) {
-      let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.type == markType.uniqueName);
-      console.log(hiddenMarkers)
+      let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == markType.uniqueName);
       let stuffsAtLocation = this.gamedata.stuffs.filter(
         (u: { typeId: number }) => u.typeId == markType.id
       );
@@ -1163,7 +1216,7 @@ export class MapComponent {
 
                 localesToFind.push()
 
-                this.createProperty(
+                this.createTranslatableProperty(
                     stuff.feature.properties,
                     'search',
                     localesToFind,
@@ -1217,7 +1270,7 @@ export class MapComponent {
 
             localesToFind.push()
 
-            this.createProperty(
+            this.createTranslatableProperty(
               stuff.feature.properties,
               'search',
               localesToFind,
@@ -1240,15 +1293,12 @@ export class MapComponent {
           });
           stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup();
 
-
-
           if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
             markersToHide.push(stuff);
           }
           else {
             markers.push(stuff);
           }
-
         }
 
         this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
@@ -1303,7 +1353,7 @@ export class MapComponent {
         localesToFind.push(index.toString());
         index++;
 
-        this.createProperty(
+        this.createTranslatableProperty(
             lootBoxMarker.feature.properties,
             'search',
             localesToFind,
@@ -1351,7 +1401,7 @@ export class MapComponent {
           },
         };
 
-        this.createProperty(
+        this.createTranslatableProperty(
           lootBoxMarker.feature.properties,
           'search',
           p,
@@ -1433,7 +1483,7 @@ export class MapComponent {
               },
             };
 
-            this.createProperty(
+            this.createTranslatableProperty(
               marker.feature.properties,
               'search',
               p,
@@ -1469,7 +1519,7 @@ export class MapComponent {
 
     const defaultType: string = 'anomaly-zone';
 
-    let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.type == defaultType);
+    let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == defaultType);
 
     let markersToHide: any[] = [];
 
@@ -1551,7 +1601,7 @@ export class MapComponent {
           properties: { search: searchFields.join(', ') },
         };*/
         canvasMarker.feature.properties = {};
-        this.createProperty(
+        this.createTranslatableProperty(
           canvasMarker.feature.properties,
           'search',
           searchFields,
@@ -1634,6 +1684,29 @@ export class MapComponent {
   }
 
   private createProperty(
+    object: any,
+    propertyName: string,
+    value: any
+  ): void {
+    Object.defineProperty(object, propertyName, {
+      get: function () {
+        try {
+          return this.value;
+        } catch (ex) {
+          console.error(this.value);
+          throw ex;
+        }
+      },
+      set: function (value) {
+        console.warn(value)
+        this.value = value;
+      },
+    });
+
+    object[propertyName] = value;
+  }
+
+  private createTranslatableProperty(
     object: any,
     propertyName: string,
     array: string[],
@@ -1758,7 +1831,7 @@ export class MapComponent {
       canvasMarker.properties.ableToSearch = false;
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
-      this.createProperty(
+      this.createTranslatableProperty(
         canvasMarker.feature.properties,
         'search',
         [trader.profile.name, trader.isMedic ? medicIcon.uniqueName : traderIcon.uniqueName],
@@ -1821,7 +1894,7 @@ export class MapComponent {
             canvasMarker.feature = {};
             canvasMarker.feature.properties = {};
 
-            this.createProperty(
+            this.createTranslatableProperty(
               canvasMarker.feature.properties,
               'search',
               propertiesToSearch,
@@ -1865,7 +1938,7 @@ export class MapComponent {
         }
       }
 
-      this.createProperty(
+      this.createTranslatableProperty(
         canvasMarker.feature.properties,
         'search',
         propertiesToSearch,
@@ -1936,7 +2009,7 @@ export class MapComponent {
 
       let propertiesToSearch: string[] = [mechanic.profile.name, mechanicIcon.uniqueName];
 
-      this.createProperty(
+      this.createTranslatableProperty(
         canvasMarker.feature.properties,
         'search',
         propertiesToSearch,
@@ -1955,11 +2028,7 @@ export class MapComponent {
         }
       );
 
-      let minWidth = 850;
-
-      if (this.game == 'cop') {
-        minWidth = 1200;
-      }
+      let minWidth = 1230;
 
       canvasMarker
         .bindPopup(
@@ -2151,7 +2220,7 @@ export class MapComponent {
 
       let propertiesToSearch: string[] = [smart.localeName];
 
-      this.createProperty(
+      this.createTranslatableProperty(
         canvasMarker.feature.properties,
         'search',
         propertiesToSearch,
@@ -2403,7 +2472,7 @@ export class MapComponent {
       });
     }
 
-    this.addLayerToMap(hiddenLayer, this.hiddenLayerName);
+    this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
   }
 
   private addRoads() {
@@ -2426,22 +2495,20 @@ export class MapComponent {
   private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
     layer.ableToSearch = ableToSearch;
     layer.name = name;
-    this.layers[name] = layer;
-    let mapComponent = this;
-    let layers = mapComponent.layers;
+
+    this.layers.push(layer);
   }
 
   private reorderSearchingLayers(layers: any): any {
     this.markersToSearch = [];
     let newUndergroundLayer: any = {};
     let undergroundMarkers: any[] = [];
-    let newLayers: any = {};
+    let newLayers: any[] = [];
 
-    for (let layerKeyValue of Object.entries(layers)) {
-        let layer: any = layerKeyValue[1];
+    for (let layer of layers) {
         if (this.map.hasLayer(layer)) {
             let markers: any[] = Object.values(layer._layers);
-            newLayers[layerKeyValue[0]] = layer;
+            newLayers.push(layer);
             if (markers[0] && markers[0].properties && markers[0].properties.typeUniqueName) {
               undergroundMarkers.push(...this.undergroundMarkerToSearch.filter(x => x.properties.typeUniqueName == markers[0].properties.typeUniqueName));
             }
@@ -2451,9 +2518,10 @@ export class MapComponent {
     if (Object.values(layers).some((x: any) => x.name == "level-changers" && this.map.hasLayer(x))) {
       newUndergroundLayer = L.layerGroup(undergroundMarkers);
       newUndergroundLayer.ableToSearch = true;
-      newLayers['underground'] = newUndergroundLayer;
+      newUndergroundLayer.name = 'underground';
+      newLayers.push(newUndergroundLayer);
     }
-    return L.featureGroup(Object.values(newLayers));
+    return L.featureGroup(newLayers);
   }
 
   private createAnomalyZoneTooltip(zone: {
@@ -2526,6 +2594,7 @@ export class MapComponent {
     componentRef.instance.relationType = this.mapConfig.traderRelationType;
     componentRef.instance.actor = this.mapConfig.actor;
     componentRef.instance.upgrades = this.upgrades;
+    componentRef.instance.upgradeProperties = this.upgradeProperties;
 
     return componentRef.location.nativeElement;
   }

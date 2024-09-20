@@ -32,4 +32,26 @@ export class Item {
     public upgr_icon_y : number;
     public upgr_icon_width : number;
     public upgr_icon_height : number;
+
+    public $type: string;
+
+    public camRelaxSpeed : number;
+    public camDispersion : number;
+    public camDispersionInc : number;
+    public camDispertionFrac : number;
+    public camMaxAngle : number;
+    public camMaxAngleHorz : number;
+    public camStepAngleHorz : number;
+
+    public fireDistance : number;
+    public bulletSpeed : number;
+    public rpm : number;
+    public ammoMagazineSize : number;
+    public conditionShotDec : number;
+
+    public fireDispersionBase : number;
+    public fireDispersionConditionFactor : number;
+
+    public misfireProbability : number;
+    public misfireConditionK : number;
 }
