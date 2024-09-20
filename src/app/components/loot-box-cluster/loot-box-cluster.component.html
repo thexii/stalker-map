@@ -43,6 +43,7 @@
 
 <div class="bottom">
   <div class="button url-button" (click)="copyLink()">
-    <span>Mark link</span>
+    <span>{{ 'markLink' | translate}}</span>
   </div>
+  <app-hide-unhide [marker]="{lat: cluster.z, lng: cluster.x, layerName: 'destroyable-box', game: game, isUnderground: isUnderground}"></app-hide-unhide>
 </div>

@@ -17,6 +17,8 @@ import { UndergroundLevelsConfig } from "../../models/underground-levels-config.
 import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
 import { AnomalyZoneComponent } from "../anomaly-zone/anomaly-zone.component";
+import { HiddenMarker } from "../../models/hidden-marker.model";
+import { MapService } from "../../services/map.service";
 
 declare const L: any;
 declare var markWidthUnderground: number;
@@ -57,7 +59,8 @@ export class UndergroundComponent {
 
     constructor(
         private translate: TranslateService,
-        private resolver: ComponentFactoryResolver) { }
+        private resolver: ComponentFactoryResolver,
+        private mapService: MapService) { }
 
     public setLayer(newLyaer: string): void {
       if (this.selectedLevel == newLyaer) {
@@ -71,7 +74,7 @@ export class UndergroundComponent {
     }
 
     public goToMarker(): void {
-      let layer = Object.values(this.layers).find(x => x.name == this.markerToSearch.type);
+      let layer = this.layers.find(x => x.name == this.markerToSearch.type);
 
       if (layer) {
         let sLat = this.markerToSearch.lat + this.zShift;
@@ -85,6 +88,30 @@ export class UndergroundComponent {
             break;
           }
         }
+      }
+    }
+
+    public hideMarker(markerToHide: HiddenMarker): void {
+      let marker: any;
+
+      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+      let markerLayer: any = this.layers.find(x => x.name == markerToHide.layerName);
+
+      markerLayer.eachLayer(function(layer: any){
+        if (layer._latlng.lat == markerToHide.lat && layer._latlng.lng == markerToHide.lng) {
+            marker = layer;
+        }
+      });
+
+      markerLayer.removeLayer(marker);
+
+      if (this.map.hasLayer(hiddenLayer)) {
+        hiddenLayer.addLayer(marker);
+        marker.setOpacity(0.5);
+      }
+      else {
+        hiddenLayer.addLayer(marker);
+        this.map.removeLayer(marker);
       }
     }
 
@@ -214,11 +241,17 @@ export class UndergroundComponent {
           this.selectedLevel = this.undergroundConfig.baseLevel;
         }
 
+        let markersToHide: any[] = [];
+
         this.addLocation();
 
         this.addMarks();
 
-        this.addStuffs();
+        let hiddenstuffs = this.addStuffs();
+
+        if (hiddenstuffs.length > 0) {
+          markersToHide.push(...hiddenstuffs);
+        }
 
         this.addLootBoxes();
 
@@ -226,17 +259,18 @@ export class UndergroundComponent {
 
         this.addStalkers();
 
+        this.addHiddenMarkers(markersToHide);
+
         if (
             this.mapConfig.markersConfig != null &&
             this.mapConfig.markersConfig.length > 0 &&
-            this.layers != null) {
-            let allLayers = Object.values(this.layers);
-            let newLayers: any = {};
+            this.layers.length > 0) {
+            let newLayers: any[] = [];
             for (let config of this.mapConfig.markersConfig) {
-                if (allLayers.some((y) => y.name == config.uniqueName)) {
-                    let currentLayer = allLayers.filter(
+                if (this.layers.some((y) => y.name == config.uniqueName)) {
+                    let currentLayer = this.layers.filter(
                             (D) => D.name == config.uniqueName)[0];
-                    newLayers[this.translate.instant(config.uniqueName)] = currentLayer;
+                    newLayers.push(currentLayer);
 
                     if (config.isShow) {
                       currentLayer.addTo(this.map);
@@ -399,8 +433,9 @@ export class UndergroundComponent {
       }
     }
 
-    private addStuffs() {
+    private addStuffs(): any[] {
         let stuffTypes = this.mapComponent.getStuffTypes();
+        let markersToHide: any[] = [];
 
         this.gamedata.stuffs = this.gamedata.stuffs.sort(
           (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
@@ -411,6 +446,7 @@ export class UndergroundComponent {
         let buggedStrings = [];
 
         for (let markType of stuffTypes) {
+          let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == markType.uniqueName);
           let stuffsAtLocation = this.gamedata.stuffs.filter(
             (u: StuffModel) => u.locationId == this.location.id && u.typeId == markType.id
           );
@@ -464,13 +500,21 @@ export class UndergroundComponent {
                 className: 'map-tooltip',
                 offset: new Point(0, 50),
               });
-              stuff.bindPopup((p: any) => this.createStashPopup(p)),
-              markers.push(stuff)
+              stuff.bindPopup((p: any) => this.createStashPopup(p));
+
+              if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
+                markersToHide.push(stuff);
+              }
+              else {
+                markers.push(stuff);
+              }
             }
 
             this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
           }
         }
+
+        return markersToHide;
       }
 
     private addStalkers() {
@@ -532,6 +576,20 @@ export class UndergroundComponent {
       if (markers.length > 0) {
         this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName, stalkerIcon.ableToSearch);
       }
+    }
+
+    private addHiddenMarkers(markersToHide: any[]): void {
+      let hiddenLayer = L.layerGroup(markersToHide);
+
+      hiddenLayer.onAdd = function(map: any) {
+        L.LayerGroup.prototype.onAdd.call(this, map);
+
+        this.eachLayer(function(layer: any) {
+          layer.setOpacity(0.5);
+        });
+      }
+
+      this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
     }
 
     private addLootBoxes() {
@@ -871,7 +929,7 @@ export class UndergroundComponent {
       layer.isShowing = false;
       layer.name = name;
       layer.isUnderground = true;
-      this.layers[name] = layer;
+      this.layers.push(layer);
       let mapComponent = this;
       let layers = mapComponent.layers;
 

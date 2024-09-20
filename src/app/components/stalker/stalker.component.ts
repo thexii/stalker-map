@@ -9,13 +9,14 @@ import { RankSetting } from '../../models/rank-settings.model';
 import { MapService } from '../../services/map.service';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
+import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 
 @Component({
     selector: 'app-stalker',
     standalone: true,
     templateUrl: './stalker.component.html',
     styleUrl: './stalker.component.scss',
-    imports: [TranslateModule, NgFor, NgIf, StalkerProfileComponent, TooltipDirective]
+    imports: [TranslateModule, NgFor, NgIf, StalkerProfileComponent, TooltipDirective, HideUnhideComponent]
 })
 export class StalkerComponent {
   @Input() public stalker: Stalker;

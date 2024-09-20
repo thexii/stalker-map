@@ -10,11 +10,12 @@ import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 
 @Component({
   selector: 'app-loot-box-cluster',
   standalone: true,
-  imports: [TranslateModule, NgIf, NgFor, TooltipDirective],
+  imports: [TranslateModule, NgIf, NgFor, TooltipDirective, HideUnhideComponent],
   templateUrl: './loot-box-cluster.component.html',
   styleUrl: './loot-box-cluster.component.scss'
 })
@@ -28,15 +29,12 @@ export class LootBoxClusterComponent {
   public itemTooltipComponent: any = ItemTooltipComponent;
 
   public boxes: LootBoxView[];
-  public isMarkerHidden: boolean = false;
 
   constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
-    this.isMarkerHidden = this.mapService.isMarkHidden(HiddenMarker.lootBox(this.cluster))
 
     if (this.cluster.lootBoxes && this.cluster.lootBoxes.length > 0) {
-      console.log(this.cluster);
       this.boxes = [];
 
       for (let box of this.cluster.lootBoxes) {
@@ -95,16 +93,6 @@ export class LootBoxClusterComponent {
         this.boxes.push(boxView);
       }
     }
-  }
-
-  public hideMarker(): void {
-    this.mapService.hideMark(HiddenMarker.lootBox(this.cluster));
-    this.isMarkerHidden = true;
-  }
-
-  public unHideMarker(): void {
-    this.mapService.unhideMark(HiddenMarker.lootBox(this.cluster));
-    this.isMarkerHidden = false;
   }
 
   public copyLink(): void {

@@ -75,6 +75,10 @@
     {
       "uniqueName": "teleport",
       "isShow": false
+    },
+    {
+      "uniqueName": "hidden-markers",
+      "isShow": false
     }
   ],
   "minZoom": 0,
@@ -268,10 +272,6 @@
           "enabledSupplies": ["pioneer_achievement_gained +research_man_gained"]
         }
       ]
-    },
-    {
-      "uniqueName": "hidden-markers",
-      "isShow": false
     }
   ],
   "rankSetting": [

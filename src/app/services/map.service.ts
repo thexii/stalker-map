@@ -20,16 +20,16 @@ export class MapService {
     return this.getAllHiddenMarkers().some(x => {
       return x.lat == marker.lat &&
       x.lng == marker.lng &&
-      x.type == marker.type
+      x.layerName == marker.layerName
     });
   }
 
   public hideMark(markerToHide: HiddenMarker): void {
     let hiddenMarkers: HiddenMarker[] = this.getAllHiddenMarkers();
-
     hiddenMarkers.push(markerToHide);
 
     this.setHiddenMarkers(hiddenMarkers);
+
     this.mapComponent.hideMarker(markerToHide);
   }
 
@@ -37,7 +37,7 @@ export class MapService {
     let hiddenMarkers: HiddenMarker[] = this.getAllHiddenMarkers();
 
     hiddenMarkers = hiddenMarkers.filter((x: HiddenMarker) => {
-      if (x.type != marker.type) {
+      if (x.layerName != marker.layerName) {
         return true;
       }
 
@@ -53,6 +53,7 @@ export class MapService {
     });
 
     this.setHiddenMarkers(hiddenMarkers);
+    this.mapComponent.unhideMarker(marker);
   }
 
   public getAllHiddenMarkers(): HiddenMarker[] {
@@ -65,6 +66,10 @@ export class MapService {
       if (allHiddenMarkers) {
         this.hiddenMarksCache = JSON.parse(allHiddenMarkers);
 
+        if (this.hiddenMarksCache) {
+          this.hiddenMarksCache = this.hiddenMarksCache.filter(x => x.game == this.mapComponent.game);
+        }
+
         return this.hiddenMarksCache;
       }
     }
@@ -75,6 +80,5 @@ export class MapService {
   private setHiddenMarkers(markers: HiddenMarker[]): void {
     this.hiddenMarksCache = markers;
     localStorage.setItem(this.hiddenMarksLocalStorageKey, JSON.stringify(markers));
-    console.log(this.hiddenMarksCache);
   }
 }

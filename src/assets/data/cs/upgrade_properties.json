@@ -1,0 +1,241 @@
+[
+  {
+    "name": "prop_weight",
+    "localeName": "st_prop_weight",
+    "icon": "ui_wp_propery_01",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_silencer",
+    "localeName": "st_prop_silencer",
+    "icon": "ui_wp_propery_02",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_underbarrel_slot",
+    "localeName": "st_prop_underbarrel_slot",
+    "icon": "ui_wp_propery_03",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_reliability",
+    "localeName": "st_prop_reliability",
+    "icon": "ui_wp_propery_04",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_bullet_speed",
+    "localeName": "st_prop_bullet_speed",
+    "icon": "ui_wp_propery_05",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_recoil",
+    "localeName": "st_prop_recoil",
+    "icon": "ui_wp_propery_06",
+    "params": [
+      "prop_rpm"
+    ]
+  },
+  {
+    "name": "prop_ammo_size",
+    "localeName": "st_prop_ammo_size",
+    "icon": "ui_wp_propery_07",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_grenade_launcher",
+    "localeName": "st_prop_grenade_launcher",
+    "icon": "ui_wp_propery_08",
+    "params": [
+      "hit_power",
+      "rpm",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_scope_4x",
+    "localeName": "st_prop_scope_4x",
+    "icon": "ui_wp_propery_09",
+    "params": [
+      "rpm",
+      "hit_impulse"
+    ]
+  },
+  {
+    "name": "prop_scope_1.6x",
+    "localeName": "st_prop_scope_1.6x",
+    "icon": "ui_wp_propery_10",
+    "params": [
+      "cost",
+      "rpm"
+    ]
+  },
+  {
+    "name": "prop_rpm",
+    "localeName": "st_prop_rpm",
+    "icon": "ui_wp_propery_11",
+    "params": [
+      "prop_recoil"
+    ]
+  },
+  {
+    "name": "prop_calibre",
+    "localeName": "st_prop_calibre",
+    "icon": "ui_wp_propery_12",
+    "params": [
+      "cost",
+      "rpm"
+    ]
+  },
+  {
+    "name": "prop_dispersion",
+    "localeName": "st_prop_dispersion",
+    "icon": "ui_wp_propery_13",
+    "params": [
+      "cost",
+      "rpm"
+    ]
+  },
+  {
+    "name": "prop_inertion",
+    "localeName": "st_prop_inertion",
+    "icon": "ui_wp_propery_14",
+    "params": [
+      "cost",
+      "rpm"
+    ]
+  },
+  {
+    "name": "prop_armor",
+    "localeName": "st_prop_armor",
+    "icon": "ui_am_propery_01",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_damage",
+    "localeName": "st_prop_damage",
+    "icon": "ui_am_propery_02",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_durability",
+    "localeName": "st_prop_durability",
+    "icon": "ui_am_propery_03",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_restore_bleeding",
+    "localeName": "st_prop_restore_bleeding",
+    "icon": "ui_am_propery_04",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_restore_health",
+    "localeName": "st_prop_restore_health",
+    "icon": "ui_am_propery_05",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_night_vision",
+    "localeName": "st_prop_night_vision",
+    "icon": "ui_am_propery_06",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_power",
+    "localeName": "st_prop_power",
+    "icon": "ui_am_propery_07",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_tonnage",
+    "localeName": "st_tonnage",
+    "icon": "ui_am_propery_08",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_radio_chem",
+    "localeName": "st_prop_radio_chem",
+    "icon": "ui_am_propery_09",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_thermo_electro",
+    "localeName": "st_prop_thermo_electro",
+    "icon": "ui_am_propery_10",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_psy",
+    "localeName": "st_prop_psy",
+    "icon": "ui_am_propery_11",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  },
+  {
+    "name": "prop_artefact",
+    "localeName": "st_prop_artefact",
+    "icon": "ui_am_propery_01",
+    "params": [
+      "fire_wound_immunity",
+      "cost"
+    ]
+  }
+]

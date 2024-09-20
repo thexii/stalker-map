@@ -26,12 +26,12 @@
 
 .upgrade-property {
   display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
 }
 
-.upgrade-property-name::before {
-  width: 1rem;
-  height: 1rem;
-  background-color: aqua;
+.upgrade-property-name {
+  display: flex;
 }
 
 .upgrade-property-value {

@@ -67,7 +67,6 @@ export class MapContentComponent {
   }
 
   private prepareToDisplay(gamedata: Map): void {
-    console.log(gamedata);
     if (gamedata.stuffs && gamedata.stuffs.length > 0) {
       this.stuffs = [];
 

@@ -35,7 +35,6 @@ export class StuffComponent {
   constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.stuff);
     if (this.stuff.items) {
       this.items = this.stuff.items.map(x => {
         let item = new StuffItem();

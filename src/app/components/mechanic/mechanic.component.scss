@@ -12,11 +12,11 @@ $cell: 50px;
 .mechanic-container-section {
   min-width: 350px;
 
-  &.section-info.cs {
+  /*&.section-info.cs {
     min-width: 0;
     width: 0;
     margin-left: 0;
-  }
+  }*/
 }
 
 .mechanic-container-section.actor {
@@ -202,4 +202,8 @@ $cell: 50px;
 
 .section div:last-child {
   border-bottom: unset;
+}
+
+.upgraded-param {
+  color: green;
 }

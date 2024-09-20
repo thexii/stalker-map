@@ -21,8 +21,10 @@
   {{ upgrade.description | translate}}
 </div>
 <div class="upgrade-properties">
-  <div class="upgrade-property" *ngFor="let prop of upgrade.properties">
-    <div class="upgrade-property-name {{prop}}">{{prop}}</div>
+  <div class="upgrade-property" *ngFor="let prop of props">
+    <div class="upgrade-property-name">
+      <i class="upgrade-property-icon {{prop.icon}} {{game}}"></i>
+      <span>{{prop.name | translate}}</span></div>
     <div class="upgrade-property-value">{{upgrade.value}}</div>
   </div>
 </div>

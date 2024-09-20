@@ -18,11 +18,11 @@
         <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
           <div id="section-{{sectionIndex}}" class="upgrade-section">
             <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
-              <div tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
+              <div tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
                 'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
                 'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
                 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
-              }">
+              }" (click)="selectUpgrade(upgrade, upgradeSection)">
                 <ng-container *ngIf="!upgrade.isLocked">
                   <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
                   <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
@@ -65,6 +65,87 @@
           </ng-container>
         </table>
       </div>
+
+      <div class="weapon-data" [hidden]="selectedItem == null || selectedItem.$type != 'weapon'">
+        <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'weapon'">
+          <div class="weapon-rpm">
+            <span>{{ selectedItem.localeName | translate }}</span>
+          </div>
+          <div class="weapon-rpm">
+            <i class="cop ui_wp_prop_skorostrelnost upgrade-property-icon"></i>
+            <span>Скорострільність</span>:
+            <span>{{selectedItem.rpm}} / хв</span>
+            <span *ngIf="selectedItem.rpm != selectedItemForUpgrades.rpm" class="upgraded-param"> ({{selectedItemForUpgrades.rpm}})</span>
+          </div>
+          <div class="weapon-reliability">
+            <span>Ресурс ствола</span>:
+            <span>{{Math.ceil(1 / selectedItem.conditionShotDec)}} пострілів</span>
+            <span *ngIf="selectedItem.conditionShotDec != selectedItemForUpgrades.conditionShotDec" class="upgraded-param"> ({{Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)}})</span>
+          </div>
+
+          <div class="weapon-reliability">
+            <span>Дисперсія</span>:
+            <span>{{selectedItem.fireDispersionBase}} градусів</span>
+            <span *ngIf="selectedItem.fireDispersionBase != selectedItemForUpgrades.fireDispersionBase" class="upgraded-param"> ({{selectedItemForUpgrades.fireDispersionBase}})</span>
+          </div>
+
+          <div class="weapon-reliability">
+            <span>Максимальна дисперсія</span>:
+            <span>{{selectedItem.fireDispersionConditionFactor}}%</span>
+            <span *ngIf="selectedItem.fireDispersionConditionFactor != selectedItemForUpgrades.fireDispersionConditionFactor" class="upgraded-param"> ({{selectedItemForUpgrades.fireDispersionConditionFactor}})</span>
+          </div>
+
+          <!--<div class="weapon-reliability">
+            <span>Вірогідність клину</span>:
+            <span>{{selectedItem.misfireProbability}}%</span>
+            <span *ngIf="selectedItem.misfireProbability != selectedItemForUpgrades.misfireProbability" class="upgraded-param"> ({{selectedItemForUpgrades.misfireProbability}})</span>
+          </div>
+
+          <div class="weapon-reliability">
+            <span>Клин, починаючи з стану</span>:
+            <span>{{selectedItem.misfireConditionK}}%</span>
+            <span *ngIf="selectedItem.misfireConditionK != selectedItemForUpgrades.misfireConditionK" class="upgraded-param"> ({{selectedItemForUpgrades.misfireConditionK}})</span>
+          </div>-->
+
+          <!--<div class="weapon-reliability">
+            <span>Вірогідність клину</span>:
+            <span>{{Math.ceil(1 / selectedItem.conditionShotDec)}} пострілів</span>
+            <span *ngIf="selectedItem.conditionShotDec != selectedItemForUpgrades.conditionShotDec" class="upgraded-param"> ({{Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)}})</span>
+          </div>-->
+          <div class="weapon-reliability">
+            <span>Стартова швидкість кулі</span>:
+            <span>{{selectedItem.bulletSpeed}} м/с</span>
+            <span *ngIf="selectedItem.bulletSpeed != selectedItemForUpgrades.bulletSpeed" class="upgraded-param"> ({{selectedItemForUpgrades.bulletSpeed}})</span>
+          </div>
+          <div class="weapon-reliability">
+            <span>Дистанція стрільби</span>:
+            <span>{{selectedItem.fireDistance}} м</span>
+            <span *ngIf="selectedItem.fireDistance != selectedItemForUpgrades.fireDistance" class="upgraded-param"> ({{selectedItemForUpgrades.fireDistance}})</span>
+          </div>
+          <div class="weapon-reliability">
+            <span>{{'ui_ammo_count' | translate}}</span>:
+            <span>{{selectedItem.ammoMagazineSize}}</span>
+            <span *ngIf="selectedItem.ammoMagazineSize != selectedItemForUpgrades.ammoMagazineSize" class="upgraded-param"> ({{selectedItemForUpgrades.ammoMagazineSize}})</span>
+          </div>
+          <div class="weapon-reliability">
+            <span>{{'st_prop_weight' | translate}}</span>:
+            <span>{{selectedItem.weight}}</span>
+            <span *ngIf="selectedItem.weight != selectedItemForUpgrades.weight" class="upgraded-param"> ({{selectedItemForUpgrades.weight}})</span>
+          </div>
+        </div>
+        <div class="dispersion-chart">
+          <div class="dispersion-title">
+            {{ 'recoil' | translate }}
+          </div>
+          <canvas id="dispersion-chart-canvas" class="chart"></canvas>
+        </div>
+        <div class="dynamic-chart">
+          <div class="dynamic-title">
+            {{ 'Балістика кулі' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
+          </div>
+          <canvas id="dynamic-chart-canvas" class="chart"></canvas>
+        </div>
+      </div>
     </div>
   </div>
   <div class="mechanic-container-section actor">
@@ -99,6 +180,6 @@
 </div>
 <div class="bottom">
 <div class="button url-button">
-  <span>Mark link</span>
+  <span>{{ 'markLink' | translate}}</span>
 </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="button url-button" (click)="unHideMarker()" *ngIf="isMarkerHidden">
-    <span>Unhide marker</span>
+    <span>{{ "unhide-marker" | translate }}</span>
   </div>
   <div class="button url-button" (click)="hideMarker()" *ngIf="!isMarkerHidden">
-    <span>Hide marker</span>
+    <span>{{ "hide-marker" | translate }}</span>
   </div>

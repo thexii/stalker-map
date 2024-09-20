@@ -12,7 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  public readonly avaliableLanguages: string[] = ["ua", "en", "ru", "pl", "fr", "de", "esp", "it", "cz", 'hg', 'chn', 'jpn', 'kor'];
+  public readonly avaliableLanguages: string[] = ["ua", "en", "ru", "pl", "fr", "de", "esp", "it", "cz", 'chn', 'jpn', 'kor'];
   private readonly lastLanguageCacheKeyString: string = "language";
   private readonly defaultLocale: string = "en";
   public selectedLanguage: string = "";
@@ -57,21 +57,6 @@ export class HeaderComponent {
       }
     });
   }
-
-  private createLanguager(): void {
-    let output = '';
-
-    for (let lang of this.avaliableLanguages) {
-      output +=
-	  `<xhtml:link
-    rel="alternate"
-    hreflang="${lang}"
-    href="https://stalker-map.online/map/hoc?lang=${lang}"/>\n`;
-    }
-
-    console.log(output);
-  }
-
 
   public changeLanguage(event: any): void {
     //this.languageChanged = true;

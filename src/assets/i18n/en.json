@@ -261,5 +261,9 @@
   "gar_stalker_evening_trader": "Flea market evening trader",
   "gar_stalker_night_trader": "Flea market night trader",
   "gar_quest_liberate_conc_camp_done": "Stalkers liberated from bandit expluatation on vehicle graveyard",
-  "red_forest_underground_trader": "Trader in a mine in Red Forest"
+  "red_forest_underground_trader": "Trader in a mine in Red Forest",
+
+  "hide-marker": "Hide",
+  "unhide-marker": "Unhide",
+  "hidden-markers": "Hidden markers"
 }

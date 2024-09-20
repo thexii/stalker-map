@@ -262,6 +262,11 @@
     "gar_quest_liberate_conc_camp_done": "Звільнити сталкерів з концтабору бандитів",
     "red_forest_underground_trader": "Торговець в казармі в шахтах",
 
+    "hide-marker": "Приховати",
+    "unhide-marker": "Показати",
+    "hidden-markers": "Приховані мітки",
+    "recoil": "Паттерн віддачі",
+
     "synonyms": {
       "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
       "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
