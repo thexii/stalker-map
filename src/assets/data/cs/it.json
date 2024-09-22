@@ -1310,5 +1310,6 @@
   "ui_inv_outfit_fire_wound_protection": "Proiettili",
   "ui_inv_outfit_strike_protection": "Impatto",
   "ui_inv_outfit_explosion_protection": "Esplosione",
-  "ui_inv_outfit_additional_weight": "Peso massimo"
+  "ui_inv_outfit_additional_weight": "Peso massimo",
+  "st_kg": "kg"
 }

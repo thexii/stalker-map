@@ -1115,5 +1115,6 @@
   "st_upgr_group": "Cet \u00E9l\u00E9ment a d\u00E9j\u00E0 \u00E9t\u00E9 modifi\u00E9.",
   "st_upgr_cant_do": "Le technicien ne peut pas effectuer cette modification.",
   "st_base_cost": "Prix",
-  "st_weight": "Poids"
+  "st_weight": "Poids",
+  "st_kg": "kg"
 }

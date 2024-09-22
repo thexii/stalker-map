@@ -5,7 +5,7 @@ import { Item } from '../../models/item.model';
 import { RankSetting } from '../../models/rank-settings.model';
 import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection } from '../../models/upgrades/upgrades';
@@ -83,7 +83,9 @@ export class MechanicComponent {
     health_restore_v: 0.0003
   }
 
-  constructor(private mapService: MapService) { }
+  constructor(
+    private mapService: MapService,
+    protected translate: TranslateService) { }
 
   private async ngOnInit(): Promise<void> {
     if (this.mechanic.itemsForUpgrader?.length > 0) {
@@ -269,9 +271,7 @@ export class MechanicComponent {
         up.isInstalled = false;
       }
 
-      /*for (let i = 0; i < effectsProps.length; i++) {
-        this.applyUpgradeEffect(effectsProps[i], effectsValues[i], -1);
-      }*/
+      this.selectedItemForUpgrades.installedUpgrades = this.selectedItemForUpgrades.installedUpgrades.filter(x => x != upgrade.name);
     }
     else {
       for (let up of upgradeSection.elements) {
@@ -295,6 +295,12 @@ export class MechanicComponent {
       for (let i = 0; i < effectsProps.length; i++) {
         this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsProps[i], effectsValues[i], 1);
       }
+
+      if (this.selectedItemForUpgrades.installedUpgrades == null) {
+        this.selectedItemForUpgrades.installedUpgrades = [];
+      }
+
+      this.selectedItemForUpgrades.installedUpgrades.push(upgrade.name);
     }
 
     if (this.selectedItem.$type == "weapon") {
@@ -364,42 +370,20 @@ export class MechanicComponent {
   private resetWeaponStats(): void {
     let maxTime = (60 / this.selectedItem.rpm) * this.selectedItem.ammoMagazineSize;
     let shots: BubbleDataPoint[] = [];
+    let shotsZoom: BubbleDataPoint[] = [];
     let shotsUp: BubbleDataPoint[] = [];
+    let shotsUpZoom: BubbleDataPoint[] = [];
 
-    let deltaTime = (60 / this.selectedItem.rpm);
-    let deltaTimeUp = (60 / this.selectedItemForUpgrades.rpm);
+    shots = this.calculateWeaponShots(this.selectedItem, 'camDispersion', 'camDispersionInc', 'camDispertionFrac', 'camMaxAngle');
 
-    let currentTime = 0;
-    let currentTimeUp = 0;
-
-    let currentAngle = 0;
-    let currentAngleUp = 0;
-
-    for (let shot = 0; shot < this.selectedItem.ammoMagazineSize; shot++) {
-      shots.push({x: currentTime, y: currentAngle, r: 1});
-      //cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
-      currentTime += deltaTime;
-      let angle = (this.selectedItem.camDispersion + this.selectedItem.camDispersionInc * (shot + 1)) * this.selectedItem.camDispertionFrac;
-      currentAngle += angle;
-
-      /*if (shot > 1) {
-        currentAngle -= this.selectedItem.camRelaxSpeed * deltaTime
-      }*/
-
-      if (currentAngle > this.selectedItem.camMaxAngle) {
-        currentAngle = this.selectedItem.camMaxAngle;
-      }
+    if (this.selectedItem.zoomCamDispersion > 0) {
+      shotsZoom = this.calculateWeaponShots(this.selectedItem, 'zoomCamDispersion', 'zoomCamDispersionInc', 'zoomCamDispertionFrac', 'zoomCamMaxAngle');
     }
 
-    for (let shot = 0; shot < this.selectedItemForUpgrades.ammoMagazineSize; shot++) {
-      shotsUp.push({x: currentTimeUp, y: currentAngleUp, r: 1});
-      //cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
-      currentTimeUp += deltaTimeUp;
-      let angle = (this.selectedItemForUpgrades.camDispersion + this.selectedItemForUpgrades.camDispersionInc * (shot + 1)) * this.selectedItemForUpgrades.camDispertionFrac;
-      currentAngleUp += angle;
-
-      if (currentAngleUp > this.selectedItemForUpgrades.camMaxAngle) {
-        currentAngleUp = this.selectedItemForUpgrades.camMaxAngle;
+    if (!this.hasSameUps(this.selectedItem, this.selectedItemForUpgrades)) {
+      shotsUp = this.calculateWeaponShots(this.selectedItemForUpgrades, 'camDispersion', 'camDispersionInc', 'camDispertionFrac', 'camMaxAngle');
+      if (this.selectedItemForUpgrades.zoomCamDispersion > 0) {
+        shotsUpZoom = this.calculateWeaponShots(this.selectedItemForUpgrades, 'zoomCamDispersion', 'zoomCamDispersionInc', 'zoomCamDispertionFrac', 'zoomCamMaxAngle');
       }
     }
 
@@ -428,24 +412,58 @@ export class MechanicComponent {
       this.recoilTimeChart.destroy();
     }
 
+    let recoilDatasets: any = [];
+
+    if (shotsUp.length > 0) {
+      recoilDatasets.push(
+        {
+          data: shotsUp,
+          label: this.translate.instant('recoil-up'),
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(255, 99, 132)',
+        }
+      );
+    };
+
+    recoilDatasets.push(
+      {
+        data: shots,
+        label: this.translate.instant('recoil-base'),
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgb(54, 162, 235)',
+        pointRadius: 5
+      }
+    );
+
+    if (shotsUpZoom.length > 0) {
+
+      recoilDatasets.push(
+        {
+          data: shotsUpZoom,
+          label: this.translate.instant('recoil-zoom-up'),
+          backgroundColor: 'rgba(255, 0, 0, 0.2)',
+          borderColor: 'rgb(255, 0, 0)',
+        }
+      );
+    }
+
+    if (shotsZoom.length > 0) {
+
+      recoilDatasets.push(
+        {
+          data: shotsZoom,
+          label: this.translate.instant('recoil-zoom-base'),
+          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          borderColor: 'rgb(255, 255, 255)',
+          pointRadius: 5
+        }
+      );
+    }
+
     this.recoilTimeChart = new Chart("dispersion-chart-canvas", {
       type: 'line',
       data: {
-        datasets: [
-          {
-            data: shotsUp,
-            label: 'Модифікована',
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgb(255, 99, 132)',
-          },
-          {
-            data: shots,
-            label: 'Базова',
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgb(54, 162, 235)',
-            pointRadius: 5
-          },
-      ]
+        datasets: recoilDatasets
       },
       options: {
         scales: {
@@ -467,15 +485,15 @@ export class MechanicComponent {
         datasets: [
           {
             data: dynamicUp,
-            label: 'Модифікована',
-            backgroundColor: 'green',
-            borderColor: 'green',
+            label: this.translate.instant('recoil-up'),
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
           },
           {
             data: dynamic,
-            label: 'Базова',
-            backgroundColor: 'white',
-            borderColor: 'white',
+            label: this.translate.instant('recoil-base'),
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
             pointRadius: 5
           },
       ]
@@ -526,6 +544,29 @@ export class MechanicComponent {
         }
       }
     });*/
+  }
+
+  private calculateWeaponShots(item: Item, camDispersion: string, camDispersionInc: string, camDispertionFrac: string, camMaxAngle: string): any[] {
+    let shots: any[] = [];
+    let currentTime = 0;
+    let currentAngle = 0;
+    let deltaTime = (60 / item.rpm);
+
+    let itemAsAny = item as any;
+
+    for (let shot = 0; shot < item.ammoMagazineSize; shot++) {
+      shots.push({x: currentTime, y: currentAngle, r: 1});
+
+      currentTime += deltaTime;
+      let angle = (itemAsAny[camDispersion] + itemAsAny[camDispersionInc] * (shot + 1)) * itemAsAny[camDispertionFrac];
+      currentAngle += angle;
+
+      if (currentAngle > itemAsAny[camMaxAngle]) {
+        currentAngle = itemAsAny[camMaxAngle];
+      }
+    }
+
+    return shots;
   }
 
   private resetOutfitStats(): void {
@@ -627,5 +668,25 @@ export class MechanicComponent {
       v0 * t * Math.cos(a0),
       h0 + v0 * t * Math.sin(a0) - (9.81 * t * t) / 2,
     ]
+  }
+
+  private hasSameUps(item: Item, another: Item): boolean {
+    if (item.uniqueName != another.uniqueName) {
+      return false;
+    }
+
+    if (item.installedUpgrades?.length > 0 != another.installedUpgrades?.length > 0) {
+      return false;
+    }
+
+    if (item.installedUpgrades?.length > 0) {
+      for (let up of item.installedUpgrades) {
+        if (!another.installedUpgrades?.includes(up)) {
+          return false;
+        }
+      }
+    }
+
+    return true;
   }
 }

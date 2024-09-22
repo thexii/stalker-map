@@ -265,5 +265,26 @@
 
   "hide-marker": "Hide",
   "unhide-marker": "Unhide",
-  "hidden-markers": "Hidden markers"
+  "hidden-markers": "Hidden markers",
+
+  "recoil": "Recoil pattern",
+  "powerLoss": "Ergonomics",
+  "explosionProtection": "Expl. prot.",
+  "strikeProtection": "Wound prot.",
+  "shooting-resource": "Shooting resource",
+  "dispersion": "Dispersion",
+  "dispersion-max": "Max dispersion",
+  "bullet-speed": "Bullet speed",
+  "fire-distance": "Fire distance",
+  "speed-unit": "m/s",
+  "distance-unit": "m",
+  "misfire-probability": "Misfire probability",
+  "misfire-condition-k": "Клин, починаючи з стану",
+  "balistic": "Bullet balistic",
+
+  "recoil-base": "Base",
+  "recoil-up": "Upgraded",
+
+  "recoil-zoom-base": "Zoom base",
+  "recoil-zoom-up": "Zoom upgraded"
 }

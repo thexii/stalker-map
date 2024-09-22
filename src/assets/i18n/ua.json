@@ -265,6 +265,7 @@
     "hide-marker": "Приховати",
     "unhide-marker": "Показати",
     "hidden-markers": "Приховані мітки",
+
     "recoil": "Паттерн віддачі",
     "powerLoss": "Ергономіка",
     "explosionProtection": "Захист від вибуху",
@@ -279,6 +280,12 @@
     "misfire-probability": "Вірогідність клину",
     "misfire-condition-k": "Клин, починаючи з стану",
     "balistic": "Балістика кулі",
+
+    "recoil-base": "Базова",
+    "recoil-up": "Модифікована",
+
+    "recoil-zoom-base": "Базова в прицілі",
+    "recoil-zoom-up": "Модифікована в прицілі",
 
     "synonyms": {
       "wpn_ak74": ["Калаш", "Ак", "Ак-74"],

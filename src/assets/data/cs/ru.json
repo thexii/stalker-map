@@ -1310,5 +1310,6 @@
   "ui_inv_outfit_fire_wound_protection": "\u041F\u0443\u043B\u0435\u0441\u0442\u043E\u0439\u043A\u043E\u0441\u0442\u044C",
   "ui_inv_outfit_strike_protection": "\u0423\u0434\u0430\u0440",
   "ui_inv_outfit_explosion_protection": "\u0412\u0437\u0440\u044B\u0432",
-  "ui_inv_outfit_additional_weight": "\u041C\u0430\u043A\u0441. \u0432\u0435\u0441"
+  "ui_inv_outfit_additional_weight": "\u041C\u0430\u043A\u0441. \u0432\u0435\u0441",
+  "st_kg": "\u041A\u0433"
 }
