@@ -266,10 +266,26 @@
     "unhide-marker": "Показати",
     "hidden-markers": "Приховані мітки",
     "recoil": "Паттерн віддачі",
+    "powerLoss": "Ергономіка",
+    "explosionProtection": "Захист від вибуху",
+    "strikeProtection": "Захист від розриву",
+    "shooting-resource": "Ресурс стрільби",
+    "dispersion": "Дисперсія",
+    "dispersion-max": "Максимальна дисперсія",
+    "bullet-speed": "Стартова швидкість кулі",
+    "fire-distance": "Дистанція стрільби",
+    "speed-unit": "м/с",
+    "distance-unit": "м",
+    "misfire-probability": "Вірогідність клину",
+    "misfire-condition-k": "Клин, починаючи з стану",
+    "balistic": "Балістика кулі",
 
     "synonyms": {
       "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
       "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
-      "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"]
+      "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"],
+
+      "trader": ["Крамар", "Торгаш", "Барига"],
+      "mechanics": ["Механік", "Технік"]
     }
 }

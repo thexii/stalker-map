@@ -1,0 +1,14 @@
+<tr class="stat-with-bar">
+  <td class="title-column">
+    <i class="{{iconStyle}} upgrade-property-icon"></i>
+    <span class="title-with-bar">{{name}}:</span>
+  </td>
+  <td class="bar-column">
+    <div class="meter">
+      <span class="background"></span>
+      <span class="base" [ngClass]="{'default': defaultValue == value, 'wrost': value < defaultValue, 'better': value > defaultValue}" [ngStyle]="{'width': defaultValueWidth}"></span>
+      <span [ngStyle]="{'width': valueWidth, 'left': valueShift, 'background-color': valueColor}"></span>
+      <span class="mask"></span>
+    </div>
+  </td>
+</tr>

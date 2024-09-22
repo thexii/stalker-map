@@ -1293,5 +1293,15 @@
   "st_upgr_group": "\u3053\u306E\u90E8\u54C1\u306F\u3059\u3067\u306B\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u6E08\u307F\u3002",
   "st_upgr_cant_do": "\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3067\u304D\u306A\u3044",
   "st_base_cost": "\u4FA1\u683C",
-  "st_weight": "\u91CD\u91CF"
+  "st_weight": "\u91CD\u91CF",
+  "ui_inv_outfit_burn_protection": "\u706B\u50B7",
+  "ui_inv_outfit_shock_protection": "\u96FB\u6C17",
+  "ui_inv_outfit_chemical_burn_protection": "\u5316\u5B66",
+  "ui_inv_outfit_radiation_protection": "\u653E\u5C04\u80FD",
+  "ui_inv_outfit_telepatic_protection": "\u30C6\u30EC\u30D1\u30B7\u30FC",
+  "ui_inv_outfit_wound_protection": "\u7834\u88C2",
+  "ui_inv_outfit_fire_wound_protection": "\u9632\u5F3E",
+  "ui_inv_outfit_strike_protection": "\u523A\u6FC0",
+  "ui_inv_outfit_explosion_protection": "\u7206\u767A",
+  "ui_inv_outfit_additional_weight": "\u6700\u5927\u91CD\u91CF"
 }

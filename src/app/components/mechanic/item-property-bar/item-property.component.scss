@@ -1,0 +1,45 @@
+.stat-with-bar {
+  > span {
+    margin-right: 1rem;
+  }
+}
+
+.meter {
+ span.background {
+  width: 100%;
+  background-color: #43484c;
+ }
+
+ span.mask {
+  background-image: linear-gradient(to right, transparent 3px, #333 3px);
+  background-size: 6px 100%;
+  width: 100%;
+ }
+
+ .base {
+  &.default {
+    background-color: #848a8a;
+  }
+
+  &.wrost {
+    background-color: red;
+  }
+
+  &.better {
+    background-color: #a1fecb;
+  }
+ }
+}
+
+.title-column {
+  white-space: nowrap;
+  display: flex;
+}
+
+.title-with-bar {
+  margin-right: 1rem;
+}
+
+.bar-column {
+  width: 100%;
+}

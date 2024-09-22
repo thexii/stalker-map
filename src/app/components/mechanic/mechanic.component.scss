@@ -26,9 +26,15 @@ $cell: 50px;
   max-height: var(--wrapper-height);
 }
 
+.mechanic-container-section.section-info {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .sections-select-container {
   max-height: inherit;
-    overflow-y: auto;
+  overflow-y: auto;
+  max-height: 200px;
 }
 
 .section-info {
@@ -206,4 +212,8 @@ $cell: 50px;
 
 .upgraded-param {
   color: green;
+}
+
+app-item-property-bar, app-item-property-number {
+  display: contents;
 }

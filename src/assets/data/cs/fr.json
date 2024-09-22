@@ -1300,5 +1300,15 @@
   "st_upgr_group": "Composant d\u00E9j\u00E0 am\u00E9lior\u00E9",
   "st_upgr_cant_do": "Installation impossible",
   "st_base_cost": "prix",
-  "st_weight": "poids"
+  "st_weight": "poids",
+  "ui_inv_outfit_burn_protection": "Br\u00FBlure",
+  "ui_inv_outfit_shock_protection": "\u00C9lectrique",
+  "ui_inv_outfit_chemical_burn_protection": "Chimique",
+  "ui_inv_outfit_radiation_protection": "Radiations",
+  "ui_inv_outfit_telepatic_protection": "T\u00E9l\u00E9pathie",
+  "ui_inv_outfit_wound_protection": "Entailles",
+  "ui_inv_outfit_fire_wound_protection": "Perforation",
+  "ui_inv_outfit_strike_protection": "Impact",
+  "ui_inv_outfit_explosion_protection": "Explosion",
+  "ui_inv_outfit_additional_weight": "Max weight"
 }

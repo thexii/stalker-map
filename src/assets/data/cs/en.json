@@ -1300,5 +1300,15 @@
   "st_upgr_group": "This component has already been upgraded",
   "st_upgr_cant_do": "Cannot install",
   "st_base_cost": "price",
-  "st_weight": "weight"
+  "st_weight": "weight",
+  "ui_inv_outfit_burn_protection": "Burn",
+  "ui_inv_outfit_shock_protection": "Electric",
+  "ui_inv_outfit_chemical_burn_protection": "Chemical",
+  "ui_inv_outfit_radiation_protection": "Radiation",
+  "ui_inv_outfit_telepatic_protection": "Telepathy",
+  "ui_inv_outfit_wound_protection": "Rupture",
+  "ui_inv_outfit_fire_wound_protection": "Bulletproof",
+  "ui_inv_outfit_strike_protection": "Impact",
+  "ui_inv_outfit_explosion_protection": "Explosion",
+  "ui_inv_outfit_additional_weight": "Max weight"
 }

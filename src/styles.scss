@@ -555,7 +555,7 @@ app-item-tooltip, app-upgrade-tooltip {
 
     &.ui_wp_prop_scope_attach {
       background-position-x: -692px;
-      background-position-y: -548px;
+      background-position-y: -547px;
     }
 
     &.ui_wp_prop_scope {
@@ -575,7 +575,7 @@ app-item-tooltip, app-upgrade-tooltip {
 
     &.ui_wp_prop_autofire {
       background-position-x: -711px;
-      background-position-y: -567px;
+      background-position-y: -566px;
     }
 
     &.ui_wp_prop_3xfire {
@@ -703,6 +703,15 @@ app-item-tooltip, app-upgrade-tooltip {
       background-position-y: -566px;
     }
 
+    &.ui_am_prop_explosion_damage {
+      background-position-x: -806px;
+      background-position-y: -547px;
+    }
+
+    &.ui_am_prop_strike_damage {
+      background-position-x: -749px;
+      background-position-y: -490px;
+    }
 
     &.ui_am_prop_time_period {
       background-position-x: -825px;
@@ -714,5 +723,157 @@ app-item-tooltip, app-upgrade-tooltip {
       background-position-y: -547px;
     }
 
+    &.ui_wp_propery_01 {
+        background-position-x: -78px;
+        background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_02 {
+        background-position-x: -692px;
+        background-position-y: -452px;
+    }
+
+    &.ui_wp_propery_03 {
+      background-position-x: -692px;
+      background-position-y: -471px;
+    }
+
+    &.ui_wp_propery_04 {
+        background-position-x: -78px;
+        background-position-y: -581px;
+    }
+
+    &.ui_wp_propery_05 {
+        background-position-x: -78px;
+        background-position-y: -600px;
+    }
+
+
+    &.ui_wp_propery_06 {
+        background-position-x: -97px;
+        background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_07 {
+        background-position-x: -711px;
+        background-position-y: -452px;
+    }
+
+    &.ui_wp_propery_08 {
+        background-position-x: -97px;
+        background-position-y: -562px;
+    }
+
+    &.ui_wp_propery_09 {
+        background-position-x: -711px;
+        background-position-y: -490px;
+    }
+
+    &.ui_wp_propery_10 {
+        background-position-x: -711px;
+        background-position-y: -509px;
+    }
+
+
+    &.ui_wp_propery_11 {
+        background-position-x: -116px;
+        background-position-y: -524px;
+    }
+
+    &.ui_wp_propery_12 {
+        background-position-x: -730px;
+        background-position-y: -452px;
+    }
+
+    &.ui_wp_propery_13 {
+        background-position-x: -116px;
+        background-position-y: -562px;
+    }
+
+    &.ui_wp_propery_14 {
+        background-position-x: -116px;
+        background-position-y: -581px;
+    }
+
+
+
+    &.ui_am_propery_01 {
+        background-position-x: -749px;
+        background-position-y: -433px;
+    }
+
+    &.ui_am_propery_02 {
+        background-position-x: -135px;
+        background-position-y: -543px;
+    }
+
+    &.ui_am_propery_03 {
+        background-position-x: -749px;
+        background-position-y: -471px;
+    }
+
+    &.ui_am_propery_04 {
+        background-position-x: -135px;
+        background-position-y: -581px;
+    }
+
+    &.ui_am_propery_05 {
+        background-position-x: -749px;
+        background-position-y: -509px;
+    }
+
+
+    &.ui_am_propery_06 {
+        background-position-x: -154px;
+        background-position-y: -524px;
+    }
+
+    &.ui_am_propery_07 {
+        background-position-x: -768px;
+        background-position-y: -452px;
+    }
+
+    &.ui_am_propery_08 {
+        background-position-x: -768px;
+        background-position-y: -471px;
+    }
+
+    &.ui_am_propery_09 {
+        background-position-x: -768px;
+        background-position-y: -490px;
+    }
+
+    &.ui_am_propery_10 {
+        background-position-x: -154px;
+        background-position-y: -600px;
+    }
+
+
+    &.ui_am_propery_11 {
+        background-position-x: -787px;
+        background-position-y: -433px;
+    }
+
+
+    &.ui_am_propery_weight {
+        background-position-x: -806px;
+        background-position-y: -528px;
+    }
+
   }
+}
+
+.meter {
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.meter > span {
+  display: block;
+  height: 90%;
+  position: absolute;
+  overflow: hidden;
 }

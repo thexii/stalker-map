@@ -1300,5 +1300,15 @@
   "st_upgr_group": "Diese Komponente wurde bereits verbessert",
   "st_upgr_cant_do": "Nicht m\u00F6glich",
   "st_base_cost": "Preis",
-  "st_weight": "Gewicht"
+  "st_weight": "Gewicht",
+  "ui_inv_outfit_burn_protection": "Verbrennung",
+  "ui_inv_outfit_shock_protection": "Elektrizit\u00E4t",
+  "ui_inv_outfit_chemical_burn_protection": "Ver\u00E4tzung",
+  "ui_inv_outfit_radiation_protection": "Strahlung",
+  "ui_inv_outfit_telepatic_protection": "Telepathie",
+  "ui_inv_outfit_wound_protection": "Rei\u00DFer",
+  "ui_inv_outfit_fire_wound_protection": "Panzerkappe",
+  "ui_inv_outfit_strike_protection": "Aufprall",
+  "ui_inv_outfit_explosion_protection": "Explosion",
+  "ui_inv_outfit_additional_weight": "H\u00F6chstgewicht"
 }

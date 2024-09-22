@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-  <div class="mechanic-container-section section-info {{game}}">
+  <div class="mechanic-container-section section-info {{game}} custom-scroll">
     <div class="info container">
       <div class="sections-select-container custom-scroll" *ngIf="discounts && discounts.length > 0">
         <table style="width: 100%;">
@@ -66,87 +66,508 @@
         </table>
       </div>
 
-      <div class="weapon-data" [hidden]="selectedItem == null || selectedItem.$type != 'weapon'">
-        <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'weapon'">
-          <div class="weapon-rpm">
-            <span>{{ selectedItem.localeName | translate }}</span>
-          </div>
-          <div class="weapon-rpm">
-            <i class="cop ui_wp_prop_skorostrelnost upgrade-property-icon"></i>
-            <span>Скорострільність</span>:
-            <span>{{selectedItem.rpm}} / хв</span>
-            <span *ngIf="selectedItem.rpm != selectedItemForUpgrades.rpm" class="upgraded-param"> ({{selectedItemForUpgrades.rpm}})</span>
-          </div>
-          <div class="weapon-reliability">
-            <span>Ресурс ствола</span>:
-            <span>{{Math.ceil(1 / selectedItem.conditionShotDec)}} пострілів</span>
-            <span *ngIf="selectedItem.conditionShotDec != selectedItemForUpgrades.conditionShotDec" class="upgraded-param"> ({{Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)}})</span>
-          </div>
+      <ng-container *ngIf="game == 'cop'">
+        <div class="weapon-data" [hidden]="selectedItem == null || selectedItem.$type != 'weapon'">
+          <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'weapon'">
+            <div class="weapon-rpm">
+              <span>{{ selectedItem.localeName | translate }}</span>
+            </div>
 
-          <div class="weapon-reliability">
-            <span>Дисперсія</span>:
-            <span>{{selectedItem.fireDispersionBase}} градусів</span>
-            <span *ngIf="selectedItem.fireDispersionBase != selectedItemForUpgrades.fireDispersionBase" class="upgraded-param"> ({{selectedItemForUpgrades.fireDispersionBase}})</span>
-          </div>
+            <table>
+              <tbody>
+                <app-item-property-number
+                  [defaultValue]="selectedItem.rpm"
+                  [value]="selectedItemForUpgrades.rpm"
+                  [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                  [name]="'ui_inv_rate_of_fire' | translate"></app-item-property-number>
 
-          <div class="weapon-reliability">
-            <span>Максимальна дисперсія</span>:
-            <span>{{selectedItem.fireDispersionConditionFactor}}%</span>
-            <span *ngIf="selectedItem.fireDispersionConditionFactor != selectedItemForUpgrades.fireDispersionConditionFactor" class="upgraded-param"> ({{selectedItemForUpgrades.fireDispersionConditionFactor}})</span>
-          </div>
+                <app-item-property-number
+                  [defaultValue]="Math.ceil(1 / selectedItem.conditionShotDec)"
+                  [value]="Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)"
+                  [iconStyle]="'cop ui_wp_prop_nadezhnost'"
+                  [name]="'shooting-resource' | translate"></app-item-property-number>
 
-          <!--<div class="weapon-reliability">
-            <span>Вірогідність клину</span>:
-            <span>{{selectedItem.misfireProbability}}%</span>
-            <span *ngIf="selectedItem.misfireProbability != selectedItemForUpgrades.misfireProbability" class="upgraded-param"> ({{selectedItemForUpgrades.misfireProbability}})</span>
-          </div>
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDispersionBase"
+                  [value]="selectedItemForUpgrades.fireDispersionBase"
+                  [iconStyle]="'cop ui_wp_prop_tochnost'"
+                  [name]="'dispersion' | translate"
+                  [unit]="'°'"
+                  [hasSpaceBeforeUnit]="false"
+                  [isPositive]="false"></app-item-property-number>
 
-          <div class="weapon-reliability">
-            <span>Клин, починаючи з стану</span>:
-            <span>{{selectedItem.misfireConditionK}}%</span>
-            <span *ngIf="selectedItem.misfireConditionK != selectedItemForUpgrades.misfireConditionK" class="upgraded-param"> ({{selectedItemForUpgrades.misfireConditionK}})</span>
-          </div>-->
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDispersionConditionFactor"
+                  [value]="selectedItemForUpgrades.fireDispersionConditionFactor"
+                  [iconStyle]="'cop ui_wp_prop_tochnost'"
+                  [unit]="'%'"
+                  [hasSpaceBeforeUnit]="false"
+                  [name]="'dispersion-max' | translate"
+                  [isPositive]="false"></app-item-property-number>
 
-          <!--<div class="weapon-reliability">
-            <span>Вірогідність клину</span>:
-            <span>{{Math.ceil(1 / selectedItem.conditionShotDec)}} пострілів</span>
-            <span *ngIf="selectedItem.conditionShotDec != selectedItemForUpgrades.conditionShotDec" class="upgraded-param"> ({{Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)}})</span>
-          </div>-->
-          <div class="weapon-reliability">
-            <span>Стартова швидкість кулі</span>:
-            <span>{{selectedItem.bulletSpeed}} м/с</span>
-            <span *ngIf="selectedItem.bulletSpeed != selectedItemForUpgrades.bulletSpeed" class="upgraded-param"> ({{selectedItemForUpgrades.bulletSpeed}})</span>
+                <app-item-property-number
+                  [defaultValue]="selectedItem.bulletSpeed"
+                  [value]="selectedItemForUpgrades.bulletSpeed"
+                  [unit]="'speed-unit' | translate"
+                  [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                  [name]="'bullet-speed' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDistance"
+                  [value]="selectedItemForUpgrades.fireDistance"
+                  [unit]="'distance-unit' | translate"
+                  [hasSpaceBeforeUnit]="true"
+                  [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                  [name]="'fire-distance' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.ammoMagazineSize"
+                  [value]="selectedItemForUpgrades.ammoMagazineSize"
+                  [iconStyle]="'cop ui_wp_propery_07'"
+                  [name]="'ui_ammo_count' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.weight"
+                  [value]="selectedItemForUpgrades.weight"
+                  [iconStyle]="'cop ui_wp_prop_weight'"
+                  [unit]="'st_kg' | translate"
+                  [name]="'st_prop_weight' | translate"
+                  [isPositive]="false"></app-item-property-number>
+              </tbody>
+            </table>
+
+            <!--<div class="weapon-reliability">
+              <span>Вірогідність клину</span>:
+              <span>{{selectedItem.misfireProbability}}%</span>
+              <span *ngIf="selectedItem.misfireProbability != selectedItemForUpgrades.misfireProbability" class="upgraded-param"> ({{selectedItemForUpgrades.misfireProbability}})</span>
+            </div>
+
+            <div class="weapon-reliability">
+              <span>Клин, починаючи з стану</span>:
+              <span>{{selectedItem.misfireConditionK}}%</span>
+              <span *ngIf="selectedItem.misfireConditionK != selectedItemForUpgrades.misfireConditionK" class="upgraded-param"> ({{selectedItemForUpgrades.misfireConditionK}})</span>
+            </div>-->
+
+            <!--<div class="weapon-reliability">
+              <span>Вірогідність клину</span>:
+              <span>{{Math.ceil(1 / selectedItem.conditionShotDec)}} пострілів</span>
+              <span *ngIf="selectedItem.conditionShotDec != selectedItemForUpgrades.conditionShotDec" class="upgraded-param"> ({{Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)}})</span>
+            </div>-->
           </div>
-          <div class="weapon-reliability">
-            <span>Дистанція стрільби</span>:
-            <span>{{selectedItem.fireDistance}} м</span>
-            <span *ngIf="selectedItem.fireDistance != selectedItemForUpgrades.fireDistance" class="upgraded-param"> ({{selectedItemForUpgrades.fireDistance}})</span>
+          <div class="dispersion-chart">
+            <div class="dispersion-title">
+              {{ 'recoil-pattern' | translate }}
+            </div>
+            <canvas id="dispersion-chart-canvas" class="chart"></canvas>
           </div>
-          <div class="weapon-reliability">
-            <span>{{'ui_ammo_count' | translate}}</span>:
-            <span>{{selectedItem.ammoMagazineSize}}</span>
-            <span *ngIf="selectedItem.ammoMagazineSize != selectedItemForUpgrades.ammoMagazineSize" class="upgraded-param"> ({{selectedItemForUpgrades.ammoMagazineSize}})</span>
-          </div>
-          <div class="weapon-reliability">
-            <span>{{'st_prop_weight' | translate}}</span>:
-            <span>{{selectedItem.weight}}</span>
-            <span *ngIf="selectedItem.weight != selectedItemForUpgrades.weight" class="upgraded-param"> ({{selectedItemForUpgrades.weight}})</span>
+          <div class="dynamic-chart">
+            <div class="dynamic-title">
+              {{ 'balistic' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
+            </div>
+            <canvas id="dynamic-chart-canvas" class="chart"></canvas>
           </div>
         </div>
-        <div class="dispersion-chart">
-          <div class="dispersion-title">
-            {{ 'recoil' | translate }}
+
+        <div class="outfit-data" [hidden]="selectedItem == null || selectedItem.$type != 'outfit'">
+          <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'outfit' && selectedItem.category != 'E_HLMET'">
+            <div class="weapon-rpm">
+              <span>{{ selectedItem.localeName | translate }}</span>
+            </div>
+            <table>
+              <tbody>
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.burnProtection"
+                  [value]="selectedItemForUpgrades.burnProtection"
+                  [maxValue]="copMaxProperties.fire_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_thermo'"
+                  [name]="'ui_inv_outfit_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.shockProtection"
+                  [value]="selectedItemForUpgrades.shockProtection"
+                  [maxValue]="copMaxProperties.electra_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_electro'"
+                  [name]="'ui_inv_outfit_shock_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.chemicalBurnProtection"
+                  [value]="selectedItemForUpgrades.chemicalBurnProtection"
+                  [maxValue]="copMaxProperties.acid_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_chem'"
+                  [name]="'ui_inv_outfit_chemical_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.radiationProtection"
+                  [value]="selectedItemForUpgrades.radiationProtection"
+                  [maxValue]="copMaxProperties.radio_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_09'"
+                  [name]="'ui_inv_outfit_radiation_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.telepaticProtection"
+                  [value]="selectedItemForUpgrades.telepaticProtection"
+                  [maxValue]="copMaxProperties.psi_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_11'"
+                  [name]="'ui_inv_outfit_telepatic_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.strikeProtection"
+                  [value]="selectedItemForUpgrades.strikeProtection"
+                  [maxValue]="copMaxProperties.max_wound_protection"
+                  [iconStyle]="'cop ui_am_prop_damage'"
+                  [name]="'ui_inv_outfit_wound_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.woundProtection"
+                  [value]="selectedItemForUpgrades.woundProtection"
+                  [maxValue]="copMaxProperties.max_wound_protection"
+                  [iconStyle]="'cop ui_am_prop_strike_damage'"
+                  [name]="'strikeProtection' | translate"></app-item-property-bar>
+
+                  <app-item-property-bar
+                    [defaultValue]="selectedItem.explosionProtection"
+                    [value]="selectedItemForUpgrades.explosionProtection"
+                    [maxValue]="copMaxProperties.max_explo_protection"
+                    [iconStyle]="'cop ui_am_prop_explosion_damage'"
+                    [name]="'explosionProtection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="copMaxProperties.max_fire_wound_protection - selectedItem.hitFractionActor"
+                  [value]="copMaxProperties.max_fire_wound_protection - selectedItemForUpgrades.hitFractionActor"
+                  [maxValue]="copMaxProperties.max_fire_wound_protection"
+                  [iconStyle]="'cop ui_am_propery_01'"
+                  [name]="'ui_inv_outfit_fire_wound_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="1 - selectedItem.powerLoss"
+                  [value]="1 - selectedItemForUpgrades.powerLoss"
+                  [maxValue]="1"
+                  [iconStyle]="'cop ui_am_prop_sprint'"
+                  [name]="'powerLoss' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.powerRestoreSpeed"
+                  [value]="selectedItemForUpgrades.powerRestoreSpeed"
+                  [maxValue]="copMaxProperties.max_power_restore_speed"
+                  [iconStyle]="'cop ui_am_propery_07'"
+                  [name]="'ui_inv_outfit_power_restore' | translate"></app-item-property-bar>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.weight"
+                  [value]="selectedItemForUpgrades.weight"
+                  [iconStyle]="'cop ui_am_propery_weight'"
+                  [unit]="'st_kg' | translate"
+                  [name]="'st_prop_weight' | translate"
+                  [isPositive]="false"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItem.artefactCount > 0 || selectedItemForUpgrades.artefactCount > 0"
+                  [defaultValue]="selectedItem.artefactCount"
+                  [value]="selectedItemForUpgrades.artefactCount"
+                  [iconStyle]="'cop ui_am_prop_artefact'"
+                  [name]="'st_prop_artefact' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.additionalInventoryWeight > 0"
+                  [defaultValue]="0"
+                  [value]="selectedItemForUpgrades.additionalInventoryWeight"
+                  [iconStyle]="'cop ui_am_propery_08'"
+                  [unit]="'st_kg' | translate"
+                  [name]="'ui_inv_outfit_additional_weight' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.healthRestoreSpeed > 0"
+                  [defaultValue]="0"
+                  [value]="Math.floor(selectedItemForUpgrades.healthRestoreSpeed / copMaxProperties.health_restore_v)*100"
+                  [unit]="'%'"
+                  [hasSpaceBeforeUnit]="false"
+                  [iconStyle]="'cop ui_am_propery_05'"
+                  [name]="'st_prop_restore_health' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.bleedingRestoreSpeed > 0"
+                  [defaultValue]="0"
+                  [value]="Math.floor(selectedItemForUpgrades.bleedingRestoreSpeed / copMaxProperties.bleeding_v)*100"
+                  [unit]="'%'"
+                  [hasSpaceBeforeUnit]="false"
+                  [iconStyle]="'cop ui_am_prop_restore_bleeding'"
+                  [name]="'st_prop_restore_bleeding' | translate"></app-item-property-number>
+              </tbody>
+            </table>
           </div>
-          <canvas id="dispersion-chart-canvas" class="chart"></canvas>
-        </div>
-        <div class="dynamic-chart">
-          <div class="dynamic-title">
-            {{ 'Балістика кулі' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
+
+          <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'outfit' && selectedItem.category == 'E_HLMET'">
+            <div class="weapon-rpm">
+              <span>{{ selectedItem.localeName | translate }}</span>
+            </div>
+
+            <table>
+              <tbody>
+                <app-item-property-bar
+                  [defaultValue]="0"
+                  [value]="selectedItemForUpgrades.burnProtection"
+                  [maxValue]="copMaxProperties.fire_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_thermo'"
+                  [name]="'ui_inv_outfit_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="0"
+                  [value]="selectedItemForUpgrades.shockProtection"
+                  [maxValue]="copMaxProperties.electra_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_electro'"
+                  [name]="'ui_inv_outfit_shock_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.chemicalBurnProtection"
+                  [value]="selectedItemForUpgrades.chemicalBurnProtection"
+                  [maxValue]="copMaxProperties.acid_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_chem'"
+                  [name]="'ui_inv_outfit_chemical_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.radiationProtection"
+                  [value]="selectedItemForUpgrades.radiationProtection"
+                  [maxValue]="copMaxProperties.radio_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_09'"
+                  [name]="'ui_inv_outfit_radiation_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.telepaticProtection"
+                  [value]="selectedItemForUpgrades.telepaticProtection"
+                  [maxValue]="copMaxProperties.psi_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_11'"
+                  [name]="'ui_inv_outfit_telepatic_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="0"
+                  [value]="selectedItemForUpgrades.powerRestoreSpeed"
+                  [maxValue]="copMaxProperties.max_power_restore_speed"
+                  [iconStyle]="'cop ui_am_propery_07'"
+                  [name]="'ui_inv_outfit_power_restore' | translate"></app-item-property-bar>
+              </tbody>
+            </table>
+
+            <div class="weapon-reliability">
+              <i class="cop ui_am_propery_07 upgrade-property-icon"></i>
+              <span>{{'st_prop_weight' | translate}}</span>:
+              <span>{{selectedItem.weight}}</span>
+              <span *ngIf="selectedItem.weight != selectedItemForUpgrades.weight" class="upgraded-param"> ({{selectedItemForUpgrades.weight}})</span>
+            </div>
           </div>
-          <canvas id="dynamic-chart-canvas" class="chart"></canvas>
         </div>
-      </div>
-    </div>
+      </ng-container>
+
+      <ng-container *ngIf="game == 'cs'">
+        <div class="weapon-data" [hidden]="selectedItem == null || selectedItem.$type != 'weapon'">
+          <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'weapon'">
+            <div class="weapon-rpm">
+              <span>{{ selectedItem.localeName | translate }}</span>
+            </div>
+
+            <table>
+              <tbody>
+                <app-item-property-number
+                  [defaultValue]="selectedItem.rpm"
+                  [value]="selectedItemForUpgrades.rpm"
+                  [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                  [name]="'ui_inv_rate_of_fire' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="Math.ceil(1 / selectedItem.conditionShotDec)"
+                  [value]="Math.ceil(1 / selectedItemForUpgrades.conditionShotDec)"
+                  [iconStyle]="'cop ui_wp_prop_nadezhnost'"
+                  [name]="'Ресурс ствола' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDispersionBase"
+                  [value]="selectedItemForUpgrades.fireDispersionBase"
+                  [iconStyle]="'cop ui_wp_prop_tochnost'"
+                  [name]="'Дисперсія' | translate"
+                  [unit]="'°'"
+                  [hasSpaceBeforeUnit]="false"
+                  [isPositive]="false"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDispersionConditionFactor"
+                  [value]="selectedItemForUpgrades.fireDispersionConditionFactor"
+                  [iconStyle]="'cop ui_wp_prop_tochnost'"
+                  [unit]="'%'"
+                  [hasSpaceBeforeUnit]="false"
+                  [name]="'Максимальна дисперсія' | translate"
+                  [isPositive]="false"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.bulletSpeed"
+                  [value]="selectedItemForUpgrades.bulletSpeed"
+                  [unit]="'м/с'"
+                  [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                  [name]="'Стартова швидкість кулі' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.fireDistance"
+                  [value]="selectedItemForUpgrades.fireDistance"
+                  [unit]="'м'"
+                  [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                  [name]="'Дистанція стрільби' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.ammoMagazineSize"
+                  [value]="selectedItemForUpgrades.ammoMagazineSize"
+                  [iconStyle]="'cop ui_wp_propery_07'"
+                  [name]="'ui_ammo_count' | translate"></app-item-property-number>
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.weight"
+                  [value]="selectedItemForUpgrades.weight"
+                  [iconStyle]="'cop ui_wp_prop_weight'"
+                  [name]="'st_prop_weight' | translate"
+                  [isPositive]="false"></app-item-property-number>
+              </tbody>
+            </table>
+
+            <div class="weapon-reliability">
+              <span>{{'ui_ammo_count' | translate}}</span>:
+              <span>{{selectedItem.ammoMagazineSize}}</span>
+              <span *ngIf="selectedItem.ammoMagazineSize != selectedItemForUpgrades.ammoMagazineSize" class="upgraded-param"> ({{selectedItemForUpgrades.ammoMagazineSize}})</span>
+            </div>
+            <div class="weapon-reliability">
+              <span>{{'st_prop_weight' | translate}}</span>:
+              <span>{{selectedItem.weight}}</span>
+              <span *ngIf="selectedItem.weight != selectedItemForUpgrades.weight" class="upgraded-param"> ({{selectedItemForUpgrades.weight}})</span>
+            </div>
+          </div>
+          <div class="dispersion-chart">
+            <div class="dispersion-title">
+              {{ 'recoil' | translate }}
+            </div>
+            <canvas id="dispersion-chart-canvas" class="chart"></canvas>
+          </div>
+          <div class="dynamic-chart">
+            <div class="dynamic-title">
+              {{ 'Балістика кулі' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
+            </div>
+            <canvas id="dynamic-chart-canvas" class="chart"></canvas>
+          </div>
+        </div>
+
+        <div class="outfit-data" [hidden]="selectedItem == null || selectedItem.$type != 'outfit'">
+          <div class="weapon-info" *ngIf="selectedItem && selectedItem.$type == 'outfit' && selectedItem.category != 'E_HLMET'">
+            <div class="weapon-rpm">
+              <span>{{ selectedItem.localeName | translate }}</span>
+            </div>
+            <table>
+              <tbody>
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.burnProtection"
+                  [value]="selectedItemForUpgrades.burnProtection"
+                  [maxValue]="csMaxProperties.fire_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_thermo'"
+                  [name]="'ui_inv_outfit_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.shockProtection"
+                  [value]="selectedItemForUpgrades.shockProtection"
+                  [maxValue]="csMaxProperties.electra_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_electro'"
+                  [name]="'ui_inv_outfit_shock_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.chemicalBurnProtection"
+                  [value]="selectedItemForUpgrades.chemicalBurnProtection"
+                  [maxValue]="csMaxProperties.acid_zone_max_power"
+                  [iconStyle]="'cop ui_am_prop_chem'"
+                  [name]="'ui_inv_outfit_chemical_burn_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.radiationProtection"
+                  [value]="selectedItemForUpgrades.radiationProtection"
+                  [maxValue]="csMaxProperties.radio_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_09'"
+                  [name]="'ui_inv_outfit_radiation_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.telepaticProtection"
+                  [value]="selectedItemForUpgrades.telepaticProtection"
+                  [maxValue]="csMaxProperties.psi_zone_max_power"
+                  [iconStyle]="'cop ui_am_propery_11'"
+                  [name]="'ui_inv_outfit_telepatic_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.strikeProtection"
+                  [value]="selectedItemForUpgrades.strikeProtection"
+                  [maxValue]="csMaxProperties.max_wound_protection"
+                  [iconStyle]="'cop ui_am_prop_damage'"
+                  [name]="'ui_inv_outfit_strike_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.woundProtection"
+                  [value]="selectedItemForUpgrades.woundProtection"
+                  [maxValue]="csMaxProperties.max_wound_protection"
+                  [iconStyle]="'cop ui_am_prop_strike_damage'"
+                  [name]="'ui_inv_outfit_wound_protection' | translate"></app-item-property-bar>
+
+                  <app-item-property-bar
+                    [defaultValue]="selectedItem.explosionProtection"
+                    [value]="selectedItemForUpgrades.explosionProtection"
+                    [maxValue]="csMaxProperties.max_explo_protection"
+                    [iconStyle]="'cop ui_am_prop_explosion_damage'"
+                    [name]="'ui_inv_outfit_explosion_protection' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="csMaxProperties.max_fire_wound_protection - selectedItem.hitFractionActor"
+                  [value]="csMaxProperties.max_fire_wound_protection - selectedItemForUpgrades.hitFractionActor"
+                  [maxValue]="csMaxProperties.max_fire_wound_protection"
+                  [iconStyle]="'cop ui_am_propery_01'"
+                  [name]="'ui_inv_outfit_fire_wound_protection' | translate"></app-item-property-bar>
+
+                <!--<app-item-property-bar
+                  [defaultValue]="1 - selectedItem.powerLoss"
+                  [value]="1 - selectedItemForUpgrades.powerLoss"
+                  [maxValue]="1"
+                  [iconStyle]="'cop ui_am_prop_sprint'"
+                  [name]="'powerLoss' | translate"></app-item-property-bar>
+
+                <app-item-property-bar
+                  [defaultValue]="selectedItem.powerRestoreSpeed"
+                  [value]="selectedItemForUpgrades.powerRestoreSpeed"
+                  [maxValue]="max_power_restore_speed"
+                  [iconStyle]="'cop ui_am_propery_07'"
+                  [name]="'ui_inv_outfit_power_restore' | translate"></app-item-property-bar>-->
+
+                <app-item-property-number
+                  [defaultValue]="selectedItem.weight"
+                  [value]="selectedItemForUpgrades.weight"
+                  [iconStyle]="'cop ui_am_propery_weight'"
+                  [name]="'st_prop_weight' | translate"
+                  [isPositive]="false"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItem.artefactCount > 0 || selectedItemForUpgrades.artefactCount > 0"
+                  [defaultValue]="selectedItem.artefactCount"
+                  [value]="selectedItemForUpgrades.artefactCount"
+                  [iconStyle]="'cop ui_am_prop_artefact'"
+                  [name]="'st_prop_artefact' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.additionalInventoryWeight > 0"
+                  [defaultValue]="0"
+                  [value]="selectedItemForUpgrades.additionalInventoryWeight"
+                  [iconStyle]="'cop ui_am_propery_08'"
+                  [name]="'ui_inv_outfit_additional_weight' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.healthRestoreSpeed > 0"
+                  [defaultValue]="0"
+                  [value]="Math.floor(selectedItemForUpgrades.healthRestoreSpeed / csMaxProperties.health_restore_v)*100"
+                  [unit]="'%'"
+                  [iconStyle]="'cs ui_am_propery_05'"
+                  [name]="'st_prop_restore_health' | translate"></app-item-property-number>
+
+                <app-item-property-number *ngIf="selectedItemForUpgrades.bleedingRestoreSpeed > 0"
+                  [defaultValue]="0"
+                  [value]="Math.floor(selectedItemForUpgrades.bleedingRestoreSpeed / csMaxProperties.bleeding_v)*100"
+                  [unit]="'%'"
+                  [iconStyle]="'cop ui_am_prop_restore_bleeding'"
+                  [name]="'st_prop_restore_bleeding' | translate"></app-item-property-number>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ng-container>
+  </div>
   </div>
   <div class="mechanic-container-section actor">
     <div class="buy container">

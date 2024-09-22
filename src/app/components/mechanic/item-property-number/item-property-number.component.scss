@@ -1,0 +1,24 @@
+.title-column {
+  white-space: nowrap;
+  display: flex;
+}
+
+.bar-column {
+  width: 100%;
+}
+
+.title-column,.bar-column {
+  vertical-align: middle;
+}
+
+.bad {
+  color: red;
+}
+
+.good {
+  color: green;
+}
+
+.value {
+  display: flex;
+}

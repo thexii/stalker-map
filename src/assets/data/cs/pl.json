@@ -1300,5 +1300,15 @@
   "st_upgr_group": "Ta cz\u0119\u015B\u0107 zosta\u0142a ju\u017C ulepszona",
   "st_upgr_cant_do": "Monta\u017C niemo\u017Cliwy",
   "st_base_cost": "cena",
-  "st_weight": "waga"
+  "st_weight": "waga",
+  "ui_inv_outfit_burn_protection": "Ogie\u0144",
+  "ui_inv_outfit_shock_protection": "Elektryczne",
+  "ui_inv_outfit_chemical_burn_protection": "Chemiczne",
+  "ui_inv_outfit_radiation_protection": "Promieniowanie",
+  "ui_inv_outfit_telepatic_protection": "Telepatia",
+  "ui_inv_outfit_wound_protection": "Zadrapanie",
+  "ui_inv_outfit_fire_wound_protection": "Kuloodporne",
+  "ui_inv_outfit_strike_protection": "Si\u0142a uderzenia",
+  "ui_inv_outfit_explosion_protection": "Oparzenie chemiczne",
+  "ui_inv_outfit_additional_weight": "Maks. waga"
 }
