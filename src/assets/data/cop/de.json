@@ -1107,5 +1107,6 @@
   "st_upgr_group": "Dieses Teil wurde bereits modifiziert",
   "st_upgr_cant_do": "Der Techniker kann diese Modifikation nicht durchf\u00FChren",
   "st_base_cost": "Preis",
-  "st_weight": "G."
+  "st_weight": "G.",
+  "st_kg": "kg"
 }

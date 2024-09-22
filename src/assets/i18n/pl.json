@@ -227,5 +227,72 @@
     "ways_between_smart_terrains_name": "Trasy Stalkerów",
     "anomaly_zone_artefact_way_name": "Trasy artefaktów w anomalii",
     "level-changers": "Przejścia pomiędzy lokalizacjami",
-    "mechanics": "Techniki"
+    "mechanics": "Techniki",
+
+    "item-trader-chance": "Шанс появи предмета у торговця",
+
+    "jup_b200_tech_materials_brought_counter_1": "Знайдено радіоматеріалів: 1",
+    "jup_b200_tech_materials_brought_counter_2": "Знайдено радіоматеріалів: 2",
+    "jup_b200_tech_materials_brought_counter_3": "Знайдено радіоматеріалів: 3",
+    "jup_b200_tech_materials_brought_counter_4": "Знайдено радіоматеріалів: 4",
+    "jup_b200_tech_materials_brought_counter_5": "Знайдено радіоматеріалів: 5",
+    "jup_b200_tech_materials_brought_counter_6": "Знайдено радіоматеріалів: 6",
+    "jup_b200_tech_materials_brought_counter_7": "Знайдено радіоматеріалів: 7",
+    "jup_b200_tech_materials_brought_counter_8": "Знайдено радіоматеріалів: 8",
+    "jup_b200_tech_materials_brought_counter_9": "Знайдено радіоматеріалів: 9",
+
+    "counter_equal(jup_a6_actor_help_freedom:4)": "Перевага «Волі» на Янові",
+    "counter_equal(jup_a6_actor_help_duty:4)": "Перевага «Долга» на Янові",
+    "counter_equal(jup_a6_actor_help_stalkers:3)": "Тричі допоміг сталкерам на Янові",
+
+    "zat_b3_tech_discount_1": "Кардан випив горілки",
+    "zat_b3_tech_discount_2": "Кардан випив двічі",
+    "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити",
+
+    "bad_mechanic_price": "Націнка за ремонт",
+    "good_mechanic_price": "Скидка за ремонт",
+    "bad_trader_buy_price": "Знижена ціна скупки",
+    "good_trader_buy_price": "Збільшена ціна закупки",
+    "bad_trader_sell_price": "Націнка на товари",
+    "good_trader_sell_price": "Скидка на товари",
+
+    "gar_stalker_24h_trader": "Цілодобовий торговець з Барахолки",
+    "gar_stalker_evening_trader": "Вечірній торговець з Барахолки",
+    "gar_stalker_night_trader": "Нічний торговець з Барахолки",
+    "gar_quest_liberate_conc_camp_done": "Звільнити сталкерів з концтабору бандитів",
+    "red_forest_underground_trader": "Торговець в казармі в шахтах",
+
+    "hide-marker": "Приховати",
+    "unhide-marker": "Показати",
+    "hidden-markers": "Приховані мітки",
+
+    "recoil": "Паттерн віддачі",
+    "powerLoss": "Ергономіка",
+    "explosionProtection": "Захист від вибуху",
+    "strikeProtection": "Захист від розриву",
+    "shooting-resource": "Ресурс стрільби",
+    "dispersion": "Дисперсія",
+    "dispersion-max": "Максимальна дисперсія",
+    "bullet-speed": "Стартова швидкість кулі",
+    "fire-distance": "Дистанція стрільби",
+    "speed-unit": "м/с",
+    "distance-unit": "м",
+    "misfire-probability": "Вірогідність клину",
+    "misfire-condition-k": "Клин, починаючи з стану",
+    "balistic": "Балістика кулі",
+
+    "recoil-base": "Базова",
+    "recoil-up": "Модифікована",
+
+    "recoil-zoom-base": "Базова в прицілі",
+    "recoil-zoom-up": "Модифікована в прицілі",
+
+    "synonyms": {
+      "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
+      "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
+      "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"],
+
+      "trader": ["Крамар", "Торгаш", "Барига"],
+      "mechanics": ["Механік", "Технік"]
+    }
 }

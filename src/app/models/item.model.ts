@@ -44,6 +44,14 @@ export class Item {
     public camMaxAngleHorz : number;
     public camStepAngleHorz : number;
 
+    public zoomCamRelaxSpeed : number;
+    public zoomCamDispersion : number;
+    public zoomCamDispersionInc : number;
+    public zoomCamDispertionFrac : number;
+    public zoomCamMaxAngle : number;
+    public zoomCamMaxAngleHorz : number;
+    public zoomCamStepAngleHorz : number;
+
     public fireDistance : number;
     public bulletSpeed : number;
     public rpm : number;

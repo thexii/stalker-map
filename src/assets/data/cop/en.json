@@ -1107,5 +1107,6 @@
   "st_upgr_group": "This part has already been modified",
   "st_upgr_cant_do": "The technician cannot perform this modification",
   "st_base_cost": "Price",
-  "st_weight": "Wgt."
+  "st_weight": "Wgt.",
+  "st_kg": "kg"
 }

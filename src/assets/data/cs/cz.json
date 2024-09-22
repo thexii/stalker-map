@@ -1311,5 +1311,6 @@
   "ui_inv_outfit_fire_wound_protection": "Nepr\u00F9st\u00F8elnost",
   "ui_inv_outfit_strike_protection": "N\u00E1raz",
   "ui_inv_outfit_explosion_protection": "V\u00FDbuchy",
-  "ui_inv_outfit_additional_weight": "Max weight"
+  "ui_inv_outfit_additional_weight": "Max weight",
+  "st_kg": "kg"
 }

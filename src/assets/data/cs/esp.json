@@ -1310,5 +1310,6 @@
   "ui_inv_outfit_fire_wound_protection": "Gorro antibalas",
   "ui_inv_outfit_strike_protection": "Impacto",
   "ui_inv_outfit_explosion_protection": "Explosi\u00F3n",
-  "ui_inv_outfit_additional_weight": "Peso m\u00E1x."
+  "ui_inv_outfit_additional_weight": "Peso m\u00E1x.",
+  "st_kg": "kg"
 }

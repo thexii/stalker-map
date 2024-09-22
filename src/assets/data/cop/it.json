@@ -1115,5 +1115,6 @@
   "st_upgr_group": "Questa parte \u00E8 gi\u00E0 stata modificata",
   "st_upgr_cant_do": "Il tecnico non pu\u00F2 eseguire questa modifica",
   "st_base_cost": "Prezzo",
-  "st_weight": "Peso"
+  "st_weight": "Peso",
+  "st_kg": "kg"
 }
