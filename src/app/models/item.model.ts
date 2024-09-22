@@ -14,6 +14,17 @@ export class Item {
     public isQuest: boolean;
     public installedUpgrades: string[];
 
+    public price: number;
+    public boxSize: number;
+
+    public upgr_icon_x : number;
+    public upgr_icon_y : number;
+    public upgr_icon_width : number;
+    public upgr_icon_height : number;
+
+    public $type: string;
+
+    //weapon props
     public hasScope: boolean;
     public hasSilencer: boolean;
     public hasGrenadeLauncher: boolean;
@@ -24,16 +35,6 @@ export class Item {
     public silencerY: number;
     public grenadeLauncherX: number;
     public grenadeLauncherY: number;
-
-    public price: number;
-    public boxSize: number;
-
-    public upgr_icon_x : number;
-    public upgr_icon_y : number;
-    public upgr_icon_width : number;
-    public upgr_icon_height : number;
-
-    public $type: string;
 
     public camRelaxSpeed : number;
     public camDispersion : number;
@@ -54,4 +55,22 @@ export class Item {
 
     public misfireProbability : number;
     public misfireConditionK : number;
+
+    //outfit props
+    public burnProtection : number;
+    public shockProtection : number;
+    public radiationProtection : number;
+    public chemicalBurnProtection : number;
+    public telepaticProtection : number;
+    public strikeProtection : number;
+    public explosionProtection : number;
+    public woundProtection : number;
+    public hitFractionActor : number;
+    public powerLoss : number;
+    public artefactCount : number;
+
+    public healthRestoreSpeed: number = 0;
+    public bleedingRestoreSpeed : number = 0;
+    public powerRestoreSpeed : number = 0;
+    public additionalInventoryWeight: number = 0;
 }

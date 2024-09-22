@@ -1301,5 +1301,15 @@
   "st_upgr_group": "Tato komponenta ji\u017E byla modifikov\u00E1na",
   "st_upgr_cant_do": "Nelze nainstalovat",
   "st_base_cost": "cena",
-  "st_weight": "v\u00E1ha"
+  "st_weight": "v\u00E1ha",
+  "ui_inv_outfit_burn_protection": "Pop\u00E1leniny",
+  "ui_inv_outfit_shock_protection": "Elektrick\u00FD \u0161ok",
+  "ui_inv_outfit_chemical_burn_protection": "Chem. pop\u00E1leniny",
+  "ui_inv_outfit_radiation_protection": "Radiace",
+  "ui_inv_outfit_telepatic_protection": "Telepatie",
+  "ui_inv_outfit_wound_protection": "Trh\u00E1n\u00ED",
+  "ui_inv_outfit_fire_wound_protection": "Nepr\u00F9st\u00F8elnost",
+  "ui_inv_outfit_strike_protection": "N\u00E1raz",
+  "ui_inv_outfit_explosion_protection": "V\u00FDbuchy",
+  "ui_inv_outfit_additional_weight": "Max weight"
 }

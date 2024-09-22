@@ -345,6 +345,43 @@ export class MapComponent {
           });
         }
       })
+
+
+      fetch(`/assets/data/${this.game}/locale_import.json`)
+      .then((response) => {
+        if (response.ok) {
+          response.json().then((locales: any) => {
+            let games = Object.keys(locales);
+            if (games.length > 0) {
+              for (let game of games) {
+                let importLocales = locales[game].locales;
+
+                if (!(importLocales == null || importLocales.length == 0)) {
+
+                  fetch(`/assets/data/${game}/${this.translate.currentLang}.json`)
+                  .then((response) => {
+                    if (response.ok) {
+                      response.json().then((locales: any) => {
+                        if (locales) {
+                          let localesToInject: any = {};
+                          for (let locale of importLocales) {
+                            if (locales[locale] != null) {
+                              localesToInject[locale] = locales[locale];
+                            }
+                          }
+
+                          this.translate.setTranslation(language, localesToInject, true);
+                        }
+                      });
+                    }
+                  })
+                }
+              }
+            }
+
+          });
+        }
+      });
   }
 
   private async ngOnDestroy(): Promise<void> {

@@ -13,11 +13,14 @@ import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import Chart, { BubbleDataPoint } from 'chart.js/auto';
+import { ItemPropertyComponent } from './item-property-bar/item-property.component';
+import { ItemPropertyNumberComponent } from './item-property-number/item-property-number.component';
 
 @Component({
   selector: 'app-mechanic',
   standalone: true,
-  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective],
+  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent
+  ],
   templateUrl: './mechanic.component.html',
   styleUrl: './mechanic.component.scss'
 })
@@ -48,8 +51,37 @@ export class MechanicComponent {
   public itemTooltipComponent: any = ItemTooltipComponent;
 
   public repairPriceFactor: number = 0.6;
+
   public recoilTimeChart: any;
   public weaponDynamicChart: any;
+  public outfitStatsChart: any;
+
+  public readonly copMaxProperties = {
+    radio_zone_max_power: 0.03,
+    fire_zone_max_power: 0.2,
+    acid_zone_max_power: 0.2,
+    psi_zone_max_power: 0.1,
+    electra_zone_max_power: 0.8,
+    max_power_restore_speed: 0.020,
+    max_fire_wound_protection: 1.45,
+    max_wound_protection: 0.5,
+    max_explo_protection: 0.55,
+    bleeding_v: 0.002,
+    health_restore_v: 0.0001
+  }
+
+  public readonly csMaxProperties = {
+    radio_zone_max_power: 0.166,
+    fire_zone_max_power: 0.166,
+    acid_zone_max_power: 0.166,
+    psi_zone_max_power: 0.166,
+    electra_zone_max_power: 0.166,
+    max_fire_wound_protection: 1.45,
+    max_wound_protection: 0.5,
+    max_explo_protection: 0.55,
+    bleeding_v: 0.002,
+    health_restore_v: 0.0003
+  }
 
   constructor(private mapService: MapService) { }
 
@@ -114,6 +146,10 @@ export class MechanicComponent {
         this.weaponDynamicChart.destroy();
       }
 
+      if (this.outfitStatsChart) {
+        this.outfitStatsChart.destroy();
+      }
+
       for (let up of lockedUpgrades) {
         up.upgrade = up.upgrade.replace('_sect_', '_');
       }
@@ -129,6 +165,14 @@ export class MechanicComponent {
               upgrade.isInstalled = this.selectedItemForUpgrades.installedUpgrades.includes(upgrade.name);
               if (upgrade.isInstalled) {
                 isBlocked = true;
+
+                let effectsPropsUp = Object.keys(upgrade.propertiesEffects);
+                let effectsValuesUp = Object.values(upgrade.propertiesEffects);
+
+                for (let i = 0; i < effectsPropsUp.length; i++) {
+                  this.applyUpgradeEffect(this.selectedItem, effectsPropsUp[i], effectsValuesUp[i], 1);
+                  this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], 1);
+                }
               }
             }
 
@@ -186,6 +230,10 @@ export class MechanicComponent {
       if (item.$type == "weapon") {
         this.resetWeaponStats();
       }
+
+      if (this.selectedItem.$type == "outfit") {
+        this.resetOutfitStats();
+      }
   }
 
   public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection): void {
@@ -194,6 +242,7 @@ export class MechanicComponent {
     }
 
     console.log(upgrade)
+
     let effectsProps: string[] = []
     let effectsValues: any[] = [];
 
@@ -213,7 +262,7 @@ export class MechanicComponent {
           let effectsValuesUp = Object.values(up.propertiesEffects);
 
           for (let i = 0; i < effectsPropsUp.length; i++) {
-            this.applyUpgradeEffect(effectsPropsUp[i], effectsValuesUp[i], -1);
+            this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], -1);
           }
         }
 
@@ -233,7 +282,7 @@ export class MechanicComponent {
           let effectsValuesUp = Object.values(up.propertiesEffects);
 
           for (let i = 0; i < effectsPropsUp.length; i++) {
-            this.applyUpgradeEffect(effectsPropsUp[i], effectsValuesUp[i], -1);
+            this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], -1);
           }
         }
 
@@ -244,16 +293,20 @@ export class MechanicComponent {
       upgrade.isInstalled = true;
 
       for (let i = 0; i < effectsProps.length; i++) {
-        this.applyUpgradeEffect(effectsProps[i], effectsValues[i], 1);
+        this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsProps[i], effectsValues[i], 1);
       }
     }
 
     if (this.selectedItem.$type == "weapon") {
       this.resetWeaponStats();
     }
+
+    if (this.selectedItem.$type == "outfit") {
+      this.resetOutfitStats();
+    }
   }
 
-  private applyUpgradeEffect(propName: string, effectsValues: string, koeff: number): void {
+  private applyUpgradeEffect(item: Item, propName: string, effectsValues: string, koeff: number): void {
     let propNameParts = propName.split('_');
 
     if (propNameParts.length > 1) {
@@ -269,15 +322,26 @@ export class MechanicComponent {
 
     switch (propName) {
       case "ammoMagSize": {
-        this.selectedItemForUpgrades.ammoMagazineSize += koeff * value;
+        item.ammoMagazineSize += koeff * value;
         break;
       }
       case "invWeight": {
-        this.selectedItemForUpgrades.weight += koeff * value;
+        item.weight += koeff * value;
+        item.weight = Math.round(item.weight * 100) / 100;
+        break;
+      }
+      case "fireDispersionBase": {
+        item.fireDispersionBase += koeff * value;
+        item.fireDispersionBase = Math.round(item.fireDispersionBase * 100) / 100;
         break;
       }
       default: {
-        (this.selectedItemForUpgrades as any)[propName] += koeff * value;
+        if ((item as any)[propName] == undefined) {
+          (item as any)[propName] = koeff * value;
+        }
+        else {
+          (item as any)[propName] += koeff * value;
+        }
       }
     }
   }
@@ -371,14 +435,14 @@ export class MechanicComponent {
           {
             data: shotsUp,
             label: 'Модифікована',
-            backgroundColor: 'green',
-            borderColor: 'green',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
           },
           {
             data: shots,
             label: 'Базова',
-            backgroundColor: 'white',
-            borderColor: 'white',
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
             pointRadius: 5
           },
       ]
@@ -461,6 +525,100 @@ export class MechanicComponent {
           }
         }
       }
+    });*/
+  }
+
+  private resetOutfitStats(): void {
+
+    if (this.outfitStatsChart) {
+      this.outfitStatsChart.destroy();
+    }
+    /*
+    public burnProtection : number;
+    public shockProtection : number;
+    public radiationProtection : number;
+    public chemicalBurnProtection : number;
+    public telepaticProtection : number;
+    public strikeProtection : number;
+    public explosionProtection : number;
+    public woundProtection : number;
+    public hitFractionActor : number;
+    public powerLoss : number;
+    public artefactCount : number;*/
+
+    let itemStats = [
+      this.selectedItem.burnProtection,
+      this.selectedItem.shockProtection,
+      this.selectedItem.radiationProtection,
+      this.selectedItem.chemicalBurnProtection,
+      this.selectedItem.strikeProtection,
+      this.selectedItem.explosionProtection,
+      this.selectedItem.woundProtection,
+      /*this.selectedItem.hitFractionActor,
+      this.selectedItem.powerLoss,
+      this.selectedItem.artefactCount,*/
+    ]
+
+    let itemStatsUp = [
+      this.selectedItemForUpgrades.burnProtection,
+      this.selectedItemForUpgrades.shockProtection,
+      this.selectedItemForUpgrades.radiationProtection,
+      this.selectedItemForUpgrades.chemicalBurnProtection,
+      this.selectedItemForUpgrades.strikeProtection,
+      this.selectedItemForUpgrades.explosionProtection,
+      this.selectedItemForUpgrades.woundProtection,
+      /*this.selectedItemForUpgrades.hitFractionActor,
+      this.selectedItemForUpgrades.powerLoss,
+      this.selectedItemForUpgrades.artefactCount,*/
+    ]
+
+    /*this.outfitStatsChart = new Chart("outfit-stats-chart-canvas", {
+      type: 'radar',
+      data: {
+        labels: [
+          'burnProtection',
+          'shockProtection',
+          'radiationProtection',
+          'chemicalBurnProtection',
+          'strikeProtection',
+          'explosionProtection',
+          'woundProtection',
+          'hitFractionActor',
+          'powerLoss',
+          'artefactCount',
+        ],
+        datasets: [
+          {
+            data: itemStatsUp,
+            label: 'Модифікована',
+            fill: true,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
+            pointBackgroundColor: 'rgb(255, 99, 132)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)'
+          },
+          {
+            data: itemStats,
+            label: 'Базова',
+            fill: true,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)'
+          },
+        ]
+      },
+      options: {
+        elements: {
+          line: {
+            borderWidth: 3
+          }
+        }
+      },
     });*/
   }
 
