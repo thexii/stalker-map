@@ -243,8 +243,6 @@ export class MechanicComponent {
       return;
     }
 
-    console.log(upgrade)
-
     let effectsProps: string[] = []
     let effectsValues: any[] = [];
 
