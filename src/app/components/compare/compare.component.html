@@ -1,0 +1,126 @@
+<div class="compare-container" *ngIf="isLoaded">
+  <div class="tabs">
+    <div class="weapons">Weapons</div>
+    <div class="outfits">Outfits</div>
+  </div>
+  <div class="items-container">
+    <ng-container *ngIf="selectedTab == tabs[0]">
+      <ng-container *ngFor="let weapon of compare.weaponsToCompare">
+        <div class="mechanic-upgrades">
+          <div class="game-icon-container">
+            <div class="game-icon {{weapon.game}}"></div>
+          </div>
+          <div class="buttons">
+            <div class="remove" (click)="compare.removeWeapon(weapon)"></div>
+            <div class="copy"></div>
+          </div>
+          <div class="upgrade-item-image-container">
+            <div *ngIf="weapon.game == 'cs'"
+            class="inventory-item-image {{weapon.game}} inventory-item-x-{{weapon.gridX}} inventory-item-y-{{weapon.gridY}}"
+            [ngStyle]="{'width': weapon.width * 50 + 'px', 'height': weapon.height * 50 + 'px'}"></div>
+            <div *ngIf="weapon.game == 'cop'" class='upgrade-item-image {{weapon.category}}'
+            [ngStyle]="{
+              'width': weapon.upgr_icon_width + 'px',
+              'height': weapon.upgr_icon_height + 'px',
+              'background-position': 'left -' + weapon.upgr_icon_x + 'px top -' + weapon.upgr_icon_y + 'px'}">
+
+            </div>
+          </div>
+
+          <table>
+            <tbody>
+              <tr class="stat-with-bar">
+                <td class="title-column">
+                  <i class="upgrade-property-icon"></i>
+                  <span class="title-with-bar">{{'ui_inv_damage' | translate}}:</span>
+                </td>
+                <td class="bar-column">
+                  <span class="value" *ngFor="let power of weapon.hitPower">
+                    <span> {{power}}</span>
+                  </span>
+                </td>
+              </tr>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.rpm"
+                [value]="weapon.rpm"
+                [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                [name]="'ui_inv_rate_of_fire' | translate"
+                [isCompare]="true"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="Math.ceil(1 / bestWeaponStats.conditionShotDec)"
+                [value]="Math.ceil(1 / weapon.conditionShotDec)"
+                [iconStyle]="'cop ui_wp_prop_nadezhnost'"
+                [isCompare]="true"
+                [name]="'shooting-resource' | translate"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.fireDispersionBase"
+                [value]="weapon.fireDispersionBase"
+                [iconStyle]="'cop ui_wp_prop_tochnost'"
+                [name]="'dispersion' | translate"
+                [unit]="'°'"
+                [hasSpaceBeforeUnit]="false"
+                [isCompare]="true"
+                [isPositive]="false"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.fireDispersionConditionFactor"
+                [value]="weapon.fireDispersionConditionFactor"
+                [iconStyle]="'cop ui_wp_prop_tochnost'"
+                [unit]="'%'"
+                [hasSpaceBeforeUnit]="false"
+                [name]="'dispersion-max' | translate"
+                [isCompare]="true"
+                [isPositive]="false"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.bulletSpeed"
+                [value]="weapon.bulletSpeed"
+                [unit]="'speed-unit' | translate"
+                [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                [isCompare]="true"
+                [name]="'bullet-speed' | translate"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.fireDistance"
+                [value]="weapon.fireDistance"
+                [unit]="'distance-unit' | translate"
+                [hasSpaceBeforeUnit]="true"
+                [iconStyle]="'cop ui_wp_prop_nastilnost'"
+                [isCompare]="true"
+                [name]="'fire-distance' | translate"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.ammoMagazineSize"
+                [value]="weapon.ammoMagazineSize"
+                [iconStyle]="'cop ui_wp_propery_07'"
+                [isCompare]="true"
+                [name]="'ui_ammo_count' | translate"></app-item-property-number>
+
+              <app-item-property-number
+                [defaultValue]="bestWeaponStats.weight"
+                [value]="weapon.weight"
+                [iconStyle]="'cop ui_wp_prop_weight'"
+                [unit]="'st_kg' | translate"
+                [name]="'st_prop_weight' | translate"
+                [isCompare]="true"
+                [isPositive]="false"></app-item-property-number>
+            </tbody>
+          </table>
+
+          <app-item-upgrades
+            [selectedDiscount]="selectedDiscount"
+            [upgradeProperties]="upgradeProperties[weapon.game]"
+            [game]="weapon.game"
+            [item]="weapon"
+            [selectedItemUpgrade]="upgradeForItems[weapon.guid]"
+            (upgradeSelectedEvent)="selectUpgrade($event)"></app-item-upgrades>
+        </div>
+
+
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

@@ -16,6 +16,7 @@ export class ItemPropertyNumberComponent {
   @Input() public name: string;
   @Input() public isPositive: boolean = true;
   @Input() public hasSpaceBeforeUnit: boolean = true;
+  @Input() public isCompare: boolean = false;
 
   public defaultValueString: string;
   public valueString: string;
@@ -34,50 +35,74 @@ export class ItemPropertyNumberComponent {
       }
     }
 
-    if (this.defaultValue) {
-      this.defaultValueString = `${this.defaultValue}${unit}`;
-
-      if (this.defaultValue != this.value) {
-        this.valueString += ` (${this.value}${unit})`;
-
-        if (this.defaultValue > this.value) {
-          if (this.isPositive) {
-            this.valueStyle = 'red';
-          }
-          else {
-            this.valueStyle = 'green';
-          }
+    if (this.isCompare) {
+      this.valueString += `${this.value}${unit}`;
+      if (this.defaultValue > this.value) {
+        if (this.isPositive) {
+          this.valueStyle = 'red';
         }
         else {
-          if (this.isPositive) {
-            this.valueStyle = 'green';
-          }
-          else {
-            this.valueStyle = 'red';
-          }
+          this.valueStyle = 'green';
         }
+      }
+      else if (this.defaultValue < this.value) {
+        if (this.isPositive) {
+          this.valueStyle = 'green';
+        }
+        else {
+          this.valueStyle = 'red';
+        }
+      }
+      else {
+        this.valueStyle = 'green';
       }
     }
     else {
-      if (this.value != 0) {
-        if (this.value > 0) {
-          this.valueString += `+${this.value}${unit}`;
+      if (this.defaultValue) {
+        this.defaultValueString = `${this.defaultValue}${unit}`;
 
-          if (this.isPositive) {
-            this.valueStyle = 'green';
+        if (this.defaultValue != this.value) {
+          this.valueString += ` (${this.value}${unit})`;
+
+          if (this.defaultValue > this.value) {
+            if (this.isPositive) {
+              this.valueStyle = 'red';
+            }
+            else {
+              this.valueStyle = 'green';
+            }
           }
           else {
-            this.valueStyle = 'red';
+            if (this.isPositive) {
+              this.valueStyle = 'green';
+            }
+            else {
+              this.valueStyle = 'red';
+            }
           }
         }
-        else {
-          this.valueString += `-${this.value}${unit}`;
+      }
+      else {
+        if (this.value != 0) {
+          if (this.value > 0) {
+            this.valueString += `+${this.value}${unit}`;
 
-          if (this.isPositive) {
-            this.valueStyle = 'red';
+            if (this.isPositive) {
+              this.valueStyle = 'green';
+            }
+            else {
+              this.valueStyle = 'red';
+            }
           }
           else {
-            this.valueStyle = 'green';
+            this.valueString += `-${this.value}${unit}`;
+
+            if (this.isPositive) {
+              this.valueStyle = 'red';
+            }
+            else {
+              this.valueStyle = 'green';
+            }
           }
         }
       }

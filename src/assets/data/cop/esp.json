@@ -1116,5 +1116,6 @@
   "st_upgr_cant_do": "El t\u00E9cnico no puede realizar esta modificaci\u00F3n",
   "st_base_cost": "Precio",
   "st_weight": "Peso",
-  "st_kg": "kg"
+  "st_kg": "kg",
+  "ui_inv_damage": "Da\u00F1o"
 }

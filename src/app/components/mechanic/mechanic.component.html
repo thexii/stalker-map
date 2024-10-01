@@ -14,27 +14,13 @@
 
         </div>
       </div>
-      <div class="selected-item-upgrades" *ngIf="selectedItem && selectedItemUpgrade">
-        <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
-          <div id="section-{{sectionIndex}}" class="upgrade-section">
-            <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
-              <div tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
-                'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
-                'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
-                'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
-              }" (click)="selectUpgrade(upgrade, upgradeSection)">
-                <ng-container *ngIf="!upgrade.isLocked">
-                  <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
-                  <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
-                  <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
-                  <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
-                </ng-container>
-                <div class="upgrade-item-highlight upgrade-item-highlight-locked" [ngClass]="{'active': upgrade.isLocked}"></div>
-              </div>
-            </ng-container>
-          </div>
-        </ng-container>
-      </div>
+      <app-item-upgrades
+        [selectedDiscount]="selectedDiscount"
+        [upgradeProperties]="upgradeProperties"
+        [game]="game"
+        [item]="selectedItem"
+        [selectedItemUpgrade]="selectedItemUpgrade"
+        (upgradeSelectedEvent)="selectUpgrade($event)"></app-item-upgrades>
     </div>
   </div>
   <div class="mechanic-container-section section-info {{game}} custom-scroll">
@@ -586,6 +572,7 @@
                     {{Math.floor(item.price * repairPriceFactor * selectedDiscount.value)}}
                   </div>
                   <div class="inventory-item-upgrade" *ngIf="item.installedUpgrades && item.installedUpgrades.length > 0"></div>
+                  <!--<div class="inventory-item-upgrade inventory-item-compare" *ngIf="item.$type == 'weapon'" (click)="addItemToCompare(item)"></div>-->
                 </div>
                 <div class="inventory-item-image {{game}} inventory-item-x-{{item.gridX}} inventory-item-y-{{item.gridY}}">
                   <div *ngIf="item.hasScope && item.scopeX > -1000 && item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="item.scopeX" [style.top.px]="item.scopeY"></div>

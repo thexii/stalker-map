@@ -108,6 +108,12 @@
     "fireDispersionConditionFactor": 15,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.31,
+      0.31,
+      0.31,
+      0.31
+    ],
     "id": 0,
     "uniqueName": "wpn_ak74",
     "localeName": "st_wpn_ak74",
@@ -189,6 +195,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
     "id": 0,
     "uniqueName": "wpn_fort",
     "localeName": "st_wpn_fort",
@@ -286,6 +298,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
     "id": 0,
     "uniqueName": "wpn_ak74u",
     "localeName": "st_wpn_ak74u",
@@ -350,6 +368,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_pm",
     "localeName": "st_wpn_pm",
@@ -1382,6 +1406,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
     "id": 0,
     "uniqueName": "wpn_pb",
     "localeName": "st_wpn_pb",
@@ -1446,6 +1476,12 @@
     "fireDispersionConditionFactor": 12,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.37,
+      0.37,
+      0.37,
+      0.37
+    ],
     "id": 0,
     "uniqueName": "wpn_hpsa",
     "localeName": "st_wpn_hpsa",
@@ -1510,6 +1546,12 @@
     "fireDispersionConditionFactor": 12,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.35,
+      0.35,
+      0.35,
+      0.35
+    ],
     "id": 0,
     "uniqueName": "wpn_beretta",
     "localeName": "st_wpn_beretta",
@@ -1573,6 +1615,12 @@
     "fireDispersionConditionFactor": 7,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.36,
+      0.36,
+      0.36,
+      0.36
+    ],
     "id": 0,
     "uniqueName": "wpn_walther",
     "localeName": "st_wpn_walther",
@@ -1636,6 +1684,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.44,
+      0.44,
+      0.44,
+      0.44
+    ],
     "id": 0,
     "uniqueName": "wpn_sig220",
     "localeName": "st_wpn_sig220",
@@ -1699,6 +1753,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.43,
+      0.43,
+      0.43,
+      0.43
+    ],
     "id": 0,
     "uniqueName": "wpn_colt1911",
     "localeName": "st_wpn_colt1911",
@@ -1762,6 +1822,12 @@
     "fireDispersionConditionFactor": 8,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.42,
+      0.42,
+      0.42,
+      0.42
+    ],
     "id": 0,
     "uniqueName": "wpn_usp",
     "localeName": "st_wpn_usp",
@@ -1825,6 +1891,12 @@
     "fireDispersionConditionFactor": 12,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
     "id": 0,
     "uniqueName": "wpn_desert_eagle",
     "localeName": "st_wpn_eagle",
@@ -1886,6 +1958,12 @@
     "fireDispersionConditionFactor": 2,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
     "id": 0,
     "uniqueName": "wpn_bm16",
     "localeName": "st_wpn_bm16",
@@ -1947,6 +2025,12 @@
     "fireDispersionConditionFactor": 1.5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.52,
+      0.52,
+      0.52,
+      0.52
+    ],
     "id": 0,
     "uniqueName": "wpn_toz34",
     "localeName": "st_wpn_toz34",
@@ -2009,6 +2093,12 @@
     "fireDispersionConditionFactor": 2.5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.51,
+      0.51,
+      0.51,
+      0.51
+    ],
     "id": 0,
     "uniqueName": "wpn_wincheaster1300",
     "localeName": "st_wpn_wincheaster1300",
@@ -2071,6 +2161,12 @@
     "fireDispersionConditionFactor": 2.5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.51,
+      0.51,
+      0.51,
+      0.51
+    ],
     "id": 0,
     "uniqueName": "wpn_spas12",
     "localeName": "st_wpn_spas12",
@@ -2135,6 +2231,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.35,
+      0.35,
+      0.35,
+      0.35
+    ],
     "id": 0,
     "uniqueName": "wpn_mp5",
     "localeName": "st_wpn_mp5",
@@ -2198,6 +2300,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.31,
+      0.31,
+      0.31,
+      0.31
+    ],
     "id": 0,
     "uniqueName": "wpn_abakan",
     "localeName": "st_wpn_abakan",
@@ -2264,6 +2372,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.31,
+      0.31,
+      0.31,
+      0.31
+    ],
     "id": 0,
     "uniqueName": "wpn_l85",
     "localeName": "st_wpn_l85",
@@ -2327,6 +2441,12 @@
     "fireDispersionConditionFactor": 17,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
     "id": 0,
     "uniqueName": "wpn_lr300",
     "localeName": "st_wpn_lr300",
@@ -2389,6 +2509,12 @@
     "fireDispersionConditionFactor": 3,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.52,
+      0.52,
+      0.52,
+      0.52
+    ],
     "id": 0,
     "uniqueName": "wpn_protecta",
     "localeName": "st_wpn_protecta",
@@ -2452,6 +2578,12 @@
     "fireDispersionConditionFactor": 7,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
     "id": 0,
     "uniqueName": "wpn_sig550",
     "localeName": "st_wpn_sig550",
@@ -2515,6 +2647,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.4,
+      0.4,
+      0.4,
+      0.4
+    ],
     "id": 0,
     "uniqueName": "wpn_groza",
     "localeName": "st_wpn_groza",
@@ -2578,6 +2716,12 @@
     "fireDispersionConditionFactor": 16,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.42,
+      0.42,
+      0.42,
+      0.42
+    ],
     "id": 0,
     "uniqueName": "wpn_val",
     "localeName": "st_wpn_val",
@@ -2642,6 +2786,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.42,
+      0.42,
+      0.42,
+      0.42
+    ],
     "id": 0,
     "uniqueName": "wpn_vintorez",
     "localeName": "st_wpn_vintorez",
@@ -2707,6 +2857,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
     "id": 0,
     "uniqueName": "wpn_svu",
     "localeName": "st_wpn_svu",
@@ -2771,6 +2927,12 @@
     "fireDispersionConditionFactor": 8,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
     "id": 0,
     "uniqueName": "wpn_svd",
     "localeName": "st_wpn_svd",
@@ -2828,6 +2990,12 @@
     "fireDispersionConditionFactor": 5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
     "id": 0,
     "uniqueName": "wpn_rg-6",
     "localeName": "st_wpn_rg6",
@@ -2885,6 +3053,9 @@
     "fireDispersionConditionFactor": 5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      3
+    ],
     "id": 0,
     "uniqueName": "wpn_rpg7",
     "localeName": "st_wpn_rpg7",
@@ -2949,6 +3120,12 @@
     "fireDispersionConditionFactor": 7,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_g36",
     "localeName": "st_wpn_g36",
@@ -3013,6 +3190,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_fn2000",
     "localeName": "st_wpn_fn2000",
@@ -3076,6 +3259,12 @@
     "fireDispersionConditionFactor": 15,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
     "id": 0,
     "uniqueName": "wpn_pkm",
     "localeName": "st_wpn_rp",
@@ -4036,6 +4225,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_pm_actor",
     "localeName": "st_wpn_pm_actor",
@@ -4099,6 +4294,12 @@
     "fireDispersionConditionFactor": 7,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.4,
+      0.4,
+      0.4,
+      0.4
+    ],
     "id": 0,
     "uniqueName": "wpn_sig550_luckygun",
     "localeName": "st_wpn_sig550_strelok",
@@ -4162,6 +4363,12 @@
     "fireDispersionConditionFactor": 15,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
     "id": 0,
     "uniqueName": "wpn_pkm_zulus",
     "localeName": "st_wpn_pkm_zulus",
@@ -4224,6 +4431,12 @@
     "fireDispersionConditionFactor": 2.5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
     "id": 0,
     "uniqueName": "wpn_wincheaster1300_trapper",
     "localeName": "st_wpn_wincheaster1300_trapper",
@@ -4287,6 +4500,12 @@
     "fireDispersionConditionFactor": 12,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
     "id": 0,
     "uniqueName": "wpn_desert_eagle_nimble",
     "localeName": "st_wpn_desert_eagle_nimble",
@@ -4350,6 +4569,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_groza_nimble",
     "localeName": "st_wpn_groza_nimble",
@@ -4413,6 +4638,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.44,
+      0.44,
+      0.44,
+      0.44
+    ],
     "id": 0,
     "uniqueName": "wpn_mp5_nimble",
     "localeName": "st_wpn_mp5_nimble",
@@ -4476,6 +4707,12 @@
     "fireDispersionConditionFactor": 9,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.44,
+      0.44,
+      0.44,
+      0.44
+    ],
     "id": 0,
     "uniqueName": "wpn_sig220_nimble",
     "localeName": "st_wpn_sig220_nimble",
@@ -4538,6 +4775,12 @@
     "fireDispersionConditionFactor": 2.5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.51,
+      0.51,
+      0.51,
+      0.51
+    ],
     "id": 0,
     "uniqueName": "wpn_spas12_nimble",
     "localeName": "st_wpn_spas12_nimble",
@@ -4602,6 +4845,12 @@
     "fireDispersionConditionFactor": 6,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      1,
+      1,
+      1,
+      1
+    ],
     "id": 0,
     "uniqueName": "wpn_svd_nimble",
     "localeName": "st_wpn_svd_nimble",
@@ -4667,6 +4916,12 @@
     "fireDispersionConditionFactor": 8,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
     "id": 0,
     "uniqueName": "wpn_svu_nimble",
     "localeName": "st_wpn_svu_nimble",
@@ -4730,6 +4985,12 @@
     "fireDispersionConditionFactor": 8,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.42,
+      0.42,
+      0.42,
+      0.42
+    ],
     "id": 0,
     "uniqueName": "wpn_usp_nimble",
     "localeName": "st_wpn_usp_nimble",
@@ -4794,6 +5055,12 @@
     "fireDispersionConditionFactor": 5,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.65,
+      0.65,
+      0.65,
+      0.65
+    ],
     "id": 0,
     "uniqueName": "wpn_vintorez_nimble",
     "localeName": "st_wpn_vintorez_nimble",
@@ -4858,6 +5125,12 @@
     "fireDispersionConditionFactor": 7,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_g36_nimble",
     "localeName": "st_wpn_g36",
@@ -4922,6 +5195,12 @@
     "fireDispersionConditionFactor": 11,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.32,
+      0.32,
+      0.32,
+      0.32
+    ],
     "id": 0,
     "uniqueName": "wpn_fn2000_nimble",
     "localeName": "st_wpn_fn2000",
@@ -4984,6 +5263,12 @@
     "fireDispersionConditionFactor": 3,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.52,
+      0.52,
+      0.52,
+      0.52
+    ],
     "id": 0,
     "uniqueName": "wpn_protecta_nimble",
     "localeName": "st_wpn_protecta",
@@ -5131,6 +5416,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
     "id": 0,
     "uniqueName": "wpn_ak74u_snag",
     "localeName": "st_wpn_ak74u",
@@ -5198,6 +5489,12 @@
     "fireDispersionConditionFactor": 10,
     "misfireProbability": 0.005,
     "misfireConditionK": 0,
+    "hitPower": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
     "id": 0,
     "uniqueName": "wpn_fort_snag",
     "localeName": "st_wpn_fort",

@@ -1,3 +1,4 @@
+import { Item } from "../item.model";
 import { Point } from "../point.model";
 
 export class ItemUpgrade {
@@ -53,4 +54,10 @@ export class UpgradeProperty {
   public localeName: string;
   public icon: string;
   public params: string[];
+}
+
+export class UpgradeSelectedEventModel {
+  public upgrade: Upgrade;
+  public upgradeSection: UpgradeSection;
+  public item: Item;
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!--<path id="leaf" viewBox="0 0 64 64" d=" M 10,0.5 H 46 A 18 18 90 0 0 55 15 L 37,47 A 54 54 90 0 1 10,0.5" stroke="none"  fill="#523d32" stroke-width="1" />-->
+		<path id="leaf" viewBox="0 0 54 63" d=" M 0,9 L 18,42 A 18 18 90 0 1 36 42 L 54,9 A 54 54 90 0 0 0,9" stroke="none"  fill="#020501" stroke-width="1" />
+		<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+		  <stop offset="0%" stop-color="yellow" />
+		  <stop offset="100%" stop-color="#f55f17" />
+		</radialGradient>
+	</defs>
+	<circle cx="64" cy="64" r="60" stroke="#020501" stroke-width="3" fill="url(#grad1)" />
+	<circle cx="64" cy="64" r="11" fill="#020501" />
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf'/>
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf' transform="rotate(120,64,64)"/>
+	<use x='37' y ='7' width="54" height="63" xlink:href='#leaf' transform="rotate(-120,64,64)"/>
+</svg>

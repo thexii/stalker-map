@@ -1108,5 +1108,6 @@
   "st_upgr_cant_do": "Der Techniker kann diese Modifikation nicht durchf\u00FChren",
   "st_base_cost": "Preis",
   "st_weight": "G.",
-  "st_kg": "kg"
+  "st_kg": "kg",
+  "ui_inv_damage": "Schaden"
 }
