@@ -1,0 +1,21 @@
+<div class="selected-item-upgrades" *ngIf="item && selectedItemUpgrade">
+  <ng-container *ngFor="let upgradeSection of selectedItemUpgrade.upgradeSections; let sectionIndex = index">
+    <div id="section-{{sectionIndex}}" class="upgrade-section">
+      <ng-container *ngFor="let upgrade of upgradeSection.elements; let elementIndex = index">
+        <div tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}} section-{{sectionIndex}} branch-{{upgradeSection.branch}}" [ngStyle]="{
+          'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
+          'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
+          'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
+        }" (click)="selectUpgrade(upgrade, upgradeSection)">
+          <ng-container *ngIf="!upgrade.isLocked">
+            <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
+          </ng-container>
+          <div class="upgrade-item-highlight upgrade-item-highlight-locked" [ngClass]="{'active': upgrade.isLocked}"></div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

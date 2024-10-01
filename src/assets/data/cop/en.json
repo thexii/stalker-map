@@ -1108,5 +1108,6 @@
   "st_upgr_cant_do": "The technician cannot perform this modification",
   "st_base_cost": "Price",
   "st_weight": "Wgt.",
-  "st_kg": "kg"
+  "st_kg": "kg",
+  "ui_inv_damage": "Damage"
 }

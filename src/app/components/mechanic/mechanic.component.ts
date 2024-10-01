@@ -8,18 +8,21 @@ import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection } from '../../models/upgrades/upgrades';
+import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection, UpgradeSelectedEventModel } from '../../models/upgrades/upgrades';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import Chart, { BubbleDataPoint } from 'chart.js/auto';
 import { ItemPropertyComponent } from './item-property-bar/item-property.component';
 import { ItemPropertyNumberComponent } from './item-property-number/item-property-number.component';
+import { ItemUpgradesComponent } from './item-upgrades/item-upgrades.component';
+import { CompareComponent } from '../compare/compare.component';
+import { CompareService } from '../../services/compare.service';
 
 @Component({
   selector: 'app-mechanic',
   standalone: true,
-  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent
+  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent, ItemUpgradesComponent
   ],
   templateUrl: './mechanic.component.html',
   styleUrl: './mechanic.component.scss'
@@ -47,7 +50,6 @@ export class MechanicComponent {
   public relationTypeEnum = RelationType;
   public itemsToRepait: Item[];
   public Math: Math = Math;
-  public upgradeTooltipComponent: any = UpgradeTooltipComponent;
   public itemTooltipComponent: any = ItemTooltipComponent;
 
   public repairPriceFactor: number = 0.6;
@@ -85,7 +87,8 @@ export class MechanicComponent {
 
   constructor(
     private mapService: MapService,
-    protected translate: TranslateService) { }
+    protected translate: TranslateService,
+  private compare: CompareService) { }
 
   private async ngOnInit(): Promise<void> {
     if (this.mechanic.itemsForUpgrader?.length > 0) {
@@ -130,6 +133,20 @@ export class MechanicComponent {
     }
   }
 
+  public addItemToCompare(item: Item) {
+    if (item.$type == 'weapon') {
+      new Promise(async (resolve, reject) => {
+        this.compare.addWeaponToCompare(item, this.game)
+      });
+    }
+    else if (item.$type == 'outfit') {
+      new Promise(async (resolve, reject) => {
+        this.compare.addOutfitToCompare(item, this.game)
+      });
+    }
+
+  }
+
   public selectDiscount(discount: MechanicDiscount): void {
     this.selectedDiscount = discount;
   }
@@ -172,8 +189,8 @@ export class MechanicComponent {
                 let effectsValuesUp = Object.values(upgrade.propertiesEffects);
 
                 for (let i = 0; i < effectsPropsUp.length; i++) {
-                  this.applyUpgradeEffect(this.selectedItem, effectsPropsUp[i], effectsValuesUp[i], 1);
-                  this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], 1);
+                  this.compare.applyUpgradeEffect(this.selectedItem, effectsPropsUp[i], effectsValuesUp[i], 1);
+                  this.compare.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], 1);
                 }
               }
             }
@@ -238,68 +255,12 @@ export class MechanicComponent {
       }
   }
 
-  public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection): void {
-    if (upgrade.isLocked) {
-      return;
-    }
+  public selectUpgrade(model: UpgradeSelectedEventModel): void {
+    let upgrade: Upgrade = model.upgrade;
+    let upgradeSection: UpgradeSection = model.upgradeSection;
+    console.log(upgrade);
 
-    let effectsProps: string[] = []
-    let effectsValues: any[] = [];
-
-    if (upgrade.propertiesEffects) {
-      effectsProps = Object.keys(upgrade.propertiesEffects);
-      effectsValues = Object.values(upgrade.propertiesEffects);
-    }
-
-    let itemProps = Object.keys(this.selectedItemForUpgrades);
-
-    if (upgrade.isInstalled) {
-      for (let up of upgradeSection.elements) {
-        up.isBlocked = false;
-
-        if (up.isInstalled && up.propertiesEffects) {
-          let effectsPropsUp = Object.keys(up.propertiesEffects);
-          let effectsValuesUp = Object.values(up.propertiesEffects);
-
-          for (let i = 0; i < effectsPropsUp.length; i++) {
-            this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], -1);
-          }
-        }
-
-        up.isInstalled = false;
-      }
-
-      this.selectedItemForUpgrades.installedUpgrades = this.selectedItemForUpgrades.installedUpgrades.filter(x => x != upgrade.name);
-    }
-    else {
-      for (let up of upgradeSection.elements) {
-        up.isBlocked = true;
-
-        if (up.isInstalled && up.propertiesEffects) {
-          let effectsPropsUp = Object.keys(up.propertiesEffects);
-          let effectsValuesUp = Object.values(up.propertiesEffects);
-
-          for (let i = 0; i < effectsPropsUp.length; i++) {
-            this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsPropsUp[i], effectsValuesUp[i], -1);
-          }
-        }
-
-        up.isInstalled = false;
-      }
-
-      upgrade.isBlocked = false;
-      upgrade.isInstalled = true;
-
-      for (let i = 0; i < effectsProps.length; i++) {
-        this.applyUpgradeEffect(this.selectedItemForUpgrades, effectsProps[i], effectsValues[i], 1);
-      }
-
-      if (this.selectedItemForUpgrades.installedUpgrades == null) {
-        this.selectedItemForUpgrades.installedUpgrades = [];
-      }
-
-      this.selectedItemForUpgrades.installedUpgrades.push(upgrade.name);
-    }
+    this.compare.selectUpgrade(upgrade, upgradeSection, this.selectedItemForUpgrades);
 
     if (this.selectedItem.$type == "weapon") {
       this.resetWeaponStats();
@@ -307,46 +268,6 @@ export class MechanicComponent {
 
     if (this.selectedItem.$type == "outfit") {
       this.resetOutfitStats();
-    }
-  }
-
-  private applyUpgradeEffect(item: Item, propName: string, effectsValues: string, koeff: number): void {
-    let propNameParts = propName.split('_');
-
-    if (propNameParts.length > 1) {
-
-      for (let i = 1; i < propNameParts.length; i++) {
-        propNameParts[i] = propNameParts[i].charAt(0).toUpperCase() + propNameParts[i].slice(1);
-      }
-
-      propName = propNameParts.join('')
-    }
-
-    let value = parseFloat(effectsValues);
-
-    switch (propName) {
-      case "ammoMagSize": {
-        item.ammoMagazineSize += koeff * value;
-        break;
-      }
-      case "invWeight": {
-        item.weight += koeff * value;
-        item.weight = Math.round(item.weight * 100) / 100;
-        break;
-      }
-      case "fireDispersionBase": {
-        item.fireDispersionBase += koeff * value;
-        item.fireDispersionBase = Math.round(item.fireDispersionBase * 100) / 100;
-        break;
-      }
-      default: {
-        if ((item as any)[propName] == undefined) {
-          (item as any)[propName] = koeff * value;
-        }
-        else {
-          (item as any)[propName] += koeff * value;
-        }
-      }
     }
   }
 
@@ -673,7 +594,7 @@ export class MechanicComponent {
       return false;
     }
 
-    if (item.installedUpgrades?.length > 0 != another.installedUpgrades?.length > 0) {
+    if (item.installedUpgrades?.length != another.installedUpgrades?.length) {
       return false;
     }
 

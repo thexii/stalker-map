@@ -1116,5 +1116,6 @@
   "st_upgr_cant_do": "Technik nie mo\u017Ce wykona\u0107 tej modyfikacji",
   "st_base_cost": "Cena",
   "st_weight": "-",
-  "st_kg": "kg"
+  "st_kg": "kg",
+  "ui_inv_damage": "Obra\u017Cenia"
 }

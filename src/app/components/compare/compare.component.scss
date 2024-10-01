@@ -1,0 +1,51 @@
+app-item-upgrades {
+  width: 350px;
+  height: 500px;
+  display: block;
+}
+
+.items-container {
+  display: flex;
+}
+
+.compare-container {
+  z-index: 5000;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+.mechanic-upgrades {
+  max-width: 350px;
+
+  .buttons {
+
+    .remove {
+      width: 3rem;
+      height: 3rem;
+      background-image: url(/assets/images/svg/interface/icons/error.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.selected-item-upgrades {
+  position: relative;
+}
+
+.upgrade-item-image-container {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-item-upgrades {
+  position: relative;
+}
+
+.game-icon-container {
+  position: absolute;
+}

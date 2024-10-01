@@ -37,6 +37,7 @@ import { ItemUpgrade, UpgradeProperty } from '../../models/upgrades/upgrades';
 import { Meta, Title } from '@angular/platform-browser';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
+import { CompareComponent } from '../compare/compare.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -89,6 +90,7 @@ export class MapComponent {
   public undergroundMarkerToSearch: any[] = [];
 
   protected openedUndergroundPopup: {component: UndergroundComponent, levelChanger: any};
+  protected openedComparePopup: any;
   protected overlaysListTop: string = 'layers-control';
   public static readonly hiddenLayerName: string = 'hidden-markers';
   protected readonly hiddenMarkerOpacity: number = .5;
@@ -271,7 +273,7 @@ export class MapComponent {
   }
 
   private configureSeo(): void {
-    this.meta.addTag({ name: 'description', content: `stalker ${this.translate.instant(`${this.game}MapPageTitle`)}`})
+    this.meta.addTag({ name: 'description', content: `stalker ${this.translate.instant(`${this.game}MapPageTitle`)}, ${this.translate.instant(`${this.game}Short`)}`})
     this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
   }
 
@@ -410,6 +412,8 @@ export class MapComponent {
 
     this.createCustomLayersControl();
 
+    this.createCompareControl();
+
     let bounds = [
         [0, 0],
         [this.gamedata.heightInPixels, this.gamedata.widthInPixels],
@@ -519,6 +523,7 @@ export class MapComponent {
     this.layerContoller.searchName = "layerControl";
     this.layerContoller.isUnderground = false;
     this.layerContoller.addTo(this.map)
+    //L.control.compare({ position: 'topright' }).addTo(this.map);
 
     this.map.on('drag', () => {
         this.map.panInsideBounds(bounds, {
@@ -528,7 +533,7 @@ export class MapComponent {
 
     this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
 
-    let printClickCoordinates = false;
+    let printClickCoordinates = true;
 
     if (printClickCoordinates) {
         let tempMap = this.map;
@@ -539,16 +544,17 @@ export class MapComponent {
           //console.log(`[${latlng.lat}, ${latlng.lng}]`);
           //console.log(`[${latlng.lng}, ${latlng.lat}]`);
 
-          let coors = '{\n';
+          let coors = '';
           coors+= `\"x\": ${latlng.lng},\n`;
-          coors+= `\"y\": 0,\n`;
-          coors+= `\"z\": ${latlng.lat}\n},\n`;
+          coors+= `\t\t\t\"y\": 0,\n`;
+          coors+= `\t\t\t\"z\": ${latlng.lat},`;
+          console.log(coors);
           /*
           "x": 561.02637,
           "y": -2.586868,
           "z": 797.3273,
           */
-          coorsAll += coors;
+          //coorsAll += coors;
          //console.log(coorsAll)
         });
     }
@@ -1057,6 +1063,46 @@ export class MapComponent {
 
     L.control.customLayers = function(baseLayers: any, overlays: any, options: any) {
         return new L.Control.CustomLayers(baseLayers, overlays, options);
+    }
+  }
+
+  private createCompareControl(): void {
+    let component = this;
+    L.Control.Compare = L.Control.extend({
+      onAdd: function(map: any) {
+          var div = L.DomUtil.create('div');
+          div.classList.add("compare-bottom");
+
+          L.DomEvent.on(div, 'click', this._onInputClick, this);
+
+          return div;
+      },
+
+      _onInputClick: function() {
+        if (this.componentRef == null) {
+          const factory = component.resolver.resolveComponentFactory(CompareComponent);
+          this.componentRef = component.container.createComponent(factory);
+          this.componentRef.instance.element = this.componentRef.location.nativeElement;
+
+          document.body.appendChild(this.componentRef.location.nativeElement);
+        }
+        else {
+          if (this.componentRef.location.nativeElement.style.display == 'none') {
+            this.componentRef.location.nativeElement.style.display = 'block';
+          }
+          else {
+            this.componentRef.location.nativeElement.style.display = 'none';
+          }
+        }
+      },
+
+      onRemove: function(map: any) {
+          // Nothing to do here
+      }
+    });
+
+    L.control.compare = function(opts: any) {
+      return new L.Control.Compare(opts);
     }
   }
 

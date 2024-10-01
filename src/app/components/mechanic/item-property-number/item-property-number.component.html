@@ -4,7 +4,10 @@
     <span class="title-with-bar">{{name}}:</span>
   </td>
   <td class="bar-column">
-    <span class="value">
+    <span class="value" *ngIf="isCompare">
+      <span *ngIf="valueString.length > 0" [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
+    </span>
+    <span class="value" *ngIf="!isCompare">
       <span *ngIf="defaultValue" class="upgraded-param">{{defaultValueString}}</span>
       <span *ngIf="valueString.length > 0" [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
     </span>

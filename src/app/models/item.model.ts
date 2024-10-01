@@ -63,6 +63,8 @@ export class Item {
 
     public misfireProbability : number;
     public misfireConditionK : number;
+    public hitPower : number[];
+    public hitPowers : number[][];
 
     //outfit props
     public burnProtection : number;
@@ -81,4 +83,8 @@ export class Item {
     public bleedingRestoreSpeed : number = 0;
     public powerRestoreSpeed : number = 0;
     public additionalInventoryWeight: number = 0;
+
+    //compare
+    public guid: string;
+    public game: string;
 }

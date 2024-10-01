@@ -272,7 +272,11 @@ input[type=checkbox]+label:before {
   height: 25px;
   align-items: center;
   left: 5px;
-  pointer-events: none
+  pointer-events: none;
+
+  .inventory-item-compare {
+    pointer-events: all;
+  }
 }
 
 .inventory-item-count {
@@ -299,8 +303,11 @@ input[type=checkbox]+label:before {
   width: 25px;
   height: 100%;
   opacity: .75;
-}
 
+  &.inventory-item-compare {
+    background-image: url(/assets/images/items/compare.svg);
+  }
+}
 
 @for $i from 0 through 40 {
     .inventory-item-x-#{$i} {
@@ -876,4 +883,48 @@ app-item-tooltip, app-upgrade-tooltip {
   height: 90%;
   position: absolute;
   overflow: hidden;
+}
+
+app-compare {
+  position: absolute;
+  z-index: 5000;
+}
+
+.upgrade-item-image-container {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-item-image {
+  background-image: url(/assets/images/mechanic/cop/ui_actor_weapons.png)
+}
+
+.upgrade-item-image.E_STLK,.upgrade-item-image.E_HLMET,.upgrade-item-image.WP_RPG7 {
+  background-image: url(/assets/images/mechanic/cop/ui_actor_armor.png)
+}
+
+.game-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &.shoc {
+    background-image: url(/assets/images/svg/interface/games/shoc.svg);
+  }
+
+  &.cs {
+    background-image: url(/assets/images/svg/interface/games/cs.svg)
+  }
+
+  &.cop {
+    background-image: url(/assets/images/svg/interface/games/cop.svg)
+  }
+
+  &.hoc {
+    background-image: url(/assets/images/svg/interface/games/hoc.svg)
+  }
 }
