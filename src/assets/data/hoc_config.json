@@ -65,6 +65,6 @@
   "maxZoom": 3,
   "startZoom": 1,
   "rulerEnabled": true,
-  "lengthFactor": 5.429,
+  "lengthFactor": 4.375,
   "globalMapFileName": "global_map.jpg"
 }

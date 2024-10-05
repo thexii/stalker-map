@@ -1150,6 +1150,10 @@ export class MapComponent {
 
         try {
           this._ctx.globalAlpha = layer.options.opacity;
+          if (layer.options.zoom != this._zoom) {
+            layer._radius = (markWidth / 2) * layer.options.icon.options.iconSizeInit[0];
+            layer.options.zoom = this._zoom;
+          }
 
           this._ctx.drawImage(
             layer.options.icon._image,
