@@ -406,6 +406,8 @@
       "y1": 0,
       "y2": 1514
     },
+    {
+      "id": 104,
       "uniqueName": "pda_rostok_2",
       "image": "map_rostok_2.jpg",
       "isUnderground": false,
