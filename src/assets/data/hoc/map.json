@@ -1,1174 +1,909 @@
 {
-  "id": 0,
+  "id": 4,
   "uniqueName": "hoc",
-  "widthInPixels": 1561,
-  "heightInPixels": 1332,
-  "widthInMeters": 5309,
-  "heightInMeters": 6447,
-  "locations": [
-    {
-      "id": 100,
-      "uniqueName": "pda3",
-      "isUnderground": false,
-      "widthInMeters": 1200,
-      "heightInMeters": 1200,
-      "xShift": 0,
-      "yShift": -0.0125,
-      "x1": 68,
-      "x2": 1561,
-      "y1": 228,
-      "y2": 888
-    },{
-    "id": 101,
-    "uniqueName": "pda1",
-    "isUnderground": false,
-    "widthInMeters": 1200,
-    "heightInMeters": 1200,
-    "xShift": 0,
-    "yShift": -0.0125,
-    "x1": 0,
-    "x2": 786.285,
-    "y1": 731.331,
-    "y2": 1080
-  },{
-    "id": 102,
-    "uniqueName": "pda2",
-    "isUnderground": false,
-    "widthInMeters": 1200,
-    "heightInMeters": 1200,
-    "xShift": 0,
-    "yShift": -0.0125,
-    "x1": 842,
-    "x2": 1561,
-    "y1": 0,
-    "y2": 377
-  },
-  {
-    "id": 1,
-    "uniqueName": "little_zone",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 2,
-    "uniqueName": "garbage",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 3,
-    "uniqueName": "chemical_plant",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 4,
-    "uniqueName": "wild_island",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 5,
-    "uniqueName": "zaton",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 6,
-    "uniqueName": "swamps",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 7,
-    "uniqueName": "ndi_chaz",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 8,
-    "uniqueName": "cooling_towers",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 10,
-    "uniqueName": "concrete_plant",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 11,
-    "uniqueName": "prom_zone",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 12,
-    "uniqueName": "malachite",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 13,
-    "uniqueName": "duga",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 14,
-    "uniqueName": "rostok",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 15,
-    "uniqueName": "yantar",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 16,
-    "uniqueName": "korogod_forest",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 17,
-    "uniqueName": "burnt_forest",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 18,
-    "uniqueName": "escape",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 19,
-    "uniqueName": "red_forest",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 20,
-    "uniqueName": "yaniv",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 21,
-    "uniqueName": "jupiter",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 22,
-    "uniqueName": "pripyat_rayon_5",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 23,
-    "uniqueName": "pripyat_center",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 24,
-    "uniqueName": "pripyat_rayon_1",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 25,
-    "uniqueName": "pripyat_rayon_2",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 26,
-    "uniqueName": "pripyat_rayon_3",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 27,
-    "uniqueName": "pripyat_rayon_4",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 30,
-    "uniqueName": "aes",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 31,
-    "uniqueName": "iron_forest",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  },
-  {
-    "id": 32,
-    "uniqueName": "generators",
-    "isUnderground": false,
-    "widthInMeters": 0,
-    "heightInMeters": 0,
-    "xShift": 0,
-    "yShift": 0,
-    "x1": 0,
-    "x2": 0,
-    "y1": 0,
-    "y2": 0
-  }],
-  "locationsWithPerimeter": [
-    {
-      "id": 0,
-      "uniqueName": "escape",
-      "isVisible": false,
-      "mapId": 0,
-      "perimeter": [
-        {
-          "x": 288.5,
-          "y": 1046.875
-        },
-        {
-          "x": 344.75,
-          "y": 1075.375
-        },
-        {
-          "x": 366.5,
-          "y": 1113.375
-        },
-        {
-          "x": 372.5,
-          "y": 1140.375
-        },
-        {
-          "x": 444,
-          "y": 1139.375
-        },
-        {
-          "x": 477.5,
-          "y": 1096.875
-        },
-        {
-          "x": 506,
-          "y": 1089.875
-        },
-        {
-          "x": 567.25,
-          "y": 1095.875
-        },
-        {
-          "x": 567.5,
-          "y": 1037.375
-        },
-        {
-          "x": 539,
-          "y": 1036.875
-        },
-        {
-          "x": 513.5,
-          "y": 1023.125
-        },
-        {
-          "x": 490.5,
-          "y": 1035.375
-        },
-        {
-          "x": 473.5,
-          "y": 1036.375
-        },
-        {
-          "x": 435.75,
-          "y": 1004.125
-        },
-        {
-          "x": 419.25,
-          "y": 966.625
-        },
-        {
-          "x": 384.5,
-          "y": 947.125
-        },
-        {
-          "x": 358,
-          "y": 937.625
-        },
-        {
-          "x": 345.5,
-          "y": 935.875
-        },
-        {
-          "x": 343,
-          "y": 951.125
-        },
-        {
-          "x": 314.75,
-          "y": 979.625
-        },
-        {
-          "x": 288.75,
-          "y": 987.875
-        }
-      ],
-      "name": {
-        "id": 0,
-        "localizations": [
-          {
-            "id": 0,
-            "localizationSetId": 0,
-            "localizationSet": null,
-            "languageId": 1,
-            "value": "\u041A\u043E\u0440\u0434\u043E\u043D"
-          },
-          {
-            "id": 0,
-            "localizationSetId": 0,
-            "localizationSet": null,
-            "languageId": 2,
-            "value": "Escape"
-          },
-          {
-            "id": 0,
-            "localizationSetId": 0,
-            "localizationSet": null,
-            "languageId": 3,
-            "value": "\u041A\u043E\u0440\u0434\u043E\u043D"
-          }
-        ]
-      }
-    }
-  ],
+  "build": null,
   "marks": [
     {
       "name": "st_gar_depot",
       "description": null,
       "typeId": 1,
-      "x": 693.4118474355088,
-			"y": 0,
-			"z": 623.5833358764648,
+      "x": 3216.7444,
+      "y": 0,
+      "z": 2740.1545,
       "locationId": 2
     },
     {
       "name": "st_gar_flea_market",
       "description": null,
       "typeId": 1,
-      "x": 733.6718375474504,
-			"y": 0,
-			"z": 652.5833358764648,
+      "x": 3430.2612,
+      "y": 0,
+      "z": 2881.8274,
       "locationId": 2
     },
     {
       "name": "st_dark_factory",
       "description": null,
       "typeId": 1,
-      "x": 799.4105443774295,
-			"y": 0,
-			"z": 652.3333358764648,
+      "x": 3720.4832,
+      "y": 0,
+      "z": 2878.982,
       "locationId": 2
     },
     {
       "name": "st_dark_gas",
       "description": null,
       "typeId": 1,
-      "x": 817.9151361058995,
-			"y": 0,
-			"z": 654.3333358764648,
+      "x": 3798.7292,
+      "y": 0,
+      "z": 2888.2292,
       "locationId": 2
     },
     {
       "name": "st_dark_factory_old",
       "description": null,
       "typeId": 1,
-      "x": 824.6668114662872,
-			"y": 0,
-			"z": 621.5833358764648,
+      "x": 3840.9348,
+      "y": 0,
+      "z": 2729.4846,
       "locationId": 2
     },
-
     {
       "name": "st_zat_skadovsk",
       "description": null,
       "typeId": 1,
-      "x": 1289.0599506877154,
-			"y": 0,
-			"z": 370.9166679382324,
+      "x": 5992.4653,
+      "y": 0,
+      "z": 1485.4902,
       "locationId": 5
     },
     {
       "name": "st_zat_port",
       "description": null,
       "typeId": 1,
-      "x": 1309.3149767688785,
-			"y": 0,
-			"z": 306.0416679382324,
+      "x": 6090.6284,
+      "y": 0,
+      "z": 1226.5668,
       "locationId": 5
     },
     {
       "name": "st_zat_ranger_station",
       "description": null,
       "typeId": 1,
-      "x": 1430.6869673252193,
-			"y": 0,
-			"z": 344.0416679382324,
+      "x": 6678.1855,
+      "y": 0,
+      "z": 1379.5023,
       "locationId": 5
     },
     {
       "name": "st_zat_old_barge",
       "description": null,
       "typeId": 1,
-      "x": 1331.1978881929317,
-			"y": 0,
-			"z": 238.79166793823242,
+      "x": 6194.4824,
+      "y": 0,
+      "z": 960.5301,
       "locationId": 5
     },
-
     {
       "name": "st_swamp_burnt_farmstead",
       "description": null,
       "typeId": 1,
-      "x": 1423.3142321642617,
-			"y": 0,
-			"z": 164.41666793823242,
+      "x": 6629.697,
+      "y": 0,
+      "z": 660.58673,
       "locationId": 6
     },
     {
       "name": "st_swamp_church",
       "description": null,
       "typeId": 1,
-      "x": 1470.716255106812,
-			"y": 0,
-			"z": 161.91666793823242,
+      "x": 6853.409,
+      "y": 0,
+      "z": 654.18475,
       "locationId": 6
     },
     {
       "name": "st_swamp_pump_station",
       "description": null,
       "typeId": 1,
-      "x": 1434.1883634588758,
-			"y": 0,
-			"z": 104.16666793823242,
+      "x": 6679.134,
+      "y": 0,
+      "z": 416.2455,
       "locationId": 6
     },
     {
       "name": "st_swamp_fishing_hamlet",
       "description": null,
       "typeId": 1,
-      "x": 1480.0045401941907,
-			"y": 0,
-			"z": 112.91666793823242,
+      "x": 6896.445,
+      "y": 0,
+      "z": 453.59024,
       "locationId": 6
     },
-
     {
       "name": "st_agr_factory",
       "description": null,
       "typeId": 1,
-      "x": 496.6778459186638,
-			"y": 0,
-			"z": 646.0416679382324,
+      "x": 2306.3628,
+      "y": 0,
+      "z": 2844.8384,
       "locationId": 11
     },
     {
       "name": "st_agr_institute",
       "description": null,
       "typeId": 1,
-      "x": 472.1717649809602,
-			"y": 0,
-			"z": 616.6666679382324,
+      "x": 2181.1692,
+      "y": 0,
+      "z": 2696.882,
       "locationId": 11
     },
     {
       "name": "st_mil_warehouses",
       "description": null,
       "typeId": 1,
-      "x": 487.8795812354489,
-			"y": 0,
-			"z": 492.83333587646484,
+      "x": 2213.179,
+      "y": 0,
+      "z": 2097.2324,
       "locationId": 11
     },
-
     {
       "name": "st_radar",
       "description": null,
       "typeId": 1,
-      "x": 225.6938854661612,
-			"y": 0,
-			"z": 702.6666717529297,
+      "x": 1040.9102,
+      "y": 0,
+      "z": 3068.1953,
       "locationId": 12
     },
-
     {
       "name": "st_rostok_name",
       "description": null,
       "typeId": 1,
-      "x": 610.9629043860366,
-			"y": 0,
-			"z": 737.9166679382324,
+      "x": 2882.0645,
+      "y": 0,
+      "z": 3287.5215,
       "locationId": 14
     },
-
     {
       "name": "st_yantar_bunker_name",
       "description": null,
       "typeId": 1,
-      "x": 355.9240608451952,
-			"y": 0,
-			"z": 815.5416679382324,
+      "x": 1672.0953,
+      "y": 0,
+      "z": 3646.7422,
       "locationId": 15
     },
     {
       "name": "st_yantar_name",
       "description": null,
       "typeId": 1,
-      "x": 403.62511360774823,
-			"y": 0,
-			"z": 808.3333358764648,
+      "x": 1906.5964,
+      "y": 0,
+      "z": 3615.918,
       "locationId": 15
     },
     {
       "name": "st_rossoha",
       "description": null,
       "typeId": 1,
-      "x": 436.7721930516911,
-			"y": 0,
-			"z": 719.1666717529297,
+      "x": 2048.862,
+      "y": 0,
+      "z": 3292.2637,
       "locationId": 15
     },
-
     {
       "name": "st_esc_village",
       "description": null,
       "typeId": 1,
-      "x": 875.6909385498419,
-			"y": 0,
-			"z": 285.7916679382324,
+      "x": 4028.0142,
+      "y": 0,
+      "z": 1148.9135,
       "locationId": 18
     },
     {
       "name": "st_esc_atp",
       "description": null,
       "typeId": 1,
-      "x": 936.4467402608143,
-			"y": 0,
-			"z": 315.2916679382324,
+      "x": 4317.5244,
+      "y": 0,
+      "z": 1267.3496,
       "locationId": 18
     },
     {
       "name": "st_esc_elevator",
       "description": null,
       "typeId": 1,
-      "x": 912.8158764994572,
-			"y": 0,
-			"z": 334.0416679382324,
+      "x": 4203.712,
+      "y": 0,
+      "z": 1343.8174,
       "locationId": 18
     },
     {
       "name": "st_esc_bridge",
       "description": null,
       "typeId": 1,
-      "x": 924.0686687667701,
-			"y": 0,
-			"z": 352.2916679382324,
+      "x": 4262.3965,
+      "y": 0,
+      "z": 1419.2181,
       "locationId": 18
     },
     {
       "name": "st_esc_farm",
       "description": null,
       "typeId": 1,
-      "x": 914.9414039277274,
-			"y": 0,
-			"z": 373.7916679382324,
+      "x": 4217.2275,
+      "y": 0,
+      "z": 1503.1549,
       "locationId": 18
     },
-
     {
       "name": "st_red_forest_brige_to_limansk_name",
       "description": null,
       "typeId": 1,
-      "x": 271.5487195680792,
-			"y": 0,
-			"z": 871.7916679382324,
+      "x": 1275.5299,
+      "y": 0,
+      "z": 3912.0676,
       "locationId": 19
     },
     {
       "name": "st_red_forest_forester_name",
       "description": null,
       "typeId": 1,
-      "x": 530.4449718248494,
-			"y": 0,
-			"z": 891.0416679382324,
+      "x": 2498.6587,
+      "y": 0,
+      "z": 4019.1226,
       "locationId": 19
     },
-
     {
       "name": "st_yaniv_name",
       "description": null,
       "typeId": 1,
-      "x": 415.18867371079926,
+      "x": 1947.0237,
       "y": 0,
-      "z": 1013.9166679382324,
+      "z": 4577.515,
       "locationId": 20
     },
     {
       "name": "st_plavni_name",
       "description": null,
       "typeId": 1,
-      "x": 482.95043225870575,
+      "x": 2253.9617,
       "y": 0,
-      "z": 988.5416679382324,
+      "z": 4466.548,
       "locationId": 20
     },
     {
       "name": "st_polustanok_name",
       "description": null,
       "typeId": 1,
-      "x": 524.9072557070386,
+      "x": 2464.8706,
       "y": 0,
-      "z": 1021.3333358764648,
+      "z": 4623.7515,
       "locationId": 20
     },
     {
       "name": "st_ventilation_name",
       "description": null,
       "typeId": 1,
-      "x": 253.68209637001783,
-			"y": 0,
-			"z": 981.7916679382324,
+      "x": 1189.4592,
+      "y": 0,
+      "z": 4429.9146,
       "locationId": 20
     },
     {
       "name": "st_yaniv_bunker_name",
       "description": null,
       "typeId": 1,
-      "x": 372.80216336443175,
-			"y": 0,
-			"z": 983.5416679382324,
+      "x": 1752.831,
+      "y": 0,
+      "z": 4437.7393,
       "locationId": 20
     },
     {
       "name": "st_east_limansk_name",
       "description": null,
       "typeId": 1,
-      "x": 238.67520877731275,
-			"y": 0,
-			"z": 886.4166679382324,
+      "x": 1131.486,
+      "y": 0,
+      "z": 3988.1797,
       "locationId": 1
     },
     {
       "name": "st_yaniv_quarry_name",
       "description": null,
       "typeId": 1,
-      "x": 361.1888288367611,
-			"y": 0,
-			"z": 912.6666679382324,
+      "x": 1700.1927,
+      "y": 0,
+      "z": 4103.059,
       "locationId": 20
     },
-
     {
       "name": "st_aes_4_reactor_name",
       "description": null,
       "typeId": 1,
-      "x": 706.6967092356219,
-			"y": 0,
-			"z": 1001.9166679382324,
+      "x": 3329.1343,
+      "y": 0,
+      "z": 4525.2324,
       "locationId": 30
-    }],
-  "regions": null,
-  "stuffs": null,
-  "anomalyZones": null,
-  "traders": null,
-  "roads": [
+    },
     {
-      "roadType": 2,
-      "points": [
-        {
-        "x": 595.041666507721,
-        "y": 0,
-        "z": 616.6666679382324
-        },
-        {
-        "x": 588.291666507721,
-        "y": 0,
-        "z": 630.6666679382324
-        },
-        {
-        "x": 584.041666507721,
-        "y": 0,
-        "z": 641.4166679382324
-        },
-        {
-        "x": 583.291666507721,
-        "y": 0,
-        "z": 649.9166679382324
-        },
-        {
-        "x": 584.541666507721,
-        "y": 0,
-        "z": 657.6666679382324
-        },
-        {
-        "x": 588.791666507721,
-        "y": 0,
-        "z": 663.2916679382324
-        },
-        {
-        "x": 592.666666507721,
-        "y": 0,
-        "z": 667.2916679382324
-        },
-        {
-        "x": 593.041666507721,
-        "y": 0,
-        "z": 675.6666679382324
-        },
-        {
-        "x": 592.416666507721,
-        "y": 0,
-        "z": 697.1666679382324
-        },
-        {
-        "x": 592.041666507721,
-        "y": 0,
-        "z": 703.0416679382324
-        },
-        {
-        "x": 589.416666507721,
-        "y": 0,
-        "z": 708.4166679382324
-        },
-        {
-        "x": 587.791666507721,
-        "y": 0,
-        "z": 713.5416679382324
-        },
-        {
-        "x": 588.166666507721,
-        "y": 0,
-        "z": 721.2916679382324
-        },
-        {
-        "x": 588.041666507721,
-        "y": 0,
-        "z": 728.4166679382324
-        },
-        {
-        "x": 586.916666507721,
-        "y": 0,
-        "z": 735.5416679382324
-        },
-        {
-        "x": 585.166666507721,
-        "y": 0,
-        "z": 741.9166679382324
-        },
-        {
-        "x": 580.541666507721,
-        "y": 0,
-        "z": 751.7916679382324
-        },
-        {
-        "x": 576.791666507721,
-        "y": 0,
-        "z": 761.0416679382324
-        },
-        {
-        "x": 574.916666507721,
-        "y": 0,
-        "z": 769.9166679382324
-        },
-        {
-        "x": 576.041666507721,
-        "y": 0,
-        "z": 778.5416679382324
-        },
-        {
-        "x": 578.166666507721,
-        "y": 0,
-        "z": 784.2916679382324
-        },
-        {
-        "x": 584.416666507721,
-        "y": 0,
-        "z": 791.5416679382324
-        },
-        {
-        "x": 587.916666507721,
-        "y": 0,
-        "z": 795.6666679382324
-        },
-        {
-        "x": 590.041666507721,
-        "y": 0,
-        "z": 802.6666679382324
-        },
-        {
-        "x": 590.916666507721,
-        "y": 0,
-        "z": 810.4166679382324
-        },
-        {
-        "x": 591.416666507721,
-        "y": 0,
-        "z": 816.7916679382324
-        },
-        {
-        "x": 591.416666507721,
-        "y": 0,
-        "z": 825.7916679382324
-        },
-        {
-        "x": 592.041666507721,
-        "y": 0,
-        "z": 832.2916679382324
-        },
-        {
-        "x": 592.916666507721,
-        "y": 0,
-        "z": 836.2916679382324
-        },
-        {
-        "x": 595.791666507721,
-        "y": 0,
-        "z": 845.0416679382324
-        },
-        {
-        "x": 598.166666507721,
-        "y": 0,
-        "z": 853.5416679382324
-        },
-        {
-        "x": 599.541666507721,
-        "y": 0,
-        "z": 858.5416679382324
-        },
-        {
-        "x": 598.666666507721,
-        "y": 0,
-        "z": 863.2916679382324
-        },
-        {
-        "x": 594.166666507721,
-        "y": 0,
-        "z": 869.4166679382324
-        },
-        {
-        "x": 587.916666507721,
-        "y": 0,
-        "z": 876.2916679382324
-        },
-        {
-        "x": 579.541666507721,
-        "y": 0,
-        "z": 880.9166679382324
-        },
-        {
-        "x": 566.041666507721,
-        "y": 0,
-        "z": 883.5416679382324
-        },
-        {
-        "x": 534.916666507721,
-        "y": 0,
-        "z": 883.0416679382324
-        },
-        {
-          "x": 518.916666507721,
-          "y": 0,
-          "z": 882.7916679382324
-          },
-          {
-          "x": 502.29166650772095,
-          "y": 0,
-          "z": 881.7916679382324
-          },
-          {
-          "x": 481.29166650772095,
-          "y": 0,
-          "z": 880.1666679382324
-          },
-          {
-          "x": 467.66666650772095,
-          "y": 0,
-          "z": 878.6666679382324
-          },
-          {
-          "x": 455.04166650772095,
-          "y": 0,
-          "z": 876.1666679382324
-          },
-          {
-          "x": 446.79166650772095,
-          "y": 0,
-          "z": 873.4166679382324
-          },
-          {
-          "x": 440.54166650772095,
-          "y": 0,
-          "z": 868.9166679382324
-          },
-          {
-          "x": 424.41666650772095,
-          "y": 0,
-          "z": 861.1666679382324
-          },
-          {
-          "x": 417.41666650772095,
-          "y": 0,
-          "z": 867.6666679382324
-          },
-          {
-          "x": 409.91666650772095,
-          "y": 0,
-          "z": 873.1666679382324
-          },
-          {
-          "x": 400.79166650772095,
-          "y": 0,
-          "z": 875.4166679382324
-          },
-          {
-          "x": 390.54166650772095,
-          "y": 0,
-          "z": 874.9166679382324
-          },
-          {
-          "x": 380.79166650772095,
-          "y": 0,
-          "z": 874.0416679382324
-          },
-          {
-          "x": 378.79166650772095,
-          "y": 0,
-          "z": 871.1666679382324
-          },
-          {
-          "x": 375.54166650772095,
-          "y": 0,
-          "z": 864.5416679382324
-          },
-          {
-          "x": 369.54166650772095,
-          "y": 0,
-          "z": 858.4166679382324
-          },
-          {
-          "x": 367.04166650772095,
-          "y": 0,
-          "z": 857.4166679382324
-          },
-          {
-          "x": 357.04166650772095,
-          "y": 0,
-          "z": 856.4166679382324
-          },
-          {
-          "x": 349.79166650772095,
-          "y": 0,
-          "z": 856.0416679382324
-          }
-      ]
+      "name": "st_aes_3_reactor_name",
+      "description": null,
+      "typeId": 1,
+      "x": 3417.6946,
+      "y": 0,
+      "z": 4528.789,
+      "locationId": 30
+    },
+    {
+      "name": "st_aes_2_reactor_name",
+      "description": null,
+      "typeId": 1,
+      "x": 3663.4585,
+      "y": 0,
+      "z": 4546.5723,
+      "locationId": 30
     }
-  ]
+  ],
+  "stuffs": [],
+  "lootBoxes": [],
+  "traders": [],
+  "locations": [
+    {
+      "id": 100,
+      "uniqueName": "pda3",
+      "image": "map_pda3.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 108,
+      "x2": 7284,
+      "y1": 800,
+      "y2": 3987
+    },
+    {
+      "id": 101,
+      "uniqueName": "pda1",
+      "image": "map_pda1.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 3697,
+      "y1": 3250,
+      "y2": 4891
+    },
+    {
+      "id": 102,
+      "uniqueName": "pda2",
+      "image": "map_pda2.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 3872,
+      "x2": 7284,
+      "y1": 0,
+      "y2": 1514
+    },
+    {
+      "id": 103,
+      "uniqueName": "pda_rostok",
+      "image": "map_rostok.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 2419,
+      "x2": 3277,
+      "y1": 3123,
+      "y2": 3504
+    },
+    {
+      "id": 1,
+      "uniqueName": "little_zone",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 2,
+      "uniqueName": "garbage",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 3,
+      "uniqueName": "chemical_plant",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 4,
+      "uniqueName": "wild_island",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 5,
+      "uniqueName": "zaton",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 6,
+      "uniqueName": "swamps",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 7,
+      "uniqueName": "ndi_chaz",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 8,
+      "uniqueName": "cooling_towers",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 10,
+      "uniqueName": "concrete_plant",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 11,
+      "uniqueName": "prom_zone",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 12,
+      "uniqueName": "malachite",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 13,
+      "uniqueName": "duga",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 14,
+      "uniqueName": "rostok",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 15,
+      "uniqueName": "yantar",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 16,
+      "uniqueName": "korogod_forest",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 17,
+      "uniqueName": "burnt_forest",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 18,
+      "uniqueName": "escape",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 19,
+      "uniqueName": "red_forest",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 20,
+      "uniqueName": "yaniv",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 21,
+      "uniqueName": "jupiter",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 22,
+      "uniqueName": "pripyat_rayon_5",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 23,
+      "uniqueName": "pripyat_center",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 24,
+      "uniqueName": "pripyat_rayon_1",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 25,
+      "uniqueName": "pripyat_rayon_2",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 26,
+      "uniqueName": "pripyat_rayon_3",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 27,
+      "uniqueName": "pripyat_rayon_4",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 30,
+      "uniqueName": "aes",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 31,
+      "uniqueName": "iron_forest",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    },
+    {
+      "id": 32,
+      "uniqueName": "generators",
+      "image": null,
+      "isUnderground": false,
+      "widthInMeters": 0,
+      "heightInMeters": 0,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 0,
+      "x2": 0,
+      "y1": 0,
+      "y2": 0
+    }
+  ],
+  "locationStrokes": [
+    {
+        "id": 1,
+        "widthInMeters": 0,
+        "heightInMeters": 0,
+        "x1": 0,
+        "y1": 0,
+        "points": [
+          [1085.960941118002, 3666.0250483537584],
+          [1086.672269243002, 3467.8884967677322],
+          [1141.9187572360038, 3280.216274386998],
+          [1140.496100986004, 3184.8830682378866],
+          [1164.6812572360038, 3137.927907000265],
+          [1160.413288486004, 2904.5749844860225],
+          [1181.0418041110038, 2853.3511722267986],
+          [1173.2171947360039, 2818.490522217049],
+          [1220.1648509860038, 2791.45573241357],
+          [1221.5875072360038, 2710.3513630031316],
+          [1315.364261430502, 2838.7439840116094],
+          [1314.297269243002, 2973.564962971452],
+          [1280.153519243002, 3021.9439949992575],
+          [1282.998831743002, 3059.2954535501376],
+          [1322.121878618002, 3091.666717627567],
+          [1327.1011754930018, 3130.085360708472],
+          [1373.3375036180018, 3178.4643927362777],
+          [1351.9976598680018, 3257.3502631919273],
+          [1392.187698930502, 3353.0411427175145],
+          [1481.103714555502, 3368.6931824912167],
+          [1505.644534868002, 3383.9894940882436],
+          [1540.143948930502, 3371.183279727941],
+          [1557.927152055502, 3378.6535714381175],
+          [1607.364456743002, 3306.4407515730836],
+          [1627.6373083055018, 3313.19958692991],
+          [1649.688480180502, 3294.7017217428065],
+          [1651.822464555502, 3275.1366720256797],
+          [1679.564261430502, 3236.718028944775],
+          [1711.5740270555018, 3240.6259097541965],
+          [1720.821292680502, 3228.17542357057],
+          [1750.3414098680018, 3236.3571716340957],
+          [1789.8201208055018, 3215.7249373869436],
+          [1876.6021520555018, 3216.4363937402936],
+          [1909.323245805502, 3239.2029970474964],
+          [1953.4255895555018, 3220.7051318603944],
+          [1940.266019243002, 3146.7352134747994],
+          [1977.255081743002, 3122.1899692842217],
+          [2057.990823930502, 3166.300263191927],
+          [2158.2880895555018, 3149.9367670648758],
+          [2203.101761430502, 3086.261423440042],
+          [2224.441605180502, 3091.597346090168],
+          [2229.4209020555018, 3054.2458875392877],
+          [2255.384378618002, 3026.4990897586345],
+          [2351.413675493002, 3015.827244458383],
+          [2391.959378618002, 2977.4352728742974],
+          [2427.525784868002, 2980.636826464372],
+          [2439.2626989305018, 3094.825571177062],
+          [2545.9619176805018, 3125.418194371116],
+          [2555.209183305502, 3164.548293805371],
+          [2496.1689489305018, 3207.9471313597264],
+          [2466.411725986004, 3290.8410147204995],
+          [2481.349616611004, 3330.6753897204994],
+          [2438.669929111004, 3419.5914053454994],
+          [2454.319147861004, 3525.5792959704995],
+          [2412.3507884860037, 3655.7523428454992],
+          [2418.752741611004, 3728.3078115954995],
+          [2368.248444736004, 3876.9753897204996],
+          [2286.445710361004, 3899.7378897204994],
+          [2122.128913486004, 4078.2812490954993],
+          [1979.1519603610038, 4133.053514720499],
+          [1972.7500072360037, 4172.8878897204995],
+          [1908.7304759860037, 4182.1351553455],
+          [1848.9789134860039, 4172.8878897204995],
+          [1755.0836009860038, 4126.6515615954995],
+          [1679.682819736004, 4170.0425772205],
+          [1607.8386791110038, 4179.289842845499],
+          [1450.6351634860039, 4047.6941397204996],
+          [1391.594929111004, 3899.7378897204994],
+          [1155.4339916110039, 3783.7914053454992],
+          [1149.743366611004, 3673.5355459704992],
+          [1085.960941118002, 3666.0250483537584]
+        ]
+    }
+  ],
+  "anomalyZones": [],
+  "levelChangers": null,
+  "stalkers": [],
+  "mechanics": [],
+  "smartTerrains": [],
+  "monsterLairs": [],
+  "widthInPixels": 0,
+  "heightInPixels": 0,
+  "widthInMeters": 7284,
+  "heightInMeters": 4891,
+  "maxWidthInPixels": 3840
 }

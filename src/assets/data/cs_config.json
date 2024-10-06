@@ -94,6 +94,7 @@
   "startZoom": 1,
   "globalMapFileName": "global_map.png",
   "traderRelationType": 1,
+  "markerFactor": 3,
   "actor": {
     "iconHeight": 108,
     "iconWidth": 165,
