@@ -365,6 +365,20 @@
       "y2": 3987
     },
     {
+      "id": 102,
+      "uniqueName": "pda2",
+      "image": "map_pda4.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 1495,
+      "x2": 5170,
+      "y1": 584,
+      "y2": 2192
+    },
+    {
       "id": 101,
       "uniqueName": "pda1",
       "image": "map_pda1.jpg",
@@ -391,6 +405,18 @@
       "x2": 7284,
       "y1": 0,
       "y2": 1514
+    },
+      "uniqueName": "pda_rostok_2",
+      "image": "map_rostok_2.jpg",
+      "isUnderground": false,
+      "widthInMeters": 1200,
+      "heightInMeters": 1200,
+      "xShift": 0,
+      "yShift": 0,
+      "x1": 2020,
+      "x2": 2878,
+      "y1": 3123,
+      "y2": 3504
     },
     {
       "id": 103,
