@@ -86,6 +86,7 @@
   "startZoom": 1,
   "rulerEnabled": true,
   "lengthFactor": 2.926829268292683,
+  "markerFactor": 3,
   "globalMapFileName": "global_map.png",
   "needLootBoxConfig": false,
   "traderRelationType": 2,

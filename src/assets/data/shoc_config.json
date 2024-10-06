@@ -90,6 +90,7 @@
   "width": 1024,
   "height": 2634,
   "traderRelationType": 1,
+  "markerFactor": 3,
   "actor": {
     "iconHeight": 108,
     "iconWidth": 165,

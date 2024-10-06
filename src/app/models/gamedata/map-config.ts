@@ -7,12 +7,14 @@ import { UndergroundLevelsConfig } from "../underground-levels-config.model";
 export class MapConfig {
   public minZoom: number;
   public maxZoom: number;
+  public startZoom: number;
   public globalMapFileName: string;
   public markersConfig: MarkerConfig[];
   public rankSetting: RankSetting[];
   public rulerEnabled: boolean;
   public needLootBoxConfig: boolean;
   public lengthFactor: number;
+  public markerFactor: number;
   public traderConfigs: TraderSectionsConfig[];
   public traderRelationType: RelationType;
   public actor: CharacterProfile;
