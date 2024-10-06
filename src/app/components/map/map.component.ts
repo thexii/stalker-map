@@ -450,7 +450,6 @@ export class MapComponent {
 
       height = (this.gamedata.heightInMeters / this.gamedata.widthInMeters) * width;
       this.pixelsInGameUnit = width / this.gamedata.widthInMeters;
-      console.log(width, height, this.pixelsInGameUnit);
 
       bounds.push([height, width]);
     }
@@ -470,7 +469,6 @@ export class MapComponent {
     this.map.setMaxBounds(bounds);
 
     this.map.on('zoomend', () => {
-      console.log(this.map.getZoom())
         markWidth = gameConfig.markerFactor * Math.pow(2, this.map.getZoom());
         document.documentElement.style.setProperty(
             `--map-mark-width`, `${markWidth}px`);
@@ -589,30 +587,22 @@ export class MapComponent {
 
         this.map.on('click', function (ev: any) {
           var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
-          //console.log(`[${latlng.lat}, ${latlng.lng}]`);
-          //console.log(`[${latlng.lng}, ${latlng.lat}]`);
 
-          let coors = '';
-          if (component.pixelsInGameUnit != 1) {
-            console.log([latlng.lat / component.pixelsInGameUnit, latlng.lng / component.pixelsInGameUnit])
+          if (ev.originalEvent.shiftKey && ev.originalEvent.altKey) {
+            console.log([latlng.lat / component.pixelsInGameUnit, latlng.lng / component.pixelsInGameUnit]);
+          }
+          else if (ev.originalEvent.ctrlKey && ev.originalEvent.shiftKey) {
+            let coors = '';
+
             coors+= `\"x\": ${latlng.lng / component.pixelsInGameUnit},\n`;
             coors+= `\t\t\t\"y\": 0,\n`;
             coors+= `\t\t\t\"z\": ${latlng.lat / component.pixelsInGameUnit},`;
-          }
-          else {
-            coors+= `\"x\": ${latlng.lng},\n`;
-            coors+= `\t\t\t\"y\": 0,\n`;
-            coors+= `\t\t\t\"z\": ${latlng.lat},`;
+
+            console.log(coors);
           }
 
-          //console.log(coors);
-          /*
-          "x": 561.02637,
-          "y": -2.586868,
-          "z": 797.3273,
-          */
-          //coorsAll += coors;
-         //console.log(coorsAll)
+          //if (e.ctrlKey) {/*ctrl is down*/}
+          //if (e.metaKey) {/*cmd is down*/}
         });
     }
 
@@ -1275,6 +1265,10 @@ export class MapComponent {
           locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/${location.image}`;
         }
         else {
+          if (location.x1 == 0 && location.x2 == 0 && location.y1 == 0 && location.y2 == 0) {
+            continue;
+          }
+
           locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
         }
 
