@@ -62,7 +62,7 @@
     }
   ],
   "minZoom": 0,
-  "maxZoom": 3,
+  "maxZoom": 4,
   "startZoom": 0,
   "rulerEnabled": true,
   "lengthFactor": 1,

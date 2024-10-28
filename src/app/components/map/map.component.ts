@@ -38,6 +38,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
+import { HocStuffComponent } from '../stuff/hoc-stuff/hoc-stuff.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -143,15 +144,20 @@ export class MapComponent {
         }
       });
 
-      markerLayer.removeLayer(marker);
+      if (marker) {
+        markerLayer.removeLayer(marker);
 
-      if (this.map.hasLayer(hiddenLayer)) {
-        hiddenLayer.addLayer(marker);
-        marker.setOpacity(0.5);
+        if (this.map.hasLayer(hiddenLayer)) {
+          hiddenLayer.addLayer(marker);
+          marker.setOpacity(0.5);
+        }
+        else {
+          hiddenLayer.addLayer(marker);
+          this.map.removeLayer(marker);
+        }
       }
       else {
-        hiddenLayer.addLayer(marker);
-        this.map.removeLayer(marker);
+        console.error('Cant find marker to hide!')
       }
     }
   }
@@ -435,8 +441,8 @@ export class MapComponent {
       let width = 0;
       let height = 0;
 
-      if (window.screen.width > this.maxWidthInPx) {
-        width = this.maxWidthInPx;
+      if (window.screen.width > this.gamedata.widthInMeters) {
+        width = this.gamedata.widthInMeters;
       }
       else {
         width = window.screen.width;
@@ -1151,6 +1157,30 @@ export class MapComponent {
     }
   }
 
+  private addSquareControl(): void {
+    let component = this;
+    L.Control.Compare = L.Control.extend({
+      onAdd: function(map: any) {
+          this._map = map;
+          this._allLayers = L.layerGroup();
+          var div = L.DomUtil.create('div');
+          div.classList.add("compare-bottom");
+
+          L.DomEvent.on(div, 'click', this._onInputClick, this);
+
+          return div;
+      },
+
+      _onInputClick: function() {
+        this.areas = [];
+      },
+
+      onRemove: function(map: any) {
+          // Nothing to do here
+      }
+    });
+  }
+
   private addRuler(): any {
     let ruler;
 
@@ -1300,20 +1330,20 @@ export class MapComponent {
       let minX = 1000000, minY = 1000000, maxX = 0, maxY = 0;
 
       for (let point of location.points) {
-        if (point[0] < minY) {
-          minY = point[0];
+        if (point.z < minY) {
+          minY = point.z;
         }
 
-        if (point[0] > maxY) {
-          maxY = point[0];
+        if (point.z > maxY) {
+          maxY = point.z;
         }
 
-        if (point[1] < minX) {
-          minX = point[1];
+        if (point.x < minX) {
+          minX = point.x;
         }
 
-        if (point[1] > maxX) {
-          maxX = point[1];
+        if (point.x > maxX) {
+          maxX = point.x;
         }
       }
 
@@ -1321,7 +1351,9 @@ export class MapComponent {
       let dy = maxY - minY;
       let box = this.convertGameCoorsToMapCoors(dx, dy);
       svgElement.setAttribute('viewBox', `0 0 ${box[0]} ${box[1]}`);
-      let points = location.points.map(x => this.convertGameCoorsToMapCoors(x[1] - minX, maxY - x[0]).join(',')).join(' ');
+      let points = location.points.map(x => this.convertGameCoorsToMapCoors(x.x - minX, maxY - x.z).join(',')).join(' ');
+      let firstPoint = this.convertGameCoorsToMapCoors(location.points[0].x - minX, maxY - location.points[0].z);
+      points += `, ${firstPoint[0]},${firstPoint[1]}`
 
       svgElement.innerHTML = `<polyline fill="none" stroke="#e53c35" stroke-width="2" points="${points}" />`;
       var svgElementBounds = [ this.convertGameCoorsToMapCoors( minY, minX ), this.convertGameCoorsToMapCoors( maxY, maxX ) ];
@@ -1437,7 +1469,7 @@ export class MapComponent {
               localesToFind.push(stuff.properties.stuff.description);
             }
 
-            if (stuff.properties.stuff.items?.length > 0) {
+            if (stuff.properties.stuff.items?.length > 0 && this.items && this.items.length > 0) {
               localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
                 return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
               } ));
@@ -1458,12 +1490,8 @@ export class MapComponent {
               this.translate
             );
 
-            let location = this.locations.locations.find(
-              (y: { id: any }) => y.id == stuffModel.locationId
-            );
-
             stuff.properties.locationUniqueName = location.uniqueName;
-            stuff.properties.locationName = location.name;
+            stuff.properties.locationName = location.uniqueName;
             stuff.properties.name = stuff.properties.stuff.name;
           }
 
@@ -1472,7 +1500,14 @@ export class MapComponent {
             className: 'map-tooltip',
             offset: new Point(0, 50),
           });
-          stuff.bindPopup((p: any) => this.createStashPopup(p)).openPopup();
+
+          let widht = 300;
+
+          if (this.game == 'hoc') {
+            widht = 780;
+          }
+
+          stuff.bindPopup((p: any) => this.createStashPopup(p), { minWidth: widht }).openPopup();
 
           if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
             markersToHide.push(stuff);
@@ -1629,10 +1664,17 @@ export class MapComponent {
             continue;
           }
 
-          let marker = new this.svgMarker(this.convertGameCoorsToMapCoors(mark.z, mark.x), {
-            icon: markType.icon,
-            renderer: this.canvasRenderer
-          });
+          let marker = null;
+
+          if (mark.radius > 0) {
+            marker = L.circle(this.convertGameCoorsToMapCoors(mark.z, mark.x), {radius: mark.radius * this.pixelsInGameUnit});
+          }
+          else {
+            marker = new this.svgMarker(this.convertGameCoorsToMapCoors(mark.z, mark.x), {
+              icon: markType.icon,
+              renderer: this.canvasRenderer
+            });
+          }
 
           marker.properties = {};
           marker.properties.name = mark.name ? mark.name : markType.markName;
@@ -1929,7 +1971,7 @@ export class MapComponent {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(StuffComponent);
+    const factory = this.resolver.resolveComponentFactory(this.game == 'hoc' ? HocStuffComponent : StuffComponent);
 
     const componentRef = this.container.createComponent(factory);
     componentRef.instance.stuff = stash.properties.stuff;

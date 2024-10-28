@@ -4,4 +4,5 @@ export class Mark extends ObjectAtLocation {
   public name: string;
   public description: string;
   public typeId: number;
+  public radius: number;
 }

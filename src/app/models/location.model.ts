@@ -1,3 +1,5 @@
+import { Point } from "./point.model";
+
 export class Location {
   public id: number;
   public uniqueName: string;
@@ -18,5 +20,5 @@ export class Location {
 }
 
 export class LocationStroke extends Location {
-  public points: number[][];
+  public points: Point[];
 }

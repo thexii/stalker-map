@@ -218,6 +218,22 @@ input[type=checkbox]+label:before {
   margin-bottom: .5rem
 }
 
+.inventory-hoc {
+  display: grid;
+  grid-template-columns: repeat(6, 130px);
+  grid-template-rows: repeat(auto-fit, 130px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  gap: 0px;
+  grid-auto-flow: dense;
+  background-color: #e5e5f7;
+  background-image: linear-gradient(#555656 1px, transparent 1px), linear-gradient(to right, #555656 1px, #090a0a 1px);
+  background-size: 130px 130px;
+  border-bottom: 1px solid #555656;
+  margin-bottom: .5rem
+}
+
 .inventory::-webkit-scrollbar-track {
 	background-color: rgba(9,10,10,1);
   border: 1px solid #555656;
@@ -263,6 +279,10 @@ input[type=checkbox]+label:before {
 
 .inventory-item-image.cop {
   background-image: url(/assets/images/items/cop_icon_equipment.png)
+}
+
+.inventory-item-image.hoc {
+  background-image: url(/assets/images/items/hoc_icon_equipment.png)
 }
 
 .item-additional-info {
@@ -312,10 +332,18 @@ input[type=checkbox]+label:before {
 @for $i from 0 through 40 {
     .inventory-item-x-#{$i} {
       background-position-x: $i * -50px;
+
+      &.hoc {
+        background-position-x: $i * -130px;
+      }
     }
 
     .inventory-item-y-#{$i} {
       background-position-y: $i * -50px;
+
+      &.hoc {
+        background-position-y: $i * -130px;
+      }
     }
 }
 
@@ -333,7 +361,12 @@ input[type=checkbox]+label:before {
 
     .inventory-item-height-#{$i} {
       grid-row: span $i;
-      height: $i * 50px
+      height: $i * 50px;
+
+      &.hoc {
+        grid-row: span $i;
+        height: $i * 130px;
+      }
     }
 }
 

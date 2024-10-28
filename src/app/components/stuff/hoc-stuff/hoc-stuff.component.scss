@@ -1,0 +1,19 @@
+.inventory-item-count-hoc {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 35px;
+  color: white;
+}
+
+.inventory-item {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.inventory-item:hover {
+  background-color: #4d4d4d
+}
