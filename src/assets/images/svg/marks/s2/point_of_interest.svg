@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polyline points="7,64 64,7 121,64 64,121 7,64 64,7" fill="none" stroke-width="10" stroke="#DFB620" />
+	
+    <polyline points="48,56 50,54 56,41 63,37 71,39 76,43 77,52 76,56 75,60 74,63 71,66 68,69 65,73 61,73" fill="none" stroke-width="12" stroke="black" />
+    <polyline points="49,55 50,54 56,41 63,37 71,39 76,43 77,52 76,56 75,60 74,63 71,66 68,69 65,73 61,73" fill="none" stroke-width="10" stroke="white" />
+	
+    <polyline points="64,81 56,89.5 64,97.5 72,89.5 64,81" fill="white" stroke-width="1" stroke="black" />
+</svg>

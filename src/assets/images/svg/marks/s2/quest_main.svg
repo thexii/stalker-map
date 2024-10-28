@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polyline points="0,64 56,78 48,43 64,29 80,43 72,78 128,64 64,0" fill="#DFB620" />
+	<polyline points="0,64 56,78 72,78 128,64 72,89.5 64,81 56,89.5" fill="#DFB620" />
+    <polyline points="0,64 56,89.5 64,97.5 72,89.5 128,64 64,128" fill="#DFB620" />
+</svg>

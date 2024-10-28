@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<polyline id="triangle" stroke-width='1' stroke="black" fill="white" 
+		points="19,0 38,21 33,28 5,28 0,21 19,0" />
+	</defs>
+    <circle cx="64" cy="64" r="60" stroke="black" stroke-width="8" fill="none" />
+    <circle cx="64" cy="64" r="60" stroke="white" stroke-width="6" fill="none" />
+	
+	<use x='44' y ='26' width="54" height="63" xlink:href='#triangle' transform="rotate(0,64,64)"/>
+	<use x='20' y ='61' width="54" height="63" xlink:href='#triangle' transform="rotate(0,64,64)"/>
+	<use x='70' y ='61' width="54" height="63" xlink:href='#triangle' transform="rotate(0,64,64)"/>
+</svg>
