@@ -12,6 +12,7 @@ export class UpgradeSection {
   public textureName: string;
   public elements: Upgrade[];
   public branch: number = -1;
+  public needPreviousUpgrade: string[];
 }
 
 export class Upgrade {
@@ -35,6 +36,8 @@ export class Upgrade {
   public isInstalled: boolean;
   public isBlocked: boolean;
   public isLocked: boolean;
+  public isPreinstall: boolean;
+  public needPreviousUpgrades: boolean;
 }
 
 export class ItemUpgradeView {

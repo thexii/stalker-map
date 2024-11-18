@@ -2,83 +2,96 @@
   "markersConfig": [
     {
       "uniqueName": "sub-location",
-      "isShow": true
+      "localeName": "sub-location",
+      "isShowByDefault": true,
+      "type": "mark",
+      "markers": [
+        {
+          "id": 1,
+          "ableToSearch": true,
+          "isMapStaticIcon": true,
+          "imageUrl": "/assets/images/svg/marks/sub-location.svg",
+          "anchorSize": [4,4],
+          "useCanvasRenderer": true,
+          "color": "white"
+        }
+      ]
     },
     {
       "uniqueName": "stash",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "quest",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "stuff",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "destroyable-box",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "anomaly-zone",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "artefact-ways",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "traders",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "mechanics",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "level-changers",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "anomaly-zone-no-art",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "mutants",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "stalkers",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "acidic",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "psychic",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "radioactive",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "thermal",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "mines",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "teleport",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "hidden-markers",
-      "isShow": false
+      "isShowByDefault": false
     }
   ],
   "minZoom": 0,

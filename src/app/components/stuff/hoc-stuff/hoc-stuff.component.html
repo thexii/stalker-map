@@ -2,7 +2,7 @@
   <div class='popup header'>{{ stuff.name | translate}}</div>
   <div class='popup description'>{{stuff.description | translate}}</div>
 </div>
-<div class="inventory-hoc">
+<div class="inventory">
   <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngFor="let stuffItem of items" class="inventory-item {{this.game}} inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
     <div *ngIf="stuffItem.count > 1" class="inventory-item-count-hoc">{{stuffItem.count}}</div>
     <div class="item-additional-info">

@@ -387,10 +387,10 @@
       "name": "st_zalisya",
       "description": null,
       "typeId": 1,
-      "radius": 75,
-      "x": 3614.2334,
+      "radius": 72.79,
+      "x": 3615.5344,
       "y": 0,
-      "z": 2084.4197,
+      "z": 2084.6777,
       "locationId": 1
     }
   ],
@@ -469,9 +469,9 @@
       ],
       "condlist": null,
       "communities": null,
-      "x": 3394.1538,
+      "x": 3394.2646,
       "y": 0,
-      "z": 2171.0994,
+      "z": 2171.5557,
       "locationId": 1
     }
   ],
