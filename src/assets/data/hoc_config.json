@@ -2,63 +2,63 @@
   "markersConfig": [
     {
       "uniqueName": "sub-location",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "stash",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "quest",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "stuff",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "destroyable-box",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "anomaly-zone",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "roads",
-      "isShow": true
+      "isShowByDefault": true
     },
     {
       "uniqueName": "acidic",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "psychic",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "radioactive",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "thermal",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "mines",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "teleport",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "anomaly-zone-no-art",
-      "isShow": false
+      "isShowByDefault": false
     },
     {
       "uniqueName": "hidden-markers",
-      "isShow": false
+      "isShowByDefault": false
     }
   ],
   "minZoom": 0,

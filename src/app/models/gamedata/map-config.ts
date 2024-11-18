@@ -1,5 +1,5 @@
 import { CharacterProfile } from "../character-profile.model";
-import { MarkerConfig } from "../marker-config.model";
+import { MarkersLayerConfig } from "../marker-config.model";
 import { RankSetting } from "../rank-settings.model";
 import { TraderSectionsConfig } from "../trader/trader-sections-config.model";
 import { UndergroundLevelsConfig } from "../underground-levels-config.model";
@@ -9,7 +9,7 @@ export class MapConfig {
   public maxZoom: number;
   public startZoom: number;
   public globalMapFileName: string;
-  public markersConfig: MarkerConfig[];
+  public markersConfig: MarkersLayerConfig[];
   public rankSetting: RankSetting[];
   public rulerEnabled: boolean;
   public needLootBoxConfig: boolean;

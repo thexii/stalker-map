@@ -97,12 +97,15 @@ export class UndergroundComponent {
       let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
       let markerLayer: any = this.layers.find(x => x.name == markerToHide.layerName);
 
+      let under = this;
+
       markerLayer.eachLayer(function(layer: any){
-        if (layer._latlng.lat == markerToHide.lat && layer._latlng.lng == markerToHide.lng) {
+        if (Math.abs(layer._latlng.lat - (markerToHide.lat + under.zShift)) < 0.1 && Math.abs(layer._latlng.lng - (markerToHide.lng + under.xShift)) < 0.1) {
             marker = layer;
         }
       });
 
+      console.log(marker);
       markerLayer.removeLayer(marker);
 
       if (this.map.hasLayer(hiddenLayer)) {
@@ -272,7 +275,7 @@ export class UndergroundComponent {
                             (D) => D.name == config.uniqueName)[0];
                     newLayers.push(currentLayer);
 
-                    if (config.isShow) {
+                    if (config.isShowByDefault) {
                       currentLayer.addTo(this.map);
                     }
                 }

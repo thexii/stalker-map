@@ -152,7 +152,7 @@ export class MechanicComponent {
   }
 
   public selectItem(item: Item): void {
-      this.selectedItem = item;
+      this.selectedItem = JSON.parse(JSON.stringify(item));
       this.selectedItemForUpgrades = JSON.parse(JSON.stringify(this.selectedItem));
       let selectedItemUpgrade = this.upgrades.find(x => x.item == item.uniqueName) as ItemUpgrade;
       let lockedUpgrades = this.mechanic.upgradeConditions.filter(x => x.condition == 'false');
@@ -175,6 +175,7 @@ export class MechanicComponent {
 
       if (selectedItemUpgrade) {
         this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
+        console.log(this.selectedItemUpgrade)
 
         if (this.selectedItemForUpgrades.installedUpgrades && this.selectedItemForUpgrades.installedUpgrades.length > 0) {
           for (let section of this.selectedItemUpgrade.upgradeSections) {
@@ -184,6 +185,7 @@ export class MechanicComponent {
               upgrade.isInstalled = this.selectedItemForUpgrades.installedUpgrades.includes(upgrade.name);
               if (upgrade.isInstalled) {
                 isBlocked = true;
+                upgrade.isPreinstall = true;
 
                 let effectsPropsUp = Object.keys(upgrade.propertiesEffects);
                 let effectsValuesUp = Object.values(upgrade.propertiesEffects);
@@ -196,7 +198,10 @@ export class MechanicComponent {
             }
 
             if (isBlocked) {
-              section.elements.filter(x => !x.isInstalled).forEach(x => x.isBlocked = true);
+              section.elements.filter(x => !x.isInstalled).forEach(x => {
+                x.isBlocked = true
+                x.isPreinstall = true;
+              });
             }
           }
         }
@@ -225,9 +230,18 @@ export class MechanicComponent {
                     if (anotherSection) {
                       anotherSection.branch = section.branch;
 
+                      if (!anotherSection.needPreviousUpgrade) {
+                        anotherSection.needPreviousUpgrade = [];
+                      }
+
+                      if (!anotherSection.needPreviousUpgrade.includes(element.name)) {
+                        anotherSection.needPreviousUpgrade.push(element.name);
+                      }
+
                       if (anotherSection.elements) {
                         for (let aElement of anotherSection.elements) {
                           branchElements.push(aElement);
+                          aElement.needPreviousUpgrades = true;
 
                           if (lockedUpgrades.some(x => x.upgrade == aElement.name)) {
                             aElement.isLocked = true;
@@ -258,6 +272,10 @@ export class MechanicComponent {
   public selectUpgrade(model: UpgradeSelectedEventModel): void {
     let upgrade: Upgrade = model.upgrade;
     let upgradeSection: UpgradeSection = model.upgradeSection;
+
+    if (upgrade.isPreinstall) {
+      return;
+    }
     console.log(upgrade);
 
     this.compare.selectUpgrade(upgrade, upgradeSection, this.selectedItemForUpgrades);

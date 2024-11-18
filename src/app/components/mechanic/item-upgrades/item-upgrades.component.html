@@ -6,14 +6,15 @@
           'left': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].x + upgrade.schemeIndexX * 15 + 'px',
           'top': selectedItemUpgrade.scheme[upgrade.schemeIndexX][upgrade.schemeIndexY].y + 'px',
           'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'
-        }" (click)="selectUpgrade(upgrade, upgradeSection)">
-          <ng-container *ngIf="!upgrade.isLocked">
+        }" (click)="selectUpgrade(upgrade, upgradeSection)"
+        [ngClass]="{'need-previous-upgrades': upgradeSection.needPreviousUpgrade && upgradeSection.needPreviousUpgrade.length > 0}">
+          <ng-container *ngIf="!(upgrade.isLocked || upgrade.needPreviousUpgrades)">
             <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
             <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
             <div class="upgrade-item-highlight upgrade-item-highlight-selected" [ngClass]="{'active': upgrade.isInstalled}"></div>
             <div class="upgrade-item-highlight upgrade-item-highlight-disabled" [ngClass]="{'active': upgrade.isBlocked}"></div>
           </ng-container>
-          <div class="upgrade-item-highlight upgrade-item-highlight-locked" [ngClass]="{'active': upgrade.isLocked}"></div>
+          <div class="upgrade-item-highlight upgrade-item-highlight-locked" [ngClass]="{'active': upgrade.isLocked || upgrade.needPreviousUpgrades}"></div>
         </div>
       </ng-container>
     </div>
