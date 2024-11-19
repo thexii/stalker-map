@@ -2078,7 +2078,7 @@ export class MapComponent {
       });
 
       canvasMarker.properties = {};
-      canvasMarker.properties.coordinates = {lat: trader.z, zone: trader.x};
+      canvasMarker.properties.coordinates = {lat: trader.z, lng: trader.x};
       canvasMarker.properties.traderConfig = trader;
       canvasMarker.properties.name = trader.profile.name;
       canvasMarker.properties.typeUniqueName = traderIcon.uniqueName;
@@ -2177,7 +2177,7 @@ export class MapComponent {
       });
 
       canvasMarker.properties = {};
-      canvasMarker.properties.coordinates = {lat: stalker.z, zone: stalker.x};
+      canvasMarker.properties.coordinates = {lat: stalker.z, lng: stalker.x};
       canvasMarker.properties.stalker = stalker;
       canvasMarker.properties.name = stalker.profile.name;
       canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
@@ -2256,7 +2256,7 @@ export class MapComponent {
       });
 
       canvasMarker.properties = {};
-      canvasMarker.properties.coordinates = {lat: mechanic.z, zone: mechanic.x};
+      canvasMarker.properties.coordinates = {lat: mechanic.z, lng: mechanic.x};
       canvasMarker.properties.mechanic = mechanic;
       canvasMarker.properties.name = mechanic.profile.name;
       canvasMarker.properties.typeUniqueName = mechanicIcon.uniqueName;
@@ -2468,7 +2468,7 @@ export class MapComponent {
       });
 
       canvasMarker.properties = {};
-      canvasMarker.properties.coordinates = {lat: smart.z, zone: smart.x};
+      canvasMarker.properties.coordinates = {lat: smart.z, lng: smart.x};
       canvasMarker.properties.smart = smart;
       canvasMarker.properties.name = smart.localeName;
       canvasMarker.properties.typeUniqueName = smart.simType;
@@ -2594,7 +2594,7 @@ export class MapComponent {
 
       canvasMarker.properties = {};
       canvasMarker.properties.lair = lair;
-      canvasMarker.properties.coordinates = {lat: lair.z, zone: lair.x};
+      canvasMarker.properties.coordinates = {lat: lair.z, lng: lair.x};
       canvasMarker.properties.name = 'mutants-lair';
       canvasMarker.properties.typeUniqueName = 'monsters';
 
@@ -2656,7 +2656,7 @@ export class MapComponent {
       });
 
       canvasMarker.properties = {};
-      canvasMarker.properties.coordinates = {lat: levelChanger.z, zone: levelChanger.x};
+      canvasMarker.properties.coordinates = {lat: levelChanger.z, lng: levelChanger.x};
       canvasMarker.properties.levelChanger = levelChanger;
       canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
       canvasMarker.properties.typeUniqueName = 'level-changers';
