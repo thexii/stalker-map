@@ -20,6 +20,7 @@
     "@angular/router": "^17.2.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "@types/node": "^22.9.1",
     "chart.js": "^4.4.3",
     "express": "^4.19.2",
     "firebase": "^10.12.2",
@@ -31,11 +32,13 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^17.0.2",
     "@angular-devkit/build-angular": "^17.2.1",
     "@angular/cli": "^17.2.1",
     "@angular/compiler-cli": "^17.2.0",
     "@types/jasmine": "~5.1.0",
     "@types/uuid": "^10.0.0",
+    "dotenv-webpack": "^8.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

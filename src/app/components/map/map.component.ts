@@ -759,8 +759,6 @@ export class MapComponent {
             }
           }
         } else {
-          console.log([bounds[1][0] / 2, bounds[1][1] / 2])
-          console.log(bounds)
           this.map.setView([bounds[1][0] / 2, bounds[1][1] / 2])
         }
     });
@@ -1510,7 +1508,6 @@ export class MapComponent {
             });
 
             stuff = L.marker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {icon: greenIcon});*/
-            console.log(this.mapConfig);
 
             stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
               icon: markType.icon,
