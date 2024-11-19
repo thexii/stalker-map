@@ -63,7 +63,7 @@
   ],
   "minZoom": 0,
   "maxZoom": 4,
-  "startZoom": 0,
+  "startZoom": 1,
   "rulerEnabled": true,
   "lengthFactor": 1,
   "markerFactor": 6,

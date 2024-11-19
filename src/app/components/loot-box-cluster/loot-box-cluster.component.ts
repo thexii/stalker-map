@@ -97,7 +97,6 @@ export class LootBoxClusterComponent {
 
   public copyLink(): void {
     let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box${this.isUnderground ? `&underground=${this.cluster.locationId}` : ''}`;
-    console.log(link);
     navigator.clipboard.writeText(link)
   }
 }

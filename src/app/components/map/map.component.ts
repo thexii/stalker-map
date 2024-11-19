@@ -4,41 +4,28 @@ import {
   HostListener,
   ViewEncapsulation,
   ViewContainerRef,
-  ViewChild,
-  Inject,
-  Type,
+  ViewChild
 } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Point } from '../../models/point.model';
 import { getAnalytics, logEvent } from 'firebase/analytics';
-import { TraderModel } from '../../models/trader/trader.model';
-import { TraderComponent } from '../trader/trader.component';
-import { StuffComponent } from '../stuff/stuff.component';
-import { AnomalyZoneComponent } from '../anomaly-zone/anomaly-zone.component';
 import { Item } from '../../models/item.model';
 import { Map } from '../../models/map.model';
 import { StuffModel } from '../../models/stuff';
 import { Location } from '../../models/location.model';
 import { LootBoxConfig } from '../../models/loot-box/loot-box-config.model';
-import { LootBox } from '../../models/loot-box/loot-box-section.model';
-import { LootBoxClusterComponent } from '../loot-box-cluster/loot-box-cluster.component';
 import { AnomalySpawnSection } from '../../models/anomaly-zone';
-import { StalkerComponent } from '../stalker/stalker.component';
 import { MapConfig } from '../../models/gamedata/map-config';
-import { TraderSectionsConfig } from '../../models/trader/trader-sections-config.model';
 import { SmartTerrain } from '../../models/smart-terrain.model';
 import { UndergroundComponent } from '../undeground/underground.component';
 import { MarkerToSearch } from '../../models/marker-to-search.model';
-import { Mechanic } from '../../models/mechanic.model';
-import { MechanicComponent } from '../mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../../models/upgrades/upgrades';
 import { Meta, Title } from '@angular/platform-browser';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
-import { HocStuffComponent } from '../stuff/hoc-stuff/hoc-stuff.component';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { DialogComponent } from "../modals/dialog/dialog.component";
 
@@ -171,26 +158,31 @@ export class MapComponent {
   }
 
   public unhideMarker(markerShow: HiddenMarker): void {
-    let marker: any;
-
-    let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
-    let markerLayer: any = this.layers.find(x => x.name == markerShow.layerName);
-
-    hiddenLayer.eachLayer(function(layer: any){
-      if (layer.properties.coordinates.lat == markerShow.lat && layer.properties.coordinates.lng == markerShow.lng) {
-          marker = layer;
-      }
-    });
-
-    hiddenLayer.removeLayer(marker);
-
-    if (this.map.hasLayer(markerLayer)) {
-      markerLayer.addLayer(marker);
-      marker.setOpacity(1);
+    if (markerShow.isUnderground) {
+      this.openedUndergroundPopup.component.unhideMarker(markerShow);
     }
     else {
-      markerLayer.addLayer(marker);
-      this.map.removeLayer(marker);
+      let marker: any;
+
+      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+      let markerLayer: any = this.layers.find(x => x.name == markerShow.layerName);
+
+      hiddenLayer.eachLayer(function(layer: any){
+        if (layer.properties.coordinates.lat == markerShow.lat && layer.properties.coordinates.lng == markerShow.lng) {
+            marker = layer;
+        }
+      });
+
+      hiddenLayer.removeLayer(marker);
+
+      if (this.map.hasLayer(markerLayer)) {
+        markerLayer.addLayer(marker);
+        marker.setOpacity(1);
+      }
+      else {
+        markerLayer.addLayer(marker);
+        this.map.removeLayer(marker);
+      }
     }
   }
 
@@ -317,7 +309,9 @@ export class MapComponent {
   }
 
   private configureSeo(): void {
-    this.meta.addTag({ name: 'description', content: `Stalker 2 map, Heart Of Chornobyl map, S2 map, Heart of Chernobyl map, s.t.a.l.k.e.r. map, interactive map, Call of Pripyat map, Clear Sky map, Shadow of Chornobyl map, Shadow of Chernobyl map`})
+    this.meta.addTag({ name: 'description', content: `Interactive maps for the S.T.A.L.K.E.R. series`})
+    this.meta.addTag({ name: 'keywords', content: `Stalker 2 map, Heart Of Chornobyl map, S2 map, Heart of Chernobyl map, s.t.a.l.k.e.r. map, interactive map, Call of Pripyat map, Clear Sky map, Shadow of Chornobyl map, Shadow of Chernobyl map, shoc map, cs map, cop map, hoc map, s2 map`})
+
     this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
   }
 
@@ -523,7 +517,7 @@ export class MapComponent {
     }
 
     if (this.gamedata.locationStrokes && this.gamedata.locationStrokes.length > 0) {
-        this.addLocationStrokes();
+        //this.addLocationStrokes();
     }
 
     if (this.gamedata.marks && this.gamedata.marks.length > 0) {
@@ -1579,7 +1573,7 @@ export class MapComponent {
             stuff.properties.name = stuff.properties.stuff.name;
           }
 
-          stuff.bindTooltip((p: any) => this.createStuffTooltip(p), {
+          stuff.bindTooltip((p: any) => this.mapService.createStuffTooltip(p), {
             sticky: true,
             className: 'map-tooltip',
             offset: new Point(0, 50),
@@ -1591,7 +1585,7 @@ export class MapComponent {
             widht = 780;
           }
 
-          stuff.bindPopup((p: any) => this.createStashPopup(p), { minWidth: widht }).openPopup();
+          stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: widht }).openPopup();
 
           if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
             markersToHide.push(stuff);
@@ -1721,7 +1715,7 @@ export class MapComponent {
           offset: [0, 50],
         }
       );
-      lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p), { minWidth: 300 }).openPopup(),
+      lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false), { minWidth: 300 }).openPopup(),
         markers.push(lootBoxMarker);
     }
 
@@ -1967,13 +1961,13 @@ export class MapComponent {
 
       canvasMarker.bindTooltip(
         (zone: any) => {
-          return this.createAnomalyZoneTooltip(zone);
+          return this.mapService.createAnomalyZoneTooltip(zone);
         },
         { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
       );
 
       canvasMarker
-        .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
+        .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, false), {
           minWidth: 300,
         })
         .openPopup();
@@ -2040,58 +2034,6 @@ export class MapComponent {
     });
 
     object[propertyName] = array;
-  }
-
-  private createStuffTooltip(stuff: any) {
-    let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(
-      stuff.properties.stuff.name
-    )}</p></div>`;
-    if (stuff.description) {
-      html += `<div class="tooltip-text"><p>${this.translate.instant(
-        stuff.properties.stuff.description
-      )}</p></div>`;
-    }
-
-    return html;
-  }
-
-  private createStashPopup(stash: any) {
-    stash.getPopup().on('remove', function () {
-      stash.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(this.game == 'hoc' ? HocStuffComponent : StuffComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.stuff = stash.properties.stuff;
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-    componentRef.instance.stuffType = stash.properties.typeUniqueName;
-
-    return componentRef.location.nativeElement;
-  }
-
-  private createLootBoxPopup(lootBox: any) {
-    lootBox.getPopup().on('remove', function () {
-      lootBox.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(LootBoxClusterComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.cluster = lootBox.properties.lootBox;
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-
-    let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.properties.lootBox.locationId) as Location;
-    let lootBoxLocationConfig = this.lootBoxConfig.locations.find(x => x.name == location.uniqueName);
-
-    componentRef.instance.lootBoxConfigs = this.lootBoxConfig.boxes;
-    componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
-
-    return componentRef.location.nativeElement;
   }
 
   private addTraders() {
@@ -2167,7 +2109,7 @@ export class MapComponent {
       canvasMarker
         .bindPopup(
           (trader: any) =>
-            this.createTraderPopup(trader, this.gamedata.traders, canvasMarker),
+            this.mapService.createTraderPopup(trader, this.gamedata.traders, canvasMarker, this.container, this.game, this.items, this.mapConfig),
           { maxWidth: 2000 }
         )
         .openPopup();
@@ -2276,7 +2218,7 @@ export class MapComponent {
       canvasMarker
         .bindPopup(
           (stalker: any) =>
-            this.createStalkerPopup(stalker),
+            this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, false),
           { maxWidth: 500 }
         )
         .openPopup();
@@ -2350,7 +2292,7 @@ export class MapComponent {
       canvasMarker
         .bindPopup(
           (stalker: any) =>
-            this.createMechanicPopup(stalker),
+            this.mapService.createMechanicPopup(stalker, this.container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties),
           { minWidth: minWidth }
         )
         .openPopup();
@@ -2661,22 +2603,6 @@ export class MapComponent {
       canvasMarker.feature = {};
       canvasMarker.feature.properties = {};
 
-      /*let propertiesToSearch: string[] = [e];
-
-      if (stalker.hasUniqueItem) {
-        for (let inv of stalker.inventoryItems) {
-          let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
-          propertiesToSearch.push(item.localeName);
-        }
-      }
-
-      this.createProperty(
-        canvasMarker.feature.properties,
-        'search',
-        propertiesToSearch,
-        this.translate
-      );*/
-
       canvasMarker.properties.locationUniqueName = location.uniqueName;
 
       canvasMarker.bindTooltip(
@@ -2688,14 +2614,6 @@ export class MapComponent {
           offset: [0, 50],
         }
       );
-
-      /*canvasMarker
-        .bindPopup(
-          (stalker: any) =>
-            this.createStalkerPopup(stalker),
-          { maxWidth: 500 }
-        )
-        .openPopup();*/
     }
 
     this.addLayerToMap(L.layerGroup(markers), monstersIcon.uniqueName);
@@ -2842,98 +2760,6 @@ export class MapComponent {
       newLayers.push(newUndergroundLayer);
     }
     return L.featureGroup(newLayers);
-  }
-
-  private createAnomalyZoneTooltip(zone: {
-    properties: { name: any; description: any };
-    description: any;
-  }) {
-    let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(zone.properties.name)}</p></div>`;
-    if (zone.description) {
-      html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
-    }
-
-    return html;
-  }
-
-  private createeAnomalyZonePopup(zone: any) {
-    zone.getPopup().on('remove', function () {
-      zone.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(AnomalyZoneComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.anomalZone = zone.properties.zoneModel;
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-
-    return componentRef.location.nativeElement;
-  }
-
-  private createTraderPopup(traderMarker: any, traders: any[], marker: any) {
-    let trader: TraderModel = traderMarker.properties.traderConfig;
-
-    marker.getPopup().on('remove', function () {
-      marker.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(TraderComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.trader = trader;
-    componentRef.instance.allTraders = traders as TraderModel[];
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
-    componentRef.instance.relationType = this.mapConfig.traderRelationType;
-    componentRef.instance.actor = this.mapConfig.actor;
-    componentRef.instance.traderConfigs = this.mapConfig.traderConfigs;
-    componentRef.instance.traderConfig = this.mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
-
-    return componentRef.location.nativeElement;
-  }
-
-  private createMechanicPopup(mechanicMarker: any) {
-    let mechanic: Mechanic = mechanicMarker.properties.mechanic;
-
-    mechanicMarker.getPopup().on('remove', function () {
-      mechanicMarker.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(MechanicComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.mechanic = mechanic;
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
-    componentRef.instance.relationType = this.mapConfig.traderRelationType;
-    componentRef.instance.actor = this.mapConfig.actor;
-    componentRef.instance.upgrades = this.upgrades;
-    componentRef.instance.upgradeProperties = this.upgradeProperties;
-
-    return componentRef.location.nativeElement;
-  }
-
-  private createStalkerPopup(stalkerMarker: any) {
-    stalkerMarker.getPopup().on('remove', function () {
-      stalkerMarker.getPopup().off('remove');
-      componentRef.destroy();
-    });
-
-    const factory = this.resolver.resolveComponentFactory(StalkerComponent);
-
-    const componentRef = this.container.createComponent(factory);
-    componentRef.instance.stalker = stalkerMarker.properties.stalker;
-    componentRef.instance.game = this.game;
-    componentRef.instance.allItems = this.items;
-    componentRef.instance.rankSetting = this.mapConfig.rankSetting;
-
-    return componentRef.location.nativeElement;
   }
 
   private createUndergroundMapPopup(levelChanger: any) {
