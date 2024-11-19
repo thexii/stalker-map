@@ -56,6 +56,7 @@ export class UndergroundComponent {
     public undergroundConfig: UndergroundLevelsConfig;
     public selectedLevel: string;
     public currentLevelImageOverlay: any;
+    protected layerContoller: any;
 
     constructor(
         private translate: TranslateService,
@@ -100,12 +101,11 @@ export class UndergroundComponent {
       let under = this;
 
       markerLayer.eachLayer(function(layer: any){
-        if (Math.abs(layer._latlng.lat - (markerToHide.lat + under.zShift)) < 0.1 && Math.abs(layer._latlng.lng - (markerToHide.lng + under.xShift)) < 0.1) {
+        if (layer.properties.coordinates.lat == markerToHide.lat && layer.properties.coordinates.lng == markerToHide.lng) {
             marker = layer;
         }
       });
 
-      console.log(marker);
       markerLayer.removeLayer(marker);
 
       if (this.map.hasLayer(hiddenLayer)) {
@@ -115,6 +115,37 @@ export class UndergroundComponent {
       else {
         hiddenLayer.addLayer(marker);
         this.map.removeLayer(marker);
+      }
+    }
+
+    public unhideMarker(markerToShow: HiddenMarker): void {
+      let marker: any;
+
+      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+      let markerLayer: any = this.layers.find(x => x.name == markerToShow.layerName);
+
+      let under = this;
+
+      hiddenLayer.eachLayer(function(layer: any){
+        if (layer.properties.coordinates.lat == markerToShow.lat && layer.properties.coordinates.lng == markerToShow.lng) {
+            marker = layer;
+        }
+      });
+
+      if (marker) {
+        hiddenLayer.removeLayer(marker);
+
+        if (this.map.hasLayer(markerLayer)) {
+          markerLayer.addLayer(marker);
+          marker.setOpacity(1);
+        }
+        else {
+          markerLayer.addLayer(marker);
+          this.map.removeLayer(marker);
+        }
+      }
+      else {
+        console.error('Cant find marker to show!')
       }
     }
 
@@ -131,6 +162,8 @@ export class UndergroundComponent {
             }
 
             try {
+              this._ctx.globalAlpha = layer.options.opacity;
+
               this._ctx.drawImage(
                 layer.options.icon._image,
                 layer._point.x - layer.options.icon.shiftX * markWidthUnderground,
@@ -229,10 +262,10 @@ export class UndergroundComponent {
         if (printClickCoordinates) {
             let tempMap = this.map;
 
-            this.map.on('click', function (ev: any) {
+            /*this.map.on('click', function (ev: any) {
               var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
               console.log(`[${latlng.lat}, ${latlng.lng}]`);
-            });
+            });*/
         }
 
         this.undergroundConfig = this.mapConfig.undergroundLevelsConfig?.find( x => x.name == this.location.uniqueName) as UndergroundLevelsConfig;
@@ -284,16 +317,40 @@ export class UndergroundComponent {
             this.layers = newLayers;
         }
 
-        let layerControl = L.control.customLayers(null, this.layers)
-        layerControl.isUnderground = true;
-        layerControl.searchName = "underground";
-        layerControl.addTo(this.map);
+        let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
+        this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
+        this.layerContoller.searchName = "underground";
+        this.layerContoller.isUnderground = true;
+        this.layerContoller.addTo(this.map)
 
         if (this.markerToSearch) {
           this.goToMarker();
         }
 
-        this.addRuler();
+        let ruler = this.addRuler();
+
+        this.translate.onLangChange.subscribe(i=>{
+          let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
+
+          this.layerContoller.remove();
+          let addRuler = false;
+
+          if (ruler) {
+            ruler.remove();
+            addRuler = true;
+          }
+
+          this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
+          this.layerContoller.searchName = "layerControl";
+          this.layerContoller.isUnderground = true;
+          this.layerContoller.addTo(this.map)
+
+          if (addRuler) {
+            ruler = this.addRuler();
+          }
+
+          //this.createSearchController();
+        });
     }
 
 
@@ -385,6 +442,7 @@ export class UndergroundComponent {
             });
 
             marker.properties = {};
+            marker.properties.coordinates = {lat: mark.z, lng: mark.x};
             marker.properties.name = mark.name ? mark.name : markType.markName;
             marker.properties.description = mark.description;
             marker.properties.markType = markType.name;
@@ -464,6 +522,7 @@ export class UndergroundComponent {
               });
 
               stuff.properties = {};
+              stuff.properties.coordinates = {lat: stuffModel.z, lng: stuffModel.x};
               stuff.properties.stuff = stuffModel;
               stuff.properties.markType = markType.name;
               stuff.properties.typeUniqueName = markType.uniqueName;
@@ -498,12 +557,12 @@ export class UndergroundComponent {
                 }
               }
 
-              stuff.bindTooltip((p: any) => this.createStuffTooltip(p), {
+              stuff.bindTooltip((p: any) => this.mapService.createStuffTooltip(p), {
                 sticky: true,
                 className: 'map-tooltip',
                 offset: new Point(0, 50),
               });
-              stuff.bindPopup((p: any) => this.createStashPopup(p));
+              stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
 
               if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                 markersToHide.push(stuff);
@@ -533,6 +592,7 @@ export class UndergroundComponent {
         });
 
         canvasMarker.properties = {};
+        canvasMarker.properties.coordinates = {lat: stalker.z, lng: stalker.x};
         canvasMarker.properties.stalker = stalker;
         canvasMarker.properties.name = stalker.profile.name;
         canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
@@ -570,7 +630,7 @@ export class UndergroundComponent {
         canvasMarker
           .bindPopup(
             (stalker: any) =>
-              this.createStalkerPopup(stalker),
+              this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, true),
             { maxWidth: 500 }
           )
           .openPopup();
@@ -609,6 +669,7 @@ export class UndergroundComponent {
         //stuffModel.z + this.zShift, stuffModel.x + this.xShift
 
         lootBoxMarker.properties = {};
+        lootBoxMarker.properties.coordinates = {lat: lootBox.z, lng: lootBox.x};
         lootBoxMarker.properties.lootBox = lootBox;
         lootBoxMarker.properties.name = lootBoxType.name;
         lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
@@ -648,7 +709,7 @@ export class UndergroundComponent {
             offset: [0, 50],
           }
         );
-        lootBoxMarker.bindPopup((p: any) => this.createLootBoxPopup(p), {
+        lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
           minWidth: 300,
         }).openPopup(),
           markers.push(lootBoxMarker);
@@ -746,6 +807,7 @@ export class UndergroundComponent {
         }
 
         canvasMarker.properties = {};
+        canvasMarker.properties.coordinates = {lat: zone.z, lng: zone.x};
         canvasMarker.properties.zoneModel = zone;
 
         if (
@@ -775,12 +837,12 @@ export class UndergroundComponent {
 
         canvasMarker.bindTooltip(
           (zone: any) => {
-            return this.createAnomalyZoneTooltip(zone);
+            return this.mapService.createAnomalyZoneTooltip(zone);
           },
           { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
         );
         canvasMarker
-          .bindPopup((zone: any) => this.createeAnomalyZonePopup(zone), {
+          .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, true), {
             minWidth: 300,
           })
           .openPopup();
@@ -826,129 +888,11 @@ export class UndergroundComponent {
       object[propertyName] = array;
     }
 
-    private createStuffTooltip(stuff: any) {
-      let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(
-        stuff.properties.stuff.name
-      )}</p></div>`;
-      if (stuff.description) {
-        html += `<div class="tooltip-text"><p>${this.translate.instant(
-          stuff.properties.stuff.description
-        )}</p></div>`;
-      }
-
-      return html;
-    }
-
-    private createStashPopup(stash: any) {
-      stash.getPopup().on('remove', function () {
-        stash.getPopup().off('remove');
-        componentRef.destroy();
-      });
-
-      const factory = this.resolver.resolveComponentFactory(StuffComponent);
-
-      const componentRef = this.container.createComponent(factory);
-      componentRef.instance.stuff = stash.properties.stuff;
-      componentRef.instance.game = this.game;
-      componentRef.instance.allItems = this.items;
-      componentRef.instance.stuffType = stash.properties.typeUniqueName;
-      componentRef.instance.isUnderground = true;
-
-      return componentRef.location.nativeElement;
-    }
-
-    private createStalkerPopup(stalkerMarker: any) {
-      stalkerMarker.getPopup().on('remove', function () {
-        stalkerMarker.getPopup().off('remove');
-        componentRef.destroy();
-      });
-
-      const factory = this.resolver.resolveComponentFactory(StalkerComponent);
-
-      const componentRef = this.container.createComponent(factory);
-      componentRef.instance.stalker = stalkerMarker.properties.stalker;
-      componentRef.instance.game = this.game;
-      componentRef.instance.allItems = this.items;
-      componentRef.instance.rankSetting = this.mapConfig.rankSetting;
-      componentRef.instance.isUnderground = true;
-
-      return componentRef.location.nativeElement;
-    }
-
-    private createLootBoxPopup(lootBox: any) {
-      lootBox.getPopup().on('remove', function () {
-        lootBox.getPopup().off('remove');
-        componentRef.destroy();
-      });
-
-      const factory = this.resolver.resolveComponentFactory(LootBoxClusterComponent);
-
-      const componentRef = this.container.createComponent(factory);
-      componentRef.instance.cluster = lootBox.properties.lootBox;
-      componentRef.instance.game = this.game;
-      componentRef.instance.allItems = this.items;
-      componentRef.instance.isUnderground = true;
-
-      let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.properties.lootBox.locationId) as Location;
-      let lootBoxLocationConfig = this.lootBoxConfig.locations.find(x => x.name == location.uniqueName);
-
-      componentRef.instance.lootBoxConfigs = this.lootBoxConfig.boxes;
-      componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
-
-      return componentRef.location.nativeElement;
-    }
-
-    private createAnomalyZoneTooltip(zone: {
-      properties: { name: any; description: any };
-      description: any;
-    }) {
-      let html = `<div class="header-tip"><p class="p-header">${this.translate.instant(zone.properties.name)}</p></div>`;
-      if (zone.description) {
-        html += `<div class="tooltip-text"><p>${zone.properties.description}</p></div>`;
-      }
-
-      return html;
-    }
-
-    private createeAnomalyZonePopup(zone: any) {
-      zone.getPopup().on('remove', function () {
-        zone.getPopup().off('remove');
-        componentRef.destroy();
-      });
-
-      const factory = this.resolver.resolveComponentFactory(AnomalyZoneComponent);
-
-      const componentRef = this.container.createComponent(factory);
-      componentRef.instance.anomalZone = zone.properties.zoneModel;
-      componentRef.instance.game = this.game;
-      componentRef.instance.allItems = this.items;
-      componentRef.instance.isUnderground = true;
-
-      return componentRef.location.nativeElement;
-    }
-
     private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
       layer.ableToSearch = ableToSearch;
-      layer.isShowing = false;
       layer.name = name;
       layer.isUnderground = true;
       this.layers.push(layer);
-      let mapComponent = this;
-      let layers = mapComponent.layers;
-
-      layer.hide = (layer: { isShowing: boolean; markers: any }) => {
-        if (layer.isShowing) {
-          layer.isShowing = false;
-        }
-      };
-
-      layer.show = (layer: { isShowing: boolean; _layers: any }) => {
-        if (!layer.isShowing && Object.keys(layer._layers).length > 0) {
-          layer.isShowing = true;
-        }
-      };
-
-      layer.show(layer);
     }
 
     private async ngOnDestroy(): Promise<void> {

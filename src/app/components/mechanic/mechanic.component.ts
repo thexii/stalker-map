@@ -175,7 +175,6 @@ export class MechanicComponent {
 
       if (selectedItemUpgrade) {
         this.selectedItemUpgrade = JSON.parse(JSON.stringify(selectedItemUpgrade));
-        console.log(this.selectedItemUpgrade)
 
         if (this.selectedItemForUpgrades.installedUpgrades && this.selectedItemForUpgrades.installedUpgrades.length > 0) {
           for (let section of this.selectedItemUpgrade.upgradeSections) {
@@ -276,7 +275,6 @@ export class MechanicComponent {
     if (upgrade.isPreinstall) {
       return;
     }
-    console.log(upgrade);
 
     this.compare.selectUpgrade(upgrade, upgradeSection, this.selectedItemForUpgrades);
 

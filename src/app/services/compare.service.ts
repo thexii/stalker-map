@@ -192,7 +192,6 @@ export class CompareService {
             })
 
             if (config) {
-              console.log(config);
               let currentLenght = item.hitPower.length;
               let delta = config.length - currentLenght;
 

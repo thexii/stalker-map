@@ -88,8 +88,6 @@ export class CompareComponent {
       this.bestWeaponStats.ammoMagazineSize = Math.max(...ammoMagazineSize);
       this.bestWeaponStats.weight = Math.min(...weight);
     }
-
-    console.log(this.bestWeaponStats);
   }
 
   private calculateUpgradesForItems(): void {

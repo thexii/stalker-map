@@ -28,6 +28,9 @@
           <a class="header-nav-item header-nav-item-short" href="/map/hoc">
             <span>{{ 'hocShort' | translate }}</span>
           </a>
+          <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">
+            <i class="header-nav-icon github"></i>
+          </a>
           <div class="header-nav-item-right">
             <select class="language-selector" (change)="changeLanguage($event)">
               <ng-container *ngFor="let language of avaliableLanguages">
