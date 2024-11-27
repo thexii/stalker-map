@@ -92,12 +92,4 @@ export class StuffComponent {
     let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
-
-  public hide(): void {
-
-  }
-
-  public unhide(): void {
-
-  }
 }

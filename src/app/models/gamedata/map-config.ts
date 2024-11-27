@@ -19,6 +19,8 @@ export class MapConfig {
   public traderRelationType: RelationType;
   public actor: CharacterProfile;
   public undergroundLevelsConfig: UndergroundLevelsConfig[];
+
+  public mapBounds: any;
 }
 
 export enum RelationType {

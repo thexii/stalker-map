@@ -1,8 +1,7 @@
 <div>
-  <div class='popup header'>{{ stuff.name | translate}}</div>
-  <div class='popup description'>{{stuff.description | translate}}</div>
+  <div class='popup header'>{{ 'stuff_at_location' | translate}}</div>
 </div>
-<div class="inventory">
+<div class="inventory inventory-columns-7" *ngIf="items && items.length > 0 ">
   <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngFor="let stuffItem of items" class="inventory-item {{this.game}} inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
     <div *ngIf="stuffItem.count > 1" class="inventory-item-count-hoc">{{stuffItem.count}}</div>
     <div class="item-additional-info">
@@ -16,24 +15,9 @@
     </div>
   </div>
 </div>
-<!--<div class="stash-conditions" *ngIf="condition">
-  <div class="stash-conditions-title">{{ 'stash-conditions-title' | translate }}</div>
-  <ng-container *ngIf="condition.conditions.length > 0">
-    <div class="conditions-list" *ngFor="let cond of condition.conditions">
-      <div class="condition-item" *ngFor="let c of cond">
-      {{ c | translate}}
-    </div>
-  </div>
-  </ng-container>
-  <div class="conditions-list" *ngIf="condition.communities.length > 0">
-    <div class="condition-item" *ngFor="let comm of condition.communities">
-      {{ comm | translate}}
-    </div>
-  </div>
-</div>-->
 <div class="bottom">
   <div class="button url-button" (click)="copyLink()">
     <span>{{ 'markLink' | translate}}</span>
   </div>
-  <app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game, isUnderground: isUnderground}"></app-hide-unhide>
+  <!--<app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game, isUnderground: isUnderground}"></app-hide-unhide>-->
 </div>
