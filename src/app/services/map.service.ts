@@ -19,6 +19,8 @@ import { MechanicComponent } from '../components/mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../models/upgrades/upgrades';
 import { TranslateService } from '@ngx-translate/core';
 
+declare const L: any;
+
 @Injectable({
     providedIn: 'root'
   })
@@ -34,6 +36,75 @@ export class MapService {
 
   }
 
+  public async initLeaflit(): Promise<void> {
+    if (typeof L === 'undefined') {
+      await this.addScript('/assets/libs/leaflet/index.js');
+      await this.addScript('/assets/libs/leaflet/leaflet.js');
+      await this.addScript('/assets/libs/leaflet/plugins/search/leaflet-search.js');
+
+      await Promise.all([
+        this.addScript(
+          '/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
+        ),
+        this.addScript(
+          '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
+        )
+      ]);
+      console.log('Leaflet is loaded');
+    }
+
+    await Promise.all([
+      this.addStyle('/assets/libs/leaflet/leaflet.css'),
+      this.addStyle('/assets/libs/leaflet/plugins/search/leaflet-search.css'),
+      this.addStyle(
+        '/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css'
+      ),
+      this.addStyle('/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css')
+    ]);
+  }
+
+  public async addScript(scriptUrl: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = scriptUrl;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        resolve();
+      }
+
+      script.onerror = () => {
+        console.error(`Can not load ${scriptUrl}.`);
+        resolve();
+      };
+    });
+  }
+
+  public async addStyle(styleUrl: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      let style = document.createElement('link');
+      style.rel = 'stylesheet';
+      style.href = styleUrl;
+      document.body.appendChild(style);
+
+      style.onload = () => {
+        resolve();
+      }
+
+      style.onerror = () => {
+        console.error(`Can not load ${styleUrl}.`);
+        resolve();
+      };
+    });
+  }
+
   public setMapComponent(mapComponent: MapComponent): void {
     this.mapComponent = mapComponent;
   }
@@ -44,7 +115,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(game == 'hoc' ? HocStuffComponent : StuffComponent);
+    const factory = this.resolver.resolveComponentFactory(StuffComponent);
 
     const componentRef = container.createComponent(factory);
     componentRef.instance.stuff = stash.properties.stuff;
@@ -172,6 +243,41 @@ export class MapService {
     }
 
     return html;
+  }
+
+  public addRuler(map: any, pixelsInGameUnit: number, lengthFactor: number): any {
+    let ruler;
+
+    var options = {
+        position: 'topright', // Leaflet control position option
+        circleMarker: {
+            // Leaflet circle marker options for points used in this plugin
+            color: 'red',
+            radius: 2,
+        },
+        lineStyle: {
+            // Leaflet polyline options for lines used in this plugin
+            color: 'red',
+            dashArray: '1,6',
+        },
+        lengthUnit: {
+            factor: pixelsInGameUnit == 1 ? lengthFactor : 1 / pixelsInGameUnit, //  from km to nm
+            display: this.translate.instant('meterShort'),
+            decimal: 2,
+            label: this.translate.instant('length'),
+        },
+        angleUnit: {
+            display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+            decimal: 2, // Bearing result will be fixed to this value.
+            factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+            label: this.translate.instant('azimuth'),
+        },
+    };
+
+    ruler = L.control.ruler(options);
+    ruler.addTo(map);
+
+    return ruler;
   }
 
   public createAnomalyZoneTooltip(zone: any) {

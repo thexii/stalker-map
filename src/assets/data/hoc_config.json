@@ -1,11 +1,11 @@
 {
   "markersConfig": [
     {
-      "uniqueName": "sub-location",
+      "uniqueName": "markers",
       "isShowByDefault": true
     },
     {
-      "uniqueName": "stash",
+      "uniqueName": "circles",
       "isShowByDefault": true
     },
     {
@@ -67,5 +67,9 @@
   "rulerEnabled": true,
   "lengthFactor": 1,
   "markerFactor": 6,
-  "globalMapFileName": "global_map.jpg"
+  "globalMapFileName": "T_GLOBAL_MAP_BASE.jpg",
+  "mapBounds": [
+    [-115.7751171,2.7635682],
+    [7986.603804,8130.9993132]
+  ]
 }

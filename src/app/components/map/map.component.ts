@@ -213,35 +213,9 @@ export class MapComponent {
       dialog.showModal(); // Opens a modal
     }
 
-    if (typeof L === 'undefined') {
-      await this.addScript('/assets/libs/leaflet/index.js');
-      await this.addScript('/assets/libs/leaflet/leaflet.js');
-      await this.addScript('/assets/libs/leaflet/plugins/search/leaflet-search.js');
-
-      await Promise.all([
-        this.addScript(
-          '/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js'
-        ),
-        this.addScript(
-          '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
-        ),
-        this.addScript(
-          '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
-        ),
-        this.addScript(
-          '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
-        )
-      ]);
-      console.log('Leaflet is loaded');
-    }
+    await this.mapService.initLeaflit();
 
     await Promise.all([
-      this.addStyle('/assets/libs/leaflet/leaflet.css'),
-      this.addStyle('/assets/libs/leaflet/plugins/search/leaflet-search.css'),
-      this.addStyle(
-        '/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css'
-      ),
-      this.addStyle('/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css'),
       this.loadLocales(this.translate.currentLang),
       this.loadItems(),
       this.loadLootBoxConfig(),
@@ -491,9 +465,7 @@ export class MapComponent {
       bounds.push([this.gamedata.heightInPixels, this.gamedata.widthInPixels]);
     }
 
-    if (gameData.uniqueName != 'hoc') {
-      L.imageOverlay(`/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
-    }
+    L.imageOverlay(`/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
     this.map.fitBounds(bounds);
 
     markWidth = gameConfig.markerFactor * Math.pow(2, this.map.getZoom());
@@ -2019,7 +1991,7 @@ export class MapComponent {
     Object.defineProperty(object, propertyName, {
       get: function () {
         try {
-          return this.array.map((x: string) => translate.instant(x)).join(', ');
+          return this.array.filter((x: any) => x != null).map((x: string) => translate.instant(x)).join(', ');
         } catch (ex) {
           console.error(this.array);
           throw ex;
@@ -2817,42 +2789,6 @@ export class MapComponent {
     this.openedUndergroundPopup = {component: componentRef.instance, levelChanger: levelChanger};
 
     return componentRef.location.nativeElement;
-  }
-
-  private async addScript(scriptUrl: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      let script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = scriptUrl;
-      document.body.appendChild(script);
-
-      script.onload = () => {
-        resolve();
-      }
-
-      script.onerror = () => {
-        console.error(`Can not load ${scriptUrl}.`);
-        resolve();
-      };
-    });
-  }
-
-  private async addStyle(styleUrl: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      let style = document.createElement('link');
-      style.rel = 'stylesheet';
-      style.href = styleUrl;
-      document.body.appendChild(style);
-
-      style.onload = () => {
-        resolve();
-      }
-
-      style.onerror = () => {
-        console.error(`Can not load ${styleUrl}.`);
-        resolve();
-      };
-    });
   }
 
   public getMarkTypes(): any[] {
