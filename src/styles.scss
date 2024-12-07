@@ -218,6 +218,21 @@ input[type=checkbox]+label:before {
   margin-bottom: .5rem
 }
 
+.scrollbar::-webkit-scrollbar-track {
+	background-color: rgba(9,10,10,1);
+  border: 1px solid #555656;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	background-color:rgba(9,10,10,1);
+  border: 1px solid white;
+  margin: 3px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  border: 1px solid white;
+}
+
 .inventory::-webkit-scrollbar-track {
 	background-color: rgba(9,10,10,1);
   border: 1px solid #555656;
