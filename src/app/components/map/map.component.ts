@@ -1840,7 +1840,7 @@ export class MapComponent {
         canvasMarker.properties.typeUniqueName = defaultType;
         canvasMarker.properties.name = zone.name ? zone.name : defaultType;
 
-        let searchFields = [];
+        let searchFields = [anomalies.length.toString()];
 
         if (canvasMarker.properties.name != defaultType) {
           searchFields.push(canvasMarker.properties.name);

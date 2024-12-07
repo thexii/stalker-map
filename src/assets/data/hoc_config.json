@@ -1,12 +1,12 @@
 {
   "markersConfig": [
     {
-      "uniqueName": "markers",
+      "uniqueName": "sub-location",
       "isShowByDefault": true
     },
     {
       "uniqueName": "circles",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "quest",
@@ -14,6 +14,10 @@
     },
     {
       "uniqueName": "stuff",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "artefacts",
       "isShowByDefault": true
     },
     {

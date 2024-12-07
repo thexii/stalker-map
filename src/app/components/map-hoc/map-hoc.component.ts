@@ -10,6 +10,7 @@ import { MapConfig } from '../../models/gamedata/map-config';
 import { MapHoc } from '../../models/hoc/map-hoc';
 import { Point } from '../../models/point.model';
 import { HocStuffComponent } from '../stuff/hoc-stuff/hoc-stuff.component';
+import { ArtefactSpawnerPopupComponent } from './artefact-spawner-popup/artefact-spawner-popup.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -86,6 +87,13 @@ throw new Error('Method not implemented.');
           });
         }
       })
+  }
+
+  private configureSeo(): void {
+    this.meta.addTag({ name: 'description', content: `Interactive maps for the S.T.A.L.K.E.R. series`})
+    this.meta.addTag({ name: 'keywords', content: `Stalker 2 map, Heart Of Chornobyl map, S2 map, Heart of Chernobyl map, s.t.a.l.k.e.r. map, interactive map, Call of Pripyat map, Clear Sky map, Shadow of Chornobyl map, Shadow of Chernobyl map, shoc map, cs map, cop map, hoc map, s2 map`})
+
+    this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
   }
 
   private loadMap(gameData: MapHoc, gameConfig: MapConfig): void {
@@ -165,8 +173,16 @@ throw new Error('Method not implemented.');
       this.addMarkers();
     }
 
+    if (this.gamedata.anomalyFields && this.gamedata.anomalyFields.length > 0) {
+      this.addAnomalyFields();
+    }
+
     if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
       this.addStuffs();
+    }
+
+    if (this.gamedata.artefactSpawners && this.gamedata.artefactSpawners.length > 0) {
+      this.addArtefactSpawners();
     }
 
     let ruler: any = null;
@@ -304,6 +320,7 @@ throw new Error('Method not implemented.');
     });
 
     this.map.addControl(this.searchContoller);
+    this.configureSeo();
   }
 
   private createCustomLayersControl(): void {
@@ -654,6 +671,9 @@ throw new Error('Method not implemented.');
           this.translate
         );
       }
+      else {
+        marker.feature.properties.search = '';
+      }
 
       if (data.radius > 0) {
         let color = 'white';
@@ -671,7 +691,7 @@ throw new Error('Method not implemented.');
     }
 
     if (markerLayers.length > 0) {
-      this.addLayerToMap(L.layerGroup(markerLayers), 'markers', true);
+      this.addLayerToMap(L.layerGroup(markerLayers), 'sub-location', true);
     }
 
     if (circleMarkers.length > 0) {
@@ -681,24 +701,51 @@ throw new Error('Method not implemented.');
     console.log(markerTypes);
   }
 
+  private addAnomalyFields(): void{
+    let markerImages = [{
+      name: "ESpawnType::PsyAnomaly",
+      icon: new this.svgIcon({
+        iconUrl: 'assets/images/svg/marks/psi.svg',
+        iconAnchor: [0, 0],
+      })
+    }];
+
+    let markers = [];
+
+    for (let data of this.gamedata.anomalyFields) {
+      let icon = markerImages.find((x: any) => x.name == data.type);
+
+      let marker = new this.svgMarker(this.convertGameCoorsToMapCoors(data.z, data.x), {renderer: this.canvasRenderer, icon: icon, radius: 20});
+      marker.name = this.translate.instant('psychic');
+
+      markers.push(marker);
+    }
+
+    if (markers.length > 0) {
+      this.addLayerToMap(L.layerGroup(markers), 'psychic', false);
+    }
+  }
+
   private addStuffs(): void {
     let stuffIcon = {
       icon: new this.svgIcon({
         iconUrl: '/assets/images/svg/marks/stuff.svg',
         iconAnchor: [0, 0],
       }),
+      keepMapSize: true,
+      radius: 2.5
     }
 
     let markers = [];
 
     for (let data of this.gamedata.stuffs) {
-      let marker = new this.svgMarker(this.convertGameCoorsToMapCoors(data.z, data.x), {renderer: this.canvasRenderer, icon: stuffIcon, radius: 10}).addTo(this.map);
+      let marker = new this.svgMarker(this.convertGameCoorsToMapCoors(data.z, data.x), {renderer: this.canvasRenderer, icon: stuffIcon}).addTo(this.map);
       marker.name = 'stuff_at_location';
       marker.data = data;
       marker.feature = {};
       marker.feature.properties = {};
 
-      let localesToFind: string[] = [];
+      let localesToFind: string[] = [marker.name, markers.length.toString()];
 
       if (data.items && data.items.length > 0) {
         let itemsToFind: any[] = [];
@@ -723,6 +770,9 @@ throw new Error('Method not implemented.');
             this.translate
         );
       }
+      else {
+        marker.feature.properties.search = '';
+      }
 
       marker.bindTooltip((p: any) => this.createTooltip(p), {
         sticky: true,
@@ -738,6 +788,102 @@ throw new Error('Method not implemented.');
     if (markers.length > 0 ) {
       this.addLayerToMap(L.layerGroup(markers), 'stuff', true);
     }
+  }
+
+  public addArtefactSpawners(): void {
+    let stuffIcon = {
+      icon: new this.svgIcon({
+        iconUrl: '/assets/images/svg/marks/anomaly.svg',
+        iconAnchor: [0, 0],
+      }),
+      keepMapSize: true,
+      radius: 5
+    }
+
+    let markers = [];
+
+    for (let data of this.gamedata.artefactSpawners) {
+      let marker = new this.svgMarker(this.convertGameCoorsToMapCoors(data.z, data.x), {renderer: this.canvasRenderer, icon: stuffIcon}).addTo(this.map);
+      marker.name = 'anomaly-zone';
+      marker.data = data;
+      marker.feature = {};
+      marker.feature.properties = {};
+
+      let dataToSearch: string[] = [data.spawner, markers.length.toString()];
+      let config = this.gamedata.artefactSpawnerData.configs.find(x => x.name == data.spawner);
+
+      if (config) {
+        if (config.useListOfArtifacts) {
+          if (config.listOfArtifacts && config.listOfArtifacts.length > 0) {
+            for (let art of config.listOfArtifacts) {
+              let item = this.items.find(x => x.uniqueName == art);
+
+              if (item) {
+                dataToSearch.push(item.localeName);
+              }
+            }
+          }
+        }
+        else {
+          let allArts = this.gamedata.artefactSpawnerData.artefacts;
+
+          if (config.excludeRules && config.excludeRules.includes(ArtefactSpawnerPopupComponent.excludeArchiArtifacts)) {
+            allArts = allArts.filter(x => x.archiartifactType == 'EArchiartifactType::None');
+          }
+
+          for (let art of allArts) {
+            let item = this.items.find(x => x.uniqueName == art.name);
+
+            if (item) {
+              dataToSearch.push(item.localeName);
+            }
+          }
+        }
+      }
+
+      if (dataToSearch.length > 0) {
+        this.createTranslatableProperty(
+          marker.feature.properties,
+          'search',
+          dataToSearch,
+          this.translate
+        );
+      }
+
+      marker.bindTooltip((p: any) => this.createTooltip(p), {
+        sticky: true,
+        className: 's2-tooltip',
+        offset: new Point(0, 50),
+      });
+
+      marker.bindPopup((p: any) => this.createArtefactSpawnerPopup(p, this.items), { minWidth: 910, maxWidth: 928 });
+
+      markers.push(marker);
+    }
+
+    if (markers.length > 0 ) {
+      this.addLayerToMap(L.layerGroup(markers), 'anomaly-zone', true);
+    }
+  }
+
+  public createArtefactSpawnerPopup(marker: any, allItems: Item[]) {
+    marker.getPopup().on('remove', function () {
+      marker.getPopup().off('remove');
+      componentRef.destroy();
+    });
+
+    const factory = this.resolver.resolveComponentFactory(ArtefactSpawnerPopupComponent);
+
+    const componentRef = this.container.createComponent(factory);
+    componentRef.instance.artefactSpawner = marker.data;
+    componentRef.instance.artefactSpawnerData = this.gamedata.artefactSpawnerData;
+    componentRef.instance.items = this.items;
+    /*componentRef.instance.anomalZone = zone.properties.zoneModel;
+    componentRef.instance.game = game;
+    componentRef.instance.allItems = allItems;
+    componentRef.instance.isUnderground = isUnderground;*/
+
+    return componentRef.location.nativeElement;
   }
 
   public createStashPopup(stash: any, container: ViewContainerRef, game: string, allItems: Item[], isUnderground: boolean) {
@@ -769,11 +915,18 @@ throw new Error('Method not implemented.');
           this._ctx.globalAlpha = layer.options.opacity;
           let x = 0, y = 0, width = 0, height = 0;
 
-          /*if (layer.options.dontKeepMapSize) {*/
+          if (layer.options.icon.keepMapSize) {
+            if (layer.options.zoom != layer._map._zoom) {
+              layer.options.zoom = layer._map._zoom;
+              layer._radius = layer.options.icon.radius * Math.pow(2, layer.options.zoom);;
+            }
+          }
 
-            width = height = layer._radius * 2;
-            x = layer._point.x - layer._radius;
-            y = layer._point.y - layer._radius;
+          width = height = layer._radius * 2;
+          x = layer._point.x - layer._radius;
+          y = layer._point.y - layer._radius;
+
+          /*if (layer.options.dontKeepMapSize) {*/
           /*}
           else {
             if (layer.options.zoom != this._zoom) {

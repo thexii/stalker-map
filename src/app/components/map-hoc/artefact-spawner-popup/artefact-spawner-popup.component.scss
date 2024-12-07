@@ -1,0 +1,19 @@
+.popup {
+  color: white;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.difficultes {
+  display: flex;
+}
+
+.difficult {
+  display: flex;
+  margin-right: 1rem;
+
+  .name {
+    margin-right: 0.25rem;
+  }
+}
