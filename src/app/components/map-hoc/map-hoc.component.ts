@@ -208,6 +208,7 @@ export class MapHocComponent {
         maxZoom: gameConfig.maxZoom,
         bounds: b,
         //tileSize: 256
+
       }).addTo(this.map);
 
       /*L.imageOverlay(
