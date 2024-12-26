@@ -9,6 +9,8 @@ export class MapHoc {
   public anomalyFields: Marker[];
   public artefactSpawners: ArtefactSpawner[];
   public artefactSpawnerData: ArtefactSpawnerConfig;
+  public stashes: Stash[];
+  public stashGenerators: StashGenerator[];
 }
 
 export class ObjectAtLocationHoc {
@@ -66,4 +68,34 @@ export class Artefact {
   public archiartifactType: string;
   public lifeTime: number;
   public cost: number;
+}
+
+export class Stash extends ObjectAtLocationHoc {
+  public clueVariablePrototypeSID: string;
+  public itemGeneratorSettings: StashItemGenerator[];
+}
+
+export class StashGenerator {
+  public name: string;
+  public itemGenerators: ItemGenerator[];
+}
+
+export class ItemGenerator {
+  public allowSameCategoryGeneration: boolean;
+  public category: string;
+  public difficulty: string;
+  public possibleItems: PossibleItem[];
+}
+
+export class StashItemGenerator {
+  public playerRank: string;
+  public itemGenerators: string[];
+}
+
+export class PossibleItem {
+  public name: string;
+  public chance: number;
+  public minCount: number;
+  public maxCount: number;
+  public weight: number;
 }

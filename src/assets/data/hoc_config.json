@@ -13,6 +13,10 @@
       "isShowByDefault": true
     },
     {
+      "uniqueName": "stash",
+      "isShowByDefault": true
+    },
+    {
       "uniqueName": "stuff",
       "isShowByDefault": true
     },
@@ -71,9 +75,12 @@
   "rulerEnabled": true,
   "lengthFactor": 1,
   "markerFactor": 6,
-  "globalMapFileName": "T_GLOBAL_MAP_BASE.jpg",
+  "globalMapFileName": "T_GLOBAL_MAP_BASE_old.jpg",
   "mapBounds": [
     [-115.7751171,2.7635682],
     [7986.603804,8130.9993132]
+  ],
+  "languages": [
+    "ua", "en", "de", "fr", "esp", "it", "pl", "cz", "tr", "sr", "br", "latam", "ar", "chi_cpr", "chi_tw", "jpn", "kor", "ru"
   ]
 }

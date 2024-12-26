@@ -33,7 +33,9 @@ export class ArtefactSpawnerPopupComponent {
         this.artefacts = [];
 
         if (config.useListOfArtifacts) {
+          let anomalyArtefacts: ArtefactItem[] = [];
           this.useListOfArtifacts = true;
+
           if (config.listOfArtifacts && config.listOfArtifacts.length > 0) {
             for (let art of config.listOfArtifacts) {
               let model = new ArtefactItem();
@@ -44,10 +46,12 @@ export class ArtefactSpawnerPopupComponent {
               if (item && artefact) {
                 model.artefact = artefact;
                 model.item = item;
-                this.artefacts.push([model]);
+                anomalyArtefacts.push(model);
               }
             }
           }
+
+          this.artefacts.push(anomalyArtefacts)
         }
         else {
           let common = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Common');

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+		<path id="leaf" viewBox="0 0 128 128" d="M 11.231,92.556 L 74.909,5 A 60 60 0 0 0 11.231 92.556" stroke="none"  fill="white" stroke-width="1" />
+	</defs>
+	<circle cx="64" cy="64" r="60" stroke="white" stroke-width="6" fill="none" />
+	<use x='0' y ='0' width="128" height="128" xlink:href='#leaf'/>
+	<use x='0' y ='0' width="128" height="128" xlink:href='#leaf' transform="rotate(108,64,64)"/>
+	<use x='0' y ='0' width="128" height="128" xlink:href='#leaf' transform="rotate(234,64,64)"/>
+	<polyline points="40,53 88,53 64,89.86" fill="white" />
+</svg>
