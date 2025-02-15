@@ -50,10 +50,10 @@ export class TooltipDirective {
     }
 
     if (event.clientY + toolTipHeight + this.windowMargin < window.innerHeight) {
-      this.componentRef.location.nativeElement.style.top = window.scrollY + event.clientY + 'px';
+      this.componentRef.location.nativeElement.style.top = event.clientY + 'px';
     }
     else {
-      this.componentRef.location.nativeElement.style.top = window.scrollY + event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
+      this.componentRef.location.nativeElement.style.top = event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
     }
 
     this.componentRef.location.nativeElement.classList.add("tooltip-show");
@@ -65,7 +65,7 @@ export class TooltipDirective {
     this.componentRef = this.viewContainerRef.createComponent(factory);
     document.body.appendChild(this.componentRef.location.nativeElement);
     this.componentRef.location.nativeElement.style.maxWidth = `${this.tooltipWidth}px`;
-    this.componentRef.location.nativeElement.style.position = 'absolute';
+    this.componentRef.location.nativeElement.style.position = 'fixed';
 
     this.hasTooltip = true;
 

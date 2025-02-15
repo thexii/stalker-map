@@ -87,4 +87,14 @@ export class Item {
     //compare
     public guid: string;
     public game: string;
+
+    //hoc weapon
+    public preinstalledAttachments: string[];
+    public compatibleAttachments: Attachment[];
+}
+
+export class Attachment {
+  public uniqueName: string;
+  public gridX: number;
+  public gridY: number;
 }

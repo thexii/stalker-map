@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<ellipse id="elipse-fill" cx="64" cy="64" rx="25" ry="59" fill="#c9c1ad" />
+		<ellipse id="elipse-stroke" cx="64" cy="64" rx="25" ry="59" stroke="#b8ac82" fill="none" />
+	</defs>
+	
+	<use x='0' y ='0' xlink:href='#elipse-fill' />
+	<use x='0' y ='0' xlink:href='#elipse-fill' transform="rotate(-45,64,64)"/>
+	<use x='0' y ='0' xlink:href='#elipse-fill' transform="rotate(45,64,64)"/>
+	<use x='0' y ='0' xlink:href='#elipse-fill' transform="rotate(90,64,64)"/>
+	<use x='0' y ='0' xlink:href='#elipse-stroke' />
+	<use x='0' y ='0' xlink:href='#elipse-stroke' transform="rotate(-45,64,64)"/>
+	<use x='0' y ='0' xlink:href='#elipse-stroke' transform="rotate(45,64,64)"/>
+	<use x='0' y ='0' xlink:href='#elipse-stroke' transform="rotate(90,64,64)"/>
+	
+	<circle cx="64" cy="64" r="33" fill="#3a3127" stroke="#b8ac82" />
+	
+	<polyline stroke-width='2' fill="#c9c1ad" stroke="#b8ac82" 
+		points="64,53 29.5,127 98.5,127 64,53" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

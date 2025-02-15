@@ -142,6 +142,7 @@
           this._choice = true;
           this._toggleMeasure();
         }
+        console.log(this._clickedPoints)
       }
     },
     _calculateBearingAndDistance: function() {

@@ -20,6 +20,7 @@ import { Point } from '../../models/point.model';
 import { HocStuffComponent } from '../stuff/hoc-stuff/hoc-stuff.component';
 import { ArtefactSpawnerPopupComponent } from './artefact-spawner-popup/artefact-spawner-popup.component';
 import { getAnalytics, logEvent } from 'firebase/analytics';
+import { HocStashComponent } from '../hoc-stash/hoc-stash.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -159,6 +160,7 @@ export class MapHocComponent {
 
     let scaleFactor = width / this.gamedata.widthInMeters;
     console.log(scaleFactor);
+    console.log(gameConfig.mapBounds);
 
     let customCrs = L.extend({}, L.CRS.Simple, {
       transformation: new L.Transformation(scaleFactor, 0, -scaleFactor, 0),
@@ -177,7 +179,7 @@ export class MapHocComponent {
     });
 
     L.TileLayer.CustomCoords = L.TileLayer.extend({
-        createTile: function (coords: any) {
+        /*createTile: function (coords: any) {
             const tile = document.createElement('div');
             tile.style.outline = '1px solid green';
             tile.style.fontWeight = 'bold';
@@ -185,7 +187,7 @@ export class MapHocComponent {
             tile.style.color = 'white';
             tile.innerHTML = [coords.z, coords.x, coords.y].join('/');
             return tile;
-          },
+          },*/
     });
 
     if (gameConfig.globalMapFileName && gameConfig.mapBounds) {
@@ -202,19 +204,33 @@ export class MapHocComponent {
 
         L.marker([gameConfig.mapBounds[0][0], gameConfig.mapBounds[0][1]]).addTo(this.map);
         L.marker([gameConfig.mapBounds[1][0], gameConfig.mapBounds[1][1]]).addTo(this.map);
+        L.marker([0,0]).addTo(this.map);
 
-      new L.TileLayer.CustomCoords(`/assets/images/maps/hoc/tiles/{z}/{y}/{x}.jpg`, {
+        let minW = Math.min(gameConfig.mapBounds[0][1], 0);
+        let maxW = Math.min(gameConfig.mapBounds[1][1], 0);
+
+        console.log(gameConfig.mapBounds[0][1])
+
+        let mapWidth =gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1];
+
+        console.log(mapWidth);
+        let tilesInMinZoom = 4;
+        let tileSize = mapWidth / tilesInMinZoom * scaleFactor;
+        console.log(tileSize);
+
+
+      /*new L.TileLayer.CustomCoords(`/assets/images/maps/hoc/tiles/{z}/{y}/{x}.jpg`, {
         minZoom: gameConfig.minZoom,
         maxZoom: gameConfig.maxZoom,
         bounds: b,
-        //tileSize: 256
+        tileSize: tileSize
 
-      }).addTo(this.map);
+      }).addTo(this.map);*/
 
-      /*L.imageOverlay(
+      L.imageOverlay(
         `/assets/images/maps/hoc/${gameConfig.globalMapFileName}`,
         b
-      ).addTo(this.map);*/
+      ).addTo(this.map);
     }
 
     this.svgMarker = this.setCanvasMarkers();
@@ -400,11 +416,6 @@ export class MapHocComponent {
 
     this.map.addControl(this.searchContoller);
     this.configureSeo();
-
-
-    this.map.on('zoomend', () => {
-      console.log(this.map.getZoom());
-  });
   }
 
   private createCustomLayersControl(): void {
@@ -904,7 +915,7 @@ export class MapHocComponent {
 
       marker.bindPopup(
         (p: any) =>
-          this.createStashPopup(
+          this.createStuffPopup(
             p,
             this.container,
             this.game,
@@ -925,20 +936,22 @@ export class MapHocComponent {
   public addStashes(): void {
     let stuffIcon = {
       icon: new this.svgIcon({
-        iconUrl: '/assets/images/svg/marks/stash.svg',
+        iconUrl: '/assets/images/svg/marks/colored/items.svg',
         iconAnchor: [0, 0],
+        color: "#00df07"
       }),
       keepMapSize: true,
-      radius: 3,
+      radius: 3
     };
 
     let richStuffIcon = {
       icon: new this.svgIcon({
-        iconUrl: '/assets/images/svg/marks/highlight-stahs.svg',
+        iconUrl: '/assets/images/svg/marks/colored/highlight-stahs.svg',
         iconAnchor: [0, 0],
+        color: "#00df07"
       }),
       keepMapSize: true,
-      radius: 3,
+      radius: 3
     };
 
     let markers = [];
@@ -994,6 +1007,10 @@ export class MapHocComponent {
 
       localesToFind.push(marker.name, markers.length.toString());
 
+      if (isRich) {
+        let a =5;
+      }
+
       /*if (data.items && data.items.length > 0) {
         let itemsToFind: any[] = [];
 
@@ -1026,7 +1043,7 @@ export class MapHocComponent {
         offset: new Point(0, 50),
       });
 
-      //marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912 });
+      marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912 });
 
       markers.push(marker);
     }
@@ -1149,7 +1166,7 @@ export class MapHocComponent {
     return componentRef.location.nativeElement;
   }
 
-  public createStashPopup(
+  public createStuffPopup(
     stash: any,
     container: ViewContainerRef,
     game: string,
@@ -1165,10 +1182,32 @@ export class MapHocComponent {
 
     const componentRef = container.createComponent(factory);
     componentRef.instance.stuff = stash.data;
-    componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;
     componentRef.instance.stuffType = 'stuff';
     componentRef.instance.isUnderground = isUnderground;
+
+    return componentRef.location.nativeElement;
+  }
+
+  public createStashPopup(
+    stash: any,
+    container: ViewContainerRef,
+    game: string,
+    allItems: Item[],
+    isUnderground: boolean
+  ) {
+    stash.getPopup().on('remove', function () {
+      stash.getPopup().off('remove');
+      componentRef.destroy();
+    });
+
+    const factory = this.resolver.resolveComponentFactory(HocStashComponent);
+
+    const componentRef = container.createComponent(factory);
+    componentRef.instance.stash = stash.data;
+    componentRef.instance.allItems = allItems;
+    componentRef.instance.stashGenerators = this.gamedata.stashGenerators;
+    componentRef.instance.stashPrototypes = this.gamedata.stashPrototypes;
 
     return componentRef.location.nativeElement;
   }
@@ -1212,7 +1251,6 @@ export class MapHocComponent {
             width = layer.options.icon.options.iconSizeInit[0] * markWidth;
             height = layer.options.icon.options.iconSizeInit[1] * markWidth;
           }*/
-
           this._ctx.drawImage(
             layer.options.icon.icon._image,
             x,
@@ -1220,6 +1258,7 @@ export class MapHocComponent {
             width,
             height
           );
+
         } catch (ex) {
           console.log(layer);
           console.log(ex);
@@ -1245,7 +1284,21 @@ export class MapHocComponent {
       initialize(options: any) {
         this.setOptions(this, options);
         this._image = new Image();
-        this._image.src = options.iconUrl;
+
+        if (options.color) {
+          fetch(options.iconUrl).then((response) => {
+            if (response.ok) {
+              response.text().then((svg: string) => {
+                svg = svg.replace(/#FFFFFF/gm, options.color)
+                const svgBlob = new Blob([svg], { type: "image/svg+xml" });
+                this._image.src = URL.createObjectURL(svgBlob);
+              });
+            }
+          });
+        }
+        else {
+          this._image.src = options.iconUrl;
+        }
       },
     });
 

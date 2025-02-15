@@ -328,7 +328,7 @@ input[type=checkbox]+label:before {
   }
 }
 
-@for $i from 0 through 40 {
+@for $i from 0 through 50 {
     .inventory-item-x-#{$i} {
       background-position-x: calc($i * -1 * var(--inventory-cell-size));
     }

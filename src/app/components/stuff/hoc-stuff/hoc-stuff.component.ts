@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { StuffComponent } from '../stuff.component';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { HideUnhideComponent } from '../../hide-unhide/hide-unhide.component';
 import { TooltipDirective } from '../../tooltips/tooltip.directive';
@@ -13,7 +13,7 @@ import { MapService } from '../../../services/map.service';
 @Component({
   selector: 'app-hoc-stuff',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, TooltipDirective, HideUnhideComponent],
+  imports: [TranslateModule, NgFor, NgIf, TooltipDirective, HideUnhideComponent, NgStyle],
   templateUrl: './hoc-stuff.component.html',
   styleUrl: './hoc-stuff.component.scss'
 })
@@ -43,6 +43,20 @@ export class HocStuffComponent {
         let item = new StuffItem();
         item.item = this.allItems.find(y => y.uniqueName == x.uniqueName) as Item;
         item.count = x.count;
+        item.preinstalled = [];
+
+        if (item.item.preinstalledAttachments != null) {
+          if (item.item.compatibleAttachments != null) {
+            for (let attName of item.item.preinstalledAttachments) {
+              let attachment = item.item.compatibleAttachments.find(x => x.uniqueName == attName);
+
+              if (attachment) {
+                item.preinstalled.push(attachment);
+              }
+            }
+          }
+          console.log(item)
+        }
 
         return item;
       } );

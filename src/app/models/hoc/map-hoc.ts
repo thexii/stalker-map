@@ -11,6 +11,7 @@ export class MapHoc {
   public artefactSpawnerData: ArtefactSpawnerConfig;
   public stashes: Stash[];
   public stashGenerators: StashGenerator[];
+  public stashPrototypes: StashPrototype[]
 }
 
 export class ObjectAtLocationHoc {
@@ -98,4 +99,33 @@ export class PossibleItem {
   public minCount: number;
   public maxCount: number;
   public weight: number;
+}
+
+export class StashPrototype {
+  public name: string;
+  public itemGenerators: StashPrototypeItemGenerator[];
+}
+
+export class StashPrototypeItemGenerator {
+  public rank: string;
+  public consumablesParams: ConsumablesParamsItemGenerator[];
+  public primaryWeaponParams: PrimaryWeaponParams[];
+  public secondaryWeaponParams: PrimaryWeaponParams[];
+  public pistolWeaponParams: PrimaryWeaponParams[];
+  public grenadesParams: ConsumablesParamsItemGenerator[];
+}
+
+export class ConsumablesParamsItemGenerator {
+  public itemSetCount: number;
+  public minSpawnChance: number;
+  public maxSpawnChance: number;
+  public items: PossibleItem[];
+}
+
+export class PrimaryWeaponParams {
+  public priorityCaliber: string;
+  public mainWeaponAmmoCount: number;
+  public minSpawnChance: number;
+  public maxSpawnChance: number;
+  public items: PossibleItem[];
 }

@@ -8,11 +8,13 @@
 
       <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
     </div>
-    <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-      <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
-      <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
-      <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
-    </div>
+    <div class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}"></div>
+    <ng-container *ngIf="stuffItem.preinstalled.length > 0">
+      <div class="item-attachments">
+        <div *ngFor="let attachment of stuffItem.preinstalled" class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}"
+        [ngStyle]="{'width': stuffItem.item.width * 130 + 'px', 'height': stuffItem.item.height * 130+ 'px'}"></div>
+      </div>
+    </ng-container>
   </div>
 </div>
 <div class="bottom">
