@@ -1,14 +1,18 @@
 const { EnvironmentPlugin } = require('webpack');
+import { isDevMode } from '@angular/core';
 
-require('dotenv').config();
-
-module.exports = {
-  output: {
-    crossOriginLoading: 'anonymous'
-  },
-  plugins: [
-    new EnvironmentPlugin([
-      'apiKey','authDomain','projectId','storageBucket','messagingSenderId','appId','measurementId'
-    ])
-  ]
+if (!isDevMode()) {
+  require('dotenv').config();
+  
+  module.exports = {
+    output: {
+      crossOriginLoading: 'anonymous'
+    },
+    plugins: [
+      new EnvironmentPlugin([
+        'apiKey','authDomain','projectId','storageBucket','messagingSenderId','appId','measurementId'
+      ])
+    ]
+  }
+  
 }

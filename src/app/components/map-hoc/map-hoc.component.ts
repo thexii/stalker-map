@@ -3,6 +3,7 @@ import {
   Component,
   ComponentFactoryResolver,
   HostListener,
+  isDevMode,
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
@@ -258,12 +259,14 @@ export class MapHocComponent {
       this.addArtefactSpawners();
     }
 
-    const analytics = getAnalytics();
-    logEvent(analytics, 'open-map', {
-      game: 'hoc',
-      language: this.translate.currentLang,
-    });
-
+    if (!isDevMode()) {
+      const analytics = getAnalytics();
+      logEvent(analytics, 'open-map', {
+        game: 'hoc',
+        language: this.translate.currentLang,
+      });
+    }
+    
     let ruler: any = null;
     if (gameConfig.rulerEnabled) {
       ruler = this.mapService.addRuler(this.map, 1, 8000);

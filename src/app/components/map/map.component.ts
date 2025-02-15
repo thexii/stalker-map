@@ -28,6 +28,7 @@ import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { DialogComponent } from "../modals/dialog/dialog.component";
+import { isDevMode } from '@angular/core';
 
 declare const L: any;
 declare var markWidth: number;
@@ -676,11 +677,13 @@ export class MapComponent {
       });
     }
 
-    const analytics = getAnalytics();
-    logEvent(analytics, 'open-map', {
-        game: this.gamedata.uniqueName,
-        language: this.translate.currentLang,
-    });
+    if (!isDevMode()) {
+      const analytics = getAnalytics();
+      logEvent(analytics, 'open-map', {
+          game: this.gamedata.uniqueName,
+          language: this.translate.currentLang,
+      });
+    }
 
     this.route.queryParams.subscribe((h: any) => {
         if (h.lat != null && h.lng != null) {
@@ -719,13 +722,16 @@ export class MapComponent {
 
                   marker.fireEvent('click');
 
-                  logEvent(analytics, 'open-map-queryParams', {
-                      game: this.gamedata.uniqueName,
-                      language: this.translate.currentLang,
-                      markType: h.type,
-                      coordinates: `${h.lat} ${h.lng}`,
-                  });
-
+                  if (!isDevMode()) {
+                    const analytics = getAnalytics();
+                    logEvent(analytics, 'open-map-queryParams', {
+                        game: this.gamedata.uniqueName,
+                        language: this.translate.currentLang,
+                        markType: h.type,
+                        coordinates: `${h.lat} ${h.lng}`,
+                    });
+                  }
+              
                   return;
                 }
             }
