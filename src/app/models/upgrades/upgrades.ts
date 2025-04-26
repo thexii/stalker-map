@@ -63,4 +63,5 @@ export class UpgradeSelectedEventModel {
   public upgrade: Upgrade;
   public upgradeSection: UpgradeSection;
   public item: Item;
+  public selectedItemUpgrade: ItemUpgrade;
 }

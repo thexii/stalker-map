@@ -24,6 +24,6 @@ export class ItemUpgradesComponent {
   public upgradeTooltipComponent: any = UpgradeTooltipComponent;
 
   public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection): void {
-    this.upgradeSelectedEvent.emit({upgrade: upgrade, upgradeSection: upgradeSection, item: this.item});
+    this.upgradeSelectedEvent.emit({upgrade: upgrade, upgradeSection: upgradeSection, item: this.item, selectedItemUpgrade: this.selectedItemUpgrade});
   }
 }

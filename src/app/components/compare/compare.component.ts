@@ -63,7 +63,7 @@ export class CompareComponent {
   }
 
   public selectUpgrade(model: UpgradeSelectedEventModel): void {
-    this.compare.selectUpgrade(model.upgrade, model.upgradeSection, model.item);
+    this.compare.selectUpgrade(model.upgrade, model.upgradeSection, model.item, model.selectedItemUpgrade);
     this.calculateBestItems();
   }
 

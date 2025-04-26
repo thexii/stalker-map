@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Item } from '../models/item.model';
 import { v4 as uuidv4 } from 'uuid';
-import { Upgrade, UpgradeSection } from '../models/upgrades/upgrades';
+import { ItemUpgrade, Upgrade, UpgradeSection } from '../models/upgrades/upgrades';
 
 @Injectable({
   providedIn: 'root'
@@ -55,9 +55,27 @@ export class CompareService {
     localStorage.setItem(key, JSON.stringify(this.weaponsToCompare));
   }
 
-  public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection, item: Item): void {
+  public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection, item: Item, selectedItemUpgrade: ItemUpgrade): void {
     if (upgrade.isLocked) {
       return;
+    }
+
+    if (!upgrade.isInstalled && upgradeSection.needPreviousUpgrade != null && upgradeSection.needPreviousUpgrade.length > 0) {
+      let canInstall = false;
+
+      if (item.installedUpgrades != null) {
+        for (let i = 0; i < upgradeSection.needPreviousUpgrade.length; i++) {
+          if (item.installedUpgrades.includes(upgradeSection.needPreviousUpgrade[i])) {
+            canInstall = true;
+            break;
+          }
+        }
+      }
+
+      if (!canInstall) {
+        console.warn(upgradeSection);
+        return;
+      }
     }
 
     let effectsProps: string[] = []
@@ -67,8 +85,6 @@ export class CompareService {
       effectsProps = Object.keys(upgrade.propertiesEffects);
       effectsValues = Object.values(upgrade.propertiesEffects);
     }
-
-    let itemProps = Object.keys(item);
 
     if (upgrade.isInstalled) {
       for (let up of upgradeSection.elements) {
@@ -99,6 +115,8 @@ export class CompareService {
           for (let i = 0; i < effectsPropsUp.length; i++) {
             this.applyUpgradeEffect(item, effectsPropsUp[i], effectsValuesUp[i], -1);
           }
+
+          item.installedUpgrades = item.installedUpgrades.filter(x => x != up.name);
         }
 
         up.isInstalled = false;
@@ -116,6 +134,33 @@ export class CompareService {
       }
 
       item.installedUpgrades.push(upgrade.name);
+    }
+
+    console.log(item.installedUpgrades)
+    this.updateViewData(upgradeSection, selectedItemUpgrade, item, upgrade.isInstalled);
+  }
+
+  public updateViewData(section: UpgradeSection, selectedItemUpgrade: ItemUpgrade, item: Item, installed: boolean): void {
+    if (section.elements) {
+      for (let element of section.elements) {
+        if (element.effects) {
+          for (let effect of element.effects) {
+            let anotherSection = selectedItemUpgrade.upgradeSections.find(x => x.name == effect);
+
+            if (anotherSection) {
+              if (anotherSection.elements) {
+                for (let aElement of anotherSection.elements) {
+                  aElement.needPreviousUpgrades = !installed;
+
+                  if (aElement.isInstalled) {
+                    this.selectUpgrade(aElement, anotherSection, item, selectedItemUpgrade);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 

@@ -276,7 +276,7 @@ export class MechanicComponent {
       return;
     }
 
-    this.compare.selectUpgrade(upgrade, upgradeSection, this.selectedItemForUpgrades);
+    this.compare.selectUpgrade(upgrade, upgradeSection, this.selectedItemForUpgrades, model.selectedItemUpgrade);
 
     if (this.selectedItem.$type == "weapon") {
       this.resetWeaponStats();
