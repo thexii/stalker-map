@@ -1,6 +1,5 @@
 import {
   Component,
-  ComponentFactoryResolver,
   HostListener,
   ViewEncapsulation,
   ViewContainerRef,
@@ -97,7 +96,6 @@ export class MapComponent {
   constructor(
     protected translate: TranslateService,
     protected route: ActivatedRoute,
-    protected resolver: ComponentFactoryResolver,
     protected titleService:Title,
     protected mapService: MapService,
     protected meta: Meta,
@@ -1139,8 +1137,7 @@ export class MapComponent {
 
       _onInputClick: function() {
         if (this.componentRef == null) {
-          const factory = component.resolver.resolveComponentFactory(CompareComponent);
-          this.componentRef = component.container.createComponent(factory);
+          this.componentRef = component.container.createComponent(CompareComponent);
           this.componentRef.instance.element = this.componentRef.location.nativeElement;
 
           document.body.appendChild(this.componentRef.location.nativeElement);
@@ -2268,7 +2265,7 @@ export class MapComponent {
         .bindPopup(
           (stalker: any) =>
             this.mapService.createMechanicPopup(stalker, this.container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties),
-          { minWidth: minWidth }
+          { minWidth: minWidth, className: 'mechanic-popup' }
         )
         .openPopup();
     }
@@ -2773,9 +2770,7 @@ export class MapComponent {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(UndergroundComponent);
-
-    const componentRef = this.container.createComponent(factory);
+    const componentRef = this.container.createComponent(UndergroundComponent);
     componentRef.instance.gamedata = this.gamedata;
     componentRef.instance.location = destinationLocation;
     componentRef.instance.items = this.items;

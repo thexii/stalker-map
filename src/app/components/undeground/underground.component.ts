@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf, NgStyle } from "@angular/common";
-import { Component, ComponentFactoryResolver, Input, ViewChild, ViewContainerRef } from "@angular/core";
+import { Component, Input, ViewChild, ViewContainerRef } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { Map } from '../../models/map.model';
@@ -60,7 +60,6 @@ export class UndergroundComponent {
 
     constructor(
         private translate: TranslateService,
-        private resolver: ComponentFactoryResolver,
         private mapService: MapService) { }
 
     public setLayer(newLyaer: string): void {

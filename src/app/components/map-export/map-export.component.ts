@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MapComponent } from '../map/map.component';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
@@ -23,7 +23,6 @@ export class MapExportComponent extends MapComponent {
   constructor(
     protected override translate: TranslateService,
     protected override route: ActivatedRoute,
-    protected override resolver: ComponentFactoryResolver,
     protected override titleService:Title,
     protected override mapService: MapService,
     protected override meta: Meta,
@@ -32,7 +31,6 @@ export class MapExportComponent extends MapComponent {
     super(
       translate,
       route,
-      resolver,
       titleService,
       mapService,
       meta,

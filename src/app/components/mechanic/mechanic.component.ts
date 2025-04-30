@@ -254,6 +254,8 @@ export class MechanicComponent {
             }
           }
         }
+
+        console.log(this.selectedItemUpgrade.upgradeSections)
       }
       else {
         this.selectedItemUpgrade = undefined as unknown as ItemUpgrade;

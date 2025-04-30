@@ -60,6 +60,11 @@ export class CompareService {
       return;
     }
 
+    if (upgradeSection.needPreviousUpgrade || upgrade.needPreviousUpgrades)
+    {
+      console.warn(upgradeSection);
+    }
+
     if (!upgrade.isInstalled && upgradeSection.needPreviousUpgrade != null && upgradeSection.needPreviousUpgrade.length > 0) {
       let canInstall = false;
 
@@ -85,6 +90,8 @@ export class CompareService {
       effectsProps = Object.keys(upgrade.propertiesEffects);
       effectsValues = Object.values(upgrade.propertiesEffects);
     }
+
+    console.log(upgrade, upgradeSection)
 
     if (upgrade.isInstalled) {
       for (let up of upgradeSection.elements) {

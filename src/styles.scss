@@ -947,3 +947,17 @@ app-compare {
     background-image: url(/assets/images/svg/interface/games/hoc.svg)
   }
 }
+
+.mechanic-popup .leaflet-popup-content {
+  max-height: calc(var(--wrapper-height) - 100px);
+  max-width: calc(100vw - 100px);
+  overflow: scroll;
+}
+
+.inventory-item-count-hoc {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 35px;
+  color: white;
+}

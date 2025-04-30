@@ -1,5 +1,5 @@
 import { MapComponent } from './../components/map/map.component';
-import { ComponentFactoryResolver, Injectable, ViewContainerRef } from "@angular/core";
+import { Injectable, ViewContainerRef } from "@angular/core";
 import { HiddenMarker } from "../models/hidden-marker.model";
 import { HocStuffComponent } from '../components/stuff/hoc-stuff/hoc-stuff.component';
 import { StuffComponent } from '../components/stuff/stuff.component';
@@ -31,7 +31,6 @@ export class MapService {
   private mapComponent: MapComponent;
 
   constructor(
-    private resolver: ComponentFactoryResolver,
     private translate: TranslateService) {
 
   }
@@ -115,9 +114,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(StuffComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(StuffComponent);
     componentRef.instance.stuff = stash.properties.stuff;
     componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;
@@ -133,9 +130,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(LootBoxClusterComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(LootBoxClusterComponent);
     componentRef.instance.cluster = lootBox.properties.lootBox;
     componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;
@@ -156,9 +151,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(AnomalyZoneComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(AnomalyZoneComponent);
     componentRef.instance.anomalZone = zone.properties.zoneModel;
     componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;
@@ -175,9 +168,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(TraderComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(TraderComponent);
     componentRef.instance.trader = trader;
     componentRef.instance.allTraders = traders;
     componentRef.instance.game = game;
@@ -197,9 +188,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(StalkerComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(StalkerComponent);
     componentRef.instance.stalker = stalkerMarker.properties.stalker;
     componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;
@@ -217,9 +206,7 @@ export class MapService {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(MechanicComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(MechanicComponent);
     componentRef.instance.mechanic = mechanic;
     componentRef.instance.game = game;
     componentRef.instance.allItems = allItems;

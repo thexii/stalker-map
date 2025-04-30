@@ -23,7 +23,12 @@ export class ItemUpgradesComponent {
 
   public upgradeTooltipComponent: any = UpgradeTooltipComponent;
 
+  public ngOnInit(): void {
+    console.log(this.selectedItemUpgrade);
+  }
+
   public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection): void {
+    console.log(this.selectedItemUpgrade);
     this.upgradeSelectedEvent.emit({upgrade: upgrade, upgradeSection: upgradeSection, item: this.item, selectedItemUpgrade: this.selectedItemUpgrade});
   }
 }

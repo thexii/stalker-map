@@ -38,6 +38,8 @@ export class Upgrade {
   public isLocked: boolean;
   public isPreinstall: boolean;
   public needPreviousUpgrades: boolean;
+
+  public htmlLink: any;
 }
 
 export class ItemUpgradeView {

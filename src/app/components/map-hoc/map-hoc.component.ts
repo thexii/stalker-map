@@ -1,7 +1,6 @@
 import { Marker } from './../../models/hoc/map-hoc';
 import {
   Component,
-  ComponentFactoryResolver,
   HostListener,
   isDevMode,
   ViewChild,
@@ -55,7 +54,6 @@ export class MapHocComponent {
   constructor(
     protected translate: TranslateService,
     protected route: ActivatedRoute,
-    protected resolver: ComponentFactoryResolver,
     protected titleService: Title,
     protected mapService: MapService,
     protected meta: Meta,
@@ -168,8 +166,14 @@ export class MapHocComponent {
       //infinite: false
     });
 
+    let center = [0, 0];
+
+    if (gameConfig.mapBounds != null) {
+      center = [(gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0]) / 2, (gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1]) / 2]
+    }
+
     this.map = L.map('map', {
-      center: [height / 2, width / 2],
+      center: center,
       zoom: gameConfig.startZoom,
       minZoom: gameConfig.minZoom,
       maxZoom: gameConfig.maxZoom,
@@ -202,10 +206,6 @@ export class MapHocComponent {
             gameConfig.mapBounds[1][1]
           ],
         ];
-
-        L.marker([gameConfig.mapBounds[0][0], gameConfig.mapBounds[0][1]]).addTo(this.map);
-        L.marker([gameConfig.mapBounds[1][0], gameConfig.mapBounds[1][1]]).addTo(this.map);
-        L.marker([0,0]).addTo(this.map);
 
         let minW = Math.min(gameConfig.mapBounds[0][1], 0);
         let maxW = Math.min(gameConfig.mapBounds[1][1], 0);
@@ -995,6 +995,11 @@ export class MapHocComponent {
         }
       }
 
+      if (!isRich)
+      {
+        continue;
+      }
+
       let marker = new this.svgMarker(
         [data.z, data.x],
         {
@@ -1152,11 +1157,7 @@ export class MapHocComponent {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(
-      ArtefactSpawnerPopupComponent
-    );
-
-    const componentRef = this.container.createComponent(factory);
+    const componentRef = this.container.createComponent(ArtefactSpawnerPopupComponent);
     componentRef.instance.artefactSpawner = marker.data;
     componentRef.instance.artefactSpawnerData =
       this.gamedata.artefactSpawnerData;
@@ -1181,9 +1182,7 @@ export class MapHocComponent {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(HocStuffComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(HocStuffComponent);
     componentRef.instance.stuff = stash.data;
     componentRef.instance.allItems = allItems;
     componentRef.instance.stuffType = 'stuff';
@@ -1204,9 +1203,7 @@ export class MapHocComponent {
       componentRef.destroy();
     });
 
-    const factory = this.resolver.resolveComponentFactory(HocStashComponent);
-
-    const componentRef = container.createComponent(factory);
+    const componentRef = container.createComponent(HocStashComponent);
     componentRef.instance.stash = stash.data;
     componentRef.instance.allItems = allItems;
     componentRef.instance.stashGenerators = this.gamedata.stashGenerators;

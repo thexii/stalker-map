@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, ComponentRef, Directive, HostListener, Input, Type, ViewContainerRef } from '@angular/core';
+import { ComponentRef, Directive, HostListener, Input, Type, ViewContainerRef } from '@angular/core';
 
 @Directive({
     selector: '[tooltip]',
@@ -16,7 +16,6 @@ export class TooltipDirective {
   private tooltipPadding: number = 16 * 2;
 
   constructor(
-    private resolver: ComponentFactoryResolver,
     private viewContainerRef: ViewContainerRef) {
 
   }
@@ -60,9 +59,7 @@ export class TooltipDirective {
   }
 
   private createTooltip(): void {
-    const factory = this.resolver.resolveComponentFactory(this.componentType);
-
-    this.componentRef = this.viewContainerRef.createComponent(factory);
+    this.componentRef = this.viewContainerRef.createComponent(this.componentType);
     document.body.appendChild(this.componentRef.location.nativeElement);
     this.componentRef.location.nativeElement.style.maxWidth = `${this.tooltipWidth}px`;
     this.componentRef.location.nativeElement.style.position = 'fixed';
