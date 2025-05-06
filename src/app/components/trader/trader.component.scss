@@ -8,6 +8,7 @@ $cell: 50px;
   flex-direction: row;
   height: 800px;
   max-height: var(--wrapper-height);
+  column-gap: 1rem;
 }
 
 .trader-info {
@@ -45,7 +46,6 @@ $cell: 50px;
 .best-sell-item {
   display: flex;
   flex-direction: row;
-  margin-bottom: 0.5rem;
 }
 
 .best-trade-trader-container {
@@ -70,7 +70,6 @@ $cell: 50px;
 }
 
 .trader-container-section.section-info {
-  margin-inline: 1rem;
   flex-grow: 1;
   min-width: $trader-columns * $cell;
   max-width: ($trader-columns + 2) * $cell;
@@ -78,6 +77,9 @@ $cell: 50px;
 
 .container {
   max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .container.info {
@@ -95,7 +97,6 @@ $cell: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
   max-height: 300px;
   overflow-y: auto;
 }
@@ -180,6 +181,12 @@ $cell: 50px;
   color: black;
 }
 
+.best-trade-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .best-sell-item:nth-child(even) {
   background-color: rgba(255,255,255,0.1);
 }
@@ -190,6 +197,9 @@ $cell: 50px;
 
 .best-sell-container,.best-buy-container {
   margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 .best-sell-item-price-value {

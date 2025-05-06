@@ -46,7 +46,7 @@
     "boxSize": 0,
     "gridX": 32,
     "gridY": 8,
-    "weight": 0.018,
+    "weight": 0.008,
     "area": 2,
     "isQuest": false
   },
@@ -63,7 +63,7 @@
     "boxSize": 0,
     "gridX": 26,
     "gridY": 32,
-    "weight": 0.02,
+    "weight": 0.01,
     "area": 2,
     "isQuest": false
   },
@@ -80,7 +80,7 @@
     "boxSize": 0,
     "gridX": 31,
     "gridY": 11,
-    "weight": 0.02,
+    "weight": 0.01,
     "area": 2,
     "isQuest": false
   },
@@ -4462,11 +4462,11 @@
     "sort": 0,
     "width": 2,
     "height": 1,
-    "price": 12000,
+    "price": 10000,
     "boxSize": 0,
     "gridX": 32,
-    "gridY": 14,
-    "weight": 0.6,
+    "gridY": 4,
+    "weight": 0.5,
     "area": 2,
     "isQuest": false
   },
@@ -15147,6 +15147,278 @@
     "isQuest": false
   },
   {
+    "id": 0,
+    "uniqueName": "Note_Zalesie_ConderPDANote",
+    "localeName": "sid_questItemprototypes_Note_Zalesie_ConderPDANote_name",
+    "description": "sid_questItemprototypes_Note_Zalesie_ConderPDANote_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 28,
+    "gridY": 5,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_IKAR_Hub_Note_BigLandChat",
+    "localeName": "sid_questItemprototypes_Note_IKAR_Hub_Note_BigLandChat_name",
+    "description": "sid_questItemprototypes_Note_IKAR_Hub_Note_BigLandChat_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 30,
+    "gridY": 1,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Ikar_Note_Batalov_Desperate",
+    "localeName": "sid_questItemprototypes_Note_Ikar_Note_Batalov_Desperate_name",
+    "description": "sid_questItemprototypes_Note_Ikar_Note_Batalov_Desperate_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 21,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Himzavod_Hub_Note_ScientistsWhining",
+    "localeName": "sid_questItemprototypes_Note_Himzavod_Hub_Note_ScientistsWhining_name",
+    "description": "sid_questItemprototypes_Note_Himzavod_Hub_Note_ScientistsWhining_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 26,
+    "gridY": 17,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Himzavod_Hub_Note_LevaFan",
+    "localeName": "sid_questItemprototypes_Note_Himzavod_Hub_Note_LevaFan_name",
+    "description": "sid_questItemprototypes_Note_Himzavod_Hub_Note_LevaFan_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 31,
+    "gridY": 29,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Himzavod_Hub_Note_AgathaToKorsh",
+    "localeName": "sid_questItemprototypes_Note_Himzavod_Hub_Note_AgathaToKorsh_name",
+    "description": "sid_questItemprototypes_Note_Himzavod_Hub_Note_AgathaToKorsh_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 14,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Shevchenko_Hub_RepairNote",
+    "localeName": "sid_questItemprototypes_Note_Shevchenko_Hub_RepairNote_name",
+    "description": "sid_questItemprototypes_Note_Shevchenko_Hub_RepairNote_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 12,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Shevchenko_Hub_BeardSpartacus",
+    "localeName": "sid_questItemprototypes_Note_Shevchenko_Hub_BeardSpartacus_name",
+    "description": "sid_questItemprototypes_Note_Shevchenko_Hub_BeardSpartacus_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 26,
+    "gridY": 17,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_RookieVillage_Hub_Note_Agent",
+    "localeName": "sid_questItemprototypes_Note_RookieVillage_Hub_Note_Agent_name",
+    "description": "sid_questItemprototypes_Note_RookieVillage_Hub_Note_Agent_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 31,
+    "gridY": 29,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_RookieVillage_Hub_Note_Oasis",
+    "localeName": "sid_questItemprototypes_Note_RookieVillage_Hub_Note_Oasis_name",
+    "description": "sid_questItemprototypes_Note_RookieVillage_Hub_Note_Oasis_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 31,
+    "gridY": 29,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Rostok_Hub_MessageNote",
+    "localeName": "sid_questItemprototypes_Note_Rostok_Hub_MessageNote_name",
+    "description": "sid_questItemprototypes_Note_Rostok_Hub_MessageNote_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 28,
+    "gridY": 16,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Cemzavod_Note_Zulus",
+    "localeName": "sid_questItemprototypes_Note_Cemzavod_Note_Zulus_name",
+    "description": "sid_questItemprototypes_Note_Cemzavod_Note_Zulus_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 21,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Cemzavod_Note_VoroninDecree",
+    "localeName": "sid_questItemprototypes_Note_Cemzavod_Note_VoroninDecree_name",
+    "description": "sid_questItemprototypes_Note_Cemzavod_Note_VoroninDecree_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 21,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Cemzavod_Note_Eger_Alensky",
+    "localeName": "sid_questItemprototypes_Note_Cemzavod_Note_Eger_Alensky_name",
+    "description": "sid_questItemprototypes_Note_Cemzavod_Note_Eger_Alensky_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 30,
+    "gridY": 5,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_YanovDeggyToNor",
+    "localeName": "sid_questItemprototypes_Note_YanovDeggyToNor_name",
+    "description": "sid_questItemprototypes_Note_YanovDeggyToNor_description",
+    "category": null,
+    "sort": 0,
+    "width": 1,
+    "height": 1,
+    "price": 100,
+    "boxSize": 0,
+    "gridX": 11,
+    "gridY": 34,
+    "weight": 0.05,
+    "area": 1,
+    "isQuest": false
+  },
+  {
+    "id": 0,
+    "uniqueName": "Note_Engergetik_Telegraf",
+    "localeName": "sid_questItemprototypes_Note_Engergetik_Telegraf_name",
+    "description": "sid_questItemprototypes_Note_Engergetik_Telegraf_description",
+    "category": null,
+    "sort": 0,
+    "width": 2,
+    "height": 1,
+    "price": 150,
+    "boxSize": 0,
+    "gridX": 31,
+    "gridY": 29,
+    "weight": 0.2,
+    "area": 2,
+    "isQuest": false
+  },
+  {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "compatibleAttachments": [
@@ -15160,7 +15432,7 @@
         "id": 0,
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
-        "gridY": 26
+        "gridY": 23
       },
       {
         "id": 0,
@@ -15172,7 +15444,7 @@
         "id": 0,
         "uniqueName": "RU_Silen_1",
         "gridX": 5,
-        "gridY": 34
+        "gridY": 24
       }
     ],
     "preinstalledAttachments": [
@@ -15203,19 +15475,19 @@
         "id": 0,
         "uniqueName": "EN_Silen_1",
         "gridX": 5,
-        "gridY": 23
+        "gridY": 25
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 5,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "GunUDP_MagDefault",
         "gridX": 5,
-        "gridY": 25
+        "gridY": 34
       },
       {
         "id": 0,
@@ -15269,7 +15541,7 @@
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 5,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
@@ -15287,7 +15559,7 @@
         "id": 0,
         "uniqueName": "TopRailAPB",
         "gridX": 5,
-        "gridY": 20
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -15316,32 +15588,32 @@
       {
         "id": 0,
         "uniqueName": "EN_Silen_1",
-        "gridX": 49,
-        "gridY": 12
+        "gridX": 48,
+        "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
         "gridX": 49,
-        "gridY": 18
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 49,
-        "gridY": 8
+        "gridX": 4,
+        "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "GunM10_MagDefault",
-        "gridX": 49,
-        "gridY": 2
+        "gridX": 48,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunM10_MagIncreased",
-        "gridX": 4,
-        "gridY": 46
+        "gridX": 49,
+        "gridY": 18
       },
       {
         "id": 0,
@@ -15376,26 +15648,26 @@
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_4",
-        "gridX": 4,
-        "gridY": 44
+        "gridX": 49,
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "EN_X2Scope_1",
-        "gridX": 4,
-        "gridY": 48
+        "gridX": 49,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 49,
-        "gridY": 0
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "TopRailRhino",
-        "gridX": 49,
-        "gridY": 6
+        "gridX": 4,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": null,
@@ -15429,7 +15701,7 @@
         "id": 0,
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
-        "gridY": 26
+        "gridY": 23
       },
       {
         "id": 0,
@@ -15441,7 +15713,7 @@
         "id": 0,
         "uniqueName": "RU_Silen_1",
         "gridX": 5,
-        "gridY": 34
+        "gridY": 24
       }
     ],
     "preinstalledAttachments": [
@@ -15472,19 +15744,19 @@
         "id": 0,
         "uniqueName": "EN_Silen_1",
         "gridX": 5,
-        "gridY": 23
+        "gridY": 25
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 5,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "GunUDP_MagDefault",
         "gridX": 5,
-        "gridY": 25
+        "gridY": 34
       },
       {
         "id": 0,
@@ -15538,7 +15810,7 @@
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 5,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
@@ -15556,7 +15828,7 @@
         "id": 0,
         "uniqueName": "TopRailAPB",
         "gridX": 5,
-        "gridY": 20
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -15585,32 +15857,32 @@
       {
         "id": 0,
         "uniqueName": "EN_Silen_1",
-        "gridX": 49,
-        "gridY": 12
+        "gridX": 48,
+        "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
         "gridX": 49,
-        "gridY": 18
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 49,
-        "gridY": 8
+        "gridX": 4,
+        "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "GunM10_MagDefault",
-        "gridX": 49,
-        "gridY": 2
+        "gridX": 48,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunM10_MagIncreased",
-        "gridX": 4,
-        "gridY": 46
+        "gridX": 49,
+        "gridY": 18
       },
       {
         "id": 0,
@@ -15645,26 +15917,26 @@
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_4",
-        "gridX": 4,
-        "gridY": 44
+        "gridX": 49,
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "EN_X2Scope_1",
-        "gridX": 4,
-        "gridY": 48
+        "gridX": 49,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 49,
-        "gridY": 0
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "TopRailRhino",
-        "gridX": 49,
-        "gridY": 6
+        "gridX": 4,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": null,
@@ -15692,36 +15964,36 @@
         "id": 0,
         "uniqueName": "EN_Silen_2",
         "gridX": 45,
-        "gridY": 6
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
         "gridX": 45,
-        "gridY": 8
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 44,
-        "gridY": 10
+        "gridX": 45,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "TopRailViper",
-        "gridX": 44,
-        "gridY": 44
+        "gridX": 45,
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "GunViper_MagIncreased",
         "gridX": 44,
-        "gridY": 32
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "GunViper_MagDefault",
-        "gridX": 39,
+        "gridX": 7,
         "gridY": 44
       }
     ],
@@ -15751,8 +16023,8 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 7,
-        "gridY": 46
+        "gridX": 44,
+        "gridY": 32
       },
       {
         "id": 0,
@@ -15769,26 +16041,26 @@
       {
         "id": 0,
         "uniqueName": "GunAKU_MagDefault",
-        "gridX": 44,
-        "gridY": 36
+        "gridX": 34,
+        "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
-        "gridX": 44,
-        "gridY": 30
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAKU",
         "gridX": 0,
         "gridY": 44
       },
       {
         "id": 0,
+        "uniqueName": "TopRailAKU",
+        "gridX": 44,
+        "gridY": 42
+      },
+      {
+        "id": 0,
         "uniqueName": "AKU_DefaultMuz",
-        "gridX": 24,
-        "gridY": 44
+        "gridX": 0,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -15818,44 +16090,44 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_1",
-        "gridX": 48,
-        "gridY": 28
+        "gridX": 39,
+        "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_1",
         "gridX": 45,
-        "gridY": 2
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
-        "gridX": 13,
-        "gridY": 46
+        "gridX": 45,
+        "gridY": 6
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 13,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagDefault",
-        "gridX": 0,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagIncreased",
         "gridX": 48,
         "gridY": 10
       },
       {
         "id": 0,
+        "uniqueName": "GunBucket_MagDefault",
+        "gridX": 44,
+        "gridY": 46
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunBucket_MagIncreased",
+        "gridX": 0,
+        "gridY": 48
+      },
+      {
+        "id": 0,
         "uniqueName": "GunBucket_TopRail",
         "gridX": 7,
-        "gridY": 48
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -15891,61 +16163,61 @@
         "id": 0,
         "uniqueName": "EN_Silen_2",
         "gridX": 48,
-        "gridY": 46
+        "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_2",
         "gridX": 48,
-        "gridY": 48
+        "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "EN_AutMuz_1",
         "gridX": 48,
-        "gridY": 36
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 39,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 39,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 29,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
         "gridX": 48,
         "gridY": 30
       },
       {
         "id": 0,
-        "uniqueName": "GunIntegral_MagDefault",
-        "gridX": 48,
-        "gridY": 32
+        "uniqueName": "EN_X2Scope_1",
+        "gridX": 7,
+        "gridY": 48
       },
       {
         "id": 0,
-        "uniqueName": "GunIntegral_MagIncreased",
-        "gridX": 34,
+        "uniqueName": "EN_Grip_1",
+        "gridX": 19,
+        "gridY": 48
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 24,
+        "gridY": 48
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunIntegral_MagDefault",
+        "gridX": 19,
         "gridY": 46
       },
       {
         "id": 0,
+        "uniqueName": "GunIntegral_MagIncreased",
+        "gridX": 13,
+        "gridY": 48
+      },
+      {
+        "id": 0,
         "uniqueName": "GunIntegral_FrontExtension",
-        "gridX": 45,
-        "gridY": 18
+        "gridX": 48,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -15975,56 +16247,56 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 48
+        "gridX": 48,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "Zubr_SinMuz",
-        "gridX": 45,
-        "gridY": 12
+        "gridX": 44,
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_1",
-        "gridX": 24,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
         "gridX": 34,
         "gridY": 48
       },
       {
         "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 19,
-        "gridY": 48
+        "uniqueName": "RU_ColimScope_1",
+        "gridX": 48,
+        "gridY": 44
       },
       {
         "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 24,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 34,
         "gridY": 46
       },
       {
         "id": 0,
+        "uniqueName": "RU_Laser_1",
+        "gridX": 45,
+        "gridY": 12
+      },
+      {
+        "id": 0,
         "uniqueName": "GunZubr_MagDefault",
-        "gridX": 19,
+        "gridX": 13,
         "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "GunZubr_MagIncreased",
-        "gridX": 44,
+        "gridX": 24,
         "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "TopRailZubr",
-        "gridX": 48,
-        "gridY": 44
+        "gridX": 39,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -16054,36 +16326,36 @@
         "id": 0,
         "uniqueName": "EN_Silen_2",
         "gridX": 45,
-        "gridY": 6
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
         "gridX": 45,
-        "gridY": 8
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 44,
-        "gridY": 10
+        "gridX": 45,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "TopRailViper",
-        "gridX": 44,
-        "gridY": 44
+        "gridX": 45,
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "GunViper_MagIncreased",
         "gridX": 44,
-        "gridY": 32
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "GunViper_MagDefault",
-        "gridX": 39,
+        "gridX": 7,
         "gridY": 44
       }
     ],
@@ -16113,8 +16385,8 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 7,
-        "gridY": 46
+        "gridX": 44,
+        "gridY": 32
       },
       {
         "id": 0,
@@ -16131,26 +16403,26 @@
       {
         "id": 0,
         "uniqueName": "GunAKU_MagDefault",
-        "gridX": 44,
-        "gridY": 36
+        "gridX": 34,
+        "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
-        "gridX": 44,
-        "gridY": 30
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAKU",
         "gridX": 0,
         "gridY": 44
       },
       {
         "id": 0,
+        "uniqueName": "TopRailAKU",
+        "gridX": 44,
+        "gridY": 42
+      },
+      {
+        "id": 0,
         "uniqueName": "AKU_DefaultMuz",
-        "gridX": 24,
-        "gridY": 44
+        "gridX": 0,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -16180,44 +16452,44 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_1",
-        "gridX": 48,
-        "gridY": 28
+        "gridX": 39,
+        "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_1",
         "gridX": 45,
-        "gridY": 2
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
-        "gridX": 13,
-        "gridY": 46
+        "gridX": 45,
+        "gridY": 6
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 13,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagDefault",
-        "gridX": 0,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagIncreased",
         "gridX": 48,
         "gridY": 10
       },
       {
         "id": 0,
+        "uniqueName": "GunBucket_MagDefault",
+        "gridX": 44,
+        "gridY": 46
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunBucket_MagIncreased",
+        "gridX": 0,
+        "gridY": 48
+      },
+      {
+        "id": 0,
         "uniqueName": "GunBucket_TopRail",
         "gridX": 7,
-        "gridY": 48
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -16253,61 +16525,61 @@
         "id": 0,
         "uniqueName": "EN_Silen_2",
         "gridX": 48,
-        "gridY": 46
+        "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_2",
         "gridX": 48,
-        "gridY": 48
+        "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "EN_AutMuz_1",
         "gridX": 48,
-        "gridY": 36
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 39,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 39,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 29,
-        "gridY": 46
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
         "gridX": 48,
         "gridY": 30
       },
       {
         "id": 0,
-        "uniqueName": "GunIntegral_MagDefault",
-        "gridX": 48,
-        "gridY": 32
+        "uniqueName": "EN_X2Scope_1",
+        "gridX": 7,
+        "gridY": 48
       },
       {
         "id": 0,
-        "uniqueName": "GunIntegral_MagIncreased",
-        "gridX": 34,
+        "uniqueName": "EN_Grip_1",
+        "gridX": 19,
+        "gridY": 48
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 24,
+        "gridY": 48
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunIntegral_MagDefault",
+        "gridX": 19,
         "gridY": 46
       },
       {
         "id": 0,
+        "uniqueName": "GunIntegral_MagIncreased",
+        "gridX": 13,
+        "gridY": 48
+      },
+      {
+        "id": 0,
         "uniqueName": "GunIntegral_FrontExtension",
-        "gridX": 45,
-        "gridY": 18
+        "gridX": 48,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -16337,56 +16609,56 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 48
+        "gridX": 48,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "Zubr_SinMuz",
-        "gridX": 45,
-        "gridY": 12
+        "gridX": 44,
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_1",
-        "gridX": 24,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
         "gridX": 34,
         "gridY": 48
       },
       {
         "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 19,
-        "gridY": 48
+        "uniqueName": "RU_ColimScope_1",
+        "gridX": 48,
+        "gridY": 44
       },
       {
         "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 24,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 34,
         "gridY": 46
       },
       {
         "id": 0,
+        "uniqueName": "RU_Laser_1",
+        "gridX": 45,
+        "gridY": 12
+      },
+      {
+        "id": 0,
         "uniqueName": "GunZubr_MagDefault",
-        "gridX": 19,
+        "gridX": 13,
         "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "GunZubr_MagIncreased",
-        "gridX": 44,
+        "gridX": 24,
         "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "TopRailZubr",
-        "gridX": 48,
-        "gridY": 44
+        "gridX": 39,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -16415,50 +16687,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagIncreased",
         "gridX": 39,
-        "gridY": 24
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -16488,50 +16760,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagIncreased",
         "gridX": 39,
-        "gridY": 24
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -16561,8 +16833,8 @@
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -16591,56 +16863,56 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_03",
-        "gridX": 24,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 24,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
         "gridX": 7,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagDefault",
+        "uniqueName": "EN_Silen_3",
+        "gridX": 19,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 29,
+        "gridY": 36
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 39,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Grip_2",
         "gridX": 13,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
+        "uniqueName": "GunM16_MagDefault",
         "gridX": 29,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "M16_DefaultMuz",
+        "uniqueName": "GunM16_MagIncreased",
         "gridX": 39,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_GLaunch_1",
+        "uniqueName": "M16_DefaultMuz",
         "gridX": 34,
         "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GLaunch_1",
+        "gridX": 7,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -16671,98 +16943,98 @@
       {
         "id": 0,
         "uniqueName": "G37_ScopeRail",
-        "gridX": 19,
+        "gridX": 0,
         "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
         "gridX": 39,
-        "gridY": 36
+        "gridY": 24
       },
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_3",
         "gridX": 39,
-        "gridY": 10
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "EN_AutMuz_2",
-        "gridX": 39,
-        "gridY": 32
+        "gridX": 35,
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 35,
-        "gridY": 18
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 19,
+        "gridX": 39,
         "gridY": 36
       },
       {
         "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 35,
+        "gridY": 4
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_Grip_2",
-        "gridX": 39,
-        "gridY": 26
+        "gridX": 25,
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 35,
-        "gridY": 6
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "EN_BuckLaunch_1",
         "gridX": 35,
-        "gridY": 12
+        "gridY": 6
       },
       {
         "id": 0,
         "uniqueName": "RailPicatiniGP37",
         "gridX": 35,
-        "gridY": 16
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "GunGP37_MagDefault",
-        "gridX": 13,
-        "gridY": 40
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagPaired",
-        "gridX": 40,
-        "gridY": 2
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagLarge",
-        "gridX": 39,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 40
-      },
-      {
-        "id": 0,
-        "uniqueName": "G37_IronSight",
         "gridX": 39,
         "gridY": 20
       },
       {
         "id": 0,
-        "uniqueName": "G37_DefaultMuz",
-        "gridX": 0,
+        "uniqueName": "GunGP37_MagPaired",
+        "gridX": 19,
+        "gridY": 40
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunGP37_MagLarge",
+        "gridX": 40,
+        "gridY": 14
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GLaunch_1",
+        "gridX": 40,
+        "gridY": 6
+      },
+      {
+        "id": 0,
+        "uniqueName": "G37_IronSight",
+        "gridX": 39,
         "gridY": 42
+      },
+      {
+        "id": 0,
+        "uniqueName": "G37_DefaultMuz",
+        "gridX": 29,
+        "gridY": 44
       },
       {
         "id": 0,
@@ -16801,72 +17073,72 @@
         "id": 0,
         "uniqueName": "Ironsights_02",
         "gridX": 29,
-        "gridY": 44
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
-        "gridX": 24,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 34,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
         "gridX": 44,
         "gridY": 22
       },
       {
         "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 44
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 44,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 44,
-        "gridY": 26
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 44,
-        "gridY": 34
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_SinMuz_3",
         "gridX": 19,
         "gridY": 42
       },
       {
         "id": 0,
+        "uniqueName": "EN_AutMuz_2",
+        "gridX": 34,
+        "gridY": 42
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 44,
+        "gridY": 34
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X2Scope_1",
+        "gridX": 13,
+        "gridY": 44
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 44,
+        "gridY": 20
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Grip_1",
+        "gridX": 44,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 44,
+        "gridY": 24
+      },
+      {
+        "id": 0,
         "uniqueName": "GunFora_MagDefault",
-        "gridX": 7,
+        "gridX": 24,
         "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunFora_MagIncreased",
-        "gridX": 13,
+        "gridX": 0,
         "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "Fora_DefaultMuz",
-        "gridX": 39,
+        "gridX": 7,
         "gridY": 42
       }
     ],
@@ -16899,66 +17171,66 @@
         "id": 0,
         "uniqueName": "DefaultScopeGrim",
         "gridX": 44,
-        "gridY": 20
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "TopRailGrim",
-        "gridX": 7,
-        "gridY": 34
+        "gridX": 40,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
         "gridX": 40,
-        "gridY": 14
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_3",
         "gridX": 40,
-        "gridY": 16
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_2",
+        "gridX": 40,
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_ColimScope_1",
         "gridX": 7,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_ColimScope_1",
+        "uniqueName": "EN_X4Scope_1",
         "gridX": 39,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "EN_X4Scope_1",
+        "uniqueName": "RU_Laser_1",
         "gridX": 24,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 29,
-        "gridY": 42
-      },
-      {
-        "id": 0,
         "uniqueName": "GunGrim_MagDefault",
-        "gridX": 29,
+        "gridX": 13,
         "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagIncreased",
-        "gridX": 40,
-        "gridY": 4
+        "gridX": 13,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagLarge",
-        "gridX": 34,
+        "gridX": 29,
         "gridY": 40
       },
       {
@@ -16996,26 +17268,26 @@
       {
         "id": 0,
         "uniqueName": "Gvintar_Scope",
-        "gridX": 40,
-        "gridY": 18
+        "gridX": 34,
+        "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 40,
-        "gridY": 6
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagDefault",
         "gridX": 35,
-        "gridY": 8
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagIncreased",
-        "gridX": 40,
-        "gridY": 0
+        "gridX": 39,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": [
@@ -17045,14 +17317,14 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_02",
-        "gridX": 35,
-        "gridY": 4
+        "gridX": 0,
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
-        "gridX": 44,
-        "gridY": 24
+        "gridX": 40,
+        "gridY": 4
       },
       {
         "id": 0,
@@ -17069,20 +17341,20 @@
       {
         "id": 0,
         "uniqueName": "EN_X2Scope_1",
+        "gridX": 35,
+        "gridY": 8
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
         "gridX": 13,
         "gridY": 20
       },
       {
         "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 29,
-        "gridY": 36
-      },
-      {
-        "id": 0,
         "uniqueName": "EN_Grip_1",
-        "gridX": 7,
-        "gridY": 28
+        "gridX": 24,
+        "gridY": 10
       },
       {
         "id": 0,
@@ -17099,32 +17371,32 @@
       {
         "id": 0,
         "uniqueName": "GunKharod_MagDefault",
-        "gridX": 29,
-        "gridY": 10
+        "gridX": 24,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
+        "gridX": 7,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "GunKharod_MagPaired",
-        "gridX": 24,
+        "gridX": 0,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "Kharod_DefaultMuz",
-        "gridX": 13,
+        "gridX": 24,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "EN_GLaunch_1",
-        "gridX": 25,
-        "gridY": 14
+        "gridX": 13,
+        "gridY": 26
       }
     ],
     "preinstalledAttachments": [
@@ -17155,44 +17427,44 @@
       {
         "id": 0,
         "uniqueName": "RU_X2Scope_1",
-        "gridX": 19,
-        "gridY": 26
+        "gridX": 25,
+        "gridY": 14
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
-        "gridX": 25,
-        "gridY": 8
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 25,
-        "gridY": 4
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 13,
-        "gridY": 28
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagDefault",
         "gridX": 13,
         "gridY": 34
       },
       {
         "id": 0,
-        "uniqueName": "GunLavina_MagIncreased",
+        "uniqueName": "RU_Grip_1",
+        "gridX": 7,
+        "gridY": 28
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_Laser_1",
+        "gridX": 29,
+        "gridY": 10
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagDefault",
         "gridX": 25,
-        "gridY": 12
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagIncreased",
+        "gridX": 13,
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "TopRailLavina",
-        "gridX": 7,
-        "gridY": 24
+        "gridX": 25,
+        "gridY": 12
       }
     ],
     "preinstalledAttachments": [
@@ -17222,13 +17494,13 @@
         "id": 0,
         "uniqueName": "RU_Silen_2",
         "gridX": 7,
-        "gridY": 22
+        "gridY": 24
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 7,
-        "gridY": 20
+        "gridY": 22
       },
       {
         "id": 0,
@@ -17239,26 +17511,26 @@
       {
         "id": 0,
         "uniqueName": "RU_ColimScope_1",
-        "gridX": 30,
-        "gridY": 8
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 7,
+        "gridX": 19,
         "gridY": 26
       },
       {
         "id": 0,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 13,
+        "gridY": 36
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_X4Scope_1",
-        "gridX": 24,
-        "gridY": 22
+        "gridX": 25,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_1",
         "gridX": 25,
-        "gridY": 2
+        "gridY": 18
       },
       {
         "id": 0,
@@ -17331,50 +17603,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagIncreased",
         "gridX": 39,
-        "gridY": 24
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -17404,56 +17676,56 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_03",
-        "gridX": 24,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 24,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
         "gridX": 7,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagDefault",
+        "uniqueName": "EN_Silen_3",
+        "gridX": 19,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 29,
+        "gridY": 36
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 39,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Grip_2",
         "gridX": 13,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
+        "uniqueName": "GunM16_MagDefault",
         "gridX": 29,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "M16_DefaultMuz",
+        "uniqueName": "GunM16_MagIncreased",
         "gridX": 39,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_GLaunch_1",
+        "uniqueName": "M16_DefaultMuz",
         "gridX": 34,
         "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GLaunch_1",
+        "gridX": 7,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -17484,98 +17756,98 @@
       {
         "id": 0,
         "uniqueName": "G37_ScopeRail",
-        "gridX": 19,
+        "gridX": 0,
         "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
         "gridX": 39,
-        "gridY": 36
+        "gridY": 24
       },
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_3",
         "gridX": 39,
-        "gridY": 10
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "EN_AutMuz_2",
-        "gridX": 39,
-        "gridY": 32
+        "gridX": 35,
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 35,
-        "gridY": 18
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 19,
+        "gridX": 39,
         "gridY": 36
       },
       {
         "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 35,
+        "gridY": 4
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_Grip_2",
-        "gridX": 39,
-        "gridY": 26
+        "gridX": 25,
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 35,
-        "gridY": 6
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "EN_BuckLaunch_1",
         "gridX": 35,
-        "gridY": 12
+        "gridY": 6
       },
       {
         "id": 0,
         "uniqueName": "RailPicatiniGP37",
         "gridX": 35,
-        "gridY": 16
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "GunGP37_MagDefault",
-        "gridX": 13,
-        "gridY": 40
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagPaired",
-        "gridX": 40,
-        "gridY": 2
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagLarge",
-        "gridX": 39,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 40
-      },
-      {
-        "id": 0,
-        "uniqueName": "G37_IronSight",
         "gridX": 39,
         "gridY": 20
       },
       {
         "id": 0,
-        "uniqueName": "G37_DefaultMuz",
-        "gridX": 0,
+        "uniqueName": "GunGP37_MagPaired",
+        "gridX": 19,
+        "gridY": 40
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunGP37_MagLarge",
+        "gridX": 40,
+        "gridY": 14
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GLaunch_1",
+        "gridX": 40,
+        "gridY": 6
+      },
+      {
+        "id": 0,
+        "uniqueName": "G37_IronSight",
+        "gridX": 39,
         "gridY": 42
+      },
+      {
+        "id": 0,
+        "uniqueName": "G37_DefaultMuz",
+        "gridX": 29,
+        "gridY": 44
       },
       {
         "id": 0,
@@ -17614,72 +17886,72 @@
         "id": 0,
         "uniqueName": "Ironsights_02",
         "gridX": 29,
-        "gridY": 44
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
-        "gridX": 24,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 34,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
         "gridX": 44,
         "gridY": 22
       },
       {
         "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 44
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 44,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 44,
-        "gridY": 26
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 44,
-        "gridY": 34
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_SinMuz_3",
         "gridX": 19,
         "gridY": 42
       },
       {
         "id": 0,
+        "uniqueName": "EN_AutMuz_2",
+        "gridX": 34,
+        "gridY": 42
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 44,
+        "gridY": 34
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X2Scope_1",
+        "gridX": 13,
+        "gridY": 44
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 44,
+        "gridY": 20
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Grip_1",
+        "gridX": 44,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 44,
+        "gridY": 24
+      },
+      {
+        "id": 0,
         "uniqueName": "GunFora_MagDefault",
-        "gridX": 7,
+        "gridX": 24,
         "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunFora_MagIncreased",
-        "gridX": 13,
+        "gridX": 0,
         "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "Fora_DefaultMuz",
-        "gridX": 39,
+        "gridX": 7,
         "gridY": 42
       }
     ],
@@ -17712,66 +17984,66 @@
         "id": 0,
         "uniqueName": "DefaultScopeGrim",
         "gridX": 44,
-        "gridY": 20
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "TopRailGrim",
-        "gridX": 7,
-        "gridY": 34
+        "gridX": 40,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
         "gridX": 40,
-        "gridY": 14
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_3",
         "gridX": 40,
-        "gridY": 16
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_2",
+        "gridX": 40,
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_ColimScope_1",
         "gridX": 7,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_ColimScope_1",
+        "uniqueName": "EN_X4Scope_1",
         "gridX": 39,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "EN_X4Scope_1",
+        "uniqueName": "RU_Laser_1",
         "gridX": 24,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 29,
-        "gridY": 42
-      },
-      {
-        "id": 0,
         "uniqueName": "GunGrim_MagDefault",
-        "gridX": 29,
+        "gridX": 13,
         "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagIncreased",
-        "gridX": 40,
-        "gridY": 4
+        "gridX": 13,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagLarge",
-        "gridX": 34,
+        "gridX": 29,
         "gridY": 40
       },
       {
@@ -17809,26 +18081,26 @@
       {
         "id": 0,
         "uniqueName": "Gvintar_Scope",
-        "gridX": 40,
-        "gridY": 18
+        "gridX": 34,
+        "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 40,
-        "gridY": 6
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagDefault",
         "gridX": 35,
-        "gridY": 8
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagIncreased",
-        "gridX": 40,
-        "gridY": 0
+        "gridX": 39,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": [
@@ -17858,14 +18130,14 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_02",
-        "gridX": 35,
-        "gridY": 4
+        "gridX": 0,
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
-        "gridX": 44,
-        "gridY": 24
+        "gridX": 40,
+        "gridY": 4
       },
       {
         "id": 0,
@@ -17882,20 +18154,20 @@
       {
         "id": 0,
         "uniqueName": "EN_X2Scope_1",
+        "gridX": 35,
+        "gridY": 8
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
         "gridX": 13,
         "gridY": 20
       },
       {
         "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 29,
-        "gridY": 36
-      },
-      {
-        "id": 0,
         "uniqueName": "EN_Grip_1",
-        "gridX": 7,
-        "gridY": 28
+        "gridX": 24,
+        "gridY": 10
       },
       {
         "id": 0,
@@ -17912,32 +18184,32 @@
       {
         "id": 0,
         "uniqueName": "GunKharod_MagDefault",
-        "gridX": 29,
-        "gridY": 10
+        "gridX": 24,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
+        "gridX": 7,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "GunKharod_MagPaired",
-        "gridX": 24,
+        "gridX": 0,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "Kharod_DefaultMuz",
-        "gridX": 13,
+        "gridX": 24,
         "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "EN_GLaunch_1",
-        "gridX": 25,
-        "gridY": 14
+        "gridX": 13,
+        "gridY": 26
       }
     ],
     "preinstalledAttachments": [
@@ -17968,44 +18240,44 @@
       {
         "id": 0,
         "uniqueName": "RU_X2Scope_1",
-        "gridX": 19,
-        "gridY": 26
+        "gridX": 25,
+        "gridY": 14
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
-        "gridX": 25,
-        "gridY": 8
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 25,
-        "gridY": 4
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 13,
-        "gridY": 28
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagDefault",
         "gridX": 13,
         "gridY": 34
       },
       {
         "id": 0,
-        "uniqueName": "GunLavina_MagIncreased",
+        "uniqueName": "RU_Grip_1",
+        "gridX": 7,
+        "gridY": 28
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_Laser_1",
+        "gridX": 29,
+        "gridY": 10
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagDefault",
         "gridX": 25,
-        "gridY": 12
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagIncreased",
+        "gridX": 13,
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "TopRailLavina",
-        "gridX": 7,
-        "gridY": 24
+        "gridX": 25,
+        "gridY": 12
       }
     ],
     "preinstalledAttachments": [
@@ -18035,13 +18307,13 @@
         "id": 0,
         "uniqueName": "RU_Silen_2",
         "gridX": 7,
-        "gridY": 22
+        "gridY": 24
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 7,
-        "gridY": 20
+        "gridY": 22
       },
       {
         "id": 0,
@@ -18052,26 +18324,26 @@
       {
         "id": 0,
         "uniqueName": "RU_ColimScope_1",
-        "gridX": 30,
-        "gridY": 8
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 7,
+        "gridX": 19,
         "gridY": 26
       },
       {
         "id": 0,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 13,
+        "gridY": 36
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_X4Scope_1",
-        "gridX": 24,
-        "gridY": 22
+        "gridX": 25,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_1",
         "gridX": 25,
-        "gridY": 2
+        "gridY": 18
       },
       {
         "id": 0,
@@ -18393,26 +18665,26 @@
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 25,
-        "gridY": 18
+        "gridX": 7,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "M860LongGrip",
-        "gridX": 30,
-        "gridY": 16
+        "gridX": 13,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "M860ShortGrip",
         "gridX": 0,
-        "gridY": 36
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunM860_MagLarge",
-        "gridX": 0,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 24
       },
       {
         "id": 0,
@@ -18454,32 +18726,32 @@
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_4",
-        "gridX": 34,
-        "gridY": 20
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 25,
-        "gridY": 16
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 13,
+        "gridX": 19,
         "gridY": 32
       },
       {
         "id": 0,
-        "uniqueName": "TopRailSPSA",
+        "uniqueName": "EN_GoloScope_1",
         "gridX": 24,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_Grip_3",
         "gridX": 29,
         "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "TopRailSPSA",
+        "gridX": 7,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 34,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": null,
@@ -18506,62 +18778,62 @@
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_4",
-        "gridX": 7,
-        "gridY": 32
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 34,
-        "gridY": 22
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
         "gridX": 34,
         "gridY": 26
       },
       {
         "id": 0,
-        "uniqueName": "RU_Grip_1",
+        "uniqueName": "RU_ColimScope_1",
         "gridX": 34,
         "gridY": 28
       },
       {
         "id": 0,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 34,
+        "gridY": 24
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_Grip_1",
+        "gridX": 30,
+        "gridY": 14
+      },
+      {
+        "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 34,
-        "gridY": 10
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagDefault",
-        "gridX": 24,
+        "gridX": 34,
         "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagIncreased",
-        "gridX": 29,
-        "gridY": 34
+        "gridX": 30,
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagPaired",
-        "gridX": 24,
-        "gridY": 32
+        "gridX": 34,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagLarge",
         "gridX": 34,
-        "gridY": 32
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "TopRailD12",
-        "gridX": 34,
-        "gridY": 34
+        "gridX": 35,
+        "gridY": 14
       }
     ],
     "preinstalledAttachments": [
@@ -18590,38 +18862,38 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_01",
-        "gridX": 34,
-        "gridY": 30
-      },
-      {
-        "id": 0,
-        "uniqueName": "Ram2_SinMuz_1",
-        "gridX": 35,
-        "gridY": 14
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
         "gridX": 35,
         "gridY": 2
       },
       {
         "id": 0,
+        "uniqueName": "Ram2_SinMuz_1",
+        "gridX": 39,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_ColimScope_1",
+        "gridX": 39,
+        "gridY": 26
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 35,
-        "gridY": 0
+        "gridX": 24,
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Grip_1",
-        "gridX": 34,
+        "gridX": 19,
         "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 39,
-        "gridY": 22
+        "gridX": 24,
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -18704,26 +18976,26 @@
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 25,
-        "gridY": 18
+        "gridX": 7,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "M860LongGrip",
-        "gridX": 30,
-        "gridY": 16
+        "gridX": 13,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "M860ShortGrip",
         "gridX": 0,
-        "gridY": 36
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunM860_MagLarge",
-        "gridX": 0,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 24
       },
       {
         "id": 0,
@@ -18765,32 +19037,32 @@
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_4",
-        "gridX": 34,
-        "gridY": 20
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 25,
-        "gridY": 16
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 13,
+        "gridX": 19,
         "gridY": 32
       },
       {
         "id": 0,
-        "uniqueName": "TopRailSPSA",
+        "uniqueName": "EN_GoloScope_1",
         "gridX": 24,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_Grip_3",
         "gridX": 29,
         "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "TopRailSPSA",
+        "gridX": 7,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 34,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": null,
@@ -18817,62 +19089,62 @@
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_4",
-        "gridX": 7,
-        "gridY": 32
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 34,
-        "gridY": 22
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
         "gridX": 34,
         "gridY": 26
       },
       {
         "id": 0,
-        "uniqueName": "RU_Grip_1",
+        "uniqueName": "RU_ColimScope_1",
         "gridX": 34,
         "gridY": 28
       },
       {
         "id": 0,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 34,
+        "gridY": 24
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_Grip_1",
+        "gridX": 30,
+        "gridY": 14
+      },
+      {
+        "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 34,
-        "gridY": 10
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagDefault",
-        "gridX": 24,
+        "gridX": 34,
         "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagIncreased",
-        "gridX": 29,
-        "gridY": 34
+        "gridX": 30,
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagPaired",
-        "gridX": 24,
-        "gridY": 32
+        "gridX": 34,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunD12_MagLarge",
         "gridX": 34,
-        "gridY": 32
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "TopRailD12",
-        "gridX": 34,
-        "gridY": 34
+        "gridX": 35,
+        "gridY": 14
       }
     ],
     "preinstalledAttachments": [
@@ -18901,38 +19173,38 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_01",
-        "gridX": 34,
-        "gridY": 30
-      },
-      {
-        "id": 0,
-        "uniqueName": "Ram2_SinMuz_1",
-        "gridX": 35,
-        "gridY": 14
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
         "gridX": 35,
         "gridY": 2
       },
       {
         "id": 0,
+        "uniqueName": "Ram2_SinMuz_1",
+        "gridX": 39,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_ColimScope_1",
+        "gridX": 39,
+        "gridY": 26
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_GoloScope_1",
-        "gridX": 35,
-        "gridY": 0
+        "gridX": 24,
+        "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Grip_1",
-        "gridX": 34,
+        "gridX": 19,
         "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 39,
-        "gridY": 22
+        "gridX": 24,
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -19071,14 +19343,14 @@
       {
         "id": 0,
         "uniqueName": "GunMark_MagIncreased",
-        "gridX": 7,
-        "gridY": 2
+        "gridX": 19,
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "Mark_DefaultMuz",
-        "gridX": 19,
-        "gridY": 12
+        "gridX": 7,
+        "gridY": 2
       },
       {
         "id": 0,
@@ -19182,56 +19454,56 @@
       {
         "id": 0,
         "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 32
+        "gridX": 25,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_3",
-        "gridX": 30,
-        "gridY": 0
+        "gridX": 34,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_5",
-        "gridX": 30,
-        "gridY": 2
+        "gridX": 24,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 29,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_3",
         "gridX": 29,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 19,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagDefault",
-        "gridX": 19,
+        "gridX": 7,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 30,
-        "gridY": 12
+        "gridX": 29,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "SVU_DefaultMuz",
         "gridX": 29,
-        "gridY": 24
+        "gridY": 28
       }
     ],
     "preinstalledAttachments": [
@@ -19372,14 +19644,14 @@
       {
         "id": 0,
         "uniqueName": "GunMark_MagIncreased",
-        "gridX": 7,
-        "gridY": 2
+        "gridX": 19,
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "Mark_DefaultMuz",
-        "gridX": 19,
-        "gridY": 12
+        "gridX": 7,
+        "gridY": 2
       },
       {
         "id": 0,
@@ -19483,56 +19755,56 @@
       {
         "id": 0,
         "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 32
+        "gridX": 25,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_3",
-        "gridX": 30,
-        "gridY": 0
+        "gridX": 34,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_5",
-        "gridX": 30,
-        "gridY": 2
+        "gridX": 24,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 29,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_3",
         "gridX": 29,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 19,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagDefault",
-        "gridX": 19,
+        "gridX": 7,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 30,
-        "gridY": 12
+        "gridX": 29,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "SVU_DefaultMuz",
         "gridX": 29,
-        "gridY": 24
+        "gridY": 28
       }
     ],
     "preinstalledAttachments": [
@@ -19641,7 +19913,7 @@
         "id": 0,
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
-        "gridY": 26
+        "gridY": 23
       },
       {
         "id": 0,
@@ -19653,7 +19925,7 @@
         "id": 0,
         "uniqueName": "RU_Silen_1",
         "gridX": 5,
-        "gridY": 24
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": [
@@ -19684,13 +19956,13 @@
         "id": 0,
         "uniqueName": "UDP_Deadeye_Colim",
         "gridX": 5,
-        "gridY": 32
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "GunUDP_MagDefault",
         "gridX": 5,
-        "gridY": 25
+        "gridY": 34
       },
       {
         "id": 0,
@@ -19727,19 +19999,19 @@
         "id": 0,
         "uniqueName": "EN_Silen_1",
         "gridX": 5,
-        "gridY": 23
+        "gridY": 25
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
         "gridX": 5,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "GunUDP_MagDefault",
         "gridX": 5,
-        "gridY": 25
+        "gridY": 34
       },
       {
         "id": 0,
@@ -19781,7 +20053,7 @@
         "id": 0,
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
-        "gridY": 26
+        "gridY": 23
       },
       {
         "id": 0,
@@ -19793,7 +20065,7 @@
         "id": 0,
         "uniqueName": "RU_Silen_1",
         "gridX": 5,
-        "gridY": 34
+        "gridY": 24
       }
     ],
     "preinstalledAttachments": [
@@ -19843,7 +20115,7 @@
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 5,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
@@ -19861,7 +20133,7 @@
         "id": 0,
         "uniqueName": "TopRailAPB",
         "gridX": 5,
-        "gridY": 20
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -19890,26 +20162,26 @@
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
-        "gridX": 29,
+        "gridX": 4,
         "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
         "gridX": 49,
-        "gridY": 18
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 49,
-        "gridY": 8
+        "gridX": 4,
+        "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "Gun_GStreet_MagIncreased",
-        "gridX": 4,
-        "gridY": 46
+        "gridX": 49,
+        "gridY": 18
       },
       {
         "id": 0,
@@ -19946,31 +20218,31 @@
         "id": 0,
         "uniqueName": "EN_Silen_2",
         "gridX": 45,
-        "gridY": 6
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "EN_GoloScope_1",
         "gridX": 45,
-        "gridY": 8
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 44,
-        "gridY": 10
+        "gridX": 45,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "TopRailViper",
-        "gridX": 44,
-        "gridY": 44
+        "gridX": 45,
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "Gun_Shakh_MagIncreased",
-        "gridX": 44,
-        "gridY": 28
+        "gridX": 45,
+        "gridY": 18
       }
     ],
     "preinstalledAttachments": [
@@ -19999,38 +20271,38 @@
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_1",
-        "gridX": 7,
+        "gridX": 24,
         "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "EN_ColimScope_1",
-        "gridX": 13,
-        "gridY": 46
+        "gridX": 45,
+        "gridY": 6
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 45,
-        "gridY": 14
+        "gridX": 44,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunBucket_MagDefault",
-        "gridX": 0,
+        "gridX": 44,
         "gridY": 46
       },
       {
         "id": 0,
         "uniqueName": "GunBucket_MagIncreased",
-        "gridX": 48,
-        "gridY": 10
+        "gridX": 0,
+        "gridY": 48
       },
       {
         "id": 0,
         "uniqueName": "GunBucket_TopRail",
         "gridX": 7,
-        "gridY": 48
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -20060,8 +20332,8 @@
       {
         "id": 0,
         "uniqueName": "Gun_Silence_Silen",
-        "gridX": 45,
-        "gridY": 16
+        "gridX": 44,
+        "gridY": 44
       },
       {
         "id": 0,
@@ -20078,26 +20350,26 @@
       {
         "id": 0,
         "uniqueName": "GunAKU_Silence_MagDefault",
-        "gridX": 45,
-        "gridY": 0
+        "gridX": 44,
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
-        "gridX": 44,
-        "gridY": 30
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAKU",
         "gridX": 0,
         "gridY": 44
       },
       {
         "id": 0,
+        "uniqueName": "TopRailAKU",
+        "gridX": 44,
+        "gridY": 42
+      },
+      {
+        "id": 0,
         "uniqueName": "AKU_DefaultMuz",
-        "gridX": 24,
-        "gridY": 44
+        "gridX": 0,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -20129,50 +20401,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 48
+        "gridX": 48,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "Zubr_SinMuz",
+        "gridX": 44,
+        "gridY": 10
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_ColimScope_1",
+        "gridX": 48,
+        "gridY": 44
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_X2Scope_1",
+        "gridX": 34,
+        "gridY": 46
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_Laser_1",
         "gridX": 45,
         "gridY": 12
       },
       {
         "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 34,
-        "gridY": 48
+        "uniqueName": "Gun_RatKiller_MagDefault",
+        "gridX": 45,
+        "gridY": 14
       },
       {
         "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 19,
-        "gridY": 48
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
+        "uniqueName": "GunZubr_MagIncreased",
         "gridX": 24,
         "gridY": 46
       },
       {
         "id": 0,
-        "uniqueName": "Gun_RatKiller_MagDefault",
-        "gridX": 45,
-        "gridY": 4
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunZubr_MagIncreased",
-        "gridX": 44,
-        "gridY": 46
-      },
-      {
-        "id": 0,
         "uniqueName": "TopRailZubr",
-        "gridX": 48,
-        "gridY": 44
+        "gridX": 39,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -20202,8 +20474,8 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 7,
-        "gridY": 46
+        "gridX": 44,
+        "gridY": 32
       },
       {
         "id": 0,
@@ -20220,20 +20492,20 @@
       {
         "id": 0,
         "uniqueName": "GunSpitfire_MagDefault",
-        "gridX": 34,
+        "gridX": 39,
         "gridY": 44
       },
       {
         "id": 0,
         "uniqueName": "TopRailAKU",
-        "gridX": 0,
-        "gridY": 44
+        "gridX": 44,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "AKU_DefaultMuz",
-        "gridX": 24,
-        "gridY": 44
+        "gridX": 0,
+        "gridY": 46
       }
     ],
     "preinstalledAttachments": [
@@ -20263,50 +20535,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagIncreased",
         "gridX": 39,
-        "gridY": 24
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -20336,38 +20608,38 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunDrowned_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -20398,50 +20670,50 @@
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
-        "gridX": 40,
-        "gridY": 8
+        "gridX": 29,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_2",
         "gridX": 40,
-        "gridY": 12
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "SVDM_Scope",
         "gridX": 7,
-        "gridY": 36
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagDefault",
-        "gridX": 44,
-        "gridY": 42
+        "gridX": 34,
+        "gridY": 32
       },
       {
         "id": 0,
         "uniqueName": "GunAK74_MagIncreased",
         "gridX": 39,
-        "gridY": 24
+        "gridY": 10
       },
       {
         "id": 0,
         "uniqueName": "GunAK_MagPaired",
         "gridX": 39,
-        "gridY": 34
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "AK74_DefaultMuz",
-        "gridX": 19,
+        "gridX": 24,
         "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "RU_GLaunch_1",
-        "gridX": 39,
-        "gridY": 30
+        "gridX": 0,
+        "gridY": 38
       }
     ],
     "preinstalledAttachments": [
@@ -20473,72 +20745,72 @@
         "id": 0,
         "uniqueName": "Ironsights_02",
         "gridX": 29,
-        "gridY": 44
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "EN_Silen_3",
-        "gridX": 24,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 34,
-        "gridY": 42
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
         "gridX": 44,
         "gridY": 22
       },
       {
         "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 44
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 44,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 44,
-        "gridY": 26
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 44,
-        "gridY": 34
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_SinMuz_3",
         "gridX": 19,
         "gridY": 42
       },
       {
         "id": 0,
-        "uniqueName": "GunDecider_MagDefault",
-        "gridX": 29,
+        "uniqueName": "EN_AutMuz_2",
+        "gridX": 34,
+        "gridY": 42
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 44,
+        "gridY": 34
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X2Scope_1",
+        "gridX": 13,
+        "gridY": 44
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 44,
         "gridY": 20
       },
       {
         "id": 0,
+        "uniqueName": "EN_Grip_1",
+        "gridX": 44,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 44,
+        "gridY": 24
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunDecider_MagDefault",
+        "gridX": 30,
+        "gridY": 6
+      },
+      {
+        "id": 0,
         "uniqueName": "GunFora_MagIncreased",
-        "gridX": 13,
+        "gridX": 0,
         "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "Fora_DefaultMuz",
-        "gridX": 39,
+        "gridX": 7,
         "gridY": 42
       }
     ],
@@ -20570,26 +20842,26 @@
       {
         "id": 0,
         "uniqueName": "Gvintar_Scope",
-        "gridX": 40,
-        "gridY": 18
+        "gridX": 34,
+        "gridY": 40
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
         "gridX": 40,
-        "gridY": 6
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagDefault",
         "gridX": 35,
-        "gridY": 8
+        "gridY": 16
       },
       {
         "id": 0,
         "uniqueName": "GunGvintar_MagIncreased",
-        "gridX": 40,
-        "gridY": 0
+        "gridX": 39,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": [
@@ -20619,32 +20891,32 @@
       {
         "id": 0,
         "uniqueName": "Sofmod_Silen",
-        "gridX": 7,
-        "gridY": 30
+        "gridX": 30,
+        "gridY": 4
       },
       {
         "id": 0,
         "uniqueName": "Gun_Sotnyk_ColimScope",
-        "gridX": 29,
-        "gridY": 26
+        "gridX": 30,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_1",
         "gridX": 25,
-        "gridY": 2
+        "gridY": 18
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 24,
+        "gridX": 13,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunSotnyk_MagDefault",
-        "gridX": 0,
-        "gridY": 30
+        "gridX": 30,
+        "gridY": 0
       },
       {
         "id": 0,
@@ -20690,37 +20962,37 @@
         "id": 0,
         "uniqueName": "Sharpshooter_Silen",
         "gridX": 0,
-        "gridY": 28
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "M701_Scope",
         "gridX": 30,
-        "gridY": 18
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "EN_Grip_2",
-        "gridX": 7,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagDefault",
         "gridX": 13,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
+        "uniqueName": "GunM16_MagDefault",
         "gridX": 29,
         "gridY": 38
       },
       {
         "id": 0,
+        "uniqueName": "GunM16_MagIncreased",
+        "gridX": 39,
+        "gridY": 28
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_GLaunch_1",
-        "gridX": 34,
-        "gridY": 38
+        "gridX": 7,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -20751,56 +21023,56 @@
       {
         "id": 0,
         "uniqueName": "Ironsights_03",
-        "gridX": 24,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 13,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 24,
-        "gridY": 36
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
         "gridX": 7,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagDefault",
+        "uniqueName": "EN_Silen_3",
+        "gridX": 19,
+        "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GoloScope_1",
+        "gridX": 29,
+        "gridY": 36
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_X4Scope_1",
+        "gridX": 39,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Grip_2",
         "gridX": 13,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
+        "uniqueName": "GunM16_MagDefault",
         "gridX": 29,
         "gridY": 38
       },
       {
         "id": 0,
-        "uniqueName": "M16_DefaultMuz",
+        "uniqueName": "GunM16_MagIncreased",
         "gridX": 39,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_GLaunch_1",
+        "uniqueName": "M16_DefaultMuz",
         "gridX": 34,
         "gridY": 38
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_GLaunch_1",
+        "gridX": 7,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -20832,38 +21104,38 @@
       {
         "id": 0,
         "uniqueName": "Gun_Silence_ColimScope",
-        "gridX": 30,
-        "gridY": 4
+        "gridX": 19,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_1",
-        "gridX": 25,
-        "gridY": 4
+        "gridX": 7,
+        "gridY": 28
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
+        "gridX": 29,
+        "gridY": 10
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagDefault",
+        "gridX": 25,
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "GunLavina_MagIncreased",
         "gridX": 13,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "GunLavina_MagDefault",
-        "gridX": 13,
-        "gridY": 34
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagIncreased",
-        "gridX": 25,
-        "gridY": 12
-      },
-      {
-        "id": 0,
         "uniqueName": "TopRailLavinaAlternative",
         "gridX": 30,
-        "gridY": 6
+        "gridY": 18
       }
     ],
     "preinstalledAttachments": [
@@ -20894,38 +21166,38 @@
       {
         "id": 0,
         "uniqueName": "Sofmod_Silen",
-        "gridX": 29,
+        "gridX": 0,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "M701_Colim_Scope",
-        "gridX": 13,
-        "gridY": 30
+        "gridX": 24,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "EN_Grip_2",
-        "gridX": 30,
-        "gridY": 14
+        "gridX": 0,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunM16_MagDefault",
-        "gridX": 13,
-        "gridY": 38
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
         "gridX": 29,
         "gridY": 38
       },
       {
         "id": 0,
+        "uniqueName": "GunM16_MagIncreased",
+        "gridX": 39,
+        "gridY": 28
+      },
+      {
+        "id": 0,
         "uniqueName": "EN_GLaunch_1",
-        "gridX": 34,
-        "gridY": 38
+        "gridX": 7,
+        "gridY": 36
       }
     ],
     "preinstalledAttachments": [
@@ -20958,66 +21230,66 @@
         "id": 0,
         "uniqueName": "DefaultScopeGrim",
         "gridX": 44,
-        "gridY": 20
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "TopRailGrim",
-        "gridX": 7,
-        "gridY": 34
+        "gridX": 40,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_2",
         "gridX": 40,
-        "gridY": 14
+        "gridY": 0
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_3",
         "gridX": 40,
-        "gridY": 16
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "RU_AutMuz_2",
+        "gridX": 40,
+        "gridY": 16
+      },
+      {
+        "id": 0,
+        "uniqueName": "RU_ColimScope_1",
         "gridX": 7,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_ColimScope_1",
+        "uniqueName": "EN_X4Scope_1",
         "gridX": 39,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "EN_X4Scope_1",
+        "uniqueName": "RU_Laser_1",
         "gridX": 24,
         "gridY": 40
       },
       {
         "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 29,
-        "gridY": 42
-      },
-      {
-        "id": 0,
         "uniqueName": "GunS15_MagDefault",
-        "gridX": 34,
-        "gridY": 24
+        "gridX": 19,
+        "gridY": 34
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagIncreased",
-        "gridX": 40,
-        "gridY": 4
+        "gridX": 13,
+        "gridY": 42
       },
       {
         "id": 0,
         "uniqueName": "GunGrim_MagLarge",
-        "gridX": 34,
+        "gridX": 29,
         "gridY": 40
       },
       {
@@ -21067,14 +21339,14 @@
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 25,
-        "gridY": 18
+        "gridX": 7,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "M860LongGrip",
-        "gridX": 19,
-        "gridY": 32
+        "gridX": 0,
+        "gridY": 28
       },
       {
         "id": 0,
@@ -21110,32 +21382,32 @@
       {
         "id": 0,
         "uniqueName": "EN_SinMuz_4",
-        "gridX": 24,
-        "gridY": 34
+        "gridX": 30,
+        "gridY": 2
       },
       {
         "id": 0,
         "uniqueName": "Gun_Sledgehummer_GoloScope",
-        "gridX": 25,
-        "gridY": 16
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 13,
-        "gridY": 32
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailSPSA",
         "gridX": 24,
         "gridY": 28
       },
       {
         "id": 0,
-        "uniqueName": "EN_Laser_1",
+        "uniqueName": "EN_Grip_3",
         "gridX": 29,
         "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "TopRailSPSA",
+        "gridX": 7,
+        "gridY": 32
+      },
+      {
+        "id": 0,
+        "uniqueName": "EN_Laser_1",
+        "gridX": 34,
+        "gridY": 22
       }
     ],
     "preinstalledAttachments": [
@@ -21166,26 +21438,26 @@
       {
         "id": 0,
         "uniqueName": "Ram2_SinMuz_1",
-        "gridX": 35,
-        "gridY": 14
+        "gridX": 39,
+        "gridY": 38
       },
       {
         "id": 0,
         "uniqueName": "M701_Colim_Scope",
-        "gridX": 35,
-        "gridY": 2
+        "gridX": 39,
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "EN_Grip_1",
-        "gridX": 34,
+        "gridX": 19,
         "gridY": 36
       },
       {
         "id": 0,
         "uniqueName": "EN_Laser_1",
-        "gridX": 39,
-        "gridY": 22
+        "gridX": 24,
+        "gridY": 32
       }
     ],
     "preinstalledAttachments": [
@@ -21371,14 +21643,14 @@
       {
         "id": 0,
         "uniqueName": "GunMark_MagIncreased",
-        "gridX": 7,
-        "gridY": 2
+        "gridX": 19,
+        "gridY": 12
       },
       {
         "id": 0,
         "uniqueName": "Mark_DefaultMuz",
-        "gridX": 19,
-        "gridY": 12
+        "gridX": 7,
+        "gridY": 2
       },
       {
         "id": 0,
@@ -21416,56 +21688,56 @@
       {
         "id": 0,
         "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 32
+        "gridX": 25,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_3",
-        "gridX": 30,
-        "gridY": 0
+        "gridX": 34,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_5",
-        "gridX": 30,
-        "gridY": 2
+        "gridX": 24,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 29,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_3",
         "gridX": 29,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 19,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagDefault",
-        "gridX": 19,
+        "gridX": 7,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 30,
-        "gridY": 12
+        "gridX": 29,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "SVU_DefaultMuz",
         "gridX": 29,
-        "gridY": 24
+        "gridY": 28
       }
     ],
     "preinstalledAttachments": [
@@ -21571,7 +21843,7 @@
         "id": 0,
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
-        "gridY": 26
+        "gridY": 23
       },
       {
         "id": 0,
@@ -21583,7 +21855,7 @@
         "id": 0,
         "uniqueName": "RU_Silen_1",
         "gridX": 5,
-        "gridY": 34
+        "gridY": 24
       }
     ],
     "preinstalledAttachments": [
@@ -21613,56 +21885,56 @@
       {
         "id": 0,
         "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 32
+        "gridX": 25,
+        "gridY": 8
       },
       {
         "id": 0,
         "uniqueName": "RU_Silen_3",
-        "gridX": 30,
-        "gridY": 0
+        "gridX": 34,
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_SinMuz_5",
-        "gridX": 30,
-        "gridY": 2
+        "gridX": 24,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "RU_X4Scope_1",
         "gridX": 29,
-        "gridY": 28
+        "gridY": 20
       },
       {
         "id": 0,
         "uniqueName": "RU_Grip_3",
         "gridX": 29,
-        "gridY": 22
+        "gridY": 26
       },
       {
         "id": 0,
         "uniqueName": "RU_Laser_1",
-        "gridX": 19,
-        "gridY": 34
+        "gridX": 29,
+        "gridY": 22
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagDefault",
-        "gridX": 19,
+        "gridX": 7,
         "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 30,
-        "gridY": 12
+        "gridX": 29,
+        "gridY": 30
       },
       {
         "id": 0,
         "uniqueName": "SVU_DefaultMuz",
         "gridX": 29,
-        "gridY": 24
+        "gridY": 28
       }
     ],
     "preinstalledAttachments": [
