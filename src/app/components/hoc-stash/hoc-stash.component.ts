@@ -5,12 +5,12 @@ import { StuffItem } from '../../models/stuff';
 import { TranslateModule } from '@ngx-translate/core';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-hoc-stash',
   standalone: true,
-  imports: [TranslateModule, TooltipDirective, NgIf, NgFor],
+  imports: [TranslateModule, TooltipDirective, NgIf, NgFor, NgStyle],
   templateUrl: './hoc-stash.component.html',
   styleUrl: './hoc-stash.component.scss'
 })
@@ -24,8 +24,6 @@ export class HocStashComponent {
     public itemTooltipComponent: any = ItemTooltipComponent;
 
     private async ngOnInit(): Promise<void> {
-      console.log(this.stash)
-      console.log(this.stashGenerators)
       this.items = [];
 
       if (this.stash.itemGeneratorSettings?.length > 0) {
@@ -62,6 +60,41 @@ export class HocStashComponent {
         }
       }
 
-      console.log(this.items)
+      if (this.stash.items?.length > 0) {
+        for (let itemIn of this.stash.items) {
+          let item = this.allItems.find(
+            (x) => x.uniqueName == itemIn.uniqueName
+          );
+
+          if (item) {
+            let si = new StuffItem();
+
+            si.item = item;
+            si.count = itemIn.count;
+
+            this.items.push(si);
+          }
+        }
+      }
+
+      if (this.items.length > 0) {
+        for (let item of this.items) {
+          item.preinstalled = [];
+  
+          if (item.item.preinstalledAttachments != null) {
+            if (item.item.compatibleAttachments != null) {
+              for (let attName of item.item.preinstalledAttachments) {
+                let attachment = item.item.compatibleAttachments.find(x => x.uniqueName == attName);
+  
+                if (attachment) {
+                  item.preinstalled.push(attachment);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      console.log(this.items);
     }
 }

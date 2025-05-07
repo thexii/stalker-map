@@ -957,6 +957,36 @@ export class MapHocComponent {
       radius: 3
     };
 
+    let deluxtuffIcon = {
+      icon: new this.svgIcon({
+        iconUrl: '/assets/images/svg/marks/colored/highlight-stahs.svg',
+        iconAnchor: [0, 0],
+        color: "#3E9EC6"
+      }),
+      keepMapSize: true,
+      radius: 3
+    };
+
+    let preOrderStuffIcon = {
+      icon: new this.svgIcon({
+        iconUrl: '/assets/images/svg/marks/colored/highlight-stahs.svg',
+        iconAnchor: [0, 0],
+        color: "#F8F22E"
+      }),
+      keepMapSize: true,
+      radius: 3
+    };
+
+    let UltimateStuffIcon = {
+      icon: new this.svgIcon({
+        iconUrl: '/assets/images/svg/marks/colored/highlight-stahs.svg',
+        iconAnchor: [0, 0],
+        color: "#ED6819"
+      }),
+      keepMapSize: true,
+      radius: 3
+    };
+
     let markers = [];
 
     for (let data of this.gamedata.stashes) {
@@ -995,16 +1025,62 @@ export class MapHocComponent {
         }
       }
 
+      let isDelux = false;
+      let isUltimate = false;
+      let isPreOrder = false;
+
+      if (data.items?.length > 0) {
+        for (let itemIn of data.items) {
+          let item = this.items.find(
+            (x) => x.uniqueName == itemIn.uniqueName
+          );
+
+          if (item) {
+            localesToFind.push(item.localeName);
+            isRich = true;
+          }
+        }
+
+        isDelux = data.dlc == "Deluxe";
+        isUltimate = data.dlc == "Ultimate";
+        isPreOrder = data.dlc == "PreOrder"
+
+        if (isPreOrder)
+        {
+          console.log(data);
+        }
+      }
+
       if (!isRich)
       {
         continue;
+      }
+
+      let icon = null;
+
+      if (isRich) {
+        if (isDelux) {
+          icon = deluxtuffIcon;
+        }
+        else if (isPreOrder) {
+          icon = preOrderStuffIcon;
+        }
+        else if (isUltimate) {
+          icon = UltimateStuffIcon;
+        }
+        else {
+          icon = richStuffIcon;
+        }
+      }
+      else {
+        icon = stuffIcon;
       }
 
       let marker = new this.svgMarker(
         [data.z, data.x],
         {
           renderer: this.canvasRenderer,
-          icon: isRich ? richStuffIcon : stuffIcon,
+          icon: icon,
         }
       );
       marker.name = 'stash';
@@ -1014,10 +1090,6 @@ export class MapHocComponent {
       marker.feature.properties = {};
 
       localesToFind.push(marker.name, markers.length.toString());
-
-      if (isRich) {
-        let a =5;
-      }
 
       /*if (data.items && data.items.length > 0) {
         let itemsToFind: any[] = [];

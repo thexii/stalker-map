@@ -37,7 +37,6 @@ export class HocStuffComponent {
   constructor(private mapService: MapService) { }
 
   private async ngOnInit(): Promise<void> {
-    console.log(this.stuff)
     if (this.stuff.items) {
       this.items = this.stuff.items.map(x => {
         let item = new StuffItem();
@@ -55,7 +54,6 @@ export class HocStuffComponent {
               }
             }
           }
-          console.log(item)
         }
 
         return item;

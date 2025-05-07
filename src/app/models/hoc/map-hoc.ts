@@ -18,7 +18,7 @@ export class ObjectAtLocationHoc {
   public x: number;
   public y: number;
   public z: number;
-  public dlcs: string[];
+  public dlc: string;
 }
 
 export class Marker extends ObjectAtLocationHoc {
@@ -74,6 +74,7 @@ export class Artefact {
 export class Stash extends ObjectAtLocationHoc {
   public clueVariablePrototypeSID: string;
   public itemGeneratorSettings: StashItemGenerator[];
+  public items: InventoryItem[];
 }
 
 export class StashGenerator {
