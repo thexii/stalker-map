@@ -91,8 +91,6 @@ export class CompareService {
       effectsValues = Object.values(upgrade.propertiesEffects);
     }
 
-    console.log(upgrade, upgradeSection)
-
     if (upgrade.isInstalled) {
       for (let up of upgradeSection.elements) {
         up.isBlocked = false;

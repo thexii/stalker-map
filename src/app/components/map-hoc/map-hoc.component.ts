@@ -113,8 +113,6 @@ export class MapHocComponent {
     this.gamedata.widthInMeters = gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1];
     this.gamedata.heightInMeters = gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0];
 
-    console.log(this.gamedata);
-
     let bounds = [[0, 0]];
 
     let width = 0;
@@ -158,8 +156,6 @@ export class MapHocComponent {
     }
 
     let scaleFactor = width / this.gamedata.widthInMeters;
-    console.log(scaleFactor);
-    console.log(gameConfig.mapBounds);
 
     let customCrs = L.extend({}, L.CRS.Simple, {
       transformation: new L.Transformation(scaleFactor, 0, -scaleFactor, 0),
@@ -210,14 +206,10 @@ export class MapHocComponent {
         let minW = Math.min(gameConfig.mapBounds[0][1], 0);
         let maxW = Math.min(gameConfig.mapBounds[1][1], 0);
 
-        console.log(gameConfig.mapBounds[0][1])
-
         let mapWidth =gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1];
 
-        console.log(mapWidth);
         let tilesInMinZoom = 4;
         let tileSize = mapWidth / tilesInMinZoom * scaleFactor;
-        console.log(tileSize);
 
 
       /*new L.TileLayer.CustomCoords(`/assets/images/maps/hoc/tiles/{z}/{y}/{x}.jpg`, {
@@ -1044,11 +1036,6 @@ export class MapHocComponent {
         isDelux = data.dlc == "Deluxe";
         isUltimate = data.dlc == "Ultimate";
         isPreOrder = data.dlc == "PreOrder"
-
-        if (isPreOrder)
-        {
-          console.log(data);
-        }
       }
 
       if (!isRich)

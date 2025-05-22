@@ -1392,6 +1392,7 @@ export class MapComponent {
 
     let ignoredNames: string[] = ['stuff_at_location'];
     let index = 0;
+    let itemsTypes: string[] = [];
 
     for (let markType of stuffTypes) {
       let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == markType.uniqueName);
@@ -1419,7 +1420,7 @@ export class MapComponent {
                 let localesToFind = [];
 
                 if (stuff.properties.stuff.name && !ignoredNames.includes(stuff.properties.stuff.name)) {
-                localesToFind.push(stuff.properties.stuff.name);
+                  localesToFind.push(stuff.properties.stuff.name);
                 }
 
                 if (stuff.properties.description) {
@@ -1435,6 +1436,11 @@ export class MapComponent {
                       if (item) {
                         itemsToFind.push(item?.localeName);
                         itemsToFind.push(`synonyms.${item?.uniqueName}`);
+
+                        if (item.category && !itemsTypes.includes(item.category))
+                        {
+                          itemsTypes.push(item.category);
+                        }
                       }
                     });
 
@@ -1470,36 +1476,11 @@ export class MapComponent {
 
           let stuff = null;
 
-          if (this.game == 'hoc') {
-            /*let size = this.pixelsInGameUnit * 10 * 2 * 5;
-            this.pixelsInGameUnit * 10m? * 2(rad to diam) * (max zoom - min zoom)?
-
-            console.log(size)
-            var greenIcon = L.icon({
-                iconUrl: '/assets/images/svg/marks/stash.svg',
-
-                iconSize:     [size, size], // size of the icon
-                iconAnchor:   [size / 2, size / 2], // point of the icon which will correspond to marker's location
-            });
-
-            stuff = L.marker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {icon: greenIcon});*/
-
-            stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
-              icon: markType.icon,
-              renderer: this.canvasRenderer,
-              radius: this.pixelsInGameUnit * 11.2 * 2 * (this.mapConfig.maxZoom - this.mapConfig.minZoom),
-              dontKeepMapSize: true
-            });
-
-          }
-          else {
-
-            stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
-              icon: markType.icon,
-              renderer: this.canvasRenderer,
-              radius: markType.icon.options.iconSizeInit[0] * 10
-            });
-          }
+          stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
+            icon: markType.icon,
+            renderer: this.canvasRenderer,
+            radius: markType.icon.options.iconSizeInit[0] * 10
+          });
 
           stuff.properties = {};
           stuff.properties.stuff = stuffModel;
@@ -1520,8 +1501,19 @@ export class MapComponent {
             }
 
             if (stuff.properties.stuff.items?.length > 0 && this.items && this.items.length > 0) {
-              localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
-                return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
+              localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; category: string }) => {
+                let item = this.items.find(y => y.uniqueName == x.uniqueName);
+
+                if (item) {
+                  if (item.category && !itemsTypes.includes(item.category))
+                  {
+                    itemsTypes.push(item.category);
+                  }
+
+                  return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
+                }
+
+                return null;
               } ));
             }
 
@@ -1570,6 +1562,8 @@ export class MapComponent {
         this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
       }
     }
+
+    console.log(itemsTypes)
 
     return markersToHide;
   }

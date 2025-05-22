@@ -94,7 +94,5 @@ export class HocStashComponent {
           }
         }
       }
-
-      console.log(this.items);
     }
 }

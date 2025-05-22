@@ -58,10 +58,6 @@ export class CompareComponent {
     )
   }
 
-  private ngOnChanges(): void {
-    console.log('change')
-  }
-
   public selectUpgrade(model: UpgradeSelectedEventModel): void {
     this.compare.selectUpgrade(model.upgrade, model.upgradeSection, model.item, model.selectedItemUpgrade);
     this.calculateBestItems();
