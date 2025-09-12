@@ -1,46 +1,47 @@
 <header>
-  <div class="container-fluid">
-    <div class="header-menu">
-      <nav class="header-desktop">
-        <div class="header-nav-items">
-          <div class="header-nav-item-left"></div>
-          <a class="header-nav-item header-nav-item-full" href="/map/shoc">
-            <span>{{ 'shoc' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-full" href="/map/cs">
-            <span>{{ 'cs' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-full" href="/map/cop">
-            <span>{{ 'cop' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-full" href="/map/hoc">
-            <span>{{ 'hoc' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-short" href="/map/shoc">
-            <span>{{ 'shocShort' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-short" href="/map/cs">
-            <span>{{ 'csShort' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-short" href="/map/cop">
-            <span>{{ 'copShort' | translate }}</span>
-          </a>
-          <a class="header-nav-item header-nav-item-short" href="/map/hoc">
-            <span>{{ 'hocShort' | translate }}</span>
-          </a>
-          <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">
-            <i class="header-nav-icon github"></i>
-          </a>
-          <div class="header-nav-item-right">
-            <select class="language-selector" (change)="changeLanguage($event)">
-              <ng-container *ngFor="let language of avaliableLanguages">
-                <option class="language-selector-option" [value]="language" [selected]="selectedLanguage == language">{{language}}</option>
-              </ng-container>
-            </select>
-          </div>
+    <div class="container-fluid">
+        <div class="header-menu">
+            <nav class="header-desktop">
+                <div class="header-nav-items">
+                    <div class="header-nav-item-left"></div>
+                    <a class="header-nav-item header-nav-item-full" href="/map/shoc">
+                        <span>{{ 'shoc' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-full" href="/map/cs">
+                        <span>{{ 'cs' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-full" href="/map/cop">
+                        <span>{{ 'cop' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-full" href="/map/hoc">
+                        <span>{{ 'hoc' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-short" href="/map/shoc">
+                        <span>{{ 'shocShort' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-short" href="/map/cs">
+                        <span>{{ 'csShort' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-short" href="/map/cop">
+                        <span>{{ 'copShort' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item header-nav-item-short" href="/map/hoc">
+                        <span>{{ 'hocShort' | translate }}</span>
+                    </a>
+                    <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">
+                        <i class="header-nav-icon github"></i>
+                    </a>
+                    <div class="header-nav-item-right">
+                        <select class="language-selector" (change)="changeLanguage($event)">
+                            @for (language of avaliableLanguages; track language) {
+                                <option class="language-selector-option" [value]="language"
+                                    [selected]="selectedLanguage == language">{{language}}</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </nav>
         </div>
-      </nav>
+        <ng-content></ng-content>
     </div>
-    <ng-content></ng-content>
-  </div>
 </header>

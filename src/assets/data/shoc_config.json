@@ -338,5 +338,19 @@
       "levels": ["map_l12u_sarcofag", "map_l12u_sarcofag_0", "map_l12u_sarcofag_1", "map_l12u_sarcofag_2"],
       "baseLevel": "map_l12u_sarcofag"
     }
+  ],
+  "itemsCategoriesSettings": [
+    {
+      "name": "5_45_guns_category",
+      "gameCategories": ["WP_AK74"]
+    },
+    {
+      "name": "5_56_guns_category",
+      "gameCategories": ["WP_LR300"]
+    },
+    {
+      "name": "shotguns_category",
+      "gameCategories": ["WP_BM16", "WP_SHOTG"]
+    }
   ]
 }

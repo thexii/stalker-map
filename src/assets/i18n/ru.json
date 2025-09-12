@@ -1,9 +1,9 @@
 {
   "mainTitle": "Интерактивные карты для игр серии S.T.A.L.K.E.R.",
-  "shoc": "Тени Чернобыля",
-  "cs": "Чистое небо",
-  "cop": "Зов Припяти",
-  "hoc": "Сердце Чернобыля",
+  "shoc": "«Тень Чернобыля»",
+  "cs": "«Чистое Небо»",
+  "cop": "«Зов Припяти»",
+  "hoc": "«Сердце Чернобыля»",
 
   "shocShort": "ТЧ",
   "csShort": "ЧН",
@@ -44,7 +44,7 @@
   "st_name_military_warehouse_title": "Армейский склад",
   "st_name_duty_warehouse_title": "Склад «Долга»",
   "st_name_duty_warehouse_desc": "Склад «Долга» в окрестностях Юпитера.",
-  "st_name_joker_stuff_title": "Останки Джокера",
+  "st_name_joker_stuff_title": "Останки Шутника",
 
   "anomaly-zone-no-art": "Смертельные аномалии",
   "monsters": "Опасные мутанты",
@@ -61,7 +61,7 @@
   "markLink": "Ссылка на метку",
 
   "st_name_wrenched": "«Выверт»",
-  "st_name_fault": "Разлом",
+  "st_name_fault": "«Разлом»",
   "st_name_burnt_farmstead": "Сгоревший хутор",
   "st_name_symbiont": "«Симбионт»",
   "st_zat_b44_name_acid": "Пещеры под хутором",
@@ -70,9 +70,9 @@
   "st_jup_wa_name": "Бродячие артефакты на Юпитере",
   "st_zat_wa_name": "Бродячие артефакты на Затоне",
 
-  "copMapPageTitle": "Карта Зова Припяти",
-  "csMapPageTitle": "Карта Чистого Неба",
-  "shocMapPageTitle": "Карта Теней Чернобиля",
+  "copMapPageTitle": "Карта «Зова Припяти»",
+  "csMapPageTitle": "Карта «Чистого Неба»",
+  "shocMapPageTitle": "Карта «Тени Чернобыля»",
 
   "search": "Поиск",
   "default_description": "Детальная информация отсутствует.",
@@ -180,45 +180,45 @@
 
   "esc_kill_bandits_quest_done": "После разговора с Волком о зачистке АТП",
 
-  "bar_darklab_document_done": "Посля X-18",
-  "yan_labx16_switcher_primary_off": "Посля X-16",
+  "bar_darklab_document_done": "После X-18",
+  "yan_labx16_switcher_primary_off": "После X-16",
 
-  "yan_kill_brain_done": "Посля X-16",
+  "yan_kill_brain_done": "После X-16",
 
   "bar_svoboda_rg6_done": "После доставки «Бульдога-6» Воронину",
 
   "mil_lukash_dolg_task_complete": "Череп и группа уничтожены",
-  "mil_leader_quest2_complete": "Павлик и информатор ликвидирован",
+  "mil_leader_quest2_complete": "Павлик и информатор ликвидированы",
 
-  "big_box_generic": "Деревяный ящик",
+  "big_box_generic": "Деревянный ящик",
   "small_box_generic": "Маленький обычный ящик",
-  "big_box_dungeons": "Ящик з ценным хабаром",
+  "big_box_dungeons": "Ящик с ценным хабаром",
   "small_box_ussr": "Маленький советский ящик",
   "small_box_nato": "Маленький натовский ящик",
   "small_box_science": "Маленький научный ящик",
   "small_box_army": "Маленький армейский ящик",
-  "big_box_arsenal": "Великий арсенальный ящик",
+  "big_box_arsenal": "Большой оружейный ящик",
 
   "actor_in_stalker": "Игрок в сталкерах",
-  "actor_in_dolg": "Игрок в Долге",
-  "actor_in_freedom": "Игрок в Свободе",
+  "actor_in_dolg": "Игрок в «Долге»",
+  "actor_in_freedom": "Игрок в «Свободе»",
   "is_faction_friend_to_actor(bandit)": "Друг Бандитов",
-  "is_faction_friend_to_actor(csky)": "Друг Чистого Неба",
+  "is_faction_friend_to_actor(csky)": "Друг «Чистого неба»",
   "is_faction_friend_to_actor(stalker)": "Друг сталкеров",
 
   "esc_bring_habar_complete": "После возвращения кейса",
   "gar_story_got_info_from_digger": "Информация у диггеров получена",
 
-  "zat_b29_exclusive_conditions": "«Сварог» получено",
-  "jup_a9_tech_way_info": "Путь в Припять разведано",
+  "zat_b29_exclusive_conditions": "«Сварог» получен",
+  "jup_a9_tech_way_info": "Путь в Припять разведан",
   "zat_b22_medic_respawn": "Медик раскрыт",
 
-  "counter_greater(jup_a6_actor_help_freedom:3)": "Трижды помочь Свободе",
-  "counter_equal(jup_a6_actor_help_freedom:2)": "Дважды помочь Свободе",
-  "counter_greater(jup_a6_actor_help_duty:3)": "Трижды помочь Долгу",
-  "counter_equal(jup_a6_actor_help_duty:2)": "Дважды помочь Долгу",
-  "counter_greater(jup_a6_actor_help_freedom:1)": "Помочь Свободе",
-  "counter_greater(jup_a6_actor_help_duty:1)": "Помочь Долгу",
+  "counter_greater(jup_a6_actor_help_freedom:3)": "Трижды помочь «Свободе»",
+  "counter_equal(jup_a6_actor_help_freedom:2)": "Дважды помочь «Свободе»",
+  "counter_greater(jup_a6_actor_help_duty:3)": "Трижды помочь «Долгу»",
+  "counter_equal(jup_a6_actor_help_duty:2)": "Дважды помочь «Долгу»",
+  "counter_greater(jup_a6_actor_help_freedom:1)": "Помочь «Свободе»",
+  "counter_greater(jup_a6_actor_help_duty:1)": "Помочь «Долгу»",
   "counter_greater(jup_a6_actor_help_stalkers:1)": "Помочь сталкерам",
   "counter_greater(jup_a6_actor_help_stalkers:2)": "Дважды помочь сталкерам",
 
@@ -259,7 +259,7 @@
   "gar_stalker_24h_trader": "Круглосуточный торговец с Барахолки",
   "gar_stalker_evening_trader": "Вечерний торговец с Барахолки",
   "gar_stalker_night_trader": "Ночной торговец с Барахолки",
-  "gar_quest_liberate_conc_camp_done": "Освободить сталкеров с концлагеря бандитов",
+  "gar_quest_liberate_conc_camp_done": "Освободить сталкеров из концлагеря бандитов",
   "red_forest_underground_trader": "Торговец в казарме в шахтах",
 
   "hide-marker": "Скрыть",
@@ -288,8 +288,8 @@
   "recoil-zoom-up": "Модифицированая в прицеле",
 
   "synonyms": {
-    "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
-    "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
+    "wpn_ak74": ["Калаш", "АК", "АК-74"],
+    "wpn_ak74u": ["Калаш", "АК", "АКСУ"],
     "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"],
 
     "trader": ["Торгаш", "Барыга"],

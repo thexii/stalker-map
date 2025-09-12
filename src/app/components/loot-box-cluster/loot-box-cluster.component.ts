@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { LootBoxCluster } from '../../models/loot-box/loot-box-cluster.model';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgFor, NgIf } from '@angular/common';
 import { LootBoxView } from '../../models/loot-box/loot-box-veiw.model';
 import { Item } from '../../models/item.model';
 import { LootBox } from '../../models/loot-box/loot-box-section.model';
@@ -11,17 +10,18 @@ import { HiddenMarker } from '../../models/hidden-marker.model';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
+import { Game } from '../../models/game.model';
 
 @Component({
   selector: 'app-loot-box-cluster',
   standalone: true,
-  imports: [TranslateModule, NgIf, NgFor, TooltipDirective, HideUnhideComponent],
+  imports: [TranslateModule, TooltipDirective, HideUnhideComponent],
   templateUrl: './loot-box-cluster.component.html',
   styleUrl: './loot-box-cluster.component.scss'
 })
 export class LootBoxClusterComponent {
   @Input() public cluster: LootBoxCluster;
-  @Input() public game: string;
+  @Input() public game: Game;
   @Input() public allItems: Item[];
   @Input() public lootBoxLocationConfig: LootBox;
   @Input() public lootBoxConfigs: LootBox[];
@@ -96,7 +96,7 @@ export class LootBoxClusterComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box${this.isUnderground ? `&underground=${this.cluster.locationId}` : ''}`;
+    let link = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.cluster.z}&lng=${this.cluster.x}&type=destroyable-box${this.isUnderground ? `&underground=${this.cluster.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
 }

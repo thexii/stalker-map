@@ -1,30 +1,36 @@
 <div class="upgrade-title">
-  {{ upgrade.localeName | translate}}
+    {{ upgrade.localeName | translate}}
 </div>
-<ng-container *ngIf="upgrade.isInstalled || upgrade.isLocked || upgrade.isBlocked; else upgradePrice">
-  <div class="upgrade-installed margin-top" *ngIf="upgrade.isInstalled">
-    {{'st_upgr_installed' | translate }}
-  </div>
-  <div class="upgrade-locked margin-top" *ngIf="upgrade.isLocked">
-    {{'st_upgr_cant_do' | translate }}
-  </div>
-  <div class="upgrade-locked margin-top" *ngIf="upgrade.isBlocked">
-    {{'st_upgr_group' | translate }}
-  </div>
-</ng-container>
-<ng-template #upgradePrice>
-  <div class="upgrade-price margin-top">
-    {{'st_base_cost' | translate }}: {{math.floor(upgrade.cost * discount)}}
-  </div>
-</ng-template>
+@if (upgrade.isInstalled || upgrade.isLocked || upgrade.isBlocked) {
+    @if (upgrade.isInstalled) {
+        <div class="upgrade-installed margin-top">{{'st_upgr_installed' | translate }}</div>
+    }
+
+    @if (upgrade.isLocked) {
+        <div class="upgrade-locked margin-top">{{'st_upgr_cant_do' | translate }}</div>
+    }
+
+    @if (upgrade.isBlocked) {
+        <div class="upgrade-locked margin-top"> {{'st_upgr_group' | translate }} </div>
+    }
+}
+@else {
+    <div class="upgrade-price margin-top">
+        {{'st_base_cost' | translate }}: {{math.floor(upgrade.cost * discount)}}
+    </div>
+}
+
 <div class="upgrade-description margin-top">
-  {{ upgrade.description | translate}}
+    {{ upgrade.description | translate}}
 </div>
 <div class="upgrade-properties">
-  <div class="upgrade-property" *ngFor="let prop of props">
-    <div class="upgrade-property-name">
-      <i class="upgrade-property-icon {{prop.icon}} {{game}}"></i>
-      <span>{{prop.name | translate}}</span></div>
-    <div class="upgrade-property-value">{{upgrade.value}}</div>
-  </div>
+    @for (prop of props; track prop) {
+        <div class="upgrade-property">
+            <div class="upgrade-property-name">
+                <i class="upgrade-property-icon {{prop.icon}} {{game}}"></i>
+                <span>{{prop.name | translate}}</span>
+            </div>
+            <div class="upgrade-property-value">{{upgrade.value}}</div>
+        </div>
+    }
 </div>

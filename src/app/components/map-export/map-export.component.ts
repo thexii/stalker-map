@@ -40,7 +40,6 @@ export class MapExportComponent extends MapComponent {
     let lang: string = this.route.snapshot.paramMap.get('lang') as string;
 
     this.translate.use(lang);
-    this.translate.currentLang = lang;
     document.body.style.height = '100%';
     document.body.style.margin = '0';
     document.documentElement.style.height = '100%';

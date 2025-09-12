@@ -1,23 +1,24 @@
 import { Component, Input } from '@angular/core';
 import { StuffItem, StuffModel } from '../../models/stuff';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgFor, NgIf } from '@angular/common';
 import { Item } from '../../models/item.model';
 import { MapService } from '../../services/map.service';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
+import { Game } from '../../models/game.model';
+import { InventoryItem } from '../../models/inventory-item.model';
 
 @Component({
   selector: 'app-stuff',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, TooltipDirective, HideUnhideComponent],
+  imports: [TranslateModule, TooltipDirective, HideUnhideComponent],
   templateUrl: './stuff.component.html',
   styleUrl: './stuff.component.scss'
 })
 export class StuffComponent {
   @Input() public stuff: StuffModel;
-  @Input() public game: string;
+  @Input() public game: Game;
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
@@ -51,7 +52,13 @@ export class StuffComponent {
           return -dw;
         }
 
-        return y.item.area - x.item.area;
+        let da = y.item.area - x.item.area;
+
+        if (da == 0) {
+            return x.item.uniqueName.localeCompare(y.item.uniqueName)
+        }
+
+        return da;
       })
     }
 
@@ -89,7 +96,7 @@ export class StuffComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
+    let link = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
     navigator.clipboard.writeText(link)
   }
 }

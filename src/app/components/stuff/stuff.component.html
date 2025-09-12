@@ -1,38 +1,39 @@
 <div>
-  <div class='popup header'>{{ stuff.name | translate}}</div>
-  <div class='popup description'>{{stuff.description | translate}}</div>
+    <div class='popup header'>{{ stuff.name | translate}}</div>
+    <div class='popup description'>{{stuff.description | translate}}</div>
 </div>
 <div class="inventory">
-  <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngFor="let stuffItem of items" class="inventory-item {{this.game}} inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-    <div class="item-additional-info">
-      <div *ngIf="stuffItem.count > 1" class="inventory-item-count">x{{stuffItem.count}}</div>
-      <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
-    </div>
-    <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-      <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
-      <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
-      <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
-    </div>
-  </div>
+    @for (stuffItem of items; track stuffItem) {
+        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item {{this.game.gameStyle}} inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+            <div class="item-additional-info">
+                @if (stuffItem.count > 1) {
+                    <div class="inventory-item-count">x{{stuffItem.count}}</div>
+                }
+
+                @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
+                    <div class="inventory-item-upgrade"></div>
+                }
+            </div>
+            <div class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                @if (stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000) {
+                    <div class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+                }
+
+                @if (stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000) {
+                    <div class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+                }
+
+                @if (stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000) {
+                    <div class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+                }
+            </div>
+        </div>
+    }
 </div>
-<!--<div class="stash-conditions" *ngIf="condition">
-  <div class="stash-conditions-title">{{ 'stash-conditions-title' | translate }}</div>
-  <ng-container *ngIf="condition.conditions.length > 0">
-    <div class="conditions-list" *ngFor="let cond of condition.conditions">
-      <div class="condition-item" *ngFor="let c of cond">
-      {{ c | translate}}
-    </div>
-  </div>
-  </ng-container>
-  <div class="conditions-list" *ngIf="condition.communities.length > 0">
-    <div class="condition-item" *ngFor="let comm of condition.communities">
-      {{ comm | translate}}
-    </div>
-  </div>
-</div>-->
 <div class="bottom">
-  <div class="button url-button" (click)="copyLink()">
-    <span>{{ 'markLink' | translate}}</span>
-  </div>
-  <app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game, isUnderground: isUnderground}"></app-hide-unhide>
+    <div class="button url-button" (click)="copyLink()">
+        <span>{{ 'markLink' | translate}}</span>
+    </div>
+    <app-hide-unhide
+        [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game.gameStyle, isUnderground: isUnderground}"></app-hide-unhide>
 </div>

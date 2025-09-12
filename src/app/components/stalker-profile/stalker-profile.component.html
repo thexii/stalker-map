@@ -1,12 +1,17 @@
-
 <div class="profile-info">
-  <div class="profile-data">
-    <div class="profile-data-info">
-      <div class="profile-name">{{profile.name | translate}}</div>
-      <div class="profile-rank stalker-icon icon-{{profile.faction}}">{{rank | translate }}</div>
-      <div *ngIf="hasInfinityMoney" class="profile-money">--- RU</div>
-      <div *ngIf="!hasInfinityMoney && money > 0" class="profile-money">{{money}} RU</div>
+    <div class="profile-data">
+        <div class="profile-data-info">
+            <div class="profile-name">{{profile.name | translate}}</div>
+            <div class="profile-rank stalker-icon icon-{{profile.faction}}">{{rank | translate }}</div>
+            @if (hasInfinityMoney) {
+                <div class="profile-money">--- RU</div>
+            }
+            @else if (money > 0) {
+                <div class="profile-money">{{money}} RU</div>
+            }
+        </div>
+        <div class="stalker-avatar {{game}}"
+            [ngStyle]="{'width': profile.iconWidth + 'px', 'height': profile.iconHeight + 'px', 'background-position': 'left ' + (-profile.iconX) + 'px top ' + (-profile.iconY) + 'px'}">
+        </div>
     </div>
-    <div class="stalker-avatar {{game}}" [ngStyle]="{'width': profile.iconWidth + 'px', 'height': profile.iconHeight + 'px', 'background-position': 'left ' + (-profile.iconX) + 'px top ' + (-profile.iconY) + 'px'}"></div>
-  </div>
 </div>

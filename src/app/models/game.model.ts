@@ -1,0 +1,1 @@
+export class Game { gameStyle: string; uniqueName: string; }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { TradeSection, TraderBuySellItem, TraderModel, TraderSupplyItem, BestBuyModel, BestBuySellModel, SelectedItem, TraderBuySellItemView, TraderSupplyItemView } from '../../models/trader';
-import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { TradeSection, TraderModel, BestBuySellModel, SelectedItem, TraderBuySellItemView, TraderSupplyItemView } from '../../models/trader';
+import { NgClass, NgStyle } from '@angular/common';
 import Chart from 'chart.js/auto';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Item } from '../../models/item.model';
@@ -11,22 +11,22 @@ import { TraderDiscounts } from '../../models/trader/trader-discount.model';
 import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
 import { MapService } from '../../services/map.service';
-import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
+import { Game } from '../../models/game.model';
 
 @Component({
     selector: 'app-trader',
     standalone: true,
     templateUrl: './trader.component.html',
     styleUrl: './trader.component.scss',
-    imports: [NgFor, NgIf, TranslateModule, NgClass, NgStyle, StalkerProfileComponent, TooltipDirective]
+    imports: [TranslateModule, NgClass, NgStyle, StalkerProfileComponent, TooltipDirective]
 })
 
 export class TraderComponent {
   @Input() public trader: TraderModel;
   @Input() public allTraders: TraderModel[];
-  @Input() public game: string;
+  @Input() public game: Game;
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
   @Input() public actor: CharacterProfile;
@@ -184,7 +184,7 @@ export class TraderComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.trader.z}&lng=${this.trader.x}&type=traders`;
+    let link = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.trader.z}&lng=${this.trader.x}&type=traders`;
     navigator.clipboard.writeText(link)
   }
 

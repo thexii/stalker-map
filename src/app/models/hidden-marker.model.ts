@@ -1,4 +1,5 @@
 import { AnomalyZone } from "./anomaly-zone";
+import { Game } from "./game.model";
 import { LootBoxCluster } from "./loot-box/loot-box-cluster.model";
 
 export class HiddenMarker {

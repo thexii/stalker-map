@@ -1,18 +1,20 @@
 <div class="underground-popup">
     <div class="location-name icon-undeground-door stalker-icon">{{ location.uniqueName | translate }}</div>
     <div class="undeground-settings">
-      <div *ngIf="undergroundConfig">
-        <div class="levels">
-          <div *ngFor="let layer of undergroundConfig.levels" class="level" (click)="setLayer(layer)" [ngClass]="{'selected': layer == selectedLevel}">
-            {{ layer }}
-          </div>
-        </div>
-      </div>
+        @if (undergroundConfig) {
+            <div class="levels">
+                @for (layer of undergroundConfig.levels; track layer) {
+                    <div class="level" (click)="setLayer(layer)" [ngClass]="{'selected': layer == selectedLevel}">
+                        {{ layer }}
+                    </div>
+                }
+            </div>
+        }
     </div>
     <div class="map-container">
-      <div id="underground-map"></div>
+        <div id="underground-map"></div>
     </div>
 </div>
 <div [hidden]="true">
-  <template #dynamicComponents></template>
+    <template #dynamicComponents></template>
 </div>

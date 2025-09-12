@@ -7,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, NgFor, RouterModule],
+  imports: [TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -48,11 +48,9 @@ export class HeaderComponent {
 
         if (lastLanguage != null) {
           this.translate.use(lastLanguage);
-          this.translate.currentLang = lastLanguage;
         }
         else {
           this.translate.use(this.defaultLocale);
-          this.translate.currentLang = this.defaultLocale;
         }
       }
     });

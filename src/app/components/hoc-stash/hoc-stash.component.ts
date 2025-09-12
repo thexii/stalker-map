@@ -5,12 +5,12 @@ import { StuffItem } from '../../models/stuff';
 import { TranslateModule } from '@ngx-translate/core';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
-import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-hoc-stash',
   standalone: true,
-  imports: [TranslateModule, TooltipDirective, NgIf, NgFor, NgStyle],
+  imports: [TranslateModule, TooltipDirective, NgStyle],
   templateUrl: './hoc-stash.component.html',
   styleUrl: './hoc-stash.component.scss'
 })

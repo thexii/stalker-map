@@ -7,29 +7,28 @@ import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
-import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection, UpgradeSelectedEventModel } from '../../models/upgrades/upgrades';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
-import { UpgradeTooltipComponent } from '../tooltips/upgrade-tooltip/upgrade-tooltip.component';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import Chart, { BubbleDataPoint } from 'chart.js/auto';
 import { ItemPropertyComponent } from './item-property-bar/item-property.component';
 import { ItemPropertyNumberComponent } from './item-property-number/item-property-number.component';
 import { ItemUpgradesComponent } from './item-upgrades/item-upgrades.component';
-import { CompareComponent } from '../compare/compare.component';
 import { CompareService } from '../../services/compare.service';
+import { Game } from '../../models/game.model';
 
 @Component({
   selector: 'app-mechanic',
   standalone: true,
-  imports: [TranslateModule, StalkerProfileComponent, NgFor, NgIf, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent, ItemUpgradesComponent
+  imports: [TranslateModule, StalkerProfileComponent, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent, ItemUpgradesComponent
   ],
   templateUrl: './mechanic.component.html',
   styleUrl: './mechanic.component.scss'
 })
 export class MechanicComponent {
   @Input() public mechanic: Mechanic;
-  @Input() public game: string;
+  @Input() public game: Game;
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
   @Input() public relationType: RelationType;
@@ -136,12 +135,12 @@ export class MechanicComponent {
   public addItemToCompare(item: Item) {
     if (item.$type == 'weapon') {
       new Promise(async (resolve, reject) => {
-        this.compare.addWeaponToCompare(item, this.game)
+        this.compare.addWeaponToCompare(item, this.game.gameStyle)
       });
     }
     else if (item.$type == 'outfit') {
       new Promise(async (resolve, reject) => {
-        this.compare.addOutfitToCompare(item, this.game)
+        this.compare.addOutfitToCompare(item, this.game.gameStyle)
       });
     }
 

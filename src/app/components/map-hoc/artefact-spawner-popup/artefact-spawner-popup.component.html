@@ -1,29 +1,41 @@
-<div *ngIf="config" class="popup scrollbar">
-  <div>{{config.name}}</div>
-  <ng-container *ngIf="useListOfArtifacts">
-    <div class="artefacts inventory inventory-columns-7">
-      <ng-container *ngFor="let artefact of artefacts[0]">
-        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}" class="inventory-item inventory-item-width-{{artefact.item.width}} inventory-item-height-{{artefact.item.height}}">
-          <div class="inventory-item-image hoc inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}"></div>
-        </div>
-      </ng-container>
+@if (config) {
+    <div class="popup scrollbar">
+        <div>{{config.name}}</div>
+        @if (useListOfArtifacts) {
+            <div class="artefacts inventory inventory-columns-7">
+                @for (artefact of artefacts[0]; track artefact) {
+                    <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}"
+                        class="inventory-item inventory-item-width-{{artefact.item.width}} inventory-item-height-{{artefact.item.height}}">
+                        <div
+                            class="inventory-item-image hoc inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}">
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        @else {
+            @for (artefactRate of artefacts; track artefactRate; let rate = $index) {
+                <div>
+                    <div class="difficultes">
+                        @for (setting of config.settings; track setting) {
+                            <div class="difficult">
+                                <div class="name">{{setting.name}}:</div>
+                                <div class="value">{{setting.rarityChance[rate]}}%</div>
+                            </div>
+                        }
+                    </div>
+                    <div class="artefacts inventory inventory-columns-7">
+                        @for (artefact of artefactRate; track artefact) {
+                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}"
+                                class="inventory-item inventory-item-width-{{artefact.item.width}} inventory-item-height-{{artefact.item.height}}">
+                                <div
+                                    class="inventory-item-image hoc inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
     </div>
-  </ng-container>
-  <ng-container *ngIf="!useListOfArtifacts">
-    <div *ngFor="let artefactRate of artefacts; let rate = index">
-      <div class="difficultes">
-        <div class="difficult" *ngFor="let setting of config.settings">
-          <div class="name">{{setting.name}}:</div>
-          <div class="value">{{setting.rarityChance[rate]}}%</div>
-        </div>
-      </div>
-      <div class="artefacts inventory inventory-columns-7">
-        <ng-container *ngFor="let artefact of artefactRate">
-          <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}" class="inventory-item inventory-item-width-{{artefact.item.width}} inventory-item-height-{{artefact.item.height}}">
-            <div class="inventory-item-image hoc inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}"></div>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-  </ng-container>
-</div>
+}

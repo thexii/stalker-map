@@ -3,13 +3,13 @@ import { UpgradeTooltipComponent } from '../../tooltips/upgrade-tooltip/upgrade-
 import { TooltipDirective } from '../../tooltips/tooltip.directive';
 import { MechanicDiscount } from '../../../models/mechanic.model';
 import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection, UpgradeSelectedEventModel } from '../../../models/upgrades/upgrades';
-import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Item } from '../../../models/item.model';
 
 @Component({
   selector: 'app-item-upgrades',
   standalone: true,
-  imports: [TooltipDirective, NgStyle, NgClass, NgIf, NgFor],
+  imports: [TooltipDirective, NgStyle, NgClass],
   templateUrl: './item-upgrades.component.html',
   styleUrl: './item-upgrades.component.scss'
 })

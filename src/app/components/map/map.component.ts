@@ -26,8 +26,8 @@ import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { DialogComponent } from "../modals/dialog/dialog.component";
 import { isDevMode } from '@angular/core';
+import { Game } from '../../models/game.model';
 
 declare const L: any;
 declare var markWidth: number;
@@ -35,7 +35,7 @@ declare var markWidth: number;
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [HeaderComponent, TranslateModule, DialogComponent],
+  imports: [HeaderComponent, TranslateModule],
   templateUrl: './map.component.html',
   styleUrls: [
     './map.component.inventory.base.scss',
@@ -49,19 +49,25 @@ export class MapComponent {
   @ViewChild('dynamicComponents', { read: ViewContainerRef })
   container: ViewContainerRef;
 
-  public readonly game: string;
+  public readonly game: Game;
 
   public svgMarker: any;
   public canvasRenderer: any;
 
-  public static readonly avaliableGames: string[] = [
-    'shoc',
-    'cs',
-    'cop',
-    's2_2011',
-    'hoc',
-  ];
-  public static readonly defaultGame: string = 'shoc';
+  public static readonly avaliableGames: { [key: string]: Game } = {
+    'shoc': {gameStyle:'shoc', uniqueName: 'shoc'},
+
+    'cs': {gameStyle:'cs', uniqueName: 'cs'},
+    'cs_ee': {gameStyle:'cs', uniqueName: 'cs_ee'},
+
+    'cop': {gameStyle:'cop', uniqueName: 'cop'},
+
+    's2_2011': {gameStyle:'s2_2011', uniqueName: 's2_2011'},
+
+    'hoc': {gameStyle:'hoc', uniqueName: 'hoc'}
+  };
+  
+  public static readonly defaultGame: Game = {gameStyle:'shoc', uniqueName: 'shoc'};
 
   public static readonly defaultCellSize: number[] = [
     50, 50, 50, 50, 130
@@ -102,8 +108,8 @@ export class MapComponent {
     protected deviceService: DeviceDetectorService) {
     let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
-    if (MapComponent.avaliableGames.includes(urlGame)) {
-      this.game = urlGame;
+    if (MapComponent.avaliableGames[urlGame]) {
+      this.game = MapComponent.avaliableGames[urlGame];
     } else {
       this.game = MapComponent.defaultGame;
     }
@@ -226,16 +232,28 @@ export class MapComponent {
       this.loadLocales(i.lang);
     });
 
-    fetch(`/assets/data/${this.game}/map.json`)
+    fetch(`/assets/data/${this.game.uniqueName}/map.json`)
       .then((response) => {
         if (response.ok) {
           response.json()
           .then((gamedata: Map) => {
-            fetch(`/assets/data/${this.game}_config.json`)
+            fetch(`/assets/data/${this.game.uniqueName}_config.json`)
               .then((response) => response.json())
               .then((gameConfig: MapConfig) => {
                 this.loadMap(gamedata, gameConfig);
-              });
+              })
+            .catch((error) => {
+              if (this.gamedata == null) {
+                fetch(`/assets/data/${this.game.gameStyle}_config.json`)
+                  .then((response) => response.json())
+                    .then((gameConfig: MapConfig) => {
+                      this.loadMap(gamedata, gameConfig);
+                    })
+              }
+              else {
+                console.error(error)
+              }
+            });
           });
         }
       })
@@ -264,7 +282,7 @@ export class MapComponent {
 
     let cellSize = 50;
 
-    if (this.game == 'hoc') {
+    if (this.game.gameStyle == 'hoc') {
       cellSize = 130;
     }
 
@@ -285,11 +303,11 @@ export class MapComponent {
     this.meta.addTag({ name: 'description', content: `Interactive maps for the S.T.A.L.K.E.R. series`})
     this.meta.addTag({ name: 'keywords', content: `Stalker 2 map, Heart Of Chornobyl map, S2 map, Heart of Chernobyl map, s.t.a.l.k.e.r. map, interactive map, Call of Pripyat map, Clear Sky map, Shadow of Chornobyl map, Shadow of Chernobyl map, shoc map, cs map, cop map, hoc map, s2 map`})
 
-    this.titleService.setTitle(this.translate.instant(`${this.game}MapPageTitle`));
+    this.titleService.setTitle(this.translate.instant(`${this.game.uniqueName}MapPageTitle`));
   }
 
   private async loadItems(): Promise<void> {
-    await fetch(`/assets/data/${this.game}/items.json`)
+    await fetch(`/assets/data/${this.game.uniqueName}/items.json`)
       .then((response) => {
         if (response.ok) {
           response.json()
@@ -303,8 +321,8 @@ export class MapComponent {
   }
 
   private async loadLootBoxConfig(): Promise<void> {
-    if (this.game != 'cop') {
-      await fetch(`/assets/data/${this.game}/lootBoxConfig.json`)
+    if (this.game.gameStyle != 'cop') {
+      await fetch(`/assets/data/${this.game.uniqueName}/lootBoxConfig.json`)
         .then((response) => {
           if (response.ok) {
             response.json().then((config: LootBoxConfig) => {
@@ -318,8 +336,8 @@ export class MapComponent {
   }
 
   private async loadUpgrades(): Promise<void> {
-    if (this.game != 'shoc') {
-      await fetch(`/assets/data/${this.game}/upgrades.json`)
+    if (this.game.gameStyle != 'shoc') {
+      await fetch(`/assets/data/${this.game.uniqueName}/upgrades.json`)
         .then((response) => {
           if (response.ok) {
             response.json().then((config: ItemUpgrade[]) => {
@@ -333,8 +351,8 @@ export class MapComponent {
   }
 
   private async loadUpgradeProperties(): Promise<void> {
-    if (this.game != 'shoc') {
-      await fetch(`/assets/data/${this.game}/upgrade_properties.json`)
+    if (this.game.gameStyle != 'shoc') {
+      await fetch(`/assets/data/${this.game.uniqueName}/upgrade_properties.json`)
         .then((response) => {
           if (response.ok) {
             response.json().then((config: UpgradeProperty[]) => {
@@ -348,7 +366,7 @@ export class MapComponent {
   }
 
   private async loadLocales(language: string): Promise<void> {
-    await fetch(`/assets/data/${this.game}/${this.translate.currentLang}.json`)
+    await fetch(`/assets/data/${this.game.uniqueName}/${this.translate.currentLang}.json`)
       .then((response) => {
         if (response.ok) {
           response.json().then((locales: any) => {
@@ -360,7 +378,7 @@ export class MapComponent {
       })
 
 
-      fetch(`/assets/data/${this.game}/locale_import.json`)
+      fetch(`/assets/data/${this.game.uniqueName}/locale_import.json`)
       .then((response) => {
         if (response.ok) {
           response.json().then((locales: any) => {
@@ -434,6 +452,8 @@ export class MapComponent {
 
     this.createCompareControl();
 
+    this.createStashFilter();
+
     let bounds = [
         [0, 0]
     ];
@@ -464,7 +484,7 @@ export class MapComponent {
       bounds.push([this.gamedata.heightInPixels, this.gamedata.widthInPixels]);
     }
 
-    L.imageOverlay(`/assets/images/maps/${this.gamedata.uniqueName}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
+    L.imageOverlay(`/assets/images/maps/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
     this.map.fitBounds(bounds);
 
     markWidth = gameConfig.markerFactor * Math.pow(2, this.map.getZoom());
@@ -482,6 +502,7 @@ export class MapComponent {
     this.svgMarker = this.setCanvasMarkers();
 
     let markersToHide: any[] = [];
+    let itemsTypes: string[] = [];
 
     if (this.gamedata.locations && this.gamedata.locations.length > 0) {
         this.addLocations();
@@ -496,10 +517,14 @@ export class MapComponent {
     }
 
     if (this.gamedata.stuffs && this.gamedata.stuffs.length > 0) {
-      let hiddenstuffs = this.addStuffs();
+      let [hiddenstuffs, itemsTypesStuff] = this.addStuffs();
 
       if (hiddenstuffs.length > 0) {
         markersToHide.push(...hiddenstuffs);
+      }
+
+      if (itemsTypesStuff.length > 0) {
+        itemsTypes = itemsTypesStuff;
       }
     }
 
@@ -574,6 +599,8 @@ export class MapComponent {
     this.layerContoller.isUnderground = false;
     this.layerContoller.addTo(this.map)
     //L.control.compare({ position: 'topright' }).addTo(this.map);
+
+    L.control.stashFilter({ gameCategories: itemsTypes, categoriesConfig: this.mapConfig.itemsCategoriesSettings, layers: this.layers }).addTo(this.map);
 
     this.map.on('drag', () => {
         this.map.panInsideBounds(bounds, {
@@ -1162,6 +1189,208 @@ export class MapComponent {
     }
   }
 
+  private createStashFilter(): void {
+    L.Control.StashFilter = L.Control.extend({
+      options: {
+          position: 'topright',
+          collapsed: true,
+          gameCategories: [],
+          categoriesConfig: []
+      },
+
+      initialize: function(options: any) {
+          L.setOptions(this, options);
+          this.activeFilters = new Set();
+          this._initializeFilters();
+      },
+
+      onAdd: function(map: any) {
+          this._map = map;
+          this._container = L.DomUtil.create('div', 'stash-filter-control leaflet-control-stash-filter');
+          
+          this._createControlContent();
+          this._bindEvents();
+          
+          return this._container;
+      },
+
+      onRemove: function(map: any) {
+          if (this.stashMarkers) {
+              map.removeLayer(this.stashMarkers);
+          }
+      },
+
+      _initializeFilters: function() {
+          const allCategories = new Set();
+
+          for (let config of this.options.categoriesConfig) {
+            if (config.gameCategories.some((item: any) => this.options.gameCategories.includes(item))) {
+              allCategories.add(config)
+            }
+          }
+
+          console.log(allCategories);
+          this.activeFilters = new Set(allCategories);
+          this.allCategories = allCategories;
+      },
+
+      _createControlContent: function() {
+          const header = L.DomUtil.create('div', 'stash-filter-header', this._container);
+          header.innerHTML = `
+              <span>Фільтри Тайників</span>
+              <span class="toggle-arrow ${this.options.collapsed ? '' : 'expanded'}">▼</span>
+          `;
+
+          const content = L.DomUtil.create('div', 'stash-filter-content', this._container);
+          if (this.options.collapsed) {
+              content.classList.add('collapsed');
+          }
+
+          const filterList = L.DomUtil.create('div', 'filter-list', content);
+          this._filterList = filterList;
+
+          const stats = L.DomUtil.create('div', 'stats-info', content);
+          this._stats = stats;
+
+          this._updateFilterList();
+          //this._updateStats();
+
+          // Обробник для згортання/розгортання
+          L.DomEvent.on(header, 'click', this._toggleCollapse, this);
+      },
+
+      _bindEvents: function() {
+          // Запобігаємо всплиттю подій карти
+          L.DomEvent.disableClickPropagation(this._container);
+          L.DomEvent.disableScrollPropagation(this._container);
+      },
+
+      _toggleCollapse: function() {
+          const content = this._container.querySelector('.stash-filter-content');
+          const arrow = this._container.querySelector('.toggle-arrow');
+          
+          content.classList.toggle('collapsed');
+          arrow.classList.toggle('expanded');
+      },
+
+      _updateFilterList: function() {
+          const allCategories = Array.from(this.activeFilters).sort();
+          this._filterList.innerHTML = '';
+
+          allCategories.forEach((category: any) => {
+              const filterItem = L.DomUtil.create('div', 'filter-item', this._filterList);
+              
+              const checkbox = L.DomUtil.create('input', '', filterItem);
+              checkbox.type = 'checkbox';
+              checkbox.id = `filter-${category}`;
+              checkbox.checked = this.activeFilters.has(category);
+
+              const label = L.DomUtil.create('label', '', filterItem);
+              label.htmlFor = `filter-${category.name}`;
+              label.innerHTML = category.name;
+
+              // Додаємо обробник події
+              L.DomEvent.on(checkbox, 'change', () => {
+                  this._toggleFilter(category);
+              });
+          });
+      },
+
+      _toggleFilter: function(category: any) {
+          if (this.activeFilters.has(category)) {
+              this.activeFilters.delete(category);
+          } else {
+              this.activeFilters.add(category);
+          }
+
+          this.updateMap();
+      },
+
+      updateMap: function() {
+          const filteringCategories = [...this.allCategories].map((item: { gameCategories: any; }) => item.gameCategories).flat();
+
+          for (let layer of this.options.layers) {
+            if (this._map.hasLayer(layer) && layer._layers != null) {
+              let markers: any[] = Object.values(layer._layers);
+              for (let marker of markers) {
+                if (marker.properties && marker.properties.itemTypes && marker.properties.itemTypes.length > 0) {
+                  const properties = marker.properties;
+                  
+                  if (properties.itemTypes && Array.isArray(properties.itemTypes) && properties.itemTypes.length > 0) {
+                    if (!properties.itemTypes.some((x: string) => filteringCategories.includes(x))) {
+                      continue;
+                    }
+
+                    let hasActiveFilter = false;
+
+                    if (this.activeFilters.size > 0) {
+                      for (let filter of this.activeFilters) {
+                        if (properties.itemTypes.some((x: string) => filter.gameCategories.includes(x))) {
+                          hasActiveFilter = true;
+                          break;
+                        }
+                      }
+                    }
+                    else {
+                      hasActiveFilter = true;
+
+                      for (let filter of this.allCategories) {
+                        if (properties.itemTypes.some((x: string) => filter.gameCategories.includes(x))) {
+                          hasActiveFilter = false;
+                          break;
+                        }
+                      }
+                    }
+                    
+                    if (hasActiveFilter) {
+                        if (!this._map.hasLayer(marker)) {
+                            this._map.addLayer(marker);
+                        }
+                    } else {
+                        if (this._map.hasLayer(marker)) {
+                            this._map.removeLayer(marker);
+                        }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          /*this._map.eachLayer((layer: any) => {
+              if (layer.properties && layer.properties.itemTypes && layer.properties.itemTypes.length > 0) {
+                  const properties = layer.properties;
+                  
+                  if (properties.itemTypes && Array.isArray(properties.itemTypes) && properties.itemTypes.length > 0) {
+                      let hasActiveFilter = false;
+
+                      for (let filter of this.activeFilters) {
+                        if (properties.itemTypes.some((x: string) => filter.gameCategories.includes(x))) {
+                          hasActiveFilter = true;
+                          break;
+                        }
+                      }
+                      
+                      if (hasActiveFilter) {
+                          if (!this._map.hasLayer(layer)) {
+                              this._map.addLayer(layer);
+                          }
+                      } else {
+                          if (this._map.hasLayer(layer)) {
+                              this._map.removeLayer(layer);
+                          }
+                      }
+                  }
+              }
+          });*/
+      },
+    });
+
+    // Фабричний метод для створення контролу
+    L.control.stashFilter = function(options: any) {
+        return new L.Control.StashFilter(options);
+    };
+  }
+
   private addSquareControl(): void {
     let component = this;
     L.Control.Compare = L.Control.extend({
@@ -1313,14 +1542,14 @@ export class MapComponent {
         let locationImage = '';
 
         if (location.image != null) {
-          locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/${location.image}`;
+          locationImage = `/assets/images/maps/${this.game.gameStyle}/${location.image}`;
         }
         else {
           if (location.x1 == 0 && location.x2 == 0 && location.y1 == 0 && location.y2 == 0) {
             continue;
           }
 
-          locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/map_${location.uniqueName}.png`;
+          locationImage = `/assets/images/maps/${this.game.gameStyle}/map_${location.uniqueName}.png`;
         }
 
         let locationBounds = [
@@ -1416,6 +1645,7 @@ export class MapComponent {
                 stuff.properties.markType = markType.name;
                 stuff.properties.typeUniqueName = markType.uniqueName;
                 stuff.properties.ableToSearch = markType.ableToSearch;
+                stuff.properties.itemTypes = [];
 
                 let localesToFind = [];
 
@@ -1437,9 +1667,14 @@ export class MapComponent {
                         itemsToFind.push(item?.localeName);
                         itemsToFind.push(`synonyms.${item?.uniqueName}`);
 
-                        if (item.category && !itemsTypes.includes(item.category))
-                        {
-                          itemsTypes.push(item.category);
+                        if (item.category) {
+                          if (!itemsTypes.includes(item.category)) {
+                            itemsTypes.push(item.category);
+                          }
+
+                          if (!stuff.properties.itemTypes.includes(item.category)) {
+                            stuff.properties.itemTypes.push(item.category);
+                          }
                         }
                       }
                     });
@@ -1474,9 +1709,7 @@ export class MapComponent {
             continue;
           }
 
-          let stuff = null;
-
-          stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
+          let stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
             icon: markType.icon,
             renderer: this.canvasRenderer,
             radius: markType.icon.options.iconSizeInit[0] * 10
@@ -1488,6 +1721,7 @@ export class MapComponent {
           stuff.properties.markType = markType.name;
           stuff.properties.typeUniqueName = markType.uniqueName;
           stuff.properties.ableToSearch = markType.ableToSearch;
+          stuff.properties.itemTypes = [];
 
           if (stuff.properties.ableToSearch) {
             let localesToFind = [];
@@ -1505,9 +1739,14 @@ export class MapComponent {
                 let item = this.items.find(y => y.uniqueName == x.uniqueName);
 
                 if (item) {
-                  if (item.category && !itemsTypes.includes(item.category))
-                  {
-                    itemsTypes.push(item.category);
+                  if (item.category) {
+                    if (!itemsTypes.includes(item.category)) {
+                      itemsTypes.push(item.category);
+                    }
+
+                    if (!stuff.properties.itemTypes.includes(item.category)) {
+                      stuff.properties.itemTypes.push(item.category);
+                    }
                   }
 
                   return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
@@ -1545,7 +1784,7 @@ export class MapComponent {
 
           let widht = 300;
 
-          if (this.game == 'hoc') {
+          if (this.game.gameStyle == 'hoc') {
             widht = 780;
           }
 
@@ -1563,9 +1802,7 @@ export class MapComponent {
       }
     }
 
-    console.log(itemsTypes)
-
-    return markersToHide;
+    return [markersToHide, itemsTypes];
   }
 
   private addLootBoxes() {

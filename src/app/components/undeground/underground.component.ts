@@ -1,22 +1,16 @@
-import { NgClass, NgFor, NgIf, NgStyle } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component, Input, ViewChild, ViewContainerRef } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
-import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
 import { Map } from '../../models/map.model';
 import { Location } from '../../models/location.model';
 import { StuffModel } from "../../models/stuff";
 import { Item } from "../../models/item.model";
 import { Point } from "../../models/point.model";
-import { StuffComponent } from "../stuff/stuff.component";
-import { StalkerComponent } from "../stalker/stalker.component";
 import { MapConfig } from "../../models/gamedata/map-config";
-import { LootBoxClusterComponent } from "../loot-box-cluster/loot-box-cluster.component";
-import { LootBox } from "../../models/loot-box/loot-box-section.model";
 import { LootBoxConfig } from "../../models/loot-box/loot-box-config.model";
 import { UndergroundLevelsConfig } from "../../models/underground-levels-config.model";
 import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
-import { AnomalyZoneComponent } from "../anomaly-zone/anomaly-zone.component";
 import { HiddenMarker } from "../../models/hidden-marker.model";
 import { MapService } from "../../services/map.service";
 
@@ -28,7 +22,7 @@ declare var markWidthUnderground: number;
     standalone: true,
     templateUrl: './underground.component.html',
     styleUrl: './underground.component.scss',
-    imports: [NgFor, NgIf, TranslateModule, NgClass, NgStyle, StalkerProfileComponent]
+    imports: [TranslateModule, NgClass]
 })
 
 export class UndergroundComponent {
@@ -38,7 +32,7 @@ export class UndergroundComponent {
     @Input() public location: Location;
     @Input() public gamedata: Map;
     @Input() public items: Item[];
-    @Input() public game: string;
+    @Input() public game: { gameStyle: string, uniqueName: string};
     @Input() public mapConfig: MapConfig;
     @Input() public lootBoxConfig: LootBoxConfig;
     @Input() public markerToSearch: MarkerToSearch;

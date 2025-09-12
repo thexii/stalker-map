@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<g id="psi">
+			<path id="psi-1" d="M 64 103 L 47 103 L 47 98 C 58 98 58 90 58 90 L 58 81 C 9 81 40 49 28 41 C 60 41 23 76 58 76 L 58 40 C 58 40 58 33 51 33 L 51 29 L 64 29" fill="none" stroke="#d8d1cf" stroke-width="8" />
+			<path id="psi-2" d="M 64 103 L 47 103 L 47 98 C 58 98 58 90 58 90 L 58 81 C 9 81 40 49 28 41 C 60 41 23 76 58 76 L 58 40 C 58 40 58 33 51 33 L 51 29 L 64 29" fill="#f6f6e6" stroke="#6b635d" stroke-width="2" />
+		</g>
+	</defs>
+	<circle cx="64" cy="64" r="64" stroke="none" fill="#423a36" />
+	<circle cx="64" cy="64" r="60.5" stroke="#d8d1cf" stroke-width="5" fill="#423a36" />
+	
+	<use x='0' y ='0' xlink:href='#psi'/>
+	<use x='0' y ='0' xlink:href='#psi' transform="scale(-1,1) translate(-128,0)"/>
+</svg>

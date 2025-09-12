@@ -1,4 +1,3 @@
-import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Upgrade, UpgradeProperty } from '../../../models/upgrades/upgrades';
@@ -6,7 +5,7 @@ import { Upgrade, UpgradeProperty } from '../../../models/upgrades/upgrades';
 @Component({
   selector: 'app-upgrade-tooltip',
   standalone: true,
-  imports: [TranslateModule, NgStyle, NgIf, NgFor],
+  imports: [TranslateModule],
   templateUrl: './upgrade-tooltip.component.html',
   styleUrl: './upgrade-tooltip.component.scss'
 })

@@ -1,25 +1,24 @@
 import { Component, Input } from '@angular/core';
-import { StuffComponent } from '../stuff.component';
-import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { HideUnhideComponent } from '../../hide-unhide/hide-unhide.component';
 import { TooltipDirective } from '../../tooltips/tooltip.directive';
 import { Stuff } from '../../../models/hoc/map-hoc';
 import { Item } from '../../../models/item.model';
 import { StuffItem } from '../../../models/stuff/stuff-item.model';
 import { ItemTooltipComponent } from '../../tooltips/item-tooltip/item-tooltip.component';
 import { MapService } from '../../../services/map.service';
+import { Game } from '../../../models/game.model';
 
 @Component({
   selector: 'app-hoc-stuff',
   standalone: true,
-  imports: [TranslateModule, NgFor, NgIf, TooltipDirective, HideUnhideComponent, NgStyle],
+  imports: [TranslateModule, TooltipDirective, NgStyle],
   templateUrl: './hoc-stuff.component.html',
   styleUrl: './hoc-stuff.component.scss'
 })
 export class HocStuffComponent {
   @Input() public stuff: Stuff;
-  @Input() public game: string;
+  @Input() public game: Game;
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
@@ -78,7 +77,7 @@ export class HocStuffComponent {
   }
 
   public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}`;
+    let link = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}`;
     navigator.clipboard.writeText(link)
   }
 

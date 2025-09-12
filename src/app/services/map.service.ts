@@ -18,6 +18,7 @@ import { Mechanic } from '../models/mechanic.model';
 import { MechanicComponent } from '../components/mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../models/upgrades/upgrades';
 import { TranslateService } from '@ngx-translate/core';
+import { Game } from '../models/game.model';
 
 declare const L: any;
 
@@ -108,7 +109,7 @@ export class MapService {
     this.mapComponent = mapComponent;
   }
 
-  public createStashPopup(stash: any, container: ViewContainerRef, game: string, allItems: Item[], isUnderground: boolean) {
+  public createStashPopup(stash: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean) {
     stash.getPopup().on('remove', function () {
       stash.getPopup().off('remove');
       componentRef.destroy();
@@ -124,7 +125,7 @@ export class MapService {
     return componentRef.location.nativeElement;
   }
 
-  public createLootBoxPopup(lootBox: any, container: ViewContainerRef, game: string, allItems: Item[], locations: Location[], lootBoxConfig: LootBoxConfig, isUnderground: boolean) {
+  public createLootBoxPopup(lootBox: any, container: ViewContainerRef, game: Game, allItems: Item[], locations: Location[], lootBoxConfig: LootBoxConfig, isUnderground: boolean) {
     lootBox.getPopup().on('remove', function () {
       lootBox.getPopup().off('remove');
       componentRef.destroy();
@@ -145,7 +146,7 @@ export class MapService {
     return componentRef.location.nativeElement;
   }
 
-  public createeAnomalyZonePopup(zone: any, container: ViewContainerRef, game: string, allItems: Item[], isUnderground: boolean) {
+  public createeAnomalyZonePopup(zone: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean) {
     zone.getPopup().on('remove', function () {
       zone.getPopup().off('remove');
       componentRef.destroy();
@@ -160,7 +161,7 @@ export class MapService {
     return componentRef.location.nativeElement;
   }
 
-  public createTraderPopup(traderMarker: any, traders: TraderModel[], marker: any, container: ViewContainerRef, game: string, allItems: Item[], mapConfig: MapConfig) {
+  public createTraderPopup(traderMarker: any, traders: TraderModel[], marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig) {
     let trader: TraderModel = traderMarker.properties.traderConfig;
 
     marker.getPopup().on('remove', function () {
@@ -182,7 +183,7 @@ export class MapService {
     return componentRef.location.nativeElement;
   }
 
-  public createStalkerPopup(stalkerMarker: any, container: ViewContainerRef, game: string, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean) {
+  public createStalkerPopup(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean) {
     stalkerMarker.getPopup().on('remove', function () {
       stalkerMarker.getPopup().off('remove');
       componentRef.destroy();
@@ -198,7 +199,7 @@ export class MapService {
     return componentRef.location.nativeElement;
   }
 
-  public createMechanicPopup(mechanicMarker: any, container: ViewContainerRef, game: string, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]) {
+  public createMechanicPopup(mechanicMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]) {
     let mechanic: Mechanic = mechanicMarker.properties.mechanic;
 
     mechanicMarker.getPopup().on('remove', function () {
@@ -327,7 +328,7 @@ export class MapService {
         this.hiddenMarksCache = JSON.parse(allHiddenMarkers);
 
         if (this.hiddenMarksCache) {
-          this.hiddenMarksCache = this.hiddenMarksCache.filter(x => x.game == this.mapComponent.game);
+          this.hiddenMarksCache = this.hiddenMarksCache.filter(x => x.game == this.mapComponent.game.uniqueName);
         }
 
         return this.hiddenMarksCache;

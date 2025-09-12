@@ -5,6 +5,22 @@
       "isShowByDefault": true
     },
     {
+      "uniqueName": "hubs",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "camps",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "lairs",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "shelters",
+      "isShowByDefault": true
+    },
+    {
       "uniqueName": "circles",
       "isShowByDefault": false
     },

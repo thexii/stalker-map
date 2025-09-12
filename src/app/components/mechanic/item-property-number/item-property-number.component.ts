@@ -1,10 +1,10 @@
-import { NgClass, NgIf, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-property-number',
   standalone: true,
-  imports: [NgIf, NgClass, NgStyle],
+  imports: [NgStyle],
   templateUrl: './item-property-number.component.html',
   styleUrl: './item-property-number.component.scss'
 })

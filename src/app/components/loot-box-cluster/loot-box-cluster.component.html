@@ -1,49 +1,88 @@
 <div>
-  <div class='popup header'>{{ 'loot-box-cluster' | translate}}</div>
+    <div class='popup header'>{{ 'loot-box-cluster' | translate}}</div>
 </div>
-<div *ngFor="let box of boxes">
-  <div *ngIf="box.items && box.items.length > 0">
-    <div class="items-title">{{ 'loot-box-100-percent-items' | translate}}</div>
+@for (box of boxes; track box) {
+    <div>
+        @if (box.items && box.items.length > 0) {
+            <div>
+                <div class="items-title">{{ 'loot-box-100-percent-items' | translate}}</div>
 
-    <div class="inventory">
-      <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngFor="let stuffItem of box.items" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-        <div class="item-additional-info">
-          <div *ngIf="stuffItem.count > 1 " class="inventory-item-count">x{{stuffItem.count}}</div>
-          <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
-        </div>
-        <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-          <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
-          <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
-          <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="box.boxConfig">
-    <div class="items-title" *ngIf="box.count > 1">{{ box.boxConfig | translate}} x {{box.count}}</div>
-    <div class="items-title" *ngIf="box.count == 1">{{ box.boxConfig | translate}}</div>
+                <div class="inventory">
+                    @for (stuffItem of box.items; track stuffItem) {
+                        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                            <div class="item-additional-info">
+                                @if (stuffItem.count > 1) {
+                                    <div class="inventory-item-count">x{{stuffItem.count}}</div>
+                                }
 
-    <div class="inventory">
-      <ng-container *ngFor="let stuffItem of box.boxItems">
-        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" *ngIf="stuffItem.probability > 0" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-          <div class="item-additional-info">
-            <div class="inventory-item-count">{{stuffItem.probability}}%</div>
-            <div *ngIf="stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0" class="inventory-item-upgrade"></div>
-          </div>
-          <div class="inventory-item-image {{this.game}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-            <div *ngIf="stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000" class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
-            <div *ngIf="stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000" class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
-            <div *ngIf="stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000" class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
-          </div>
-        </div>
-      </ng-container>
+                                @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
+                                    <div class="inventory-item-upgrade"></div>
+                                }
+                            </div>
+                            <div class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                                @if (stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000) {
+                                    <div class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+                                }
+
+                                @if (stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000) {
+                                    <div class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+                                }
+                                
+                                @if (stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000) {
+                                    <div class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+        @if (box.boxConfig) {
+            <div>
+                @if (box.count > 1) {
+                    <div class="items-title">{{ box.boxConfig | translate}} x {{box.count}}</div>
+                }
+                @else if (box.count == 1) {
+                    <div class="items-title">{{ box.boxConfig | translate}}</div>
+                }
+
+                <div class="inventory">
+                    @for (stuffItem of box.boxItems; track stuffItem) {
+                        @if (stuffItem.probability > 0) {
+                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                                <div class="item-additional-info">
+                                    <div class="inventory-item-count">{{stuffItem.probability}}%</div>
+                                    @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
+                                        <div class="inventory-item-upgrade"></div>
+                                    }
+                                </div>
+                                <div class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                                    @if (stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000) {
+                                        <div class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+                                    }
+
+                                    @if (stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000) {
+                                        <div class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+                                    }
+
+                                    @if (stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000) {
+                                        <div class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
     </div>
-  </div>
-</div>
+}
 
 <div class="bottom">
-  <div class="button url-button" (click)="copyLink()">
-    <span>{{ 'markLink' | translate}}</span>
-  </div>
-  <app-hide-unhide [marker]="{lat: cluster.z, lng: cluster.x, layerName: 'destroyable-box', game: game, isUnderground: isUnderground}"></app-hide-unhide>
+    <div class="button url-button" (click)="copyLink()">
+        <span>{{ 'markLink' | translate}}</span>
+    </div>
+    <app-hide-unhide
+        [marker]="{lat: cluster.z, lng: cluster.x, layerName: 'destroyable-box', game: game.gameStyle, isUnderground: isUnderground}"></app-hide-unhide>
 </div>

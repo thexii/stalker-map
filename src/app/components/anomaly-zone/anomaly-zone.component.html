@@ -1,44 +1,58 @@
 <div>
-  <div class="popup header" *ngIf="anomalZone.name">{{ anomalZone.name | translate }}</div>
-  <div class="popup header" *ngIf="!anomalZone.name">{{ "anomaly-zone" | translate }}</div>
+    @if (anomalZone.name) {
+        <div class="popup header">{{ anomalZone.name | translate }}</div>
+    }
+    @else {
+        <div class="popup header">{{ "anomaly-zone" | translate }}</div>
+    }
 </div>
 
-<div
-  class="sections"
-  *ngIf="
-    spawnSections &&
-    spawnSections.length > 0
-  ">
-  <div class="section" *ngFor="let section of spawnSections">
-    <div class="anomaly-section-info">
-      <div *ngIf="section.count == 1">{{ section.anomalyUniqueName | translate }}</div>
-      <div *ngIf="section.count > 1">{{ section.anomalyUniqueName | translate }} x {{section.count}}</div>
-      <div>{{ 'anomalyArtMaxCount' | translate: { count: section.maxCapacity } }}</div>
+@if (spawnSections && spawnSections.length > 0) {
+    <div class="sections">
+        @for (section of spawnSections; track section) {
+            <div class="section">
+                <div class="anomaly-section-info">
+                    @if (section.count == 1) {
+                        <div>{{ section.anomalyUniqueName | translate }}</div>
+                    }
+                    @else if (section.count > 1) {
+                        <div>{{ section.anomalyUniqueName | translate }} x {{section.count}}</div>
+                    }
+                    <div>{{ 'anomalyArtMaxCount' | translate: { count: section.maxCapacity } }}</div>
+                </div>
+                @if (section.anomalySpawnItems) {
+                    <div class="inventory">
+                        @for (artefact of section.anomalySpawnItems; track artefact) {
+                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}"
+                                class="inventory-item inventory-item-width-1 inventory-item-height-1">
+                                <div class="inventory-item-percentage">{{Math.floor(artefact.probability * 100)}}%</div>
+                                <div
+                                    class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
     </div>
-    <div class="inventory" *ngIf="section.anomalySpawnItems">
-      <ng-container *ngFor="let artefact of section.anomalySpawnItems">
-        <div tooltip [component]="itemTooltipComponent" [componentData]="{item: artefact.item}" class="inventory-item inventory-item-width-1 inventory-item-height-1">
-          <div class="inventory-item-percentage">{{Math.floor(artefact.probability * 100)}}%</div>
-          <div class="inventory-item-image {{this.game}} inventory-item-x-{{artefact.item.gridX}} inventory-item-y-{{artefact.item.gridY}}"></div>
+}
+
+@if (anomalies != null && anomalies.length > 0) {
+    <div class="anomalies-in-claster-container">
+        @for (anomaly of anomalies; track anomaly) {
+            <div class="anomaly-in-claster">
+                <span>{{anomaly.count}} x {{anomaly.anomaly | translate}}</span>
+            </div>
+        }
+    </div>
+}
+
+@if (anomalZone.anomaliySpawnSections && anomalZone.anomaliySpawnSections.length > 0) {
+    <div class="bottom">
+        <div class="button url-button" (click)="copyLink()">
+            <span>{{ 'markLink' | translate}}</span>
         </div>
-      </ng-container>
+        <app-hide-unhide [marker]="hiddenMarker.anomalZone(anomalZone, game, isUnderground)"></app-hide-unhide>
     </div>
-  </div>
-</div>
-
-<div class="anomalies-in-claster-container" *ngIf="anomalies != null && anomalies.length > 0">
-  <div class="anomaly-in-claster" *ngFor="let anomaly of anomalies">
-    <span>{{anomaly.count}} x {{anomaly.anomaly | translate}}</span>
-  </div>
-</div>
-
-<div class="bottom" *ngIf="
-anomalZone.anomaliySpawnSections &&
-anomalZone.anomaliySpawnSections.length > 0
-">
-  <div class="button url-button" (click)="copyLink()">
-    <span>{{ 'markLink' | translate}}</span>
-  </div>
-  <app-hide-unhide [marker]="hiddenMarker.anomalZone(anomalZone, game, isUnderground)"></app-hide-unhide>
-</div>
-
+}

@@ -19,6 +19,7 @@ export class MapConfig {
   public traderRelationType: RelationType;
   public actor: CharacterProfile;
   public undergroundLevelsConfig: UndergroundLevelsConfig[];
+  public itemsCategoriesSettings: CategoryFilterSettings[];
 
   public mapBounds: any;
 }
@@ -26,4 +27,9 @@ export class MapConfig {
 export enum RelationType {
   selector = 1,
   range = 2
+}
+
+export class CategoryFilterSettings {
+  public name: string;
+  public gameCategories: string[];
 }

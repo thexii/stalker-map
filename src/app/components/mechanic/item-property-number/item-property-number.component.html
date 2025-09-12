@@ -1,15 +1,26 @@
 <tr class="stat-with-bar">
-  <td class="title-column">
-    <i class="{{iconStyle}} upgrade-property-icon"></i>
-    <span class="title-with-bar">{{name}}:</span>
-  </td>
-  <td class="bar-column">
-    <span class="value" *ngIf="isCompare">
-      <span *ngIf="valueString.length > 0" [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
-    </span>
-    <span class="value" *ngIf="!isCompare">
-      <span *ngIf="defaultValue" class="upgraded-param">{{defaultValueString}}</span>
-      <span *ngIf="valueString.length > 0" [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
-    </span>
-  </td>
+    <td class="title-column">
+        <i class="{{iconStyle}} upgrade-property-icon"></i>
+        <span class="title-with-bar">{{name}}:</span>
+    </td>
+    <td class="bar-column">
+        @if (isCompare) {
+            <span class="value">
+                @if (valueString.length > 0) {
+                    <span [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
+                }
+            </span>
+        }
+        @else {
+            <span class="value">
+                @if (defaultValue) {
+                    <span class="upgraded-param">{{defaultValueString}}</span>
+                }
+
+                @if (valueString.length > 0) {
+                    <span [ngStyle]="{'color': valueStyle}"> {{valueString}}</span>
+                }
+            </span>
+        }
+    </td>
 </tr>
