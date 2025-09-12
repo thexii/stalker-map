@@ -3986,7 +3986,6 @@
               "prop_dispersion"
             ],
             "propertiesEffects": {
-              "value2": "st_no_buck",
               "ammo_class": "ammo_12x76_zhekan, ammo_12x76_dart",
               "fire_dispersion_base": "-0.2",
               "bullet_speed": "50"
@@ -4789,13 +4788,13 @@
               "up_gr_ac_ak74u"
             ],
             "cost": 903,
-            "value": "\u002B15",
+            "value": null,
             "properties": [
               "prop_inertion"
             ],
             "propertiesEffects": {
-              "control_inertion_factor": "-0.2",
               "inv_weight": "-0.3",
+              "control_inertion_factor": "-0.1",
               "PDM_disp_vel_factor": "-0.3",
               "PDM_disp_accel_factor": "-0.3"
             },
@@ -6222,7 +6221,6 @@
       }
     ],
     "scheme": [
-      [],
       [
         {
           "x": 20,
@@ -9622,7 +9620,6 @@
       }
     ],
     "scheme": [
-      [],
       [
         {
           "x": 20,
@@ -13347,7 +13344,7 @@
               "up_gr_bdfh_specops_outfit"
             ],
             "cost": 4700,
-            "value": "\u002B15",
+            "value": "\u002B5",
             "properties": [
               "prop_tonnage"
             ],
@@ -13523,7 +13520,7 @@
               "up_gr_bdfh_specops_outfit"
             ],
             "cost": 4700,
-            "value": "\u002B15",
+            "value": "\u002B5",
             "properties": [
               "prop_tonnage"
             ],
@@ -19509,7 +19506,6 @@
       }
     ],
     "scheme": [
-      [],
       [
         {
           "x": 20,
@@ -20389,7 +20385,6 @@
       }
     ],
     "scheme": [
-      [],
       [
         {
           "x": 20,
@@ -24509,7 +24504,6 @@
       }
     ],
     "scheme": [
-      [],
       [
         {
           "x": 20,
@@ -27910,7 +27904,7 @@
             ],
             "propertiesEffects": {
               "health_restore_speed": "0.0006",
-              "bleeding_restore_speed": "0.006"
+              "bleeding_restore_speed": "-0.006"
             },
             "schemeIndexX": 2,
             "schemeIndexY": 2,
