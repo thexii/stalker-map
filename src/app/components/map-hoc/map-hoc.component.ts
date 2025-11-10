@@ -1,4 +1,4 @@
-import { Marker } from './../../models/hoc/map-hoc';
+import { Lair, Marker } from './../../models/hoc/map-hoc';
 import {
     Component,
     HostListener,
@@ -236,16 +236,20 @@ export class MapHocComponent {
             rawGameMap.name = 'raw-map-label';
             inGameMap.name = 'in-game-map-label';
 
+            inGameMap.addTo(this.map);
+
             baseLayers.push(inGameMap);
             baseLayers.push(rawGameMap);
-
-            inGameMap.addTo(this.map);
         }
 
         this.svgMarker = this.setCanvasMarkers();
 
         if (this.gamedata.markers && this.gamedata.markers.length > 0) {
             this.addMarkers();
+        }
+
+        if (this.gamedata.lairs?.length > 0) {
+            this.addLairs();
         }
 
         if (this.gamedata.anomalyFields && this.gamedata.anomalyFields.length > 0) {
@@ -355,7 +359,7 @@ export class MapHocComponent {
             ]);
 
             this.layerContoller = L.control.customLayers(
-                baseLayersControl,
+                Object.fromEntries(baseLayersControl),
                 Object.fromEntries(layersToControl),
                 { overlaysListTop: this.overlaysListTop }
             );
@@ -807,34 +811,116 @@ export class MapHocComponent {
                 radius: 5
             }
         ];
+
         let markerTypes: string[] = [];
         let markerLayers: any[] = [];
         let circleMarkers: any[] = [];
         let hubs: any[] = [];
-        let mutantLairs: any[] = [];
-        let lairs: any[] = [];
         let shelters: any[] = [];
         let playerShelters: any[] = [];
         let index: number = 0;
 
-        let mutants: string[] =
-            [
-                'Blinddog',
-                'Flesh',
-                'Boar',
-                'Tushkan',
-                'Deer',
-                'Pseudodog',
-                'Snork',
-                'Bloodsucker',
-                'Bayun',
-                'Burer',
-                'Poltergeist',
-                'Chimera',
-                'Controller',
-                'Pseudogiant',
-                'Rat'
-            ]
+        for (let data of this.gamedata.markers) {
+            let icon = markerImages.find((x: any) => x.name == data.type);
+
+            let marker = new this.svgMarker(
+                [data.z, data.x],
+                { renderer: this.canvasRenderer, icon: icon, radius: 40 }
+            );
+
+            marker.name = data.title;
+            marker.description = data.description;
+            marker.feature = {};
+            marker.feature.properties = {};
+
+            if (!markerTypes.includes(data.type)) {
+                markerTypes.push(data.type);
+            }
+
+            let dataToSearch: string[] = [index.toString()];
+            index++;
+
+            if (data.title) {
+                dataToSearch.push(data.title);
+            }
+
+            if (data.description) {
+                dataToSearch.push(data.description);
+            }
+
+            if (dataToSearch.length > 0 && !(icon.isMutantLair || icon.isLair || icon.isShalter)) {
+                this.createTranslatableProperty(
+                    marker.feature.properties,
+                    'search',
+                    dataToSearch,
+                    this.translate
+                );
+            } else {
+                marker.feature.properties.search = '';
+            }
+
+            if (data.radius > 0) {
+                let color = 'white';
+
+                circleMarkers.push(
+                    L.circle([data.z, data.x], {
+                        radius: data.radius,
+                        color: color,
+                        weight: 2,
+                    })
+                );
+            }
+
+            marker.bindTooltip((p: any) => this.createTooltip(p), {
+                sticky: true,
+                className: 's2-tooltip',
+                offset: new Point(0, 50),
+            });
+
+            if (icon.isHub) {
+                hubs.push(marker);
+                continue;
+            }
+
+            if (icon.isShalter) {
+                if (data.title == 'Shelter' || data.title.includes('Player')) {
+                    playerShelters.push(marker);
+                }
+                else {
+                    shelters.push(marker);
+                }
+                continue;
+            }
+
+            markerLayers.push(marker);
+        }
+
+        if (markerLayers.length > 0) {
+            this.addLayerToMap(L.layerGroup(markerLayers), 'sub-location', true);
+        }
+
+        if (circleMarkers.length > 0) {
+            this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
+        }
+
+        if (hubs.length > 0) {
+            this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
+        }
+
+        if (shelters.length > 0) {
+            this.addLayerToMap(L.layerGroup(shelters), 'botPlayerShelters', true);
+        }
+
+        if (playerShelters.length > 0) {
+            this.addLayerToMap(L.layerGroup(playerShelters), 'shelters', true);
+        }
+
+        console.log(markerTypes);
+    }
+
+    private addLairs(): void {
+        let mutantLairs: any[] = [];
+        let lairs: any[] = [];
 
         let unknownIcon =
         {
@@ -1032,195 +1118,258 @@ export class MapHocComponent {
             radius: campRadius
         };
 
-        for (let data of this.gamedata.markers) {
-            let icon = markerImages.find((x: any) => x.name == data.type);
+        let index = 1;
+        let counts: number[] = [0, 0, 0, 0, 0];
+        
+        let mutants: string[] =
+            [
+                'Blinddog',
+                'Flesh',
+                'Boar',
+                'Tushkan',
+                'Deer',
+                'Pseudodog',
+                'Snork',
+                'Bloodsucker',
+                'Bayun',
+                'Burer',
+                'Poltergeist',
+                'Chimera',
+                'Controller',
+                'Pseudogiant',
+                'Rat'
+            ]
 
-            if (icon == null) {
-                icon = unknownIcon;
-            }
-            else if (data.type == "ESpawnType::LairSpawner") {
-                let mutant = mutants.find(keyword => data.title.includes(keyword));
+            let markerRadius = 40;
 
-                if (mutant != null) {
+        for (let data of this.gamedata.lairs) {
+            if (data.lairs.length == 1) {
+                let isMutant = mutants.includes(data.lairs[0]);
+                let icon, title, desc;
+                let dataToSearch: string[] = [];
+
+                if (isMutant) {
                     icon = monsterLair;
-                    data.title = 'mutant-lair';
-                    data.description = mutant;
+                    title = 'monster-lair';
+                    desc = data.lairs[0];
+
+                    dataToSearch.push(index.toString());
+                    index++;
+
+                    dataToSearch.push(title);
+                    dataToSearch.push(desc);
                 }
                 else {
-                    let title = 'lair';
-
-                    if (data.title.includes('Neutrals') || data.title.includes('Diggers') || data.title.includes('ShevchenkoStalkers')) {
-                        icon = stalkerCamp;
-                        data.description = 'sid_misc_answer_faction_Neutrals';
-                    }
-                    else if (data.title.includes('Bandit')) {
-                        icon = banditCamp;
-                        data.description = 'sid_misc_answer_faction_Bandit';
-                    }
-                    else if (data.title.includes('Varta')) {
-                        icon = vartaCamp;
-                        data.description = 'sid_misc_answer_faction_Varta';
-                    }
-                    else if (data.title.includes('Spark')) {
-                        icon = sparkCamp;
-                        data.description = 'sid_misc_answer_faction_Spark';
-                    }
-                    else if (data.title.includes('Militaries') || data.title.includes('MSOP')) {
-                        icon = armyCamp;
-                        data.description = 'sid_misc_answer_faction_Militaries';
-                    }
-                    else if (data.title.includes('Mercenaries')) {
-                        icon = mercCamp;
-                        data.description = 'sid_misc_answer_faction_Mercenaries';
-                    }
-                    else if (data.title.includes('Monolith')) {
-                        icon = monolithCamp;
-                        data.description = 'sid_misc_answer_faction_Monolith';
-                    }
-                    else if (data.title.includes('Freedom')) {
-                        icon = freedomCamp;
-                        data.description = 'sid_misc_answer_faction_Freedom';
-                    }
-                    else if (data.title.includes('Duty')) {
-                        icon = dutyCamp;
-                        data.description = 'sid_misc_answer_faction_Duty';
-                    }
-                    else if (data.title.includes('Corpus')) {
-                        icon = corpusCamp;
-                        data.description = 'sid_misc_answer_faction_Corpus';
-                    }
-                    else if (data.title.includes('Scientist')) {
-                        icon = sciCamp;
-                        data.description = 'sid_misc_answer_faction_Scientist';
-                    }
-                    else if (data.title.includes('Zombie')) {
-                        icon = zombieCamp;
-                        title = 'zombie-lair'
-                        data.description = '';
-                    }
-                    else if (data.title.includes('Noon')) {
-                        icon = noonCamp;
-                        data.description = 'sid_misc_answer_faction_Noon';
-                    }
-                    else {
-                        console.log(data.title)
-                    }
-
-                    data.title = title;
+                    let icons = getIconAndFaction(data);
+                    icon = icons[0].icon;
+                    title = icons[0].title;
+                    desc = icons[0].faction;
                 }
-            }
-
-            let marker = new this.svgMarker(
-                [data.z, data.x],
-                { renderer: this.canvasRenderer, icon: icon, radius: 40 }
-            );
-
-            marker.name = data.title;
-            marker.description = data.description;
-            marker.feature = {};
-            marker.feature.properties = {};
-
-            if (!markerTypes.includes(data.type)) {
-                markerTypes.push(data.type);
-            }
-
-            let dataToSearch: string[] = [index.toString()];
-            index++;
-
-            if (data.title) {
-                dataToSearch.push(data.title);
-            }
-
-            if (data.description) {
-                dataToSearch.push(data.description);
-            }
-
-            if (dataToSearch.length > 0 && !(icon.isMutantLair || icon.isLair || icon.isShalter)) {
-                this.createTranslatableProperty(
-                    marker.feature.properties,
-                    'search',
-                    dataToSearch,
-                    this.translate
+                
+                let marker = new this.svgMarker(
+                    [data.z, data.x],
+                    { renderer: this.canvasRenderer, icon: icon, radius: markerRadius }
                 );
-            } else {
-                marker.feature.properties.search = '';
-            }
 
-            if (data.radius > 0) {
-                let color = 'white';
-
-                circleMarkers.push(
-                    L.circle([data.z, data.x], {
-                        radius: data.radius,
-                        color: color,
-                        weight: 2,
-                    })
-                );
-            }
-
-            marker.bindTooltip((p: any) => this.createTooltip(p), {
-                sticky: true,
-                className: 's2-tooltip',
-                offset: new Point(0, 50),
-            });
-
-            if (icon.isHub) {
-                hubs.push(marker);
-                continue;
-            }
-
-            if (icon.isMutantLair) {
-                mutantLairs.push(marker);
-                continue;
-            }
-
-            if (icon.isLair) {
-                lairs.push(marker);
-                continue;
-            }
-
-            if (icon.isShalter) {
-                if (data.title == 'Shelter' || data.title.includes('Player')) {
-                    playerShelters.push(marker);
+                marker.name = title;
+                marker.description = desc;
+                marker.feature = {};
+                marker.feature.properties = {};
+                
+                if (dataToSearch.length > 0 && isMutant) {
+                    this.createTranslatableProperty(
+                        marker.feature.properties,
+                        'search',
+                        dataToSearch,
+                        this.translate
+                    );
+                } else {
+                    marker.feature.properties.search = '';
                 }
-                else {
-                    shelters.push(marker);
+
+                if (isMutant) {
+                    mutantLairs.push(marker);
                 }
-                continue;
+                else
+                {
+                    lairs.push(marker);
+                }
+
+                marker.bindTooltip((p: any) => this.createTooltip(p), {
+                    sticky: true,
+                    className: 's2-tooltip',
+                    offset: new Point(0, 50),
+                });
             }
+            else {
+                let icons = getIconAndFaction(data);
+                let shifts: number[][] = [];
 
-            markerLayers.push(marker);
+                if (icons.length == 2) {
+                    shifts.push([-markerRadius / 6, 0]);
+                    shifts.push([markerRadius / 6, 0]);
+                }
+                else if (icons.length == 3) {
+                    shifts.push([-markerRadius / 3, 0]);
+                    shifts.push([0, 0]);
+                    shifts.push([markerRadius / 3, 0]);
+                }
+                else if (icons.length == 4) {
+                    shifts.push([-markerRadius / 6, -markerRadius / 6]);
+                    shifts.push([markerRadius / 6, -markerRadius / 6]);
+                    shifts.push([-markerRadius / 6, markerRadius / 6]);
+                    shifts.push([markerRadius / 6, markerRadius / 6]);
+                }
+                else if (icons.length == 5) {
+                    shifts.push([-markerRadius / 3, -markerRadius / 6]);
+                    shifts.push([0, -markerRadius / 6]);
+                    shifts.push([markerRadius / 3, -markerRadius / 6]);
+                    shifts.push([-markerRadius / 6, markerRadius / 6]);
+                    shifts.push([markerRadius / 6, markerRadius / 6]);
+                }
+
+                for (let i = 0; i < icons.length; i++) {
+                    this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], mutants.includes(data.lairs[i]), index, markerRadius, mutantLairs, lairs);
+                    index++;
+                }
+
+                counts[icons.length] += 1;
+            }
         }
 
-        if (markerLayers.length > 0) {
-            this.addLayerToMap(L.layerGroup(markerLayers), 'sub-location', true);
-        }
-
-        if (circleMarkers.length > 0) {
-            this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
-        }
-
-        if (hubs.length > 0) {
-            this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
-        }
+        console.log(counts)
 
         if (lairs.length > 0) {
-            this.addLayerToMap(L.layerGroup(lairs), 'camps', true);
+            this.addLayerToMap(L.layerGroup(lairs), 'stalker-respawn', true);
         }
 
         if (mutantLairs.length > 0) {
-            this.addLayerToMap(L.layerGroup(mutantLairs), 'lairs', true);
+            this.addLayerToMap(L.layerGroup(mutantLairs), 'monster-lair', true);
         }
 
-        if (shelters.length > 0) {
-            this.addLayerToMap(L.layerGroup(shelters), 'botPlayerShelters', true);
+        function getIconAndFaction(data: Lair): {icon: any, faction: string, title: string}[] {
+            let title = 'stalker-respawn';
+
+            let result = [];
+
+            for (let lair of data.lairs) {
+                let icon, desc;
+
+                if (lair.includes('Neutrals') || lair.includes('Diggers') || lair.includes('ShevchenkoStalkers')) {
+                    icon = stalkerCamp;
+                    desc = 'sid_misc_answer_faction_Neutrals';
+                }
+                else if (lair.includes('Bandit')) {
+                    icon = banditCamp;
+                    desc = 'sid_misc_answer_faction_Bandit';
+                }
+                else if (lair.includes('Varta')) {
+                    icon = vartaCamp;
+                    desc = 'sid_misc_answer_faction_Varta';
+                }
+                else if (lair.includes('Spark')) {
+                    icon = sparkCamp;
+                    desc = 'sid_misc_answer_faction_Spark';
+                }
+                else if (lair.includes('Militaries') || lair.includes('MSOP')) {
+                    icon = armyCamp;
+                    desc = 'sid_misc_answer_faction_Militaries';
+                }
+                else if (lair.includes('Mercenaries')) {
+                    icon = mercCamp;
+                    desc = 'sid_misc_answer_faction_Mercenaries';
+                }
+                else if (lair.includes('Monolith')) {
+                    icon = monolithCamp;
+                    desc = 'sid_misc_answer_faction_Monolith';
+                }
+                else if (lair.includes('Freedom')) {
+                    icon = freedomCamp;
+                    desc = 'sid_misc_answer_faction_Freedom';
+                }
+                else if (lair.includes('Duty')) {
+                    icon = dutyCamp;
+                    desc = 'sid_misc_answer_faction_Duty';
+                }
+                else if (lair.includes('Corpus')) {
+                    icon = corpusCamp;
+                    desc = 'sid_misc_answer_faction_Corpus';
+                }
+                else if (lair.includes('Scientist')) {
+                    icon = sciCamp;
+                    desc = 'sid_misc_answer_faction_Scientist';
+                }
+                else if (lair.includes('Zombie')) {
+                    icon = zombieCamp;
+                    title = 'zombie-lair'
+                    desc = '';
+                }
+                else if (lair.includes('Noon')) {
+                    icon = noonCamp;
+                    desc = 'sid_misc_answer_faction_Noon';
+                }
+                else if (mutants.includes(lair)) {
+                    icon = monsterLair;
+                    title = 'monster-lair';
+                    desc = lair
+                }
+                else {
+                    console.log(lair)
+                    continue;
+                }
+
+                result.push({icon: icon, faction: desc, title: title})
+            }
+
+            return result;
+        }
+    }
+
+    private createMarker(x: number, y: number, markerData: any, isMutant: boolean, index: number, markerRadius: number, mutantLairs: any[], lairs: any[]): void {
+        let dataToSearch: string[] = [];
+
+        if (isMutant) {
+            dataToSearch.push(index.toString());
+            index++;
+
+            dataToSearch.push(markerData.title);
+            dataToSearch.push(markerData.desc);
         }
 
-        if (playerShelters.length > 0) {
-            this.addLayerToMap(L.layerGroup(playerShelters), 'shelters', true);
+        let marker = new this.svgMarker(
+            [y, x],
+            { renderer: this.canvasRenderer, icon: markerData.icon, radius: markerRadius }
+        );
+
+        marker.name = markerData.title;
+        marker.description = markerData.faction;
+        marker.feature = {};
+        marker.feature.properties = {};
+        
+        if (dataToSearch.length > 0 && isMutant) {
+            this.createTranslatableProperty(
+                marker.feature.properties,
+                'search',
+                dataToSearch,
+                this.translate
+            );
+        } else {
+            marker.feature.properties.search = '';
         }
 
-        console.log(markerTypes);
+        if (isMutant) {
+            mutantLairs.push(marker);
+        }
+        else
+        {
+            lairs.push(marker);
+        }
+
+        marker.bindTooltip((p: any) => this.createTooltip(p), {
+            sticky: true,
+            className: 's2-tooltip',
+            offset: new Point(0, 50),
+        });
     }
 
     private addAnomalyFields(): void {

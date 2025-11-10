@@ -9,11 +9,11 @@
       "isShowByDefault": true
     },
     {
-      "uniqueName": "camps",
+      "uniqueName": "stalker-respawn",
       "isShowByDefault": true
     },
     {
-      "uniqueName": "lairs",
+      "uniqueName": "monster-lair",
       "isShowByDefault": true
     },
     {

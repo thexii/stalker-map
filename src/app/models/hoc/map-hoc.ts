@@ -5,6 +5,7 @@ export class MapHoc {
   public heightInMeters: number;
 
   public markers: Marker[];
+  public lairs: Lair[];
   public stuffs: Stuff[];
   public anomalyFields: Marker[];
   public artefactSpawners: ArtefactSpawner[];
@@ -26,6 +27,10 @@ export class Marker extends ObjectAtLocationHoc {
   public description: string;
   public type: string;
   public radius: number;
+}
+
+export class Lair extends ObjectAtLocationHoc {
+  public lairs: string[];
 }
 
 export class Stuff extends ObjectAtLocationHoc {
