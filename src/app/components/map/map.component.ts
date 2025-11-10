@@ -446,6 +446,8 @@ export class MapComponent {
         zoomControl: !1
     });
 
+    this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
+
     this.mapService.setMapComponent(this);
 
     this.createCustomLayersControl();
@@ -607,8 +609,6 @@ export class MapComponent {
             animate: false
         });
     });
-
-    this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
 
     let printClickCoordinates = true;
 

@@ -60,8 +60,16 @@ export class MapHocComponent {
         protected meta: Meta,
         protected deviceService: DeviceDetectorService
     ) { }
-    showHideAll($event: Event) {
-        throw new Error('Method not implemented.');
+    showHideAll($event: any = null) {
+        if ($event.target.checked) {
+            for (let o of this.allLayers) {
+                this.map.addLayer(o);
+            }
+        } else {
+            for (let o of this.allLayers) {
+                this.map.removeLayer(o);
+            }
+        }
     }
 
     private async ngOnInit(): Promise<void> {
@@ -159,8 +167,7 @@ export class MapHocComponent {
         let scaleFactor = width / this.gamedata.widthInMeters;
 
         let customCrs = L.extend({}, L.CRS.Simple, {
-            transformation: new L.Transformation(scaleFactor, 0, -scaleFactor, 0),
-            //infinite: false
+            transformation: new L.Transformation(scaleFactor, 0, scaleFactor, 0),
         });
 
         let center = [0, 0];
@@ -180,17 +187,10 @@ export class MapHocComponent {
             zoomControl: !1,
         });
 
-        L.TileLayer.CustomCoords = L.TileLayer.extend({
-            /*createTile: function (coords: any) {
-                const tile = document.createElement('div');
-                tile.style.outline = '1px solid green';
-                tile.style.fontWeight = 'bold';
-                tile.style.fontSize = '14pt';
-                tile.style.color = 'white';
-                tile.innerHTML = [coords.z, coords.x, coords.y].join('/');
-                return tile;
-              },*/
-        });
+        this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
+        this.map.attributionControl.addAttribution('<a href="https://github.com/joric">Tile maps by joric</a>');
+
+        let baseLayers = [];
 
         if (gameConfig.globalMapFileName && gameConfig.mapBounds) {
             let b = [
@@ -204,27 +204,42 @@ export class MapHocComponent {
                 ],
             ];
 
-            let minW = Math.min(gameConfig.mapBounds[0][1], 0);
-            let maxW = Math.min(gameConfig.mapBounds[1][1], 0);
+            let baseTilesInRow: number = 2;
+            let zoomOffset: number = 2;
+            let tileSize: number = width / Math.pow(baseTilesInRow, zoomOffset);
 
-            let mapWidth = gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1];
+            let rawGameMap = L.tileLayer('https://joric.github.io/stalker2_tileset/extras/wb/{z}/{x}/{y}.jpg',
+            {
+                tileSize: tileSize,
+                zoomOffset: zoomOffset,
+                minZoom: gameConfig.minZoom,
+                maxZoom: gameConfig.maxZoom,
+                maxNativeZoom: 3,
+                noWrap: true
+            })
 
-            let tilesInMinZoom = 4;
-            let tileSize = mapWidth / tilesInMinZoom * scaleFactor;
+            let inGameMap = L.tileLayer('https://joric.github.io/stalker2_tileset/tiles/{z}/{x}/{y}.jpg',
+                {
+                    tileSize: tileSize,
+                    zoomOffset: zoomOffset,
+                    minZoom: gameConfig.minZoom,
+                    maxZoom: gameConfig.maxZoom,
+                    noWrap: true
+                })
 
+            inGameMap.ableToSearch = false;
+            inGameMap.addToTop = false;
+            rawGameMap.ableToSearch = false;
+            rawGameMap.addToTop = false;
+            
 
-            /*new L.TileLayer.CustomCoords(`/assets/images/maps/hoc/tiles/{z}/{y}/{x}.jpg`, {
-              minZoom: gameConfig.minZoom,
-              maxZoom: gameConfig.maxZoom,
-              bounds: b,
-              tileSize: tileSize
-      
-            }).addTo(this.map);*/
+            rawGameMap.name = 'raw-map-label';
+            inGameMap.name = 'in-game-map-label';
 
-            L.imageOverlay(
-                `/assets/images/maps/hoc/${gameConfig.globalMapFileName}`,
-                b
-            ).addTo(this.map);
+            baseLayers.push(inGameMap);
+            baseLayers.push(rawGameMap);
+
+            inGameMap.addTo(this.map);
         }
 
         this.svgMarker = this.setCanvasMarkers();
@@ -334,8 +349,13 @@ export class MapHocComponent {
                 this.translate.instant(x.name),
                 x,
             ]);
+
+            let baseLayersControl = baseLayers.map((x: any) => [
+                this.translate.instant(x.name), x
+            ]);
+
             this.layerContoller = L.control.customLayers(
-                null,
+                baseLayersControl,
                 Object.fromEntries(layersToControl),
                 { overlaysListTop: this.overlaysListTop }
             );
@@ -354,8 +374,13 @@ export class MapHocComponent {
             this.translate.instant(x.name),
             x,
         ]);
+
+        let baseLayersControl = baseLayers.map((x: any) => [
+            this.translate.instant(x.name), x
+        ]);
+
         this.layerContoller = L.control.customLayers(
-            null,
+            Object.fromEntries(baseLayersControl),
             Object.fromEntries(layersToControl),
             { overlaysListTop: this.overlaysListTop }
         );
@@ -489,6 +514,7 @@ export class MapHocComponent {
 
                 this._baseLayersList.replaceChildren();
                 this._overlaysList.replaceChildren();
+
                 if (!this.isUnderground && this.options.overlaysListTop) {
                     this._overlaysListTop.replaceChildren();
                 }
@@ -554,7 +580,7 @@ export class MapHocComponent {
 
                 this._layerControlInputs.push(input);
 
-                if (this.options.overlaysListTop) {
+                if (this.options.overlaysListTop && obj.layer.addToTop !== false) {
                     this._layerControlInputsTop.push(inputTop);
                 }
                 input.layerId = L.Util.stamp(obj.layer);
@@ -587,7 +613,8 @@ export class MapHocComponent {
                 inputTop.id = `layer-top-${layerId}`;
                 labelInsideCheck.setAttribute('for', inputTop.id);
 
-                if (!obj.layer.isUnderground && this.options.overlaysListTop) {
+                if (!obj.layer.isUnderground && this.options.overlaysListTop && obj.layer.addToTop !== false) {
+                    obj.layer.topId = this._overlaysListTop.childNodes.length;
                     this._overlaysListTop.appendChild(subHeaderPanel);
                 }
 
@@ -638,14 +665,21 @@ export class MapHocComponent {
                 if (this.options.overlaysListTop) {
                     for (let i = inputs.length - 1; i >= 0; i--) {
                         input = inputs[i];
-                        inputTop = inputsTop[i];
                         layer = this._getLayer(input.layerId).layer;
 
+                        inputTop = inputsTop[layer.topId];
+
                         if (input.checked) {
-                            inputTop.checked = true;
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = true;
+                            }
+
                             addedLayers.push(layer);
                         } else if (!input.checked) {
-                            inputTop.checked = false;
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = false;
+                            }
+
                             removedLayers.push(layer);
                         }
                     }
@@ -786,19 +820,19 @@ export class MapHocComponent {
         let mutants: string[] =
             [
                 'Blinddog',
-                'Bloodsucker',
-                'Boar',
                 'Flesh',
+                'Boar',
+                'Tushkan',
+                'Deer',
+                'Pseudodog',
+                'Snork',
+                'Bloodsucker',
                 'Bayun',
                 'Burer',
+                'Poltergeist',
                 'Chimera',
                 'Controller',
-                'Deer',
-                'Poltergeist',
-                'Pseudodog',
                 'Pseudogiant',
-                'Snork',
-                'Tushkan',
                 'Rat'
             ]
 
@@ -824,8 +858,10 @@ export class MapHocComponent {
             }),
             isMutantLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: 2
         };
+
+        let campRadius: number = 2;
 
         let stalkerCamp =
         {
@@ -837,7 +873,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let banditCamp =
@@ -850,7 +886,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let vartaCamp =
@@ -863,7 +899,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let sparkCamp =
@@ -876,7 +912,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let armyCamp =
@@ -889,7 +925,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let mercCamp =
@@ -902,7 +938,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let monolithCamp =
@@ -915,7 +951,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let freedomCamp =
@@ -928,7 +964,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let dutyCamp =
@@ -941,7 +977,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let corpusCamp =
@@ -954,7 +990,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let sciCamp =
@@ -967,7 +1003,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let zombieCamp =
@@ -975,12 +1011,12 @@ export class MapHocComponent {
             name: 'ESpawnType::LairSpawner',
             icon: new this.svgIcon({
                 iconUrl:
-                    '/assets/images/svg/marks/zombie.svg',
+                    '/assets/images/svg/factions/zombie.svg',
                 iconAnchor: [0, 0],
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         let noonCamp =
@@ -993,7 +1029,7 @@ export class MapHocComponent {
             }),
             isLair: true,
             keepMapSize: true,
-            radius: 5
+            radius: campRadius
         };
 
         for (let data of this.gamedata.markers) {
@@ -1007,11 +1043,13 @@ export class MapHocComponent {
 
                 if (mutant != null) {
                     icon = monsterLair;
-                    data.title = 'lair';
+                    data.title = 'mutant-lair';
                     data.description = mutant;
                 }
                 else {
-                    if (data.title.includes('Neutrals') || data.title.includes('Diggers')) {
+                    let title = 'lair';
+
+                    if (data.title.includes('Neutrals') || data.title.includes('Diggers') || data.title.includes('ShevchenkoStalkers')) {
                         icon = stalkerCamp;
                         data.description = 'sid_misc_answer_faction_Neutrals';
                     }
@@ -1057,14 +1095,18 @@ export class MapHocComponent {
                     }
                     else if (data.title.includes('Zombie')) {
                         icon = zombieCamp;
-                        data.description = 'sid_misc_answer_faction_Zombie';
+                        title = 'zombie-lair'
+                        data.description = '';
                     }
                     else if (data.title.includes('Noon')) {
                         icon = noonCamp;
                         data.description = 'sid_misc_answer_faction_Noon';
                     }
-                    
-                    data.title = 'sid_misc_pda_Map_MarkerCamp';
+                    else {
+                        console.log(data.title)
+                    }
+
+                    data.title = title;
                 }
             }
 
@@ -1218,7 +1260,7 @@ export class MapHocComponent {
                 iconAnchor: [0, 0],
             }),
             keepMapSize: true,
-            radius: 2.5,
+            radius: 1.5,
         };
 
         let markers = [];
@@ -1295,7 +1337,7 @@ export class MapHocComponent {
                 color: "#00df07"
             }),
             keepMapSize: true,
-            radius: 3
+            radius: 1.5
         };
 
         let richStuffIcon = {
@@ -1305,7 +1347,7 @@ export class MapHocComponent {
                 color: "#00df07"
             }),
             keepMapSize: true,
-            radius: 3
+            radius: 1.5
         };
 
         let deluxtuffIcon = {
@@ -1315,7 +1357,7 @@ export class MapHocComponent {
                 color: "#3E9EC6"
             }),
             keepMapSize: true,
-            radius: 3
+            radius: 1.5
         };
 
         let preOrderStuffIcon = {
@@ -1325,7 +1367,7 @@ export class MapHocComponent {
                 color: "#F8F22E"
             }),
             keepMapSize: true,
-            radius: 3
+            radius: 1.5
         };
 
         let UltimateStuffIcon = {
@@ -1335,7 +1377,7 @@ export class MapHocComponent {
                 color: "#ED6819"
             }),
             keepMapSize: true,
-            radius: 3
+            radius: 1.5
         };
 
         let markers = [];
@@ -1414,7 +1456,7 @@ export class MapHocComponent {
                     icon = UltimateStuffIcon;
                 }
                 else {
-                    icon = richStuffIcon;
+                    icon = stuffIcon;
                 }
             }
             else {
@@ -1485,7 +1527,7 @@ export class MapHocComponent {
                 iconAnchor: [0, 0],
             }),
             keepMapSize: true,
-            radius: 5,
+            radius: 2,
         };
 
         let markers = [];

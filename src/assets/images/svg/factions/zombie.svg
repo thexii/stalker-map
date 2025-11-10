@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <svg id="mark" viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<polyline points="25,25 103,25 25,103 103,103" fill="none" stroke="#54B0AD" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+	<polyline points="25,25 108,25 17,103 103,103" fill="none" stroke="white" stroke-width="20" stroke-linecap="square" stroke-linejoin="bevel " />
 </svg>
