@@ -29,6 +29,10 @@
       "isShowByDefault": true
     },
     {
+      "uniqueName": "rich-stash",
+      "isShowByDefault": true
+    },
+    {
       "uniqueName": "stash",
       "isShowByDefault": true
     },

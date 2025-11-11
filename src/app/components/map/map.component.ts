@@ -97,7 +97,6 @@ export class MapComponent {
   protected readonly hiddenMarkerOpacity: number = .5;
 
   public readonly maxWidthInPx: number = 3840;
-  private pixelsInGameUnit: number = 1;
 
   constructor(
     protected translate: TranslateService,
@@ -422,15 +421,6 @@ export class MapComponent {
     }
   }
 
-  private convertGameCoorsToMapCoors(x: number, y: number): number[] {
-    if (this.pixelsInGameUnit != 1) {
-      return [x * this.pixelsInGameUnit, y * this.pixelsInGameUnit];
-    }
-    else {
-      return [x, y];
-    }
-  }
-
   private loadMap(gameData: Map, gameConfig: MapConfig): void {
     this.gamedata = gameData;
     this.mapConfig = gameConfig;
@@ -460,31 +450,7 @@ export class MapComponent {
         [0, 0]
     ];
 
-    if (gameData.uniqueName == 'hoc') {
-      let width = 0;
-      let height = 0;
-
-      if (window.screen.width > this.gamedata.widthInMeters) {
-        width = this.gamedata.widthInMeters;
-      }
-      else {
-        width = window.screen.width;
-
-        let wrapper = document.getElementById('map-wrapper');
-
-        if (wrapper) {
-          width -= wrapper.offsetLeft * 2;
-        }
-      }
-
-      height = (this.gamedata.heightInMeters / this.gamedata.widthInMeters) * width;
-      this.pixelsInGameUnit = width / this.gamedata.widthInMeters;
-
-      bounds.push([height, width]);
-    }
-    else {
-      bounds.push([this.gamedata.heightInPixels, this.gamedata.widthInPixels]);
-    }
+    bounds.push([this.gamedata.heightInPixels, this.gamedata.widthInPixels]);
 
     L.imageOverlay(`/assets/images/maps/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
     this.map.fitBounds(bounds);
@@ -621,14 +587,14 @@ export class MapComponent {
           var latlng = tempMap.mouseEventToLatLng(ev.originalEvent);
 
           if (ev.originalEvent.shiftKey && ev.originalEvent.altKey) {
-            console.log([latlng.lat / component.pixelsInGameUnit, latlng.lng / component.pixelsInGameUnit]);
+            console.log([latlng.lat, latlng.lng]);
           }
           else if (ev.originalEvent.ctrlKey && ev.originalEvent.shiftKey) {
             let coors = '';
 
-            coors+= `\"x\": ${latlng.lng / component.pixelsInGameUnit},\n`;
+            coors+= `\"x\": ${latlng.lng},\n`;
             coors+= `\t\t\t\"y\": 0,\n`;
-            coors+= `\t\t\t\"z\": ${latlng.lat / component.pixelsInGameUnit},`;
+            coors+= `\t\t\t\"z\": ${latlng.lat},`;
 
             console.log(coors);
           }
@@ -740,7 +706,7 @@ export class MapComponent {
                 Math.abs(y.properties.coordinates.lng - h.lng) < 1);
 
                 if (marker) {
-                  this.map.flyTo(this.convertGameCoorsToMapCoors(h.lat, h.lng), this.map.getMaxZoom(), {
+                  this.map.flyTo([h.lat, h.lng], this.map.getMaxZoom(), {
                     animate: false,
                     duration: 0.3,
                   });
@@ -1431,7 +1397,7 @@ export class MapComponent {
             dashArray: '1,6',
         },
         lengthUnit: {
-            factor: this.pixelsInGameUnit == 1 ? this.mapConfig.lengthFactor : 1 / this.pixelsInGameUnit, //  from km to nm
+            factor: this.mapConfig.lengthFactor, //  from km to nm
             display: this.translate.instant('meterShort'),
             decimal: 2,
             label: this.translate.instant('length'),
@@ -1553,8 +1519,8 @@ export class MapComponent {
         }
 
         let locationBounds = [
-          this.convertGameCoorsToMapCoors(location.y1, location.x1),
-          this.convertGameCoorsToMapCoors(location.y2, location.x2)
+          [location.y1, location.x1],
+          [location.y2, location.x2]
         ];
         let locationImageOverlay = L.imageOverlay(locationImage, locationBounds, {
           interactive: !0,
@@ -1599,14 +1565,14 @@ export class MapComponent {
 
       let dx = maxX - minX;
       let dy = maxY - minY;
-      let box = this.convertGameCoorsToMapCoors(dx, dy);
+      let box = [dx, dy];
       svgElement.setAttribute('viewBox', `0 0 ${box[0]} ${box[1]}`);
-      let points = location.points.map(x => this.convertGameCoorsToMapCoors(x.x - minX, maxY - x.z).join(',')).join(' ');
-      let firstPoint = this.convertGameCoorsToMapCoors(location.points[0].x - minX, maxY - location.points[0].z);
+      let points = location.points.map(x => [x.x - minX, maxY - x.z].join(',')).join(' ');
+      let firstPoint = [location.points[0].x - minX, maxY - location.points[0].z];
       points += `, ${firstPoint[0]},${firstPoint[1]}`
 
       svgElement.innerHTML = `<polyline fill="none" stroke="#e53c35" stroke-width="2" points="${points}" />`;
-      var svgElementBounds = [ this.convertGameCoorsToMapCoors( minY, minX ), this.convertGameCoorsToMapCoors( maxY, maxX ) ];
+      var svgElementBounds = [ [ minY, minX ], [ maxY, maxX ] ];
       L.svgOverlay(svgElement, svgElementBounds).addTo(this.map);
     }
   }
@@ -1637,7 +1603,7 @@ export class MapComponent {
 
           if (location.isUnderground) {
             if (markType.ableToSearch) {
-                let stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {renderer: this.canvasRenderer});
+                let stuff = new this.svgMarker([stuffModel.z, stuffModel.x], {renderer: this.canvasRenderer});
 
                 stuff.properties = {};
                 stuff.properties.stuff = stuffModel;
@@ -1709,7 +1675,7 @@ export class MapComponent {
             continue;
           }
 
-          let stuff = new this.svgMarker(this.convertGameCoorsToMapCoors(stuffModel.z, stuffModel.x), {
+          let stuff = new this.svgMarker([stuffModel.z, stuffModel.x], {
             icon: markType.icon,
             renderer: this.canvasRenderer,
             radius: markType.icon.options.iconSizeInit[0] * 10
@@ -1815,7 +1781,7 @@ export class MapComponent {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == lootBox.locationId) as Location;
 
       if (location.isUnderground) {
-        let lootBoxMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(lootBox.z, lootBox.x), {renderer: this.canvasRenderer});
+        let lootBoxMarker = new this.svgMarker([lootBox.z, lootBox.x], {renderer: this.canvasRenderer});
 
         lootBoxMarker.properties = {};
         lootBoxMarker.properties.lootBox = lootBox;
@@ -1867,7 +1833,7 @@ export class MapComponent {
         continue;
       }
 
-      let lootBoxMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(lootBox.z, lootBox.x), {
+      let lootBoxMarker = new this.svgMarker([lootBox.z, lootBox.x], {
         icon: lootBoxType.icon,
         renderer: this.canvasRenderer
       });
@@ -1951,10 +1917,10 @@ export class MapComponent {
 
           if (mark.radius > 0) {
             let color: string = '#ffffffff'
-            marker = L.circle(this.convertGameCoorsToMapCoors(mark.z, mark.x), {radius: mark.radius * this.pixelsInGameUnit, color: color, weight: 2});
+            marker = L.circle([mark.z, mark.x], {radius: mark.radius, color: color, weight: 2});
           }
           else {
-            marker = new this.svgMarker(this.convertGameCoorsToMapCoors(mark.z, mark.x), {
+            marker = new this.svgMarker([mark.z, mark.x], {
               icon: markType.icon,
               renderer: this.canvasRenderer
             });
@@ -2048,12 +2014,12 @@ export class MapComponent {
         zone.anomaliySpawnSections != null &&
         zone.anomaliySpawnSections.length > 0
       ) {
-        canvasMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(zone.z, zone.x), {
+        canvasMarker = new this.svgMarker([zone.z, zone.x], {
           icon: anomalyZoneIcon.icon,
           renderer: this.canvasRenderer
         });
       } else {
-        canvasMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(zone.z, zone.x), {
+        canvasMarker = new this.svgMarker([zone.z, zone.x], {
           icon: anomalyZoneNoArtIcon.icon,
           renderer: this.canvasRenderer
         });
@@ -2275,7 +2241,7 @@ export class MapComponent {
         continue;
       }
 
-      let canvasMarker =  new this.svgMarker(this.convertGameCoorsToMapCoors(trader.z, trader.x), {
+      let canvasMarker =  new this.svgMarker([trader.z, trader.x], {
         icon: trader.isMedic ? medicIcon : traderIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -2333,7 +2299,7 @@ export class MapComponent {
 
       if (location.isUnderground) {
         if (true) {
-            let canvasMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(stalker.z, stalker.x), {renderer: this.canvasRenderer});
+            let canvasMarker = new this.svgMarker([stalker.z, stalker.x], {renderer: this.canvasRenderer});
 
             canvasMarker.properties = {};
             canvasMarker.properties.coordinates = {lat: stalker.z, lng: stalker.x};
@@ -2374,7 +2340,7 @@ export class MapComponent {
         continue;
       }
 
-      let canvasMarker =  new this.svgMarker(this.convertGameCoorsToMapCoors(stalker.z, stalker.x), {
+      let canvasMarker =  new this.svgMarker([stalker.z, stalker.x], {
         icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
         renderer: this.canvasRenderer
       });
@@ -2453,7 +2419,7 @@ export class MapComponent {
     for (let mechanic of this.gamedata.mechanics) {
       let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == mechanic.locationId) as Location;
 
-      let canvasMarker =  new this.svgMarker(this.convertGameCoorsToMapCoors(mechanic.z, mechanic.x), {
+      let canvasMarker =  new this.svgMarker([mechanic.z, mechanic.x], {
         icon: mechanicIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -2665,7 +2631,7 @@ export class MapComponent {
         }
       }
 
-      let canvasMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(smart.z, smart.x), {
+      let canvasMarker = new this.svgMarker([smart.z, smart.x], {
         icon: icon,
         renderer: this.canvasRenderer
       });
@@ -2790,7 +2756,7 @@ export class MapComponent {
         continue;
       }
 
-      let canvasMarker =  new this.svgMarker(this.convertGameCoorsToMapCoors(lair.z, lair.x), {
+      let canvasMarker =  new this.svgMarker([lair.z, lair.x], {
         icon: monstersIcon.icon,
         renderer: this.canvasRenderer
       });
@@ -2853,7 +2819,7 @@ export class MapComponent {
         }
       }
 
-      let canvasMarker = new this.svgMarker(this.convertGameCoorsToMapCoors(levelChanger.z, levelChanger.x), {
+      let canvasMarker = new this.svgMarker([levelChanger.z, levelChanger.x], {
         icon: markerIcon,
         renderer: this.canvasRenderer
       });
