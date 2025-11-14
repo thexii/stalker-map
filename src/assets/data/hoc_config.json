@@ -21,9 +21,6 @@
       "isShowByDefault": true
     },
     {
-      "uniqueName": "circles",
-      "isShowByDefault": false
-    },
     {
       "uniqueName": "quest",
       "isShowByDefault": true
@@ -34,6 +31,14 @@
     },
     {
       "uniqueName": "stash",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "random-stash",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "rich-stuff",
       "isShowByDefault": true
     },
     {
@@ -86,6 +91,10 @@
     },
     {
       "uniqueName": "hidden-markers",
+      "isShowByDefault": false
+    },
+    {
+      "uniqueName": "grid",
       "isShowByDefault": false
     }
   ],

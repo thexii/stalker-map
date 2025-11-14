@@ -43,7 +43,7 @@ export class HocStuffComponent {
         item.count = x.count;
         item.preinstalled = [];
 
-        if (item.item.preinstalledAttachments != null) {
+        if (item.item && item.item.preinstalledAttachments != null) {
           if (item.item.compatibleAttachments != null) {
             for (let attName of item.item.preinstalledAttachments) {
               let attachment = item.item.compatibleAttachments.find(x => x.uniqueName == attName);

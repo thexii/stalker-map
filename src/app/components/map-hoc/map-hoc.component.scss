@@ -48,3 +48,10 @@
   background-color: transparent !important;
   display: inline-block;
 }
+
+.grid-label {
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 0 3px black;
+  pointer-events: none;
+}

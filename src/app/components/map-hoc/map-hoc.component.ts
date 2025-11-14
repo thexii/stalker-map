@@ -52,6 +52,8 @@ export class MapHocComponent {
     protected overlaysListTop: string = 'layers-control';
     private layerContoller: any;
 
+    private richClasses: string[] = ['artifact', 'attachment', 'armor', 'blueprint', 'questItem'];
+
     constructor(
         protected translate: TranslateService,
         protected route: ActivatedRoute,
@@ -188,6 +190,8 @@ export class MapHocComponent {
             zoomAnimation: !0,
             zoomControl: !1,
         });
+
+        this.map.scaleFactor = this.scaleFactor;
 
         this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
         this.map.attributionControl.addAttribution('<a href="https://github.com/joric">Tile maps by joric</a>');
@@ -772,6 +776,7 @@ export class MapHocComponent {
                         '/assets/images/s2/Markers/T_LocationOrigin_NotActive_Shadow.png',
                     iconAnchor: [0, 0],
                 }),
+                radius: 120
             },
             {
                 name: 'EMarkerType::ArchAnomaly',
@@ -799,7 +804,7 @@ export class MapHocComponent {
                 }),
                 isLair: true,
                 keepMapSize: true,
-                radius: 5
+                radius: 50
             },
             {
                 name: 'ESpawnType::Shelter',
@@ -810,7 +815,7 @@ export class MapHocComponent {
                 }),
                 isShalter: true,
                 keepMapSize: true,
-                radius: 5
+                radius: 50
             }
         ];
 
@@ -827,7 +832,7 @@ export class MapHocComponent {
 
             let marker = new this.svgMarker(
                 [data.z, data.x],
-                { renderer: this.canvasRenderer, icon: icon, radius: 40 }
+                { renderer: this.canvasRenderer, icon: icon, radius: icon.radius }
             );
 
             marker.name = data.title;
@@ -902,7 +907,7 @@ export class MapHocComponent {
         }
 
         if (circleMarkers.length > 0) {
-            this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
+            //this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
         }
 
         if (hubs.length > 0) {
@@ -917,7 +922,57 @@ export class MapHocComponent {
             this.addLayerToMap(L.layerGroup(playerShelters), 'shelters', true);
         }
 
+        this.addGrid();
+
         console.log(markerTypes);
+    }
+
+    private addGrid(): void {
+        let grid = [];
+
+        let gridGap: number = 356;
+        let width = Math.floor(this.gamedata.widthInMeters / gridGap) + 1;
+        let height = Math.floor(this.gamedata.heightInMeters / gridGap) + 1;
+
+        let xShift = 0;
+        let yShift = 146;
+
+        let heightStart = 3;
+
+        let startHeight = heightStart * gridGap;
+        let endHeight = height * gridGap;
+
+        for (let i = 1; i < width; i++) {
+            let x = i * gridGap + xShift;
+            
+            grid.push(L.polyline([[startHeight, x], [endHeight, x]], { color: 'white', weight: 1, opacity: 0.5 }));
+        }
+
+        for (let i = heightStart; i < height; i++) {
+            let y = yShift + i * gridGap;
+            
+            grid.push(L.polyline([[y, 0], [y, this.gamedata.widthInMeters]], { color: 'white', weight: 1, opacity: 0.5 }));
+        }
+
+        let letters = ['А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т'];
+
+        for (let x = 1; x < width; x++) {
+            let letter = letters[x-1];
+
+            for (let y = heightStart; y < height - 1; y++) {
+                const label = `${letter}${y-2}`;
+                
+                const icon = L.divIcon({
+                    className: 'grid-label',
+                    html: label,
+                    iconSize: [0, 0]
+                });
+
+                grid.push(L.marker([yShift + y * gridGap + 10, x * gridGap + xShift + 10], { icon }));
+            }
+        }
+        
+        this.addLayerToMap(L.layerGroup(grid), 'grid', true);
     }
 
     private addLairs(): void {
@@ -936,20 +991,20 @@ export class MapHocComponent {
             radius: 3
         };
 
+        let campRadius: number = 7.5;
+
         let monsterLair =
         {
             name: 'ESpawnType::LairSpawner',
             icon: new this.svgIcon({
                 iconUrl:
                     '/assets/images/svg/marks/monsters.svg',
-                iconAnchor: [0, 0],
+                iconAnchor: [0, 0]
             }),
             isMutantLair: true,
             keepMapSize: true,
-            radius: 2
+            radius: campRadius
         };
-
-        let campRadius: number = 2;
 
         let stalkerCamp =
         {
@@ -957,7 +1012,7 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 iconUrl:
                     '/assets/images/svg/factions/stalkers.svg',
-                iconAnchor: [0, 0],
+                iconAnchor: [0, 0]
             }),
             isLair: true,
             keepMapSize: true,
@@ -1147,13 +1202,14 @@ export class MapHocComponent {
         for (let data of this.gamedata.lairs) {
             if (data.lairs.length == 1) {
                 let isMutant = mutants.includes(data.lairs[0]);
-                let icon, title, desc;
+                let icon, title, desc, radius;
                 let dataToSearch: string[] = [];
 
                 if (isMutant) {
                     icon = monsterLair;
                     title = 'monster-lair';
                     desc = data.lairs[0];
+                    radius = campRadius;
 
                     dataToSearch.push(index.toString());
                     index++;
@@ -1166,11 +1222,12 @@ export class MapHocComponent {
                     icon = icons[0].icon;
                     title = icons[0].title;
                     desc = icons[0].faction;
+                    radius = icons[0].radius;
                 }
                 
                 let marker = new this.svgMarker(
                     [data.z, data.x],
-                    { renderer: this.canvasRenderer, icon: icon }
+                    { renderer: this.canvasRenderer, icon: icon, radius: radius }
                 );
 
                 marker.name = title;
@@ -1207,15 +1264,9 @@ export class MapHocComponent {
                 let icons = getIconAndFaction(data);
                 let shifts: number[][] = [];
 
-                L.marker([data.z, data.x]).addTo(this.map)
-                L.marker([data.z, data.x + radius]).addTo(this.map)
-                L.marker([data.z, data.x - radius]).addTo(this.map)
-
-                console.log(this.scaleFactor)
-
                 if (icons.length == 2) {
-                    shifts.push([-radius * .75, 0]);
-                    shifts.push([radius * .75, 0]);
+                    shifts.push([-radius, 0]);
+                    shifts.push([radius, 0]);
                 }
                 else if (icons.length == 3) {
                     shifts.push([-radius * 1.5, 0]);
@@ -1223,10 +1274,10 @@ export class MapHocComponent {
                     shifts.push([radius * 1.5, 0]);
                 }
                 else if (icons.length == 4) {
-                    shifts.push([-radius * .75, -radius * .75]);
-                    shifts.push([radius * .75, -radius * .75]);
-                    shifts.push([-radius * .75, radius * .75]);
-                    shifts.push([radius * .75, radius * .75]);
+                    shifts.push([-radius, -radius]);
+                    shifts.push([radius, -radius]);
+                    shifts.push([-radius, radius]);
+                    shifts.push([radius, radius]);
                 }
                 else if (icons.length == 5) {
                     shifts.push([-radius / 3, -radius / 6]);
@@ -1237,15 +1288,23 @@ export class MapHocComponent {
                 }
 
                 for (let i = 0; i < icons.length; i++) {
-                    this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], mutants.includes(data.lairs[i]), index, mutantLairs, lairs);
+                    let isMutant = mutants.includes(data.lairs[i]);
+                    let marker = this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], isMutant, index);
+                    
+                    if (isMutant) {
+                        mutantLairs.push(marker);
+                    }
+                    else
+                    {
+                        lairs.push(marker);
+                    }
+
                     index++;
                 }
 
                 counts[icons.length] += 1;
             }
         }
-
-        console.log(counts)
 
         if (lairs.length > 0) {
             this.addLayerToMap(L.layerGroup(lairs), 'stalker-respawn', true);
@@ -1255,7 +1314,7 @@ export class MapHocComponent {
             this.addLayerToMap(L.layerGroup(mutantLairs), 'monster-lair', true);
         }
 
-        function getIconAndFaction(data: Lair): {icon: any, faction: string, title: string}[] {
+        function getIconAndFaction(data: Lair): { icon: any, faction: string, title: string, radius: number }[] {
             let title = 'stalker-respawn';
 
             let result = [];
@@ -1326,14 +1385,14 @@ export class MapHocComponent {
                     continue;
                 }
 
-                result.push({icon: icon, faction: desc, title: title})
+                result.push({icon: icon, faction: desc, title: title, radius: icon.radius})
             }
 
             return result;
         }
     }
 
-    private createMarker(x: number, y: number, markerData: any, isMutant: boolean, index: number, mutantLairs: any[], lairs: any[]): void {
+    private createMarker(x: number, y: number, markerData: any, isMutant: boolean, index: number): any {
         let dataToSearch: string[] = [];
 
         if (isMutant) {
@@ -1365,19 +1424,13 @@ export class MapHocComponent {
             marker.feature.properties.search = '';
         }
 
-        if (isMutant) {
-            mutantLairs.push(marker);
-        }
-        else
-        {
-            lairs.push(marker);
-        }
-
         marker.bindTooltip((p: any) => this.createTooltip(p), {
             sticky: true,
             className: 's2-tooltip',
             offset: new Point(0, 50),
         });
+
+        return marker;
     }
 
     private addAnomalyFields(): void {
@@ -1398,7 +1451,7 @@ export class MapHocComponent {
 
             let marker = new this.svgMarker(
                 [data.z, data.x],
-                { renderer: this.canvasRenderer, icon: icon, radius: 20 }
+                { renderer: this.canvasRenderer, icon: icon, radius: 40 }
             );
             marker.name = this.translate.instant('psychic');
 
@@ -1413,26 +1466,30 @@ export class MapHocComponent {
     private addStuffs(): void {
         let stuffIcon = {
             icon: new this.svgIcon({
-                iconUrl: '/assets/images/svg/marks/stuff.svg',
+                iconUrl: '/assets/images/svg/marks/colored/items-low.svg',
                 iconAnchor: [0, 0],
+                color: "#ffffff"
             }),
-            keepMapSize: true,
-            radius: 1.5,
+            keepMapSize: true
+        };
+        let richStuffIcon = {
+            icon: new this.svgIcon({
+                iconUrl: '/assets/images/svg/marks/colored/items.svg',
+                iconAnchor: [0, 0],
+                color: "#ffffff"
+            }),
+            keepMapSize: true
         };
 
         let markers = [];
+        let richMarkers = [];
+        let radius = 4;
 
         for (let data of this.gamedata.stuffs) {
-            let marker = new this.svgMarker(
-                [data.z, data.x],
-                { renderer: this.canvasRenderer, icon: stuffIcon }
-            ).addTo(this.map);
-            marker.name = 'stuff_at_location';
-            marker.data = data;
-            marker.feature = {};
-            marker.feature.properties = {};
+            let isRich = false;
 
-            let localesToFind: string[] = [marker.name, markers.length.toString()];
+            let localesToFind: string[] = [markers.length.toString()];
+            let cost: number = 0;
 
             if (data.items && data.items.length > 0) {
                 let itemsToFind: any[] = [];
@@ -1443,11 +1500,30 @@ export class MapHocComponent {
                     if (item) {
                         itemsToFind.push(item?.localeName);
                         itemsToFind.push(`synonyms.${item?.uniqueName}`);
+                        cost += (item.price ?? 0) * (element.count ?? 0);
+
+                        if (this.richClasses.includes(item.category)) {
+                            isRich = true;
+                        }
                     }
                 });
 
                 localesToFind.push(...itemsToFind);
+
+                if (!isRich && cost > 10000) {
+                    isRich = true;
+                }
             }
+
+            let marker = new this.svgMarker(
+                [data.z, data.x],
+                { renderer: this.canvasRenderer, icon: isRich ? richStuffIcon : stuffIcon, radius: radius }
+            )
+
+            marker.name = isRich ? 'rich_stuff_at_location' : 'stuff_at_location';
+            marker.data = data;
+            marker.feature = {};
+            marker.feature.properties = {};
 
             if (localesToFind.length > 0) {
                 this.createTranslatableProperty(
@@ -1478,23 +1554,40 @@ export class MapHocComponent {
                 { minWidth: 912 }
             );
 
-            markers.push(marker);
+            if (isRich) {
+                richMarkers.push(marker);
+            }
+            else {
+                markers.push(marker);
+            }
         }
 
         if (markers.length > 0) {
             this.addLayerToMap(L.layerGroup(markers), 'stuff', true);
+        }
+
+        if (richMarkers.length > 0) {
+            this.addLayerToMap(L.layerGroup(richMarkers), 'rich-stuff', true);
         }
     }
 
     public addStashes(): void {
         let stuffIcon = {
             icon: new this.svgIcon({
+                iconUrl: '/assets/images/svg/marks/colored/items-low.svg',
+                iconAnchor: [0, 0],
+                color: "#00df07"
+            }),
+            keepMapSize: true,
+        };
+
+        let notRandomIcon = {
+            icon: new this.svgIcon({
                 iconUrl: '/assets/images/svg/marks/colored/items.svg',
                 iconAnchor: [0, 0],
                 color: "#00df07"
             }),
             keepMapSize: true,
-            radius: 1.5
         };
 
         let richStuffIcon = {
@@ -1504,7 +1597,6 @@ export class MapHocComponent {
                 color: "#dd2a00"
             }),
             keepMapSize: true,
-            radius: 1.5
         };
 
         let deluxtuffIcon = {
@@ -1514,7 +1606,6 @@ export class MapHocComponent {
                 color: "#3E9EC6"
             }),
             keepMapSize: true,
-            radius: 1.5
         };
 
         let preOrderStuffIcon = {
@@ -1524,7 +1615,6 @@ export class MapHocComponent {
                 color: "#F8F22E"
             }),
             keepMapSize: true,
-            radius: 1.5
         };
 
         let UltimateStuffIcon = {
@@ -1534,16 +1624,16 @@ export class MapHocComponent {
                 color: "#ED6819"
             }),
             keepMapSize: true,
-            radius: 1.5
         };
 
         let markers = [];
         let richMarkers = [];
-
-        let isBlueprintRegex: RegExp = /^Blueprint_/;
+        let randomMarkers = [];
+        let radius: number = 4;
 
         for (let data of this.gamedata.stashes) {
             let isRich = false;
+            let isRandom = true;
 
             let localesToFind: string[] = [];
 
@@ -1566,8 +1656,9 @@ export class MapHocComponent {
 
                                                 if (item) {
                                                     localesToFind.push(item.localeName);
+                                                    isRandom = false;
 
-                                                    if (isBlueprintRegex.test(item.uniqueName)) {
+                                                    if (this.richClasses.includes(item.category)) {
                                                         isRich = true;
                                                     }
                                                 }
@@ -1593,7 +1684,7 @@ export class MapHocComponent {
 
                     if (item) {
                         localesToFind.push(item.localeName);
-                        isRich = true;
+                        isRandom = false;
                     }
                 }
 
@@ -1619,7 +1710,12 @@ export class MapHocComponent {
                 }
             }
             else {
-                icon = stuffIcon;
+                if (isRandom) {
+                    icon = stuffIcon;
+                }
+                else {
+                    icon = notRandomIcon
+                }
             }
 
             let marker = new this.svgMarker(
@@ -1627,6 +1723,7 @@ export class MapHocComponent {
                 {
                     renderer: this.canvasRenderer,
                     icon: icon,
+                    radius: radius
                 }
             );
             marker.name = 'stash';
@@ -1669,13 +1766,20 @@ export class MapHocComponent {
                 offset: new Point(0, 50),
             });
 
-            marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912 });
+            if (!isRandom) {
+                marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912 });
+            }
 
             if (isRich) {
                 richMarkers.push(marker)
             }
             else {
-                markers.push(marker);
+                if (isRandom) {
+                    randomMarkers.push(marker)
+                }
+                else {
+                    markers.push(marker);
+                }
             }
         }
 
@@ -1685,6 +1789,10 @@ export class MapHocComponent {
 
         if (richMarkers.length > 0) {
             this.addLayerToMap(L.layerGroup(richMarkers), 'rich-stash', true);
+        }
+
+        if (randomMarkers.length > 0) {
+            this.addLayerToMap(L.layerGroup(randomMarkers), 'random-stash', true);
         }
     }
 
@@ -1704,7 +1812,8 @@ export class MapHocComponent {
             let marker = new this.svgMarker(
                 [data.z, data.x],
                 { renderer: this.canvasRenderer, icon: stuffIcon }
-            ).addTo(this.map);
+            );
+
             marker.name = 'anomaly-zone';
             marker.data = data;
             marker.feature = {};
@@ -1856,37 +1965,23 @@ export class MapHocComponent {
                         width = 0,
                         height = 0;
 
-                    if (layer.options.icon.keepMapSize) {
+                    /*if (layer.options.icon.keepMapSize) {
                         if (layer.options.zoom != layer._map._zoom) {
                             layer.options.zoom = layer._map._zoom;
                             layer._radius =
                                 layer.options.icon.radius * Math.pow(2, layer.options.zoom);
                         }
-                    }
+                    }*/
 
-                    width = height = layer._radius * 2;
                     x = layer._point.x - layer._radius;
                     y = layer._point.y - layer._radius;
-
-                    /*if (layer.options.dontKeepMapSize) {*/
-                    /*}
-                    else {
-                      if (layer.options.zoom != this._zoom) {
-                        layer._radius = (markWidth / 2) * layer.options.icon.options.iconSizeInit[0];
-                        layer.options.zoom = this._zoom;
-                      }
-          
-                      x = layer._point.x - layer.options.icon.shiftX * markWidth;
-                      y = layer._point.y - layer.options.icon.shiftY * markWidth;
-                      width = layer.options.icon.options.iconSizeInit[0] * markWidth;
-                      height = layer.options.icon.options.iconSizeInit[1] * markWidth;
-                    }*/
+                    
                     this._ctx.drawImage(
                         layer.options.icon.icon._image,
                         x,
                         y,
-                        width,
-                        height
+                        layer._radius2,
+                        layer._radius2
                     );
 
                 } catch (ex) {
@@ -1930,18 +2025,110 @@ export class MapHocComponent {
                     this._image.src = options.iconUrl;
                 }
             },
+
+            // Метод для прив'язки до маркера та карти
+            bindToLayer(layer: any) {
+                if (layer.options.icon.keepMapSize) {
+                    this._setupZoomListener(layer);
+                    this._recalculateRadius(layer._map._zoom, layer.options.radius);
+                }
+                else {
+                    this._calculatedRadius = layer.options.radius
+                }
+
+                layer._radius = this._calculatedRadius * layer._map.scaleFactor;
+                layer._radius2 = layer._radius * 2;
+            },
+
+            // Встановлення слухача зуму
+            _setupZoomListener(layer: any) {
+                if (this._zoomHandler) {
+                    this.markers.push(layer);
+                    return; // Вже підписані
+                }
+
+                this.markers = [layer];
+
+                this._zoomHandler = () => {
+                    if (this.markers[0]._map) {
+                        this._recalculateRadius(this.markers[0]._map._zoom, this.markers[0].options.radius);
+
+                        for (let i = 0; i < this.markers.length; i++) {
+                            this.markers[i]._radius = this._calculatedRadius * this.markers[0]._map.scaleFactor;
+                            this.markers[i]._radius2 = this.markers[i]._radius * 2;
+                            //this._layer._updatePath();
+                        }
+                    }
+                };
+
+                this.markers[0]._map.on('zoomend', this._zoomHandler);
+            },
+
+            // Перерахунок радіусу
+            _recalculateRadius(zoom: number, radius: number) {
+                if (this._currentZoom === zoom) {
+                    return; // Нічого не змінилось
+                }
+
+                this._currentZoom = zoom;
+                this._calculatedRadius = radius * Math.pow(2, zoom);
+            },
+
+            // Отримання поточного радіусу (без перерахунку)
+            getRadius(): number {
+                return this._calculatedRadius ?? this.options.radius;
+            },
+
+            // Розрахунок параметрів для малювання
+            calculateDrawParameters(point: any, radius: number) {
+                const size = radius * 2;
+                return {
+                    x: point.x - radius,
+                    y: point.y - radius,
+                    width: size,
+                    height: size
+                };
+            },
+
+            // Очищення при видаленні
+            unbindFromLayer() {
+                if (this._zoomHandler && this._layer && this._layer._map) {
+                    this._layer._map.off('zoomend', this._zoomHandler);
+                    this._zoomHandler = null;
+                }
+                this._layer = null;
+            }
         });
 
         return L.CircleMarker.extend({
             _updatePath: function () {
                 this._renderer._updateSvgMarker(this);
             },
+
             setOpacity: function (opacity: number) {
                 this.setStyle({
                     opacity: opacity,
                     fillOpacity: opacity,
                 });
             },
+
+            onAdd: function (map: any) {
+                L.CircleMarker.prototype.onAdd.call(this, map);
+                
+                if (this.options.icon && this.options.icon.icon) {
+                    this.options.icon.icon.bindToLayer(this);
+                }
+                
+                return this;
+            },
+
+            onRemove: function (map: any) {
+                if (this.options.icon && this.options.icon.icon) {
+                    this.options.icon.icon.unbindFromLayer();
+                }
+                
+                return L.CircleMarker.prototype.onRemove.call(this, map);
+            }
         });
     }
 
@@ -2032,7 +2219,7 @@ export class MapHocComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    private onResize(event: any) {
+    private onResize(event: any): void {
         let vh = event.target.outerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 

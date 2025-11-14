@@ -249,7 +249,7 @@ export class MapService {
             dashArray: '1,6',
         },
         lengthUnit: {
-            factor: pixelsInGameUnit == 1 ? lengthFactor : 1 / pixelsInGameUnit, //  from km to nm
+            factor: 1, //  from km to nm
             display: this.translate.instant('meterShort'),
             decimal: 2,
             label: this.translate.instant('length'),
