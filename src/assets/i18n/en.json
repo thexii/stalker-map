@@ -286,5 +286,17 @@
   "recoil-up": "Upgraded",
 
   "recoil-zoom-base": "Default zoom",
-  "recoil-zoom-up": "Upgraded zoom"
+  "recoil-zoom-up": "Upgraded zoom",
+
+    "monster-lair": "Monsters respawn",
+    "stalker-respawn": "Stalkers respawn",
+    "zombie-lair": "Zombie respawn",
+    "in-game-map-label": "Game map",
+    "raw-map-label": "Devs map",
+    "rich-stash": "Valuable Stashes",
+    "random-stash": "Random Stashes",
+    "circles": "Camp Circles",
+    "Rat": "Rats",
+    "rich-stuff": "Valuable Loot",
+    "grid": "Coordinate Grid"
 }

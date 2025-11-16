@@ -52,7 +52,25 @@ export class MapHocComponent {
     protected overlaysListTop: string = 'layers-control';
     private layerContoller: any;
 
-    private richClasses: string[] = ['artifact', 'attachment', 'armor', 'blueprint', 'questItem'];
+    private richClasses: string[] = [
+        'EItemType::Artifact',
+        'EAttachType::Scope',
+        'EAttachType::Silencer',
+        'EAttachType::Magazine',
+        'EAttachType::Grip',
+        'EAttachType::GrenadeLauncher',
+        'EAttachType::Shotgun',
+        'EItemType::Armor',
+        //"EConsumableType::Food",
+        //"EConsumableType::Medicine",
+        //"EConsumableType::Guitar",
+        //"EItemType::Detector",
+        //"EGrenadeType::RGD5",
+        //"EGrenadeType::F1",
+        //"EItemType::Other",
+        "QuestItem",
+        "Blueprint",
+        "KeyItem"];
 
     constructor(
         protected translate: TranslateService,
@@ -2205,6 +2223,16 @@ export class MapHocComponent {
                 response.json().then((items: Item[]) => {
                     if (items) {
                         this.items = items;
+
+                        console.log(items)
+
+                        const uniqueTypes: string[] = Array.from(
+                            new Set(
+                                items.map(item => item.category)
+                            )
+                        );
+
+                        console.log(uniqueTypes)
                     }
                 });
             }
