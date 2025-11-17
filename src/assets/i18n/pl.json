@@ -1,73 +1,56 @@
-
 {
     "mainTitle": "Interaktywna mapa dla serii gier S.T.A.L.K.E.R.",
     "shoc": "Сień Czarnobyla",
     "cs": "Czyste Niebo",
     "cop": "Zew Prypeci",
     "hoc": "Serce Czarnobyla",
-
     "shocShort": "СС",
     "csShort": "CzN",
     "copShort": "ZP",
     "hocShort": "SCz",
-
     "copMapPageTitle": "Lokacje Zewu Prypeci",
     "csMapPageTitle": "Lokacje Czystego Nieba",
     "shocMapPageTitle": "Lokacje Cieni Czarnobyla",
     "hocMapPageTitle": "Lokacje Serce Czarnobyla",
-
     "sub-location": "Lokacje",
-
     "stash": "Schowki",
     "st_stash": "Schowek",
     "st_monolith_stuff_title": "Schowek Monolitu",
-
     "quest": "Kwestowy łup",
     "stuff": "Łup",
     "st_name_habar": "Łup",
     "stuff_at_location": "Łup na lokacji",
     "inventory_box": "Łup w skrzyni",
-
     "destroyable-box": "Łup w skrzyniach",
     "loot-box-cluster": "Łup w skrzyniach",
-
     "anomaly-zone": "Źródło artefaktów",
     "st_name_anomal_zone": "Skupisko anomalii",
     "anomalySpawnsArtefacts": "Anomalna strefa formuje artefakty",
-
     "acidic": "Obszar kwasowy",
     "psychic": "Promieniowanie psioniczne",
     "radioactive": "Radioaktywność",
     "st_name_radioactive_contamination": "Skażenie promieniotwórcze",
-
     "thermal": "Obszar termiczny",
     "mines": "Miny",
     "st_name_mines": "Miny",
-
     "teleport": "Teleporty",
     "st_name_teleport": "Teleport",
-
     "st_name_military_warehouse_title": "Magazyn Wojskowy",
     "st_name_duty_warehouse_title": "Magazyn Powinności",
     "st_name_duty_warehouse_desc": "Magazyn Powinności na Jupiterze",
     "st_name_joker_stuff_title": "Szczątki Kawalarza",
-
     "anomaly-zone-no-art": "Śmiertelne anomalie",
     "mutants": "Niebezpieczne mutanci",
     "stalkers": "Anarchiści i bandyci",
-
     "traders": "Handlarze",
     "trader": "Handlarz",
-
     "hideAll": "Ukryj wszystko",
     "markLink": "Skopiuj link",
     "search": "Wyszukaj",
     "default_description": "Brak szczegółowych informacji.",
-
     "anomaliesCount": "Ilość anomalii: {{count}}",
     "anomalyArtMaxCount": "Maksymalnie artefaktów: {{count}}",
     "anomalyZoneArtMaxCount": "Maksymalnie artefaktów w strefie: {{count}}",
-
     "st_name_wrenched": "Skrętak",
     "st_name_fault": "Rozpadlina",
     "st_name_burnt_farmstead": "Spalone gospodarstwo",
@@ -77,85 +60,70 @@
     "st_pri_wa_name": "Błądzące artefakty w Prypeci",
     "st_jup_wa_name": "Błądzące artefakty na Jupiterze",
     "st_zat_wa_name": "Błądzące artefakty на Zatonie",
-
     "zone_mosquito_bald": "Trampolina",
     "zone_mosquito_bald_weak": "Trampolina (słaby)",
     "zone_mosquito_bald_weak_noart": "Trampolina (słaby)",
     "zone_mosquito_bald_strong": "Trampolina (silny)",
     "zone_mosquito_bald_average": "Trampolina (średni)",
-		"zone_mosquito_bald_strong_noart": "Trampolina (silny)",
-
+    "zone_mosquito_bald_strong_noart": "Trampolina (silny)",
     "zone_witches_galantine": "Elektro",
     "zone_witches_galantine_weak": "Elektro (słaby)",
     "zone_witches_galantine_average": "Elektro (średni)",
     "zone_witches_galantine_strong": "Elektro (silny)",
-
     "zone_gravi_zone": "Wir",
-		"zone_gravi_zone_weak": "Wir (słaby)",
-		"zone_gravi_zone_weak_noart": "Wir (słaby)",
-		"zone_gravi_zone_average": "Wir (średni)",
-		"zone_gravi_zone_strong": "Wir (silny)",
-		"zone_gravi_zone_killing": "Wir (śmiertelny)",
-
+    "zone_gravi_zone_weak": "Wir (słaby)",
+    "zone_gravi_zone_weak_noart": "Wir (słaby)",
+    "zone_gravi_zone_average": "Wir (średni)",
+    "zone_gravi_zone_strong": "Wir (silny)",
+    "zone_gravi_zone_killing": "Wir (śmiertelny)",
     "zone_mincer": "Karuzela",
-		"zone_mincer_weak": "Karuzela (słaby)",
-		"zone_mincer_weak_noart": "Karuzela (słaby)",
-		"zone_mincer_average": "Karuzela (średni)",
-		"zone_mincer_strong": "Karuzela (silny)",
-
-		"zone_burning_fuzz": "Spalony Puch",
-		"zone_burning_fuzz1": "Spalony Puch",
-		"zone_burning_fuzz_weak": "Spalony Puch (słaby)",
-		"zone_burning_fuzz_average": "Spalony Puch (średni)",
-		"zone_burning_fuzz_strong": "Spalony Puch (silny)",
-		"zone_burning_fuzz_bottom_weak": "Spalony Puch",
-		"zone_burning_fuzz_bottom_average": "Spalony Puch",
-		"zone_burning_fuzz_bottom_strong": "Spalony Puch",
-
-		"zone_buzz": "Galareta",
-		"zone_buzz_weak": "Galareta (słaby)",
-		"zone_buzz_average": "Galareta (średni)",
-		"zone_buzz_strong": "Galareta (silny)",
-		"zone_mine_chemical_average": "Galareta (średni)",
-		"zone_mine_chemical_strong": "Galareta (silny)",
-
+    "zone_mincer_weak": "Karuzela (słaby)",
+    "zone_mincer_weak_noart": "Karuzela (słaby)",
+    "zone_mincer_average": "Karuzela (średni)",
+    "zone_mincer_strong": "Karuzela (silny)",
+    "zone_burning_fuzz": "Spalony Puch",
+    "zone_burning_fuzz1": "Spalony Puch",
+    "zone_burning_fuzz_weak": "Spalony Puch (słaby)",
+    "zone_burning_fuzz_average": "Spalony Puch (średni)",
+    "zone_burning_fuzz_strong": "Spalony Puch (silny)",
+    "zone_burning_fuzz_bottom_weak": "Spalony Puch",
+    "zone_burning_fuzz_bottom_average": "Spalony Puch",
+    "zone_burning_fuzz_bottom_strong": "Spalony Puch",
+    "zone_buzz": "Galareta",
+    "zone_buzz_weak": "Galareta (słaby)",
+    "zone_buzz_average": "Galareta (średni)",
+    "zone_buzz_strong": "Galareta (silny)",
+    "zone_mine_chemical_average": "Galareta (średni)",
+    "zone_mine_chemical_strong": "Galareta (silny)",
     "zone_zharka_static": "Spalacz",
-		"zone_zharka_static_weak": "Spalacz (słaby)",
-		"zone_zharka_static_average": "Spalacz (średni)",
-		"zone_zharka_static_strong": "Spalacz (silny)",
-
+    "zone_zharka_static_weak": "Spalacz (słaby)",
+    "zone_zharka_static_average": "Spalacz (średni)",
+    "zone_zharka_static_strong": "Spalacz (silny)",
     "zone_zhar": "Żar",
-		"zone_emi": "IEM",
-
-		"zone_mine_acidic": "Gaz",
-		"zone_mine_acidic_weak": "Gaz (słaby)",
-		"zone_mine_acidic_average": "Gaz (średni)",
-		"zone_mine_acidic_strong": "Gaz (silny)",
-		"zone_mine_acidic_weak_noshadow": "Gaz (słaby)",
-
-		"zone_mine_electric": "Elektro",
-		"zone_mine_electric_weak": "Elektro (słaby)",
-		"zone_mine_electric_average": "Elektro (średni)",
-		"zone_mine_electric_strong": "Elektro (silny)",
-
-		"zone_mine_gravitational_strong": "Karuzela",
-		"zone_mine_gravitational_average": "Karuzela (średni)",
-		"zone_mine_gravitational_weak": "Karuzela (słaby)",
-
-		"zone_mine_thermal": "Spalacz",
-		"zone_mine_thermal_weak": "Spalacz (słaby)",
-		"zone_mine_thermal_average": "Spalacz (średni)",
-		"zone_mine_thermal_strong": "Spalacz (silny)",
-		"zone_mine_steam_weak": "Spalacz (słaby)",
-		"zone_mine_steam_average": "Spalacz (średni)",
-
+    "zone_emi": "IEM",
+    "zone_mine_acidic": "Gaz",
+    "zone_mine_acidic_weak": "Gaz (słaby)",
+    "zone_mine_acidic_average": "Gaz (średni)",
+    "zone_mine_acidic_strong": "Gaz (silny)",
+    "zone_mine_acidic_weak_noshadow": "Gaz (słaby)",
+    "zone_mine_electric": "Elektro",
+    "zone_mine_electric_weak": "Elektro (słaby)",
+    "zone_mine_electric_average": "Elektro (średni)",
+    "zone_mine_electric_strong": "Elektro (silny)",
+    "zone_mine_gravitational_strong": "Karuzela",
+    "zone_mine_gravitational_average": "Karuzela (średni)",
+    "zone_mine_gravitational_weak": "Karuzela (słaby)",
+    "zone_mine_thermal": "Spalacz",
+    "zone_mine_thermal_weak": "Spalacz (słaby)",
+    "zone_mine_thermal_average": "Spalacz (średni)",
+    "zone_mine_thermal_strong": "Spalacz (silny)",
+    "zone_mine_steam_weak": "Spalacz (słaby)",
+    "zone_mine_steam_average": "Spalacz (średni)",
     "zone_mine_static_strong": "Elektro",
     "zone_no_gravity": "Winda",
-
     "meterShort": "m",
     "azimuth": "Azymut: ",
     "length": "Odległość: ",
-
     "best-buy-title": "Cena u handlarzy: ",
     "best-sell-title": "Na sprzedaż u handlarzy: ",
     "trade-by-default": "Pierwotnie",
@@ -167,30 +135,22 @@
     "trade-count-chance": "Ilość oraz szansa pojawienia się",
     "trader-must-buy-item-firstly": "Handlarz będzie sprzedawał ten przedmiot dopiero po zakupie od gracza.",
     "trader-do-not-buy": "Handlarz nie kupuje nic od gracza.",
-
     "all-traders": "Wszystkie Handlarze",
     "trader-sell": "Cena sprzedaży",
     "trader-buy": "Cena zakupu",
     "trader-supply": "Asortyment",
     "discounts": "Zniżki",
-
     "sell_default": "Podstawowa",
     "buy_default": "Podstawowa",
     "supply_default": "Podstawowy",
     "discount_default": "Bez zniżki",
-
     "esc_kill_bandits_quest_done": "Po rozmowie z Wilkiem na temat szturmu stacji pojazdów",
-
     "bar_darklab_document_done": "Po zabraniu dokumentów w X-18",
     "yan_labx16_switcher_primary_off": "Po wyłączeniu instalacji w X-16",
-
     "yan_kill_brain_done": "Po wyłączeniu instalacji w X-16",
-
     "bar_svoboda_rg6_done": "Po wykonaniu \"Odzyskać Buldog 6 od Wolności\"",
-
     "mil_lukash_dolg_task_complete": "Czacha oraz grupa zlikwidowane",
     "mil_leader_quest2_complete": "Pawlik oraz informator zlikwidowane",
-
     "big_box_generic": "Drewniana skrzynia",
     "small_box_generic": "Mała zwykła skrzynka",
     "big_box_dungeons": "Skrzynia z cennym łupem",
@@ -199,21 +159,17 @@
     "small_box_science": "Mała skrzynka naukowa",
     "small_box_army": "Mała wojskowa skrzynka",
     "big_box_arsenal": "Duża skrzynia arsenałowa",
-
     "actor_in_stalker": "Gracz należy do frakcji Stalkerzy",
     "actor_in_dolg": "Gracz należy do frakcji Powinność",
     "actor_in_freedom": "Gracz należy do frakcji Wolność",
     "is_faction_friend_to_actor(bandit)": "Towarzysz Bandytów",
     "is_faction_friend_to_actor(csky)": "Towarzysz Czystego Nieba",
     "is_faction_friend_to_actor(stalker)": "Towarzysz Stalkerów",
-
     "esc_bring_habar_complete": "Po odzyskaniu skrzynki",
     "gar_story_got_info_from_digger": "Informacje od kopaczy otrzymane",
-
     "zat_b29_exclusive_conditions": "Otrzymano Swaróg",
     "jup_a9_tech_way_info": "Odnaleziono drogę do Prypeci",
     "zat_b22_medic_respawn": "Medyka zdemaskowano",
-
     "counter_greater(jup_a6_actor_help_freedom:3)": "Trzy razy pomogłeś Wolności",
     "counter_equal(jup_a6_actor_help_freedom:2)": "Dwa razy pomogłeś Wolności",
     "counter_greater(jup_a6_actor_help_duty:3)": "Trzy razy pomogłeś Powinności",
@@ -222,16 +178,13 @@
     "counter_greater(jup_a6_actor_help_duty:1)": "Pomogłeś Powinności",
     "counter_greater(jup_a6_actor_help_stalkers:1)": "Pomogłeś Stalkerom.",
     "counter_greater(jup_a6_actor_help_stalkers:2)": "Dwa razy pomogłeś stalkerom.",
-
     "is_faction_resource_greater": "Wystarczająco zasobów dla frakcji",
     "smart_terrain_name": "Punkty zainteresowania Stalkerów",
     "ways_between_smart_terrains_name": "Trasy Stalkerów",
     "anomaly_zone_artefact_way_name": "Trasy artefaktów w anomalii",
     "level-changers": "Przejścia pomiędzy lokalizacjami",
     "mechanics": "Techniki",
-
     "item-trader-chance": "Szansa pojawienia się u sprzedawcy",
-
     "jup_b200_tech_materials_brought_counter_1": "Znaleziono sprzęt radiowy: 1",
     "jup_b200_tech_materials_brought_counter_2": "Znaleziono sprzęt radiowy: 2",
     "jup_b200_tech_materials_brought_counter_3": "Znaleziono sprzęt radiowy: 3",
@@ -241,32 +194,26 @@
     "jup_b200_tech_materials_brought_counter_7": "Znaleziono sprzęt radiowy: 7",
     "jup_b200_tech_materials_brought_counter_8": "Znaleziono sprzęt radiowy: 8",
     "jup_b200_tech_materials_brought_counter_9": "Znaleziono sprzęt radiowy: 9",
-
     "counter_equal(jup_a6_actor_help_freedom:4)": "Przewaga Wolności na Janowie",
     "counter_equal(jup_a6_actor_help_duty:4)": "Przewaga Powinności na Janowie",
     "counter_equal(jup_a6_actor_help_stalkers:3)": "Trzykrotnie pomogłeś stalkerom na Janowie",
-
     "zat_b3_tech_discount_1": "Kardan wypił wódkę",
     "zat_b3_tech_discount_2": "Kardan wypił dwa razy",
     "zat_a23_actor_has_access_card_to_testing_workshop": "Kardan przestał pić",
-
     "bad_mechanic_price": "Marża za naprawę",
     "good_mechanic_price": "Zniżka na naprawę",
     "bad_trader_buy_price": "Obniżona cena skupu",
     "good_trader_buy_price": "Zwiększona cena zakupu",
     "bad_trader_sell_price": "Marża na towary",
     "good_trader_sell_price": "Zniżka na towar",
-
     "gar_stalker_24h_trader": "Całodobowy handlarz z Pchlego Targu",
     "gar_stalker_evening_trader": "Wieczorny handlarz z Pchlego Targu",
     "gar_stalker_night_trader": "Nocny handlarz z Pchlego Targu",
     "gar_quest_liberate_conc_camp_done": "Uwolnić stalkerów z obozu koncentracyjnego bandytów",
     "red_forest_underground_trader": "Handlarz w koszarach w kopalniach",
-
     "hide-marker": "Ukryj",
     "unhide-marker": "Pokaż",
     "hidden-markers": "Ukryj oznaczenia",
-
     "recoil": "Wzór odrzutu",
     "powerLoss": "Ergonomia",
     "explosionProtection": "Ochrona przed wybuchem",
@@ -281,19 +228,45 @@
     "misfire-probability": "Prawdopodobieństwo zacięcia",
     "misfire-condition-k": "Zacięcie od stanu",
     "balistic": "Balistyka pocisku",
-
     "recoil-base": "Podstawowy",
     "recoil-up": "Zmodyfikowany",
-
     "recoil-zoom-base": "Bazowy odrzut na celowniku",
     "recoil-zoom-up": "Zmodyfikowany odrzut na celowniku",
-
     "synonyms": {
-      "wpn_ak74": ["Kałach", "Ak", "АK-74"],
-      "wpn_ak74u": ["Kałach", "Аk", "AKSU"],
-      "wpn_abakan": ["Abakan", "AC-96/2", "Abakan"],
-
-      "trader": ["Kramarz", "Handlarz", "Geszefciarz"],
-      "mechanics": ["Mechanik", "Technik"]
-    }
+        "wpn_ak74": [
+            "Kałach",
+            "Ak",
+            "АK-74"
+        ],
+        "wpn_ak74u": [
+            "Kałach",
+            "Аk",
+            "AKSU"
+        ],
+        "wpn_abakan": [
+            "Abakan",
+            "AC-96/2",
+            "Abakan"
+        ],
+        "trader": [
+            "Kramarz",
+            "Handlarz",
+            "Geszefciarz"
+        ],
+        "mechanics": [
+            "Mechanik",
+            "Technik"
+        ]
+    },
+    "monster-lair": "Odradzanie mutantów",
+    "stalker-respawn": "Odradzanie stalkerów",
+    "zombie-lair": "Odradzanie zombie",
+    "in-game-map-label": "Mapa w grze",
+    "raw-map-label": "Mapa deweloperska",
+    "rich-stash": "Cenne schowki",
+    "random-stash": "Losowe schowki",
+    "circles": "Koła obozów",
+    "Rat": "Szczury",
+    "rich-stuff": "Cenny łup",
+    "grid": "Siatka"
 }

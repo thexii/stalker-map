@@ -4,69 +4,53 @@
     "cs": "Чисте небо",
     "cop": "Поклик Прип'яті",
     "hoc": "Серце Чорнобиля",
-
     "shocShort": "ТЧ",
     "csShort": "ЧН",
     "copShort": "ПП",
     "hocShort": "CЧ",
-
     "copMapPageTitle": "Карта Поклику Прип'яті",
     "csMapPageTitle": "Карта Чистого Неба",
     "shocMapPageTitle": "Карта Тіней Чорнобиля",
     "hocMapPageTitle": "Карта Серця Чорнобиля",
-
     "sub-location": "Локації",
-
     "stash": "Схованки",
     "st_stash": "Схованка",
     "st_monolith_stuff_title": "Схованка «Моноліту»",
-
     "quest": "Квестовий хабар",
     "stuff": "Хабар",
     "st_name_habar": "Хабар",
     "stuff_at_location": "Розкиданий по локації хабар",
     "inventory_box": "Хабар в ящику",
-
     "destroyable-box": "Хабар в ящиках",
     "loot-box-cluster": "Хабар в ящиках",
-
     "anomaly-zone": "Родовища артефактів",
     "st_name_anomal_zone": "Зосередження аномалій",
     "anomalySpawnsArtefacts": "Аномальна зона породжує артефакти",
-
     "acidic": "Кислотна зона",
     "psychic": "Псі-випромінювання",
     "radioactive": "Радіоактивність",
     "st_name_radioactive_contamination": "Радіоактивне забруднення",
-
     "thermal": "Термальна зона",
     "mines": "Міни",
     "st_name_mines": "Міни",
-
     "teleport": "Телепорти",
     "st_name_teleport": "Телепорт",
-
     "st_name_military_warehouse_title": "Армійський склад",
     "st_name_duty_warehouse_title": "Склад «Долга»",
     "st_name_duty_warehouse_desc": "Склад «Долга» в околицях Юпітера.",
     "st_name_joker_stuff_title": "Рештки Джокера",
-
     "anomaly-zone-no-art": "Смертельні аномалії",
     "monsters": "Небезпечні мутанти",
     "stalkers": "Анархісти і бандити",
-
     "traders": "Торговці",
     "trader": "Торговець",
-
     "hideAll": "Сховати все",
     "markLink": "Посилання на мітку",
     "search": "Пошук",
     "default_description": "Детальна інформація відсутня.",
-
     "anomaliesCount": "Кількість аномалій: {{count}}",
     "anomalyArtMaxCount": "Максимум артефактів: {{count}}",
     "anomalyZoneArtMaxCount": "Маскимум артефактів на зону: {{count}}",
-
     "st_name_wrenched": "«Вивертень»",
     "st_name_fault": "Розлом",
     "st_name_burnt_farmstead": "Згорівший хутір",
@@ -76,85 +60,70 @@
     "st_pri_wa_name": "Блукаючі артефакти в Прип'яті",
     "st_jup_wa_name": "Блукаючі артефакти на Юпітері",
     "st_zat_wa_name": "Блукаючі артефакти на Затоні",
-
     "zone_mosquito_bald": "«Трамплін»",
     "zone_mosquito_bald_weak": "«Трамплін» (слабкий)",
     "zone_mosquito_bald_weak_noart": "«Трамплін» (слабкий)",
     "zone_mosquito_bald_strong": "«Трамплін» (сильний)",
     "zone_mosquito_bald_average": "«Трамплін» (середній)",
-		"zone_mosquito_bald_strong_noart": "«Трамплін» (сильний)",
-
+    "zone_mosquito_bald_strong_noart": "«Трамплін» (сильний)",
     "zone_witches_galantine": "«Електра»",
     "zone_witches_galantine_weak": "«Електра» (слабка)",
     "zone_witches_galantine_average": "«Електра» (середня)",
     "zone_witches_galantine_strong": "«Електра» (сильна)",
-
     "zone_gravi_zone": "«Воронка»",
-		"zone_gravi_zone_weak": "«Воронка» (слабка)",
-		"zone_gravi_zone_weak_noart": "«Воронка» (слабка)",
-		"zone_gravi_zone_average": "«Воронка» (середня)",
-		"zone_gravi_zone_strong": "«Воронка» (сильна)",
-		"zone_gravi_zone_killing": "«Воронка» (смертельна)",
-
+    "zone_gravi_zone_weak": "«Воронка» (слабка)",
+    "zone_gravi_zone_weak_noart": "«Воронка» (слабка)",
+    "zone_gravi_zone_average": "«Воронка» (середня)",
+    "zone_gravi_zone_strong": "«Воронка» (сильна)",
+    "zone_gravi_zone_killing": "«Воронка» (смертельна)",
     "zone_mincer": "«Карусель»",
-		"zone_mincer_weak": "«Карусель» (слабка)",
-		"zone_mincer_weak_noart": "«Карусель» (слабка)",
-		"zone_mincer_average": "«Карусель» (середня)",
-		"zone_mincer_strong": "«Карусель» (сильна)",
-
-		"zone_burning_fuzz": "«Жалкий пух»",
-		"zone_burning_fuzz1": "«Жалкий пух»",
-		"zone_burning_fuzz_weak": "«Жалкий пух» (слабкий)",
-		"zone_burning_fuzz_average": "«Жалкий пух» (середній)",
-		"zone_burning_fuzz_strong": "«Жалкий пух» (сильний)",
-		"zone_burning_fuzz_bottom_weak": "«Жалкий пух»",
-		"zone_burning_fuzz_bottom_average": "«Жалкий пух»",
-		"zone_burning_fuzz_bottom_strong": "«Жалкий пух»",
-
-		"zone_buzz": "«Кисіль»",
-		"zone_buzz_weak": "«Кисіль» (слабкий)",
-		"zone_buzz_average": "«Кисіль» (середній)",
-		"zone_buzz_strong": "«Кисіль» (сильний)",
-		"zone_mine_chemical_average": "«Кисіль» (середній)",
-		"zone_mine_chemical_strong": "«Кисіль» (сильний)",
-
+    "zone_mincer_weak": "«Карусель» (слабка)",
+    "zone_mincer_weak_noart": "«Карусель» (слабка)",
+    "zone_mincer_average": "«Карусель» (середня)",
+    "zone_mincer_strong": "«Карусель» (сильна)",
+    "zone_burning_fuzz": "«Жалкий пух»",
+    "zone_burning_fuzz1": "«Жалкий пух»",
+    "zone_burning_fuzz_weak": "«Жалкий пух» (слабкий)",
+    "zone_burning_fuzz_average": "«Жалкий пух» (середній)",
+    "zone_burning_fuzz_strong": "«Жалкий пух» (сильний)",
+    "zone_burning_fuzz_bottom_weak": "«Жалкий пух»",
+    "zone_burning_fuzz_bottom_average": "«Жалкий пух»",
+    "zone_burning_fuzz_bottom_strong": "«Жалкий пух»",
+    "zone_buzz": "«Кисіль»",
+    "zone_buzz_weak": "«Кисіль» (слабкий)",
+    "zone_buzz_average": "«Кисіль» (середній)",
+    "zone_buzz_strong": "«Кисіль» (сильний)",
+    "zone_mine_chemical_average": "«Кисіль» (середній)",
+    "zone_mine_chemical_strong": "«Кисіль» (сильний)",
     "zone_zharka_static": "«Жарка»",
-		"zone_zharka_static_weak": "«Жарка» (слабка)",
-		"zone_zharka_static_average": "«Жарка» (середня)",
-		"zone_zharka_static_strong": "«Жарка» (сильна)",
-
+    "zone_zharka_static_weak": "«Жарка» (слабка)",
+    "zone_zharka_static_average": "«Жарка» (середня)",
+    "zone_zharka_static_strong": "«Жарка» (сильна)",
     "zone_zhar": "«Жар»",
-		"zone_emi": "«Емі»",
-
-		"zone_mine_acidic": "«Газировка»",
-		"zone_mine_acidic_weak": "«Газировка» (слабка)",
-		"zone_mine_acidic_average": "«Газировка» (середня)",
-		"zone_mine_acidic_strong": "«Газировка» (сильна)",
-		"zone_mine_acidic_weak_noshadow": "«Газировка» (слабка)",
-
-		"zone_mine_electric": "«Електра»",
-		"zone_mine_electric_weak": "«Електра» (слабка)",
-		"zone_mine_electric_average": "«Електра» (середня)",
-		"zone_mine_electric_strong": "«Електра» (сильна)",
-
-		"zone_mine_gravitational_strong": "«Карусель»",
-		"zone_mine_gravitational_average": "«Карусель» (середня)",
-		"zone_mine_gravitational_weak": "«Карусель» (слабка)",
-
-		"zone_mine_thermal": "«Жарка»",
-		"zone_mine_thermal_weak": "«Жарка» (слабка)",
-		"zone_mine_thermal_average": "«Жарка» (середня)",
-		"zone_mine_thermal_strong": "«Жарка» (сильна)",
-		"zone_mine_steam_weak": "«Жарка» (слабка)",
-		"zone_mine_steam_average": "«Жарка» (середня)",
-
+    "zone_emi": "«Емі»",
+    "zone_mine_acidic": "«Газировка»",
+    "zone_mine_acidic_weak": "«Газировка» (слабка)",
+    "zone_mine_acidic_average": "«Газировка» (середня)",
+    "zone_mine_acidic_strong": "«Газировка» (сильна)",
+    "zone_mine_acidic_weak_noshadow": "«Газировка» (слабка)",
+    "zone_mine_electric": "«Електра»",
+    "zone_mine_electric_weak": "«Електра» (слабка)",
+    "zone_mine_electric_average": "«Електра» (середня)",
+    "zone_mine_electric_strong": "«Електра» (сильна)",
+    "zone_mine_gravitational_strong": "«Карусель»",
+    "zone_mine_gravitational_average": "«Карусель» (середня)",
+    "zone_mine_gravitational_weak": "«Карусель» (слабка)",
+    "zone_mine_thermal": "«Жарка»",
+    "zone_mine_thermal_weak": "«Жарка» (слабка)",
+    "zone_mine_thermal_average": "«Жарка» (середня)",
+    "zone_mine_thermal_strong": "«Жарка» (сильна)",
+    "zone_mine_steam_weak": "«Жарка» (слабка)",
+    "zone_mine_steam_average": "«Жарка» (середня)",
     "zone_mine_static_strong": "«Електра»",
     "zone_no_gravity": "Ліфт",
-
     "meterShort": "м",
     "azimuth": "Азимут:",
     "length": "Дистанція:",
-
     "best-buy-title": "Ціна скупки у торговців:",
     "best-sell-title": "В продажі у торговців:",
     "trade-by-default": "Спочатку",
@@ -166,30 +135,22 @@
     "trade-count-chance": "Кількість і шанс появи",
     "trader-must-buy-item-firstly": "Предмет не з'являється в інвентарі торговця самостійно і продаватиметься тільки після покупки у гравця.",
     "trader-do-not-buy": "Торговець не купляє нічого у гравця",
-
     "all-traders": "Всі торговці",
     "trader-sell": "Ціна продажу",
     "trader-buy": "Ціна покупки",
     "trader-supply": "Асортимент",
     "discounts": "Скидки",
-
     "sell_default": "Базова",
     "buy_default": "Базова",
     "supply_default": "Базовий",
     "discount_default": "Без скидки",
-
     "esc_kill_bandits_quest_done": "Після розмови з Вовком про зачистку АТП",
-
     "bar_darklab_document_done": "Після X-18",
     "yan_labx16_switcher_primary_off": "Після X-16",
-
     "yan_kill_brain_done": "Після X-16",
-
     "bar_svoboda_rg6_done": "Після доставки «Бульдога-6» Вороніну",
-
     "mil_lukash_dolg_task_complete": "Після ліквідації групи Черепа",
     "mil_leader_quest2_complete": "Павлик і інформатор ліквідовані",
-
     "big_box_generic": "Дерев'яний ящик",
     "small_box_generic": "Маленький звичайний ящик",
     "big_box_dungeons": "Ящик з цінним хабаром",
@@ -198,21 +159,17 @@
     "small_box_science": "Маленький науковий ящик",
     "small_box_army": "Маленький армійський ящик",
     "big_box_arsenal": "Великий арсенальний ящик",
-
     "actor_in_stalker": "Гравець в сталкерах",
     "actor_in_dolg": "Гравець Долгівець",
     "actor_in_freedom": "Гравець в Волі",
     "is_faction_friend_to_actor(bandit)": "Друг Бандитів",
     "is_faction_friend_to_actor(csky)": "Друг Чистого Неба",
     "is_faction_friend_to_actor(stalker)": "Друг сталкерів",
-
     "esc_bring_habar_complete": "Після повернення кейса",
     "gar_story_got_info_from_digger": "Інформація від діггерів отримана",
-
     "zat_b29_exclusive_conditions": "«Сварог» отримано",
     "jup_a9_tech_way_info": "Шлях до Прип'яті розвідано",
     "zat_b22_medic_respawn": "Медика роскрито",
-
     "counter_greater(jup_a6_actor_help_freedom:3)": "Тричі допоміг Волі",
     "counter_equal(jup_a6_actor_help_freedom:2)": "Двічі допоміг Волі",
     "counter_greater(jup_a6_actor_help_duty:3)": "Тричі допоміг Долгу",
@@ -221,16 +178,13 @@
     "counter_greater(jup_a6_actor_help_duty:1)": "Допоміг Долгу",
     "counter_greater(jup_a6_actor_help_stalkers:1)": "Допоміг сталкерам на Янові",
     "counter_greater(jup_a6_actor_help_stalkers:2)": "Двічі допоміг сталкерам на Янові",
-
     "is_faction_resource_greater": "Вдосталь ресурсів в угрупування",
     "smart-terrains": "Точки інтересу сталкерів",
     "smart-paths": "Маршрути сталкерів",
     "artefact-ways": "Маршрути артефактів",
     "level-changers": "Переходи між локаціями",
     "mechanics": "Техніки",
-
     "item-trader-chance": "Шанс появи предмета у торговця",
-
     "jup_b200_tech_materials_brought_counter_1": "Знайдено радіоматеріалів: 1",
     "jup_b200_tech_materials_brought_counter_2": "Знайдено радіоматеріалів: 2",
     "jup_b200_tech_materials_brought_counter_3": "Знайдено радіоматеріалів: 3",
@@ -240,32 +194,26 @@
     "jup_b200_tech_materials_brought_counter_7": "Знайдено радіоматеріалів: 7",
     "jup_b200_tech_materials_brought_counter_8": "Знайдено радіоматеріалів: 8",
     "jup_b200_tech_materials_brought_counter_9": "Знайдено радіоматеріалів: 9",
-
     "counter_equal(jup_a6_actor_help_freedom:4)": "Перевага «Волі» на Янові",
     "counter_equal(jup_a6_actor_help_duty:4)": "Перевага «Долга» на Янові",
     "counter_equal(jup_a6_actor_help_stalkers:3)": "Тричі допоміг сталкерам на Янові",
-
     "zat_b3_tech_discount_1": "Кардан випив горілки",
     "zat_b3_tech_discount_2": "Кардан випив двічі",
     "zat_a23_actor_has_access_card_to_testing_workshop": "Кардан кинув пити",
-
     "bad_mechanic_price": "Націнка за ремонт",
     "good_mechanic_price": "Скидка за ремонт",
     "bad_trader_buy_price": "Знижена ціна скупки",
     "good_trader_buy_price": "Збільшена ціна закупки",
     "bad_trader_sell_price": "Націнка на товари",
     "good_trader_sell_price": "Скидка на товари",
-
     "gar_stalker_24h_trader": "Цілодобовий торговець з Барахолки",
     "gar_stalker_evening_trader": "Вечірній торговець з Барахолки",
     "gar_stalker_night_trader": "Нічний торговець з Барахолки",
     "gar_quest_liberate_conc_camp_done": "Звільнити сталкерів з концтабору бандитів",
     "red_forest_underground_trader": "Торговець в казармі в шахтах",
-
     "hide-marker": "Приховати",
     "unhide-marker": "Показати",
     "hidden-markers": "Приховані мітки",
-
     "recoil": "Паттерн віддачі",
     "powerLoss": "Ергономіка",
     "explosionProtection": "Захист від вибуху",
@@ -280,24 +228,37 @@
     "misfire-probability": "Вірогідність клину",
     "misfire-condition-k": "Клин, починаючи з стану",
     "balistic": "Балістика кулі",
-
     "recoil-base": "Базова",
     "recoil-up": "Модифікована",
-
     "recoil-zoom-base": "Базова в прицілі",
     "recoil-zoom-up": "Модифікована в прицілі",
-
     "mobile-not-adaptive": "Сайт не адаптований для мобільних пристроїв, тому, скоріше всього, ви зіткнетесь з масою проблем при перегляді карт. Якщо у вас є бажання та можливості адаптувати сайт для телефонів, допомогти в цьому або запропонувати щось інше, ви можете зробити це в репозиторії проекту на github: {{site}}",
-
     "synonyms": {
-      "wpn_ak74": ["Калаш", "Ак", "Ак-74"],
-      "wpn_ak74u": ["Калаш", "Ак", "Аксу"],
-      "wpn_abakan": ["Обокан", "АС-96/2", "Абакан"],
-
-      "trader": ["Крамар", "Торгаш", "Барига"],
-      "mechanics": ["Механік", "Технік"]
+        "wpn_ak74": [
+            "Калаш",
+            "Ак",
+            "Ак-74"
+        ],
+        "wpn_ak74u": [
+            "Калаш",
+            "Ак",
+            "Аксу"
+        ],
+        "wpn_abakan": [
+            "Обокан",
+            "АС-96/2",
+            "Абакан"
+        ],
+        "trader": [
+            "Крамар",
+            "Торгаш",
+            "Барига"
+        ],
+        "mechanics": [
+            "Механік",
+            "Технік"
+        ]
     },
-
     "monster-lair": "Респавн мутантів",
     "stalker-respawn": "Респавн сталкерів",
     "zombie-lair": "Респавн зомбованих",
