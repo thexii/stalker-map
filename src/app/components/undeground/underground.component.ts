@@ -32,7 +32,7 @@ export class UndergroundComponent {
     @Input() public location: Location;
     @Input() public gamedata: Map;
     @Input() public items: Item[];
-    @Input() public game: { gameStyle: string, uniqueName: string};
+    @Input() public game: { gameStyle: string, uniqueName: string };
     @Input() public mapConfig: MapConfig;
     @Input() public lootBoxConfig: LootBoxConfig;
     @Input() public markerToSearch: MarkerToSearch;
@@ -57,172 +57,149 @@ export class UndergroundComponent {
         private mapService: MapService) { }
 
     public setLayer(newLyaer: string): void {
-      if (this.selectedLevel == newLyaer) {
-        return;
-      }
+        if (this.selectedLevel == newLyaer) {
+            return;
+        }
 
-      this.currentLevelImageOverlay.remove();
-      this.selectedLevel = newLyaer;
+        this.currentLevelImageOverlay.remove();
+        this.selectedLevel = newLyaer;
 
-      this.addLocation();
+        this.addLocation();
     }
 
     public goToMarker(): void {
-      let layer = this.layers.find(x => x.name == this.markerToSearch.type);
+        let layer = this.layers.find(x => x.name == this.markerToSearch.type);
 
-      if (layer) {
-        let sLat = this.markerToSearch.lat + this.zShift;
-        let sLng = this.markerToSearch.lng + this.xShift;
+        if (layer) {
+            let sLat = this.markerToSearch.lat + this.zShift;
+            let sLng = this.markerToSearch.lng + this.xShift;
 
-        for (let marker of Object.values(layer._layers) as any[]) {
-          if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
+            for (let marker of Object.values(layer._layers) as any[]) {
+                if (marker._latlng.lat == sLat && marker._latlng.lng == sLng) {
 
-            this.fireSearchedMarker(marker);
+                    this.fireSearchedMarker(marker);
 
-            break;
-          }
+                    break;
+                }
+            }
         }
-      }
     }
 
     public hideMarker(markerToHide: HiddenMarker): void {
-      let marker: any;
+        let marker: any;
 
-      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
-      let markerLayer: any = this.layers.find(x => x.name == markerToHide.layerName);
+        let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+        let markerLayer: any = this.layers.find(x => x.name == markerToHide.layerName);
 
-      let under = this;
+        let under = this;
 
-      markerLayer.eachLayer(function(layer: any){
-        if (layer.properties.coordinates.lat == markerToHide.lat && layer.properties.coordinates.lng == markerToHide.lng) {
-            marker = layer;
+        markerLayer.eachLayer(function (layer: any) {
+            if (layer.properties.coordinates.lat == markerToHide.lat && layer.properties.coordinates.lng == markerToHide.lng) {
+                marker = layer;
+            }
+        });
+
+        markerLayer.removeLayer(marker);
+
+        if (this.map.hasLayer(hiddenLayer)) {
+            hiddenLayer.addLayer(marker);
+            marker.setOpacity(0.5);
         }
-      });
-
-      markerLayer.removeLayer(marker);
-
-      if (this.map.hasLayer(hiddenLayer)) {
-        hiddenLayer.addLayer(marker);
-        marker.setOpacity(0.5);
-      }
-      else {
-        hiddenLayer.addLayer(marker);
-        this.map.removeLayer(marker);
-      }
+        else {
+            hiddenLayer.addLayer(marker);
+            this.map.removeLayer(marker);
+        }
     }
 
     public unhideMarker(markerToShow: HiddenMarker): void {
-      let marker: any;
+        let marker: any;
 
-      let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
-      let markerLayer: any = this.layers.find(x => x.name == markerToShow.layerName);
+        let hiddenLayer: any = this.layers.find(x => x.name == MapComponent.hiddenLayerName);
+        let markerLayer: any = this.layers.find(x => x.name == markerToShow.layerName);
 
-      let under = this;
+        let under = this;
 
-      hiddenLayer.eachLayer(function(layer: any){
-        if (layer.properties.coordinates.lat == markerToShow.lat && layer.properties.coordinates.lng == markerToShow.lng) {
-            marker = layer;
-        }
-      });
+        hiddenLayer.eachLayer(function (layer: any) {
+            if (layer.properties.coordinates.lat == markerToShow.lat && layer.properties.coordinates.lng == markerToShow.lng) {
+                marker = layer;
+            }
+        });
 
-      if (marker) {
-        hiddenLayer.removeLayer(marker);
+        if (marker) {
+            hiddenLayer.removeLayer(marker);
 
-        if (this.map.hasLayer(markerLayer)) {
-          markerLayer.addLayer(marker);
-          marker.setOpacity(1);
+            if (this.map.hasLayer(markerLayer)) {
+                markerLayer.addLayer(marker);
+                marker.setOpacity(1);
+            }
+            else {
+                markerLayer.addLayer(marker);
+                this.map.removeLayer(marker);
+            }
         }
         else {
-          markerLayer.addLayer(marker);
-          this.map.removeLayer(marker);
+            console.error('Cant find marker to show!')
         }
-      }
-      else {
-        console.error('Cant find marker to show!')
-      }
     }
 
     private async ngOnInit(): Promise<void> {
         let minZoom = 1;
         let maxZoom = 3;
         let zoom = 1.5;
+        let scaleFactor = 1.5;
 
-        let canvasRenderer =
-        L.Canvas.extend({
-          _updateSvgMarker: function (layer: any) {
-            if (!this._drawing || layer._empty() || layer.doNotRender) {
-              return;
-            }
-
-            try {
-              this._ctx.globalAlpha = layer.options.opacity;
-
-              this._ctx.drawImage(
-                layer.options.icon._image,
-                layer._point.x - layer.options.icon.shiftX * markWidthUnderground,
-                layer._point.y - layer.options.icon.shiftY * markWidthUnderground,
-                layer.options.icon.options.iconSizeInit[0] * markWidthUnderground,
-                layer.options.icon.options.iconSizeInit[1] * markWidthUnderground);
-            }
-            catch (ex) {
-              console.log(layer);
-              console.log(ex);
-            }
-          }
-        })
-
-        this.canvasRenderer = new canvasRenderer();
+        this.canvasRenderer = this.mapService.getCanvasRenderer();
 
         switch (this.location.uniqueName) {
-          case "l03u_agr_underground": {
-            this.xShift = 136.842;
-            this.zShift = 147.089;
-            break;
-          }
-          case "l08u_brainlab": {
-            this.xShift = 146.401;
-            this.zShift = 41.508;
-            break;
-          }
-          case "l04u_labx18": {
-            this.xShift = 51.046;
-            this.zShift = 37.991;
-            break;
-          }
-          case "agroprom_underground": {
-            this.xShift = 16.294;
-            this.zShift = 220.231;
-            break;
-          }
-          case "jupiter_underground": {
-            this.xShift = 391.152;
-            this.zShift = 264.704;
-            this.markWidthFactor = 6;
-            minZoom = 0;
-            maxZoom = 2;
-            zoom = 1;
-            break;
-          }
-          case "labx8": {
-            this.xShift = 121.657;
-            this.zShift = -44.509;
-            break;
-          }
-          case "l10u_bunker": {
-            this.xShift = 67.5;
-            this.zShift = 89.6;
-            break;
-          }
-          case "l12u_control_monolith": {
-            this.xShift = 43.796768;
-            this.zShift = 44.2057;
-            break;
-          }
-          case "l12u_sarcofag": {
-            this.xShift = 34.9166755676;
-            this.zShift = 43.0416660309;
-            break;
-          }
+            case "l03u_agr_underground": {
+                this.xShift = 136.842;
+                this.zShift = 147.089;
+                break;
+            }
+            case "l08u_brainlab": {
+                this.xShift = 146.401;
+                this.zShift = 41.508;
+                break;
+            }
+            case "l04u_labx18": {
+                this.xShift = 51.046;
+                this.zShift = 37.991;
+                break;
+            }
+            case "agroprom_underground": {
+                this.xShift = 16.294;
+                this.zShift = 220.231;
+                break;
+            }
+            case "jupiter_underground": {
+                this.xShift = 391.152;
+                this.zShift = 264.704;
+                minZoom = 0;
+                maxZoom = 2;
+                zoom = 1;
+                scaleFactor = 4;
+                break;
+            }
+            case "labx8": {
+                this.xShift = 121.657;
+                this.zShift = -44.509;
+                break;
+            }
+            case "l10u_bunker": {
+                this.xShift = 67.5;
+                this.zShift = 89.6;
+                break;
+            }
+            case "l12u_control_monolith": {
+                this.xShift = 43.796768;
+                this.zShift = 44.2057;
+                break;
+            }
+            case "l12u_sarcofag": {
+                this.xShift = 34.9166755676;
+                this.zShift = 43.0416660309;
+                break;
+            }
         }
 
         this.map = L.map('underground-map', {
@@ -236,6 +213,8 @@ export class UndergroundComponent {
             zoomControl: !1
         });
 
+        this.map.scaleFactor = scaleFactor;
+
         let bounds = [
             [0, 0],
             [this.location.heightInMeters, this.location.widthInMeters],
@@ -244,11 +223,11 @@ export class UndergroundComponent {
         markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
 
         this.map.on('zoomend', () => {
-          markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
-          document.documentElement.style.setProperty(
-              `--map-mark-width-underground`,
-    `${markWidthUnderground}px`);
-      });
+            markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
+            document.documentElement.style.setProperty(
+                `--map-mark-width-underground`,
+                `${markWidthUnderground}px`);
+        });
 
         let printClickCoordinates = true;
 
@@ -261,13 +240,13 @@ export class UndergroundComponent {
             });*/
         }
 
-        this.undergroundConfig = this.mapConfig.undergroundLevelsConfig?.find( x => x.name == this.location.uniqueName) as UndergroundLevelsConfig;
+        this.undergroundConfig = this.mapConfig.undergroundLevelsConfig?.find(x => x.name == this.location.uniqueName) as UndergroundLevelsConfig;
 
         if (this.undergroundConfig == null) {
-          this.selectedLevel = `map_${this.location.uniqueName}`;
+            this.selectedLevel = `map_${this.location.uniqueName}`;
         }
         else {
-          this.selectedLevel = this.undergroundConfig.baseLevel;
+            this.selectedLevel = this.undergroundConfig.baseLevel;
         }
 
         let markersToHide: any[] = [];
@@ -279,7 +258,7 @@ export class UndergroundComponent {
         let hiddenstuffs = this.addStuffs();
 
         if (hiddenstuffs.length > 0) {
-          markersToHide.push(...hiddenstuffs);
+            markersToHide.push(...hiddenstuffs);
         }
 
         this.addLootBoxes();
@@ -298,11 +277,11 @@ export class UndergroundComponent {
             for (let config of this.mapConfig.markersConfig) {
                 if (this.layers.some((y) => y.name == config.uniqueName)) {
                     let currentLayer = this.layers.filter(
-                            (D) => D.name == config.uniqueName)[0];
+                        (D) => D.name == config.uniqueName)[0];
                     newLayers.push(currentLayer);
 
                     if (config.isShowByDefault) {
-                      currentLayer.addTo(this.map);
+                        currentLayer.addTo(this.map);
                     }
                 }
             }
@@ -317,81 +296,81 @@ export class UndergroundComponent {
         this.layerContoller.addTo(this.map)
 
         if (this.markerToSearch) {
-          this.goToMarker();
+            this.goToMarker();
         }
 
         let ruler = this.addRuler();
 
-        this.translate.onLangChange.subscribe(i=>{
-          let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
+        this.translate.onLangChange.subscribe(i => {
+            let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
 
-          this.layerContoller.remove();
-          let addRuler = false;
+            this.layerContoller.remove();
+            let addRuler = false;
 
-          if (ruler) {
-            ruler.remove();
-            addRuler = true;
-          }
+            if (ruler) {
+                ruler.remove();
+                addRuler = true;
+            }
 
-          this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
-          this.layerContoller.searchName = "layerControl";
-          this.layerContoller.isUnderground = true;
-          this.layerContoller.addTo(this.map)
+            this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
+            this.layerContoller.searchName = "layerControl";
+            this.layerContoller.isUnderground = true;
+            this.layerContoller.addTo(this.map)
 
-          if (addRuler) {
-            ruler = this.addRuler();
-          }
+            if (addRuler) {
+                ruler = this.addRuler();
+            }
 
-          //this.createSearchController();
+            //this.createSearchController();
         });
     }
 
 
 
-  private addRuler(): any {
-    let ruler;
+    private addRuler(): any {
+        let ruler;
 
-    var options = {
-        position: 'topright', // Leaflet control position option
-        circleMarker: {
-            // Leaflet circle marker options for points used in this plugin
-            color: 'red',
-            radius: 2,
-        },
-        lineStyle: {
-            // Leaflet polyline options for lines used in this plugin
-            color: 'red',
-            dashArray: '1,6',
-        },
-        lengthUnit: {
-            factor: 1, //  from km to nm
-            display: this.translate.instant('meterShort'),
-            decimal: 2,
-            label: this.translate.instant('length'),
-        },
-        angleUnit: {
-            display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
-            decimal: 2, // Bearing result will be fixed to this value.
-            factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
-            label: this.translate.instant('azimuth'),
-        },
-    };
+        var options = {
+            position: 'topright', // Leaflet control position option
+            circleMarker: {
+                // Leaflet circle marker options for points used in this plugin
+                color: 'red',
+                radius: 2,
+            },
+            lineStyle: {
+                // Leaflet polyline options for lines used in this plugin
+                color: 'red',
+                dashArray: '1,6',
+            },
+            lengthUnit: {
+                factor: 1, //  from km to nm
+                display: this.translate.instant('meterShort'),
+                decimal: 2,
+                label: this.translate.instant('length'),
+            },
+            angleUnit: {
+                display: '&deg;', // This is the display value will be shown on the screen. Example: 'Gradian'
+                decimal: 2, // Bearing result will be fixed to this value.
+                factor: null, // This option is required to customize angle unit. Specify solid angle value for angle unit. Example: 400 (for gradian).
+                label: this.translate.instant('azimuth'),
+            },
+        };
 
-    ruler = L.control.ruler(options);
-    ruler.addTo(this.map);
+        ruler = L.control.ruler(options);
+        ruler.addTo(this.map);
 
-    return ruler;
-  }
+        return ruler;
+    }
 
     private fireSearchedMarker(marker: any): void {
-      setTimeout(() => {
-          if (this.container == null) {
-              this.fireSearchedMarker(marker);
-          }
-          else {
-            marker.openPopup();
-          }
-      }, 250);
+        setTimeout(() => {
+            if (this.container == null) {
+                this.fireSearchedMarker(marker);
+            }
+            else {
+                marker.openPopup();
+            }
+        }, 250);
     }
 
     private addLocation() {
@@ -415,76 +394,77 @@ export class UndergroundComponent {
     }
 
     private addMarks() {
-      let markTypes = this.mapComponent.getMarkTypes();
+        let markTypes = this.mapComponent.getMarkTypes();
 
-      this.gamedata.marks = this.gamedata.marks.sort(
-        (c: { typeId: number }, l: { typeId: number }) => c.typeId - l.typeId
-      );
-      for (let markType of markTypes) {
-        let marks = this.gamedata.marks.filter(
-          (u: any) => u.locationId == this.location.id && u.typeId == markType.id
+        this.gamedata.marks = this.gamedata.marks.sort(
+            (c: { typeId: number }, l: { typeId: number }) => c.typeId - l.typeId
         );
-
-        if (marks.length > 0) {
-          let markers: any[] = [];
-
-          for (let mark of marks.filter(x => x.locationId == this.location.id)) {
-            let marker = new this.mapComponent.svgMarker([mark.z + this.zShift, mark.x + this.xShift], {
-              icon: markType.icon,
-              renderer: this.canvasRenderer
-            });
-
-            marker.properties = {};
-            marker.properties.coordinates = {lat: mark.z, lng: mark.x};
-            marker.properties.name = mark.name ? mark.name : markType.markName;
-            marker.properties.description = mark.description;
-            marker.properties.markType = markType.name;
-            marker.properties.typeUniqueName = markType.uniqueName;
-            marker.properties.ableToSearch = markType.ableToSearch;
-
-            if (marker.properties.ableToSearch) {
-              let p = [];
-
-              p.push(marker.properties.name);
-
-              if (
-                marker.properties.description &&
-                marker.properties.description !=
-                this.translate.instant('default-desription')
-              ) {
-                p.push(marker.properties.description);
-              }
-
-              marker.feature = {
-                properties: {
-                  search: p.join(', '),
-                },
-              };
-
-              this.createProperty(
-                marker.feature.properties,
-                'search',
-                p,
-                this.translate
-              );
-
-              marker.properties.locationUniqueName = this.location.uniqueName;
-            }
-
-            marker.bindTooltip(
-              (marker: any) => this.translate.instant(marker.properties.name),
-              {
-                sticky: true,
-                className: 'map-tooltip',
-                offset: [0, 50],
-              }
+        for (let markType of markTypes) {
+            let marks = this.gamedata.marks.filter(
+                (u: any) => u.locationId == this.location.id && u.typeId == markType.id
             );
-            markers.push(marker);
-          }
 
-          this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
+            if (marks.length > 0) {
+                let markers: any[] = [];
+
+                for (let mark of marks.filter(x => x.locationId == this.location.id)) {
+                    let marker = new this.mapComponent.svgMarker([mark.z + this.zShift, mark.x + this.xShift], {
+                        icon: markType,
+                        renderer: this.canvasRenderer,
+                        radius: markType.radius
+                    });
+
+                    marker.properties = {};
+                    marker.properties.coordinates = { lat: mark.z, lng: mark.x };
+                    marker.properties.name = mark.name ? mark.name : markType.markName;
+                    marker.properties.description = mark.description;
+                    marker.properties.markType = markType.name;
+                    marker.properties.typeUniqueName = markType.uniqueName;
+                    marker.properties.ableToSearch = markType.ableToSearch;
+
+                    if (marker.properties.ableToSearch) {
+                        let p = [];
+
+                        p.push(marker.properties.name);
+
+                        if (
+                            marker.properties.description &&
+                            marker.properties.description !=
+                            this.translate.instant('default-desription')
+                        ) {
+                            p.push(marker.properties.description);
+                        }
+
+                        marker.feature = {
+                            properties: {
+                                search: p.join(', '),
+                            },
+                        };
+
+                        this.createProperty(
+                            marker.feature.properties,
+                            'search',
+                            p,
+                            this.translate
+                        );
+
+                        marker.properties.locationUniqueName = this.location.uniqueName;
+                    }
+
+                    marker.bindTooltip(
+                        (marker: any) => this.translate.instant(marker.properties.name),
+                        {
+                            sticky: true,
+                            className: 'map-tooltip',
+                            offset: [0, 50],
+                        }
+                    );
+                    markers.push(marker);
+                }
+
+                this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
+            }
         }
-      }
     }
 
     private addStuffs(): any[] {
@@ -492,7 +472,7 @@ export class UndergroundComponent {
         let markersToHide: any[] = [];
 
         this.gamedata.stuffs = this.gamedata.stuffs.sort(
-          (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
+            (c: StuffModel, l: StuffModel) => c.typeId - l.typeId
         );
 
         let ignoredNames: string[] = ['stuff_at_location'];
@@ -500,398 +480,398 @@ export class UndergroundComponent {
         let buggedStrings = [];
 
         for (let markType of stuffTypes) {
-          let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == markType.uniqueName);
-          let stuffsAtLocation = this.gamedata.stuffs.filter(
-            (u: StuffModel) => u.locationId == this.location.id && u.typeId == markType.id
-          );
+            let hiddenMarkers = this.mapService.getAllHiddenMarkers().filter(x => x.layerName == markType.uniqueName);
+            let stuffsAtLocation = this.gamedata.stuffs.filter(
+                (u: StuffModel) => u.locationId == this.location.id && u.typeId == markType.id
+            );
 
-          if (stuffsAtLocation.length > 0) {
-            let markers: any[] = [];
+            if (stuffsAtLocation.length > 0) {
+                let markers: any[] = [];
 
-            for (let stuffModel of stuffsAtLocation) {
-              let stuff = new this.mapComponent.svgMarker([stuffModel.z + this.zShift, stuffModel.x + this.xShift], {
-                icon: markType.icon,
-                renderer: this.canvasRenderer
-              });
+                for (let stuffModel of stuffsAtLocation) {
+                    let stuff = new this.mapComponent.svgMarker([stuffModel.z + this.zShift, stuffModel.x + this.xShift], {
+                        icon: markType,
+                        renderer: this.canvasRenderer,
+                        radius: markType.radius
+                    });
 
-              stuff.properties = {};
-              stuff.properties.coordinates = {lat: stuffModel.z, lng: stuffModel.x};
-              stuff.properties.stuff = stuffModel;
-              stuff.properties.markType = markType.name;
-              stuff.properties.typeUniqueName = markType.uniqueName;
-              stuff.properties.ableToSearch = markType.ableToSearch;
+                    stuff.properties = {};
+                    stuff.properties.coordinates = { lat: stuffModel.z, lng: stuffModel.x };
+                    stuff.properties.stuff = stuffModel;
+                    stuff.properties.markType = markType.name;
+                    stuff.properties.typeUniqueName = markType.uniqueName;
+                    stuff.properties.ableToSearch = markType.ableToSearch;
 
-              if (stuff.properties.ableToSearch) {
-                let localesToFind = [];
+                    if (stuff.properties.ableToSearch) {
+                        let localesToFind = [];
 
-                if (stuff.properties.stuff.name && !ignoredNames.includes(stuff.properties.stuff.name)) {
-                  localesToFind.push(stuff.properties.stuff.name);
+                        if (stuff.properties.stuff.name && !ignoredNames.includes(stuff.properties.stuff.name)) {
+                            localesToFind.push(stuff.properties.stuff.name);
+                        }
+
+                        if (stuff.properties.description) {
+                            localesToFind.push(stuff.properties.stuff.description);
+                        }
+
+                        if (stuff.properties.stuff.items?.length > 0) {
+                            localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
+                                return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
+                            }));
+                        }
+
+                        stuff.feature = {};
+                        stuff.feature.properties = {};
+
+                        if (localesToFind.length > 0) {
+                            let bugged = localesToFind.filter(x => this.translate.instant(x) == x)
+
+                            if (bugged.length > 0) {
+                                buggedStrings.push(...bugged);
+                            }
+                        }
+                    }
+
+                    stuff.bindTooltip((p: any) => this.mapService.createStuffTooltip(p), {
+                        sticky: true,
+                        className: 'map-tooltip',
+                        offset: new Point(0, 50),
+                    });
+                    stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
+
+                    if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
+                        markersToHide.push(stuff);
+                    }
+                    else {
+                        markers.push(stuff);
+                    }
                 }
 
-                if (stuff.properties.description) {
-                  localesToFind.push(stuff.properties.stuff.description);
-                }
-
-                if (stuff.properties.stuff.items?.length > 0) {
-                  localesToFind.push(...stuff.properties.stuff.items.map((x: { uniqueName: string; }) => {
-                    return this.items.find(y => y.uniqueName == x.uniqueName)?.localeName;
-                  } ));
-                }
-
-                stuff.feature = {};
-                stuff.feature.properties = {};
-
-                if (localesToFind.length > 0) {
-                  let bugged = localesToFind.filter(x => this.translate.instant(x) == x)
-
-                  if (bugged.length > 0) {
-                    buggedStrings.push(...bugged);
-                  }
-                }
-              }
-
-              stuff.bindTooltip((p: any) => this.mapService.createStuffTooltip(p), {
-                sticky: true,
-                className: 'map-tooltip',
-                offset: new Point(0, 50),
-              });
-              stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
-
-              if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
-                markersToHide.push(stuff);
-              }
-              else {
-                markers.push(stuff);
-              }
+                this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
             }
-
-            this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
-          }
         }
 
         return markersToHide;
-      }
+    }
 
     private addStalkers() {
-      let stalkerIcon, stalkerIconDead, stalkerIconQuestItem;
-      [stalkerIcon, stalkerIconDead, stalkerIconQuestItem]= this.mapComponent.getStalkersIcon();
+        let stalkerIcon, stalkerIconDead, stalkerIconQuestItem;
+        [stalkerIcon, stalkerIconDead, stalkerIconQuestItem] = this.mapComponent.getStalkersIcon();
 
-      let markers: any[] = [];
+        let markers: any[] = [];
 
-      for (let stalker of this.gamedata.stalkers.filter(x => x.locationId == this.location.id)) {
-        let canvasMarker = new this.mapComponent.svgMarker([stalker.z + this.zShift, stalker.x + this.xShift], {
-          icon: stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem.icon : stalkerIcon.icon) : stalkerIconDead.icon,
-          renderer: this.canvasRenderer
-        });
+        for (let stalker of this.gamedata.stalkers.filter(x => x.locationId == this.location.id)) {
+            let icon = stalker.alive ? (stalker.hasUniqueItem ? stalkerIconQuestItem : stalkerIcon) : stalkerIconDead;
 
-        canvasMarker.properties = {};
-        canvasMarker.properties.coordinates = {lat: stalker.z, lng: stalker.x};
-        canvasMarker.properties.stalker = stalker;
-        canvasMarker.properties.name = stalker.profile.name;
-        canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
-        markers.push(canvasMarker);
-        canvasMarker.properties.ableToSearch = false;
-        canvasMarker.feature = {};
-        canvasMarker.feature.properties = {};
+            let canvasMarker = new this.mapComponent.svgMarker([stalker.z + this.zShift, stalker.x + this.xShift], {
+                icon: icon,
+                renderer: this.canvasRenderer,
+                radius: icon.radius
+            });
 
-        let propertiesToSearch: string[] = [stalker.profile.name];
+            canvasMarker.properties = {};
+            canvasMarker.properties.coordinates = { lat: stalker.z, lng: stalker.x };
+            canvasMarker.properties.stalker = stalker;
+            canvasMarker.properties.name = stalker.profile.name;
+            canvasMarker.properties.typeUniqueName = stalkerIcon.uniqueName;
+            markers.push(canvasMarker);
+            canvasMarker.properties.ableToSearch = false;
+            canvasMarker.feature = {};
+            canvasMarker.feature.properties = {};
 
-        if (stalker.hasUniqueItem) {
-          for (let inv of stalker.inventoryItems) {
-            let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
-            propertiesToSearch.push(item.localeName);
-          }
+            let propertiesToSearch: string[] = [stalker.profile.name];
+
+            if (stalker.hasUniqueItem) {
+                for (let inv of stalker.inventoryItems) {
+                    let item = this.items.find(y => y.uniqueName == inv.uniqueName) as Item;
+                    propertiesToSearch.push(item.localeName);
+                }
+            }
+
+            this.createProperty(
+                canvasMarker.feature.properties,
+                'search',
+                propertiesToSearch,
+                this.translate
+            );
+
+            canvasMarker.bindTooltip(
+                (marker: any) =>
+                    this.translate.instant(marker.properties.stalker.profile.name),
+                {
+                    sticky: true,
+                    className: 'map-tooltip',
+                    offset: [0, 50],
+                }
+            );
+
+            canvasMarker
+                .bindPopup(
+                    (stalker: any) =>
+                        this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, true),
+                    { maxWidth: 500 }
+                )
+                .openPopup();
         }
 
-        this.createProperty(
-          canvasMarker.feature.properties,
-          'search',
-          propertiesToSearch,
-          this.translate
-        );
-
-        canvasMarker.bindTooltip(
-          (marker: any) =>
-            this.translate.instant(marker.properties.stalker.profile.name),
-          {
-            sticky: true,
-            className: 'map-tooltip',
-            offset: [0, 50],
-          }
-        );
-
-        canvasMarker
-          .bindPopup(
-            (stalker: any) =>
-              this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, true),
-            { maxWidth: 500 }
-          )
-          .openPopup();
-      }
-
-      if (markers.length > 0) {
-        this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName, stalkerIcon.ableToSearch);
-      }
+        if (markers.length > 0) {
+            this.addLayerToMap(L.layerGroup(markers), stalkerIcon.uniqueName, stalkerIcon.ableToSearch);
+        }
     }
 
     private addHiddenMarkers(markersToHide: any[]): void {
-      let hiddenLayer = L.layerGroup(markersToHide);
+        let hiddenLayer = L.layerGroup(markersToHide);
 
-      hiddenLayer.onAdd = function(map: any) {
-        L.LayerGroup.prototype.onAdd.call(this, map);
+        hiddenLayer.onAdd = function (map: any) {
+            L.LayerGroup.prototype.onAdd.call(this, map);
 
-        this.eachLayer(function(layer: any) {
-          layer.setOpacity(0.5);
-        });
-      }
+            this.eachLayer(function (layer: any) {
+                layer.setOpacity(0.5);
+            });
+        }
 
-      this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
+        this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
     }
 
     private addLootBoxes() {
-      let lootBoxType = this.mapComponent.getLootBoxIcon();
+        let lootBoxType = this.mapComponent.getLootBoxIcon();
 
-      let markers: any[] = [];
+        let markers: any[] = [];
 
-      for (let lootBox of this.gamedata.lootBoxes.filter(x => x.locationId == this.location.id)) {
-        let lootBoxMarker = new this.mapComponent.svgMarker([lootBox.z + this.zShift, lootBox.x + this.xShift], {
-          icon: lootBoxType.icon,
-          renderer: this.canvasRenderer
-        });
+        for (let lootBox of this.gamedata.lootBoxes.filter(x => x.locationId == this.location.id)) {
+            let lootBoxMarker = new this.mapComponent.svgMarker([lootBox.z + this.zShift, lootBox.x + this.xShift], {
+                icon: lootBoxType,
+                renderer: this.canvasRenderer,
+                radius: lootBoxType.radius
+            });
 
-        //stuffModel.z + this.zShift, stuffModel.x + this.xShift
+            //stuffModel.z + this.zShift, stuffModel.x + this.xShift
 
-        lootBoxMarker.properties = {};
-        lootBoxMarker.properties.coordinates = {lat: lootBox.z, lng: lootBox.x};
-        lootBoxMarker.properties.lootBox = lootBox;
-        lootBoxMarker.properties.name = lootBoxType.name;
-        lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
-        lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
+            lootBoxMarker.properties = {};
+            lootBoxMarker.properties.coordinates = { lat: lootBox.z, lng: lootBox.x };
+            lootBoxMarker.properties.lootBox = lootBox;
+            lootBoxMarker.properties.name = lootBoxType.name;
+            lootBoxMarker.properties.typeUniqueName = lootBoxType.uniqueName;
+            lootBoxMarker.properties.ableToSearch = lootBoxType.ableToSearch;
 
-        if (lootBoxMarker.properties.ableToSearch) {
-          let p = [];
-          p.push(lootBoxMarker.properties.name);
-          lootBoxMarker.properties.description && lootBoxMarker.properties.description !=
-            this.translate.instant('default-desription') &&
-            p.push(lootBoxMarker.properties.description);
-          p.push(
-            ...lootBoxMarker.properties.lootBox.items.map(
-              (y: { uniqueName: string } ) => y.uniqueName
-            )
-          );
+            if (lootBoxMarker.properties.ableToSearch) {
+                let p = [];
+                p.push(lootBoxMarker.properties.name);
+                lootBoxMarker.properties.description && lootBoxMarker.properties.description !=
+                    this.translate.instant('default-desription') &&
+                    p.push(lootBoxMarker.properties.description);
+                p.push(
+                    ...lootBoxMarker.properties.lootBox.items.map(
+                        (y: { uniqueName: string }) => y.uniqueName
+                    )
+                );
 
-          lootBoxMarker.feature = {
-            properties: {
-              search: p.join(', '),
-            },
-          };
+                lootBoxMarker.feature = {
+                    properties: {
+                        search: p.join(', '),
+                    },
+                };
 
-          this.createProperty(
-            lootBoxMarker.feature.properties,
-            'search',
-            p,
-            this.translate
-          );
+                this.createProperty(
+                    lootBoxMarker.feature.properties,
+                    'search',
+                    p,
+                    this.translate
+                );
+            }
+
+            lootBoxMarker.bindTooltip(
+                (lootBoxMarker: any) => this.translate.instant(lootBoxMarker.properties.name),
+                {
+                    sticky: true,
+                    className: 'map-tooltip',
+                    offset: [0, 50],
+                }
+            );
+            lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
+                minWidth: 300,
+            }).openPopup(),
+                markers.push(lootBoxMarker);
         }
 
-        lootBoxMarker.bindTooltip(
-          (lootBoxMarker: any) => this.translate.instant(lootBoxMarker.properties.name),
-          {
-            sticky: true,
-            className: 'map-tooltip',
-            offset: [0, 50],
-          }
-        );
-        lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
-          minWidth: 300,
-        }).openPopup(),
-          markers.push(lootBoxMarker);
-      }
-
-      if (markers.length > 0) {
-        this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
-      }
+        if (markers.length > 0) {
+            this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
+        }
     }
 
     private addLevelChangers() {
-      let levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection: any[];
-      [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection] = this.mapComponent.getLevelChangerIcons();
+        let levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection: any[];
+        [levelChangerIcon, undergroundDoorIcon, rostokIcon, levelChangerDirection] = this.mapComponent.getLevelChangerIcons();
 
-      let markers: any[] = [];
+        let markers: any[] = [];
 
-      for (let levelChanger of this.gamedata.levelChangers.filter(x => x.locationId == this.location.id)) {
-        let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
+        for (let levelChanger of this.gamedata.levelChangers.filter(x => x.locationId == this.location.id)) {
+            let destLocation: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == levelChanger.destinationLocationId) as Location;
 
-        let markerIcon = null;
+            let markerIcon = null;
 
-        if (destLocation.isUnderground) {
-          markerIcon = undergroundDoorIcon;
+            if (destLocation.isUnderground) {
+                markerIcon = undergroundDoorIcon;
+            }
+            else if (levelChanger.direction == "level_changer_rostok") {
+                markerIcon = rostokIcon;
+            }
+            else {
+                markerIcon = levelChangerDirection.find(x => x.name == levelChanger.direction);
+
+                if (!markerIcon) {
+                    markerIcon = levelChangerIcon;
+                }
+            }
+
+            let canvasMarker = new this.mapComponent.svgMarker([levelChanger.z + this.zShift, levelChanger.x + this.xShift], {
+                icon: markerIcon,
+                renderer: this.canvasRenderer,
+                radius: markerIcon.radius
+            });
+
+            canvasMarker.properties = {};
+            canvasMarker.properties.levelChanger = levelChanger;
+            canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
+            canvasMarker.properties.typeUniqueName = 'level-changers';
+
+            markers.push(canvasMarker);
+            canvasMarker.properties.ableToSearch = false;
+            canvasMarker.feature = {};
+            canvasMarker.feature.properties = {};
+            canvasMarker.isUnderground = true;
+
+            canvasMarker.properties.destination = destLocation.uniqueName;
+
+            canvasMarker.bindTooltip(
+                (marker: any) =>
+                    this.translate.instant(marker.properties.name),
+                {
+                    sticky: true,
+                    className: 'map-tooltip',
+                    offset: [0, 50],
+                }
+            );
         }
-        else if (levelChanger.direction == "level_changer_rostok") {
-          markerIcon = rostokIcon;
-        }
-        else {
-          markerIcon = levelChangerDirection.find(x => x.name == levelChanger.direction)?.icon;
 
-          if (!markerIcon) {
-              markerIcon = levelChangerIcon.icon;
-          }
-        }
-
-        let canvasMarker = new this.mapComponent.svgMarker([levelChanger.z + this.zShift, levelChanger.x + this.xShift], {
-          icon: markerIcon,
-          renderer: this.canvasRenderer
-        });
-
-        canvasMarker.properties = {};
-        canvasMarker.properties.levelChanger = levelChanger;
-        canvasMarker.properties.name = levelChanger.locale ? levelChanger.locale : 'level-changer';
-        canvasMarker.properties.typeUniqueName = 'level-changers';
-
-        markers.push(canvasMarker);
-        canvasMarker.properties.ableToSearch = false;
-        canvasMarker.feature = {};
-        canvasMarker.feature.properties = {};
-        canvasMarker.isUnderground = true;
-
-        canvasMarker.properties.destination = destLocation.uniqueName;
-
-        canvasMarker.bindTooltip(
-          (marker: any) =>
-            this.translate.instant(marker.properties.name),
-          {
-            sticky: true,
-            className: 'map-tooltip',
-            offset: [0, 50],
-          }
-        );
-      }
-
-      this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
+        this.addLayerToMap(L.layerGroup(markers), levelChangerIcon.uniqueName);
     }
 
     private addAnomalyZones(): void {
-      let anomalyZoneIcon, anomalyZoneNoArtIcon;
-      [anomalyZoneIcon, anomalyZoneNoArtIcon] = this.mapComponent.getAnomaliesIcons();
+        let anomalyZoneIcon, anomalyZoneNoArtIcon;
+        [anomalyZoneIcon, anomalyZoneNoArtIcon] = this.mapComponent.getAnomaliesIcons();
 
-      let anomalies: any[] = [];
-      let anomaliesNoArt: any[] = [];
-      let artefactWays: any[] = [];
+        let anomalies: any[] = [];
+        let anomaliesNoArt: any[] = [];
+        let artefactWays: any[] = [];
 
-      for (let zone of this.gamedata.anomalyZones.filter(x => x.locationId == this.location.id)) {
+        for (let zone of this.gamedata.anomalyZones.filter(x => x.locationId == this.location.id)) {
 
-        const defaultType: string = 'anomaly-zone';
+            const defaultType: string = 'anomaly-zone';
 
-        let canvasMarker;
+            let canvasMarker;
 
-        if (
-          zone.anomaliySpawnSections != null &&
-          zone.anomaliySpawnSections.length > 0
-        ) {
-          canvasMarker = new this.mapComponent.svgMarker([zone.z + this.zShift, zone.x + this.xShift], {
-            icon: anomalyZoneIcon.icon,
-            renderer: this.canvasRenderer
-          });
-        } else {
-          canvasMarker = new this.mapComponent.svgMarker([zone.z + this.zShift, zone.x + this.xShift], {
-            icon: anomalyZoneNoArtIcon.icon,
-            renderer: this.canvasRenderer
-          });
+            let hasArtefacts = zone.anomaliySpawnSections != null && zone.anomaliySpawnSections.length > 0;
+            let icon = hasArtefacts ? anomalyZoneIcon : anomalyZoneNoArtIcon;
+
+            canvasMarker = new this.mapComponent.svgMarker([zone.z + this.zShift, zone.x + this.xShift], {
+                icon: icon,
+                renderer: this.canvasRenderer,
+                radius: icon.radius
+            });
+
+            canvasMarker.properties = {};
+            canvasMarker.properties.coordinates = { lat: zone.z, lng: zone.x };
+            canvasMarker.properties.zoneModel = zone;
+
+            if (
+                zone.anomaliySpawnSections != null &&
+                zone.anomaliySpawnSections.length > 0
+            ) {
+                canvasMarker.properties.anomaliySpawnSections =
+                    zone.anomaliySpawnSections;
+                canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
+                canvasMarker.properties.ableToSearch = true;
+                canvasMarker.properties.typeUniqueName = defaultType;
+                canvasMarker.properties.name = zone.name ? zone.name : defaultType;
+
+                anomalies.push(canvasMarker);
+
+                if (location) {
+                    canvasMarker.properties.locationUniqueName = this.location.uniqueName;
+                    canvasMarker.properties.locationName = this.location.uniqueName;
+                }
+            } else {
+                anomaliesNoArt.push(canvasMarker);
+                canvasMarker.properties.ableToSearch = false;
+                canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
+            }
+
+            canvasMarker.properties.zoneModel.name = canvasMarker.properties.name;
+
+            canvasMarker.bindTooltip(
+                (zone: any) => {
+                    return this.mapService.createAnomalyZoneTooltip(zone);
+                },
+                { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
+            );
+            canvasMarker
+                .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, true), {
+                    minWidth: 300,
+                })
+                .openPopup();
         }
 
-        canvasMarker.properties = {};
-        canvasMarker.properties.coordinates = {lat: zone.z, lng: zone.x};
-        canvasMarker.properties.zoneModel = zone;
+        try {
+            if (anomalies.length > 0) {
+                this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
+            }
 
-        if (
-          zone.anomaliySpawnSections != null &&
-          zone.anomaliySpawnSections.length > 0
-        ) {
-          canvasMarker.properties.anomaliySpawnSections =
-            zone.anomaliySpawnSections;
-          canvasMarker.properties.markType = anomalyZoneIcon.cssClass;
-          canvasMarker.properties.ableToSearch = true;
-          canvasMarker.properties.typeUniqueName = defaultType;
-          canvasMarker.properties.name = zone.name ? zone.name : defaultType;
+            if (anomaliesNoArt.length > 0) {
+                this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
+            }
 
-          anomalies.push(canvasMarker);
-
-          if (location) {
-            canvasMarker.properties.locationUniqueName = this.location.uniqueName;
-            canvasMarker.properties.locationName = this.location.uniqueName;
-          }
-        } else {
-          anomaliesNoArt.push(canvasMarker);
-          canvasMarker.properties.ableToSearch = false;
-          canvasMarker.properties.name = zone.name ? zone.name : 'st_name_anomal_zone';
+            if (artefactWays.length > 0) {
+                this.addLayerToMap(L.layerGroup(artefactWays), 'artefact-ways');
+            }
+        } catch (e) {
+            console.log(e);
         }
-
-        canvasMarker.properties.zoneModel.name = canvasMarker.properties.name;
-
-        canvasMarker.bindTooltip(
-          (zone: any) => {
-            return this.mapService.createAnomalyZoneTooltip(zone);
-          },
-          { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
-        );
-        canvasMarker
-          .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, true), {
-            minWidth: 300,
-          })
-          .openPopup();
-      }
-
-      try {
-        if (anomalies.length > 0) {
-          this.addLayerToMap(L.layerGroup(anomalies), anomalyZoneIcon.uniqueName);
-        }
-
-        if (anomaliesNoArt.length > 0) {
-          this.addLayerToMap(L.layerGroup(anomaliesNoArt), anomalyZoneNoArtIcon.uniqueName);
-        }
-
-        if (artefactWays.length > 0) {
-            this.addLayerToMap(L.layerGroup(artefactWays), 'artefact-ways');
-        }
-      } catch (e) {
-        console.log(e);
-      }
     }
 
     private createProperty(
-      object: any,
-      propertyName: string,
-      array: string[],
-      translate: TranslateService
+        object: any,
+        propertyName: string,
+        array: string[],
+        translate: TranslateService
     ): void {
-      Object.defineProperty(object, propertyName, {
-        get: function () {
-          try {
-            return this.array.map((x: string) => translate.instant(x)).join(', ');
-          } catch (ex) {
-            console.error(this.array);
-            throw ex;
-          }
-        },
-        set: function (array) {
-          this.array = array;
-        },
-      });
+        Object.defineProperty(object, propertyName, {
+            get: function () {
+                try {
+                    return this.array.map((x: string) => translate.instant(x)).join(', ');
+                } catch (ex) {
+                    console.error(this.array);
+                    throw ex;
+                }
+            },
+            set: function (array) {
+                this.array = array;
+            },
+        });
 
-      object[propertyName] = array;
+        object[propertyName] = array;
     }
 
     private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
-      layer.ableToSearch = ableToSearch;
-      layer.name = name;
-      layer.isUnderground = true;
-      this.layers.push(layer);
+        layer.ableToSearch = ableToSearch;
+        layer.name = name;
+        layer.isUnderground = true;
+        this.layers.push(layer);
     }
 
     private async ngOnDestroy(): Promise<void> {
-      if (this.map) {
-        this.map.remove();
-        this.map = null;
-      }
+        if (this.map) {
+            this.map.remove();
+            this.map = null;
+        }
     }
 }
