@@ -743,15 +743,18 @@ export class MapHocComponent {
 
                 for (let i = inputs.length - 1; i >= 0; i--) {
                     input = inputs[i];
-                    inputTop = inputsTop[i];
                     layer = this._getLayer(input.layerId).layer;
 
-                    if (inputTop.checked) {
-                        input.checked = true;
-                        addedLayers.push(layer);
-                    } else if (!inputTop.checked) {
-                        input.checked = false;
-                        removedLayers.push(layer);
+                    if (layer.topId) {
+                        inputTop = inputsTop[layer.topId];
+
+                        if (inputTop.checked) {
+                            input.checked = true;
+                            addedLayers.push(layer);
+                        } else if (!inputTop.checked) {
+                            input.checked = false;
+                            removedLayers.push(layer);
+                        }
                     }
                 }
 
@@ -2224,15 +2227,11 @@ export class MapHocComponent {
                     if (items) {
                         this.items = items;
 
-                        console.log(items)
-
                         const uniqueTypes: string[] = Array.from(
                             new Set(
                                 items.map(item => item.category)
                             )
                         );
-
-                        console.log(uniqueTypes)
                     }
                 });
             }

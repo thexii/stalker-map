@@ -444,7 +444,7 @@ export class MapComponent {
 
     this.createCompareControl();
 
-    this.createStashFilter();
+    //this.createStashFilter();
 
     let bounds = [
         [0, 0]
@@ -568,7 +568,7 @@ export class MapComponent {
     this.layerContoller.addTo(this.map)
     //L.control.compare({ position: 'topright' }).addTo(this.map);
 
-    L.control.stashFilter({ gameCategories: itemsTypes, categoriesConfig: this.mapConfig.itemsCategoriesSettings, layers: this.layers }).addTo(this.map);
+    //L.control.stashFilter({ gameCategories: itemsTypes, categoriesConfig: this.mapConfig.itemsCategoriesSettings, layers: this.layers }).addTo(this.map);
 
     this.map.on('drag', () => {
         this.map.panInsideBounds(bounds, {
@@ -1094,7 +1094,6 @@ export class MapComponent {
         },
 
         _onInputClickFinal(addedLayers: any, removedLayers: any) {
-            // Bugfix issue 2318: Should remove all old layers before readding new ones
             for (let i = 0; i < removedLayers.length; i++) {
                 if (this._map.hasLayer(removedLayers[i])) {
                     this._map.removeLayer(removedLayers[i]);

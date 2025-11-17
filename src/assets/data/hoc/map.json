@@ -15119,6 +15119,24 @@
     {
       "items": [
         {
+          "uniqueName": "Medkit",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "Vodka",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 3609.9285,
+      "z": 5890.4385,
+      "y": 7.340205,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
           "uniqueName": "Energetic",
           "count": 1,
           "probability": 0
@@ -15396,19 +15414,6 @@
       "x": 5846.162,
       "z": 5392.6494,
       "y": 20.10677,
-      "dlc": null
-    },
-    {
-      "items": [
-        {
-          "uniqueName": "Vodka",
-          "count": 1,
-          "probability": 0
-        }
-      ],
-      "x": 3612.357,
-      "z": 5886.1763,
-      "y": 7.1804104,
       "dlc": null
     },
     {
@@ -17276,7 +17281,7 @@
     {
       "items": [
         {
-          "uniqueName": "Medkit",
+          "uniqueName": "ArmyMedkit",
           "count": 2,
           "probability": 0
         }
@@ -22861,10 +22866,10 @@
         "Stash_Ammo_Smart_CommonRare"
       ],
       "items": null,
-      "x": 1581.6915,
-      "z": 6312.4043,
-      "y": -11.798859,
-      "dlc": "None"
+      "x": 1612.7694,
+      "z": 6503.2207,
+      "y": 6.53375,
+      "dlc": "BaseGame"
     },
     {
       "sid": "194D4F0B40BBF620CA7331A94BEBAF30",
@@ -28104,7 +28109,10 @@
           ]
         }
       ],
-      "stashPrototypes": null,
+      "stashPrototypes": [
+        "Stash_Ammo_Smart_CommonRare",
+        "StashMedicine_Smart"
+      ],
       "items": null,
       "x": 5653.1787,
       "z": 3794.604,
@@ -31501,7 +31509,8 @@
         {
           "playerRank": "ERank::Master",
           "itemGenerators": [
-            "Districtno.1_RiverPort_StashGenerator1_652A8C284CF48B61A11DDC8AE43B54FC"
+            "Districtno.1_RiverPort_StashGenerator1_652A8C284CF48B61A11DDC8AE43B54FC",
+            "Stash_GunD12_MagPaired"
           ]
         }
       ],
@@ -32655,6 +32664,28 @@
       "x": 4388.427,
       "z": 3773.4363,
       "y": 8.120987,
+      "dlc": "None"
+    },
+    {
+      "sid": "701CD39040F9197BF6BEBD809FD67E98",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": true,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "GamePass_Stash_ItemGenerator_Rare"
+          ]
+        }
+      ],
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
+      "items": null,
+      "x": 1532.4858,
+      "z": 4680.799,
+      "y": 8.511997,
       "dlc": "None"
     },
     {
@@ -34040,7 +34071,8 @@
         {
           "playerRank": "ERank::Master",
           "itemGenerators": [
-            "Jupiter_MobileBuildingEnterprise_StashGenerator2_7B23970540B6CF56789E8DAEECDA4184"
+            "Jupiter_MobileBuildingEnterprise_StashGenerator2_7B23970540B6CF56789E8DAEECDA4184",
+            "Stash_GunPKP_MagLarge"
           ]
         }
       ],
@@ -35008,7 +35040,10 @@
           ]
         }
       ],
-      "stashPrototypes": null,
+      "stashPrototypes": [
+        "Stash_Ammo_Smart_CommonRare",
+        "StashMedicine_Smart"
+      ],
       "items": null,
       "x": 707.05,
       "z": 4741.2,
@@ -36620,12 +36655,15 @@
           ]
         }
       ],
-      "stashPrototypes": null,
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
       "items": null,
-      "x": 1612.7439,
-      "z": 6503.207,
-      "y": 6.5337505,
-      "dlc": "None"
+      "x": 1581.7415,
+      "z": 6312.4375,
+      "y": -11.798161,
+      "dlc": "BaseGame"
     },
     {
       "sid": "905BCE69414F3E75E56A4184B863C3D4",
@@ -40764,7 +40802,10 @@
           ]
         }
       ],
-      "stashPrototypes": null,
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
       "items": null,
       "x": 4536.3223,
       "z": 5904.9795,
@@ -41983,7 +42024,10 @@
           ]
         }
       ],
-      "stashPrototypes": null,
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
       "items": null,
       "x": 2595.743,
       "z": 6005.725,
@@ -42811,7 +42855,8 @@
         {
           "playerRank": "ERank::Experienced",
           "itemGenerators": [
-            "Swamp_FishingHamlet_StashGenerator2_C70EEF9C4875F635E951209289F93893"
+            "Swamp_FishingHamlet_StashGenerator2_C70EEF9C4875F635E951209289F93893",
+            "Stash_GunGP37_MagLarge"
           ]
         }
       ],
@@ -47092,7 +47137,8 @@
         {
           "playerRank": "ERank::Master",
           "itemGenerators": [
-            "Jupiter_FluoridationStation_StashGenerator1_EB4F1B574DFBE3368BC2EDB20E10085E"
+            "Jupiter_FluoridationStation_StashGenerator1_EB4F1B574DFBE3368BC2EDB20E10085E",
+            "Stash_GunGrim_MagLarge"
           ]
         }
       ],
@@ -49568,7 +49614,7 @@
       "x": 4931.11,
       "z": 3262.5,
       "y": 66.95,
-      "dlc": "None"
+      "dlc": "BaseGame"
     },
     {
       "sid": "8E25C39A402B56C3607E6EBD1C53850C",
@@ -59515,7 +59561,7 @@
       "itemGenerators": [
         {
           "category": "EItemGenerationCategory::Consumable",
-          "difficulty": null,
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium, EGameDifficulty::Hard",
           "allowSameCategoryGeneration": false,
           "possibleItems": [
             {
@@ -59776,6 +59822,83 @@
               "weight": 5,
               "minCount": 18,
               "maxCount": 24
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyCommon",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyRare",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyEpic",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Stalker",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "Bandage",
+              "chance": 0.4,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 2
+            },
+            {
+              "name": "Medkit",
+              "chance": 0.4,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "name": "Vodka",
+              "chance": 1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "name": "Energetic",
+              "chance": 0.5,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 2
             }
           ]
         }
@@ -60178,6 +60301,118 @@
               "weight": 2,
               "minCount": 55,
               "maxCount": 65
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyCommon",
+              "chance": 0.2,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyRare",
+              "chance": 0.2,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyEpic",
+              "chance": 0.2,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Easy, EGameDifficulty::Medium",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyLegendary",
+              "chance": 0.2,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Hard, EGameDifficulty::Stalker",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyCommon",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Hard, EGameDifficulty::Stalker",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyRare",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Hard, EGameDifficulty::Stalker",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyEpic",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "category": "EItemGenerationCategory::Consumable",
+          "difficulty": "EGameDifficulty::Hard, EGameDifficulty::Stalker",
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "MoneyLegendary",
+              "chance": 0.1,
+              "weight": 0,
+              "minCount": 1,
+              "maxCount": 1
             }
           ]
         }
@@ -63904,6 +64139,82 @@
               "weight": 0,
               "minCount": 1,
               "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stash_GunD12_MagPaired",
+      "itemGenerators": [
+        {
+          "category": "EItemGenerationCategory::Attach",
+          "difficulty": null,
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "GunD12_MagPaired",
+              "chance": 1,
+              "weight": 0,
+              "minCount": 0,
+              "maxCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stash_GunGP37_MagLarge",
+      "itemGenerators": [
+        {
+          "category": "EItemGenerationCategory::Attach",
+          "difficulty": null,
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "GunGP37_MagLarge",
+              "chance": 1,
+              "weight": 0,
+              "minCount": 0,
+              "maxCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stash_GunGrim_MagLarge",
+      "itemGenerators": [
+        {
+          "category": "EItemGenerationCategory::Attach",
+          "difficulty": null,
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "GunGrim_MagLarge",
+              "chance": 1,
+              "weight": 0,
+              "minCount": 0,
+              "maxCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stash_GunPKP_MagLarge",
+      "itemGenerators": [
+        {
+          "category": "EItemGenerationCategory::Attach",
+          "difficulty": null,
+          "allowSameCategoryGeneration": false,
+          "possibleItems": [
+            {
+              "name": "GunPKP_MagLarge",
+              "chance": 1,
+              "weight": 0,
+              "minCount": 0,
+              "maxCount": 0
             }
           ]
         }
