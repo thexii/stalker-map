@@ -99,6 +99,7 @@
   ],
   "minZoom": 0,
   "maxZoom": 4,
+  "minPixelsPerMeter": 5,
   "startZoom": 1,
   "rulerEnabled": true,
   "lengthFactor": 1,

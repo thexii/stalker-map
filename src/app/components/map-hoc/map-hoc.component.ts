@@ -188,6 +188,16 @@ export class MapHocComponent {
 
         this.scaleFactor = width / this.gamedata.widthInMeters;
 
+        let maxZoom = gameConfig.maxZoom;
+
+        let currentPixelsInMeter = Math.pow(2, maxZoom) * this.scaleFactor * window.devicePixelRatio;
+
+        if (currentPixelsInMeter < gameConfig.minPixelsPerMeter) {
+            let neededlogValue = gameConfig.minPixelsPerMeter / (this.scaleFactor * window.devicePixelRatio);
+            let correctZoom = Math.ceil(Math.log(neededlogValue) / Math.log(2));
+            maxZoom = correctZoom;
+        }
+
         let customCrs = L.extend({}, L.CRS.Simple, {
             transformation: new L.Transformation(this.scaleFactor, 0, this.scaleFactor, 0),
         });
@@ -202,7 +212,7 @@ export class MapHocComponent {
             center: center,
             zoom: gameConfig.startZoom,
             minZoom: gameConfig.minZoom,
-            maxZoom: gameConfig.maxZoom,
+            maxZoom: maxZoom,
             crs: customCrs,
             markerZoomAnimation: !0,
             zoomAnimation: !0,
@@ -237,7 +247,7 @@ export class MapHocComponent {
                 tileSize: tileSize,
                 zoomOffset: zoomOffset,
                 minZoom: gameConfig.minZoom,
-                maxZoom: gameConfig.maxZoom,
+                maxZoom: maxZoom,
                 maxNativeZoom: 3,
                 noWrap: true
             })
@@ -247,7 +257,8 @@ export class MapHocComponent {
                     tileSize: tileSize,
                     zoomOffset: zoomOffset,
                     minZoom: gameConfig.minZoom,
-                    maxZoom: gameConfig.maxZoom,
+                    maxZoom: maxZoom,
+                    maxNativeZoom: 4,
                     noWrap: true
                 })
 
@@ -416,6 +427,15 @@ export class MapHocComponent {
         );
         this.layerContoller.addTo(this.map);
         this.createSearchController();
+
+        let carousel = document.getElementById(this.overlaysListTop) as HTMLElement;
+
+        carousel.addEventListener('wheel', function (e) {
+            if (e.deltaY > 0)
+                carousel.scrollLeft += 100;
+            else
+                carousel.scrollLeft -= 100;
+        });
     }
 
     private createSearchController(): void {

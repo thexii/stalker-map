@@ -8,6 +8,7 @@ export class MapConfig {
   public minZoom: number;
   public maxZoom: number;
   public startZoom: number;
+  public minPixelsPerMeter: number;
   public globalMapFileName: string;
   public markersConfig: MarkersLayerConfig[];
   public rankSetting: RankSetting[];

@@ -403,10 +403,11 @@ export class MapService {
                 this._zoomHandler = () => {
                     if (this.markers[0]._map) {
                         this._recalculateRadius(this.markers[0]._map._zoom, this.markers[0].options.radius);
+                        let radius = this._calculatedRadius * this.markers[0]._map.scaleFactor;
 
                         for (let i = 0; i < this.markers.length; i++) {
-                            this.markers[i]._radius = this._calculatedRadius * this.markers[0]._map.scaleFactor;
-                            this.markers[i]._radius2 = this.markers[i]._radius * 2;
+                            this.markers[i]._radius = radius;
+                            this.markers[i]._radius2 = radius * 2;
                             //this._layer._updatePath();
                         }
                     }

@@ -451,17 +451,7 @@ export class MapComponent {
         L.imageOverlay(`/assets/images/maps/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
         this.map.fitBounds(bounds);
 
-        markWidth = gameConfig.markerFactor * Math.pow(2, this.map.getZoom());
-        document.documentElement.style.setProperty(
-            `--map-mark-width`, `${markWidth}px`);
-
         this.map.setMaxBounds(bounds);
-
-        this.map.on('zoomend', () => {
-            markWidth = gameConfig.markerFactor * Math.pow(2, this.map.getZoom());
-            document.documentElement.style.setProperty(
-                `--map-mark-width`, `${markWidth}px`);
-        });
 
 
         this.canvasRenderer = this.mapService.getCanvasRenderer();
