@@ -2820,7 +2820,7 @@
       "x": 2594.1921,
       "z": 5925.973,
       "y": 4.7027025,
-      "dlc": "None"
+      "dlc": "BaseGame"
     },
     {
       "title": "sid_locations_loc_13_crystal_scs_name",
@@ -7521,6 +7521,24 @@
     {
       "lairs": [
         {
+          "faction": "Neutrals",
+          "type": "ELairType::ALifeLair",
+          "maxSpawnRank": "ERank::Master",
+          "minSpawnRank": "ERank::Experienced",
+          "canBeCaptured": false,
+          "canAttack": false,
+          "canDefend": false,
+          "activeLair": true
+        }
+      ],
+      "x": 2594.4475,
+      "z": 5985.7173,
+      "y": 9.27,
+      "dlc": null
+    },
+    {
+      "lairs": [
+        {
           "faction": "Rat",
           "type": null,
           "maxSpawnRank": "ERank::Master",
@@ -8119,9 +8137,9 @@
           "type": "ELairType::ALifeLair",
           "maxSpawnRank": "ERank::Master",
           "minSpawnRank": "ERank::Experienced",
-          "canBeCaptured": true,
-          "canAttack": true,
-          "canDefend": true,
+          "canBeCaptured": false,
+          "canAttack": false,
+          "canDefend": false,
           "activeLair": true
         }
       ],
@@ -8668,6 +8686,24 @@
       "x": 2881.2454,
       "z": 4091.979,
       "y": 9.388302,
+      "dlc": null
+    },
+    {
+      "lairs": [
+        {
+          "faction": "Neutrals",
+          "type": "ELairType::ALifeLair",
+          "maxSpawnRank": "ERank::Master",
+          "minSpawnRank": "ERank::Experienced",
+          "canBeCaptured": false,
+          "canAttack": false,
+          "canDefend": false,
+          "activeLair": false
+        }
+      ],
+      "x": 2623.5476,
+      "z": 5966.5176,
+      "y": 9.27,
       "dlc": null
     },
     {
@@ -9245,8 +9281,8 @@
       "radius": 0,
       "x": 4997.7,
       "z": 4672.7705,
-      "y": 22.94418,
-      "dlc": "None"
+      "y": 23.69418,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9303,10 +9339,10 @@
       "description": null,
       "type": "ESpawnType::PsyAnomaly",
       "radius": 0,
-      "x": 4968.137,
+      "x": 4968.637,
       "z": 4684.5513,
-      "y": 24.295671,
-      "dlc": "None"
+      "y": 24.34567,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9315,8 +9351,8 @@
       "radius": 0,
       "x": 5012.5127,
       "z": 4677.2036,
-      "y": 22.747292,
-      "dlc": "None"
+      "y": 23.897293,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9545,8 +9581,8 @@
       "radius": 0,
       "x": 4998.2427,
       "z": 4701.9136,
-      "y": 23.679926,
-      "dlc": "None"
+      "y": 27.229927,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9593,10 +9629,10 @@
       "description": null,
       "type": "ESpawnType::PsyAnomaly",
       "radius": 0,
-      "x": 4985.686,
-      "z": 4695.0015,
-      "y": 23.991444,
-      "dlc": "None"
+      "x": 4985.786,
+      "z": 4696.0513,
+      "y": 25.791443,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9715,8 +9751,8 @@
       "radius": 0,
       "x": 4981.9214,
       "z": 4681.4956,
-      "y": 22.513151,
-      "dlc": "None"
+      "y": 24.063152,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9783,10 +9819,10 @@
       "description": null,
       "type": "ESpawnType::PsyAnomaly",
       "radius": 0,
-      "x": 5004.38,
-      "z": 4684.036,
-      "y": 24.88653,
-      "dlc": "None"
+      "x": 5014.03,
+      "z": 4686.786,
+      "y": 24.98653,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9795,8 +9831,8 @@
       "radius": 0,
       "x": 4992.2686,
       "z": 4657.8354,
-      "y": 21.85769,
-      "dlc": "None"
+      "y": 24.707691,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -9875,18 +9911,18 @@
       "radius": 0,
       "x": 4972.2974,
       "z": 4671.139,
-      "y": 21.972305,
-      "dlc": "None"
+      "y": 25.822304,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
       "description": null,
       "type": "ESpawnType::PsyAnomaly",
       "radius": 0,
-      "x": 4972.5967,
-      "z": 4697.0483,
-      "y": 24.09781,
-      "dlc": "None"
+      "x": 4975.397,
+      "z": 4699.498,
+      "y": 28.49781,
+      "dlc": "BaseGame"
     },
     {
       "title": null,
@@ -13280,11 +13316,16 @@
           "uniqueName": "GunObrez_SG",
           "count": 2,
           "probability": 0
+        },
+        {
+          "uniqueName": "supack_an_upm_sever",
+          "count": 1,
+          "probability": 0
         }
       ],
-      "x": 2858.4443,
-      "z": 3796.7122,
-      "y": 14.505711,
+      "x": 2860.4465,
+      "z": 3797.016,
+      "y": 14.147752,
       "dlc": null
     },
     {
@@ -13686,6 +13727,19 @@
     {
       "items": [
         {
+          "uniqueName": "Bandage",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2492.708,
+      "z": 5550.6074,
+      "y": 8.532849,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
           "uniqueName": "A556D",
           "count": 3,
           "probability": 0
@@ -13896,19 +13950,6 @@
       "x": 4194.121,
       "z": 1947.4404,
       "y": -32.170082,
-      "dlc": null
-    },
-    {
-      "items": [
-        {
-          "uniqueName": "Vodka",
-          "count": 5,
-          "probability": 0
-        }
-      ],
-      "x": 2365.3652,
-      "z": 5441.476,
-      "y": 4.122639,
       "dlc": null
     },
     {
@@ -14399,6 +14440,19 @@
     {
       "items": [
         {
+          "uniqueName": "Vodka",
+          "count": 5,
+          "probability": 0
+        }
+      ],
+      "x": 2365.3652,
+      "z": 5441.4766,
+      "y": 4.122639,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
           "uniqueName": "A556D",
           "count": 1,
           "probability": 0
@@ -14785,6 +14839,24 @@
       "x": 7219.3584,
       "z": 5469.479,
       "y": 17.523865,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "GunGrim_ST",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "APG7V",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2631.6846,
+      "z": 3378.4407,
+      "y": -3.3660567,
       "dlc": null
     },
     {
@@ -15222,11 +15294,31 @@
           "uniqueName": "A918D",
           "count": 2,
           "probability": 0
+        },
+        {
+          "uniqueName": "Vodka",
+          "count": 4,
+          "probability": 0
+        },
+        {
+          "uniqueName": "CannedFood",
+          "count": 2,
+          "probability": 0
+        },
+        {
+          "uniqueName": "Water",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "supack_SQ97_GeneratorNote",
+          "count": 1,
+          "probability": 0
         }
       ],
-      "x": 2596.0505,
-      "z": 6006.092,
-      "y": 10.024863,
+      "x": 2593.4268,
+      "z": 6000.898,
+      "y": 6.8867726,
       "dlc": null
     },
     {
@@ -16770,6 +16862,19 @@
       "x": 2539.3752,
       "z": 4625.1694,
       "y": 8.265349,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "A545D",
+          "count": 2,
+          "probability": 0
+        }
+      ],
+      "x": 2481.9138,
+      "z": 5542.706,
+      "y": 8.015857,
       "dlc": null
     },
     {
@@ -19037,6 +19142,19 @@
     {
       "items": [
         {
+          "uniqueName": "Vodka",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2512.3599,
+      "z": 5550.7417,
+      "y": 8.545674,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
           "uniqueName": "PSYBlocker",
           "count": 1,
           "probability": 0
@@ -20456,6 +20574,19 @@
       "x": 3331.39,
       "z": 4407.12,
       "y": 3.2237103,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "supack_ANCQ_25_KartaushDiaryPage",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 3247.94,
+      "z": 4060.62,
+      "y": 7.3413377,
       "dlc": null
     },
     {
@@ -22821,6 +22952,63 @@
     {
       "items": [
         {
+          "uniqueName": "supack_an_upm_sever",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2600.36,
+      "z": 5982.01,
+      "y": 4.65,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "Vodka",
+          "count": 3,
+          "probability": 0
+        }
+      ],
+      "x": 2634.79,
+      "z": 5912.23,
+      "y": 8.823333,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "Vodka",
+          "count": 3,
+          "probability": 0
+        }
+      ],
+      "x": 2643.37,
+      "z": 5901.3833,
+      "y": 8.243333,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "GunG37V2_ST",
+          "count": 1,
+          "probability": 0
+        },
+        {
+          "uniqueName": "supack_SQ97_PelengatorRoomNote",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2608.99,
+      "z": 6000.66,
+      "y": 5.1782794,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
           "uniqueName": "SQ10_SeverNoteDubniy",
           "count": 1,
           "probability": 0
@@ -23070,6 +23258,45 @@
       "x": 7387.148,
       "z": 5668.576,
       "y": 1.2413334,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "supack_SQ96_C03_ToolKit3",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 1923.2417,
+      "z": 6427.25,
+      "y": 9.711703,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "supack_SQ96_C01_ToolKit1",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 2589.5764,
+      "z": 4931.9297,
+      "y": 2.3271773,
+      "dlc": null
+    },
+    {
+      "items": [
+        {
+          "uniqueName": "Newbee_Neutral_Armor",
+          "count": 1,
+          "probability": 0
+        }
+      ],
+      "x": 1001.9467,
+      "z": 4813.3643,
+      "y": 10.563306,
       "dlc": null
     },
     {
@@ -25497,6 +25724,43 @@
       "z": 6409.0444,
       "y": 32.95441,
       "dlc": "None"
+    },
+    {
+      "sid": "12B083CB48ADF7E30C0221B3104A84B2",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": true,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "SQ95_QSBIG_CartStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Experienced",
+          "itemGenerators": [
+            "SQ95_QSBIG_CartStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Veteran",
+          "itemGenerators": [
+            "SQ95_QSBIG_CartStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Master",
+          "itemGenerators": [
+            "SQ95_QSBIG_CartStash"
+          ]
+        }
+      ],
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2632.2273,
+      "z": 3377.4563,
+      "y": -3.91316,
+      "dlc": "BaseGame"
     },
     {
       "sid": "1338292B4110171BFB69FF93DEE8B875",
@@ -36014,6 +36278,43 @@
       "dlc": "None"
     },
     {
+      "sid": "70AD27E44ABE88C9719A349645816F53",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": true,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "SQ95_QSBIG_MainroomStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Experienced",
+          "itemGenerators": [
+            "SQ95_QSBIG_MainroomStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Veteran",
+          "itemGenerators": [
+            "SQ95_QSBIG_MainroomStash"
+          ]
+        },
+        {
+          "playerRank": "ERank::Master",
+          "itemGenerators": [
+            "SQ95_QSBIG_MainroomStash"
+          ]
+        }
+      ],
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2611.7307,
+      "z": 3346.4932,
+      "y": 0.95363754,
+      "dlc": "BaseGame"
+    },
+    {
       "sid": "70E80E784F87DE96B4780AA3D69DDB8B",
       "clueVariablePrototypeSID": "EmptyInherited",
       "spawnOnStart": true,
@@ -42037,6 +42338,28 @@
       "z": 3636.87,
       "y": 3.9,
       "dlc": "None"
+    },
+    {
+      "sid": "A389DA174272348C4A08B09E66E3126E",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": true,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "GamePass_Stash_ItemGenerator_Cheap"
+          ]
+        }
+      ],
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
+      "items": null,
+      "x": 2600.6147,
+      "z": 3361.3318,
+      "y": -0.32682592,
+      "dlc": "BaseGame"
     },
     {
       "sid": "A3B04A9949CA27AA3E62FD9F3CD08ECD",
@@ -49334,6 +49657,28 @@
       "dlc": "None"
     },
     {
+      "sid": "E3240F5643B7DDEF405C908198BA2149",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": true,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "GamePass_Stash_ItemGenerator_Cheap"
+          ]
+        }
+      ],
+      "stashPrototypes": [
+        "StashMedicine_Smart",
+        "Stash_Ammo_Smart_CommonRare"
+      ],
+      "items": null,
+      "x": 869.2457,
+      "z": 5184.995,
+      "y": 14.555188,
+      "dlc": "None"
+    },
+    {
       "sid": "E3832E54413C4293F3CC31898C86422F",
       "clueVariablePrototypeSID": "EmptyInherited",
       "spawnOnStart": true,
@@ -52280,6 +52625,30 @@
       "dlc": "None"
     },
     {
+      "sid": "5DB6E7A14019AF0539FF4DACB1C884DF",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 1051.19,
+      "z": 4714.91,
+      "y": 34.768364,
+      "dlc": "None"
+    },
+    {
+      "sid": "A0D07BB84523666C2AF91B8F1759B9EC",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 1048.44,
+      "z": 4722.14,
+      "y": 34.77089,
+      "dlc": "None"
+    },
+    {
       "sid": "BDAF159A416BD7D0978E26B54962CC0B",
       "clueVariablePrototypeSID": "EmptyInherited",
       "spawnOnStart": false,
@@ -54158,6 +54527,90 @@
       "dlc": "None"
     },
     {
+      "sid": "F3D4F16647A150DB2C0B4783210A77A5",
+      "clueVariablePrototypeSID": "supack_SQ100_MapMarkerAlternativeEnd",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2606.67,
+      "z": 6007.41,
+      "y": 4.54,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "8EFFA0304AB98308B5C1A19B71C65E95",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 3363.47,
+      "z": 5731.18,
+      "y": 7.85,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "58DF4F404E6E471E7D9A6986778B6EB0",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2644.31,
+      "z": 5913.77,
+      "y": 8.93,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "6E8C3B32414047DD9F92039B85C8C9AE",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2590.25,
+      "z": 6005.61,
+      "y": 4.93,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "876E4970428CC726EC7734B06347E124",
+      "clueVariablePrototypeSID": "supack_SQ102_CherepStash_Var3",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2916.15,
+      "z": 6243.12,
+      "y": 16.94,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "A6C596E7499C2C25A25E8F82F9771EA1",
+      "clueVariablePrototypeSID": "supack_SQ102_CherepStash_Var2",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2916.15,
+      "z": 6243.12,
+      "y": 16.94,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "BC8188C349E12B56AF4645B89578C898",
+      "clueVariablePrototypeSID": "supack_SQ102_CherepStash_Var1",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2916.15,
+      "z": 6243.12,
+      "y": 16.94,
+      "dlc": "BaseGame"
+    },
+    {
       "sid": "7E74775A4C7CAAC67C912CBBE38D5C86",
       "clueVariablePrototypeSID": "SQ10_MonolithStashSPO",
       "spawnOnStart": false,
@@ -54321,6 +54774,92 @@
       "z": 5696.3755,
       "y": 7.4140973,
       "dlc": "None"
+    },
+    {
+      "sid": "261F4AA44EEF5AB6D6EFEF944E724290",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2360.1938,
+      "z": 4475.0283,
+      "y": 3.9091125,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "329AAF0B408A813912A22C9C3901FBA6",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2334.6562,
+      "z": 4359.47,
+      "y": 3.7318866,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "A7A903AB4E812AC38AF11E9C2B1BE716",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2286.715,
+      "z": 4487.9795,
+      "y": 6.9080443,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "C8A4E27442BF9BB63F0471BAF95E371F",
+      "clueVariablePrototypeSID": "EmptyInherited",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": null,
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2254.1765,
+      "z": 4473.8125,
+      "y": 5.7639003,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "16D6D5FD4CE67F72B56449B53EB6EB27",
+      "clueVariablePrototypeSID": "supack__SQ98_MedulinStash",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "SQ98_reward_var3"
+          ]
+        }
+      ],
+      "stashPrototypes": null,
+      "items": null,
+      "x": 875.3343,
+      "z": 5185.314,
+      "y": 14.179028,
+      "dlc": "BaseGame"
+    },
+    {
+      "sid": "F0EFB4B14FC618CAE6A8F18DC6A0B7A3",
+      "clueVariablePrototypeSID": "supack__SQ99_ShelmaStash",
+      "spawnOnStart": false,
+      "itemGeneratorSettings": [
+        {
+          "playerRank": "ERank::Newbie",
+          "itemGenerators": [
+            "SQ99_reward_var1"
+          ]
+        }
+      ],
+      "stashPrototypes": null,
+      "items": null,
+      "x": 2367.3423,
+      "z": 5424.1763,
+      "y": 2.4207027,
+      "dlc": "BaseGame"
     },
     {
       "sid": "CB37978A40ED24DE615EC7B766C2C32D",
@@ -55119,7 +55658,7 @@
       "x": 1735.522,
       "z": 2950.2627,
       "y": 9.100646,
-      "dlc": "None"
+      "dlc": "BaseGame"
     },
     {
       "name": null,
