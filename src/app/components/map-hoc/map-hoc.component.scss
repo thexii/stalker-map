@@ -18,6 +18,13 @@
   color: white !important;
 }
 
+@media (max-width: 1024px) {
+    .leaflet-tooltip.s2-tooltip {
+        margin-left: -50%;
+        transform: translateX(-50%);
+    }
+}
+
 .leaflet-tooltip-right::before {
   display: none;
 }

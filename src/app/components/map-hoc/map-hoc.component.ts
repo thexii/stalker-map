@@ -1,4 +1,4 @@
-import { Lair, Marker } from './../../models/hoc/map-hoc';
+import { Lair, LairCluster, Marker } from './../../models/hoc/map-hoc';
 import {
     Component,
     HostListener,
@@ -1244,14 +1244,14 @@ export class MapHocComponent {
 
         for (let data of this.gamedata.lairs) {
             if (data.lairs.length == 1) {
-                let isMutant = mutants.includes(data.lairs[0]);
+                let isMutant = mutants.includes(data.lairs[0].faction);
                 let icon, title, desc, radius;
                 let dataToSearch: string[] = [];
 
                 if (isMutant) {
                     icon = monsterLair;
                     title = 'monster-lair';
-                    desc = data.lairs[0];
+                    desc = data.lairs[0].faction;
                     radius = campRadius;
 
                     dataToSearch.push(index.toString());
@@ -1277,6 +1277,7 @@ export class MapHocComponent {
                 marker.description = desc;
                 marker.feature = {};
                 marker.feature.properties = {};
+                marker.feature.properties.model = data.lairs[0];
                 
                 if (dataToSearch.length > 0 && isMutant) {
                     this.createTranslatableProperty(
@@ -1297,7 +1298,7 @@ export class MapHocComponent {
                     lairs.push(marker);
                 }
 
-                marker.bindTooltip((p: any) => this.createTooltip(p), {
+                marker.bindTooltip((p: any) => this.createLairTooltip(p), {
                     sticky: true,
                     className: 's2-tooltip',
                     offset: new Point(0, 50),
@@ -1331,7 +1332,7 @@ export class MapHocComponent {
                 }
 
                 for (let i = 0; i < icons.length; i++) {
-                    let isMutant = mutants.includes(data.lairs[i]);
+                    let isMutant = mutants.includes(data.lairs[i].faction);
                     let marker = this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], isMutant, index);
                     
                     if (isMutant) {
@@ -1357,7 +1358,7 @@ export class MapHocComponent {
             this.addLayerToMap(L.layerGroup(mutantLairs), 'monster-lair', true);
         }
 
-        function getIconAndFaction(data: Lair): { icon: any, faction: string, title: string, radius: number }[] {
+        function getIconAndFaction(data: LairCluster): { icon: any, faction: string, title: string, radius: number, model: Lair }[] {
             let title = 'stalker-respawn';
 
             let result = [];
@@ -1365,70 +1366,70 @@ export class MapHocComponent {
             for (let lair of data.lairs) {
                 let icon, desc;
 
-                if (lair.includes('Neutrals') || lair.includes('Diggers') || lair.includes('ShevchenkoStalkers')) {
+                if (lair.faction.includes('Neutrals') || lair.faction.includes('Diggers') || lair.faction.includes('ShevchenkoStalkers')) {
                     icon = stalkerCamp;
                     desc = 'sid_misc_answer_faction_Neutrals';
                 }
-                else if (lair.includes('Bandit')) {
+                else if (lair.faction.includes('Bandit')) {
                     icon = banditCamp;
                     desc = 'sid_misc_answer_faction_Bandit';
                 }
-                else if (lair.includes('Varta')) {
+                else if (lair.faction.includes('Varta')) {
                     icon = vartaCamp;
                     desc = 'sid_misc_answer_faction_Varta';
                 }
-                else if (lair.includes('Spark')) {
+                else if (lair.faction.includes('Spark')) {
                     icon = sparkCamp;
                     desc = 'sid_misc_answer_faction_Spark';
                 }
-                else if (lair.includes('Militaries') || lair.includes('MSOP')) {
+                else if (lair.faction.includes('Militaries') || lair.faction.includes('MSOP')) {
                     icon = armyCamp;
                     desc = 'sid_misc_answer_faction_Militaries';
                 }
-                else if (lair.includes('Mercenaries')) {
+                else if (lair.faction.includes('Mercenaries')) {
                     icon = mercCamp;
                     desc = 'sid_misc_answer_faction_Mercenaries';
                 }
-                else if (lair.includes('Monolith')) {
+                else if (lair.faction.includes('Monolith')) {
                     icon = monolithCamp;
                     desc = 'sid_misc_answer_faction_Monolith';
                 }
-                else if (lair.includes('Freedom')) {
+                else if (lair.faction.includes('Freedom')) {
                     icon = freedomCamp;
                     desc = 'sid_misc_answer_faction_Freedom';
                 }
-                else if (lair.includes('Duty')) {
+                else if (lair.faction.includes('Duty')) {
                     icon = dutyCamp;
                     desc = 'sid_misc_answer_faction_Duty';
                 }
-                else if (lair.includes('Corpus')) {
+                else if (lair.faction.includes('Corpus')) {
                     icon = corpusCamp;
                     desc = 'sid_misc_answer_faction_Corpus';
                 }
-                else if (lair.includes('Scientist')) {
+                else if (lair.faction.includes('Scientist')) {
                     icon = sciCamp;
                     desc = 'sid_misc_answer_faction_Scientist';
                 }
-                else if (lair.includes('Zombie')) {
+                else if (lair.faction.includes('Zombie')) {
                     icon = zombieCamp;
                     title = 'zombie-lair'
                     desc = '';
                 }
-                else if (lair.includes('Noon')) {
+                else if (lair.faction.includes('Noon')) {
                     icon = noonCamp;
                     desc = 'sid_misc_answer_faction_Noon';
                 }
-                else if (mutants.includes(lair)) {
+                else if (mutants.includes(lair.faction)) {
                     icon = monsterLair;
                     title = 'monster-lair';
-                    desc = lair
+                    desc = lair.faction
                 }
                 else {
                     console.log(lair)
                     continue;
                 }
 
-                result.push({icon: icon, faction: desc, title: title, radius: icon.radius})
+                result.push({icon: icon, faction: desc, title: title, radius: icon.radius, model: lair})
             }
 
             return result;
@@ -1455,6 +1456,7 @@ export class MapHocComponent {
         marker.description = markerData.faction;
         marker.feature = {};
         marker.feature.properties = {};
+        marker.feature.properties.model = markerData.model;
         
         if (dataToSearch.length > 0 && isMutant) {
             this.createTranslatableProperty(
@@ -1467,7 +1469,7 @@ export class MapHocComponent {
             marker.feature.properties.search = '';
         }
 
-        marker.bindTooltip((p: any) => this.createTooltip(p), {
+        marker.bindTooltip((p: any) => this.createLairTooltip(p), {
             sticky: true,
             className: 's2-tooltip',
             offset: new Point(0, 50),
@@ -2005,6 +2007,35 @@ export class MapHocComponent {
         }
 
         return html;
+    }
+
+    public createLairTooltip(marker: any) {
+        let html = `<div class="header-tip"><span class="header">${this.translate.instant(
+            marker.name
+        )}</span></div>`;
+
+        html += `<div class="tooltip-text">`;
+
+        if (marker.description) {
+            html += `<p>${this.translate.instant(marker.description)}</p>`;
+        }
+
+        html += this.addPropety('type', marker.feature.properties.model.type);
+        html += this.addPropety('minSpawnRank', marker.feature.properties.model.minSpawnRank);
+        html += this.addPropety('maxSpawnRank', marker.feature.properties.model.maxSpawnRank);
+
+        html += this.addPropety('canBeCaptured', marker.feature.properties.model.canBeCaptured);
+        html += this.addPropety('canAttack', marker.feature.properties.model.canAttack);
+        html += this.addPropety('canDefend', marker.feature.properties.model.canDefend);
+        html += this.addPropety('activeLair', marker.feature.properties.model.activeLair);
+
+        html += `</div>`;
+
+        return html;
+    }
+
+    private addPropety(title: string, value: string): string {
+        return `<p><span>${title}:</span>&#9;&#9;<span>${value}</span></p>`
     }
 
     private reorderSearchingLayers(layers: any): any {

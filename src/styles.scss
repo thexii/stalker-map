@@ -102,6 +102,12 @@ body {
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+    .sub-header-panel {
+        width: auto;
+    }
+}
+
 .sub-headers {
   display: flex;
   flex-wrap: nowrap;

@@ -2,13 +2,11 @@
     <div class="location-name icon-undeground-door stalker-icon">{{ location.uniqueName | translate }}</div>
     <div class="undeground-settings">
         @if (undergroundConfig) {
-            <div class="levels">
+            <select (change)="test($event)">
                 @for (layer of undergroundConfig.levels; track layer) {
-                    <div class="level" (click)="setLayer(layer)" [ngClass]="{'selected': layer == selectedLevel}">
-                        {{ layer }}
-                    </div>
+                    <option [value]="layer" [selected]="layer == selectedLevel">{{layer}}</option>
                 }
-            </div>
+            </select>
         }
     </div>
     <div class="map-container">

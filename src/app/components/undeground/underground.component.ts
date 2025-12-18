@@ -56,6 +56,10 @@ export class UndergroundComponent {
         private translate: TranslateService,
         private mapService: MapService) { }
 
+    public test(event: any): void {
+        this.setLayer(event.target.value);
+    }
+
     public setLayer(newLyaer: string): void {
         if (this.selectedLevel == newLyaer) {
             return;

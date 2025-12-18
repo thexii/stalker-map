@@ -5,7 +5,7 @@ export class MapHoc {
   public heightInMeters: number;
 
   public markers: Marker[];
-  public lairs: Lair[];
+  public lairs: LairCluster[];
   public stuffs: Stuff[];
   public anomalyFields: Marker[];
   public artefactSpawners: ArtefactSpawner[];
@@ -29,8 +29,20 @@ export class Marker extends ObjectAtLocationHoc {
   public radius: number;
 }
 
-export class Lair extends ObjectAtLocationHoc {
-  public lairs: string[];
+export class LairCluster extends ObjectAtLocationHoc {
+  public lairs: Lair[];
+}
+
+export class Lair {
+    public faction: string;
+    public type: string;
+    public maxSpawnRank: string;
+    public minSpawnRank: string;
+
+    public canBeCaptured: boolean;
+    public canAttack: boolean;
+    public canDefend: boolean;
+    public activeLair: boolean;
 }
 
 export class Stuff extends ObjectAtLocationHoc {
