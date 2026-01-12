@@ -81702,20 +81702,12 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 3000
+          "destination": "hub_terricon",
+          "price": 1500
         },
         {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 3000
-        },
-        {
-          "destination": "region_yanov",
-          "price": 2500
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2500
+          "destination": "hub_asulym",
+          "price": 1500
         },
         {
           "destination": "hub_rookievillage",
@@ -81738,12 +81730,20 @@
           "price": 2000
         },
         {
-          "destination": "hub_terricon",
-          "price": 1500
+          "destination": "region_yanov",
+          "price": 2500
         },
         {
-          "destination": "hub_asulym",
-          "price": 1500
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3000
         }
       ],
       "name": "sid_character_marsal_0",
@@ -81757,30 +81757,6 @@
     {
       "guidePaths": [
         {
-          "destination": "region_yanov",
-          "price": 3000
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 3000
-        },
-        {
-          "destination": "hub_sultansk",
-          "price": 2000
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 2000
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2000
-        },
-        {
           "destination": "hub_terricon",
           "price": 1500
         },
@@ -81799,6 +81775,30 @@
         {
           "destination": "supack_Kazkovy_Hub2",
           "price": 1500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
         }
       ],
       "name": "sid_character_dada_lena_0",
@@ -81812,20 +81812,12 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 3000
+          "destination": "hub_terricon",
+          "price": 1500
         },
         {
-          "destination": "region_malachite",
-          "price": 2500
-        },
-        {
-          "destination": "hub_sultansk",
-          "price": 2500
-        },
-        {
-          "destination": "region_yanov",
-          "price": 2500
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 1500
         },
         {
           "destination": "region_rostok",
@@ -81848,12 +81840,20 @@
           "price": 2000
         },
         {
-          "destination": "hub_terricon",
-          "price": 1500
+          "destination": "region_malachite",
+          "price": 2500
         },
         {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 1500
+          "destination": "hub_sultansk",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
         }
       ],
       "name": "sid_character_muhomor_0",
@@ -81867,38 +81867,6 @@
     {
       "guidePaths": [
         {
-          "destination": "hub_sultansk",
-          "price": 3500
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 3500
-        },
-        {
-          "destination": "hub_rookievillage",
-          "price": 3000
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 3000
-        },
-        {
-          "destination": "hub_asulym",
-          "price": 2500
-        },
-        {
-          "destination": "region_yanov",
-          "price": 2500
-        },
-        {
-          "destination": "hub_terricon",
-          "price": 2000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2000
-        },
-        {
           "destination": "region_rostok",
           "price": 1500
         },
@@ -81909,6 +81877,38 @@
         {
           "destination": "hub_zalesie",
           "price": 1500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 3000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 3000
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 3500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3500
         }
       ],
       "name": "sid_character_supack_vozatyj_0",
@@ -81922,28 +81922,12 @@
     {
       "guidePaths": [
         {
-          "destination": "hub_sultansk",
-          "price": 3000
+          "destination": "region_rostok",
+          "price": 1500
         },
         {
-          "destination": "hub_rookievillage",
-          "price": 3000
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 3000
-        },
-        {
-          "destination": "region_yanov",
-          "price": 2500
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 2500
-        },
-        {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 2500
+          "destination": "hub_chemplant",
+          "price": 1500
         },
         {
           "destination": "hub_terricon",
@@ -81958,12 +81942,28 @@
           "price": 2000
         },
         {
-          "destination": "region_rostok",
-          "price": 1500
+          "destination": "region_yanov",
+          "price": 2500
         },
         {
-          "destination": "hub_chemplant",
-          "price": 1500
+          "destination": "hub_concreteplant",
+          "price": 2500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 3000
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
         }
       ],
       "name": "sid_character_viktor_koska_0",
@@ -81977,34 +81977,6 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 3500
-        },
-        {
-          "destination": "region_yanov",
-          "price": 3000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2500
-        },
-        {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 2500
-        },
-        {
-          "destination": "hub_rookievillage",
-          "price": 2000
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2000
-        },
-        {
-          "destination": "hub_chemplant",
-          "price": 2000
-        },
-        {
           "destination": "hub_zalesie",
           "price": 1500
         },
@@ -82019,6 +81991,34 @@
         {
           "destination": "hub_concreteplant",
           "price": 1500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3500
         }
       ],
       "name": "sid_character_masina_0",
@@ -82032,24 +82032,12 @@
     {
       "guidePaths": [
         {
-          "destination": "hub_rookievillage",
-          "price": 6000
+          "destination": "region_yanov",
+          "price": 1500
         },
         {
-          "destination": "hub_sultansk",
-          "price": 4000
-        },
-        {
-          "destination": "hub_asulym",
-          "price": 3500
-        },
-        {
-          "destination": "hub_zalesie",
-          "price": 3500
-        },
-        {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 3500
+          "destination": "region_rostok",
+          "price": 2500
         },
         {
           "destination": "hub_terricon",
@@ -82068,12 +82056,24 @@
           "price": 3000
         },
         {
-          "destination": "region_rostok",
-          "price": 2500
+          "destination": "hub_asulym",
+          "price": 3500
         },
         {
-          "destination": "region_yanov",
-          "price": 1500
+          "destination": "hub_zalesie",
+          "price": 3500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 4000
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 6000
         }
       ],
       "name": "sid_character_valera_telegraf_0",
@@ -82087,16 +82087,16 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 6000
+          "destination": "hub_terricon",
+          "price": 1500
         },
         {
-          "destination": "region_yanov",
-          "price": 3500
+          "destination": "hub_asulym",
+          "price": 1500
         },
         {
-          "destination": "region_malachite",
-          "price": 2500
+          "destination": "hub_zalesie",
+          "price": 1500
         },
         {
           "destination": "hub_sultansk",
@@ -82119,16 +82119,16 @@
           "price": 2000
         },
         {
-          "destination": "hub_terricon",
-          "price": 1500
+          "destination": "region_malachite",
+          "price": 2500
         },
         {
-          "destination": "hub_asulym",
-          "price": 1500
+          "destination": "region_yanov",
+          "price": 3500
         },
         {
-          "destination": "hub_zalesie",
-          "price": 1500
+          "destination": "region_prypiat",
+          "price": 6000
         }
       ],
       "name": "sid_character_volk_1",
@@ -82142,16 +82142,16 @@
     {
       "guidePaths": [
         {
-          "destination": "hub_sultansk",
-          "price": 2500
+          "destination": "hub_terricon",
+          "price": 1500
         },
         {
-          "destination": "hub_rookievillage",
-          "price": 2500
+          "destination": "region_malachite",
+          "price": 1500
         },
         {
-          "destination": "region_prypiat",
-          "price": 2500
+          "destination": "hub_chemplant",
+          "price": 1500
         },
         {
           "destination": "region_yanov",
@@ -82174,16 +82174,16 @@
           "price": 2000
         },
         {
-          "destination": "hub_terricon",
-          "price": 1500
+          "destination": "hub_sultansk",
+          "price": 2500
         },
         {
-          "destination": "region_malachite",
-          "price": 1500
+          "destination": "hub_rookievillage",
+          "price": 2500
         },
         {
-          "destination": "hub_chemplant",
-          "price": 1500
+          "destination": "region_prypiat",
+          "price": 2500
         }
       ],
       "name": "sid_character_laguha_0",
@@ -82197,28 +82197,12 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 4000
+          "destination": "hub_asulym",
+          "price": 1500
         },
         {
-          "destination": "region_yanov",
-          "price": 3500
-        },
-        {
-          "destination": "region_malachite",
-          "price": 3000
-        },
-        {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 3000
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2500
-        },
-        {
-          "destination": "hub_chemplant",
-          "price": 2500
+          "destination": "hub_rookievillage",
+          "price": 1500
         },
         {
           "destination": "hub_zalesie",
@@ -82233,12 +82217,28 @@
           "price": 2000
         },
         {
-          "destination": "hub_asulym",
-          "price": 1500
+          "destination": "region_rostok",
+          "price": 2500
         },
         {
-          "destination": "hub_rookievillage",
-          "price": 1500
+          "destination": "hub_chemplant",
+          "price": 2500
+        },
+        {
+          "destination": "region_malachite",
+          "price": 3000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 4000
         }
       ],
       "name": "sid_character_cervonec_0",
@@ -82252,22 +82252,6 @@
     {
       "guidePaths": [
         {
-          "destination": "region_prypiat",
-          "price": 3000
-        },
-        {
-          "destination": "region_yanov",
-          "price": 2500
-        },
-        {
-          "destination": "hub_sultansk",
-          "price": 2000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2000
-        },
-        {
           "destination": "hub_zalesie",
           "price": 1500
         },
@@ -82294,6 +82278,22 @@
         {
           "destination": "supack_Kazkovy_Hub2",
           "price": 1500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
         }
       ],
       "name": "sid_character_kukuha_0",
@@ -82307,12 +82307,28 @@
     {
       "guidePaths": [
         {
-          "destination": "hub_rookievillage",
-          "price": 3500
+          "destination": "region_prypiat",
+          "price": 1500
         },
         {
-          "destination": "hub_sultansk",
-          "price": 3500
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2500
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2500
         },
         {
           "destination": "hub_asulym",
@@ -82327,28 +82343,12 @@
           "price": 3000
         },
         {
-          "destination": "region_malachite",
-          "price": 2500
+          "destination": "hub_rookievillage",
+          "price": 3500
         },
         {
-          "destination": "hub_terricon",
-          "price": 2500
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 2500
-        },
-        {
-          "destination": "hub_chemplant",
-          "price": 2500
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2000
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 1500
+          "destination": "hub_sultansk",
+          "price": 3500
         }
       ],
       "name": "sid_character_garik_2",
@@ -82361,30 +82361,6 @@
     },
     {
       "guidePaths": [
-        {
-          "destination": "region_yanov",
-          "price": 3000
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 3000
-        },
-        {
-          "destination": "hub_sultansk",
-          "price": 2000
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 2000
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2000
-        },
         {
           "destination": "hub_terricon",
           "price": 1500
@@ -82404,6 +82380,30 @@
         {
           "destination": "supack_Kazkovy_Hub2",
           "price": 1500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
         }
       ],
       "name": "sid_character_dada_lena_0",
