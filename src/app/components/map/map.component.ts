@@ -25,7 +25,6 @@ import { Meta, Title } from '@angular/platform-browser';
 import { MapService } from '../../services/map.service';
 import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
-import { DeviceDetectorService } from 'ngx-device-detector';
 import { isDevMode } from '@angular/core';
 import { Game } from '../../models/game.model';
 
@@ -101,8 +100,7 @@ export class MapComponent {
         protected route: ActivatedRoute,
         protected titleService: Title,
         protected mapService: MapService,
-        protected meta: Meta,
-        protected deviceService: DeviceDetectorService) {
+        protected meta: Meta) {
         let urlGame: string = this.route.snapshot.paramMap.get('game') as string;
 
         if (MapComponent.avaliableGames[urlGame]) {
@@ -205,10 +203,6 @@ export class MapComponent {
     }
 
     private async ngOnInit(): Promise<void> {
-        if (this.deviceService.isMobile() || this.deviceService.isTablet()) {
-
-        }
-
         const dialog: any = document.querySelector("#mobile-not-adaptive");
         //dialog.show(); // Opens a non-modal dialog
         if (dialog) {

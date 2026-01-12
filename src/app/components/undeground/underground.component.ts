@@ -22,7 +22,7 @@ declare var markWidthUnderground: number;
     standalone: true,
     templateUrl: './underground.component.html',
     styleUrl: './underground.component.scss',
-    imports: [TranslateModule, NgClass]
+    imports: [TranslateModule]
 })
 
 export class UndergroundComponent {

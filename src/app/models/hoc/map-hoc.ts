@@ -12,7 +12,9 @@ export class MapHoc {
   public artefactSpawnerData: ArtefactSpawnerConfig;
   public stashes: Stash[];
   public stashGenerators: StashGenerator[];
-  public stashPrototypes: StashPrototype[]
+  public stashPrototypes: StashPrototype[];
+  public traders: TraderHoc[];
+  public guides: Guide[];
 }
 
 export class ObjectAtLocationHoc {
@@ -146,4 +148,23 @@ export class PrimaryWeaponParams {
   public minSpawnChance: number;
   public maxSpawnChance: number;
   public items: PossibleItem[];
+}
+
+export class Npc extends ObjectAtLocationHoc {
+    public name: string;
+    public marker: string;
+    public faction: string;
+}
+
+export class TraderHoc extends Npc {
+    public infiniteMoney : boolean;
+}
+
+export class GuidePath {
+    public destination: string;
+    public price: number;
+}
+
+export class Guide extends Npc {
+    public guidePaths: GuidePath[];
 }

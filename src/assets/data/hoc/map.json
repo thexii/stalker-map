@@ -79686,5 +79686,2733 @@
         }
       ]
     }
+  ],
+  "traders": [
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "CementPlantTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_praporsik_komissarov_0",
+      "marker": "Trader",
+      "faction": "Duty",
+      "x": 4947.794,
+      "z": 3767.3162,
+      "y": 11.89,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_gera_0",
+      "marker": "Trader",
+      "faction": "Duty",
+      "x": 4985.983,
+      "z": 3803.667,
+      "y": 8.709036,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_koldun_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 3974.53,
+      "z": 5452.61,
+      "y": 9.86,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MedicUniversal_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_nikolaic_0",
+      "marker": "Medic",
+      "faction": "Neutrals",
+      "x": 3998.2458,
+      "z": 5456.6274,
+      "y": 10.01,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "VartaTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_serzdot_hoteev_0",
+      "marker": "Trader",
+      "faction": "Varta",
+      "x": 2571.205,
+      "z": 2105.146,
+      "y": 4.3150334,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderSuska_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_suska_0",
+      "marker": "Trader",
+      "faction": "Spark",
+      "x": 2886.2715,
+      "z": 1637.604,
+      "y": 4.3,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderSuska_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_suska_0",
+      "marker": "Trader",
+      "faction": "Spark",
+      "x": 2402.3525,
+      "z": 1465.5513,
+      "y": -33.825516,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "VartaTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_serzdot_hoteev_0",
+      "marker": "Trader",
+      "faction": "Varta",
+      "x": 2401.8333,
+      "z": 1465.5212,
+      "y": -33.7595,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderSuska_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_suska_0",
+      "marker": "Trader",
+      "faction": "Spark",
+      "x": 4203.496,
+      "z": 1970.0626,
+      "y": -0.115587026,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderChemicalPlant_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_leva_fan_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 3193.1,
+      "z": 5260.7,
+      "y": 6.2,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MedicUniversal_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_nikolaj_burahovkij_0",
+      "marker": "Medic",
+      "faction": "Varta",
+      "x": 3074.1,
+      "z": 5153,
+      "y": 3.3,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "Bartender_ChemicalPlant_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_ed_2",
+      "marker": "Trader",
+      "faction": "Varta",
+      "x": 3088.7,
+      "z": 5205.6,
+      "y": 3.5,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "IkarTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_serzdot_hoteev_0",
+      "marker": "Trader",
+      "faction": "Varta",
+      "x": 6076.317,
+      "z": 6008.4526,
+      "y": 28.779198,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "IkarMedic_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_medik_s_ikara_0",
+      "marker": "Medic",
+      "faction": "Varta",
+      "x": 6042,
+      "z": 5949.2,
+      "y": 28.15693,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "SelmaTrader_TradeItemGenerator",
+          "buyModifier": 0.17,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_supack_selma_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 2595.3047,
+      "z": 5999.281,
+      "y": 5.8,
+      "dlc": "BaseGame"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MalakhitMedic_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_supack_assistent_medulin_0",
+      "marker": "Medic",
+      "faction": "Neutrals",
+      "x": 2600.4019,
+      "z": 5988.7427,
+      "y": 5.8,
+      "dlc": "BaseGame"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MalakhitBartender_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_pifagor_0",
+      "marker": "Trader",
+      "faction": "Spark",
+      "x": 1048.2665,
+      "z": 4736.123,
+      "y": 3.21,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MalakhitTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_viktoria_doroznuk_0",
+      "marker": "Trader",
+      "faction": "Scientists",
+      "x": 1073.559,
+      "z": 4729.935,
+      "y": 3.16,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "AsylumTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_tihij_0",
+      "marker": "Trader",
+      "faction": "Noon",
+      "x": 4925.3,
+      "z": 5490,
+      "y": 2.5,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "PripyatTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_bizon_0",
+      "marker": "Trader",
+      "faction": "Corpus",
+      "x": 2317.3,
+      "z": 1599.9,
+      "y": 11.1,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "NewbeeVillageTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_sidorovic_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 4435.8926,
+      "z": 6544.2695,
+      "y": -30.100471,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "RostokTraderNato_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_udzin_0",
+      "marker": "Trader",
+      "faction": "Freedom",
+      "x": 3193.35,
+      "z": 4151.16,
+      "y": 3.49,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "RostokBartender_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_barmen_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 3213.924,
+      "z": 4184.7305,
+      "y": -2.6925318,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "RostokTraderSoviet_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_starevsik_0",
+      "marker": "Trader",
+      "faction": "Freedom",
+      "x": 3219.72,
+      "z": 4143.99,
+      "y": 3.46,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "RostokTraderArmor_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_bereza_0",
+      "marker": "Trader",
+      "faction": "Freedom",
+      "x": 3200.96,
+      "z": 4151.92,
+      "y": 3.46,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "ShevchenkoBartender_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_poplavok_0",
+      "marker": "Trader",
+      "faction": "ShevchenkoStalkers",
+      "x": 6448.8,
+      "z": 6456.3,
+      "y": 2.1,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "ShevchenkoTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_boroda_0",
+      "marker": "Trader",
+      "faction": "ShevchenkoStalkers",
+      "x": 6440.5312,
+      "z": 6460.212,
+      "y": 2.1136441,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderSultansk_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_sona_kalina_0",
+      "marker": "Trader",
+      "faction": "SultanBandits",
+      "x": 6643.7,
+      "z": 6188.52,
+      "y": 2.7027185,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "SultanskTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_syc_0",
+      "marker": "Trader",
+      "faction": "SultanBandits",
+      "x": 6624.6035,
+      "z": 6182.0513,
+      "y": 5.676171,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_dana_ponuryj_0",
+      "marker": "Trader",
+      "faction": "SultanBandits",
+      "x": 6642.9487,
+      "z": 6188.4023,
+      "y": 2.872753,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_gera_0",
+      "marker": "Trader",
+      "faction": "Duty",
+      "x": 1946.47,
+      "z": 3408.96,
+      "y": 5.21,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "RostokBartender_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_barmen_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 1943.82,
+      "z": 3409,
+      "y": 5.21,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MalakhitTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_viktoria_doroznuk_0",
+      "marker": "Trader",
+      "faction": "Scientists",
+      "x": 1453.2267,
+      "z": 4857.1104,
+      "y": 5.8,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "Bartender_Terricon_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_drabadan_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 4198.54,
+      "z": 4130.34,
+      "y": 21.112892,
+      "dlc": "BaseGame"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderTerikon_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_guron_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 4214.7373,
+      "z": 4116.0054,
+      "y": 21.12713,
+      "dlc": "BaseGame"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "Medic_Terricon_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_sulc_0",
+      "marker": "Medic",
+      "faction": "Neutrals",
+      "x": 4203.33,
+      "z": 4090.37,
+      "y": 21.12,
+      "dlc": "BaseGame"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "YanovTrader_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_hana_0",
+      "marker": "Trader",
+      "faction": "Corpus",
+      "x": 2146.8,
+      "z": 2694.1,
+      "y": 9.5,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "YanovBartender_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_gavaec_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 2170,
+      "z": 2693.9,
+      "y": 9.5,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
+          "buyModifier": 0.2,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_koldun_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 4045.334,
+      "z": 5506.697,
+      "y": 6.7897816,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "MedicUniversal_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0,
+          "armorSellMinDurability": 0
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_nikolaic_0",
+      "marker": "Medic",
+      "faction": "Neutrals",
+      "x": 3981.0906,
+      "z": 5500.516,
+      "y": 6.5902205,
+      "dlc": "None"
+    },
+    {
+      "buyDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 1.15
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 1.2
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 1.25
+        }
+      ],
+      "sellDiscounts": [
+        {
+          "sID": "PlayerRankExperienced",
+          "modifier": 0.97
+        },
+        {
+          "sID": "PlayerRankVeteran",
+          "modifier": 0.95
+        },
+        {
+          "sID": "PlayerRankMaster",
+          "modifier": 0.9
+        }
+      ],
+      "tradeGenerators": [
+        {
+          "condition": "ConstTrue",
+          "itemGenerator": "TraderZalesie_TradeItemGenerator",
+          "buyModifier": 0.3,
+          "sellModifier": 1,
+          "weaponSellMinDurability": 0.4,
+          "armorSellMinDurability": 0.4
+        }
+      ],
+      "infiniteMoney": true,
+      "refreshCondition": null,
+      "name": "sid_character_homak_0",
+      "marker": "Trader",
+      "faction": "Neutrals",
+      "x": 4042.4993,
+      "z": 5478.7383,
+      "y": 6.1,
+      "dlc": "None"
+    }
+  ],
+  "guides": [
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 2000
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_marsal_0",
+      "marker": "Guider",
+      "faction": "Duty",
+      "x": 4988.76,
+      "z": 3800.73,
+      "y": 8.5,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_dada_lena_0",
+      "marker": "Guider",
+      "faction": "Monolith",
+      "x": 3809.1096,
+      "z": 6370.041,
+      "y": 3.62,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 2000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 2000
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_muhomor_0",
+      "marker": "Guider",
+      "faction": "Neutrals",
+      "x": 3193.8,
+      "z": 5264.7,
+      "y": 6.2,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "hub_sultansk",
+          "price": 3500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 3000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 3000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_supack_vozatyj_0",
+      "marker": "Guider",
+      "faction": "Neutrals",
+      "x": 2592.6802,
+      "z": 5996.5464,
+      "y": 5.8,
+      "dlc": "BaseGame"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "hub_sultansk",
+          "price": 3000
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_viktor_koska_0",
+      "marker": "Guider",
+      "faction": "Scientists",
+      "x": 1074.5,
+      "z": 4715.67,
+      "y": 4.36,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 3500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 1500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 1500
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_masina_0",
+      "marker": "Guider",
+      "faction": "Noon",
+      "x": 4866.464,
+      "z": 5173.2974,
+      "y": 3.4351466,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "hub_rookievillage",
+          "price": 6000
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 4000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 3500
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 3500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 3000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 3000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 3000
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 3000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_valera_telegraf_0",
+      "marker": "Guider",
+      "faction": "Corpus",
+      "x": 2320.5,
+      "z": 1598.3,
+      "y": 11.1,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 6000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3500
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_volk_1",
+      "marker": "Guider",
+      "faction": "Neutrals",
+      "x": 4459.7,
+      "z": 6570,
+      "y": -23.5,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "hub_sultansk",
+          "price": 2500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 2500
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 2500
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 2000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "region_malachite",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_laguha_0",
+      "marker": "Guider",
+      "faction": "Freedom",
+      "x": 3210.7,
+      "z": 4119.4,
+      "y": 3.5,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 4000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 3500
+        },
+        {
+          "destination": "region_malachite",
+          "price": 3000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2500
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_cervonec_0",
+      "marker": "Guider",
+      "faction": "SultanBandits",
+      "x": 6640.4604,
+      "z": 6182.4395,
+      "y": 2.5,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "region_yanov",
+          "price": 2500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 1500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        },
+        {
+          "destination": "region_rostok",
+          "price": 1500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 1500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_kukuha_0",
+      "marker": "Guider",
+      "faction": "Diggers",
+      "x": 4206.6333,
+      "z": 4111.793,
+      "y": 21.11167,
+      "dlc": "BaseGame"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "hub_rookievillage",
+          "price": 3500
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 3500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 3000
+        },
+        {
+          "destination": "hub_zalesie",
+          "price": 3000
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 3000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2500
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 2500
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 2500
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_garik_2",
+      "marker": "Guider",
+      "faction": "Corpus",
+      "x": 2159.9,
+      "z": 2701.2,
+      "y": 9.4,
+      "dlc": "None"
+    },
+    {
+      "guidePaths": [
+        {
+          "destination": "region_yanov",
+          "price": 3000
+        },
+        {
+          "destination": "region_prypiat",
+          "price": 3000
+        },
+        {
+          "destination": "hub_sultansk",
+          "price": 2000
+        },
+        {
+          "destination": "hub_concreteplant",
+          "price": 2000
+        },
+        {
+          "destination": "region_rostok",
+          "price": 2000
+        },
+        {
+          "destination": "region_malachite",
+          "price": 2000
+        },
+        {
+          "destination": "hub_terricon",
+          "price": 1500
+        },
+        {
+          "destination": "hub_asulym",
+          "price": 1500
+        },
+        {
+          "destination": "hub_rookievillage",
+          "price": 1500
+        },
+        {
+          "destination": "hub_chemplant",
+          "price": 1500
+        },
+        {
+          "destination": "supack_Kazkovy_Hub2",
+          "price": 1500
+        }
+      ],
+      "name": "sid_character_dada_lena_0",
+      "marker": "Guider",
+      "faction": "Neutrals",
+      "x": 3996.4785,
+      "z": 5454.6157,
+      "y": 9.871051,
+      "dlc": "None"
+    }
   ]
 }

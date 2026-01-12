@@ -9,6 +9,18 @@
       "isShowByDefault": true
     },
     {
+      "uniqueName": "traders",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "medics",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "guides",
+      "isShowByDefault": true
+    },
+    {
       "uniqueName": "stalker-respawn",
       "isShowByDefault": true
     },

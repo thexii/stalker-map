@@ -17,9 +17,6 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "src/custom-webpack.config.js"
-            },
             "outputPath": "dist/stalker-map",
             "index": "src/index.html",
             "main": "src/main.ts",

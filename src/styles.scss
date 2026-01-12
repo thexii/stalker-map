@@ -967,3 +967,7 @@ app-compare {
   font-size: 35px;
   color: white;
 }
+
+.leaflet-popup-content-fit-content .leaflet-popup-content {
+    width: fit-content !important;
+}

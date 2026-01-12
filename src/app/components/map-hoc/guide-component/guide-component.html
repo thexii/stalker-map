@@ -1,0 +1,15 @@
+@if (guide) {
+    <div class="guide-container">
+        <div class="guide-name">
+            {{ guide.name| translate}}
+        </div>
+        <div class="paths">
+            @for (path of guide.guidePaths; track path) {
+                <div class="path">
+                    <div class="destination">{{path.destination}}</div>
+                    <div class="destination">{{path.price}}</div>
+                </div>
+            }
+        </div>
+    </div>
+}

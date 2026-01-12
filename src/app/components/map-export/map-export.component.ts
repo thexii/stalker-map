@@ -4,7 +4,6 @@ import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MapService } from '../../services/map.service';
-import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-map-export',
@@ -25,16 +24,14 @@ export class MapExportComponent extends MapComponent {
     protected override route: ActivatedRoute,
     protected override titleService:Title,
     protected override mapService: MapService,
-    protected override meta: Meta,
-    protected override deviceService: DeviceDetectorService
+    protected override meta: Meta
   ) {
     super(
       translate,
       route,
       titleService,
       mapService,
-      meta,
-      deviceService);
+      meta);
 
     this.overlaysListTop = '';
     let lang: string = this.route.snapshot.paramMap.get('lang') as string;

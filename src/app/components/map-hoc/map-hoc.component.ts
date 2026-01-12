@@ -1,4 +1,4 @@
-import { Lair, LairCluster, Marker } from './../../models/hoc/map-hoc';
+import { Lair, LairCluster } from './../../models/hoc/map-hoc';
 import {
     Component,
     HostListener,
@@ -11,7 +11,6 @@ import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { DeviceDetectorService } from 'ngx-device-detector';
 import { MapService } from '../../services/map.service';
 import { Item } from '../../models/item.model';
 import { MapConfig } from '../../models/gamedata/map-config';
@@ -22,6 +21,7 @@ import { ArtefactSpawnerPopupComponent } from './artefact-spawner-popup/artefact
 import { getAnalytics, logEvent } from 'firebase/analytics';
 import { HocStashComponent } from '../hoc-stash/hoc-stash.component';
 import { Game } from '../../models/game.model';
+import { GuideComponent } from './guide-component/guide-component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -77,8 +77,7 @@ export class MapHocComponent {
         protected route: ActivatedRoute,
         protected titleService: Title,
         protected mapService: MapService,
-        protected meta: Meta,
-        protected deviceService: DeviceDetectorService
+        protected meta: Meta
     ) { }
     showHideAll($event: any = null) {
         if ($event.target.checked) {
@@ -299,6 +298,14 @@ export class MapHocComponent {
 
         if (this.gamedata.stashes && this.gamedata.stashes.length > 0) {
             this.addStashes();
+        }
+
+        if (this.gamedata.traders && this.gamedata.traders.length > 0) {
+            this.addTraders();
+        }
+
+        if (this.gamedata.guides && this.gamedata.guides.length > 0) {
+            this.addGuides();
         }
 
         if (
@@ -1841,6 +1848,143 @@ export class MapHocComponent {
         }
     }
 
+    public addTraders(): void {
+        let trader = {
+            icon: new this.svgIcon({
+                className: 'mark-container stalker-mark-1.5',
+                animate: false,
+                iconUrl: '/assets/images/svg/marks/trader.svg',
+                iconAnchor: [0, 0],
+            }),
+            keepMapSize: true,
+        };
+
+        let medic = {
+            icon: new this.svgIcon({
+                className: 'mark-container stalker-mark-1.5',
+                animate: false,
+                iconUrl: '/assets/images/svg/marks/medic.svg',
+                iconAnchor: [0, 0],
+            }),
+            keepMapSize: true,
+        };
+
+        let traders: any[] = [];
+        let medics: any[] = [];
+        let radius: number = 10;
+
+        for (let data of this.gamedata.traders) {
+            let icon = null;
+            let array = [];
+
+            if (data.marker == "Trader") {
+                icon = trader;
+                array = traders;
+            }
+            else if (data.marker == "Medic") {
+                icon = medic;
+                array = medics;
+            }
+
+            let marker = new this.svgMarker(
+                [data.z, data.x],
+                { renderer: this.canvasRenderer, icon: icon, radius: radius }
+            );
+
+            marker.name = data.name;
+            marker.feature = {};
+            marker.feature.properties = {};
+
+            let localesToFind: string[] = [];
+            localesToFind.push(data.name);
+
+            if (localesToFind.length > 0) {
+                this.createTranslatableProperty(
+                    marker.feature.properties,
+                    'search',
+                    localesToFind,
+                    this.translate
+                );
+            } else {
+                marker.feature.properties.search = '';
+            }
+
+            marker.bindTooltip((p: any) => this.createTooltip(p), {
+                sticky: true,
+                className: 's2-tooltip',
+                offset: new Point(0, 50),
+            });
+
+            array.push(marker);
+        }
+
+        if (traders.length > 0) {
+            this.addLayerToMap(L.layerGroup(traders), 'traders', true);
+        }
+
+        if (medics.length > 0) {
+            this.addLayerToMap(L.layerGroup(medics), 'medics', true);
+        }
+    }
+
+    public addGuides(): void {
+        let guider = {
+            icon: new this.svgIcon({
+                className: 'mark-container stalker-mark-1.5',
+                animate: false,
+                iconUrl: '/assets/images/svg/marks/character.svg',
+                iconAnchor: [0, 0],
+            }),
+            keepMapSize: true,
+        };
+
+        let guiders: any[] = [];
+        let radius: number = 10;
+
+        for (let data of this.gamedata.guides) {
+            let marker = new this.svgMarker(
+                [data.z, data.x],
+                { renderer: this.canvasRenderer, icon: guider, radius: radius }
+            );
+
+            marker.name = data.name;
+            marker.data = data;
+            marker.feature = {};
+            marker.feature.properties = {};
+
+            let localesToFind: string[] = [];
+            localesToFind.push(data.name);
+
+            if (localesToFind.length > 0) {
+                this.createTranslatableProperty(
+                    marker.feature.properties,
+                    'search',
+                    localesToFind,
+                    this.translate
+                );
+            } else {
+                marker.feature.properties.search = '';
+            }
+
+            marker.bindTooltip((p: any) => this.createTooltip(p), {
+                sticky: true,
+                className: 's2-tooltip',
+                offset: new Point(0, 50),
+            });
+
+            marker.bindPopup(
+                (p: any) => this.createGuidePopup(p),
+                { className: 'leaflet-popup-content-fit-content'}
+            );
+
+            guiders.push(marker);
+        }
+
+        if (guiders.length > 0) {
+            this.addLayerToMap(L.layerGroup(guiders), 'guides', true);
+        }
+    }
+
     public addArtefactSpawners(): void {
         let stuffIcon = {
             icon: new this.svgIcon({
@@ -1947,6 +2091,18 @@ export class MapHocComponent {
         componentRef.instance.game = game;
         componentRef.instance.allItems = allItems;
         componentRef.instance.isUnderground = isUnderground;*/
+
+        return componentRef.location.nativeElement;
+    }
+
+    public createGuidePopup(marker: any) {
+        marker.getPopup().on('remove', function () {
+            marker.getPopup().off('remove');
+            componentRef.destroy();
+        });
+
+        const componentRef = this.container.createComponent(GuideComponent);
+        componentRef.instance.guide = marker.data;
 
         return componentRef.location.nativeElement;
     }

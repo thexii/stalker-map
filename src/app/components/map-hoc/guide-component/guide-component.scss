@@ -1,0 +1,16 @@
+.guide-container {
+    color: white;
+}
+
+.paths {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.paths .path {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: space-between;
+}
