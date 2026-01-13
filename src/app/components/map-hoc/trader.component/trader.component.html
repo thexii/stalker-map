@@ -1,0 +1,49 @@
+@if (trader) {
+    <div class="trader">
+        <div class="trader-sell">
+            <div class="trader-info">
+                @if (items && items.length > 0) {
+                    <div class="inventory inventory-columns-7">
+                        @for (stuffItem of items; track stuffItem) {
+                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                                <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
+
+                                <div
+                                    class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="selected-item-container">
+
+        </div>
+        <div class="trader-buy">
+            <div class="player">
+                <select class="select-relation" #relation (change)="setPlayerRank(relation.value)">
+                    <option class="language-selector-option" [value]="0" selected>{{ 'PlayerRankNovice' | translate }}</option>
+                    <option class="language-selector-option" [value]="1">{{ 'PlayerRankExperienced' | translate }}</option>
+                    <option class="language-selector-option" [value]="2">{{ 'PlayerRankVeteran' | translate }}</option>
+                    <option class="language-selector-option" [value]="3">{{ 'PlayerRankMaster' | translate }}</option>
+                </select>
+            </div>
+            <div class="inventory-container">
+                @if (buyitems && buyitems.length > 0) {
+                    <div class="inventory inventory-columns-7">
+                        @for (stuffItem of buyitems; track stuffItem) {
+                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                                <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
+
+                                <div
+                                    class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

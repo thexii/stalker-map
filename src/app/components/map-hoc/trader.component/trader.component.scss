@@ -1,0 +1,11 @@
+.trader {
+    display: flex;
+    flex-direction: row;
+    columns: 20px;
+}
+
+.inventory {
+    max-height: round(up, var(--wrapper-height) / 2, 130px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}

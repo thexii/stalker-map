@@ -91,6 +91,8 @@ export class Item {
     //hoc weapon
     public preinstalledAttachments: string[];
     public compatibleAttachments: Attachment[];
+    public invisibleInPlayerInventory: boolean;
+    public destroyOnPickup: boolean;
 }
 
 export class Attachment {

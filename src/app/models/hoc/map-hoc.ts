@@ -1,4 +1,5 @@
 import { InventoryItem } from "../inventory-item.model";
+import { Item } from "../item.model";
 
 export class MapHoc {
   public widthInMeters: number;
@@ -14,7 +15,34 @@ export class MapHoc {
   public stashGenerators: StashGenerator[];
   public stashPrototypes: StashPrototype[];
   public traders: TraderHoc[];
+  public tradeItemGenerators: TradeItemGenerator[];
   public guides: Guide[];
+}
+
+export class TradeItem {
+    public item: Item;
+    public minCount: number;
+    public maxCount: number;
+    public price: number;
+}
+
+export class TradeItemGenerator {
+    public name: string;
+    public itemGenerators: TradeItemSubGenerator[];
+}
+
+export class TradeItemSubGenerator {
+    public allowSameCategoryGeneration: boolean;
+    public playerRanks: string[];
+    public possibleItems: TraderPossibleItem[];
+}
+
+export class TraderPossibleItem {
+    public isArray: boolean;
+    public chance: number;
+    public uniqueName: string;
+    public minCount: number;
+    public maxCount: number;
 }
 
 export class ObjectAtLocationHoc {
@@ -158,6 +186,9 @@ export class Npc extends ObjectAtLocationHoc {
 
 export class TraderHoc extends Npc {
     public infiniteMoney : boolean;
+    public buyDiscounts: Condition[];
+    public sellDiscounts: Condition[];
+    public tradeGenerators: TradeGenerator[];
 }
 
 export class GuidePath {
@@ -167,4 +198,21 @@ export class GuidePath {
 
 export class Guide extends Npc {
     public guidePaths: GuidePath[];
+}
+
+export class Condition {
+    public sID: string;
+    public modifier: number;
+}
+
+export class TradeGenerator {
+    public condition: string;
+    public itemGenerator: string;
+
+    public buyModifier: number;
+    public sellModifier: number;
+    public weaponSellMinDurability: string;
+    public armorSellMinDurability: string;
+
+    public buyLimitations: string[];
 }

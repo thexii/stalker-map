@@ -22,6 +22,7 @@ import { getAnalytics, logEvent } from 'firebase/analytics';
 import { HocStashComponent } from '../hoc-stash/hoc-stash.component';
 import { Game } from '../../models/game.model';
 import { GuideComponent } from './guide-component/guide-component';
+import { TraderComponent } from './trader.component/trader.component';
 
 declare const L: any;
 declare var markWidth: number;
@@ -1891,6 +1892,7 @@ export class MapHocComponent {
                 { renderer: this.canvasRenderer, icon: icon, radius: radius }
             );
 
+            marker.data = data;
             marker.name = data.name;
             marker.feature = {};
             marker.feature.properties = {};
@@ -1914,6 +1916,11 @@ export class MapHocComponent {
                 className: 's2-tooltip',
                 offset: new Point(0, 50),
             });
+
+            marker.bindPopup(
+                (p: any) => this.createTraderPopup(p),
+                { className: 'leaflet-popup-content-fit-content'}
+            );
 
             array.push(marker);
         }
@@ -2103,6 +2110,20 @@ export class MapHocComponent {
 
         const componentRef = this.container.createComponent(GuideComponent);
         componentRef.instance.guide = marker.data;
+
+        return componentRef.location.nativeElement;
+    }
+
+    public createTraderPopup(marker: any) {
+        marker.getPopup().on('remove', function () {
+            marker.getPopup().off('remove');
+            componentRef.destroy();
+        });
+
+        const componentRef = this.container.createComponent(TraderComponent);
+        componentRef.instance.trader = marker.data;
+        componentRef.instance.allItems = this.items;
+        componentRef.instance.tradeItemGenerators = this.gamedata.tradeItemGenerators;
 
         return componentRef.location.nativeElement;
     }

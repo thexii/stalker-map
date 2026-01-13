@@ -79724,7 +79724,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -79773,7 +79774,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -79822,7 +79826,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -79871,7 +79878,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -79920,7 +79935,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -79969,7 +79985,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80018,7 +80035,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80067,7 +80085,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80116,7 +80135,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80165,7 +80185,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80214,7 +80235,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80263,7 +80292,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80312,7 +80344,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80361,7 +80394,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80410,7 +80451,8 @@
           "buyModifier": 0.17,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80459,7 +80501,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80508,7 +80558,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80557,7 +80610,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80606,7 +80660,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80655,7 +80710,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80704,7 +80760,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80753,7 +80810,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80802,7 +80860,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80851,7 +80912,8 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80900,7 +80962,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -80949,7 +81012,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -80998,7 +81064,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81047,7 +81114,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81096,7 +81166,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81145,7 +81216,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81194,7 +81268,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81243,7 +81320,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81292,7 +81372,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81341,7 +81422,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81390,7 +81474,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81439,7 +81524,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81488,7 +81581,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81537,7 +81631,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81586,7 +81683,10 @@
           "buyModifier": 0.2,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": [
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81635,7 +81735,15 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0
+          "armorSellMinDurability": 0,
+          "buyLimitations": [
+            "EItemType::Weapon",
+            "EItemType::Armor",
+            "EItemType::Ammo",
+            "EItemType::Grenade",
+            "EItemType::Attach",
+            "EItemType::MutantLoot"
+          ]
         }
       ],
       "infiniteMoney": true,
@@ -81684,7 +81792,8 @@
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4
+          "armorSellMinDurability": 0.4,
+          "buyLimitations": null
         }
       ],
       "infiniteMoney": true,
@@ -81696,6 +81805,3624 @@
       "z": 5478.7383,
       "y": 6.1,
       "dlc": "None"
+    }
+  ],
+  "tradeItemGenerators": [
+    {
+      "name": "CementPlantTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.5,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.5,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Bear"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Battle_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "SEVA_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy_Duty_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Dolg_Armor"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Battle_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "SEVA_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy_Duty_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Exoskeleton_Dolg_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.1,
+              "uniqueName": "Exoskeleton_Dolg_Armor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BartenderUniversal_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Sausage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bread"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Beer"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Experienced"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Sausage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bread"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Beer"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Sausage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bread"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Beer"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Sausage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bread"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Beer"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MedicUniversal_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AntiRad"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Experienced"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AntiRad"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 0.1,
+              "uniqueName": "Hercules"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AntiRad"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Vodka"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Hercules"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AntiRad"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Water"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EcoMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Hercules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VartaTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "BattleExoskeleton_Varta_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Heavy_Varta_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Battle_Varta_Armor"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Veles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TraderSuska_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "HeavyAnomaly_Spark_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Exosekeleton_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "HeavyBattle_Spark_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "SEVA_Spark_Armor"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Veles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TraderChemicalPlant_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bartender_ChemicalPlant_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "Echo"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "EArtifactTow"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "CArtifactSlug"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IkarTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 0.5,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IkarMedic_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "MedicUniversal_TradeItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SelmaTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.5,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.75,
+              "uniqueName": "Battle_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.75,
+              "uniqueName": "Heavy2_Military_Armor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MalakhitMedic_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "MedicUniversal_TradeItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MalakhitBartender_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.4,
+              "uniqueName": "Gilka"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EArtifactBattery"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "EArtifactCloud"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MalakhitTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Anomaly_Scientific_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "HeavyAnomaly_Spark_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.1,
+              "uniqueName": "HeavyBattle_Spark_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Battle_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy2_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Battle_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "HeavyAnomaly_Scientific_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Light_Mercenaries_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "NVG_Gen2"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_BuckLaunch_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AsylumTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Anomaly_Scientific_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Battle_Monolith_Armor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PripyatTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "HeavyAnomaly_Monolith_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Heavy_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen3"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "HeavyAnomaly_Monolith_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Heavy_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Heavy_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Exosekeleton_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen3"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Veles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NewbeeVillageTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GrenadeRGD5"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Jemmy_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "Exosekeleton_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Jemmy_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RostokTraderNato_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_NatoAmmo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunIntegral_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunG37_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunSPSA_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM16_ST"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunUDP_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunKora_HG"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "EN_Silen_3"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EN_ColimScope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunUDP_MagIncreased"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "EN_X2Scope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_GLaunch_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RostokBartender_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.3,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Echo"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Gilka"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.25,
+              "uniqueName": "EArtifactBattery"
+            },
+            {
+              "isArray": false,
+              "chance": 0.25,
+              "uniqueName": "CArtifactThorn"
+            },
+            {
+              "isArray": false,
+              "chance": 0.25,
+              "uniqueName": "CArtifactCottonWool"
+            },
+            {
+              "isArray": false,
+              "chance": 0.25,
+              "uniqueName": "EArtifactChocolate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RostokTraderSoviet_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_SovietAmmo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "RU_ColimScope_1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "AVOG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GrenadeRGD5"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunPM_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunAKU_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunGrim_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunGvintar_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "GunLavina_ST"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RostokTraderArmor_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Zorya_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "SEVA_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "Default_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Battle_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Light_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "Light_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Light_Mercenaries_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Jemmy_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "SEVA_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy2_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "NVG_Gen2"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Zorya_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "SEVA_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "Default_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Battle_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Light_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "Light_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Light_Mercenaries_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Jemmy_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "SEVA_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy2_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "Exoskeleton_Svoboda_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "HeavyExoskeleton_Svoboda_Armor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ShevchenkoBartender_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "GArtifactGravy"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "CArtifactCottonWool"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "CArtifactSlug"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ShevchenkoTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GrenadeRGD5"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BartenderSultansk_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "CArtifactChunkMeat"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "EArtifactChocolate"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "CArtifactSlug"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SultanskTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GrenadeF1"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Light_Mercenaries_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Light_Mercenaries_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Middle_Bandit_Armor"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "RU_GLaunch_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bartender_Terricon_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TraderTerikon_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM860_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunAKU_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunObrez_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunThreeLine_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunUDP_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM10_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunKora_HG"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Middle_Bandit_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Bandit_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "NVG_Gen1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medic_Terricon_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "MedicUniversal_TradeItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "YanovTrader_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 0.3,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T3_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T4_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.5,
+              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 0.3,
+              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Battle_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy2_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Battle_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Heavy2_Military_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Nasos_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "Heavy_Military_Helmet"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "Exosekeleton_Neutral_Armor"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Veles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "YanovBartender_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "BartenderUniversal_TradeItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Gilka"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "Bear"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EArtifactFlash"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EArtifactDummy"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GArtifactGravy"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GArtifactBloodStone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TraderZalesie_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunObrez_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunTOZ_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunViper_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunThreeLine_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Newbee_Neutral_Armor"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Light_Neutral_Helmet"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunPM_HG"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_GoloScope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "RU_ColimScope_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T2_Guns_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM860_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunG37_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM16_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunBucket_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunGvintar_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunSVDM_SP"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunMark_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunM10_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunKora_HG"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T3_Guns_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunIntegral_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunZubr_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunGrim_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "GunLavina_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunSPSA_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunM701_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunAPB_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunRhino_HG"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T2_Ammo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOD"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A918A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A939D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOS"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762SniperS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T3_Ammo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A918A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A045A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A919A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A545A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A939S"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOA"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762SniperA"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AHEDP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AVOG"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_Cosnsumables_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Newbie"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Experienced"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 0.2,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Veteran"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": false,
+          "playerRanks": [
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Bandage"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Medkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "ArmyMedkit"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "CannedFood"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "Energetic"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "EcoMedkit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_Attachments_T2_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_GoloScope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.1,
+              "uniqueName": "RU_Silen_2"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "RU_Silen_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EN_X2Scope_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_Attachments_T3_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_ColimScope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "RU_ColimScope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "RU_X4Scope_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T4_Guns_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunKharod_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunDnipro_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunD12_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "GunRam2_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunSVU_SP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T1_Ammo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A918D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A045D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A545D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A919D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762SniperD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T4_Ammo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A045E"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A545E"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A939E"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556E"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556S"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012E"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AGA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_Attachments_T4_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_Silen_2"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "EN_X4Scope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "EN_X4Scope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "RU_X2Scope_1"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "EN_Silen_1"
+            },
+            {
+              "isArray": false,
+              "chance": 0.5,
+              "uniqueName": "EN_Silen_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T1_Guns_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunObrez_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunTOZ_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunViper_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunAK74_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunAKU_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunThreeLine_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunPM_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunUDP_HG"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_NatoAmmo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A045D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOD"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AHEDP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A556A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOA"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A0919A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762NATOS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_SovietAmmo_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A918D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A545D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A545A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762SniperD"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A939D"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A012A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A918A"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "AVOG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "A762SniperS"
+            }
+          ]
+        }
+      ]
     }
   ],
   "guides": [
