@@ -60,10 +60,10 @@ export class CompareService {
       return;
     }
 
-    if (upgradeSection.needPreviousUpgrade || upgrade.needPreviousUpgrades)
+    /*if (upgradeSection.needPreviousUpgrade)
     {
       console.warn(upgradeSection);
-    }
+    }*/
 
     if (!upgrade.isInstalled && upgradeSection.needPreviousUpgrade != null && upgradeSection.needPreviousUpgrade.length > 0) {
       let canInstall = false;

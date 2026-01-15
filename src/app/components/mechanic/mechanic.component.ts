@@ -237,9 +237,15 @@ export class MechanicComponent {
                       }
 
                       if (anotherSection.elements) {
+                        let needPrev: boolean = true;
+
+                        if (this.selectedItemForUpgrades.installedUpgrades && this.selectedItemForUpgrades.installedUpgrades.length > 0) {
+                            needPrev = !anotherSection.needPreviousUpgrade.some(item => this.selectedItemForUpgrades.installedUpgrades.includes(item));
+                        }
+
                         for (let aElement of anotherSection.elements) {
                           branchElements.push(aElement);
-                          aElement.needPreviousUpgrades = true;
+                          aElement.needPreviousUpgrades = needPrev;
 
                           if (lockedUpgrades.some(x => x.upgrade == aElement.name)) {
                             aElement.isLocked = true;

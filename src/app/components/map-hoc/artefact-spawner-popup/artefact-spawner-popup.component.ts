@@ -43,6 +43,10 @@ export class ArtefactSpawnerPopupComponent {
               let item = this.items.find(x => x.uniqueName == art);
 
               if (item && artefact) {
+                if (item.destroyOnPickup) {
+                    continue;
+                }
+
                 model.artefact = artefact;
                 model.item = item;
                 anomalyArtefacts.push(model);
@@ -82,6 +86,10 @@ export class ArtefactSpawnerPopupComponent {
       let item = this.items.find(x => x.uniqueName == art.name);
 
       if (item) {
+        if (item.destroyOnPickup || item.price == 0) {
+            continue;
+        }
+
         model.artefact = art;
         model.item = item;
         result.push(model);

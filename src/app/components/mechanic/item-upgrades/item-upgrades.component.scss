@@ -1,107 +1,116 @@
 .selected-item-upgrades {
-  position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 10px;
 }
 
-.upgrade-item-image-container {
-  width: 100%;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.selected-item-upgrades .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
 }
 
 .upgrade-item-image {
-  background-image: url(/assets/images/mechanic/cop/ui_actor_weapons.png)
+    background-image: url(/assets/images/mechanic/cop/ui_actor_weapons.png)
 }
 
-.upgrade-item-image.E_STLK,.upgrade-item-image.E_HLMET,.upgrade-item-image.WP_RPG7 {
-  background-image: url(/assets/images/mechanic/cop/ui_actor_armor.png)
+.upgrade-item-image.E_STLK,
+.upgrade-item-image.E_HLMET,
+.upgrade-item-image.WP_RPG7 {
+    background-image: url(/assets/images/mechanic/cop/ui_actor_armor.png)
 }
 
 .upgrade-item {
-  position: absolute;
+    position: relative;
 
-  &.cop {
-    width: 90px;
-    height: 44px;
-    background-color: red;
-  }
-
-  &.cs {
-    width: 70px;
-    height: 40px;
-    background-color: red;
-  }
-
-  @for $i from 1 through 4 {
-    &.ui_actor_upgrades_#{$i} {
-      background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_#{$i}.png);
+    &.cop {
+        width: 90px;
+        height: 44px;
+        background-color: red;
     }
-  }
 
-  &.ui_actor_upgrades_armor {
-    background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_armor.png);
-  }
+    &.cs {
+        width: 70px;
+        height: 40px;
+        background-color: red;
+    }
 
-  &.ui_actor_upgrades_armor_1  {
-    background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_armor_1.png);
-  }
+    @for $i from 1 through 4 {
+        &.ui_actor_upgrades_#{$i} {
+            background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_#{$i}.png);
+        }
+    }
 
-  &.ui_ingame2_common {
-    background-image: url(/assets/images/mechanic/ui_ingame2_common.png);
-  }
+    &.ui_actor_upgrades_armor {
+        background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_armor.png);
+    }
+
+    &.ui_actor_upgrades_armor_1 {
+        background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_armor_1.png);
+    }
+
+    &.ui_ingame2_common {
+        background-image: url(/assets/images/mechanic/ui_ingame2_common.png);
+    }
 }
 
 .upgrade-item-highlight {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 5px;
-  height: 38px;
-  background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_1.png);
-  display: none;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 5px;
+    height: 38px;
+    background-image: url(/assets/images/mechanic/cop/ui_actor_upgrades_1.png);
+    display: none;
 
-  &.upgrade-item-highlight-selected {
-    background-position: left -820px top 0;
+    &.upgrade-item-highlight-selected {
+        background-position: left -820px top 0;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &.upgrade-item-highlight-disabled,
+    &.upgrade-item-highlight-disabled-hover {
+        background-position: left -825px top 0;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &.upgrade-item-highlight-locked {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#161E23, 0.8);
+        background-image: none;
+        top: 0;
+        left: 0;
+    }
+
+    &.upgrade-item-highlight-preinstall {
+        background-image: unset;
+        background-color: rgb(0 173 255);
+    }
 
     &.active {
-      display: block;
+        display: block;
     }
-  }
-
-  &.upgrade-item-highlight-disabled,&.upgrade-item-highlight-disabled-hover {
-    background-position: left -825px top 0;
-
-    &.active {
-      display: block;
-    }
-  }
-
-  &.upgrade-item-highlight-locked {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#161E23, 0.8);
-    background-image: none;
-    top: 0;
-    left: 0;
-  }
-
-  &.active {
-    display: block;
-  }
 }
 
 .upgrade-item {
-  &:hover {
-    .upgrade-item-highlight-hover {
-      background-position: left -830px top 0;
-      display: block;
+    &:hover {
+        .upgrade-item-highlight-hover {
+            background-position: left -830px top 0;
+            display: block;
+        }
     }
-  }
 }
 
 .upgrade-section:has(.upgrade-item:hover) {
-  .upgrade-item-highlight-disabled-hover {
-    display: block;
-  }
+    .upgrade-item-highlight-disabled-hover {
+        display: block;
+    }
 }

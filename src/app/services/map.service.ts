@@ -361,6 +361,10 @@ export class MapService {
                 this.setOptions(this, options);
                 this._image = new Image();
 
+                if (this.options.imageFactor == null) {
+                    this.options.imageFactor = 1;
+                }
+
                 if (options.color) {
                     fetch(options.iconUrl).then((response) => {
                         if (response.ok) {
@@ -389,6 +393,7 @@ export class MapService {
 
                 layer._radius = this._calculatedRadius * layer._map.scaleFactor;
                 layer._radius2 = layer._radius * 2;
+                layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
             },
 
             // Встановлення слухача зуму
@@ -408,7 +413,7 @@ export class MapService {
                         for (let i = 0; i < this.markers.length; i++) {
                             this.markers[i]._radius = radius;
                             this.markers[i]._radius2 = radius * 2;
-                            //this._layer._updatePath();
+                            layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
                         }
                     }
                 };

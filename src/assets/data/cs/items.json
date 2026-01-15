@@ -14,7 +14,9 @@
     "gridY": 9,
     "weight": 0.3,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -31,7 +33,9 @@
     "gridY": 12,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -48,7 +52,9 @@
     "gridY": 13,
     "weight": 0.3,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -65,7 +71,9 @@
     "gridY": 2,
     "weight": 0.6,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -82,7 +90,9 @@
     "gridY": 0,
     "weight": 0.2,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -99,7 +109,9 @@
     "gridY": 12,
     "weight": 0.05,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -116,7 +128,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -133,7 +147,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -150,7 +166,9 @@
     "gridY": 1,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -167,7 +185,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -184,7 +204,9 @@
     "gridY": 24,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -201,7 +223,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -218,7 +242,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -235,7 +261,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -252,7 +280,9 @@
     "gridY": 0,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -269,7 +299,9 @@
     "gridY": 0,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -286,7 +318,9 @@
     "gridY": 0,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -303,7 +337,9 @@
     "gridY": 0,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -320,7 +356,9 @@
     "gridY": 16,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -337,7 +375,9 @@
     "gridY": 16,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -354,7 +394,9 @@
     "gridY": 1,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -371,7 +413,9 @@
     "gridY": 23,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -388,7 +432,9 @@
     "gridY": 23,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -405,7 +451,9 @@
     "gridY": 11,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -422,7 +470,9 @@
     "gridY": 8,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -439,7 +489,9 @@
     "gridY": 10,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -456,7 +508,9 @@
     "gridY": 4,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -473,7 +527,9 @@
     "gridY": 6,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -490,7 +546,9 @@
     "gridY": 23,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -507,7 +565,9 @@
     "gridY": 12,
     "weight": 0.2,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -524,7 +584,9 @@
     "gridY": 12,
     "weight": 0.2,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -541,7 +603,9 @@
     "gridY": 12,
     "weight": 0.24,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -558,7 +622,9 @@
     "gridY": 12,
     "weight": 0.24,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -575,7 +641,9 @@
     "gridY": 12,
     "weight": 0.3,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -592,7 +660,9 @@
     "gridY": 12,
     "weight": 0.3,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -609,7 +679,9 @@
     "gridY": 9,
     "weight": 0.45,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -626,7 +698,9 @@
     "gridY": 10,
     "weight": 0.5,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -643,7 +717,9 @@
     "gridY": 10,
     "weight": 0.5,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -660,7 +736,9 @@
     "gridY": 11,
     "weight": 0.32,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -677,7 +755,9 @@
     "gridY": 11,
     "weight": 0.32,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -694,7 +774,9 @@
     "gridY": 11,
     "weight": 0.7,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -711,7 +793,9 @@
     "gridY": 12,
     "weight": 0.7,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -728,7 +812,9 @@
     "gridY": 10,
     "weight": 0.7,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -745,7 +831,9 @@
     "gridY": 11,
     "weight": 0.33,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -762,7 +850,9 @@
     "gridY": 11,
     "weight": 0.33,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -779,7 +869,9 @@
     "gridY": 9,
     "weight": 0.23,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -796,7 +888,9 @@
     "gridY": 9,
     "weight": 0.23,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -813,7 +907,9 @@
     "gridY": 10,
     "weight": 0.23,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -830,7 +926,9 @@
     "gridY": 19,
     "weight": 2,
     "area": 3,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -847,7 +945,9 @@
     "gridY": 10,
     "weight": 0.08,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -864,7 +964,9 @@
     "gridY": 9,
     "weight": 0.08,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -881,7 +983,9 @@
     "gridY": 9,
     "weight": 0.3,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -898,7 +1002,9 @@
     "gridY": 9,
     "weight": 0.3,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -915,7 +1021,9 @@
     "gridY": 13,
     "weight": 0.08,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -932,7 +1040,9 @@
     "gridY": 9,
     "weight": 1.3,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1002,7 +1112,9 @@
     "gridY": 6,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1070,7 +1182,9 @@
     "gridY": 6,
     "weight": 0.7,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1140,7 +1254,9 @@
     "gridY": 8,
     "weight": 0.83,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1210,7 +1326,9 @@
     "gridY": 7,
     "weight": 0.88,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1280,7 +1398,9 @@
     "gridY": 8,
     "weight": 1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1350,7 +1470,9 @@
     "gridY": 5,
     "weight": 0.69,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1419,7 +1541,9 @@
     "gridY": 6,
     "weight": 0.72,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1488,7 +1612,9 @@
     "gridY": 4,
     "weight": 1.1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1557,7 +1683,9 @@
     "gridY": 8,
     "weight": 0.72,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1626,7 +1754,9 @@
     "gridY": 8,
     "weight": 1.7,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1693,7 +1823,9 @@
     "gridY": 1,
     "weight": 1.9,
     "area": 3,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1761,7 +1893,9 @@
     "gridY": 2,
     "weight": 3.1,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1832,7 +1966,9 @@
     "gridY": 5,
     "weight": 3,
     "area": 5,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1903,7 +2039,9 @@
     "gridY": 3,
     "weight": 4.4,
     "area": 5,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -1971,7 +2109,9 @@
     "gridY": 16,
     "weight": 2.7,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2040,7 +2180,9 @@
     "gridY": 11,
     "weight": 2.5,
     "area": 3,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2111,7 +2253,9 @@
     "gridY": 5,
     "weight": 3.3,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2181,7 +2325,9 @@
     "gridY": 2,
     "weight": 4,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2251,7 +2397,9 @@
     "gridY": 12,
     "weight": 5,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2321,7 +2469,9 @@
     "gridY": 6,
     "weight": 2.7,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2392,7 +2542,9 @@
     "gridY": 7,
     "weight": 4.5,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2461,7 +2613,9 @@
     "gridY": 14,
     "weight": 3.2,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2530,7 +2684,9 @@
     "gridY": 4,
     "weight": 2.5,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2599,7 +2755,9 @@
     "gridY": 4,
     "weight": 3.2,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2668,7 +2826,9 @@
     "gridY": 2,
     "weight": 4.4,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2737,7 +2897,9 @@
     "gridY": 0,
     "weight": 4.9,
     "area": 12,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2800,7 +2962,9 @@
     "gridY": 8,
     "weight": 6.2,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2860,7 +3024,9 @@
     "gridY": 0,
     "weight": 6.3,
     "area": 5,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2929,7 +3095,9 @@
     "gridY": 10,
     "weight": 3.6,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -2997,7 +3165,9 @@
     "gridY": 9,
     "weight": 4.6,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3066,7 +3236,9 @@
     "gridY": 36,
     "weight": 7.5,
     "area": 12,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3083,7 +3255,9 @@
     "gridY": 2,
     "weight": 0.2,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3100,7 +3274,9 @@
     "gridY": 1,
     "weight": 0.1,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3117,7 +3293,9 @@
     "gridY": 0,
     "weight": 1.3,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3159,7 +3337,9 @@
     "gridY": 13,
     "weight": 7,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3201,7 +3381,9 @@
     "gridY": 17,
     "weight": 12,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3243,7 +3425,9 @@
     "gridY": 15,
     "weight": 5,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3285,7 +3469,9 @@
     "gridY": 13,
     "weight": 9,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3327,7 +3513,9 @@
     "gridY": 13,
     "weight": 25,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3369,7 +3557,9 @@
     "gridY": 16,
     "weight": 7,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -3411,7 +3601,9 @@
     "gridY": 16,
     "weight": 12,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3428,7 +3620,9 @@
     "gridY": 18,
     "weight": 0.05,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3445,7 +3639,9 @@
     "gridY": 14,
     "weight": 0.1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3462,7 +3658,9 @@
     "gridY": 20,
     "weight": 0.1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3479,7 +3677,9 @@
     "gridY": 20,
     "weight": 0.1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3496,7 +3696,9 @@
     "gridY": 14,
     "weight": 0,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3513,7 +3715,9 @@
     "gridY": 7,
     "weight": 0,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -3530,7 +3734,9 @@
     "gridY": 14,
     "weight": 0,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3606,7 +3812,9 @@
     "gridY": 5,
     "weight": 3.3,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3683,7 +3891,9 @@
     "gridY": 5,
     "weight": 3.3,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3758,7 +3968,9 @@
     "gridY": 2,
     "weight": 4,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3835,7 +4047,9 @@
     "gridY": 4,
     "weight": 1.1,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3909,7 +4123,9 @@
     "gridY": 6,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -3982,7 +4198,9 @@
     "gridY": 6,
     "weight": 0.5,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -4059,7 +4277,9 @@
     "gridY": 6,
     "weight": 2.7,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -4134,7 +4354,9 @@
     "gridY": 8,
     "weight": 0.83,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -4207,7 +4429,9 @@
     "gridY": 7,
     "weight": 4.5,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "weapon",
@@ -4283,7 +4507,9 @@
     "gridY": 4,
     "weight": 3.2,
     "area": 10,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4332,7 +4558,9 @@
     "gridY": 15,
     "weight": 5,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4349,7 +4577,9 @@
     "gridY": 1,
     "weight": 0.2,
     "area": 1,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4366,7 +4596,9 @@
     "gridY": 3,
     "weight": 1.36,
     "area": 2,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4407,7 +4639,9 @@
     "gridY": 18,
     "weight": 3,
     "area": 4,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4448,7 +4682,9 @@
     "gridY": 0,
     "weight": 3,
     "area": 4,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4490,7 +4726,9 @@
     "gridY": 13,
     "weight": 3,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4532,7 +4770,9 @@
     "gridY": 15,
     "weight": 7,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4574,7 +4814,9 @@
     "gridY": 27,
     "weight": 15,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4616,7 +4858,9 @@
     "gridY": 27,
     "weight": 4,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "$type": "outfit",
@@ -4658,7 +4902,9 @@
     "gridY": 27,
     "weight": 7,
     "area": 6,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4675,7 +4921,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4692,7 +4940,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4709,7 +4959,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4726,7 +4978,9 @@
     "gridY": 13,
     "weight": 0.1,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4743,7 +4997,9 @@
     "gridY": 19,
     "weight": 1.5,
     "area": 8,
-    "isQuest": false
+    "isQuest": false,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4760,7 +5016,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4777,7 +5035,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4794,7 +5054,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4811,7 +5073,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4828,7 +5092,9 @@
     "gridY": 13,
     "weight": 0.1,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4845,7 +5111,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4862,7 +5130,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4879,7 +5149,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4896,7 +5168,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4913,7 +5187,9 @@
     "gridY": 13,
     "weight": 0.1,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4930,7 +5206,9 @@
     "gridY": 23,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4947,7 +5225,9 @@
     "gridY": 13,
     "weight": 0.1,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4964,7 +5244,9 @@
     "gridY": 22,
     "weight": 0.05,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   },
   {
     "id": 0,
@@ -4981,6 +5263,8 @@
     "gridY": 23,
     "weight": 0.5,
     "area": 1,
-    "isQuest": true
+    "isQuest": true,
+    "invisibleInPlayerInventory": false,
+    "destroyOnPickup": false
   }
 ]

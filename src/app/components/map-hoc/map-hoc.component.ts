@@ -866,7 +866,7 @@ export class MapHocComponent {
                 }),
                 isShalter: true,
                 keepMapSize: true,
-                radius: 50
+                radius: 10
             }
         ];
 
@@ -1864,8 +1864,9 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 className: 'mark-container stalker-mark-1.5',
                 animate: false,
-                iconUrl: '/assets/images/svg/marks/medic.svg',
+                iconUrl: '/assets/images/s2/Markers/Texture_Medecine_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
@@ -2072,7 +2073,7 @@ export class MapHocComponent {
 
             marker.bindPopup(
                 (p: any) => this.createArtefactSpawnerPopup(p, this.items),
-                { minWidth: 910, maxWidth: 928 }
+                { minWidth: 910, maxWidth: 928, className: 'leaflet-popup-content-fit-content' }
             );
 
             markers.push(marker);

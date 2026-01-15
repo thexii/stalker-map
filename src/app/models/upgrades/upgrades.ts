@@ -5,6 +5,7 @@ export class ItemUpgrade {
   public item: string;
   public upgradeSections: UpgradeSection[];
   public scheme: Point[][];
+  public schemeName: string;
 }
 
 export class UpgradeSection {
@@ -43,15 +44,17 @@ export class Upgrade {
 }
 
 export class ItemUpgradeView {
-  public upgradeColumns: UpgradeSectionColumn[];
-}
-
-export class UpgradeSectionColumn {
-  public upgradeRow: UpgradeSectionRow[];
+    public itemUniqueName: string;
+  public rows: UpgradeSectionRow[];
 }
 
 export class UpgradeSectionRow {
-  public upgradeRow: Upgrade[];
+  public upgradeCell: UpgradeCell[];
+}
+
+export class UpgradeCell {
+  public section: UpgradeSection;
+  public isEmpty: boolean;
 }
 
 export class UpgradeProperty {
