@@ -74,9 +74,6 @@ export class ItemUpgradesComponent {
         let currentRow: UpgradeSectionRow = new UpgradeSectionRow();
         let cellIndex: number = 0;
 
-        let empty = new UpgradeCell();
-        empty.isEmpty = true;
-
         for (let branch of correctBranches) {
             if (this.viewModel.rows[branch] == null) {
                 currentRow = new UpgradeSectionRow();
@@ -97,7 +94,7 @@ export class ItemUpgradesComponent {
     }
 
     private createCsViewModel(): void {
-        console.log(this.transformToGrid(this.selectedItemUpgrade));
+        this.transformToGrid(this.selectedItemUpgrade);
     }
 
     private processArray(input: number[], validLengths: number[], maxRepeat: number): number[] {
@@ -192,6 +189,7 @@ export class ItemUpgradesComponent {
             }
 
             let firstColumn = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == 0));
+            let itemsInFirstRow: number[][] = [];
 
             for (let section of firstColumn) {
                 let rowModel: UpgradeSectionRow = new UpgradeSectionRow();
@@ -201,10 +199,71 @@ export class ItemUpgradesComponent {
 
                 rowModel.upgradeCell = [cell];
                 this.viewModel.rows.push(rowModel)
+                itemsInFirstRow.push(section.elements.map(x => x.schemeIndexY));
             }
 
             let secoundColumn = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == 1));
-            console.log(secoundColumn)
+            console.log(itemsInFirstRow)
+
+            for (let column of secoundColumn) {
+                let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
+
+                for (let i = 0; i < up.scheme[0].length; i++) {
+                    if (up.scheme[0][i].y == columnSchema.y) {
+                        let cell: UpgradeCell = new UpgradeCell();
+                        cell.section = column;
+
+                        let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
+
+                        if (itemsInFirstRow[currentItemRow].length == 2) {
+                            if (itemsInFirstRow[currentItemRow][0] == i) {
+                                cell.justify = 'start';
+                            }
+                            else {
+                                cell.justify = 'end';
+                            }
+                        }
+                        else {
+                                cell.justify = 'center';
+                        }
+
+                        this.viewModel.rows[currentItemRow].upgradeCell.push(cell)
+                        break;
+                    }
+                }
+            }
+            
+            if (up.scheme.length > 2) {
+                let thirdColumn = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == 2));
+            
+                for (let column of thirdColumn) {
+                    let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
+
+                    for (let i = 0; i < up.scheme[0].length; i++) {
+                        if (up.scheme[0][i].y == columnSchema.y) {
+                            let cell: UpgradeCell = new UpgradeCell();
+                            cell.section = column;
+
+                            let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
+
+                            if (itemsInFirstRow[currentItemRow].length == 2) {
+                                if (itemsInFirstRow[currentItemRow][0] == i) {
+                                    cell.justify = 'start';
+                                }
+                                else {
+                                    cell.justify = 'end';
+                                }
+                            }
+                            else {
+                                    cell.justify = 'center';
+                            }
+
+                            this.viewModel.rows[currentItemRow].upgradeCell.push(cell)
+                            break;
+                        }
+                    }
+                }
+            }
 
             if (up.scheme[0].length == lineRows.length) {
                 /*for (let firstColumnElement of up.scheme[0]) {

@@ -55,6 +55,7 @@ export class UpgradeSectionRow {
 export class UpgradeCell {
   public section: UpgradeSection;
   public isEmpty: boolean;
+  public justify: string;
 }
 
 export class UpgradeProperty {

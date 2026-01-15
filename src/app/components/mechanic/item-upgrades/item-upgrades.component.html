@@ -63,7 +63,7 @@
                         @if (!cell.isEmpty) {
                             @for (upgrade of cell.section.elements; track upgrade) {
                                 <div id="{{upgrade.name}}" tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}}"
-                                    [ngStyle]="{ 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px' }" (click)="selectUpgrade(upgrade, cell.section)"
+                                    [ngStyle]="{ 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'}" (click)="selectUpgrade(upgrade, cell.section)"
                                     [ngClass]="{'need-previous-upgrades': cell.section.needPreviousUpgrade && cell.section.needPreviousUpgrade.length > 0}">
                                     
                                     @if (upgrade.isLocked || upgrade.needPreviousUpgrades) {
