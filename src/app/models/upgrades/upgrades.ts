@@ -54,8 +54,10 @@ export class UpgradeSectionRow {
 
 export class UpgradeCell {
   public section: UpgradeSection;
+  public section2: UpgradeSection;
   public isEmpty: boolean;
   public justify: string;
+  public height: number;
 }
 
 export class UpgradeProperty {
@@ -70,4 +72,5 @@ export class UpgradeSelectedEventModel {
   public upgradeSection: UpgradeSection;
   public item: Item;
   public selectedItemUpgrade: ItemUpgrade;
+  public isCs: boolean;
 }

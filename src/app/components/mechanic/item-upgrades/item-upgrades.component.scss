@@ -4,6 +4,11 @@
     gap: 10px;
 }
 
+.cs.selected-item-upgrades {
+    column-gap: 17px;
+    padding-left: 10px;
+}
+
 .selected-item-upgrades .section {
     display: flex;
     flex-direction: column;
@@ -97,6 +102,13 @@
 
     &.active {
         display: block;
+    }
+}
+
+.cs .upgrade-item-highlight {
+    &.upgrade-item-highlight-selected, &.upgrade-item-highlight-preinstall, &.upgrade-item-highlight-selected, &.upgrade-item-highlight-disabled, &.upgrade-item-highlight-hover {
+        left: -6px;
+        top: 0;
     }
 }
 

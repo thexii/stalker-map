@@ -3,13 +3,13 @@ import { UpgradeTooltipComponent } from '../../tooltips/upgrade-tooltip/upgrade-
 import { TooltipDirective } from '../../tooltips/tooltip.directive';
 import { MechanicDiscount } from '../../../models/mechanic.model';
 import { ItemUpgrade, ItemUpgradeView, Upgrade, UpgradeCell, UpgradeProperty, UpgradeSection, UpgradeSectionRow, UpgradeSelectedEventModel } from '../../../models/upgrades/upgrades';
-import { NgClass, NgStyle } from '@angular/common';
+import { CommonModule, NgClass, NgStyle } from '@angular/common';
 import { Item } from '../../../models/item.model';
 
 @Component({
     selector: 'app-item-upgrades',
     standalone: true,
-    imports: [TooltipDirective, NgStyle, NgClass],
+    imports: [TooltipDirective, NgStyle, NgClass, CommonModule],
     templateUrl: './item-upgrades.component.html',
     styleUrl: './item-upgrades.component.scss'
 })
@@ -45,8 +45,8 @@ export class ItemUpgradesComponent {
         if (upgrade.isPreinstall) {
             return;
         }
-        console.log(this.selectedItemUpgrade);
-        this.upgradeSelectedEvent.emit({ upgrade: upgrade, upgradeSection: upgradeSection, item: this.item, selectedItemUpgrade: this.selectedItemUpgrade });
+        
+        this.upgradeSelectedEvent.emit({ upgrade: upgrade, upgradeSection: upgradeSection, item: this.item, selectedItemUpgrade: this.selectedItemUpgrade, isCs: this.game == 'cs' });
     }
 
     private createViewModel(): void {
@@ -58,8 +58,6 @@ export class ItemUpgradesComponent {
         else {
             this.createCsViewModel();
         }
-
-        console.log(this.viewModel)
     }
 
     private createCopViewModel(): void {
@@ -202,18 +200,78 @@ export class ItemUpgradesComponent {
                 itemsInFirstRow.push(section.elements.map(x => x.schemeIndexY));
             }
 
-            let secoundColumn = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == 1));
-            console.log(itemsInFirstRow)
+            this.handleColumn(1, itemsInFirstRow, up);
+            
+            if (up.scheme.length > 2) {
+                this.handleColumn(2, itemsInFirstRow, up);
+            }
+        }
+    }
 
-            for (let column of secoundColumn) {
+    private handleColumn(cId: number, itemsInFirstRow: number[][], up: ItemUpgrade): void {
+        let secoundColumn: UpgradeSection[] = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == cId));
+        let notAdded: UpgradeSection[] = [];
+
+        for (let column of secoundColumn) {
+            let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
+            let isAdded: boolean = false;
+
+            for (let i = 0; i < up.scheme[0].length; i++) {
+                if (up.scheme[0][i].y == columnSchema.y) {
+                    let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
+
+                    isAdded = true;
+                    if (this.viewModel.rows[currentItemRow].upgradeCell.length != cId) {
+                        let existCell = this.viewModel.rows[currentItemRow].upgradeCell[cId];
+
+                        if (existCell.section.elements[0].schemeIndexY > column.elements[0].schemeIndexY) {
+                            existCell.section2 = existCell.section;
+                            existCell.section = column;
+                        }
+                        else {
+                            existCell.section2 = column;
+                        }
+
+                        existCell.justify = '';
+                        continue;
+                    }
+
+                    let cell: UpgradeCell = new UpgradeCell();
+                    cell.section = column;
+
+                    if (itemsInFirstRow[currentItemRow].length == 2) {
+                        if (itemsInFirstRow[currentItemRow][0] == i) {
+                            cell.justify = 'start';
+                        }
+                        else {
+                            cell.justify = 'end';
+                        }
+                    }
+                    else {
+                        cell.justify = 'center';
+                    }
+
+                    this.viewModel.rows[currentItemRow].upgradeCell.push(cell)
+                    break;
+                }
+            }
+
+            if (!isAdded) {
+                notAdded.push(column);
+            }
+        }
+
+        if (notAdded.length > 0) {
+            for (let column of notAdded) {
                 let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
-
-                for (let i = 0; i < up.scheme[0].length; i++) {
-                    if (up.scheme[0][i].y == columnSchema.y) {
+                
+                for (let i = 0; i < up.scheme[0].length - 1; i++) {
+                    if (up.scheme[0][i].y < columnSchema.y && up.scheme[0][i+1].y > columnSchema.y) {
+                        let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
+                        
                         let cell: UpgradeCell = new UpgradeCell();
                         cell.section = column;
-
-                        let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
+                        cell.height = 2;
 
                         if (itemsInFirstRow[currentItemRow].length == 2) {
                             if (itemsInFirstRow[currentItemRow][0] == i) {
@@ -224,73 +282,19 @@ export class ItemUpgradesComponent {
                             }
                         }
                         else {
-                                cell.justify = 'center';
+                            cell.justify = 'center';
                         }
 
-                        this.viewModel.rows[currentItemRow].upgradeCell.push(cell)
-                        break;
+                        this.viewModel.rows[currentItemRow].upgradeCell.push(cell);
+
+                        
+                        let empty: UpgradeCell = new UpgradeCell();
+                        empty.isEmpty = true;
+
+                        this.viewModel.rows[currentItemRow + 1].upgradeCell.push(empty);
                     }
                 }
             }
-            
-            if (up.scheme.length > 2) {
-                let thirdColumn = up.upgradeSections.filter(x => x.elements.some(x => x.schemeIndexX == 2));
-            
-                for (let column of thirdColumn) {
-                    let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
-
-                    for (let i = 0; i < up.scheme[0].length; i++) {
-                        if (up.scheme[0][i].y == columnSchema.y) {
-                            let cell: UpgradeCell = new UpgradeCell();
-                            cell.section = column;
-
-                            let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
-
-                            if (itemsInFirstRow[currentItemRow].length == 2) {
-                                if (itemsInFirstRow[currentItemRow][0] == i) {
-                                    cell.justify = 'start';
-                                }
-                                else {
-                                    cell.justify = 'end';
-                                }
-                            }
-                            else {
-                                    cell.justify = 'center';
-                            }
-
-                            this.viewModel.rows[currentItemRow].upgradeCell.push(cell)
-                            break;
-                        }
-                    }
-                }
-            }
-
-            if (up.scheme[0].length == lineRows.length) {
-                /*for (let firstColumnElement of up.scheme[0]) {
-                    let rowModel: UpgradeSectionRow = new UpgradeSectionRow();
-                    rowModel.upgradeCell = [];
-
-                    for (let col = 1; col < up.scheme.length; col++) {
-                        let sameRowIndex: number = up.scheme[col].findIndex(point => point.y == firstColumnElement.y)
-                        let cell = new UpgradeCell();
-
-                        if (sameRowIndex > -1) {
-                            let section: UpgradeSection | undefined = up.upgradeSections.find(x => x.elements.some(x => x.schemeIndexX == col && x.schemeIndexY == sameRowIndex))
-
-                            break;
-                        }
-                        else {
-                            cell.isEmpty = true;
-                            rowModel.upgradeCell.push(cell);
-                        }
-                    }
-
-                    this.viewModel.rows.push(rowModel)
-                }*/
-                console.log('only lines')
-            }
-
-            console.log(up);
         }
     }
 }
