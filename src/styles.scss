@@ -287,7 +287,8 @@ input[type=checkbox]+label:before {
 }
 
 .inventory-item-image.hoc {
-  background-image: url(/assets/images/items/hoc_icon_equipment.png)
+  background-image: url(/assets/images/items/hoc_icon_equipment.png);
+  background-size: calc(var(--inventory-cell-size) * var(--item-width-in-cell));
 }
 
 .item-additional-info {
@@ -964,7 +965,7 @@ app-compare {
   position: absolute;
   right: 5px;
   bottom: 5px;
-  font-size: 35px;
+  font-size: calc((35px / var(--initial-inventory-cell-size)) * var(--inventory-cell-size));
   color: white;
 }
 

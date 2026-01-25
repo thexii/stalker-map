@@ -21,7 +21,7 @@
                 @if (stuffItem.preinstalled.length > 0) {
                     <div class="item-attachments">
                         @for (attachment of stuffItem.preinstalled; track attachment) {
-                            <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}" [ngStyle]="{'width': stuffItem.item.width * 130 + 'px', 'height': stuffItem.item.height * 130+ 'px'}"></div>
+                            <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}" [ngStyle]="{'width': `calc(var(--inventory-cell-size) * ${stuffItem.item.width})`, 'height': `calc(var(--inventory-cell-size) * ${stuffItem.item.height})`}"></div>
                         }
                     </div>
                 }

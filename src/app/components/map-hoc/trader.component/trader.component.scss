@@ -5,7 +5,7 @@
 }
 
 .inventory {
-    max-height: round(up, var(--wrapper-height) / 2, 130px);
+    max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
     overflow-y: auto;
     overflow-x: hidden;
 }

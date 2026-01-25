@@ -243,14 +243,14 @@ export class MapHocComponent {
             let tileSize: number = width / Math.pow(baseTilesInRow, zoomOffset);
 
             let rawGameMap = L.tileLayer('https://joric.github.io/stalker2_tileset/extras/wb/{z}/{x}/{y}.jpg',
-            {
-                tileSize: tileSize,
-                zoomOffset: zoomOffset,
-                minZoom: gameConfig.minZoom,
-                maxZoom: maxZoom,
-                maxNativeZoom: 3,
-                noWrap: true
-            })
+                {
+                    tileSize: tileSize,
+                    zoomOffset: zoomOffset,
+                    minZoom: gameConfig.minZoom,
+                    maxZoom: maxZoom,
+                    maxNativeZoom: 3,
+                    noWrap: true
+                })
 
             let inGameMap = L.tileLayer('https://joric.github.io/stalker2_tileset/tiles/{z}/{x}/{y}.jpg',
                 {
@@ -266,7 +266,7 @@ export class MapHocComponent {
             inGameMap.addToTop = false;
             rawGameMap.ableToSearch = false;
             rawGameMap.addToTop = false;
-            
+
 
             rawGameMap.name = 'raw-map-label';
             inGameMap.name = 'in-game-map-label';
@@ -329,9 +329,26 @@ export class MapHocComponent {
             ruler = this.mapService.addRuler(this.map, 1, 8000);
         }
 
+        let cellSize = 130;
+
         document.documentElement.style.setProperty(
             '--inventory-cell-size',
-            `${130}px`
+            `${cellSize}px`
+        );
+
+        document.documentElement.style.setProperty(
+            '--initial-inventory-cell-size',
+            `${cellSize}px`
+        );
+
+        document.documentElement.style.setProperty(
+            '--item-width-in-cell',
+            `36`
+        );
+
+        document.documentElement.style.setProperty(
+            '--attachment-width-in-cell',
+            `55`
         );
 
         let tempMap = this.map;
@@ -356,6 +373,7 @@ export class MapHocComponent {
         });
 
         this.createCustomLayersControl();
+        this.createCellSizeChangerControl();
 
         let layersToLayerController: any = [];
 
@@ -818,6 +836,54 @@ export class MapHocComponent {
         };
     }
 
+    private createCellSizeChangerControl(): void {
+        L.Control.Slider = L.Control.extend({
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function (map: object) {
+                // Створюємо основний контейнер
+                const container = L.DomUtil.create('div', 'leaflet-control-slider-container');
+
+                // Додаємо іконку/заголовок (щоб було на що наводити)
+                const icon = L.DomUtil.create('div', 'slider-icon', container);
+                icon.innerHTML = '📏';
+
+                // Створюємо сам input
+                const slider = L.DomUtil.create('input', 'inventory-cell-slider', container);
+                slider.type = 'range';
+                slider.min = '50';
+                slider.max = '130';
+                slider.value = '130';
+                slider.step = '10';
+
+                // Зупиняємо розповсюдження подій кліку та прокрутки на карту
+                L.DomEvent.disableClickPropagation(container);
+                L.DomEvent.disableScrollPropagation(container);
+
+                // Обробник події (у Angular тут буде виклик вашого методу setCellSize)
+                L.DomEvent.on(slider, 'input', (e: any) => {
+                    this.options.onChange(e.target.value);
+                });
+
+                return container;
+            }
+        });
+
+        // Функція-конструктор для зручності
+        L.control.slider = function (options: object) {
+            return new L.Control.Slider(options);
+        };
+
+        L.control.slider({
+            position: 'topright',
+            onChange: (value: string) => {
+                this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
+            }
+        }).addTo(this.map);
+    }
+
     private addMarkers(): void {
         let markerImages: any[] = [
             {
@@ -995,24 +1061,24 @@ export class MapHocComponent {
 
         for (let i = 1; i < width; i++) {
             let x = i * gridGap + xShift;
-            
+
             grid.push(L.polyline([[startHeight, x], [endHeight, x]], { color: 'white', weight: 1, opacity: 0.5 }));
         }
 
         for (let i = heightStart; i < height; i++) {
             let y = yShift + i * gridGap;
-            
+
             grid.push(L.polyline([[y, 0], [y, this.gamedata.widthInMeters]], { color: 'white', weight: 1, opacity: 0.5 }));
         }
 
         let letters = ['А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т'];
 
         for (let x = 1; x < width; x++) {
-            let letter = letters[x-1];
+            let letter = letters[x - 1];
 
             for (let y = heightStart; y < height - 1; y++) {
-                const label = `${letter}${y-2}`;
-                
+                const label = `${letter}${y - 2}`;
+
                 const icon = L.divIcon({
                     className: 'grid-label',
                     html: label,
@@ -1022,7 +1088,7 @@ export class MapHocComponent {
                 grid.push(L.marker([yShift + y * gridGap + 10, x * gridGap + xShift + 10], { icon }));
             }
         }
-        
+
         this.addLayerToMap(L.layerGroup(grid), 'grid', true);
     }
 
@@ -1230,7 +1296,7 @@ export class MapHocComponent {
         let counts: number[] = [0, 0, 0, 0, 0];
 
         let radius = 10;
-        
+
         let mutants: string[] =
             [
                 'Blinddog',
@@ -1275,7 +1341,7 @@ export class MapHocComponent {
                     desc = icons[0].faction;
                     radius = icons[0].radius;
                 }
-                
+
                 let marker = new this.svgMarker(
                     [data.z, data.x],
                     { renderer: this.canvasRenderer, icon: icon, radius: radius }
@@ -1286,7 +1352,7 @@ export class MapHocComponent {
                 marker.feature = {};
                 marker.feature.properties = {};
                 marker.feature.properties.model = data.lairs[0];
-                
+
                 if (dataToSearch.length > 0 && isMutant) {
                     this.createTranslatableProperty(
                         marker.feature.properties,
@@ -1301,8 +1367,7 @@ export class MapHocComponent {
                 if (isMutant) {
                     mutantLairs.push(marker);
                 }
-                else
-                {
+                else {
                     lairs.push(marker);
                 }
 
@@ -1342,12 +1407,11 @@ export class MapHocComponent {
                 for (let i = 0; i < icons.length; i++) {
                     let isMutant = mutants.includes(data.lairs[i].faction);
                     let marker = this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], isMutant, index);
-                    
+
                     if (isMutant) {
                         mutantLairs.push(marker);
                     }
-                    else
-                    {
+                    else {
                         lairs.push(marker);
                     }
 
@@ -1437,7 +1501,7 @@ export class MapHocComponent {
                     continue;
                 }
 
-                result.push({icon: icon, faction: desc, title: title, radius: icon.radius, model: lair})
+                result.push({ icon: icon, faction: desc, title: title, radius: icon.radius, model: lair })
             }
 
             return result;
@@ -1465,7 +1529,7 @@ export class MapHocComponent {
         marker.feature = {};
         marker.feature.properties = {};
         marker.feature.properties.model = markerData.model;
-        
+
         if (dataToSearch.length > 0 && isMutant) {
             this.createTranslatableProperty(
                 marker.feature.properties,
@@ -1604,7 +1668,7 @@ export class MapHocComponent {
                         this.items,
                         false
                     ),
-                { minWidth: 912 }
+                { className: 'leaflet-popup-content-fit-content' }
             );
 
             if (isRich) {
@@ -1820,7 +1884,7 @@ export class MapHocComponent {
             });
 
             if (!isRandom) {
-                marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912 });
+                marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912, className: 'leaflet-popup-content-fit-content' });
             }
 
             if (isRich) {
@@ -1920,7 +1984,7 @@ export class MapHocComponent {
 
             marker.bindPopup(
                 (p: any) => this.createTraderPopup(p),
-                { className: 'leaflet-popup-content-fit-content'}
+                { className: 'leaflet-popup-content-fit-content' }
             );
 
             array.push(marker);
@@ -1982,7 +2046,7 @@ export class MapHocComponent {
 
             marker.bindPopup(
                 (p: any) => this.createGuidePopup(p),
-                { className: 'leaflet-popup-content-fit-content'}
+                { className: 'leaflet-popup-content-fit-content' }
             );
 
             guiders.push(marker);
