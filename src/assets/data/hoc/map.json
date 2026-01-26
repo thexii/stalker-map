@@ -80758,7 +80758,7 @@
       "tradeGenerators": [
         {
           "condition": "ConstTrue",
-          "itemGenerator": "MalakhitMedic_TradeItemGenerator",
+          "itemGenerator": "IkarMedic_TradeItemGenerator",
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
@@ -81831,7 +81831,7 @@
       "tradeGenerators": [
         {
           "condition": "ConstTrue",
-          "itemGenerator": "Medic_Terricon_TradeItemGenerator",
+          "itemGenerator": "IkarMedic_TradeItemGenerator",
           "buyModifier": 0.3,
           "sellModifier": 1,
           "weaponSellMinDurability": 0,
@@ -83109,27 +83109,6 @@
               "isArray": false,
               "chance": 0.75,
               "uniqueName": "Heavy2_Military_Armor"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "MalakhitMedic_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "MedicUniversal_TradeItemGenerator"
             }
           ]
         }
@@ -84638,27 +84617,6 @@
               "isArray": false,
               "chance": 1,
               "uniqueName": "NVG_Gen1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Medic_Terricon_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "MedicUniversal_TradeItemGenerator"
             }
           ]
         }

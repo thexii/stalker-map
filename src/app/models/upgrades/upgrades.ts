@@ -41,11 +41,13 @@ export class Upgrade {
   public needPreviousUpgrades: boolean;
 
   public htmlLink: any;
+  public branch: number;
 }
 
 export class ItemUpgradeView {
     public itemUniqueName: string;
-  public rows: UpgradeSectionRow[];
+    public rows: UpgradeSectionRow[];
+    public columns: number;
 }
 
 export class UpgradeSectionRow {

@@ -6,6 +6,7 @@ $cell: 50px;
   display: flex;
   color: white;
   max-width: 1200px;
+  column-gap: 1rem;
 }
 
 .mechanic-container-section {
@@ -19,7 +20,6 @@ $cell: 50px;
 }
 
 .mechanic-container-section.actor {
-  margin-left: 1rem;
   width: calc(($trader-columns + 1 ) * $cell);
   min-width: calc(($trader-columns + 1 ) * $cell);
   max-height: var(--wrapper-height);
@@ -36,10 +36,6 @@ $cell: 50px;
   max-height: 200px;
 }
 
-.section-info {
-  margin-left: 1rem;
-}
-
 .inventory-container {
   min-width: calc(($trader-columns + 1 ) * $cell);
   display: flex;
@@ -48,7 +44,6 @@ $cell: 50px;
 
 .mechanic-info {
   display: flex;
-  height: 150px;
 }
 
 .mechanic-bio {
@@ -61,7 +56,9 @@ $cell: 50px;
 }
 
 .container {
-  max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .buy.container {
@@ -107,4 +104,14 @@ $cell: 50px;
 
 app-item-property-bar, app-item-property-number {
   display: contents;
+}
+
+.dispersion-title, .dynamic-title {
+    display: flex;
+    flex-direction: row;
+    row-gap: 1rem;
+}
+
+.dispersion-title .upgrade-property-icon, .dynamic-title .upgrade-property-icon {
+    display: block;
 }

@@ -69,6 +69,20 @@
 
                             <table>
                                 <tbody>
+                                    @if (itemDamage) {
+                                        <app-item-property-number [defaultValue]="itemDamage[0].value"
+                                            [value]="upgradedItemDamage[0].value" [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                                            [name]="'damage' | translate"></app-item-property-number>
+                                        
+                                        <app-item-property-number [defaultValue]="itemDamage[0].valuePerSecound"
+                                            [value]="upgradedItemDamage[0].valuePerSecound" [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                                            [name]="'damage-per-sec' | translate"></app-item-property-number>
+
+                                        <app-item-property-number [defaultValue]="itemDamage[0].valuePerMag"
+                                            [value]="upgradedItemDamage[0].valuePerMag" [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
+                                            [name]="'damage-per-mag' | translate"></app-item-property-number>
+                                    }
+
                                     <app-item-property-number [defaultValue]="selectedItem.rpm"
                                         [value]="selectedItemForUpgrades.rpm" [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
                                         [name]="'ui_inv_rate_of_fire' | translate"></app-item-property-number>
@@ -114,18 +128,7 @@
                         </div>
                     }
                     
-                    <div class="dispersion-chart">
-                        <div class="dispersion-title">
-                            {{ 'recoil' | translate }}
-                        </div>
-                        <canvas id="dispersion-chart-canvas" class="chart"></canvas>
-                    </div>
-                    <div class="dynamic-chart">
-                        <div class="dynamic-title">
-                            {{ 'balistic' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
-                        </div>
-                        <canvas id="dynamic-chart-canvas" class="chart"></canvas>
-                    </div>
+                    <ng-container *ngTemplateOutlet="dispersion"></ng-container>
                 </div>
 
                 <div class="outfit-data" [hidden]="selectedItem == null || selectedItem.$type != 'outfit'">
@@ -310,6 +313,7 @@
 
                             <table>
                                 <tbody>
+
                                     <app-item-property-number [defaultValue]="selectedItem.rpm"
                                         [value]="selectedItemForUpgrades.rpm" [iconStyle]="'cop ui_wp_prop_skorostrelnost'"
                                         [name]="'ui_inv_rate_of_fire' | translate"></app-item-property-number>
@@ -321,7 +325,8 @@
 
                                     <app-item-property-number [defaultValue]="selectedItem.fireDispersionBase"
                                         [value]="selectedItemForUpgrades.fireDispersionBase"
-                                        [iconStyle]="'cop ui_wp_prop_tochnost'" [name]="'Дисперсія' | translate"
+                                        [iconStyle]="'cop ui_wp_prop_tochnost'"
+                                        [name]="'Дисперсія' | translate"
                                         [unit]="'°'" [hasSpaceBeforeUnit]="false"
                                         [isPositive]="false"></app-item-property-number>
 
@@ -347,7 +352,8 @@
                                         [name]="'ui_ammo_count' | translate"></app-item-property-number>
 
                                     <app-item-property-number [defaultValue]="selectedItem.weight"
-                                        [value]="selectedItemForUpgrades.weight" [iconStyle]="'cop ui_wp_prop_weight'"
+                                        [value]="selectedItemForUpgrades.weight"
+                                        [iconStyle]="'cop ui_wp_prop_weight'"
                                         [name]="'st_prop_weight' | translate"
                                         [isPositive]="false"></app-item-property-number>
                                 </tbody>
@@ -369,18 +375,8 @@
                             </div>
                         </div>
                     }
-                    <div class="dispersion-chart">
-                        <div class="dispersion-title">
-                            {{ 'recoil' | translate }}
-                        </div>
-                        <canvas id="dispersion-chart-canvas" class="chart"></canvas>
-                    </div>
-                    <div class="dynamic-chart">
-                        <div class="dynamic-title">
-                            {{ 'Балістика кулі' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
-                        </div>
-                        <canvas id="dynamic-chart-canvas" class="chart"></canvas>
-                    </div>
+
+                    <ng-container *ngTemplateOutlet="dispersion"></ng-container>
                 </div>
 
                 <div class="outfit-data" [hidden]="selectedItem == null || selectedItem.$type != 'outfit'">
@@ -535,3 +531,21 @@
         <span>{{ 'markLink' | translate}}</span>
     </div>
 </div>
+
+
+<ng-template #dispersion>
+    <div class="dispersion-chart">
+        <div class="dispersion-title">
+            <i class="cop ui_wp_prop_otdacha upgrade-property-icon"></i>
+            {{ 'recoil' | translate }}
+        </div>
+        <canvas id="dispersion-chart-canvas" class="chart"></canvas>
+    </div>
+    <div class="dynamic-chart">
+        <div class="dynamic-title">
+            <i class="cop ui_wp_prop_nastilnost upgrade-property-icon"></i>
+            {{ 'balistic' | translate }} ({{ 'st_prop_bullet_speed' | translate }})
+        </div>
+        <canvas id="dynamic-chart-canvas" class="chart"></canvas>
+    </div>
+</ng-template> 

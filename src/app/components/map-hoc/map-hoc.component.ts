@@ -1866,7 +1866,7 @@ export class MapHocComponent {
                 animate: false,
                 iconUrl: '/assets/images/s2/Markers/Texture_Medecine_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
-                imageFactor: 2
+                imageFactor: 0.5
             }),
             keepMapSize: true,
         };
@@ -1922,7 +1922,17 @@ export class MapHocComponent {
                 (p: any) => this.createTraderPopup(p),
                 { className: 'leaflet-popup-content-fit-content'}
             );
+            
+            var latlngs = [
+                [data.z - radius / 2, data.x - radius / 2],
+                [data.z - radius / 2, data.x + radius / 2],
+                [data.z + radius / 2, data.x + radius / 2],
+                [data.z + radius / 2, data.x - radius / 2]
+            ];
 
+            var polyline = L.polyline(latlngs, {color: 'red'});
+
+            array.push(polyline);
             array.push(marker);
         }
 

@@ -1,24 +1,31 @@
 @if (item && viewModel) {
-    <div class="selected-item-upgrades {{game}}">
-        @for (row of viewModel.rows; track row) {
-            @for (cell of row.upgradeCell; track cell) {
+    <div class="selected-item-upgrades {{game}}" [ngStyle]="{'grid-template-columns': `repeat(${viewModel.columns}, max-content)`}">
+        @for (row of viewModel.rows; track row; let rowIndex = $index) {
+            @for (cell of row.upgradeCell; track cell; let index = $index) {
                 @if (!cell.isEmpty) {
                     <div class="section" [ngStyle]="{'justify-content': cell.justify, 'grid-row': cell.height > 0 ? 'span ' + cell.height : ''}">
-                        @for (upgrade of cell.section.elements; track upgrade) {
-                            <ng-container *ngTemplateOutlet="csUpgrade; context: {upgrade: upgrade, section: cell.section}"></ng-container>
-                        }
+                        @if (game == 'cs') {
+                            @for (upgrade of cell.section.elements; track upgrade) {
+                                <ng-container *ngTemplateOutlet="csUpgrade; context: {upgrade: upgrade, section: cell.section}"></ng-container>
+                            }
 
-                        @if (cell.section2) {
-                            @for (upgrade of cell.section2.elements; track upgrade) {
-                                <ng-container *ngTemplateOutlet="csUpgrade; context: {upgrade: upgrade, section: cell.section2}"></ng-container>
+                            @if (cell.section2) {
+                                @for (upgrade of cell.section2.elements; track upgrade) {
+                                    <ng-container *ngTemplateOutlet="csUpgrade; context: {upgrade: upgrade, section: cell.section2}"></ng-container>
+                                }
+                            }
+                        }
+                        @else {
+                            @for (upgrade of cell.section.elements; track upgrade) {
+                                <ng-container *ngTemplateOutlet="copUpgrade; context: {upgrade: upgrade, section: cell.section}"></ng-container>
                             }
                         }
                     </div>
                 }
             }
 
-            @if (row.upgradeCell.length < 3) {
-                @let additional = 3 - row.upgradeCell.length;
+            @if (row.upgradeCell.length < viewModel.columns) {
+                @let additional = viewModel.columns - row.upgradeCell.length;
                 @for (i of Array(additional); track $index) {
                     <div></div>
                 }
@@ -27,11 +34,35 @@
     </div>
 }
 
-<ng-template #csUpgrade let-name="name" let-upgrade="upgrade" let-section="section">
-    <div id="{{upgrade.name}}" tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}}"
+<ng-template #copUpgrade let-name="name" let-upgrade="upgrade" let-section="section">
+    <div id="{{upgrade.name}}" tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}} branch-{{upgrade.branch}}"
         [ngStyle]="{ 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'}" (click)="selectUpgrade(upgrade, section)"
         [ngClass]="{'need-previous-upgrades': section.needPreviousUpgrade && section.needPreviousUpgrade.length > 0}">
 
+        @if (upgrade.isLocked || upgrade.needPreviousUpgrades) {
+            <div class="upgrade-item-highlight upgrade-item-highlight-locked active"></div>
+        }
+        @else {
+            <div class="upgrade-item-highlight upgrade-item-highlight-disabled-hover"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-hover"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-selected"
+                [ngClass]="{'active': upgrade.isInstalled && !upgrade.isPreinstall}"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-preinstall"
+                [ngClass]="{'active': upgrade.isPreinstall}"></div>
+            <div class="upgrade-item-highlight upgrade-item-highlight-disabled"
+                [ngClass]="{'active': upgrade.isBlocked}"></div>
+        }
+    </div>
+</ng-template>
+
+<ng-template #csUpgrade let-name="name" let-upgrade="upgrade" let-section="section">
+    <div id="{{upgrade.name}}" tooltip [component]="upgradeTooltipComponent" [componentData]="{upgrade: upgrade, discount: selectedDiscount.value, upgradeProperties: upgradeProperties, game: game }" class="upgrade-item {{game}} {{upgrade.texture}} branch-{{upgrade.branch}}"
+        [ngStyle]="{ 'background-position': 'left -' + upgrade.iconX + 'px top -' + upgrade.iconY + 'px'}" (click)="selectUpgrade(upgrade, section)"
+        [ngClass]="{'need-previous-upgrades': section.needPreviousUpgrade && section.needPreviousUpgrade.length > 0, 'hover-branch': hoveredBranch == upgrade.branch}"
+        (mouseenter)="setHover(upgrade.branch)"
+        (mouseleave)="setHover(-1)">
+
+        <div class="upgrade-item-highlight upgrade-item-highlight-branch"></div>
         @if (upgrade.isLocked || upgrade.needPreviousUpgrades) {
             <div class="upgrade-item-highlight upgrade-item-highlight-locked active prev-{{upgrade.needPreviousUpgrades}}"></div>
         }

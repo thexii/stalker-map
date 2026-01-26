@@ -16,3 +16,10 @@ export class MechanicDiscount {
   public conditions: string[];
   public value: number;
 }
+
+export class MechanicWeaponDamage {
+    public value: number;
+    public valuePerSecound: number;
+    public valuePerMag: number;
+    public complexity: string;
+}

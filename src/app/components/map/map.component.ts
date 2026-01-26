@@ -2352,13 +2352,17 @@ export class MapComponent {
                 }
             );
 
-            let minWidth = 1230;
+            let minWidth = 1300;
 
             canvasMarker
                 .bindPopup(
                     (stalker: any) =>
                         this.mapService.createMechanicPopup(stalker, this.container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties),
-                    { minWidth: minWidth, className: 'mechanic-popup' }
+                    { 
+                        className: 'mechanic-popup leaflet-popup-content-fit-content',
+                        autoPan: true,      // Карта сама підсунеться, щоб балун вліз у вікно
+                        offset: L.point(0, -10), // Зміщення по (X, Y). 0 по X гарантує центрику по горизонталі
+                     }
                 )
                 .openPopup();
         }

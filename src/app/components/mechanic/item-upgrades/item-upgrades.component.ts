@@ -26,6 +26,8 @@ export class ItemUpgradesComponent {
     @Input() public viewModel: ItemUpgradeView;
     public upgradeTooltipComponent: any = UpgradeTooltipComponent;
 
+    public hoveredBranch: number;
+
     protected readonly Array = Array;
 
     private isInited: boolean = false;
@@ -41,22 +43,29 @@ export class ItemUpgradesComponent {
         }
     }
 
+    public setHover(id: number): void {
+        this.hoveredBranch = id;
+    }
+
     public selectUpgrade(upgrade: Upgrade, upgradeSection: UpgradeSection): void {
         if (upgrade.isPreinstall) {
             return;
         }
-        
+
         this.upgradeSelectedEvent.emit({ upgrade: upgrade, upgradeSection: upgradeSection, item: this.item, selectedItemUpgrade: this.selectedItemUpgrade, isCs: this.game == 'cs' });
     }
 
     private createViewModel(): void {
         this.viewModel = new ItemUpgradeView();
 
-        if (this.game == 'cop') {
-            this.createCopViewModel();
-        }
-        else {
-            this.createCsViewModel();
+        if (this.selectedItemUpgrade && this.selectedItemUpgrade.upgradeSections) {
+
+            if (this.game == 'cop') {
+                this.createCopViewModel();
+            }
+            else {
+                this.createCsViewModel();
+            }
         }
     }
 
@@ -64,9 +73,10 @@ export class ItemUpgradesComponent {
         this.viewModel.itemUniqueName = this.item.uniqueName;
 
         this.viewModel.rows = [];
+        this.viewModel.columns = 1;
 
         let branches: number[] = this.selectedItemUpgrade.upgradeSections.map(x => x.branch);
-        let correctBranches: number[] = this.processArray(branches, [2,3], 3);
+        let correctBranches: number[] = this.processArray(branches, [2, 3], 3);
 
         let column: number = 0;
         let currentRow: UpgradeSectionRow = new UpgradeSectionRow();
@@ -88,11 +98,14 @@ export class ItemUpgradesComponent {
             cell.section = this.selectedItemUpgrade.upgradeSections[cellIndex];
             currentRow.upgradeCell[column] = cell;
             cellIndex++;
+
+            this.viewModel.columns = Math.max(this.viewModel.columns, column + 1)
         }
     }
 
     private createCsViewModel(): void {
         this.transformToGrid(this.selectedItemUpgrade);
+        this.recalculateBranches(this.viewModel);
     }
 
     private processArray(input: number[], validLengths: number[], maxRepeat: number): number[] {
@@ -153,6 +166,7 @@ export class ItemUpgradesComponent {
     private transformToGrid(up: ItemUpgrade): void {
         this.viewModel.itemUniqueName = this.item.uniqueName;
         this.viewModel.rows = [];
+        this.viewModel.columns = 1;
 
         if (up.scheme.length == 1) {
             for (let upgrade of up.upgradeSections) {
@@ -168,7 +182,7 @@ export class ItemUpgradesComponent {
         else if (up.scheme.length > 1) {
             let lineRows: number[] = [];
 
-            for(let row = 0; row < up.scheme[0].length; row++) {
+            for (let row = 0; row < up.scheme[0].length; row++) {
                 let firstColumnRow = up.scheme[0][row];
                 let min: number = firstColumnRow.y;
                 let max: number = firstColumnRow.y + 40;
@@ -201,9 +215,13 @@ export class ItemUpgradesComponent {
             }
 
             this.handleColumn(1, itemsInFirstRow, up);
-            
+
             if (up.scheme.length > 2) {
                 this.handleColumn(2, itemsInFirstRow, up);
+                this.viewModel.columns = 3;
+            }
+            else {
+                this.viewModel.columns = 2;
             }
         }
     }
@@ -264,11 +282,11 @@ export class ItemUpgradesComponent {
         if (notAdded.length > 0) {
             for (let column of notAdded) {
                 let columnSchema = up.scheme[column.elements[0].schemeIndexX][column.elements[0].schemeIndexY];
-                
+
                 for (let i = 0; i < up.scheme[0].length - 1; i++) {
-                    if (up.scheme[0][i].y < columnSchema.y && up.scheme[0][i+1].y > columnSchema.y) {
+                    if (up.scheme[0][i].y < columnSchema.y && up.scheme[0][i + 1].y > columnSchema.y) {
                         let currentItemRow = itemsInFirstRow.findIndex(x => x.includes(i));
-                        
+
                         let cell: UpgradeCell = new UpgradeCell();
                         cell.section = column;
                         cell.height = 2;
@@ -287,7 +305,7 @@ export class ItemUpgradesComponent {
 
                         this.viewModel.rows[currentItemRow].upgradeCell.push(cell);
 
-                        
+
                         let empty: UpgradeCell = new UpgradeCell();
                         empty.isEmpty = true;
 
@@ -296,5 +314,38 @@ export class ItemUpgradesComponent {
                 }
             }
         }
+    }
+
+    private recalculateBranches(viewModel: ItemUpgradeView): void {
+        this.assignBranches(this.selectedItemUpgrade.upgradeSections)
+    }
+
+    private assignBranches(upgradeSections: UpgradeSection[]) {
+        let upgrades: Upgrade[] = upgradeSections.flatMap(x => x.elements);
+        console.log(upgrades)
+        
+        let roots: Upgrade[] = upgrades.filter(x => x.effects == null || x.effects.length == 0);
+        console.log(roots);
+
+        // 4. Функція для проходу вгору по дереву (від кінця до початку)
+        function walkBackwards(current: Upgrade, branchId: number) {
+            current.branch = branchId;
+            let section = upgradeSections.find(x => x.elements?.includes(current));
+
+            if (section) {
+                let prevs = upgrades.filter(x => x.effects && x.effects.includes(section.name));
+
+                if (prevs.length > 0) {
+                    for (let parent of prevs) {
+                        walkBackwards(parent, branchId);
+                    }
+                }
+            }
+        }
+
+        // 5. Призначаємо бренчі, починаючи з кожного термінального вузла
+        roots.forEach((terminalNode, index) => {
+            walkBackwards(terminalNode, index);
+        });
     }
 }
