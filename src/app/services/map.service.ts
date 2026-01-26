@@ -199,6 +199,13 @@ export class MapService {
         return componentRef.location.nativeElement;
     }
 
+    public setCellSize(value: number | string, game: string): void {
+        document.documentElement.style.setProperty(
+            '--inventory-cell-size',
+            `${value}px`
+        );
+    }
+
     public createMechanicPopup(mechanicMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]) {
         let mechanic: Mechanic = mechanicMarker.properties.mechanic;
 
@@ -336,11 +343,6 @@ export class MapService {
         }
 
         return [];
-    }
-
-    private setHiddenMarkers(markers: HiddenMarker[]): void {
-        this.hiddenMarksCache = markers;
-        localStorage.setItem(this.hiddenMarksLocalStorageKey, JSON.stringify(markers));
     }
 
     public getCanvasIconConstructor(): any {
@@ -532,5 +534,10 @@ export class MapService {
         });
 
         return L.canvas();
+    }
+    
+    private setHiddenMarkers(markers: HiddenMarker[]): void {
+        this.hiddenMarksCache = markers;
+        localStorage.setItem(this.hiddenMarksLocalStorageKey, JSON.stringify(markers));
     }
 }

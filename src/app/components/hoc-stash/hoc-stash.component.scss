@@ -10,6 +10,7 @@
   
   .item-attachment {
     background-image: url(/assets/images/items/attachments.png);
+    background-size: calc(var(--inventory-cell-size) * var(--item-width-in-cell));
   }
   
 .popup-container {
