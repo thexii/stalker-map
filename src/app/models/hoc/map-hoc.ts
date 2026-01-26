@@ -17,6 +17,11 @@ export class MapHoc {
   public traders: TraderHoc[];
   public tradeItemGenerators: TradeItemGenerator[];
   public guides: Guide[];
+
+  public equipmentWidth: number;
+  public equipmentHeight: number;
+  public attachmentsWidth: number;
+  public attachmentsHeight: number;
 }
 
 export class TradeItem {

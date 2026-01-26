@@ -18679,6 +18679,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -18691,12 +18692,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -18730,6 +18725,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -18780,6 +18776,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -18848,6 +18845,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -18910,6 +18908,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -18960,6 +18959,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19002,12 +19002,6 @@
         "uniqueName": "GunKora_MagIncreased",
         "gridX": 5,
         "gridY": 26
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       }
     ],
     "preinstalledAttachments": [
@@ -19035,6 +19029,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19047,12 +19042,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -19086,6 +19075,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19136,6 +19126,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19204,6 +19195,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19266,6 +19258,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19316,6 +19309,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19384,6 +19378,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19453,6 +19448,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19527,6 +19523,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19626,6 +19623,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19712,6 +19710,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19780,6 +19779,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19849,6 +19849,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -19923,6 +19924,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20022,6 +20024,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20108,6 +20111,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20183,6 +20187,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20258,6 +20263,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20290,6 +20296,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20372,6 +20379,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20471,12 +20479,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "G37_BottomRail",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_2",
         "gridX": 0,
         "gridY": 28
@@ -20509,6 +20511,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20615,6 +20618,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20684,12 +20688,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "GunGrim_GLaunch",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 39,
         "gridY": 24
@@ -20721,6 +20719,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20778,6 +20777,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20896,6 +20896,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -20970,6 +20971,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21088,6 +21090,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21163,6 +21166,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21245,6 +21249,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21344,12 +21349,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "G37_BottomRail",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_2",
         "gridX": 0,
         "gridY": 28
@@ -21382,6 +21381,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21488,6 +21488,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21557,12 +21558,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "GunGrim_GLaunch",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 39,
         "gridY": 24
@@ -21594,6 +21589,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21651,6 +21647,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21769,6 +21766,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21843,6 +21841,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -21961,6 +21960,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22029,6 +22029,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22094,6 +22095,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22162,14 +22164,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -22194,14 +22190,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -22226,6 +22216,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22265,18 +22256,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "TopRailM860",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "MagFedM860",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_2",
         "gridX": 25,
         "gridY": 14
@@ -22307,6 +22286,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22367,6 +22347,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22459,6 +22440,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22527,14 +22509,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -22559,14 +22535,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -22591,6 +22561,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22630,18 +22601,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "TopRailM860",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "MagFedM860",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_2",
         "gridX": 25,
         "gridY": 14
@@ -22672,6 +22631,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22732,6 +22692,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22824,6 +22785,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22892,6 +22854,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -22962,6 +22925,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23061,6 +23025,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23100,12 +23065,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "BottomRailM701",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 19,
         "gridY": 4
@@ -23137,6 +23096,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23225,6 +23185,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23281,6 +23242,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23351,6 +23313,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23450,6 +23413,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23489,12 +23453,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "BottomRailM701",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 19,
         "gridY": 4
@@ -23526,6 +23484,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23614,6 +23573,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23632,12 +23592,6 @@
         "uniqueName": "GunGauss_MagIncreased",
         "gridX": 0,
         "gridY": 2
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gauss_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
       }
     ],
     "preinstalledAttachments": [
@@ -23666,14 +23620,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -23698,6 +23646,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23743,12 +23692,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "G37_BottomRail",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_2",
         "gridX": 30,
         "gridY": 16
@@ -23782,6 +23725,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23830,6 +23774,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23887,6 +23832,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -23899,12 +23845,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -23938,13 +23878,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "UDP_Deadeye_Colim",
-        "gridX": 0,
-        "gridY": 0
-      },
       {
         "id": 0,
         "uniqueName": "GunUDP_MagDefault",
@@ -23983,6 +23918,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24033,6 +23969,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24045,12 +23982,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -24085,6 +24016,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24153,6 +24085,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24210,6 +24143,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24272,6 +24206,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24341,6 +24276,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24412,6 +24348,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24493,6 +24430,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24556,6 +24494,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24631,6 +24570,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24695,6 +24635,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24771,6 +24712,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24877,6 +24819,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -24934,6 +24877,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25006,6 +24950,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25070,6 +25015,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25153,6 +25099,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25223,6 +25170,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25288,6 +25236,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25357,12 +25306,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "GunGrim_GLaunch",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 39,
         "gridY": 24
@@ -25394,6 +25337,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25418,12 +25362,6 @@
         "uniqueName": "M860LongGrip",
         "gridX": 30,
         "gridY": 22
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailM860",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -25457,6 +25395,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25521,6 +25460,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25574,6 +25514,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25632,6 +25573,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25702,6 +25644,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25791,6 +25734,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25879,6 +25823,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25918,12 +25863,6 @@
       },
       {
         "id": 0,
-        "uniqueName": "BottomRailM701",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
         "uniqueName": "HP_Laser_1",
         "gridX": 19,
         "gridY": 4
@@ -25955,6 +25894,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -25967,12 +25907,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -26006,6 +25940,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -26094,18 +26029,13 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
         "uniqueName": "GunGauss_Scar_MagHuge",
         "gridX": 0,
         "gridY": 2
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gauss_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -26140,14 +26070,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],
@@ -26172,6 +26096,7 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
+    "fireInterval": 0,
     "compatibleAttachments": [
       {
         "id": 0,
@@ -26184,12 +26109,6 @@
         "uniqueName": "GunPM_MagIncreased",
         "gridX": 5,
         "gridY": 41
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_Screw",
-        "gridX": 0,
-        "gridY": 0
       },
       {
         "id": 0,
@@ -26223,14 +26142,8 @@
   {
     "$type": "hocWeapon",
     "ammoPackCount": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "empty",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
+    "fireInterval": 0,
+    "compatibleAttachments": [],
     "preinstalledAttachments": [
       "empty"
     ],

@@ -6,7 +6,7 @@
     },
     {
       "uniqueName": "hubs",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "traders",
@@ -26,11 +26,11 @@
     },
     {
       "uniqueName": "monster-lair",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "shelters",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "quest",
@@ -58,11 +58,11 @@
     },
     {
       "uniqueName": "artefacts",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "destroyable-box",
-      "isShowByDefault": true
+      "isShowByDefault": false
     },
     {
       "uniqueName": "anomaly-zone",

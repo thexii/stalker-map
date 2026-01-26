@@ -86512,5 +86512,9 @@
       "y": 9.871051,
       "dlc": "None"
     }
-  ]
+  ],
+  "equipmentWidth": 36,
+  "equipmentHeight": 36,
+  "attachmentsWidth": 55,
+  "attachmentsHeight": 54
 }

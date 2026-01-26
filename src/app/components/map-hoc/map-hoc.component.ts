@@ -343,12 +343,12 @@ export class MapHocComponent {
 
         document.documentElement.style.setProperty(
             '--item-width-in-cell',
-            `36`
+            this.gamedata.equipmentWidth.toString()
         );
 
         document.documentElement.style.setProperty(
             '--attachment-width-in-cell',
-            `55`
+            this.gamedata.attachmentsWidth.toString()
         );
 
         let tempMap = this.map;
