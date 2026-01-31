@@ -109,6 +109,7 @@ body {
     border-top-left-radius: 13px;
     display: flex;
     border-right: 0;
+    box-shadow: 0 0 0 1.2px #ffffff;
 }
 
 
@@ -116,11 +117,12 @@ body {
     content: '';
     border-bottom-left-radius: 8px 12px;
     border-top-left-radius:  8px 12px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
+    border-width: inherit;
+    border-style: inherit;
+    border-color: inherit;
     border-right: 0;
     width: 7px;
+    box-shadow: inherit;
 }
 @media (max-width: 1024px) {
     .sub-header-panel {

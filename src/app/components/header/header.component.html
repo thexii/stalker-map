@@ -1,54 +1,50 @@
 <header>
     <div class="container-fluid">
-        <div class="header-menu">
-            <nav class="header-desktop">
-                <div class="header-nav-items">
-                    <div class="header-nav-item-left"></div>
-                    <a class="header-nav-item header-nav-item-full" href="/map/shoc">
-                        <div class="header-nav-item-inner">
-                            <span>{{ 'shoc' | translate }}</span>
-                        </div>
-                    </a>
-                    <a class="header-nav-item header-nav-item-full" href="/map/cs">
-                        <div class="header-nav-item-inner">
-                            <span>{{ 'cs' | translate }}</span>
-                        </div>
-                    </a>
-                    <a class="header-nav-item header-nav-item-full" href="/map/cop">
-                        <div class="header-nav-item-inner">
-                            <span>{{ 'cop' | translate }}</span>
-                        </div>
-                    </a>
-                    <a class="header-nav-item header-nav-item-full" href="/map/hoc">
-                        <div class="header-nav-item-inner">
-                            <span>{{ 'hoc' | translate }}</span>
-                        </div>
-                    </a>
-                    <a class="header-nav-item header-nav-item-short" href="/map/shoc">
-                        <span>{{ 'shocShort' | translate }}</span>
-                    </a>
-                    <a class="header-nav-item header-nav-item-short" href="/map/cs">
-                        <span>{{ 'csShort' | translate }}</span>
-                    </a>
-                    <a class="header-nav-item header-nav-item-short" href="/map/cop">
-                        <span>{{ 'copShort' | translate }}</span>
-                    </a>
-                    <a class="header-nav-item header-nav-item-short" href="/map/hoc">
-                        <span>{{ 'hocShort' | translate }}</span>
-                    </a>
-                    <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">
-                        <i class="header-nav-icon github"></i>
-                    </a>
-                    <div class="header-nav-item-right">
-                        <select class="language-selector" (change)="changeLanguage($event)">
-                            @for (language of avaliableLanguages; track language) {
-                                <option class="language-selector-option" [value]="language"
-                                    [selected]="selectedLanguage == language">{{language}}</option>
-                            }
-                        </select>
-                    </div>
+        <div class="menu">
+            <div class="header-nav-item-left"></div>
+            <a class="header-nav-item header-nav-item-full" href="/map/shoc">
+                <div class="header-nav-item-inner">
+                    <span>{{ 'shoc' | translate }}</span>
                 </div>
-            </nav>
+            </a>
+            <a class="header-nav-item header-nav-item-full" href="/map/cs">
+                <div class="header-nav-item-inner">
+                    <span>{{ 'cs' | translate }}</span>
+                </div>
+            </a>
+            <a class="header-nav-item header-nav-item-full" href="/map/cop">
+                <div class="header-nav-item-inner">
+                    <span>{{ 'cop' | translate }}</span>
+                </div>
+            </a>
+            <a class="header-nav-item header-nav-item-full" href="/map/hoc">
+                <div class="header-nav-item-inner">
+                    <span>{{ 'hoc' | translate }}</span>
+                </div>
+            </a>
+            <a class="header-nav-item header-nav-item-short" href="/map/shoc">
+                <span>{{ 'shocShort' | translate }}</span>
+            </a>
+            <a class="header-nav-item header-nav-item-short" href="/map/cs">
+                <span>{{ 'csShort' | translate }}</span>
+            </a>
+            <a class="header-nav-item header-nav-item-short" href="/map/cop">
+                <span>{{ 'copShort' | translate }}</span>
+            </a>
+            <a class="header-nav-item header-nav-item-short" href="/map/hoc">
+                <span>{{ 'hocShort' | translate }}</span>
+            </a>
+            <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">
+                <i class="header-nav-icon github"></i>
+            </a>
+            <div class="header-nav-item-right">
+                <select class="language-selector" (change)="changeLanguage($event)">
+                    @for (language of avaliableLanguages; track language) {
+                        <option class="language-selector-option" [value]="language"
+                            [selected]="selectedLanguage == language">{{language}}</option>
+                    }
+                </select>
+            </div>
         </div>
         <ng-content></ng-content>
     </div>
