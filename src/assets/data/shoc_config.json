@@ -41,20 +41,20 @@
       "isShowByDefault": true
     },
     {
-      "uniqueName": "acidic",
-      "isShowByDefault": false
+      "uniqueName": "acidic_zone",
+      "isShowByDefault": true
     },
     {
-      "uniqueName": "psychic",
-      "isShowByDefault": false
+      "uniqueName": "psychic_zone",
+      "isShowByDefault": true
     },
     {
-      "uniqueName": "radioactive",
-      "isShowByDefault": false
+      "uniqueName": "radioactive_zone",
+      "isShowByDefault": true
     },
     {
-      "uniqueName": "thermal",
-      "isShowByDefault": false
+      "uniqueName": "thermal_zone",
+      "isShowByDefault": true
     },
     {
       "uniqueName": "mines",
