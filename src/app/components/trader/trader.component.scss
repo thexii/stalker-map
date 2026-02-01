@@ -1,6 +1,5 @@
 
 $trader-columns: 8;
-$cell: 50px;
 
 .trader-container {
   display: flex;
@@ -30,17 +29,17 @@ $cell: 50px;
 }
 
 .inventory-container {
-  min-width: calc(($trader-columns + 1 ) * $cell);
+  min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
   display: flex;
   justify-content: center;
 }
 
 .inventory {
-  max-height: round(up, var(--wrapper-height) / 2, $cell);
+  max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
   overflow-y: auto;
   overflow-x: hidden;
-  grid-template-columns: repeat($trader-columns, $cell);
-  min-width: calc($trader-columns * $cell);
+  grid-template-columns: repeat($trader-columns, var(--inventory-cell-size));
+  min-width: calc($trader-columns * var(--inventory-cell-size));
 }
 
 .best-sell-item {
@@ -66,13 +65,13 @@ $cell: 50px;
   vertical-align: top;
   overflow-y: auto;
   overflow-x: hidden;
-  width: ($trader-columns + 1) * $cell;
+  width: calc(($trader-columns + 1) * var(--inventory-cell-size));
 }
 
 .trader-container-section.section-info {
   flex-grow: 1;
-  min-width: $trader-columns * $cell;
-  max-width: ($trader-columns + 2) * $cell;
+  min-width: calc($trader-columns * var(--inventory-cell-size));
+  max-width: calc(($trader-columns + 2) * var(--inventory-cell-size));
 }
 
 .container {

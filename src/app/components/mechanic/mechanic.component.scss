@@ -1,6 +1,5 @@
 
 $trader-columns: 9;
-$cell: 50px;
 
 .mechanic-container {
   display: flex;
@@ -20,8 +19,8 @@ $cell: 50px;
 }
 
 .mechanic-container-section.actor {
-  width: calc(($trader-columns + 1 ) * $cell);
-  min-width: calc(($trader-columns + 1 ) * $cell);
+  width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
+  min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
   max-height: var(--wrapper-height);
 }
 
@@ -37,7 +36,7 @@ $cell: 50px;
 }
 
 .inventory-container {
-  min-width: calc(($trader-columns + 1 ) * $cell);
+  min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
   display: flex;
   justify-content: center;
 }
@@ -62,14 +61,14 @@ $cell: 50px;
 }
 
 .buy.container {
-  min-width: calc(($trader-columns + 1 ) * $cell);
+  min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
 }
 
 .inventory {
-  max-height: round(up, var(--wrapper-height) / 2, $cell);
+  max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
   overflow-y: auto;
   overflow-x: hidden;
-  grid-template-columns: repeat($trader-columns, $cell);
+  grid-template-columns: repeat($trader-columns, var(--inventory-cell-size));
 }
 
 .section.selected {
