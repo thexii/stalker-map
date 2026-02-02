@@ -1,46 +1,32 @@
 <app-header>
-  <div class="sub-header-container">
-    <div class="sub-header-left"></div>
-    <div
-      id="sub-header-panel-scroll-left"
-      class="sub-header-panel sub-header-panel-scroll"
-    >
-      <label>◀</label>
-    </div>
-    <!---->
-    <div id="layers-control" class="sub-headers">
+    <div class="sub-header-container">
+        <div class="sub-header-item flex-grow right-arc"></div>
+        <div id="sub-header-panel-scroll-left" class="sub-header-item left-arc right-arc sub-header-panel-scroll">
+            <label>◀</label>
+        </div>
 
+        <div id="layers-control" class="sub-headers"></div>
+
+        <div class="sub-header-item left-arc right-arc sub-header-panel-scroll">
+            <label>▶</label>
+        </div>
+
+        <div class="sub-header-item sub-header-right-item left-arc">
+            <label class="sub-header-checkbox">
+                <span for="layer-3"><input type="checkbox" hidden="" checked="" class="leaflet-control-layers-selector" (change)="showHideAll($event)" />
+                    <label></label>
+                    <span id="hide-show-all-checkbox" style="white-space: nowrap">{{ 'hideAll' | translate }}</span>
+                </span>
+            </label>
+        </div>
     </div>
-    <div class="sub-header-panel sub-header-panel-scroll"><label>▶</label></div>
-    <!---->
-    <div class="sub-header-right">
-      <label class="sub-header-checkbox"
-        ><span for="layer-3"
-          ><input
-            type="checkbox"
-            hidden=""
-            checked=""
-            class="leaflet-control-layers-selector"
-            (change)="showHideAll($event)"
-          /><label></label
-          ><span id="hide-show-all-checkbox" style="white-space: nowrap"
-            >{{ 'hideAll' | translate }}</span
-          ></span
-        ></label
-      >
-    </div>
-  </div>
 </app-header>
 
 <div class="container-fluid">
-  <div id="map-wrapper">
-    <div id="map" style="height: 100%; background: rgb(9, 10, 10)"></div>
-  </div>
+    <div id="map-wrapper">
+        <div id="map" style="height: 100%; background: rgb(9, 10, 10)"></div>
+    </div>
 </div>
 <div [hidden]="true">
-  <template #dynamicComponents></template>
+    <template #dynamicComponents></template>
 </div>
-
-<!--<dialog id="mobile-not-adaptive">
-  <app-dialog text="mobile-not-adaptive"></app-dialog>
-</dialog> -->

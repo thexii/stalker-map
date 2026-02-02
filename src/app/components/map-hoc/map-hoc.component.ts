@@ -676,7 +676,7 @@ export class MapHocComponent {
                 const labelInsideCheck = document.createElement('label');
                 subHeaderSpanName.innerHTML = `${obj.name}`;
 
-                subHeaderPanel.classList.add('sub-header-panel');
+                subHeaderPanel.classList.add('sub-header-item');
                 subHeaderCheckbox.classList.add('sub-header-checkbox');
 
                 subHeaderPanel.appendChild(subHeaderCheckbox);

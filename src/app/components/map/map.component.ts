@@ -958,7 +958,9 @@ export class MapComponent {
                 const labelInsideCheck = document.createElement('label');
                 subHeaderSpanName.innerHTML = `${obj.name}`;
 
-                subHeaderPanel.classList.add('sub-header-panel');
+                subHeaderPanel.classList.add('sub-header-item');
+                subHeaderPanel.classList.add('left-arc');
+                subHeaderPanel.classList.add('right-arc');
                 subHeaderCheckbox.classList.add('sub-header-checkbox');
 
                 subHeaderPanel.appendChild(subHeaderCheckbox);
