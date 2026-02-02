@@ -18,29 +18,66 @@
     --d2: calc(var(--border-width) * var(--tan));
 }
 
+.header-nav-item-right {
+    clip-path: polygon(var(--height) 0,
+            100% 0%,
+            100% 100%,
+            0% 100%);
+    margin: -1px 0 -1px -41px;
+    background: white;
+    
+    .header-nav-item-inner {
+
+        clip-path: polygon(var(--border-width) calc(100% - var(--border-width)),
+                var(--border-width) var(--border-width),
+                calc(100% - var(--d1)) var(--border-width),
+                calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width)));
+        background: #090a0a;
+        height: 100%;
+        padding-left: var(--height);
+    }
+}
+
+.header-nav-item-left {
+    clip-path: polygon(0 0,
+            100% 0%,
+            calc(100% - var(--height)) 100%,
+            0% 100%);
+    background: white;
+    flex-grow: 1;
+
+
+    .header-nav-item-inner {
+
+        clip-path: polygon(var(--border-width) calc(100% - var(--border-width)),
+                var(--border-width) var(--border-width),
+                calc(100% - var(--d1)) var(--border-width),
+                calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width)));
+        background: #090a0a;
+        height: 100%;
+    }
+}
+
 .header-nav-item {
     flex-shrink: 0;
 }
 
 .header-nav-item {
-    clip-path: polygon(
-        var(--height) 0,
-        100% 0%,
-        calc(100% - var(--height)) 100%,
-        0% 100%);
+    clip-path: polygon(var(--height) 0,
+            100% 0%,
+            calc(100% - var(--height)) 100%,
+            0% 100%);
     background: white;
     margin: -1px 0 -1px -41px;
     width: 240px;
     flex-shrink: 0;
 
     .header-nav-item-inner {
-        
-        clip-path: polygon(
-            var(--d1) calc(100% - var(--border-width)),
-            calc(var(--height) + var(--d2)) var(--border-width),
-            calc(100% - var(--d1)) var(--border-width),
-            calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width))
-        );
+
+        clip-path: polygon(var(--d1) calc(100% - var(--border-width)),
+                calc(var(--height) + var(--d2)) var(--border-width),
+                calc(100% - var(--d1)) var(--border-width),
+                calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width)));
         background: #090a0a;
         height: 100%;
         display: flex;
@@ -48,9 +85,28 @@
         justify-content: center;
     }
 }
-    .header-nav-item-short {
-        display: none;
+
+.header-nav-item-short {
+    display: none;
+}
+
+.header-nav-item.not-grow {
+    width: unset;
+    flex-shrink: unset;
+
+    .header-nav-item-inner {
+        padding-inline: var(--height);
     }
+}
+
+.github {
+    background-image: url(/assets/images/svg/interface/github.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    align-self: center;
+}
 
 @media (max-width: 1024px) {
     .header-nav-item-short {
