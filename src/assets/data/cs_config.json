@@ -61,32 +61,16 @@
       "isShowByDefault": true
     },
     {
-      "uniqueName": "acidic",
-      "isShowByDefault": false
-    },
-    {
       "uniqueName": "acidic_zone",
       "isShowByDefault": true
-    },
-    {
-      "uniqueName": "psychic",
-      "isShowByDefault": false
     },
     {
       "uniqueName": "psychic_zone",
       "isShowByDefault": true
     },
     {
-      "uniqueName": "radioactive",
-      "isShowByDefault": false
-    },
-    {
       "uniqueName": "radioactive_zone",
       "isShowByDefault": true
-    },
-    {
-      "uniqueName": "thermal",
-      "isShowByDefault": false
     },
     {
       "uniqueName": "thermal_zone",
@@ -111,6 +95,7 @@
   "globalMapFileName": "global_map.png",
   "traderRelationType": 1,
   "markerFactor": 3,
+  "kx": 0.7754125309809557,
   "actor": {
     "iconHeight": 108,
     "iconWidth": 165,

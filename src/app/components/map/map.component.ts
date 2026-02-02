@@ -413,16 +413,23 @@ export class MapComponent {
         this.gamedata = gameData;
         this.mapConfig = gameConfig;
 
+        let customCrs = L.extend({}, L.CRS.Simple, {
+            transformation: new L.Transformation(gameConfig.kx ?? 1, 0, -1, 0),
+        });
+
         this.map = L.map('map', {
             center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
             zoom: gameConfig.startZoom,
             minZoom: gameConfig.minZoom,
             maxZoom: gameConfig.maxZoom,
-            crs: L.CRS.Simple,
+            crs: customCrs,
             markerZoomAnimation: !0,
             zoomAnimation: !0,
             zoomControl: !1
         });
+
+        var transformation = this.map.options.crs.transformation;
+        console.log(transformation._a, transformation._b, transformation._c, transformation._d);
 
         this.map.scaleFactor = 1.5;
 
@@ -1909,7 +1916,11 @@ export class MapComponent {
                     shape.coordinates.slice(i * 2, i * 2 + 2)
                 );
 
-                polygons.push(L.polygon(coors.map(([x, z]) => [z, x]), {color: type.stroke, fill: type.fill}))
+                let newCoors = coors.map(([x, z]) => [z, x]);
+
+                let polygon = L.polygon(newCoors, {color: type.stroke, fill: type.fill});
+
+                polygons.push(polygon);
             }
             
             if (polygons.length > 0) {
