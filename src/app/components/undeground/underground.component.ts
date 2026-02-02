@@ -486,7 +486,7 @@ export class UndergroundComponent {
 
             let polygons = [];
 
-            for (let shape of shapeCollection.shapes) {
+            for (let shape of shapeCollection.polygons) {
                 if (this.location.id != shape.locationId) {
                     continue;
                 }

@@ -1905,7 +1905,7 @@ export class MapComponent {
 
             let polygons = [];
 
-            for (let shape of shapeCollection.shapes) {
+            for (let shape of shapeCollection.polygons) {
                 let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == shape.locationId) as Location;
 
                 if (location.isUnderground) {
@@ -1921,6 +1921,18 @@ export class MapComponent {
                 let polygon = L.polygon(newCoors, {color: type.stroke, fill: type.fill});
 
                 polygons.push(polygon);
+            }
+
+            for (let shape of shapeCollection.circles) {
+                let location: Location = this.gamedata.locations.find((x: { id: any; }) => x.id == shape.locationId) as Location;
+
+                if (location.isUnderground) {
+                    continue;
+                }
+
+                let circle = L.circle([shape.z, shape.x], {radius: shape.radius, color: type.stroke, fill: type.fill});
+                
+                polygons.push(circle);
             }
             
             if (polygons.length > 0) {

@@ -39,10 +39,18 @@ export class Map {
 
 export class ShapeCollection {
     public type: number;
-    public shapes: Shape[];
+    public polygons: Polygon[];
+    public circles: Circle[];
 }
 
-export class Shape {
+export class Polygon {
     public locationId: number
     public coordinates: number[];
+}
+
+export class Circle {
+    public locationId: number
+    public x: number
+    public z: number
+    public radius: number;
 }
