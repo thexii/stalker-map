@@ -9,6 +9,22 @@
       "isShowByDefault": false
     },
     {
+      "uniqueName": "acidic_zone",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "psychic_zone",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "radioactive_zone",
+      "isShowByDefault": true
+    },
+    {
+      "uniqueName": "thermal_zone",
+      "isShowByDefault": true
+    },
+    {
       "uniqueName": "traders",
       "isShowByDefault": true
     },

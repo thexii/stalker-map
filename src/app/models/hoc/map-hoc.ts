@@ -1,5 +1,6 @@
 import { InventoryItem } from "../inventory-item.model";
 import { Item } from "../item.model";
+import { ShapeCollection } from "../map.model";
 
 export class MapHoc {
   public widthInMeters: number;
@@ -17,6 +18,7 @@ export class MapHoc {
   public traders: TraderHoc[];
   public tradeItemGenerators: TradeItemGenerator[];
   public guides: Guide[];
+  public zones: ShapeCollection[];
 
   public equipmentWidth: number;
   public equipmentHeight: number;

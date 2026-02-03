@@ -498,6 +498,16 @@ export class UndergroundComponent {
                 polygons.push(L.polygon(coors.map(([x, z]) => [this.zShift + z, this.xShift + x]), {color: type.stroke, fill: type.fill}))
             }
             
+            for (let shape of shapeCollection.circles) {
+                if (this.location.id != shape.locationId) {
+                    continue;
+                }
+
+                let circle = L.circle([this.zShift + shape.z, this.xShift + shape.x], {radius: shape.radius, color: type.stroke, fill: type.fill});
+                
+                polygons.push(circle);
+            }
+            
             if (polygons.length > 0) {
                 this.addLayerToMap(L.layerGroup(polygons), type.name, false);
             }

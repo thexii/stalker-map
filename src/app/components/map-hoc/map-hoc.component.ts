@@ -285,6 +285,10 @@ export class MapHocComponent {
             this.addMarkers();
         }
 
+        if (this.gamedata.zones && this.gamedata.zones.length > 0) {
+            this.addShapes();
+        }
+
         if (this.gamedata.lairs?.length > 0) {
             this.addLairs();
         }
@@ -1042,6 +1046,68 @@ export class MapHocComponent {
         this.addGrid();
 
         console.log(markerTypes);
+    }
+
+    private addShapes() {
+        let shapeType = [
+            {
+                type: 100,
+                stroke: '#00ff00',
+                fill: '#00ff001e',
+                name: 'acidic_zone'
+            },
+            {
+                type: 101,
+                stroke: '#0099ff',
+                fill: '#0099ff1e',
+                name: 'psychic_zone'
+            },
+            {
+                type: 102,
+                stroke: '#fbff00',
+                fill: '#fbff001e',
+                name: 'radioactive_zone'
+            },
+            {
+                type: 103,
+                stroke: '#ff8400',
+                fill: '#ff84001e',
+                name: 'thermal_zone'
+            }
+        ]
+
+        for (let shapeCollection of this.gamedata.zones) {
+            let type = shapeType.find(x => x.type == shapeCollection.type);
+
+            if (type == null) {
+                console.error(shapeCollection.type);
+                continue;
+            }
+
+            let polygons = [];
+
+            for (let shape of shapeCollection.polygons) {
+                const coors: number[][] = Array.from({ length: Math.ceil(shape.coordinates.length / 2) }, (_, i) =>
+                    shape.coordinates.slice(i * 2, i * 2 + 2)
+                );
+
+                let newCoors = coors.map(([x, z]) => [z, x]);
+
+                let polygon = L.polygon(newCoors, { color: type.stroke, fill: type.fill });
+
+                polygons.push(polygon);
+            }
+
+            for (let shape of shapeCollection.circles) {
+                let circle = L.circle([shape.z, shape.x], { radius: shape.radius, color: type.stroke, fill: type.fill });
+
+                polygons.push(circle);
+            }
+
+            if (polygons.length > 0) {
+                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
+            }
+        }
     }
 
     private addGrid(): void {
@@ -1986,7 +2052,7 @@ export class MapHocComponent {
                 (p: any) => this.createTraderPopup(p),
                 { className: 'leaflet-popup-content-fit-content' }
             );
-            
+
             var latlngs = [
                 [data.z - radius / 2, data.x - radius / 2],
                 [data.z - radius / 2, data.x + radius / 2],
@@ -1994,7 +2060,7 @@ export class MapHocComponent {
                 [data.z + radius / 2, data.x - radius / 2]
             ];
 
-            var polyline = L.polyline(latlngs, {color: 'red'});
+            var polyline = L.polyline(latlngs, { color: 'red' });
 
             array.push(polyline);
             array.push(marker);

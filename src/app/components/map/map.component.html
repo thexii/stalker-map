@@ -1,17 +1,14 @@
 <app-header>
     <div class="sub-header-container">
-        <div class="sub-header-item flex-grow right-arc"></div>
-        <div id="sub-header-panel-scroll-left" class="sub-header-item left-arc right-arc sub-header-panel-scroll">
-            <label>◀</label>
+        <div class="sub-header-item sub-header-left-item flex-grow right-arc">
+            <div id="sub-header-panel-scroll-left" class="sub-header-panel-scroll">◀</div>
         </div>
 
         <div id="layers-control" class="sub-headers"></div>
 
-        <div class="sub-header-item left-arc right-arc sub-header-panel-scroll">
-            <label>▶</label>
-        </div>
-
         <div class="sub-header-item sub-header-right-item left-arc">
+            <div class="sub-header-panel-scroll">▶</div>
+
             <label class="sub-header-checkbox">
                 <span for="layer-3"><input type="checkbox" hidden="" checked="" class="leaflet-control-layers-selector" (change)="showHideAll($event)" />
                     <label></label>

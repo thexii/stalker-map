@@ -50,6 +50,15 @@ body {
     flex-grow: 1;
 }
 
+.sub-header-left-item {
+    justify-content: flex-end;
+}
+
+.sub-header-panel-scroll {
+    padding-inline: 20px;
+    cursor: pointer;
+}
+
 .right-arc {
     border-right: 0;
 

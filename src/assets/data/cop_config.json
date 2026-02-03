@@ -103,6 +103,7 @@
   "globalMapFileName": "global_map.png",
   "needLootBoxConfig": false,
   "traderRelationType": 2,
+  "kx": 1,
   "actor": {
     "iconHeight": 87,
     "iconWidth": 123,
