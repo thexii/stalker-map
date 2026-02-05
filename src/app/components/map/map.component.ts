@@ -3138,8 +3138,8 @@ export class MapComponent {
         return [
             {
                 type: 100,
-                stroke: '#00ff00',
-                fill: '#00ff001e',
+                stroke: '#32cd32',
+                fill: '#32cd321e',
                 name: 'acidic_zone'
             },
             {
@@ -3150,14 +3150,14 @@ export class MapComponent {
             },
             {
                 type: 102,
-                stroke: '#fbff00',
-                fill: '#fbff001e',
+                stroke: '#d4ff00',
+                fill: '#d4ff001e',
                 name: 'radioactive_zone'
             },
             {
                 type: 103,
-                stroke: '#ff8400',
-                fill: '#ff84001e',
+                stroke: '#ff4500',
+                fill: '#ff45001e',
                 name: 'thermal_zone'
             }
         ]
