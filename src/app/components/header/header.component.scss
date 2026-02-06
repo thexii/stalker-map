@@ -9,6 +9,7 @@
     flex-wrap: nowrap;
     height: var(--height);
     overflow: hidden;
+    overflow-x: scroll;
 
     --angle: 45deg;
     --tan: calc(tan(var(--angle)/2));
@@ -16,6 +17,15 @@
 
     --d1: calc(var(--border-width) * var(--cotangent-value));
     --d2: calc(var(--border-width) * var(--tan));
+}
+
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .header-nav-item-right {
@@ -50,6 +60,7 @@
             0% 100%);
     background: white;
     flex-grow: 1;
+    min-width: 50px;
 
 
     .header-nav-item-inner {
@@ -134,5 +145,11 @@
 
     .header-nav-item-full {
         display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-nav-item {
+        width: unset;
     }
 }

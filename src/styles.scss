@@ -398,6 +398,14 @@ app-item-tooltip, app-upgrade-tooltip {
   border: 1px solid white;
 }
 
+@media (max-width: 1000px) {
+    
+
+    .sub-header-container {
+        display: none;
+    }
+}
+
 .upgrade-property-icon {
   margin-right: 0.25rem;
   width: 19px;
