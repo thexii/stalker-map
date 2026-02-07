@@ -2296,5 +2296,7 @@
   "hub_terricon": "Slag Heap",
   "region_rostok": "Rostok",
   "region_yanov": "Yaniv",
-  "region_prypiat": "Prypiat"
+  "region_prypiat": "Prypiat",
+  "guides": "Guide",
+  "medics": "Medic"
 }

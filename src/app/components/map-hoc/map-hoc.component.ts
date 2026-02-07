@@ -323,14 +323,6 @@ export class MapHocComponent {
             this.addArtefactSpawners();
         }
 
-        if (!isDevMode()) {
-            const analytics = getAnalytics();
-            logEvent(analytics, 'open-map', {
-                game: 'hoc',
-                language: this.translate.currentLang,
-            });
-        }
-
         let ruler: any = null;
         if (gameConfig.rulerEnabled) {
             ruler = this.mapService.addRuler(this.map, 1, 8000);
@@ -473,6 +465,14 @@ export class MapHocComponent {
         this.createSearchController();
 
         this.mapService.createCarousel(this.overlaysListTop);
+
+        if (!isDevMode()) {
+            const analytics = getAnalytics();
+            logEvent(analytics, 'open-map', {
+                game: 'hoc',
+                language: this.translate.currentLang,
+            });
+        }
     }
 
     private createSearchController(): void {
@@ -604,6 +604,7 @@ export class MapHocComponent {
                         '/assets/images/s2/Markers/Texture_Archianomaly_NotActive_General_Shadow.png',
                     iconAnchor: [0, 0],
                 }),
+                radius: 10
             },
             {
                 name: 'ESpawnType::Hub',
@@ -612,7 +613,8 @@ export class MapHocComponent {
                         '/assets/images/s2/Markers/Texture_Camp_NotActive_General_Shadow.png',
                     iconAnchor: [0, 0],
                 }),
-                isHub: true
+                isHub: true,
+                radius: 100
             },
             {
                 name: 'ESpawnType::LairSpawner',
@@ -729,9 +731,9 @@ export class MapHocComponent {
             //this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
         }
 
-        if (hubs.length > 0) {
-            this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
-        }
+        //if (hubs.length > 0) {
+        //    this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
+        //}
 
         if (shelters.length > 0) {
             this.addLayerToMap(L.layerGroup(shelters), 'botPlayerShelters', true);

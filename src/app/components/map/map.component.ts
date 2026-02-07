@@ -637,14 +637,6 @@ export class MapComponent {
 
         this.mapService.createCarousel(this.overlaysListTop);
 
-        if (!isDevMode()) {
-            const analytics = getAnalytics();
-            logEvent(analytics, 'open-map', {
-                game: this.gamedata.uniqueName,
-                language: this.translate.currentLang,
-            });
-        }
-
         this.route.queryParams.subscribe((h: any) => {
             if (h.lat != null && h.lng != null) {
                 if (h.underground > 0) {
@@ -702,6 +694,14 @@ export class MapComponent {
         });
 
         this.mapInitialized = true;
+
+        if (!isDevMode()) {
+            const analytics = getAnalytics();
+            logEvent(analytics, 'open-map', {
+                game: this.gamedata.uniqueName,
+                language: this.translate.currentLang,
+            });
+        }
     }
 
     private createSearchController(): void {

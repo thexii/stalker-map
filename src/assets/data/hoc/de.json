@@ -2296,5 +2296,7 @@
   "hub_terricon": "Schlackeberg",
   "region_rostok": "Rostok",
   "region_yanov": "Janiw",
-  "region_prypiat": "Prypjat"
+  "region_prypiat": "Prypjat",
+  "guides": "Ortskundiger",
+  "medics": "Arzt"
 }

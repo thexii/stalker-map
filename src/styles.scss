@@ -105,6 +105,8 @@ body {
 .sub-header-checkbox {
   width: 100%;
   font-size: 12px;
+  display: flex;
+  padding-left: 4px;
 }
 
 input[type=checkbox]:checked+label:before {
@@ -121,7 +123,6 @@ input[type=checkbox]+label:before {
   content: " ";
   display: inline-block;
   vertical-align: baseline;
-  border: 2px solid #777;
 }
 
 .sub-header-checkbox span {
@@ -129,6 +130,10 @@ input[type=checkbox]+label:before {
   display: flex;
   white-space: nowrap;
   column-gap: 5px;
+}
+
+.sub-header-checkbox span label {
+    height: 16px;
 }
 
 .stalker-icon::before {
