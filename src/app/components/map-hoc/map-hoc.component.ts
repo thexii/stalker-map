@@ -726,25 +726,29 @@ export class MapHocComponent {
                 type: 100,
                 stroke: '#00ff00',
                 fill: '#00ff001e',
-                name: 'acidic_zone'
+                name: 'acidic_zone',
+                uniqueName: 'acidic'
             },
             {
                 type: 101,
                 stroke: '#0099ff',
                 fill: '#0099ff1e',
-                name: 'psychic_zone'
+                name: 'psychic_zone',
+                uniqueName: 'psychic'
             },
             {
                 type: 102,
                 stroke: '#fbff00',
                 fill: '#fbff001e',
-                name: 'radioactive_zone'
+                name: 'radioactive_zone',
+                uniqueName: 'radioactive'
             },
             {
                 type: 103,
                 stroke: '#ff8400',
                 fill: '#ff84001e',
-                name: 'thermal_zone'
+                name: 'thermal_zone',
+                uniqueName: 'thermal'
             }
         ]
 
@@ -777,7 +781,7 @@ export class MapHocComponent {
             }
 
             if (polygons.length > 0) {
-                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
+                this.addLayerToMap(L.layerGroup(polygons), type.uniqueName, false);
             }
         }
     }

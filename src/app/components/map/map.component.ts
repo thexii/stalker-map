@@ -1619,7 +1619,7 @@ export class MapComponent {
             }
             
             if (polygons.length > 0) {
-                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
+                this.addLayerToMap(L.layerGroup(polygons), type.uniqueName, false);
             }
         }
     }
@@ -2821,27 +2821,31 @@ export class MapComponent {
         return [
             {
                 type: 100,
-                stroke: '#32cd32',
-                fill: '#32cd321e',
-                name: 'acidic_zone'
+                stroke: '#00ff00',
+                fill: '#00ff001e',
+                name: 'acidic_zone',
+                uniqueName: 'acidic'
             },
             {
                 type: 101,
                 stroke: '#0099ff',
                 fill: '#0099ff1e',
-                name: 'psychic_zone'
+                name: 'psychic_zone',
+                uniqueName: 'psychic'
             },
             {
                 type: 102,
-                stroke: '#d4ff00',
-                fill: '#d4ff001e',
-                name: 'radioactive_zone'
+                stroke: '#fbff00',
+                fill: '#fbff001e',
+                name: 'radioactive_zone',
+                uniqueName: 'radioactive'
             },
             {
                 type: 103,
-                stroke: '#ff4500',
-                fill: '#ff45001e',
-                name: 'thermal_zone'
+                stroke: '#ff8400',
+                fill: '#ff84001e',
+                name: 'thermal_zone',
+                uniqueName: 'thermal'
             }
         ]
     }
