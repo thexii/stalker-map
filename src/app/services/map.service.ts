@@ -270,7 +270,6 @@ export class MapService {
         };
 
         ruler = L.control.ruler(options);
-        ruler.addTo(map);
 
         return ruler;
     }

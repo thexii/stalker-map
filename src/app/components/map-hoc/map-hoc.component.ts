@@ -386,7 +386,7 @@ export class MapHocComponent {
         });
 
         this.mapService.createCustomLayersControl();
-        this.createCellSizeChangerControl('Energetic_Limited', cellSize);
+        let cellSizeControl = this.createCellSizeChangerControl('Energetic_Limited', cellSize);
 
         let layersToLayerController: any = [];
 
@@ -417,6 +417,7 @@ export class MapHocComponent {
 
         this.translate.onLangChange.subscribe((i) => {
             this.layerContoller.remove();
+            cellSizeControl.remove();
 
             let addRuler = false;
 
@@ -442,9 +443,10 @@ export class MapHocComponent {
             this.layerContoller.searchName = 'layerControl';
             this.layerContoller.isUnderground = false;
             this.layerContoller.addTo(this.map);
+            cellSizeControl.addTo(this.map);
 
             if (addRuler) {
-                ruler = this.mapService.addRuler(this.map, 1, 8000);
+                ruler.addTo(this.map)
             }
 
             this.createSearchController();
@@ -464,7 +466,10 @@ export class MapHocComponent {
             Object.fromEntries(layersToControl),
             { overlaysListTop: this.overlaysListTop }
         );
+
         this.layerContoller.addTo(this.map);
+        cellSizeControl.addTo(this.map);
+        ruler.addTo(this.map);
         this.createSearchController();
 
         this.mapService.createCarousel(this.overlaysListTop);
@@ -521,7 +526,7 @@ export class MapHocComponent {
         this.configureSeo();
     }
 
-    private createCellSizeChangerControl(uniqueName: string, cellSize: number): void {
+    private createCellSizeChangerControl(uniqueName: string, cellSize: number): any {
         let items = this.items;
         L.Control.Slider = L.Control.extend({
             options: {
@@ -572,13 +577,13 @@ export class MapHocComponent {
             return new L.Control.Slider(options);
         };
 
-        L.control.slider({
+        return L.control.slider({
             position: 'topright',
             onChange: (value: string) => {
                 this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
                 localStorage.setItem(this.cellSizeUniqueName, value);
             }
-        }).addTo(this.map);
+        });
     }
 
     private addMarkers(): void {

@@ -80083,365 +80083,6 @@
       "tradeGenerators": [
         {
           "condition": "ConstTrue",
-          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
-          "buyModifier": 0.2,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": [
-            "EItemType::MutantLoot"
-          ]
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_koldun_0",
-      "marker": "Trader",
-      "faction": "Neutrals",
-      "x": 3974.53,
-      "z": 5452.61,
-      "y": 9.86,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "MedicUniversal_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0,
-          "armorSellMinDurability": 0,
-          "buyLimitations": [
-            "EItemType::Weapon",
-            "EItemType::Armor",
-            "EItemType::Ammo",
-            "EItemType::Grenade",
-            "EItemType::Attach",
-            "EItemType::MutantLoot"
-          ]
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_nikolaic_0",
-      "marker": "Medic",
-      "faction": "Neutrals",
-      "x": 3998.2458,
-      "z": 5456.6274,
-      "y": 10.01,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "VartaTrader_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_serzdot_hoteev_0",
-      "marker": "Trader",
-      "faction": "Varta",
-      "x": 2571.205,
-      "z": 2105.146,
-      "y": 4.3150334,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "TraderSuska_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_suska_0",
-      "marker": "Trader",
-      "faction": "Spark",
-      "x": 2886.2715,
-      "z": 1637.604,
-      "y": 4.3,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "TraderSuska_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_suska_0",
-      "marker": "Trader",
-      "faction": "Spark",
-      "x": 2402.3525,
-      "z": 1465.5513,
-      "y": -33.825516,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "VartaTrader_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_serzdot_hoteev_0",
-      "marker": "Trader",
-      "faction": "Varta",
-      "x": 2401.8333,
-      "z": 1465.5212,
-      "y": -33.7595,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "TraderSuska_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_suska_0",
-      "marker": "Trader",
-      "faction": "Spark",
-      "x": 4203.496,
-      "z": 1970.0626,
-      "y": -0.115587026,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
           "itemGenerator": "TraderChemicalPlant_TradeItemGenerator",
           "buyModifier": 0.3,
           "sellModifier": 1,
@@ -81371,58 +81012,6 @@
       "tradeGenerators": [
         {
           "condition": "ConstTrue",
-          "itemGenerator": "BartenderSultansk_TradeItemGenerator",
-          "buyModifier": 0.2,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": [
-            "EItemType::MutantLoot"
-          ]
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_sona_kalina_0",
-      "marker": "Trader",
-      "faction": "SultanBandits",
-      "x": 6643.7,
-      "z": 6188.52,
-      "y": 2.7027185,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
           "itemGenerator": "SultanskTrader_TradeItemGenerator",
           "buyModifier": 0.3,
           "sellModifier": 1,
@@ -81491,160 +81080,6 @@
       "x": 6642.9487,
       "z": 6188.4023,
       "y": 2.872753,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "BartenderUniversal_TradeItemGenerator",
-          "buyModifier": 0.2,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": [
-            "EItemType::MutantLoot"
-          ]
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_gera_0",
-      "marker": "Trader",
-      "faction": "Duty",
-      "x": 1946.47,
-      "z": 3408.96,
-      "y": 5.21,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "RostokBartender_TradeItemGenerator",
-          "buyModifier": 0.2,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": [
-            "EItemType::MutantLoot"
-          ]
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_barmen_0",
-      "marker": "Trader",
-      "faction": "Neutrals",
-      "x": 1943.82,
-      "z": 3409,
-      "y": 5.21,
-      "dlc": "None"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "MalakhitTrader_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_viktoria_doroznuk_0",
-      "marker": "Trader",
-      "faction": "Scientists",
-      "x": 1453.2267,
-      "z": 4857.1104,
-      "y": 5.8,
       "dlc": "None"
     },
     {
@@ -81855,56 +81290,6 @@
       "z": 4090.37,
       "y": 21.12,
       "dlc": "BaseGame"
-    },
-    {
-      "buyDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 1.15
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 1.2
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 1.25
-        }
-      ],
-      "sellDiscounts": [
-        {
-          "sID": "PlayerRankExperienced",
-          "modifier": 0.97
-        },
-        {
-          "sID": "PlayerRankVeteran",
-          "modifier": 0.95
-        },
-        {
-          "sID": "PlayerRankMaster",
-          "modifier": 0.9
-        }
-      ],
-      "tradeGenerators": [
-        {
-          "condition": "ConstTrue",
-          "itemGenerator": "GeneralNPC_TradeItemGenerator",
-          "buyModifier": 0.3,
-          "sellModifier": 1,
-          "weaponSellMinDurability": 0.4,
-          "armorSellMinDurability": 0.4,
-          "buyLimitations": null
-        }
-      ],
-      "infiniteMoney": true,
-      "refreshCondition": null,
-      "name": "sid_character_eger_0",
-      "marker": "Trader",
-      "faction": "RooseveltBandits",
-      "x": 4289.9595,
-      "z": 3693.305,
-      "y": 10.4182005,
-      "dlc": "None"
     },
     {
       "buyDiscounts": [
@@ -82472,6 +81857,47 @@
       ]
     },
     {
+      "name": "TraderChemicalPlant_TradeItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": null,
+          "possibleItems": [
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Guns_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
+            },
+            {
+              "isArray": true,
+              "chance": 1,
+              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "MedicUniversal_TradeItemGenerator",
       "itemGenerators": [
         {
@@ -82628,294 +82054,6 @@
               "isArray": false,
               "chance": 1,
               "uniqueName": "Hercules"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "VartaTrader_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T2_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T3_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T4_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GrenadeF1"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "BattleExoskeleton_Varta_Armor"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "Heavy_Varta_Helmet"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "Battle_Varta_Armor"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "Veles"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TraderSuska_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T2_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T3_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T4_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T3_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T4_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T3_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T4_ItemGenerator"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GrenadeF1"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "HeavyAnomaly_Spark_Armor"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "Exosekeleton_Neutral_Armor"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "HeavyBattle_Spark_Armor"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "SEVA_Spark_Armor"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "Veles"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TraderChemicalPlant_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": null,
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T2_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T1_Guns_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T2_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_T1_Ammo_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Cosnsumables_ItemGenerator"
-            },
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "Trader_Attachments_T2_ItemGenerator"
             }
           ]
         }
@@ -84295,53 +83433,6 @@
       ]
     },
     {
-      "name": "BartenderSultansk_TradeItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": false,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": true,
-              "chance": 1,
-              "uniqueName": "BartenderUniversal_TradeItemGenerator"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 0.2,
-              "uniqueName": "CArtifactChunkMeat"
-            },
-            {
-              "isArray": false,
-              "chance": 0.2,
-              "uniqueName": "EArtifactChocolate"
-            },
-            {
-              "isArray": false,
-              "chance": 0.2,
-              "uniqueName": "CArtifactSlug"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "SultanskTrader_TradeItemGenerator",
       "itemGenerators": [
         {
@@ -85408,7 +84499,7 @@
       ]
     },
     {
-      "name": "Trader_T4_Guns_ItemGenerator",
+      "name": "Trader_T1_Guns_ItemGenerator",
       "itemGenerators": [
         {
           "allowSameCategoryGeneration": true,
@@ -85422,27 +84513,53 @@
             {
               "isArray": false,
               "chance": 1,
-              "uniqueName": "GunKharod_ST"
+              "uniqueName": "GunObrez_SG"
             },
             {
               "isArray": false,
               "chance": 1,
-              "uniqueName": "GunDnipro_ST"
+              "uniqueName": "GunTOZ_SG"
             },
             {
               "isArray": false,
               "chance": 1,
-              "uniqueName": "GunD12_SG"
+              "uniqueName": "GunViper_PP"
             },
             {
               "isArray": false,
-              "chance": 0.7,
-              "uniqueName": "GunRam2_SG"
+              "chance": 1,
+              "uniqueName": "GunAK74_ST"
             },
             {
               "isArray": false,
-              "chance": 0.3,
-              "uniqueName": "GunSVU_SP"
+              "chance": 1,
+              "uniqueName": "GunAKU_PP"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunThreeLine_SP"
+            }
+          ]
+        },
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunPM_HG"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunUDP_HG"
             }
           ]
         }
@@ -85494,6 +84611,47 @@
               "isArray": false,
               "chance": 1,
               "uniqueName": "A762SniperD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trader_T4_Guns_ItemGenerator",
+      "itemGenerators": [
+        {
+          "allowSameCategoryGeneration": true,
+          "playerRanks": [
+            "ERank::Newbie",
+            "ERank::Experienced",
+            "ERank::Veteran",
+            "ERank::Master"
+          ],
+          "possibleItems": [
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunKharod_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunDnipro_ST"
+            },
+            {
+              "isArray": false,
+              "chance": 1,
+              "uniqueName": "GunD12_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 0.7,
+              "uniqueName": "GunRam2_SG"
+            },
+            {
+              "isArray": false,
+              "chance": 0.3,
+              "uniqueName": "GunSVU_SP"
             }
           ]
         }
@@ -85591,73 +84749,6 @@
               "isArray": false,
               "chance": 0.5,
               "uniqueName": "EN_Silen_3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Trader_T1_Guns_ItemGenerator",
-      "itemGenerators": [
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunObrez_SG"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunTOZ_SG"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunViper_PP"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunAK74_ST"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunAKU_PP"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunThreeLine_SP"
-            }
-          ]
-        },
-        {
-          "allowSameCategoryGeneration": true,
-          "playerRanks": [
-            "ERank::Newbie",
-            "ERank::Experienced",
-            "ERank::Veteran",
-            "ERank::Master"
-          ],
-          "possibleItems": [
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunPM_HG"
-            },
-            {
-              "isArray": false,
-              "chance": 1,
-              "uniqueName": "GunUDP_HG"
             }
           ]
         }
@@ -85850,61 +84941,6 @@
       "x": 4988.76,
       "z": 3800.73,
       "y": 8.5,
-      "dlc": "None"
-    },
-    {
-      "guidePaths": [
-        {
-          "destination": "hub_terricon",
-          "price": 1500
-        },
-        {
-          "destination": "hub_asulym",
-          "price": 1500
-        },
-        {
-          "destination": "hub_rookievillage",
-          "price": 1500
-        },
-        {
-          "destination": "hub_chemplant",
-          "price": 1500
-        },
-        {
-          "destination": "supack_Kazkovy_Hub2",
-          "price": 1500
-        },
-        {
-          "destination": "hub_sultansk",
-          "price": 2000
-        },
-        {
-          "destination": "hub_concreteplant",
-          "price": 2000
-        },
-        {
-          "destination": "region_rostok",
-          "price": 2000
-        },
-        {
-          "destination": "region_malachite",
-          "price": 2000
-        },
-        {
-          "destination": "region_yanov",
-          "price": 3000
-        },
-        {
-          "destination": "region_prypiat",
-          "price": 3000
-        }
-      ],
-      "name": "sid_character_dada_lena_0",
-      "marker": "Guider",
-      "faction": "Monolith",
-      "x": 3809.1096,
-      "z": 6370.041,
-      "y": 3.62,
       "dlc": "None"
     },
     {
