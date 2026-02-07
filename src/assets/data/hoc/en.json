@@ -2286,5 +2286,17 @@
   "Poltergeist": "Poltergeist.",
   "Controller": "Controller.",
   "Chimera": "Chimera.",
-  "Pseudogiant": "Pseudogiant."
+  "Pseudogiant": "Pseudogiant.",
+  "hub_rookievillage": "Rookie Village",
+  "hub_sultansk": "Skadovsk",
+  "supack_Kazkovy_Hub2": "Kazkovyi Camp",
+  "hub_zalesie": "Zalissya",
+  "hub_asulym": "Wild Island",
+  "hub_chemplant": "Chemical Plant",
+  "region_malachite": "STC Malachite",
+  "hub_concreteplant": "Cement Factory",
+  "hub_terricon": "Slag Heap",
+  "region_rostok": "Rostok",
+  "region_yanov": "Yaniv",
+  "region_prypiat": "Prypiat"
 }

@@ -1,5 +1,5 @@
 import { InventoryItem } from "../inventory-item.model";
-import { Item } from "../item.model";
+import { Attachment, Item } from "../item.model";
 import { ShapeCollection } from "../map.model";
 
 export class MapHoc {
@@ -31,6 +31,7 @@ export class TradeItem {
     public minCount: number;
     public maxCount: number;
     public price: number;
+    public preinstalled: Attachment[];
 }
 
 export class TradeItemGenerator {

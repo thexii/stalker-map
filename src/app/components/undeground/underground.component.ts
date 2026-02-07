@@ -474,7 +474,7 @@ export class UndergroundComponent {
     }
 
     private addShapes() {
-        let shapeType = this.mapComponent.getShapeTypes();
+        let shapeType = this.mapService.getShapeTypes();
 
         for (let shapeCollection of this.gamedata.shapes) {
             let type = shapeType.find(x => x.type == shapeCollection.type);

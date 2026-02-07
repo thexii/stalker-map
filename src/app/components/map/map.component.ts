@@ -1576,7 +1576,7 @@ export class MapComponent {
     }
 
     private addShapes() {
-        let shapeType = this.getShapeTypes();
+        let shapeType = this.mapService.getShapeTypes();
 
         for (let shapeCollection of this.gamedata.shapes) {
             let type = shapeType.find(x => x.type == shapeCollection.type);
@@ -2815,35 +2815,6 @@ export class MapComponent {
                 keepMapSize: true
             },
         ];
-    }
-
-    public getShapeTypes(): any[] {
-        return [
-            {
-                type: 100,
-                stroke: '#32cd32',
-                fill: '#32cd321e',
-                name: 'acidic_zone'
-            },
-            {
-                type: 101,
-                stroke: '#0099ff',
-                fill: '#0099ff1e',
-                name: 'psychic_zone'
-            },
-            {
-                type: 102,
-                stroke: '#d4ff00',
-                fill: '#d4ff001e',
-                name: 'radioactive_zone'
-            },
-            {
-                type: 103,
-                stroke: '#ff4500',
-                fill: '#ff45001e',
-                name: 'thermal_zone'
-            }
-        ]
     }
 
     public getStuffTypes(): any[] {

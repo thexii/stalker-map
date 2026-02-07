@@ -395,7 +395,8 @@ export class MapService {
 
                 layer._radius = this._calculatedRadius * layer._map.scaleFactor;
                 layer._radius2 = layer._radius * 2;
-                layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
+                layer._drawRadius = layer._radius2 * this.options.imageFactor;
+                layer._drawRadiusHalf = layer._radius * this.options.imageFactor;
             },
 
             // Встановлення слухача зуму
@@ -415,7 +416,8 @@ export class MapService {
                         for (let i = 0; i < this.markers.length; i++) {
                             this.markers[i]._radius = radius;
                             this.markers[i]._radius2 = radius * 2;
-                            layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
+                            this.markers[i]._drawRadius = this.markers[i]._radius2 * this.options.imageFactor;
+                            this.markers[i]._drawRadiusHalf = this.markers[i]._radius * this.options.imageFactor;
                         }
                     }
                 };
@@ -515,15 +517,15 @@ export class MapService {
                         }
                     }*/
 
-                    x = layer._point.x - layer._radius;
-                    y = layer._point.y - layer._radius;
+                    x = layer._point.x - layer._drawRadiusHalf;
+                    y = layer._point.y - layer._drawRadiusHalf;
 
                     this._ctx.drawImage(
                         layer.options.icon.icon._image,
                         x,
                         y,
-                        layer._radius2,
-                        layer._radius2
+                        layer._drawRadius,
+                        layer._drawRadius
                     );
 
                 } catch (ex) {
@@ -661,7 +663,7 @@ export class MapService {
 
                 this._layerControlInputs.push(input);
 
-                if (this.options.overlaysListTop) {
+                if (this.options.overlaysListTop && obj.layer.addToTop !== false) {
                     this._layerControlInputsTop.push(inputTop);
                 }
                 input.layerId = L.Util.stamp(obj.layer);
@@ -697,7 +699,8 @@ export class MapService {
                 inputTop.id = `layer-top-${layerId}`;
                 labelInsideCheck.setAttribute('for', inputTop.id);
 
-                if (!obj.layer.isUnderground && this.options.overlaysListTop) {
+                if (!obj.layer.isUnderground && this.options.overlaysListTop  && obj.layer.addToTop !== false) {
+                    obj.layer.topId = this._overlaysListTop.childNodes.length;
                     this._overlaysListTop.appendChild(subHeaderPanel);
                 }
 
@@ -746,14 +749,21 @@ export class MapService {
                 if (this.options.overlaysListTop) {
                     for (let i = inputs.length - 1; i >= 0; i--) {
                         input = inputs[i];
-                        inputTop = inputsTop[i];
                         layer = this._getLayer(input.layerId).layer;
 
+                        inputTop = inputsTop[layer.topId];
+
                         if (input.checked) {
-                            inputTop.checked = true;
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = true;
+                            }
+
                             addedLayers.push(layer);
                         } else if (!input.checked) {
-                            inputTop.checked = false;
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = false;
+                            }
+
                             removedLayers.push(layer);
                         }
                     }
@@ -791,15 +801,18 @@ export class MapService {
 
                 for (let i = inputs.length - 1; i >= 0; i--) {
                     input = inputs[i];
-                    inputTop = inputsTop[i];
                     layer = this._getLayer(input.layerId).layer;
 
-                    if (inputTop.checked) {
-                        input.checked = true;
-                        addedLayers.push(layer);
-                    } else if (!inputTop.checked) {
-                        input.checked = false;
-                        removedLayers.push(layer);
+                    if (layer.topId) {
+                        inputTop = inputsTop[layer.topId];
+
+                        if (inputTop.checked) {
+                            input.checked = true;
+                            addedLayers.push(layer);
+                        } else if (!inputTop.checked) {
+                            input.checked = false;
+                            removedLayers.push(layer);
+                        }
                     }
                 }
 
@@ -853,6 +866,39 @@ export class MapService {
             else
                 carousel.scrollLeft -= 100;
         });
+    }
+
+    public getShapeTypes(): any[] {
+        return [
+            {
+                type: 100,
+                stroke: '#32cd32',
+                fill: '#32cd321e',
+                name: 'acidic_zone',
+                icon: '/assets/images/svg/marks/chemical.svg'
+            },
+            {
+                type: 101,
+                stroke: '#0099ff',
+                fill: '#0099ff1e',
+                name: 'psychic_zone',
+                icon: '/assets/images/svg/marks/psi.svg'
+            },
+            {
+                type: 102,
+                stroke: '#d4ff00',
+                fill: '#d4ff001e',
+                name: 'radioactive_zone',
+                icon: '/assets/images/svg/marks/radiation.svg'
+            },
+            {
+                type: 103,
+                stroke: '#ff4500',
+                fill: '#ff45001e',
+                name: 'thermal_zone',
+                icon: '/assets/images/svg/marks/fire.svg'
+            }
+        ]
     }
 
     private setHiddenMarkers(markers: HiddenMarker[]): void {

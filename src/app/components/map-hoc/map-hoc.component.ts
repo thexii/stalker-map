@@ -53,6 +53,8 @@ export class MapHocComponent {
     protected overlaysListTop: string = 'layers-control';
     private layerContoller: any;
 
+    private cellSizeUniqueName: string = 'hoc-cell-size';
+
     private richClasses: string[] = [
         'EItemType::Artifact',
         'EAttachType::Scope',
@@ -80,6 +82,7 @@ export class MapHocComponent {
         protected mapService: MapService,
         protected meta: Meta
     ) { }
+    
     showHideAll($event: any = null) {
         if ($event.target.checked) {
             for (let o of this.allLayers) {
@@ -333,7 +336,13 @@ export class MapHocComponent {
             ruler = this.mapService.addRuler(this.map, 1, 8000);
         }
 
-        let cellSize = 130;
+        let cellSizeInit = 130;
+        let cellSizeValue = localStorage.getItem(this.cellSizeUniqueName);
+        let cellSize = cellSizeInit;
+
+        if (cellSizeValue) {
+            cellSize = parseInt(cellSizeValue);
+        }
 
         document.documentElement.style.setProperty(
             '--inventory-cell-size',
@@ -342,7 +351,7 @@ export class MapHocComponent {
 
         document.documentElement.style.setProperty(
             '--initial-inventory-cell-size',
-            `${cellSize}px`
+            `${cellSizeInit}px`
         );
 
         document.documentElement.style.setProperty(
@@ -377,7 +386,7 @@ export class MapHocComponent {
         });
 
         this.mapService.createCustomLayersControl();
-        this.createCellSizeChangerControl();
+        this.createCellSizeChangerControl('Energetic_Limited', cellSize);
 
         let layersToLayerController: any = [];
 
@@ -512,7 +521,8 @@ export class MapHocComponent {
         this.configureSeo();
     }
 
-    private createCellSizeChangerControl(): void {
+    private createCellSizeChangerControl(uniqueName: string, cellSize: number): void {
+        let items = this.items;
         L.Control.Slider = L.Control.extend({
             options: {
                 position: 'topleft'
@@ -522,17 +532,27 @@ export class MapHocComponent {
                 // Створюємо основний контейнер
                 const container = L.DomUtil.create('div', 'leaflet-control-slider-container');
 
-                // Додаємо іконку/заголовок (щоб було на що наводити)
-                const icon = L.DomUtil.create('div', 'slider-icon', container);
-                icon.innerHTML = '📏';
+                const header = L.DomUtil.create('div', 'leaflet-control-slider-header', container);
+                const contentContainer = L.DomUtil.create('div', 'leaflet-control-slider', header);
+                const icon = L.DomUtil.create('a', 'leaflet-control-slider-container-toggle', header);
 
                 // Створюємо сам input
-                const slider = L.DomUtil.create('input', 'inventory-cell-slider', container);
+                const slider = L.DomUtil.create('input', 'inventory-cell-slider', contentContainer);
                 slider.type = 'range';
                 slider.min = '50';
                 slider.max = '130';
-                slider.value = '130';
+                slider.value = cellSize;
                 slider.step = '10';
+
+                let itemModel = items.find(x => x.uniqueName == uniqueName);
+
+                if (itemModel) {
+                    const inventoryContainer = L.DomUtil.create('div', 'leaflet-control-slider-inventory', container);
+                    const inventory = L.DomUtil.create('div', `inventory inventory-columns-${itemModel.width}`, inventoryContainer);
+                    const itemContainer = L.DomUtil.create('div', `hoc inventory-item inventory-item-height-${itemModel.height} inventory-item-width-${itemModel.width}`, inventory);
+                    const item =  L.DomUtil.create('div', `hoc inventory-item-image inventory-item-x-${itemModel.gridX} inventory-item-y-${itemModel.gridY}`, itemContainer);
+                }
+                
 
                 // Зупиняємо розповсюдження подій кліку та прокрутки на карту
                 L.DomEvent.disableClickPropagation(container);
@@ -556,6 +576,7 @@ export class MapHocComponent {
             position: 'topright',
             onChange: (value: string) => {
                 this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
+                localStorage.setItem(this.cellSizeUniqueName, value);
             }
         }).addTo(this.map);
     }
@@ -721,32 +742,7 @@ export class MapHocComponent {
     }
 
     private addShapes() {
-        let shapeType = [
-            {
-                type: 100,
-                stroke: '#00ff00',
-                fill: '#00ff001e',
-                name: 'acidic_zone'
-            },
-            {
-                type: 101,
-                stroke: '#0099ff',
-                fill: '#0099ff1e',
-                name: 'psychic_zone'
-            },
-            {
-                type: 102,
-                stroke: '#fbff00',
-                fill: '#fbff001e',
-                name: 'radioactive_zone'
-            },
-            {
-                type: 103,
-                stroke: '#ff8400',
-                fill: '#ff84001e',
-                name: 'thermal_zone'
-            }
-        ]
+        let shapeType = this.mapService.getShapeTypes();
 
         for (let shapeCollection of this.gamedata.zones) {
             let type = shapeType.find(x => x.type == shapeCollection.type);
@@ -1656,8 +1652,9 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 className: 'mark-container stalker-mark-1.5',
                 animate: false,
-                iconUrl: '/assets/images/svg/marks/trader.svg',
+                iconUrl: '/assets/images/s2/Markers/Texture_Trader_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
@@ -1668,14 +1665,14 @@ export class MapHocComponent {
                 animate: false,
                 iconUrl: '/assets/images/s2/Markers/Texture_Medecine_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
-                imageFactor: 0.5
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
 
         let traders: any[] = [];
         let medics: any[] = [];
-        let radius: number = 10;
+        let radius: number = 5;
 
         for (let data of this.gamedata.traders) {
             let icon = null;
@@ -1725,16 +1722,6 @@ export class MapHocComponent {
                 { className: 'leaflet-popup-content-fit-content' }
             );
 
-            var latlngs = [
-                [data.z - radius / 2, data.x - radius / 2],
-                [data.z - radius / 2, data.x + radius / 2],
-                [data.z + radius / 2, data.x + radius / 2],
-                [data.z + radius / 2, data.x - radius / 2]
-            ];
-
-            var polyline = L.polyline(latlngs, { color: 'red' });
-
-            array.push(polyline);
             array.push(marker);
         }
 
@@ -1752,14 +1739,15 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 className: 'mark-container stalker-mark-1.5',
                 animate: false,
-                iconUrl: '/assets/images/svg/marks/character.svg',
+                iconUrl: '/assets/images/s2/Markers/Texture_Guide_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
 
         let guiders: any[] = [];
-        let radius: number = 10;
+        let radius: number = 5;
 
         for (let data of this.gamedata.guides) {
             let marker = new this.svgMarker(

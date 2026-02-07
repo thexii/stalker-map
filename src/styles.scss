@@ -321,7 +321,7 @@ input[type=checkbox]+label:before {
     }
 }
 
-@for $i from 6 through 10 {
+@for $i from 1 through 10 {
     .inventory-columns-#{$i} {
       grid-template-columns: repeat($i, var(--inventory-cell-size)) !important;
       width: calc($i * var(--inventory-cell-size) + 1 );
@@ -404,6 +404,45 @@ app-item-tooltip, app-upgrade-tooltip {
     .sub-header-container {
         display: none;
     }
+}
+
+.leaflet-control-slider-container {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .leaflet-control-slider {
+        display: none;
+    }
+}
+
+.leaflet-control-slider-inventory {
+    display: none;
+}
+
+.leaflet-control .leaflet-control-slider-container-toggle {
+    background-image: url(/assets/images/svg/interface/cell-size-icon.svg);
+    width: 44px;
+    height: 44px;
+    display: block;
+    background-size: contain;
+}
+
+.leaflet-control-slider-container:hover {
+    .leaflet-control-slider {
+        display: flex;
+    }
+
+    .leaflet-control-slider-inventory {
+        display: block;
+    }
+}
+
+.leaflet-control-slider-header {
+    display: flex;
 }
 
 .upgrade-property-icon {

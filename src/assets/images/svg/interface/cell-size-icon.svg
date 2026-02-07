@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128" height="128" version="1.0" state='normal' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<polyline points="15 25, 113 25" stroke="black" stroke-width='4' fill="none" stroke-linejoin="round" />
+	<polyline points="15 103, 113 103" stroke="black" stroke-width='4' fill="none" stroke-linejoin="round" />
+	<polyline points="25 15, 25 113" stroke="black" stroke-width='4' fill="none" stroke-linejoin="round" />
+	<polyline points="103 15, 103 113" stroke="black" stroke-width='4' fill="none" stroke-linejoin="round" />
+	
+	
+	<polyline points="35 93, 93 35" stroke="black" stroke-width='6' fill="none" stroke-linejoin="round" />
+	<polyline points="45 93, 35 93, 35 83" stroke="black" stroke-width='6' fill="none" stroke-linejoin="round" />
+	<polyline points="83 35, 93 35, 93 45" stroke="black" stroke-width='6' fill="none" stroke-linejoin="round" />
+	<!--<polyline points="3,0.5 27,0.5 29.5,3 29.5,27 27,29.5 3,29.5 0.5,27 0.5,3 3,0.5" fill="url(#lines)" />-->
+</svg>

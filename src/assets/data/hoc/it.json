@@ -2286,5 +2286,17 @@
   "Poltergeist": "Poltergeist",
   "Controller": "Controllore",
   "Chimera": "Chimera",
-  "Pseudogiant": "Pseudogigante"
+  "Pseudogiant": "Pseudogigante",
+  "hub_rookievillage": "Villaggio dei Novellini",
+  "hub_sultansk": "Skadovsk",
+  "supack_Kazkovy_Hub2": "Accampamento di Kazkovyi",
+  "hub_zalesie": "Zalissya",
+  "hub_asulym": "Isola Selvaggia",
+  "hub_chemplant": "Stabilimento Chimico",
+  "region_malachite": "Centro scientifico Malachite",
+  "hub_concreteplant": "Impianto Cementifero",
+  "hub_terricon": "Collina di Scorie",
+  "region_rostok": "Rostok",
+  "region_yanov": "Yaniv",
+  "region_prypiat": "Prypiat"
 }
