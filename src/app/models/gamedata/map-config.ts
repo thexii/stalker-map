@@ -23,6 +23,7 @@ export class MapConfig {
   public itemsCategoriesSettings: CategoryFilterSettings[];
 
   public mapBounds: any;
+  public kx: number;
 }
 
 export enum RelationType {

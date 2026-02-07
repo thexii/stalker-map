@@ -34,4 +34,23 @@ export class Map {
   public monsterLairs: MonsterLair[];
   public levelChangers: LevelChanger[];
   public roads: Road[];
+  public shapes: ShapeCollection[];
+}
+
+export class ShapeCollection {
+    public type: number;
+    public polygons: Polygon[];
+    public circles: Circle[];
+}
+
+export class Polygon {
+    public locationId: number
+    public coordinates: number[];
+}
+
+export class Circle {
+    public locationId: number
+    public x: number
+    public z: number
+    public radius: number;
 }

@@ -1,49 +1,49 @@
 @if (trader) {
+    <div class="header">
+        <div class="name">{{ trader.name | translate }}</div>
+        <div class="player">
+            <select class="select-relation" #relation (change)="setPlayerRank(relation.value)">
+                <option class="language-selector-option" [value]="0" selected>{{ 'PlayerRankNovice' | translate }}</option>
+                <option class="language-selector-option" [value]="1">{{ 'PlayerRankExperienced' | translate }}</option>
+                <option class="language-selector-option" [value]="2">{{ 'PlayerRankVeteran' | translate }}</option>
+                <option class="language-selector-option" [value]="3">{{ 'PlayerRankMaster' | translate }}</option>
+            </select>
+        </div>
+    </div>
     <div class="trader">
         <div class="trader-sell">
             <div class="trader-info">
                 @if (items && items.length > 0) {
-                    <div class="inventory inventory-columns-7">
-                        @for (stuffItem of items; track stuffItem) {
-                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-                                <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
-
-                                <div
-                                    class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-                                </div>
-                            </div>
-                        }
-                    </div>
+                    <ng-container *ngTemplateOutlet="inventory; context: {items: items}"></ng-container>
                 }
             </div>
         </div>
-        <div class="selected-item-container">
-
-        </div>
         <div class="trader-buy">
-            <div class="player">
-                <select class="select-relation" #relation (change)="setPlayerRank(relation.value)">
-                    <option class="language-selector-option" [value]="0" selected>{{ 'PlayerRankNovice' | translate }}</option>
-                    <option class="language-selector-option" [value]="1">{{ 'PlayerRankExperienced' | translate }}</option>
-                    <option class="language-selector-option" [value]="2">{{ 'PlayerRankVeteran' | translate }}</option>
-                    <option class="language-selector-option" [value]="3">{{ 'PlayerRankMaster' | translate }}</option>
-                </select>
-            </div>
             <div class="inventory-container">
                 @if (buyitems && buyitems.length > 0) {
-                    <div class="inventory inventory-columns-7">
-                        @for (stuffItem of buyitems; track stuffItem) {
-                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-                                <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
-
-                                <div
-                                    class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-                                </div>
-                            </div>
-                        }
-                    </div>
+                    <ng-container *ngTemplateOutlet="inventory; context: {items: buyitems}"></ng-container>
                 }
             </div>
         </div>
     </div>
 }
+
+<ng-template #inventory let-items="items">
+    <div class="inventory inventory-columns-7">
+        @for (stuffItem of items; track stuffItem) {
+            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
+
+                <div class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}"></div>
+
+                @if (stuffItem.preinstalled.length > 0) {
+                    <div class="item-attachments">
+                        @for (attachment of stuffItem.preinstalled; track attachment) {
+                            <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}" [ngStyle]="{'width': `calc(var(--inventory-cell-size) * ${stuffItem.item.width})`, 'height': `calc(var(--inventory-cell-size) * ${stuffItem.item.height})`}"></div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</ng-template>

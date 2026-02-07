@@ -4,10 +4,11 @@ import { Item } from '../../../models/item.model';
 import { ItemTooltipComponent } from '../../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../../tooltips/tooltip.directive';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgStyle, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-trader.component',
-  imports: [TooltipDirective, TranslateModule],
+  imports: [TooltipDirective, TranslateModule, NgStyle, NgTemplateOutlet],
   templateUrl: './trader.component.html',
   styleUrl: './trader.component.scss',
 })
@@ -63,6 +64,20 @@ export class TraderComponent {
             tradeItem.item = item;
             tradeItem.price = Math.floor(item.price * buyModifier);
 
+            tradeItem.preinstalled = [];
+
+            if (item && item.preinstalledAttachments != null) {
+                if (item.compatibleAttachments != null) {
+                    for (let attName of item.preinstalledAttachments) {
+                        let attachment = item.compatibleAttachments.find(x => x.uniqueName == attName);
+
+                        if (attachment) {
+                            tradeItem.preinstalled.push(attachment);
+                        }
+                    }
+                }
+            }
+
             this.buyitems.push(tradeItem);
         }
 
@@ -107,12 +122,24 @@ export class TraderComponent {
 
             for (let item of items) {
                 item.price = Math.floor(item.item.price * sellModifier);
+                item.preinstalled = [];
+                
+                if (item.item.preinstalledAttachments != null) {
+                    if (item.item.compatibleAttachments != null) {
+
+                        for (let attName of item.item.preinstalledAttachments) {
+                            let attachment = item.item.compatibleAttachments.find(x => x.uniqueName == attName);
+
+                            if (attachment) {
+                                item.preinstalled.push(attachment);
+                            }
+                        }
+                    }
+                }
             }
 
             this.items = items;
         }
-        
-        console.log(this.trader);
     }
 
     public setPlayerRank(id: string): void {

@@ -2,10 +2,53 @@
     display: flex;
     flex-direction: row;
     columns: 20px;
+    column-gap: 10px;
 }
 
 .inventory {
     max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    
+    .name {
+        font-size: 20px;
+    }
+}
+
+.item-attachments {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item-attachment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/assets/images/items/attachments.png);
+  background-size: calc(var(--inventory-cell-size) * var(--attachment-width-in-cell));
+}
+
+.select-relation {
+    background: 0;
+    border: 0px;
+    text-transform: uppercase;
+    color: #fff;
+
+    option {
+        color: black;
+    }
 }

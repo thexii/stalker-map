@@ -1,5 +1,8 @@
 .guide-container {
     color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .paths {
@@ -13,4 +16,12 @@
     flex-direction: row;
     column-gap: 20px;
     justify-content: space-between;
+}
+
+.destination {
+    white-space: nowrap;
+}
+
+.guide-name {
+    font-size: 20px;
 }

@@ -53,6 +53,8 @@ export class MapHocComponent {
     protected overlaysListTop: string = 'layers-control';
     private layerContoller: any;
 
+    private cellSizeUniqueName: string = 'hoc-cell-size';
+
     private richClasses: string[] = [
         'EItemType::Artifact',
         'EAttachType::Scope',
@@ -80,6 +82,7 @@ export class MapHocComponent {
         protected mapService: MapService,
         protected meta: Meta
     ) { }
+    
     showHideAll($event: any = null) {
         if ($event.target.checked) {
             for (let o of this.allLayers) {
@@ -285,6 +288,10 @@ export class MapHocComponent {
             this.addMarkers();
         }
 
+        if (this.gamedata.zones && this.gamedata.zones.length > 0) {
+            this.addShapes();
+        }
+
         if (this.gamedata.lairs?.length > 0) {
             this.addLairs();
         }
@@ -316,20 +323,18 @@ export class MapHocComponent {
             this.addArtefactSpawners();
         }
 
-        if (!isDevMode()) {
-            const analytics = getAnalytics();
-            logEvent(analytics, 'open-map', {
-                game: 'hoc',
-                language: this.translate.currentLang,
-            });
-        }
-
         let ruler: any = null;
         if (gameConfig.rulerEnabled) {
             ruler = this.mapService.addRuler(this.map, 1, 8000);
         }
 
-        let cellSize = 130;
+        let cellSizeInit = 130;
+        let cellSizeValue = localStorage.getItem(this.cellSizeUniqueName);
+        let cellSize = cellSizeInit;
+
+        if (cellSizeValue) {
+            cellSize = parseInt(cellSizeValue);
+        }
 
         document.documentElement.style.setProperty(
             '--inventory-cell-size',
@@ -338,7 +343,7 @@ export class MapHocComponent {
 
         document.documentElement.style.setProperty(
             '--initial-inventory-cell-size',
-            `${cellSize}px`
+            `${cellSizeInit}px`
         );
 
         document.documentElement.style.setProperty(
@@ -372,8 +377,8 @@ export class MapHocComponent {
             //if (e.metaKey) {/*cmd is down*/}
         });
 
-        this.createCustomLayersControl();
-        this.createCellSizeChangerControl();
+        this.mapService.createCustomLayersControl();
+        let cellSizeControl = this.createCellSizeChangerControl('Energetic_Limited', cellSize);
 
         let layersToLayerController: any = [];
 
@@ -404,6 +409,7 @@ export class MapHocComponent {
 
         this.translate.onLangChange.subscribe((i) => {
             this.layerContoller.remove();
+            cellSizeControl.remove();
 
             let addRuler = false;
 
@@ -429,9 +435,10 @@ export class MapHocComponent {
             this.layerContoller.searchName = 'layerControl';
             this.layerContoller.isUnderground = false;
             this.layerContoller.addTo(this.map);
+            cellSizeControl.addTo(this.map);
 
             if (addRuler) {
-                ruler = this.mapService.addRuler(this.map, 1, 8000);
+                ruler.addTo(this.map)
             }
 
             this.createSearchController();
@@ -451,17 +458,21 @@ export class MapHocComponent {
             Object.fromEntries(layersToControl),
             { overlaysListTop: this.overlaysListTop }
         );
+
         this.layerContoller.addTo(this.map);
+        cellSizeControl.addTo(this.map);
+        ruler.addTo(this.map);
         this.createSearchController();
 
-        let carousel = document.getElementById(this.overlaysListTop) as HTMLElement;
+        this.mapService.createCarousel(this.overlaysListTop);
 
-        carousel.addEventListener('wheel', function (e) {
-            if (e.deltaY > 0)
-                carousel.scrollLeft += 100;
-            else
-                carousel.scrollLeft -= 100;
-        });
+        if (!isDevMode()) {
+            const analytics = getAnalytics();
+            logEvent(analytics, 'open-map', {
+                game: 'hoc',
+                language: this.translate.currentLang,
+            });
+        }
     }
 
     private createSearchController(): void {
@@ -515,328 +526,8 @@ export class MapHocComponent {
         this.configureSeo();
     }
 
-    private createCustomLayersControl(): void {
-        L.Control.CustomLayers = L.Control.Layers.extend({
-            // @section
-            // @aka Control.Layers options
-            options: {
-                // @option collapsed: Boolean = true
-                // If `true`, the control will be collapsed into an icon and expanded on mouse hover, touch, or keyboard activation.
-                collapsed: true,
-                position: 'topright',
-
-                // @option autoZIndex: Boolean = true
-                // If `true`, the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
-                autoZIndex: true,
-
-                // @option hideSingleBase: Boolean = false
-                // If `true`, the base layers in the control will be hidden when there is only one.
-                hideSingleBase: false,
-
-                // @option sortLayers: Boolean = false
-                // Whether to sort the layers. When `false`, layers will keep the order
-                // in which they were added to the control.
-                sortLayers: false,
-                overlaysListTop: null,
-
-                // @option sortFunction: Function = *
-                // A [compare function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-                // that will be used for sorting the layers, when `sortLayers` is `true`.
-                // The function receives both the `L.Layer` instances and their names, as in
-                // `sortFunction(layerA, layerB, nameA, nameB)`.
-                // By default, it sorts layers alphabetically by their name.
-                sortFunction(layerA: any, layerB: any, nameA: any, nameB: any) {
-                    return nameA < nameB ? -1 : nameB < nameA ? 1 : 0;
-                },
-            },
-
-            _initLayout: function () {
-                L.Control.Layers.prototype._initLayout.call(this);
-
-                if (!this.isUnderground && this.options.overlaysListTop) {
-                    this._overlaysListTop = document.getElementById(
-                        this.options.overlaysListTop
-                    );
-                }
-            },
-
-            initialize: function (baseLayers: any, overlays: any, options: any) {
-                L.Util.setOptions(this, options);
-
-                this._layerControlInputs = [];
-                this._layerControlInputsTop = [];
-                this._layers = [];
-                this._lastZIndex = 0;
-                this._handlingClick = false;
-                this._preventClick = false;
-
-                for (const i in baseLayers) {
-                    if (Object.hasOwn(baseLayers, i)) {
-                        this._addLayer(baseLayers[i], i);
-                    }
-                }
-
-                for (const i in overlays) {
-                    if (Object.hasOwn(overlays, i)) {
-                        this._addLayer(overlays[i], i, true);
-                    }
-                }
-            },
-
-            _update: function () {
-                if (!this._container) {
-                    return this;
-                }
-
-                this._baseLayersList.replaceChildren();
-                this._overlaysList.replaceChildren();
-
-                if (!this.isUnderground && this.options.overlaysListTop) {
-                    this._overlaysListTop.replaceChildren();
-                }
-
-                this._layerControlInputs = [];
-                this._layerControlInputsTop = [];
-                let baseLayersPresent,
-                    overlaysPresent,
-                    i,
-                    obj,
-                    baseLayersCount = 0;
-
-                for (i = 0; i < this._layers.length; i++) {
-                    obj = this._layers[i];
-                    this._addItem(obj);
-                    overlaysPresent = overlaysPresent || obj.overlay;
-                    baseLayersPresent = baseLayersPresent || !obj.overlay;
-                    baseLayersCount += !obj.overlay ? 1 : 0;
-                }
-
-                // Hide base layers section if there's only one layer.
-                if (this.options.hideSingleBase) {
-                    baseLayersPresent = baseLayersPresent && baseLayersCount > 1;
-                    this._baseLayersList.style.display = baseLayersPresent ? '' : 'none';
-                }
-
-                this._separator.style.display =
-                    overlaysPresent && baseLayersPresent ? '' : 'none';
-
-                return this;
-            },
-
-            _addItem: function (obj: any) {
-                const label = document.createElement('label'),
-                    checked = this._map.hasLayer(obj.layer),
-                    labelTop = document.createElement('label');
-
-                let input;
-                let inputTop;
-
-                if (obj.overlay) {
-                    input = document.createElement('input');
-                    input.type = 'checkbox';
-                    input.className = 'leaflet-control-layers-selector';
-                    input.defaultChecked = checked;
-
-                    inputTop = document.createElement('input');
-                    inputTop.type = 'checkbox';
-                    inputTop.className = 'leaflet-control-layers-selector';
-                    inputTop.defaultChecked = checked;
-                } else {
-                    input = this._createRadioElement(
-                        `leaflet-base-layers_${L.Util.stamp(this)}`,
-                        checked
-                    );
-                    inputTop = this._createRadioElement(
-                        `leaflet-base-layers_${L.Util.stamp(this)}`,
-                        checked
-                    );
-                }
-
-                inputTop.hidden = true;
-
-                this._layerControlInputs.push(input);
-
-                if (this.options.overlaysListTop && obj.layer.addToTop !== false) {
-                    this._layerControlInputsTop.push(inputTop);
-                }
-                input.layerId = L.Util.stamp(obj.layer);
-
-                let layerId;
-
-                if (this.options.overlaysListTop) {
-                    layerId = this._overlaysListTop.childNodes.length;
-                } else {
-                    layerId = L.Util.stamp(obj.layer);
-                }
-
-                const subHeaderPanel = document.createElement('div');
-                const subHeaderCheckbox = document.createElement('label');
-                const subHeaderSpan = document.createElement('span');
-                const subHeaderSpanName = document.createElement('span');
-                const labelInsideCheck = document.createElement('label');
-                subHeaderSpanName.innerHTML = `${obj.name}`;
-
-                subHeaderPanel.classList.add('sub-header-panel');
-                subHeaderCheckbox.classList.add('sub-header-checkbox');
-
-                subHeaderPanel.appendChild(subHeaderCheckbox);
-                subHeaderCheckbox.appendChild(subHeaderSpan);
-                subHeaderSpan.appendChild(inputTop);
-                subHeaderSpan.appendChild(labelInsideCheck);
-                subHeaderSpan.appendChild(subHeaderSpanName);
-
-                input.id = `layer-${layerId}`;
-                inputTop.id = `layer-top-${layerId}`;
-                labelInsideCheck.setAttribute('for', inputTop.id);
-
-                if (!obj.layer.isUnderground && this.options.overlaysListTop && obj.layer.addToTop !== false) {
-                    obj.layer.topId = this._overlaysListTop.childNodes.length;
-                    this._overlaysListTop.appendChild(subHeaderPanel);
-                }
-
-                L.DomEvent.on(input, 'click', this._onInputClick, this);
-                L.DomEvent.on(subHeaderCheckbox, 'click', this._onInputClickTop, this);
-
-                const name = document.createElement('span');
-                name.innerHTML = `${obj.name}`;
-                name.classList.add('stalker-search-item', obj.layer.name);
-
-                // Helps from preventing layer control flicker when checkboxes are disabled
-                // https://github.com/Leaflet/Leaflet/issues/2771
-                const holder = document.createElement('span');
-                //const holderTop = document.createElement('span');
-
-                //labelTop.appendChild(holderTop);
-                label.appendChild(holder);
-
-                //holderTop.appendChild(inputTop)
-                holder.appendChild(input);
-
-                //holderTop.appendChild(nameTop)
-                holder.appendChild(name);
-
-                const container = obj.overlay
-                    ? this._overlaysList
-                    : this._baseLayersList;
-                container.appendChild(label);
-
-                this._checkDisabledLayers();
-                return label;
-            },
-
-            _onInputClick: function () {
-                // expanding the control on mobile with a click can cause adding a layer - we don't want this
-                if (this._preventClick) {
-                    return;
-                }
-
-                const inputs = this._layerControlInputs,
-                    inputsTop = this._layerControlInputsTop,
-                    addedLayers = [],
-                    removedLayers = [];
-                let input, inputTop, layer;
-
-                this._handlingClick = true;
-
-                if (this.options.overlaysListTop) {
-                    for (let i = inputs.length - 1; i >= 0; i--) {
-                        input = inputs[i];
-                        layer = this._getLayer(input.layerId).layer;
-
-                        inputTop = inputsTop[layer.topId];
-
-                        if (input.checked) {
-                            if (layer.addToTop !== false) {
-                                inputTop.checked = true;
-                            }
-
-                            addedLayers.push(layer);
-                        } else if (!input.checked) {
-                            if (layer.addToTop !== false) {
-                                inputTop.checked = false;
-                            }
-
-                            removedLayers.push(layer);
-                        }
-                    }
-                } else {
-                    for (let i = inputs.length - 1; i >= 0; i--) {
-                        input = inputs[i];
-                        layer = this._getLayer(input.layerId).layer;
-
-                        if (input.checked) {
-                            addedLayers.push(layer);
-                        } else if (!input.checked) {
-                            removedLayers.push(layer);
-                        }
-                    }
-                }
-
-                this._onInputClickFinal(addedLayers, removedLayers);
-            },
-
-            _onInputClickTop: function () {
-                // expanding the control on mobile with a click can cause adding a layer - we don't want this
-                if (this._preventClick) {
-                    return;
-                }
-
-                const inputs = this._layerControlInputs,
-                    inputsTop = this._layerControlInputsTop,
-                    addedLayers = [],
-                    removedLayers = [];
-                let input, inputTop, layer;
-
-                this._handlingClick = true;
-
-                for (let i = inputs.length - 1; i >= 0; i--) {
-                    input = inputs[i];
-                    layer = this._getLayer(input.layerId).layer;
-
-                    if (layer.topId) {
-                        inputTop = inputsTop[layer.topId];
-
-                        if (inputTop.checked) {
-                            input.checked = true;
-                            addedLayers.push(layer);
-                        } else if (!inputTop.checked) {
-                            input.checked = false;
-                            removedLayers.push(layer);
-                        }
-                    }
-                }
-
-                this._onInputClickFinal(addedLayers, removedLayers);
-            },
-
-            _onInputClickFinal(addedLayers: any, removedLayers: any) {
-                // Bugfix issue 2318: Should remove all old layers before readding new ones
-                for (let i = 0; i < removedLayers.length; i++) {
-                    if (this._map.hasLayer(removedLayers[i])) {
-                        this._map.removeLayer(removedLayers[i]);
-                    }
-                }
-                for (let i = 0; i < addedLayers.length; i++) {
-                    if (!this._map.hasLayer(addedLayers[i])) {
-                        this._map.addLayer(addedLayers[i]);
-                    }
-                }
-
-                this._handlingClick = false;
-                this._refocusOnMap();
-            },
-        });
-
-        L.control.customLayers = function (
-            baseLayers: any,
-            overlays: any,
-            options: any
-        ) {
-            return new L.Control.CustomLayers(baseLayers, overlays, options);
-        };
-    }
-
-    private createCellSizeChangerControl(): void {
+    private createCellSizeChangerControl(uniqueName: string, cellSize: number): any {
+        let items = this.items;
         L.Control.Slider = L.Control.extend({
             options: {
                 position: 'topleft'
@@ -846,17 +537,27 @@ export class MapHocComponent {
                 // Створюємо основний контейнер
                 const container = L.DomUtil.create('div', 'leaflet-control-slider-container');
 
-                // Додаємо іконку/заголовок (щоб було на що наводити)
-                const icon = L.DomUtil.create('div', 'slider-icon', container);
-                icon.innerHTML = '📏';
+                const header = L.DomUtil.create('div', 'leaflet-control-slider-header', container);
+                const contentContainer = L.DomUtil.create('div', 'leaflet-control-slider', header);
+                const icon = L.DomUtil.create('a', 'leaflet-control-slider-container-toggle', header);
 
                 // Створюємо сам input
-                const slider = L.DomUtil.create('input', 'inventory-cell-slider', container);
+                const slider = L.DomUtil.create('input', 'inventory-cell-slider', contentContainer);
                 slider.type = 'range';
                 slider.min = '50';
                 slider.max = '130';
-                slider.value = '130';
+                slider.value = cellSize;
                 slider.step = '10';
+
+                let itemModel = items.find(x => x.uniqueName == uniqueName);
+
+                if (itemModel) {
+                    const inventoryContainer = L.DomUtil.create('div', 'leaflet-control-slider-inventory', container);
+                    const inventory = L.DomUtil.create('div', `inventory inventory-columns-${itemModel.width}`, inventoryContainer);
+                    const itemContainer = L.DomUtil.create('div', `hoc inventory-item inventory-item-height-${itemModel.height} inventory-item-width-${itemModel.width}`, inventory);
+                    const item =  L.DomUtil.create('div', `hoc inventory-item-image inventory-item-x-${itemModel.gridX} inventory-item-y-${itemModel.gridY}`, itemContainer);
+                }
+                
 
                 // Зупиняємо розповсюдження подій кліку та прокрутки на карту
                 L.DomEvent.disableClickPropagation(container);
@@ -876,12 +577,13 @@ export class MapHocComponent {
             return new L.Control.Slider(options);
         };
 
-        L.control.slider({
+        return L.control.slider({
             position: 'topright',
             onChange: (value: string) => {
                 this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
+                localStorage.setItem(this.cellSizeUniqueName, value);
             }
-        }).addTo(this.map);
+        });
     }
 
     private addMarkers(): void {
@@ -902,6 +604,7 @@ export class MapHocComponent {
                         '/assets/images/s2/Markers/Texture_Archianomaly_NotActive_General_Shadow.png',
                     iconAnchor: [0, 0],
                 }),
+                radius: 10
             },
             {
                 name: 'ESpawnType::Hub',
@@ -910,7 +613,8 @@ export class MapHocComponent {
                         '/assets/images/s2/Markers/Texture_Camp_NotActive_General_Shadow.png',
                     iconAnchor: [0, 0],
                 }),
-                isHub: true
+                isHub: true,
+                radius: 100
             },
             {
                 name: 'ESpawnType::LairSpawner',
@@ -1027,9 +731,9 @@ export class MapHocComponent {
             //this.addLayerToMap(L.layerGroup(circleMarkers), 'circles', false);
         }
 
-        if (hubs.length > 0) {
-            this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
-        }
+        //if (hubs.length > 0) {
+        //    this.addLayerToMap(L.layerGroup(hubs), 'hubs', true);
+        //}
 
         if (shelters.length > 0) {
             this.addLayerToMap(L.layerGroup(shelters), 'botPlayerShelters', true);
@@ -1042,6 +746,43 @@ export class MapHocComponent {
         this.addGrid();
 
         console.log(markerTypes);
+    }
+
+    private addShapes() {
+        let shapeType = this.mapService.getShapeTypes();
+
+        for (let shapeCollection of this.gamedata.zones) {
+            let type = shapeType.find(x => x.type == shapeCollection.type);
+
+            if (type == null) {
+                console.error(shapeCollection.type);
+                continue;
+            }
+
+            let polygons = [];
+
+            for (let shape of shapeCollection.polygons) {
+                const coors: number[][] = Array.from({ length: Math.ceil(shape.coordinates.length / 2) }, (_, i) =>
+                    shape.coordinates.slice(i * 2, i * 2 + 2)
+                );
+
+                let newCoors = coors.map(([x, z]) => [z, x]);
+
+                let polygon = L.polygon(newCoors, { color: type.stroke, fill: type.fill });
+
+                polygons.push(polygon);
+            }
+
+            for (let shape of shapeCollection.circles) {
+                let circle = L.circle([shape.z, shape.x], { radius: shape.radius, color: type.stroke, fill: type.fill });
+
+                polygons.push(circle);
+            }
+
+            if (polygons.length > 0) {
+                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
+            }
+        }
     }
 
     private addGrid(): void {
@@ -1918,8 +1659,9 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 className: 'mark-container stalker-mark-1.5',
                 animate: false,
-                iconUrl: '/assets/images/svg/marks/trader.svg',
+                iconUrl: '/assets/images/s2/Markers/Texture_Trader_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
@@ -1930,14 +1672,14 @@ export class MapHocComponent {
                 animate: false,
                 iconUrl: '/assets/images/s2/Markers/Texture_Medecine_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
-                imageFactor: 0.5
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
 
         let traders: any[] = [];
         let medics: any[] = [];
-        let radius: number = 10;
+        let radius: number = 5;
 
         for (let data of this.gamedata.traders) {
             let icon = null;
@@ -1986,17 +1728,7 @@ export class MapHocComponent {
                 (p: any) => this.createTraderPopup(p),
                 { className: 'leaflet-popup-content-fit-content' }
             );
-            
-            var latlngs = [
-                [data.z - radius / 2, data.x - radius / 2],
-                [data.z - radius / 2, data.x + radius / 2],
-                [data.z + radius / 2, data.x + radius / 2],
-                [data.z + radius / 2, data.x - radius / 2]
-            ];
 
-            var polyline = L.polyline(latlngs, {color: 'red'});
-
-            array.push(polyline);
             array.push(marker);
         }
 
@@ -2014,14 +1746,15 @@ export class MapHocComponent {
             icon: new this.svgIcon({
                 className: 'mark-container stalker-mark-1.5',
                 animate: false,
-                iconUrl: '/assets/images/svg/marks/character.svg',
+                iconUrl: '/assets/images/s2/Markers/Texture_Guide_NotActive_General_Shadow.png',
                 iconAnchor: [0, 0],
+                imageFactor: 2
             }),
             keepMapSize: true,
         };
 
         let guiders: any[] = [];
-        let radius: number = 10;
+        let radius: number = 5;
 
         for (let data of this.gamedata.guides) {
             let marker = new this.svgMarker(

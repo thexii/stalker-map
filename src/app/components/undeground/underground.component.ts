@@ -259,6 +259,8 @@ export class UndergroundComponent {
 
         this.addMarks();
 
+        this.addShapes();
+
         let hiddenstuffs = this.addStuffs();
 
         if (hiddenstuffs.length > 0) {
@@ -467,6 +469,47 @@ export class UndergroundComponent {
                 }
 
                 this.addLayerToMap(L.layerGroup(markers), markType.uniqueName, markType.ableToSearch);
+            }
+        }
+    }
+
+    private addShapes() {
+        let shapeType = this.mapService.getShapeTypes();
+
+        for (let shapeCollection of this.gamedata.shapes) {
+            let type = shapeType.find(x => x.type == shapeCollection.type);
+
+            if (type == null) {
+                console.error(shapeCollection.type);
+                continue;
+            }
+
+            let polygons = [];
+
+            for (let shape of shapeCollection.polygons) {
+                if (this.location.id != shape.locationId) {
+                    continue;
+                }
+
+                const coors: number[][] = Array.from({ length: Math.ceil(shape.coordinates.length / 2) }, (_, i) =>
+                    shape.coordinates.slice(i * 2, i * 2 + 2)
+                );
+                
+                polygons.push(L.polygon(coors.map(([x, z]) => [this.zShift + z, this.xShift + x]), {color: type.stroke, fill: type.fill}))
+            }
+            
+            for (let shape of shapeCollection.circles) {
+                if (this.location.id != shape.locationId) {
+                    continue;
+                }
+
+                let circle = L.circle([this.zShift + shape.z, this.xShift + shape.x], {radius: shape.radius, color: type.stroke, fill: type.fill});
+                
+                polygons.push(circle);
+            }
+            
+            if (polygons.length > 0) {
+                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
             }
         }
     }

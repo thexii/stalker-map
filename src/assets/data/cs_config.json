@@ -95,6 +95,7 @@
   "globalMapFileName": "global_map.png",
   "traderRelationType": 1,
   "markerFactor": 3,
+  "kx": 0.7754125309809557,
   "actor": {
     "iconHeight": 108,
     "iconWidth": 165,

@@ -15,13 +15,13 @@ export class AnalyticsService {
   public init(): void {
     if (!isDevMode()) {
       let config = {
-        apiKey: process.env['apiKey'],
-        authDomain: process.env['authDomain'],
-        projectId: process.env['projectId'],
-        storageBucket: process.env['storageBucket'],
-        messagingSenderId: process.env['messagingSenderId'],
-        appId: process.env['appId'],
-        measurementId: process.env['measurementId']
+        apiKey: "AIzaSyDB32mndR7uGFr_-w5G9-w8o05832TjauI",
+        authDomain: "stalker-map-online.firebaseapp.com",
+        projectId: "stalker-map-online",
+        storageBucket: "stalker-map-online.appspot.com",
+        messagingSenderId: "412308123213",
+        appId: "1:412308123213:web:179813ce72e454c9f3f604",
+        measurementId: "G-W3X4BS4H20"
       };
   
       const app = initializeApp(config);

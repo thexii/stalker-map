@@ -270,7 +270,6 @@ export class MapService {
         };
 
         ruler = L.control.ruler(options);
-        ruler.addTo(map);
 
         return ruler;
     }
@@ -395,7 +394,8 @@ export class MapService {
 
                 layer._radius = this._calculatedRadius * layer._map.scaleFactor;
                 layer._radius2 = layer._radius * 2;
-                layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
+                layer._drawRadius = layer._radius2 * this.options.imageFactor;
+                layer._drawRadiusHalf = layer._radius * this.options.imageFactor;
             },
 
             // Встановлення слухача зуму
@@ -415,7 +415,8 @@ export class MapService {
                         for (let i = 0; i < this.markers.length; i++) {
                             this.markers[i]._radius = radius;
                             this.markers[i]._radius2 = radius * 2;
-                            layer._drawRadius = layer._radius * 2 * this.options.imageFactor;
+                            this.markers[i]._drawRadius = this.markers[i]._radius2 * this.options.imageFactor;
+                            this.markers[i]._drawRadiusHalf = this.markers[i]._radius * this.options.imageFactor;
                         }
                     }
                 };
@@ -515,15 +516,15 @@ export class MapService {
                         }
                     }*/
 
-                    x = layer._point.x - layer._radius;
-                    y = layer._point.y - layer._radius;
+                    x = layer._point.x - layer._drawRadiusHalf;
+                    y = layer._point.y - layer._drawRadiusHalf;
 
                     this._ctx.drawImage(
                         layer.options.icon.icon._image,
                         x,
                         y,
-                        layer._radius2,
-                        layer._radius2
+                        layer._drawRadius,
+                        layer._drawRadius
                     );
 
                 } catch (ex) {
@@ -535,7 +536,366 @@ export class MapService {
 
         return L.canvas();
     }
-    
+
+    public createCustomLayersControl(): void {
+        L.Control.CustomLayers = L.Control.Layers.extend({
+            // @section
+            // @aka Control.Layers options
+            options: {
+                // @option collapsed: Boolean = true
+                // If `true`, the control will be collapsed into an icon and expanded on mouse hover, touch, or keyboard activation.
+                collapsed: true,
+                position: 'topright',
+
+                // @option autoZIndex: Boolean = true
+                // If `true`, the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
+                autoZIndex: true,
+
+                // @option hideSingleBase: Boolean = false
+                // If `true`, the base layers in the control will be hidden when there is only one.
+                hideSingleBase: false,
+
+                // @option sortLayers: Boolean = false
+                // Whether to sort the layers. When `false`, layers will keep the order
+                // in which they were added to the control.
+                sortLayers: false,
+                overlaysListTop: null,
+
+                // @option sortFunction: Function = *
+                // A [compare function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+                // that will be used for sorting the layers, when `sortLayers` is `true`.
+                // The function receives both the `L.Layer` instances and their names, as in
+                // `sortFunction(layerA, layerB, nameA, nameB)`.
+                // By default, it sorts layers alphabetically by their name.
+                sortFunction(layerA: any, layerB: any, nameA: any, nameB: any) {
+                    return nameA < nameB ? -1 : (nameB < nameA ? 1 : 0);
+                }
+            },
+
+            _initLayout: function () {
+                L.Control.Layers.prototype._initLayout.call(this);
+
+                if (!this.isUnderground && this.options.overlaysListTop) {
+                    this._overlaysListTop = document.getElementById(this.options.overlaysListTop);
+                }
+            },
+
+            initialize: function (baseLayers: any, overlays: any, options: any) {
+                L.Util.setOptions(this, options);
+
+                this._layerControlInputs = [];
+                this._layerControlInputsTop = [];
+                this._layers = [];
+                this._lastZIndex = 0;
+                this._handlingClick = false;
+                this._preventClick = false;
+
+                for (const i in baseLayers) {
+                    if (Object.hasOwn(baseLayers, i)) {
+                        this._addLayer(baseLayers[i], i);
+                    }
+                }
+
+                for (const i in overlays) {
+                    if (Object.hasOwn(overlays, i)) {
+                        this._addLayer(overlays[i], i, true);
+                    }
+                }
+            },
+
+            _update: function () {
+                if (!this._container) { return this; }
+
+                this._baseLayersList.replaceChildren();
+                this._overlaysList.replaceChildren();
+                if (!this.isUnderground && this.options.overlaysListTop) {
+                    this._overlaysListTop.replaceChildren();
+                }
+
+                this._layerControlInputs = [];
+                this._layerControlInputsTop = [];
+                let baseLayersPresent, overlaysPresent, i, obj, baseLayersCount = 0;
+
+                for (i = 0; i < this._layers.length; i++) {
+                    obj = this._layers[i];
+                    this._addItem(obj);
+                    overlaysPresent = overlaysPresent || obj.overlay;
+                    baseLayersPresent = baseLayersPresent || !obj.overlay;
+                    baseLayersCount += !obj.overlay ? 1 : 0;
+                }
+
+                // Hide base layers section if there's only one layer.
+                if (this.options.hideSingleBase) {
+                    baseLayersPresent = baseLayersPresent && baseLayersCount > 1;
+                    this._baseLayersList.style.display = baseLayersPresent ? '' : 'none';
+                }
+
+                this._separator.style.display = overlaysPresent && baseLayersPresent ? '' : 'none';
+
+                return this;
+            },
+
+            _addItem: function (obj: any) {
+                const label = document.createElement('label'),
+                    checked = this._map.hasLayer(obj.layer),
+                    labelTop = document.createElement('label');
+
+                let input;
+                let inputTop;
+
+                if (obj.overlay) {
+                    input = document.createElement('input');
+                    input.type = 'checkbox';
+                    input.className = 'leaflet-control-layers-selector';
+                    input.defaultChecked = checked;
+
+                    inputTop = document.createElement('input');
+                    inputTop.type = 'checkbox';
+                    inputTop.className = 'leaflet-control-layers-selector';
+                    inputTop.defaultChecked = checked;
+                } else {
+                    input = this._createRadioElement(`leaflet-base-layers_${L.Util.stamp(this)}`, checked);
+                    inputTop = this._createRadioElement(`leaflet-base-layers_${L.Util.stamp(this)}`, checked);
+                }
+
+                inputTop.hidden = true;
+
+                this._layerControlInputs.push(input);
+
+                if (this.options.overlaysListTop && obj.layer.addToTop !== false) {
+                    this._layerControlInputsTop.push(inputTop);
+                }
+                input.layerId = L.Util.stamp(obj.layer);
+
+                let layerId;
+
+                if (this.options.overlaysListTop) {
+                    layerId = this._overlaysListTop.childNodes.length;
+                }
+                else {
+                    layerId = L.Util.stamp(obj.layer);
+                }
+
+                const subHeaderPanel = document.createElement('div');
+                const subHeaderCheckbox = document.createElement('label');
+                const subHeaderSpan = document.createElement('span');
+                const subHeaderSpanName = document.createElement('span');
+                const labelInsideCheck = document.createElement('label');
+                subHeaderSpanName.innerHTML = `${obj.name}`;
+
+                subHeaderPanel.classList.add('sub-header-item');
+                subHeaderPanel.classList.add('left-arc');
+                subHeaderPanel.classList.add('right-arc');
+                subHeaderCheckbox.classList.add('sub-header-checkbox');
+
+                subHeaderPanel.appendChild(subHeaderCheckbox);
+                subHeaderCheckbox.appendChild(subHeaderSpan);
+                subHeaderSpan.appendChild(inputTop);
+                subHeaderSpan.appendChild(labelInsideCheck);
+                subHeaderSpan.appendChild(subHeaderSpanName);
+
+                input.id = `layer-${layerId}`;
+                inputTop.id = `layer-top-${layerId}`;
+                labelInsideCheck.setAttribute('for', inputTop.id);
+
+                if (!obj.layer.isUnderground && this.options.overlaysListTop  && obj.layer.addToTop !== false) {
+                    obj.layer.topId = this._overlaysListTop.childNodes.length;
+                    this._overlaysListTop.appendChild(subHeaderPanel);
+                }
+
+                L.DomEvent.on(input, 'click', this._onInputClick, this);
+                L.DomEvent.on(subHeaderCheckbox, 'click', this._onInputClickTop, this);
+
+                const name = document.createElement('span');
+                name.innerHTML = `${obj.name}`;
+                name.classList.add('stalker-search-item', obj.layer.name);
+
+                // Helps from preventing layer control flicker when checkboxes are disabled
+                // https://github.com/Leaflet/Leaflet/issues/2771
+                const holder = document.createElement('span');
+                //const holderTop = document.createElement('span');
+
+                //labelTop.appendChild(holderTop);
+                label.appendChild(holder);
+
+                //holderTop.appendChild(inputTop)
+                holder.appendChild(input);
+
+                //holderTop.appendChild(nameTop)
+                holder.appendChild(name);
+
+                const container = obj.overlay ? this._overlaysList : this._baseLayersList;
+                container.appendChild(label);
+
+                this._checkDisabledLayers();
+                return label;
+            },
+
+            _onInputClick: function () {
+                // expanding the control on mobile with a click can cause adding a layer - we don't want this
+                if (this._preventClick) {
+                    return;
+                }
+
+                const inputs = this._layerControlInputs,
+                    inputsTop = this._layerControlInputsTop,
+                    addedLayers = [],
+                    removedLayers = [];
+                let input, inputTop, layer;
+
+                this._handlingClick = true;
+
+                if (this.options.overlaysListTop) {
+                    for (let i = inputs.length - 1; i >= 0; i--) {
+                        input = inputs[i];
+                        layer = this._getLayer(input.layerId).layer;
+
+                        inputTop = inputsTop[layer.topId];
+
+                        if (input.checked) {
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = true;
+                            }
+
+                            addedLayers.push(layer);
+                        } else if (!input.checked) {
+                            if (layer.addToTop !== false) {
+                                inputTop.checked = false;
+                            }
+
+                            removedLayers.push(layer);
+                        }
+                    }
+                }
+                else {
+                    for (let i = inputs.length - 1; i >= 0; i--) {
+                        input = inputs[i];
+                        layer = this._getLayer(input.layerId).layer;
+
+                        if (input.checked) {
+                            addedLayers.push(layer);
+                        } else if (!input.checked) {
+                            removedLayers.push(layer);
+                        }
+                    }
+                }
+
+
+                this._onInputClickFinal(addedLayers, removedLayers);
+            },
+
+            _onInputClickTop: function () {
+                // expanding the control on mobile with a click can cause adding a layer - we don't want this
+                if (this._preventClick) {
+                    return;
+                }
+
+                const inputs = this._layerControlInputs,
+                    inputsTop = this._layerControlInputsTop,
+                    addedLayers = [],
+                    removedLayers = [];
+                let input, inputTop, layer;
+
+                this._handlingClick = true;
+
+                for (let i = inputs.length - 1; i >= 0; i--) {
+                    input = inputs[i];
+                    layer = this._getLayer(input.layerId).layer;
+
+                    if (layer.topId) {
+                        inputTop = inputsTop[layer.topId];
+
+                        if (inputTop.checked) {
+                            input.checked = true;
+                            addedLayers.push(layer);
+                        } else if (!inputTop.checked) {
+                            input.checked = false;
+                            removedLayers.push(layer);
+                        }
+                    }
+                }
+
+                this._onInputClickFinal(addedLayers, removedLayers);
+            },
+
+            _onInputClickFinal(addedLayers: any, removedLayers: any) {
+                for (let i = 0; i < removedLayers.length; i++) {
+                    if (this._map.hasLayer(removedLayers[i])) {
+                        this._map.removeLayer(removedLayers[i]);
+                    }
+                }
+                for (let i = 0; i < addedLayers.length; i++) {
+                    if (!this._map.hasLayer(addedLayers[i])) {
+                        this._map.addLayer(addedLayers[i]);
+                    }
+                }
+
+                this._handlingClick = false;
+                this._refocusOnMap();
+            },
+        });
+
+        L.control.customLayers = function (baseLayers: any, overlays: any, options: any) {
+            return new L.Control.CustomLayers(baseLayers, overlays, options);
+        }
+    }
+
+    public createCarousel(container: string): void {
+        let carousel = document.getElementById(container) as HTMLElement;
+
+        if (carousel.scrollWidth > carousel.clientWidth) {
+            let arrows: any = document.getElementsByClassName('sub-header-panel-scroll');
+
+            for (let arrow of arrows) {
+                arrow.style.display = 'block';
+            }
+
+            arrows[0].addEventListener('click', function (e: any) {
+                carousel.scrollLeft -= 100
+            });
+
+            arrows[1].addEventListener('click', function (e: any) {
+                carousel.scrollLeft += 100
+            });
+        }
+
+        carousel.addEventListener('wheel', function (e) {
+            if (e.deltaY > 0)
+                carousel.scrollLeft += 100;
+            else
+                carousel.scrollLeft -= 100;
+        });
+    }
+
+    public getShapeTypes(): any[] {
+        return [
+            {
+                type: 100,
+                stroke: '#00ff00',
+                fill: '#00ff001e',
+                name: 'acidic',
+            },
+            {
+                type: 101,
+                stroke: '#0099ff',
+                fill: '#0099ff1e',
+                name: 'psychic',
+            },
+            {
+                type: 102,
+                stroke: '#fbff00',
+                fill: '#fbff001e',
+                name: 'radioactive',
+            },
+            {
+                type: 103,
+                stroke: '#ff8400',
+                fill: '#ff84001e',
+                name: 'thermal',
+            }
+        ]
+    }
+
     private setHiddenMarkers(markers: HiddenMarker[]): void {
         this.hiddenMarksCache = markers;
         localStorage.setItem(this.hiddenMarksLocalStorageKey, JSON.stringify(markers));
