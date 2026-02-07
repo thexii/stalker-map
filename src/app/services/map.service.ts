@@ -872,31 +872,27 @@ export class MapService {
         return [
             {
                 type: 100,
-                stroke: '#32cd32',
-                fill: '#32cd321e',
-                name: 'acidic_zone',
-                icon: '/assets/images/svg/marks/chemical.svg'
+                stroke: '#00ff00',
+                fill: '#00ff001e',
+                name: 'acidic',
             },
             {
                 type: 101,
                 stroke: '#0099ff',
                 fill: '#0099ff1e',
-                name: 'psychic_zone',
-                icon: '/assets/images/svg/marks/psi.svg'
+                name: 'psychic',
             },
             {
                 type: 102,
-                stroke: '#d4ff00',
-                fill: '#d4ff001e',
-                name: 'radioactive_zone',
-                icon: '/assets/images/svg/marks/radiation.svg'
+                stroke: '#fbff00',
+                fill: '#fbff001e',
+                name: 'radioactive',
             },
             {
                 type: 103,
-                stroke: '#ff4500',
-                fill: '#ff45001e',
-                name: 'thermal_zone',
-                icon: '/assets/images/svg/marks/fire.svg'
+                stroke: '#ff8400',
+                fill: '#ff84001e',
+                name: 'thermal',
             }
         ]
     }
