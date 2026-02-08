@@ -30,7 +30,7 @@
 
 <ng-template #inventory let-items="items">
     <div class="inventory inventory-columns-7">
-        @for (stuffItem of items; track stuffItem) {
+        @for (stuffItem of items; track stuffItem.item.uniqueName) {
             <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
                 <div class="inventory-item-count-hoc">{{stuffItem.price}}</div>
 
@@ -39,7 +39,7 @@
                 @if (stuffItem.preinstalled.length > 0) {
                     <div class="item-attachments">
                         @for (attachment of stuffItem.preinstalled; track attachment) {
-                            <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}" [ngStyle]="{'width': `calc(var(--inventory-cell-size) * ${stuffItem.item.width})`, 'height': `calc(var(--inventory-cell-size) * ${stuffItem.item.height})`}"></div>
+                            <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}"></div>
                         }
                     </div>
                 }

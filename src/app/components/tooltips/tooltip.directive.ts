@@ -1,73 +1,74 @@
-import { ComponentRef, Directive, HostListener, Input, Type, ViewContainerRef } from '@angular/core';
+import { ComponentRef, Directive, ElementRef, HostListener, Input, NgZone, OnDestroy, Renderer2, ViewContainerRef } from '@angular/core';
 
 @Directive({
-    selector: '[tooltip]',
-    standalone: true
+  selector: '[tooltip]',
+  standalone: true
 })
-
-export class TooltipDirective {
+export class TooltipDirective implements OnDestroy {
   @Input('component') componentType!: any;
   @Input('componentData') componentData!: any;
-  private componentRef: ComponentRef<any>;
-  private hasTooltip: boolean = false;
-  private tooltipWidth: number = 300;
-  private windowMargin: number = 100;
-  private tooltipBorder: number = 22;
-  private tooltipPadding: number = 16 * 2;
+
+  private componentRef: ComponentRef<any> | null = null;
+  private unlistenListeners: (() => void)[] = [];
 
   constructor(
-    private viewContainerRef: ViewContainerRef) {
+    private viewContainerRef: ViewContainerRef,
+    private elementRef: ElementRef,
+    private renderer: Renderer2,
+    private ngZone: NgZone
+  ) {}
 
-  }
-
-  @HostListener('mouseover', ['$event']) onMouseHover(event: MouseEvent) {
-    if (this.hasTooltip) {
-      return;
-    }
-
+  @HostListener('mouseenter') 
+  onMouseEnter() {
     this.createTooltip();
+    
+    // Запускаємо слухачі ПОЗА зоною Angular, щоб рух миші не "фрізив" карту
+    this.ngZone.runOutsideAngular(() => {
+      const move = this.renderer.listen('window', 'mousemove', (event: MouseEvent) => {
+        this.updatePosition(event);
+      });
+      this.unlistenListeners.push(move);
+    });
   }
 
-  @HostListener('mouseleave') hideTooltip() {
-    this.componentRef.destroy();
-    this.hasTooltip = false;
+  @HostListener('mouseleave') 
+  onMouseLeave() {
+    this.destroyTooltip();
   }
 
-  @HostListener('mousemove', ['$event']) moveTooltip(event: any) {
-    let toolTipWidth: number = Math.max(this.componentRef.location.nativeElement.clientWidth, this.tooltipWidth + this.tooltipPadding);
+  private updatePosition(event: MouseEvent) {
+    if (!this.componentRef) return;
 
-    let toolTipHeight: number = 200;
-    if (this.componentRef.location.nativeElement.clientHeight > 0) {
-      toolTipHeight = this.componentRef.location.nativeElement.clientHeight
-    }
-
-    if (event.clientX + toolTipWidth + this.tooltipBorder + this.windowMargin < document.body.clientWidth) {
-      this.componentRef.location.nativeElement.style.left = event.clientX + 10 + 'px';
-    }
-    else {
-      this.componentRef.location.nativeElement.style.left = (event.clientX - toolTipWidth - this.tooltipPadding ) + 'px';
-    }
-
-    if (event.clientY + toolTipHeight + this.windowMargin < window.innerHeight) {
-      this.componentRef.location.nativeElement.style.top = event.clientY + 'px';
-    }
-    else {
-      this.componentRef.location.nativeElement.style.top = event.clientY - toolTipHeight - this.windowMargin / 2 + 'px';
-    }
-
-    this.componentRef.location.nativeElement.classList.add("tooltip-show");
+    const el = this.componentRef.location.nativeElement;
+    // Використовуємо Renderer2 для прямої маніпуляції, минаючи Change Detection
+    this.renderer.setStyle(el, 'left', `${event.clientX + 15}px`);
+    this.renderer.setStyle(el, 'top', `${event.clientY + 15}px`);
+    this.renderer.addClass(el, 'tooltip-show');
   }
 
-  private createTooltip(): void {
+  private createTooltip() {
     this.componentRef = this.viewContainerRef.createComponent(this.componentType);
-    document.body.appendChild(this.componentRef.location.nativeElement);
-    this.componentRef.location.nativeElement.style.maxWidth = `${this.tooltipWidth}px`;
-    this.componentRef.location.nativeElement.style.position = 'fixed';
+    Object.assign(this.componentRef.instance, this.componentData);
+    
+    const node = this.componentRef.location.nativeElement;
+    this.renderer.setStyle(node, 'position', 'fixed');
+    this.renderer.setStyle(node, 'z-index', '1000');
+    this.renderer.setStyle(node, 'pointer-events', 'none');
+    
+    document.body.appendChild(node);
+    this.componentRef.changeDetectorRef.detectChanges();
+  }
 
-    this.hasTooltip = true;
-
-    if (this.componentData) {
-      Object.assign(this.componentRef.instance, this.componentData);
+  private destroyTooltip() {
+    this.unlistenListeners.forEach(fn => fn());
+    this.unlistenListeners = [];
+    if (this.componentRef) {
+      this.componentRef.destroy();
+      this.componentRef = null;
     }
+  }
+
+  ngOnDestroy() {
+    this.destroyTooltip();
   }
 }
