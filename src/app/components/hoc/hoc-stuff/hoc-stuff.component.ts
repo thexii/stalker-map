@@ -8,11 +8,12 @@ import { StuffItem } from '../../../models/stuff/stuff-item.model';
 import { ItemTooltipComponent } from '../../tooltips/item-tooltip/item-tooltip.component';
 import { MapService } from '../../../services/map.service';
 import { Game } from '../../../models/game.model';
+import { HocInventoryItem } from "../hoc-inventory-item/hoc-inventory-item";
 
 @Component({
     selector: 'app-hoc-stuff',
     standalone: true,
-    imports: [TranslateModule, TooltipDirective, NgStyle],
+    imports: [TranslateModule, TooltipDirective, NgStyle, HocInventoryItem],
     templateUrl: './hoc-stuff.component.html',
     styleUrl: './hoc-stuff.component.scss'
 })

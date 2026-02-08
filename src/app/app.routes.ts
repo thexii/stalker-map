@@ -3,7 +3,7 @@ import { MainComponent } from './components/main/main.component';
 import { MapComponent } from './components/map/map.component';
 import { MapExportComponent } from './components/map-export/map-export.component';
 import { MapContentComponent } from './components/map-content/map-content.component';
-import { MapHocComponent } from './components/map-hoc/map-hoc.component';
+import { MapHocComponent } from './components/hoc/map-hoc/map-hoc.component';
 
 export const routes: Routes = [
   { path: '', component: MainComponent  },

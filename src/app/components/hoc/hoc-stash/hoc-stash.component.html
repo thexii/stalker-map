@@ -1,0 +1,15 @@
+<div class="popup-container">
+    <div class="header">
+        <div class='popup'>{{ 'stuff_at_location' | translate}}</div>
+        @if (stash.dlc && stash.dlc != 'None') {
+            <div class='popup dlc'><span>DLC: </span>{{ stash.dlc }}</div>
+        }
+    </div>
+    @if (items && items.length > 0) {
+        <div class="inventory inventory-columns-7">
+            @for (stuffItem of items; track stuffItem) {
+                <app-hoc-inventory-item [stuffItem]="stuffItem"></app-hoc-inventory-item>
+            }
+        </div>
+    }
+</div>

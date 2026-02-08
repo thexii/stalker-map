@@ -1,0 +1,16 @@
+<div>
+    <div class='popup header'>{{ 'stuff_at_location' | translate}}</div>
+</div>
+@if (items && items.length > 0) {
+    <div class="inventory inventory-columns-7">
+        @for (stuffItem of items; track stuffItem) {
+            <app-hoc-inventory-item [stuffItem]="stuffItem"></app-hoc-inventory-item>
+        }
+    </div>
+}
+<div class="bottom">
+    <div class="button url-button" (click)="copyLink()">
+        <span>{{ 'markLink' | translate}}</span>
+    </div>
+    <!--<app-hide-unhide [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game, isUnderground: isUnderground}"></app-hide-unhide>-->
+</div>

@@ -1,7 +1,6 @@
 import { MapComponent } from './../components/map/map.component';
 import { Injectable, ViewContainerRef } from "@angular/core";
 import { HiddenMarker } from "../models/hidden-marker.model";
-import { HocStuffComponent } from '../components/stuff/hoc-stuff/hoc-stuff.component';
 import { StuffComponent } from '../components/stuff/stuff.component';
 import { Item } from '../models/item.model';
 import { LootBoxClusterComponent } from '../components/loot-box-cluster/loot-box-cluster.component';

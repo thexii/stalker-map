@@ -1,4 +1,3 @@
-import { Lair, LairCluster } from './../../models/hoc/map-hoc';
 import {
     Component,
     HostListener,
@@ -7,22 +6,22 @@ import {
     ViewContainerRef,
     ViewEncapsulation,
 } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { MapService } from '../../services/map.service';
-import { Item } from '../../models/item.model';
-import { MapConfig } from '../../models/gamedata/map-config';
-import { MapHoc } from '../../models/hoc/map-hoc';
-import { Point } from '../../models/point.model';
-import { HocStuffComponent } from '../stuff/hoc-stuff/hoc-stuff.component';
-import { ArtefactSpawnerPopupComponent } from './artefact-spawner-popup/artefact-spawner-popup.component';
 import { getAnalytics, logEvent } from 'firebase/analytics';
 import { HocStashComponent } from '../hoc-stash/hoc-stash.component';
-import { Game } from '../../models/game.model';
-import { GuideComponent } from './guide-component/guide-component';
-import { TraderComponent } from './trader.component/trader.component';
+import { Lair, LairCluster, MapHoc } from '../../../models/hoc/map-hoc';
+import { MapConfig } from '../../../models/gamedata/map-config';
+import { Item } from '../../../models/item.model';
+import { HeaderComponent } from '../../header/header.component';
+import { MapService } from '../../../services/map.service';
+import { Point } from '../../../models/point.model';
+import { ArtefactSpawnerPopupComponent } from '../artefact-spawner-popup/artefact-spawner-popup.component';
+import { GuideComponent } from '../guide-component/guide-component';
+import { TraderComponent } from '../trader.component/trader.component';
+import { HocStuffComponent } from '../hoc-stuff/hoc-stuff.component';
+import { Game } from '../../../models/game.model';
 
 declare const L: any;
 declare var markWidth: number;
@@ -2103,7 +2102,7 @@ export class MapHocComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    private onResize(event: any): void {
+    public onResize(event: any): void {
         let vh = event.target.outerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 

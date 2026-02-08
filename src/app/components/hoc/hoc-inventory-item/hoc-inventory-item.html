@@ -1,0 +1,21 @@
+<div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item hoc inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+    @if (stuffItem.count > 1) {
+        <div class="inventory-item-count-hoc">{{stuffItem.count}}</div>
+    }
+
+    @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
+        <div class="item-additional-info">
+            <div class="inventory-item-upgrade"></div>
+        </div>
+    }
+
+    <div class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}"></div>
+
+    @if (stuffItem.preinstalled.length > 0) {
+        <div class="item-attachments">
+            @for (attachment of stuffItem.preinstalled; track attachment) {
+                <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}"></div>
+            }
+        </div>
+    }
+</div>
