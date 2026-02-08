@@ -16,12 +16,12 @@ export class TooltipDirective implements OnDestroy {
     private elementRef: ElementRef,
     private renderer: Renderer2,
     private ngZone: NgZone
-  ) {}
+  ) { }
 
-  @HostListener('mouseenter') 
+  @HostListener('mouseenter')
   onMouseEnter() {
     this.createTooltip();
-    
+
     // Запускаємо слухачі ПОЗА зоною Angular, щоб рух миші не "фрізив" карту
     this.ngZone.runOutsideAngular(() => {
       const move = this.renderer.listen('window', 'mousemove', (event: MouseEvent) => {
@@ -31,7 +31,7 @@ export class TooltipDirective implements OnDestroy {
     });
   }
 
-  @HostListener('mouseleave') 
+  @HostListener('mouseleave')
   onMouseLeave() {
     this.destroyTooltip();
   }
@@ -49,12 +49,12 @@ export class TooltipDirective implements OnDestroy {
   private createTooltip() {
     this.componentRef = this.viewContainerRef.createComponent(this.componentType);
     Object.assign(this.componentRef.instance, this.componentData);
-    
+
     const node = this.componentRef.location.nativeElement;
     this.renderer.setStyle(node, 'position', 'fixed');
     this.renderer.setStyle(node, 'z-index', '1000');
     this.renderer.setStyle(node, 'pointer-events', 'none');
-    
+
     document.body.appendChild(node);
     this.componentRef.changeDetectorRef.detectChanges();
   }
