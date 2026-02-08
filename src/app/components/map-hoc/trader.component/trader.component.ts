@@ -8,7 +8,7 @@ import { NgStyle, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-trader.component',
-  imports: [TooltipDirective, TranslateModule, NgStyle, NgTemplateOutlet],
+  imports: [TooltipDirective, TranslateModule, NgTemplateOutlet],
   templateUrl: './trader.component.html',
   styleUrl: './trader.component.scss',
 })
