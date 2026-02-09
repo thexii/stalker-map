@@ -13,7 +13,7 @@ import { HocInventoryItem } from "../hoc-inventory-item/hoc-inventory-item";
 @Component({
     selector: 'app-hoc-stuff',
     standalone: true,
-    imports: [TranslateModule, TooltipDirective, NgStyle, HocInventoryItem],
+    imports: [TranslateModule, HocInventoryItem],
     templateUrl: './hoc-stuff.component.html',
     styleUrl: './hoc-stuff.component.scss'
 })

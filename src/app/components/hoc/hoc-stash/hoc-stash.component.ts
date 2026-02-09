@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgStyle } from '@angular/common';
 import { Stash, StashGenerator, StashPrototype } from '../../../models/hoc/map-hoc';
 import { Item } from '../../../models/item.model';
-import { TooltipDirective } from '../../tooltips/tooltip.directive';
 import { StuffItem } from '../../../models/stuff/stuff-item.model';
 import { ItemTooltipComponent } from '../../tooltips/item-tooltip/item-tooltip.component';
 import { HocInventoryItem } from "../hoc-inventory-item/hoc-inventory-item";
@@ -11,7 +9,7 @@ import { HocInventoryItem } from "../hoc-inventory-item/hoc-inventory-item";
 @Component({
     selector: 'app-hoc-stash',
     standalone: true,
-    imports: [TranslateModule, TooltipDirective, NgStyle, HocInventoryItem],
+    imports: [TranslateModule, HocInventoryItem],
     templateUrl: './hoc-stash.component.html',
     styleUrl: './hoc-stash.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush

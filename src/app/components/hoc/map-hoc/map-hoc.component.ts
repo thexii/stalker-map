@@ -1624,7 +1624,7 @@ export class MapHocComponent {
             });
 
             if (!isRandom) {
-                marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 912, className: 'leaflet-popup-content-fit-content' });
+                marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 410, maxWidth: 1000, className: 'leaflet-popup-content-fit-content' });
             }
 
             if (isRich) {
