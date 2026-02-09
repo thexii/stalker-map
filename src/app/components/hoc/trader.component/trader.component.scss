@@ -28,24 +28,6 @@
     }
 }
 
-.item-attachments {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-}
-
-.item-attachment {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(/assets/images/items/attachments.png);
-  background-size: calc(var(--inventory-cell-size) * var(--attachment-width-in-cell));
-  width: inherit;
-  height: inherit;
-}
-
 .select-relation {
     background: 0;
     border: 0px;

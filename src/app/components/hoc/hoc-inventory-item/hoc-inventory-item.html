@@ -10,12 +10,4 @@
     }
 
     <div class="inventory-item-image hoc inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}"></div>
-
-    @if (stuffItem.preinstalled.length > 0) {
-        <div class="item-attachments">
-            @for (attachment of stuffItem.preinstalled; track attachment) {
-                <div class="item-attachment inventory-item-x-{{attachment.gridX}} inventory-item-y-{{attachment.gridY}}"></div>
-            }
-        </div>
-    }
 </div>
