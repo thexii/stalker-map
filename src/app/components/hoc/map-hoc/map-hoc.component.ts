@@ -22,9 +22,7 @@ import { GuideComponent } from '../guide-component/guide-component';
 import { TraderComponent } from '../trader.component/trader.component';
 import { HocStuffComponent } from '../hoc-stuff/hoc-stuff.component';
 import { Game } from '../../../models/game.model';
-
-declare const L: any;
-declare var markWidth: number;
+import * as L from 'leaflet';
 
 @Component({
     selector: 'app-map-hoc',
@@ -42,7 +40,7 @@ export class MapHocComponent {
     private readonly game: string = 'hoc';
     private gamedata: MapHoc;
     private mapConfig: MapConfig;
-    private map: any;
+    private map: L.Map;
 
     private svgMarker: any;
     private canvasRenderer: any;
@@ -204,10 +202,10 @@ export class MapHocComponent {
             transformation: new L.Transformation(this.scaleFactor, 0, this.scaleFactor, 0),
         });
 
-        let center = [0, 0];
+        let center: L.LatLng = new L.LatLng(0,0);
 
         if (gameConfig.mapBounds != null) {
-            center = [(gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0]) / 2, (gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1]) / 2]
+            center = new L.LatLng((gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0]) / 2, (gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1]) / 2);
         }
 
         this.map = L.map('map', {
@@ -220,8 +218,6 @@ export class MapHocComponent {
             zoomAnimation: !0,
             zoomControl: !1,
         });
-
-        this.map.scaleFactor = this.scaleFactor;
 
         this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
         this.map.attributionControl.addAttribution('<a href="https://github.com/joric">Tile maps by joric</a>');

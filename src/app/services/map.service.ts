@@ -18,8 +18,7 @@ import { MechanicComponent } from '../components/mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../models/upgrades/upgrades';
 import { TranslateService } from '@ngx-translate/core';
 import { Game } from '../models/game.model';
-
-declare const L: any;
+import * as L from 'leaflet';
 
 @Injectable({
     providedIn: 'root'
@@ -381,7 +380,6 @@ export class MapService {
                 }
             },
 
-            // Метод для прив'язки до маркера та карти
             bindToLayer(layer: any) {
                 if (layer.options.icon.keepMapSize) {
                     this._setupZoomListener(layer);
@@ -397,11 +395,10 @@ export class MapService {
                 layer._drawRadiusHalf = layer._radius * this.options.imageFactor;
             },
 
-            // Встановлення слухача зуму
             _setupZoomListener(layer: any) {
                 if (this._zoomHandler) {
                     this.markers.push(layer);
-                    return; // Вже підписані
+                    return;
                 }
 
                 this.markers = [layer];
@@ -423,22 +420,19 @@ export class MapService {
                 this.markers[0]._map.on('zoomend', this._zoomHandler);
             },
 
-            // Перерахунок радіусу
             _recalculateRadius(zoom: number, radius: number) {
                 if (this._currentZoom === zoom) {
-                    return; // Нічого не змінилось
+                    return;
                 }
 
                 this._currentZoom = zoom;
                 this._calculatedRadius = radius * Math.pow(2, zoom);
             },
 
-            // Отримання поточного радіусу (без перерахунку)
             getRadius(): number {
                 return this._calculatedRadius ?? this.options.radius;
             },
 
-            // Розрахунок параметрів для малювання
             calculateDrawParameters(point: any, radius: number) {
                 const size = radius * 2;
                 return {
@@ -449,7 +443,6 @@ export class MapService {
                 };
             },
 
-            // Очищення при видаленні
             unbindFromLayer() {
                 if (this._zoomHandler && this._layer && this._layer._map) {
                     this._layer._map.off('zoomend', this._zoomHandler);
@@ -502,21 +495,8 @@ export class MapService {
 
                 try {
                     this._ctx.globalAlpha = layer.options.opacity;
-                    let x = 0,
-                        y = 0,
-                        width = 0,
-                        height = 0;
-
-                    /*if (layer.options.icon.keepMapSize) {
-                        if (layer.options.zoom != layer._map._zoom) {
-                            layer.options.zoom = layer._map._zoom;
-                            layer._radius =
-                                layer.options.icon.radius * Math.pow(2, layer.options.zoom);
-                        }
-                    }*/
-
-                    x = layer._point.x - layer._drawRadiusHalf;
-                    y = layer._point.y - layer._drawRadiusHalf;
+                    let x = layer._point.x - layer._drawRadiusHalf;
+                    let y = layer._point.y - layer._drawRadiusHalf;
 
                     this._ctx.drawImage(
                         layer.options.icon.icon._image,
