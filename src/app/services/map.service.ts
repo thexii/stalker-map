@@ -239,7 +239,7 @@ export class MapService {
     }
 
     public addRuler(map: any, pixelsInGameUnit: number, lengthFactor: number): any {
-        let ruler;
+        /*let ruler;
 
         var options = {
             position: 'topright', // Leaflet control position option
@@ -269,7 +269,8 @@ export class MapService {
 
         ruler = L.control.ruler(options);
 
-        return ruler;
+        return ruler;*/
+        return {};
     }
 
     public createAnomalyZoneTooltip(zone: any) {
@@ -517,49 +518,45 @@ export class MapService {
     }
 
     public createCustomLayersControl(): void {
-        L.Control.CustomLayers = L.Control.Layers.extend({
-            // @section
-            // @aka Control.Layers options
+        const CustomLayers = L.Control.Layers.extend({
             options: {
-                // @option collapsed: Boolean = true
-                // If `true`, the control will be collapsed into an icon and expanded on mouse hover, touch, or keyboard activation.
                 collapsed: true,
-                position: 'topright',
-
-                // @option autoZIndex: Boolean = true
-                // If `true`, the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
+                position: 'topright' as L.ControlPosition,
                 autoZIndex: true,
-
-                // @option hideSingleBase: Boolean = false
-                // If `true`, the base layers in the control will be hidden when there is only one.
                 hideSingleBase: false,
-
-                // @option sortLayers: Boolean = false
-                // Whether to sort the layers. When `false`, layers will keep the order
-                // in which they were added to the control.
                 sortLayers: false,
-                overlaysListTop: null,
+                overlaysListTop: null as string | null,
 
-                // @option sortFunction: Function = *
-                // A [compare function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-                // that will be used for sorting the layers, when `sortLayers` is `true`.
-                // The function receives both the `L.Layer` instances and their names, as in
-                // `sortFunction(layerA, layerB, nameA, nameB)`.
-                // By default, it sorts layers alphabetically by their name.
-                sortFunction(layerA: any, layerB: any, nameA: any, nameB: any) {
-                    return nameA < nameB ? -1 : (nameB < nameA ? 1 : 0);
-                }
+                sortFunction(
+                    layerA: L.Layer,
+                    layerB: L.Layer,
+                    nameA: string,
+                    nameB: string
+                ): number {
+                    return nameA < nameB ? -1 : nameB < nameA ? 1 : 0;
+                },
             },
 
-            _initLayout: function () {
+            _overlaysListTop: null as HTMLElement | null,
+            _layerControlInputsTop: [] as HTMLInputElement[],
+            isUnderground: false,
+
+            _initLayout: function (this: any) {
                 L.Control.Layers.prototype._initLayout.call(this);
 
                 if (!this.isUnderground && this.options.overlaysListTop) {
-                    this._overlaysListTop = document.getElementById(this.options.overlaysListTop);
+                    this._overlaysListTop = document.getElementById(
+                        this.options.overlaysListTop
+                    );
                 }
             },
 
-            initialize: function (baseLayers: any, overlays: any, options: any) {
+            initialize: function (
+                this: any,
+                baseLayers: { [key: string]: L.Layer },
+                overlays: { [key: string]: L.Layer },
+                options: any
+            ) {
                 L.Util.setOptions(this, options);
 
                 this._layerControlInputs = [];
@@ -582,8 +579,10 @@ export class MapService {
                 }
             },
 
-            _update: function () {
-                if (!this._container) { return this; }
+            _update: function (this: any) {
+                if (!this._container) {
+                    return this;
+                }
 
                 this._baseLayersList.replaceChildren();
                 this._overlaysList.replaceChildren();
@@ -593,34 +592,36 @@ export class MapService {
 
                 this._layerControlInputs = [];
                 this._layerControlInputsTop = [];
-                let baseLayersPresent, overlaysPresent, i, obj, baseLayersCount = 0;
+                let baseLayersPresent = false;
+                let overlaysPresent = false;
+                let baseLayersCount = 0;
 
-                for (i = 0; i < this._layers.length; i++) {
-                    obj = this._layers[i];
+                for (let i = 0; i < this._layers.length; i++) {
+                    const obj = this._layers[i];
                     this._addItem(obj);
                     overlaysPresent = overlaysPresent || obj.overlay;
                     baseLayersPresent = baseLayersPresent || !obj.overlay;
                     baseLayersCount += !obj.overlay ? 1 : 0;
                 }
 
-                // Hide base layers section if there's only one layer.
                 if (this.options.hideSingleBase) {
                     baseLayersPresent = baseLayersPresent && baseLayersCount > 1;
                     this._baseLayersList.style.display = baseLayersPresent ? '' : 'none';
                 }
 
-                this._separator.style.display = overlaysPresent && baseLayersPresent ? '' : 'none';
+                this._separator.style.display =
+                    overlaysPresent && baseLayersPresent ? '' : 'none';
 
                 return this;
             },
 
-            _addItem: function (obj: any) {
-                const label = document.createElement('label'),
-                    checked = this._map.hasLayer(obj.layer),
-                    labelTop = document.createElement('label');
+            _addItem: function (this: any, obj: any) {
+                const label = document.createElement('label');
+                const checked = this._map.hasLayer(obj.layer);
+                const labelTop = document.createElement('label');
 
-                let input;
-                let inputTop;
+                let input: HTMLInputElement;
+                let inputTop: HTMLInputElement;
 
                 if (obj.overlay) {
                     input = document.createElement('input');
@@ -633,8 +634,14 @@ export class MapService {
                     inputTop.className = 'leaflet-control-layers-selector';
                     inputTop.defaultChecked = checked;
                 } else {
-                    input = this._createRadioElement(`leaflet-base-layers_${L.Util.stamp(this)}`, checked);
-                    inputTop = this._createRadioElement(`leaflet-base-layers_${L.Util.stamp(this)}`, checked);
+                    input = this._createRadioElement(
+                        `leaflet-base-layers_${L.Util.stamp(this)}`,
+                        checked
+                    );
+                    inputTop = this._createRadioElement(
+                        `leaflet-base-layers_${L.Util.stamp(this)}`,
+                        checked
+                    );
                 }
 
                 inputTop.hidden = true;
@@ -644,14 +651,14 @@ export class MapService {
                 if (this.options.overlaysListTop && obj.layer.addToTop !== false) {
                     this._layerControlInputsTop.push(inputTop);
                 }
-                input.layerId = L.Util.stamp(obj.layer);
 
-                let layerId;
+                (input as any).layerId = L.Util.stamp(obj.layer);
+
+                let layerId: number;
 
                 if (this.options.overlaysListTop) {
                     layerId = this._overlaysListTop.childNodes.length;
-                }
-                else {
+                } else {
                     layerId = L.Util.stamp(obj.layer);
                 }
 
@@ -662,9 +669,7 @@ export class MapService {
                 const labelInsideCheck = document.createElement('label');
                 subHeaderSpanName.innerHTML = `${obj.name}`;
 
-                subHeaderPanel.classList.add('sub-header-item');
-                subHeaderPanel.classList.add('left-arc');
-                subHeaderPanel.classList.add('right-arc');
+                subHeaderPanel.classList.add('sub-header-item', 'left-arc', 'right-arc');
                 subHeaderCheckbox.classList.add('sub-header-checkbox');
 
                 subHeaderPanel.appendChild(subHeaderCheckbox);
@@ -677,7 +682,11 @@ export class MapService {
                 inputTop.id = `layer-top-${layerId}`;
                 labelInsideCheck.setAttribute('for', inputTop.id);
 
-                if (!obj.layer.isUnderground && this.options.overlaysListTop  && obj.layer.addToTop !== false) {
+                if (
+                    !obj.layer.isUnderground &&
+                    this.options.overlaysListTop &&
+                    obj.layer.addToTop !== false
+                ) {
                     obj.layer.topId = this._overlaysListTop.childNodes.length;
                     this._overlaysListTop.appendChild(subHeaderPanel);
                 }
@@ -687,107 +696,91 @@ export class MapService {
 
                 const name = document.createElement('span');
                 name.innerHTML = `${obj.name}`;
-                name.classList.add('stalker-search-item', obj.layer.name);
+                name.classList.add('stalker-search-item', obj.layer.name || '');
 
-                // Helps from preventing layer control flicker when checkboxes are disabled
-                // https://github.com/Leaflet/Leaflet/issues/2771
                 const holder = document.createElement('span');
-                //const holderTop = document.createElement('span');
-
-                //labelTop.appendChild(holderTop);
                 label.appendChild(holder);
-
-                //holderTop.appendChild(inputTop)
                 holder.appendChild(input);
-
-                //holderTop.appendChild(nameTop)
                 holder.appendChild(name);
 
-                const container = obj.overlay ? this._overlaysList : this._baseLayersList;
+                const container = obj.overlay
+                    ? this._overlaysList
+                    : this._baseLayersList;
                 container.appendChild(label);
 
                 this._checkDisabledLayers();
                 return label;
             },
 
-            _onInputClick: function () {
-                // expanding the control on mobile with a click can cause adding a layer - we don't want this
+            _onInputClick: function (this: any) {
                 if (this._preventClick) {
                     return;
                 }
 
-                const inputs = this._layerControlInputs,
-                    inputsTop = this._layerControlInputsTop,
-                    addedLayers = [],
-                    removedLayers = [];
-                let input, inputTop, layer;
+                const inputs = this._layerControlInputs;
+                const inputsTop = this._layerControlInputsTop;
+                const addedLayers: L.Layer[] = [];
+                const removedLayers: L.Layer[] = [];
 
                 this._handlingClick = true;
 
                 if (this.options.overlaysListTop) {
                     for (let i = inputs.length - 1; i >= 0; i--) {
-                        input = inputs[i];
-                        layer = this._getLayer(input.layerId).layer;
-
-                        inputTop = inputsTop[layer.topId];
+                        const input = inputs[i];
+                        const layer = this._getLayer((input as any).layerId).layer;
+                        const inputTop = inputsTop[layer.topId!];
 
                         if (input.checked) {
                             if (layer.addToTop !== false) {
                                 inputTop.checked = true;
                             }
-
                             addedLayers.push(layer);
-                        } else if (!input.checked) {
+                        } else {
                             if (layer.addToTop !== false) {
                                 inputTop.checked = false;
                             }
-
                             removedLayers.push(layer);
                         }
                     }
-                }
-                else {
+                } else {
                     for (let i = inputs.length - 1; i >= 0; i--) {
-                        input = inputs[i];
-                        layer = this._getLayer(input.layerId).layer;
+                        const input = inputs[i];
+                        const layer = this._getLayer((input as any).layerId).layer;
 
                         if (input.checked) {
                             addedLayers.push(layer);
-                        } else if (!input.checked) {
+                        } else {
                             removedLayers.push(layer);
                         }
                     }
                 }
-
 
                 this._onInputClickFinal(addedLayers, removedLayers);
             },
 
-            _onInputClickTop: function () {
-                // expanding the control on mobile with a click can cause adding a layer - we don't want this
+            _onInputClickTop: function (this: any) {
                 if (this._preventClick) {
                     return;
                 }
 
-                const inputs = this._layerControlInputs,
-                    inputsTop = this._layerControlInputsTop,
-                    addedLayers = [],
-                    removedLayers = [];
-                let input, inputTop, layer;
+                const inputs = this._layerControlInputs;
+                const inputsTop = this._layerControlInputsTop;
+                const addedLayers: L.Layer[] = [];
+                const removedLayers: L.Layer[] = [];
 
                 this._handlingClick = true;
 
                 for (let i = inputs.length - 1; i >= 0; i--) {
-                    input = inputs[i];
-                    layer = this._getLayer(input.layerId).layer;
+                    const input = inputs[i];
+                    const layer = this._getLayer((input as any).layerId).layer;
 
-                    if (layer.topId) {
-                        inputTop = inputsTop[layer.topId];
+                    if (layer.topId !== undefined) {
+                        const inputTop = inputsTop[layer.topId];
 
                         if (inputTop.checked) {
                             input.checked = true;
                             addedLayers.push(layer);
-                        } else if (!inputTop.checked) {
+                        } else {
                             input.checked = false;
                             removedLayers.push(layer);
                         }
@@ -797,7 +790,11 @@ export class MapService {
                 this._onInputClickFinal(addedLayers, removedLayers);
             },
 
-            _onInputClickFinal(addedLayers: any, removedLayers: any) {
+            _onInputClickFinal: function (
+                this: any,
+                addedLayers: L.Layer[],
+                removedLayers: L.Layer[]
+            ) {
                 for (let i = 0; i < removedLayers.length; i++) {
                     if (this._map.hasLayer(removedLayers[i])) {
                         this._map.removeLayer(removedLayers[i]);
@@ -817,6 +814,53 @@ export class MapService {
         L.control.customLayers = function (baseLayers: any, overlays: any, options: any) {
             return new L.Control.CustomLayers(baseLayers, overlays, options);
         }
+    }
+
+    public createCellSizeChangerControl(items: Item[], uniqueName: string, min: number, max: number, step: number, init: number): any {
+        L.Control.Slider = L.Control.extend({
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function (map: L.Map) {
+                // Створюємо основний контейнер
+                const container = L.DomUtil.create('div', 'leaflet-control-slider-container');
+
+                const header = L.DomUtil.create('div', 'leaflet-control-slider-header', container);
+                const contentContainer = L.DomUtil.create('div', 'leaflet-control-slider', header);
+                const icon = L.DomUtil.create('a', 'leaflet-control-slider-container-toggle', header);
+
+                const slider = L.DomUtil.create('input', 'inventory-cell-slider', contentContainer);
+                slider.type = 'range';
+                slider.min = min.toString();
+                slider.max = max.toString();
+                slider.value = init.toString();
+                slider.step = step.toString();
+
+                let itemModel = items.find(x => x.uniqueName == uniqueName);
+
+                if (itemModel) {
+                    const inventoryContainer = L.DomUtil.create('div', 'leaflet-control-slider-inventory', container);
+                    const inventory = L.DomUtil.create('div', `inventory inventory-columns-${itemModel.width}`, inventoryContainer);
+                    const itemContainer = L.DomUtil.create('div', `hoc inventory-item inventory-item-height-${itemModel.height} inventory-item-width-${itemModel.width}`, inventory);
+                    const item =  L.DomUtil.create('div', `hoc inventory-item-image inventory-item-x-${itemModel.gridX} inventory-item-y-${itemModel.gridY}`, itemContainer);
+                }
+                
+                L.DomEvent.disableClickPropagation(container);
+                L.DomEvent.disableScrollPropagation(container);
+
+                L.DomEvent.on(slider, 'input', (e: any) => {
+                    this.options.onChange(e.target.value);
+                });
+
+                return container;
+            }
+        });
+
+        // Функція-конструктор для зручності
+        L.control.slider = function (options: object) {
+            return new L.Control.Slider(options);
+        };
     }
 
     public createCarousel(container: string): void {

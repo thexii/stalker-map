@@ -521,66 +521,6 @@ export class MapHocComponent {
         this.configureSeo();
     }
 
-    private createCellSizeChangerControl(uniqueName: string, cellSize: number): any {
-        let items = this.items;
-        L.Control.Slider = L.Control.extend({
-            options: {
-                position: 'topleft'
-            },
-
-            onAdd: function (map: object) {
-                // Створюємо основний контейнер
-                const container = L.DomUtil.create('div', 'leaflet-control-slider-container');
-
-                const header = L.DomUtil.create('div', 'leaflet-control-slider-header', container);
-                const contentContainer = L.DomUtil.create('div', 'leaflet-control-slider', header);
-                const icon = L.DomUtil.create('a', 'leaflet-control-slider-container-toggle', header);
-
-                // Створюємо сам input
-                const slider = L.DomUtil.create('input', 'inventory-cell-slider', contentContainer);
-                slider.type = 'range';
-                slider.min = '50';
-                slider.max = '130';
-                slider.value = cellSize;
-                slider.step = '10';
-
-                let itemModel = items.find(x => x.uniqueName == uniqueName);
-
-                if (itemModel) {
-                    const inventoryContainer = L.DomUtil.create('div', 'leaflet-control-slider-inventory', container);
-                    const inventory = L.DomUtil.create('div', `inventory inventory-columns-${itemModel.width}`, inventoryContainer);
-                    const itemContainer = L.DomUtil.create('div', `hoc inventory-item inventory-item-height-${itemModel.height} inventory-item-width-${itemModel.width}`, inventory);
-                    const item =  L.DomUtil.create('div', `hoc inventory-item-image inventory-item-x-${itemModel.gridX} inventory-item-y-${itemModel.gridY}`, itemContainer);
-                }
-                
-
-                // Зупиняємо розповсюдження подій кліку та прокрутки на карту
-                L.DomEvent.disableClickPropagation(container);
-                L.DomEvent.disableScrollPropagation(container);
-
-                // Обробник події (у Angular тут буде виклик вашого методу setCellSize)
-                L.DomEvent.on(slider, 'input', (e: any) => {
-                    this.options.onChange(e.target.value);
-                });
-
-                return container;
-            }
-        });
-
-        // Функція-конструктор для зручності
-        L.control.slider = function (options: object) {
-            return new L.Control.Slider(options);
-        };
-
-        return L.control.slider({
-            position: 'topright',
-            onChange: (value: string) => {
-                this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
-                localStorage.setItem(this.cellSizeUniqueName, value);
-            }
-        });
-    }
-
     private addMarkers(): void {
         let markerImages: any[] = [
             {
@@ -761,7 +701,7 @@ export class MapHocComponent {
                     shape.coordinates.slice(i * 2, i * 2 + 2)
                 );
 
-                let newCoors = coors.map(([x, z]) => [z, x]);
+                let newCoors = coors.map(([x, z]) => new L.LatLng(z,x));
 
                 let polygon = L.polygon(newCoors, { color: type.stroke, fill: type.fill });
 

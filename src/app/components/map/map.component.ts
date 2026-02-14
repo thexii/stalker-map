@@ -71,7 +71,7 @@ export class MapComponent {
     ];
 
     protected gamedata: Map;
-    protected map: any;
+    protected map: L.Map;
     protected locations: any;
     protected canvasLayer: any;
     protected layers: any[] = [];
@@ -187,7 +187,7 @@ export class MapComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    private onResize(event: any) {
+    public onResize(event: any) {
         let vh = event.target.outerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
