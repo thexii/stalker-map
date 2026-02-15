@@ -442,8 +442,6 @@ export class MapComponent {
 
         this.createCompareControl();
 
-        //this.createStashFilter();
-
         let bounds = [
             [0, 0]
         ];
@@ -1705,9 +1703,7 @@ export class MapComponent {
                 searchFields.push(anomalyZoneIcon.uniqueName);
                 searchFields.push(location.uniqueName);
 
-                canvasMarker.feature = {};/* = {
-          properties: { search: searchFields.join(', ') },
-        };*/
+                canvasMarker.feature = {};
                 canvasMarker.feature.properties = {};
                 this.createTranslatableProperty(
                     canvasMarker.feature.properties,
@@ -1767,11 +1763,7 @@ export class MapComponent {
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
 
-            canvasMarker
-                .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, false), {
-                    minWidth: 300,
-                })
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.handleAnomalyZoneClick(e, this.map, this.container, this.bottomSheet, this.game, this.items, false));
         }
 
         try {
@@ -1845,7 +1837,6 @@ export class MapComponent {
             ableToSearch: true,
             icon: new this.svgIcon({
                 iconSize: [4, 4],
-                className: 'mark-container stalker-mark-2',
                 animate: false,
                 iconUrl: '/assets/images/svg/marks/trader.svg',
                 iconSizeInit: [2, 2],
@@ -1859,7 +1850,6 @@ export class MapComponent {
 
             icon:  new this.svgIcon({
                 iconSize: [4, 4],
-                className: 'mark-container stalker-mark-1.5',
                 animate: false,
                 iconUrl: '/assets/images/svg/marks/medic.svg',
                 iconSizeInit: [1.5, 1.5],

@@ -13,20 +13,31 @@ export class BottomSheetWrapperComponent {
     @ViewChild('dynamicContent', { read: ViewContainerRef }) contentContainer!: ViewContainerRef;
     public isVisible: boolean = false;
 
-    startY = 0;
-    currentTranslateY = 0;
-    isDragging = false;
+    private parentStyles: CSSStyleDeclaration;
+    public parentHeight: number;
+    public parentMaxHeight: number;
 
-    // Позиції панелі (у відсотках від висоти вікна)
-    readonly closedPos = 80;
-    readonly maxPosition = 90;
-    readonly topPos = 90;
-    public contentHeight: number = -1;
+    public startY = 0;
+    public isDragging = false;
 
-    private currentPos = 0;
+    readonly closeHeight = 10;
+    private closePosition: number = 100;
+
+    private delta: number = 0;
+    private currentPosition: number = 0;
 
     public onTouchStart(event: TouchEvent): void {
         this.startY = event.touches[0].clientY;
+        let parent = (event.touches[0].target as HTMLElement).closest('.sheet-container');
+
+        if (parent) {
+            this.parentStyles = window.getComputedStyle(parent);
+            this.parentHeight = parseFloat(this.parentStyles.height)
+            this.parentMaxHeight = parseFloat(this.parentStyles.maxHeight)
+        }
+
+        this.closePosition = window.innerHeight * this.closeHeight / 100;
+
         this.isDragging = true;
     }
 
@@ -34,12 +45,10 @@ export class BottomSheetWrapperComponent {
     public onTouchMove(event: TouchEvent): void {
         if (!this.isDragging) return;
 
-        const deltaY = event.touches[0].clientY - this.startY;
-        const newTranslate = this.calculatePixelPos(this.currentPos) + deltaY;
+        this.delta = event.touches[0].clientY - this.startY;
 
-        // Забороняємо тягнути вище верхньої межі
-        if (newTranslate > this.calculatePixelPos(this.topPos)) {
-            this.currentTranslateY = deltaY;
+        if (this.parentHeight < this.parentMaxHeight && this.currentPosition + this.delta < 0) {
+            this.delta = 0 - this.currentPosition;
         }
     }
 
@@ -47,25 +56,12 @@ export class BottomSheetWrapperComponent {
     public onTouchEnd(): void {
         if (!this.isDragging) return;
         this.isDragging = false;
+        this.currentPosition = this.currentPosition + this.delta;
+        this.delta = 0;
 
-        const movedDist = this.currentTranslateY;
-        const threshold = 100; // Чутливість перемикання станів
-        console.log(this.currentPos)
-
-        if (movedDist > threshold) {
-            // Рух вниз
-            if (this.currentPos > this.maxPosition) this.currentPos = this.maxPosition;
-            else this.close.emit();
-        } else if (movedDist < -threshold) {
-            // Рух вгору
-            this.currentPos = this.topPos;
+        if (this.parentHeight - this.currentPosition <= this.closePosition) {
+            this.closeSheet();
         }
-
-        this.currentTranslateY = 0; // Скидаємо зміщення, щоб спрацював CSS transition до currentPos
-    }
-
-    public calculatePixelPos(percent: number): number {
-        return (window.innerHeight * percent) / 100;
     }
 
     public closeSheet(): void {
@@ -76,12 +72,11 @@ export class BottomSheetWrapperComponent {
 
     public show(): void {
         this.isVisible = true;
-        this.contentHeight = this.contentContainer.element.nativeElement.offsetHeight;
-        console.log(this.contentHeight)
+        this.currentPosition = 0;
+        this.delta = 0;
     }
 
     get transformStyle(): string {
-        const basePos = this.calculatePixelPos(this.currentPos);
-        return `translateY(${basePos + this.currentTranslateY}px)`;
+        return `translateY(${this.currentPosition + this.delta}px)`;
     }
 }

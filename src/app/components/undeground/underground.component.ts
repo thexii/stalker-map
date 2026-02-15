@@ -856,11 +856,11 @@ export class UndergroundComponent {
                 },
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
-            canvasMarker
+            /*canvasMarker
                 .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, true), {
                     minWidth: 300,
                 })
-                .openPopup();
+                .openPopup();*/
         }
 
         try {

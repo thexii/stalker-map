@@ -147,21 +147,6 @@ export class MapService {
         return componentRef.location.nativeElement;
     }
 
-    public createeAnomalyZonePopup(zone: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean) {
-        zone.getPopup().on('remove', function () {
-            zone.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
-        const componentRef = container.createComponent(AnomalyZoneComponent);
-        componentRef.instance.anomalZone = zone.properties.zoneModel;
-        componentRef.instance.game = game;
-        componentRef.instance.allItems = allItems;
-        componentRef.instance.isUnderground = isUnderground;
-
-        return componentRef.location.nativeElement;
-    }
-
     public createTraderPopup(traderMarker: any, traders: TraderModel[], marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig) {
         let trader: TraderModel = traderMarker.properties.traderConfig;
 
@@ -222,7 +207,7 @@ export class MapService {
         popup.openOn(map);
     }
 
-    public createStalkerBottomSheet(map: any, stalkerMarker: any, container: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean) {
+    public createStalkerBottomSheet(stalkerMarker: any, container: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean) {
         const content = this.createStalkerContent(
             stalkerMarker, 
             container.contentContainer, 
@@ -236,20 +221,69 @@ export class MapService {
         container.show();
     }
 
-    public createSheetWrapper(container: ViewContainerRef): ComponentRef<BottomSheetWrapperComponent> {
-        const componentRef = container.createComponent(BottomSheetWrapperComponent);
-        return componentRef;
-    }
-
     public handleStalkerClick(e: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
-        console.log(e);
-        console.log(window.innerWidth, window.devicePixelRatio)
         if (window.innerWidth < 500 && bottomSheetContainer) {
             bottomSheetContainer.contentContainer.clear();
-            this.createStalkerBottomSheet(map, e.target, bottomSheetContainer, game, items, mapConfig, isUnderground);
+            this.createStalkerBottomSheet(e.target, bottomSheetContainer, game, items, mapConfig, isUnderground);
         } else {
             this.createStalkerPopup(map, e.target, container, game, items, mapConfig, isUnderground);
         }
+    }
+
+    public handleAnomalyZoneClick(e: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], isUnderground: boolean): void {
+        if (window.innerWidth < 500 && bottomSheetContainer) {
+            bottomSheetContainer.contentContainer.clear();
+            this.createAnomalyZoneBottomSheet(e.target, bottomSheetContainer, game, items, isUnderground);
+            
+        } else {
+            this.createAnomalyZonePopup(map, e.target, container, game, items, isUnderground);
+        }
+    }
+
+    private createAnomalyZonePopup(map: any, marker: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean): void {
+        const content = this.createAnomalyZoneContent(
+            marker, 
+            container, 
+            game, 
+            allItems, 
+            isUnderground
+        );
+
+        const popup = L.popup({
+            maxWidth: 500,
+            className: 'stalker-custom-popup',
+            autoPanPadding: [20, 20]
+        })
+        .setLatLng(marker.getLatLng())
+        .setContent(content.location.nativeElement);
+
+        popup.on('remove', function () {
+            content.destroy();
+        });
+
+        popup.openOn(map);
+    }
+
+    private createAnomalyZoneBottomSheet(marker: any, container: BottomSheetWrapperComponent, game: Game, allItems: Item[], isUnderground: boolean): void {
+        const content = this.createAnomalyZoneContent(
+            marker, 
+            container.contentContainer, 
+            game, 
+            allItems, 
+            isUnderground
+        );
+
+        container.show();
+    }
+
+    public createAnomalyZoneContent(marker: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean): ComponentRef<AnomalyZoneComponent> {
+        const componentRef = container.createComponent(AnomalyZoneComponent);
+        componentRef.instance.anomalZone = marker.properties.zoneModel;
+        componentRef.instance.game = game;
+        componentRef.instance.allItems = allItems;
+        componentRef.instance.isUnderground = isUnderground;
+
+        return componentRef;
     }
 
     public setCellSize(value: number | string, game: string): void {
