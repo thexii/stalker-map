@@ -13,6 +13,7 @@ import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
 import { HiddenMarker } from "../../models/hidden-marker.model";
 import { MapService } from "../../services/map.service";
+import { BottomSheetWrapperComponent } from "../bottom-sheet-wrapper/bottom-sheet-wrapper.component";
 
 declare const L: any;
 declare var markWidthUnderground: number;
@@ -651,13 +652,7 @@ export class UndergroundComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, true),
-                    { maxWidth: 500 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
         }
 
         if (markers.length > 0) {

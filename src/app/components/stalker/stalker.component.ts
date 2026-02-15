@@ -10,13 +10,14 @@ import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 import { Game } from '../../models/game.model';
+import { NgStyle, NgTemplateOutlet } from '@angular/common';
 
 @Component({
     selector: 'app-stalker',
     standalone: true,
     templateUrl: './stalker.component.html',
     styleUrl: './stalker.component.scss',
-    imports: [TranslateModule, StalkerProfileComponent, TooltipDirective, HideUnhideComponent]
+    imports: [TranslateModule, StalkerProfileComponent, TooltipDirective, HideUnhideComponent, NgTemplateOutlet, NgStyle]
 })
 export class StalkerComponent {
   @Input() public stalker: Stalker;
@@ -24,6 +25,7 @@ export class StalkerComponent {
   @Input() public allItems: Item[];
   @Input() public rankSetting: RankSetting[];
   @Input() public isUnderground: boolean;
+  @Input() public isBottomSheet: boolean;
   public itemTooltipComponent: any = ItemTooltipComponent;
 
 

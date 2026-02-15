@@ -1,5 +1,5 @@
 import { MapComponent } from './../components/map/map.component';
-import { Injectable, ViewContainerRef } from "@angular/core";
+import { ComponentRef, Injectable, ViewContainerRef } from "@angular/core";
 import { HiddenMarker } from "../models/hidden-marker.model";
 import { StuffComponent } from '../components/stuff/stuff.component';
 import { Item } from '../models/item.model';
@@ -18,6 +18,7 @@ import { MechanicComponent } from '../components/mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../models/upgrades/upgrades';
 import { TranslateService } from '@ngx-translate/core';
 import { Game } from '../models/game.model';
+import { BottomSheetWrapperComponent } from '../components/bottom-sheet-wrapper/bottom-sheet-wrapper.component';
 
 declare const L: any;
 
@@ -29,6 +30,7 @@ export class MapService {
     private hiddenMarksLocalStorageKey: string = 'hidden-markers';
     private hiddenMarksCache: HiddenMarker[];
     private mapComponent: MapComponent;
+    private bottomSheetWrapper: ComponentRef<BottomSheetWrapperComponent>;
 
     constructor(
         private translate: TranslateService) {
@@ -182,20 +184,72 @@ export class MapService {
         return componentRef.location.nativeElement;
     }
 
-    public createStalkerPopup(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean) {
-        stalkerMarker.getPopup().on('remove', function () {
-            stalkerMarker.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
+    public createStalkerContent(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean, ismobile: boolean): ComponentRef<StalkerComponent> {
         const componentRef = container.createComponent(StalkerComponent);
         componentRef.instance.stalker = stalkerMarker.properties.stalker;
         componentRef.instance.game = game;
         componentRef.instance.allItems = allItems;
         componentRef.instance.rankSetting = mapConfig.rankSetting;
         componentRef.instance.isUnderground = isUnderground;
+        componentRef.instance.isBottomSheet = ismobile;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
+    }
+
+    public createStalkerPopup(map: any, stalkerMarker: any, container: ViewContainerRef, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean) {
+        const content = this.createStalkerContent(
+            stalkerMarker, 
+            container, 
+            game, 
+            items, 
+            mapConfig, 
+            isUnderground,
+            false
+        );
+
+        const popup = L.popup({
+            maxWidth: 500,
+            className: 'stalker-custom-popup',
+            autoPanPadding: [20, 20]
+        })
+        .setLatLng(stalkerMarker.getLatLng())
+        .setContent(content.location.nativeElement);
+
+        popup.on('remove', function () {
+            content.destroy();
+        });
+
+        popup.openOn(map);
+    }
+
+    public createStalkerBottomSheet(map: any, stalkerMarker: any, container: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean) {
+        const content = this.createStalkerContent(
+            stalkerMarker, 
+            container.contentContainer, 
+            game, 
+            items, 
+            mapConfig, 
+            isUnderground,
+            true
+        );
+
+        container.show();
+    }
+
+    public createSheetWrapper(container: ViewContainerRef): ComponentRef<BottomSheetWrapperComponent> {
+        const componentRef = container.createComponent(BottomSheetWrapperComponent);
+        return componentRef;
+    }
+
+    public handleStalkerClick(e: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
+        console.log(e);
+        console.log(window.innerWidth, window.devicePixelRatio)
+        if (window.innerWidth < 500 && bottomSheetContainer) {
+            bottomSheetContainer.contentContainer.clear();
+            this.createStalkerBottomSheet(map, e.target, bottomSheetContainer, game, items, mapConfig, isUnderground);
+        } else {
+            this.createStalkerPopup(map, e.target, container, game, items, mapConfig, isUnderground);
+        }
     }
 
     public setCellSize(value: number | string, game: string): void {

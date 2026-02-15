@@ -1,0 +1,15 @@
+<div class="sheet-container" 
+     [class.is-dragging]="isDragging"
+     [class.visible]="isVisible"
+     [style.transform]="transformStyle">
+  
+  <div class="sheet-header" (touchstart)="onTouchStart($event)">
+    <div class="drag-handle"></div>
+  </div>
+
+  <div class="sheet-body">
+    <ng-container #dynamicContent></ng-container>
+    
+    <ng-content></ng-content>
+  </div>
+</div>

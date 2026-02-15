@@ -12,6 +12,10 @@
   margin-bottom: 5px;
 }
 
+html {
+  font-family: Letterica, sans-serif;
+}
+
 @media (max-width: 1024px) {
   .container-fluid {
     padding-right: 0;
@@ -1000,4 +1004,13 @@ app-compare {
 
 .leaflet-popup-content-fit-content .leaflet-popup-content {
     width: fit-content !important;
+}
+
+.bottom-sheet-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding-inline: 10px;
+  z-index: 100000;
 }

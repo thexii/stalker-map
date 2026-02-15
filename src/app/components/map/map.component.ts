@@ -27,6 +27,7 @@ import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
 import { isDevMode } from '@angular/core';
 import { Game } from '../../models/game.model';
+import { BottomSheetWrapperComponent } from "../bottom-sheet-wrapper/bottom-sheet-wrapper.component";
 
 declare const L: any;
 declare var markWidth: number;
@@ -34,7 +35,7 @@ declare var markWidth: number;
 @Component({
     selector: 'app-map',
     standalone: true,
-    imports: [HeaderComponent, TranslateModule],
+    imports: [HeaderComponent, TranslateModule, BottomSheetWrapperComponent],
     templateUrl: './map.component.html',
     styleUrls: [
         './map.component.inventory.base.scss',
@@ -45,8 +46,8 @@ declare var markWidth: number;
     encapsulation: ViewEncapsulation.None,
 })
 export class MapComponent {
-    @ViewChild('dynamicComponents', { read: ViewContainerRef })
-    container: ViewContainerRef;
+    @ViewChild('dynamicComponents', { read: ViewContainerRef }) container: ViewContainerRef;
+    @ViewChild('bottomSheet') bottomSheet!: BottomSheetWrapperComponent;
 
     public readonly game: Game;
 
@@ -187,7 +188,7 @@ export class MapComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    private onResize(event: any) {
+    public onResize(event: any) {
         let vh = event.target.outerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -2023,13 +2024,7 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, false),
-                    { maxWidth: 500 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, this.bottomSheet, this.game, this.items, this.mapConfig, false));
         }
 
 
