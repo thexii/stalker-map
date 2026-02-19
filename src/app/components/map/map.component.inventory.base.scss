@@ -137,7 +137,8 @@
 }
 
 html {
-  height: -webkit-fill-available;
+  height: 100%;
+  height: -webkit-fill-available; /* Chrome/Safari: account for mobile browser UI */
 }
 
 .anomaly-in-claster {

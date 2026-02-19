@@ -8,11 +8,12 @@
     flex-direction: row;
     flex-wrap: nowrap;
     height: var(--height);
-    overflow: hidden;
+    min-height: 0; /* Firefox: allow flex child to shrink */
     overflow-x: scroll;
+    overflow-y: hidden;
 
     --angle: 45deg;
-    --tan: calc(tan(var(--angle)/2));
+    --tan: calc(tan(var(--angle) / 2));
     --cotangent-value: calc(1 / var(--tan));
 
     --d1: calc(var(--border-width) * var(--cotangent-value));
@@ -35,9 +36,9 @@
             0% 100%);
     margin: -1px 0 -1px -41px;
     background: white;
-    
-    .header-nav-item-inner {
+    min-height: 0;
 
+    .header-nav-item-inner {
         clip-path: polygon(
             var(--d1) calc(100% - var(--border-width)),
             calc(var(--height) + var(--d2)) var(--border-width),
@@ -45,6 +46,7 @@
             calc(100% - var(--border-width)) calc(100% - var(--border-width)));
         background: #090a0a;
         height: 100%;
+        min-height: 0;
         padding-left: 80px;
         display: flex;
         align-items: center;
@@ -61,16 +63,16 @@
     background: white;
     flex-grow: 1;
     min-width: 50px;
-
+    min-height: 0; /* Firefox: flex shrink */
 
     .header-nav-item-inner {
-
         clip-path: polygon(var(--border-width) calc(100% - var(--border-width)),
                 var(--border-width) var(--border-width),
                 calc(100% - var(--d1)) var(--border-width),
                 calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width)));
         background: #090a0a;
         height: 100%;
+        min-height: 0;
     }
 }
 
@@ -87,17 +89,18 @@
     margin: -1px 0 -1px -41px;
     width: 240px;
     flex-shrink: 0;
+    min-height: 0;
     color: white;
     text-decoration: none;
 
     .header-nav-item-inner {
-
         clip-path: polygon(var(--d1) calc(100% - var(--border-width)),
                 calc(var(--height) + var(--d2)) var(--border-width),
                 calc(100% - var(--d1)) var(--border-width),
                 calc(100% - var(--height) - var(--d2)) calc(100% - var(--border-width)));
         background: #090a0a;
         height: 100%;
+        min-height: 0;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -97,13 +97,13 @@ body {
 .sub-headers {
   display: flex;
   flex-wrap: nowrap;
-  overflow: auto;
-  overflow-y: hidden;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox: hide scrollbar like WebKit */
 }
 
 .sub-headers::-webkit-scrollbar {
-  height: 0px;
+  height: 0;
 }
 
 .sub-header-checkbox {
@@ -393,13 +393,18 @@ app-item-tooltip, app-upgrade-tooltip {
   opacity: 0;
 }
 
+.custom-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: white rgba(9, 10, 10, 1); /* Firefox: thumb track */
+}
+
 .custom-scroll::-webkit-scrollbar-track {
-	background-color: rgba(9,10,10,1);
+  background-color: rgba(9,10,10,1);
   border: 1px solid #555656;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-	background-color:rgba(9,10,10,1);
+  background-color: rgba(9,10,10,1);
   border: 1px solid white;
   margin: 3px;
 }

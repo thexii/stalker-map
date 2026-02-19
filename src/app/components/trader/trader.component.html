@@ -5,33 +5,12 @@
             <div class="inventory-container">
                 @if (selectedSellSection) {
                     <div class="sell inventory">
-                        @for (sellItem of selectedSellSection.items; track sellItem) {
-                            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: sellItem.item}" class="inventory-item inventory-item-width-{{sellItem.item.width}} inventory-item-height-{{sellItem.item.height}}" (click)="selectItem(sellItem.item)">
-                                <div class="item-additional-info">
-                                    <div class="inventory-item-count">
-                                        @if (sellItem.price == 0 || sellItem.price == undefined) {
-                                            <span class="stalker-icon icon-bug"></span>
-                                        }
-                                        {{sellItem.price}}
-                                    </div>
-                                    @if (sellItem.item.installedUpgrades && sellItem.item.installedUpgrades.length > 0) {
-                                        <div class="inventory-item-upgrade"></div>
-                                    }
-                                </div>
-                                <div class="inventory-item-image {{game.gameStyle}} inventory-item-x-{{sellItem.item.gridX}} inventory-item-y-{{sellItem.item.gridY}}">
-                                    @if (sellItem.item.hasScope && sellItem.item.scopeX > -1000 && sellItem.item.scopeY > -1000) {
-                                        <div class="wpn_addon scope" [style.left.px]="sellItem.item.scopeX" [style.top.px]="sellItem.item.scopeY"></div>
-                                    }
-
-                                    @if (sellItem.item.hasSilencer && sellItem.item.silencerX > -1000 && sellItem.item.silencerY > -1000) {
-                                        <div class="wpn_addon silencer" [style.left.px]="sellItem.item.silencerX" [style.top.px]="sellItem.item.silencerY"></div>
-                                    }
-
-                                    @if (sellItem.item.hasGrenadeLauncher && sellItem.item.grenadeLauncherX > -1000 && sellItem.item.grenadeLauncherY > -1000) {
-                                        <div class="wpn_addon grenade-launcher" [style.left.px]="sellItem.item.grenadeLauncherX" [style.top.px]="sellItem.item.grenadeLauncherY"></div>
-                                    }
-                                </div>
-                            </div>
+                        @for (sellItem of selectedSellSection.items; track sellItem.item.uniqueName) {
+                            <app-trader-item-tile
+                                [item]="sellItem.item"
+                                [price]="sellItem.price"
+                                [gameStyle]="game.gameStyle"
+                                (itemClick)="selectItem($event)" />
                         }
                     </div>
                 }
@@ -57,7 +36,7 @@
                                 <td class="section-td">{{ 'trader-supply' | translate}}</td>
                             }
 
-                            @if (hasDicounts) {
+                            @if (hasDiscounts) {
                                 <td class="section-td">{{ 'discounts' | translate}}</td>
                             }
                         </tr>
@@ -117,7 +96,7 @@
                                     }
                                 }
 
-                                @if (hasDicounts) {
+                                @if (hasDiscounts) {
                                     @if (traderDiscounts[index]) {
                                         <td class="section" (click)="selectDiscount(traderDiscounts[index])" [ngClass]="{'selected': selectedDiscount && selectedDiscount.conditions == traderDiscounts[index].conditions}">
                                             @if (!traderDiscounts[index].conditions) {
@@ -132,19 +111,19 @@
                                             
                                             @if (traderDiscounts[index].buy != 1) {
                                                 @if (traderDiscounts[index].buy > 1) {
-                                                    <div>{{ 'bad_trader_buy_price' | translate }}: -{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                                                    <div>{{ 'bad_trader_buy_price' | translate }}: -{{ getDiscountPercent(traderDiscounts[index].buy) }}%</div>
                                                 }
                                                 @else {
-                                                    <div>{{ 'good_trader_buy_price' | translate}}: +{{ Math.round((traderDiscounts[index].buy - 1) * 100)}}%</div>
+                                                    <div>{{ 'good_trader_buy_price' | translate}}: +{{ getDiscountPercent(traderDiscounts[index].buy) }}%</div>
                                                 }
                                             }
 
                                             @if (traderDiscounts[index].sell != 1) {
                                                 @if (traderDiscounts[index].sell < 1) {
-                                                    <div>{{ 'good_trader_sell_price' | translate}}: {{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                                                    <div>{{ 'good_trader_sell_price' | translate}}: {{ getDiscountPercent(traderDiscounts[index].sell) }}%</div>
                                                 }
                                                 @else {
-                                                    <div>{{ 'bad_trader_sell_price' | translate}}: +{{ Math.round((traderDiscounts[index].sell - 1) * 100)}}%</div>
+                                                    <div>{{ 'bad_trader_sell_price' | translate}}: +{{ getDiscountPercent(traderDiscounts[index].sell) }}%</div>
                                                 }
                                             }
                                         </td>
@@ -223,24 +202,23 @@
                                 {{ 'best-sell-title' | translate}}
                             </div>
                             <div class="best-sell-container">
-                                @for (sell of selectedItem.bestSell; track sell) {
+                                @for (sell of selectedItem.bestSell; track sell.traderName + sell.conditionSell) {
                                     <div class="best-sell-item">
                                         <div class="best-sell-item-price">
-                                            {{ Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient -
-                                            sell.item.minCoeficient) / 2) * selectedItem.item.price) }}
+                                            {{ getBestSellPrice(sell) }}
                                         </div>
                                         <div class="best-sell-item-info">
                                             <div class="best-trade-trader-name">
                                                 {{sell.traderName | translate}}
                                                 @if (sell.item.maxCoeficient != sell.item.minCoeficient) {
-                                                    <span>(<span class="best-sell-item-price-value good">{{ Math.floor(sell.item.minCoeficient * selectedItem.item.price) }}</span> -
-                                                        <span class="best-sell-item-price-value">{{Math.floor((sell.item.minCoeficient + (sell.item.maxCoeficient - sell.item.minCoeficient) / 2) * selectedItem.item.price) }}</span> -
-                                                        <span class="best-sell-item-price-value bad">{{Math.floor((sell.item.maxCoeficient * selectedItem.item.price))}}</span> )
+                                                    <span>(<span class="best-sell-item-price-value good">{{ getPrice(sell.item.minCoeficient) }}</span> -
+                                                        <span class="best-sell-item-price-value">{{ getPrice((sell.item.minCoeficient + sell.item.maxCoeficient) / 2) }}</span> -
+                                                        <span class="best-sell-item-price-value bad">{{ getPrice(sell.item.maxCoeficient) }}</span> )
                                                     </span>
                                                 }
                                             </div>
 
-                                            @if (sell.conditionSell != allwaysCondition) {
+                                            @if (sell.conditionSell != alwaysCondition) {
                                                 <div class="best-trade-trader-condition">
                                                     @for (cond of sell.conditionsSell; track cond) {
                                                         {{ cond | translate}}
@@ -268,18 +246,18 @@
                         </div>
                         <div class="best-buy-container">
                             @if (selectedItem.bestBuy) {
-                                @for (buy of selectedItem.bestBuy; track buy) {
+                                    @for (buy of selectedItem.bestBuy; track buy.traderName + buy.conditionSell) {
                                     <div class="best-sell-item">
-                                        <div class="best-sell-item-price">{{ Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) / 2) * selectedItem.item.price) }}</div>
+                                        <div class="best-sell-item-price">{{ getBestBuyPrice(buy) }}</div>
 
                                         <div class="best-sell-item-info">
                                             <div class="best-trade-trader-name">
                                                 {{buy.traderName | translate}}
                                                 @if (buy.item.maxCoeficient != buy.item.minCoeficient) {
                                                     <span>(
-                                                        <span class="best-sell-item-price-value good">{{Math.floor(buy.item.minCoeficient * selectedItem.item.price) }}</span> -
-                                                        <span class="best-sell-item-price-value">{{Math.floor((buy.item.minCoeficient + (buy.item.maxCoeficient - buy.item.minCoeficient) / 2) * selectedItem.item.price) }}</span> -
-                                                        <span class="best-sell-item-price-value bad">{{Math.floor((buy.item.maxCoeficient * selectedItem.item.price)) }}</span>
+                                                        <span class="best-sell-item-price-value good">{{ getPrice(buy.item.minCoeficient) }}</span> -
+                                                        <span class="best-sell-item-price-value">{{ getPrice((buy.item.minCoeficient + buy.item.maxCoeficient) / 2) }}</span> -
+                                                        <span class="best-sell-item-price-value bad">{{ getPrice(buy.item.maxCoeficient) }}</span>
                                                         )
                                                     </span>
                                                 }
@@ -344,40 +322,16 @@
             </div>
             @if (selectedBuySection.items && selectedBuySection.items.length > 0) {
                 <div class="inventory-container">
-                    @if (selectedBuySection) {
-                        <div class="buy inventory">
-                            @for (buyItem of selectedBuySection.items; track buyItem) {
-                                <div tooltip [component]="itemTooltipComponent" [componentData]="{item: buyItem.item}"
-                                    class="inventory-item inventory-item-width-{{buyItem.item.width}} inventory-item-height-{{buyItem.item.height}}"
-                                    (click)="selectItem(buyItem.item)">
-                                    <div class="item-additional-info">
-                                        <div class="inventory-item-count">
-                                            @if (buyItem.item.price == 0) {
-                                                <span class="stalker-icon icon-bug"></span>
-                                            }
-                                            {{Math.floor(buyItem.price)}}
-                                        </div>
-                                        @if (buyItem.item.installedUpgrades && buyItem.item.installedUpgrades.length > 0) {
-                                            <div class="inventory-item-upgrade"></div>
-                                        }
-                                    </div>
-                                    <div class="inventory-item-image {{game.gameStyle}} inventory-item-x-{{buyItem.item.gridX}} inventory-item-y-{{buyItem.item.gridY}}">
-                                        @if (buyItem.item.hasScope && buyItem.item.scopeX > -1000 && buyItem.item.scopeY > -1000) {
-                                            <div class="wpn_addon scope" [style.left.px]="buyItem.item.scopeX" [style.top.px]="buyItem.item.scopeY"></div>
-                                        }
-
-                                        @if (buyItem.item.hasSilencer && buyItem.item.silencerX > -1000 && buyItem.item.silencerY > -1000) {
-                                            <div class="wpn_addon silencer" [style.left.px]="buyItem.item.silencerX" [style.top.px]="buyItem.item.silencerY"></div>
-                                        }
-
-                                        @if (buyItem.item.hasGrenadeLauncher && buyItem.item.grenadeLauncherX > -1000 && buyItem.item.grenadeLauncherY > -1000) {
-                                            <div class="wpn_addon grenade-launcher" [style.left.px]="buyItem.item.grenadeLauncherX" [style.top.px]="buyItem.item.grenadeLauncherY"></div>
-                                        }
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    }
+                    <div class="buy inventory">
+                        @for (buyItem of selectedBuySection.items; track buyItem.item.uniqueName) {
+                            <app-trader-item-tile
+                                [item]="buyItem.item"
+                                [price]="buyItem.price"
+                                [gameStyle]="game.gameStyle"
+                                [floorPrice]="true"
+                                (itemClick)="selectItem($event)" />
+                        }
+                    </div>
                 </div>
             }
             @else {
