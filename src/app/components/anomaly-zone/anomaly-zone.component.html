@@ -47,12 +47,3 @@
         }
     </div>
 }
-
-@if (anomalZone.anomaliySpawnSections && anomalZone.anomaliySpawnSections.length > 0) {
-    <div class="bottom">
-        <div class="button url-button" (click)="copyLink()">
-            <span>{{ 'markLink' | translate}}</span>
-        </div>
-        <app-hide-unhide [marker]="hiddenMarker.anomalZone(anomalZone, game, isUnderground)"></app-hide-unhide>
-    </div>
-}

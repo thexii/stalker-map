@@ -7,12 +7,12 @@ import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.comp
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 import { Game } from '../../models/game.model';
-import { InventoryItem } from '../../models/inventory-item.model';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-stuff',
   standalone: true,
-  imports: [TranslateModule, TooltipDirective, HideUnhideComponent],
+  imports: [TranslateModule, TooltipDirective, HideUnhideComponent, NgClass],
   templateUrl: './stuff.component.html',
   styleUrl: './stuff.component.scss'
 })
@@ -22,6 +22,7 @@ export class StuffComponent {
   @Input() public stuffType: string;
   @Input() public allItems: Item[];
   @Input() public isUnderground: boolean;
+  @Input() public isPopup: boolean;
   public itemTooltipComponent: any = ItemTooltipComponent;
 
   public items: StuffItem[];

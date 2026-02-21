@@ -1,8 +1,11 @@
-<div>
-    <div class='popup header'>{{ stuff.name | translate}}</div>
-    <div class='popup description'>{{stuff.description | translate}}</div>
-</div>
-<div class="inventory">
+@if (stuff.name) {
+    <div class='popup-name'>{{stuff.name | translate}}</div>
+}
+
+@if (stuff.description) {
+    <div class='description'>{{stuff.description | translate}}</div>
+}
+<div class="inventory" [ngClass]="{'inventory-columns-6': isPopup}">
     @for (stuffItem of items; track stuffItem) {
         <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item {{this.game.gameStyle}} inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
             <div class="item-additional-info">
@@ -29,11 +32,4 @@
             </div>
         </div>
     }
-</div>
-<div class="bottom">
-    <div class="button url-button" (click)="copyLink()">
-        <span>{{ 'markLink' | translate}}</span>
-    </div>
-    <app-hide-unhide
-        [marker]="{lat: stuff.z, lng: stuff.x, layerName: stuffType, game: game.gameStyle, isUnderground: isUnderground}"></app-hide-unhide>
 </div>

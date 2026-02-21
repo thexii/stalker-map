@@ -10,14 +10,14 @@ import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 import { Game } from '../../models/game.model';
-import { NgStyle, NgTemplateOutlet } from '@angular/common';
+import { NgStyle, NgTemplateOutlet, NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-stalker',
     standalone: true,
     templateUrl: './stalker.component.html',
     styleUrl: './stalker.component.scss',
-    imports: [TranslateModule, StalkerProfileComponent, TooltipDirective, HideUnhideComponent, NgTemplateOutlet, NgStyle]
+    imports: [TranslateModule, StalkerProfileComponent, TooltipDirective, HideUnhideComponent, NgTemplateOutlet, NgStyle, NgClass]
 })
 export class StalkerComponent {
   @Input() public stalker: Stalker;

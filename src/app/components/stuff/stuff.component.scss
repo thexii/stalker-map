@@ -1,5 +1,8 @@
-.stash-conditions {
-  color: white;
+:host {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 .conditions-list {

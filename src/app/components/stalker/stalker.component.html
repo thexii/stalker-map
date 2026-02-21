@@ -9,7 +9,7 @@
         </div>
         @if (inventory && inventory.length > 0) {
             <div class="inventory-container">
-                <ng-container *ngTemplateOutlet="inventoryContainer; context: {items: inventory, columns: 6}"></ng-container>
+                <ng-container *ngTemplateOutlet="inventoryContainer; context: {items: inventory, columns: 0}"></ng-container>
             </div>
         }
     </div>
@@ -24,17 +24,10 @@
             <ng-container *ngTemplateOutlet="inventoryContainer; context: {items: inventory, columns: 7}"></ng-container>
         }
     </div>
-    <div class="bottom">
-        <div class="button url-button" (click)="copyLink()">
-            <span>{{ 'markLink' | translate}}</span>
-        </div>
-        <app-hide-unhide
-            [marker]="{lat: stalker.z, lng: stalker.x, layerName: 'stalkers', game: game.uniqueName, isUnderground: isUnderground}"></app-hide-unhide>
-    </div>
 }
 
 <ng-template #inventoryContainer let-items="items" let-columns="columns">
-    <div class="inventory inventory-columns-{{columns}}">
+    <div class="inventory" [ngClass]="{'inventory-columns-{{columns}}': columns > 0}">
         @for (stuffItem of inventory; track stuffItem) {
             <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
                 <div class="item-additional-info">

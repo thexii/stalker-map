@@ -1342,8 +1342,8 @@ export class MapComponent {
 
                     let widht = 300;
 
-                    stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: widht }).openPopup();
-
+                    stuff.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, stuffModel.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStashContent(e.target, container, this.game, this.items, false, isPopup)));
+        
                     if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                         markersToHide.push(stuff);
                     }
@@ -1473,8 +1473,9 @@ export class MapComponent {
                     offset: [0, 50],
                 }
             );
-            lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false), { minWidth: 300 }).openPopup(),
-                markers.push(lootBoxMarker);
+
+            lootBoxMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, lootBoxType.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createLootBoxContent(e.target, container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false)));
+            markers.push(lootBoxMarker);
         }
 
         this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
@@ -1763,7 +1764,7 @@ export class MapComponent {
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.handleAnomalyZoneClick(e, this.map, this.container, this.bottomSheet, this.game, this.items, false));
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, canvasMarker.properties.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
         }
 
         try {
@@ -2014,7 +2015,7 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, this.bottomSheet, this.game, this.items, this.mapConfig, false));
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, stalker.profile.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStalkerContent(e.target, container, this.game, this.items, this.mapConfig, false, !isPopup)));
         }
 
 

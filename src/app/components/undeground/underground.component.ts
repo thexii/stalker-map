@@ -584,7 +584,7 @@ export class UndergroundComponent {
                         className: 'map-tooltip',
                         offset: new Point(0, 50),
                     });
-                    stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
+                    //stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
 
                     if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                         markersToHide.push(stuff);
@@ -644,7 +644,7 @@ export class UndergroundComponent {
 
             canvasMarker.bindTooltip(
                 (marker: any) =>
-                    this.translate.instant(marker.properties.stalker.profile.name),
+                    this.translate.instant(stalker.profile.name),
                 {
                     sticky: true,
                     className: 'map-tooltip',
@@ -652,7 +652,7 @@ export class UndergroundComponent {
                 }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
+            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, stalker.profile.name, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
         }
 
         if (markers.length > 0) {
@@ -729,9 +729,9 @@ export class UndergroundComponent {
                     offset: [0, 50],
                 }
             );
-            lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
+            /*lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
                 minWidth: 300,
-            }).openPopup(),
+            }).openPopup(),*/
                 markers.push(lootBoxMarker);
         }
 
