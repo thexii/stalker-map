@@ -75,3 +75,7 @@
 .sheet-container.visible {
     display: flex;
 }
+
+.sheet-container > .popup-buttons {
+    right: 15px;
+}

@@ -141,13 +141,8 @@ export class MapService {
         return componentRef;
     }
 
-    public createTraderPopup(traderMarker: any, traders: TraderModel[], marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig) {
-        let trader: TraderModel = traderMarker.properties.traderConfig;
-
-        marker.getPopup().on('remove', function () {
-            marker.getPopup().off('remove');
-            componentRef.destroy();
-        });
+    public createTraderContent(marker: any, traders: TraderModel[], container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isPopup: boolean): ComponentRef<TraderComponent> {
+        let trader: TraderModel = marker.properties.traderConfig;
 
         const componentRef = container.createComponent(TraderComponent);
         componentRef.instance.trader = trader;
@@ -159,8 +154,9 @@ export class MapService {
         componentRef.instance.actor = mapConfig.actor;
         componentRef.instance.traderConfigs = mapConfig.traderConfigs;
         componentRef.instance.traderConfig = mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
+        componentRef.instance.isPopup = isPopup;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
     }
 
     public createStalkerContent(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean, ismobile: boolean): ComponentRef<StalkerComponent> {
@@ -185,7 +181,7 @@ export class MapService {
         return componentRef;
     }
 
-    public onMarkerClick(event: any, map: any, title: string, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, contentMaker: (container: ViewContainerRef, isPopup: boolean) => any): void {
+    public onMarkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, contentMaker: (container: ViewContainerRef, isPopup: boolean) => any): void {
         let isPopup: boolean = !(window.innerWidth < 500 && bottomSheetContainer != null);
         let currentContainer = isPopup ? container : bottomSheetContainer.contentContainer;
 
@@ -196,14 +192,14 @@ export class MapService {
         const content = contentMaker(currentContainer, isPopup);
 
         if (isPopup) {
-            this.bindPopup(map, event.target, title, content);
+            this.bindPopup(map, event.target, content);
         }
         else {
             bottomSheetContainer.show();
         }
     }
 
-    public handleStalkerClick(event: any, map: any, title: string, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
+    public handleStalkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
         let isPopup: boolean = !(window.innerWidth < 500 && bottomSheetContainer != null);
         let currentContainer = isPopup ? container : bottomSheetContainer.contentContainer;
 
@@ -218,7 +214,7 @@ export class MapService {
         );
 
         if (isPopup) {
-            this.bindPopup(map, event.target, title, content);
+            this.bindPopup(map, event.target, content);
         }
         else {
             bottomSheetContainer.contentContainer.clear();
@@ -254,14 +250,12 @@ export class MapService {
         return componentRef.location.nativeElement;
     }
 
-    private bindPopup(map: any, marker: any, title: string, innerContentRef: ComponentRef<any>) {
+    private bindPopup(map: any, marker: any, innerContentRef: ComponentRef<any>) {
         const popupComponentRef = createComponent(PopupComponent, {
             environmentInjector: this.environmentInjector,
             projectableNodes: [[innerContentRef.location.nativeElement]]
         });
         this.appRef.attachView(popupComponentRef.hostView);
-
-        popupComponentRef.instance.title = title;
 
         const tempContainer = document.createElement('div');
         tempContainer.style.cssText = 'position:fixed;visibility:hidden;pointer-events:none;top:0;left:0;';
@@ -284,6 +278,8 @@ export class MapService {
         })
         .setLatLng(marker.getLatLng())
         .setContent(popupComponentRef.location.nativeElement);
+
+        popupComponentRef.instance.popup = popup;
 
         popup.on('remove', () => {
             popupComponentRef.destroy();

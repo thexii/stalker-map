@@ -1044,3 +1044,45 @@ app-compare {
   padding-inline: 10px;
   z-index: 100000;
 }
+
+.popup-buttons {
+    --size: 20px;
+    --padding: 3px;
+    --border: 1px;
+    --gap: 10px;
+    position: absolute;
+    top: calc(-1 * (var(--size) + var(--gap) + 2 * (var(--border) + var(--border))));
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--gap);
+
+    .button {
+        padding: var(--padding);
+        border: var(--border) solid white;  
+        background-color: black;
+        cursor: pointer;
+
+        div {
+            height: var(--size);
+            width: var(--size);
+            background-size: var(--size);
+        }
+
+        &:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        .close {
+            background-image: url(/assets/images/svg/interface/icons/close.svg);
+        }
+
+        .share {
+            background-image: url(/assets/images/svg/interface/icons/share.svg);
+        }
+
+        .hide {
+            background-image: url(/assets/images/svg/interface/icons/hide.svg);
+        }
+    }
+}

@@ -2,9 +2,11 @@
     <div class="content">
         <ng-content></ng-content>
     </div>
-    <div class="bottoms">
-        <div class="bottom"><div class="hide"></div></div>
-        <div class="bottom"><div class="share"></div></div>
-        <div class="bottom"><div class="close"></div></div>
+    <div class="popup-buttons">
+        @if (marker) {
+            <div class="button"><div [ngClass]="{'hide': !isMarkerHidden, 'show': isMarkerHidden}" (click)="hideShow()"></div></div>
+            <div class="button"><div class="share"></div></div>
+        }
+        <div class="button" (click)="close()"><div class="close"></div></div>
     </div>
 </div>

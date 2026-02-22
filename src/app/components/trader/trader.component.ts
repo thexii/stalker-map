@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TradeSection, TraderModel, BestBuySellModel, SelectedItem, TraderBuySellItemView, TraderSupplyItemView } from '../../models/trader';
-import { NgClass, NgStyle } from '@angular/common';
+import { NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Item } from '../../models/item.model';
 import { StalkerProfileComponent } from '../stalker-profile/stalker-profile.component';
@@ -21,7 +21,7 @@ import { TraderItemTileComponent } from './trader-item-tile/trader-item-tile.com
   standalone: true,
   templateUrl: './trader.component.html',
   styleUrl: './trader.component.scss',
-  imports: [TranslateModule, NgClass, NgStyle, StalkerProfileComponent, TraderItemTileComponent]
+  imports: [TranslateModule, NgClass, NgStyle, StalkerProfileComponent, TraderItemTileComponent, NgTemplateOutlet]
 })
 export class TraderComponent implements OnInit {
   @Input() trader: TraderModel;
@@ -33,6 +33,7 @@ export class TraderComponent implements OnInit {
   @Input() relationType: RelationType;
   @Input() traderConfigs: TraderSectionsConfig[];
   @Input() traderConfig: TraderSectionsConfig;
+  @Input() isPopup: boolean;
 
   readonly relations: number[] = [0, 0.5, 1];
   readonly relationsTitle: string[] = ['enemy', 'neutral', 'friend'];
@@ -61,6 +62,8 @@ export class TraderComponent implements OnInit {
   relationTypeEnum = RelationType;
 
   chart: Chart | null = null;
+
+  public isTraderSelected: boolean = false;
 
   constructor(
     private translate: TranslateService,

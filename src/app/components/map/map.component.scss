@@ -75,22 +75,6 @@ color: white !important;
   flex-direction: row-reverse;
 }
 
-.button {
-  height: 25px;
-  border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  padding-inline: 1rem;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-.button:hover {
-  background-color: #4d4d4d
-}
-
 .inventory::-webkit-scrollbar-track {
 	background-color: rgba(9,10,10,1);
   border: 1px solid #555656;

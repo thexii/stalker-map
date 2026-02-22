@@ -652,7 +652,7 @@ export class UndergroundComponent {
                 }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, stalker.profile.name, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
+            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
         }
 
         if (markers.length > 0) {

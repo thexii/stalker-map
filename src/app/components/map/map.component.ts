@@ -1340,9 +1340,7 @@ export class MapComponent {
                         offset: new Point(0, 50),
                     });
 
-                    let widht = 300;
-
-                    stuff.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, stuffModel.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStashContent(e.target, container, this.game, this.items, false, isPopup)));
+                    stuff.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStashContent(e.target, container, this.game, this.items, false, isPopup)));
         
                     if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                         markersToHide.push(stuff);
@@ -1474,7 +1472,7 @@ export class MapComponent {
                 }
             );
 
-            lootBoxMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, lootBoxType.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createLootBoxContent(e.target, container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false)));
+            lootBoxMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createLootBoxContent(e.target, container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false)));
             markers.push(lootBoxMarker);
         }
 
@@ -1764,7 +1762,7 @@ export class MapComponent {
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, canvasMarker.properties.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
         }
 
         try {
@@ -1903,13 +1901,8 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (trader: any) =>
-                        this.mapService.createTraderPopup(trader, this.gamedata.traders, canvasMarker, this.container, this.game, this.items, this.mapConfig),
-                    { maxWidth: 2000 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createTraderContent(e.target, this.gamedata.traders, container, this.game, this.items, this.mapConfig, isPopup)));
+        
         }
 
         this.addLayerToMap(L.layerGroup(markers), traderIcon.uniqueName, traderIcon.ableToSearch);
@@ -2015,7 +2008,7 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, stalker.profile.name, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStalkerContent(e.target, container, this.game, this.items, this.mapConfig, false, !isPopup)));
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStalkerContent(e.target, container, this.game, this.items, this.mapConfig, false, !isPopup)));
         }
 
 
