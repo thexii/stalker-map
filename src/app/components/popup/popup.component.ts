@@ -14,6 +14,7 @@ import { NgClass } from "@angular/common";
 export class PopupComponent {
     @Input() public title: string;
     @Input() public marker: HiddenMarker;
+    @Input() public shareUrl: string;
 
     public popup: any;
 
@@ -44,6 +45,14 @@ export class PopupComponent {
     public unHideMarker(): void {
         this.mapService.unhideMark(this.marker);
         this.isMarkerHidden = false;
+    }
+
+    public async share(): Promise<void> {
+        if (navigator.share) {
+            await navigator.share({
+                url: this.shareUrl
+            });
+        }
     }
 
     public close(): void {

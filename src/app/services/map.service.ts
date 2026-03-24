@@ -280,6 +280,8 @@ export class MapService {
         .setContent(popupComponentRef.location.nativeElement);
 
         popupComponentRef.instance.popup = popup;
+        popupComponentRef.instance.marker = innerContentRef.instance.hiddenMarker;
+        popupComponentRef.instance.shareUrl = innerContentRef.instance.shareUrl;
 
         popup.on('remove', () => {
             popupComponentRef.destroy();

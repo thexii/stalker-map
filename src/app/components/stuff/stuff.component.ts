@@ -5,99 +5,105 @@ import { Item } from '../../models/item.model';
 import { MapService } from '../../services/map.service';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
-import { HideUnhideComponent } from "../hide-unhide/hide-unhide.component";
 import { Game } from '../../models/game.model';
 import { NgClass } from '@angular/common';
+import { HiddenMarker } from '../../models/hidden-marker.model';
 
 @Component({
-  selector: 'app-stuff',
-  standalone: true,
-  imports: [TranslateModule, TooltipDirective, HideUnhideComponent, NgClass],
-  templateUrl: './stuff.component.html',
-  styleUrl: './stuff.component.scss'
+    selector: 'app-stuff',
+    standalone: true,
+    imports: [TranslateModule, TooltipDirective, NgClass],
+    templateUrl: './stuff.component.html',
+    styleUrl: './stuff.component.scss'
 })
 export class StuffComponent {
-  @Input() public stuff: StuffModel;
-  @Input() public game: Game;
-  @Input() public stuffType: string;
-  @Input() public allItems: Item[];
-  @Input() public isUnderground: boolean;
-  @Input() public isPopup: boolean;
-  public itemTooltipComponent: any = ItemTooltipComponent;
+    @Input() public stuff: StuffModel;
+    @Input() public game: Game;
+    @Input() public stuffType: string;
+    @Input() public allItems: Item[];
+    @Input() public isUnderground: boolean;
+    @Input() public isPopup: boolean;
+    public itemTooltipComponent: any = ItemTooltipComponent;
+    
+    public hiddenMarker: HiddenMarker;
+    public shareUrl: string = '';
 
-  public items: StuffItem[];
-  public condition: {
-    conditions: string[][],
-    communities: string[]
-  }
-
-  private actorOnLevel = /actor_on_level\(([^\)]+)\)/;
-  private npcRank = /npc_rank\(([^\)]+)\)/;
-
-  constructor(private mapService: MapService) { }
-
-  private async ngOnInit(): Promise<void> {
-    if (this.stuff.items) {
-      this.items = this.stuff.items.map(x => {
-        let item = new StuffItem();
-        item.item = this.allItems.find(y => y.uniqueName == x.uniqueName) as Item;
-        item.count = x.count;
-
-        return item;
-      } );
-
-      this.items.sort((x, y) => {
-        let dw = x.item.width - y.item.width;
-
-        if (dw != 0) {
-          return -dw;
-        }
-
-        let da = y.item.area - x.item.area;
-
-        if (da == 0) {
-            return x.item.uniqueName.localeCompare(y.item.uniqueName)
-        }
-
-        return da;
-      })
+    public items: StuffItem[];
+    public condition: {
+        conditions: string[][],
+        communities: string[]
     }
 
-    if ((this.stuff.communities && this.stuff.communities.length > 0) || this.stuff.condlist) {
-      let conds = this.stuff.condlist.split(',');
-      this.condition = { conditions: [], communities: [] };
+    private actorOnLevel = /actor_on_level\(([^\)]+)\)/;
+    private npcRank = /npc_rank\(([^\)]+)\)/;
 
-      if (this.stuff.communities && this.stuff.communities.length > 0) {
-        this.condition.communities = this.stuff.communities;
-      }
+    constructor(private mapService: MapService) { }
 
-      for (let cond of conds) {
-        let sectionConditions = [];
-        if (this.actorOnLevel.test(cond)) {
-            let levelCond: RegExpExecArray | null = this.actorOnLevel.exec(cond);
+    private async ngOnInit(): Promise<void> {
+        if (this.stuff.items) {
+            this.items = this.stuff.items.map(x => {
+                let item = new StuffItem();
+                item.item = this.allItems.find(y => y.uniqueName == x.uniqueName) as Item;
+                item.count = x.count;
 
-            if (levelCond) {
-                sectionConditions.push(levelCond[1]);
+                return item;
+            });
+
+            this.items.sort((x, y) => {
+                let dw = x.item.width - y.item.width;
+
+                if (dw != 0) {
+                    return -dw;
+                }
+
+                let da = y.item.area - x.item.area;
+
+                if (da == 0) {
+                    return x.item.uniqueName.localeCompare(y.item.uniqueName)
+                }
+
+                return da;
+            })
+        }
+
+        if ((this.stuff.communities && this.stuff.communities.length > 0) || this.stuff.condlist) {
+            let conds = this.stuff.condlist.split(',');
+            this.condition = { conditions: [], communities: [] };
+
+            if (this.stuff.communities && this.stuff.communities.length > 0) {
+                this.condition.communities = this.stuff.communities;
+            }
+
+            for (let cond of conds) {
+                let sectionConditions = [];
+                if (this.actorOnLevel.test(cond)) {
+                    let levelCond: RegExpExecArray | null = this.actorOnLevel.exec(cond);
+
+                    if (levelCond) {
+                        sectionConditions.push(levelCond[1]);
+                    }
+                }
+
+                if (this.npcRank.test(cond)) {
+                    let rank: RegExpExecArray | null = this.npcRank.exec(cond);
+
+                    if (rank) {
+                        sectionConditions.push(rank[1]);
+                    }
+                }
+
+                if (sectionConditions.length > 0) {
+                    this.condition.conditions.push(sectionConditions);
+                }
             }
         }
 
-        if (this.npcRank.test(cond)) {
-            let rank: RegExpExecArray | null = this.npcRank.exec(cond);
-
-            if (rank) {
-                sectionConditions.push(rank[1]);
-            }
-        }
-
-        if (sectionConditions.length > 0) {
-            this.condition.conditions.push(sectionConditions);
-        }
-      }
+        this.shareUrl = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
+        this.hiddenMarker = new HiddenMarker();
+        this.hiddenMarker.game = this.game.uniqueName;
+        this.hiddenMarker.isUnderground = this.isUnderground;
+        this.hiddenMarker.layerName = this.stuffType;
+        this.hiddenMarker.lat = this.stuff.z;
+        this.hiddenMarker.lng = this.stuff.x;
     }
-  }
-
-  public copyLink(): void {
-    let link = `${window.location.origin}/map/${this.game.uniqueName}?lat=${this.stuff.z}&lng=${this.stuff.x}&type=${this.stuffType}${this.isUnderground ? `&underground=${this.stuff.locationId}` : ''}`;
-    navigator.clipboard.writeText(link)
-  }
 }

@@ -1,47 +1,31 @@
 <header>
-    <div class="container-fluid">
-        <div class="menu">
+    <div class="container-fluid" #wrapper>
+        <div class="menu" #container [ngClass]="{'short': showShort}">
             <div class="header-nav-item-left">
                 <div class="header-nav-item-inner"></div>
             </div>
             <a class="header-nav-item header-nav-item-full" href="/map/shoc">
                 <div class="header-nav-item-inner">
-                    <span>{{ 'shoc' | translate }}</span>
+                    <span class="full" >{{ 'shoc' | translate }}</span>
+                    <span class="short">{{ 'shocShort' | translate }}</span>
                 </div>
             </a>
             <a class="header-nav-item header-nav-item-full" href="/map/cs">
                 <div class="header-nav-item-inner">
-                    <span>{{ 'cs' | translate }}</span>
+                    <span class="full" >{{ 'cs' | translate }}</span>
+                    <span class="short">{{ 'csShort' | translate }}</span>
                 </div>
             </a>
             <a class="header-nav-item header-nav-item-full" href="/map/cop">
                 <div class="header-nav-item-inner">
-                    <span>{{ 'cop' | translate }}</span>
+                    <span class="full" >{{ 'cop' | translate }}</span>
+                    <span class="short">{{ 'copShort' | translate }}</span>
                 </div>
             </a>
             <a class="header-nav-item header-nav-item-full" href="/map/hoc">
                 <div class="header-nav-item-inner">
-                    <span>{{ 'hoc' | translate }}</span>
-                </div>
-            </a>
-            <a class="header-nav-item header-nav-item-short" href="/map/shoc">
-                <div class="header-nav-item-inner">
-                    <span>{{ 'shocShort' | translate }}</span>
-                </div>
-            </a>
-            <a class="header-nav-item header-nav-item-short" href="/map/cs">
-                <div class="header-nav-item-inner">
-                    <span>{{ 'csShort' | translate }}</span>
-                </div>
-            </a>
-            <a class="header-nav-item header-nav-item-short" href="/map/cop">
-                <div class="header-nav-item-inner">
-                    <span>{{ 'copShort' | translate }}</span>
-                </div>
-            </a>
-            <a class="header-nav-item header-nav-item-short" href="/map/hoc">
-                <div class="header-nav-item-inner">
-                    <span>{{ 'hocShort' | translate }}</span>
+                    <span class="full" >{{ 'hoc' | translate }}</span>
+                    <span class="short">{{ 'hocShort' | translate }}</span>
                 </div>
             </a>
             <a class="header-nav-item not-grow" href="https://github.com/thexii/stalker-map">

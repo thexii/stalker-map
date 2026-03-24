@@ -5,7 +5,9 @@
     <div class="popup-buttons">
         @if (marker) {
             <div class="button"><div [ngClass]="{'hide': !isMarkerHidden, 'show': isMarkerHidden}" (click)="hideShow()"></div></div>
-            <div class="button"><div class="share"></div></div>
+        }
+        @if (shareUrl) {
+            <div class="button" (click)="share()"><div class="share"></div></div>
         }
         <div class="button" (click)="close()"><div class="close"></div></div>
     </div>

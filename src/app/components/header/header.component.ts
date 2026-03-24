@@ -1,28 +1,31 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { NgClass } from '@angular/common';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [TranslateModule, RouterModule],
+    imports: [TranslateModule, RouterModule, NgClass],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+    @ViewChild('container') container!: ElementRef;
+    @ViewChild('wrapper') wrapper!: ElementRef;
+
     public readonly avaliableLanguages: string[] = ["ua", "en", "ru", "pl", "fr", "de", "esp", "it", "cz", 'chn', 'jpn', 'kor', 'ar'];
     private readonly lastLanguageCacheKeyString: string = "language";
     private readonly defaultLocale: string = "en";
     public selectedLanguage: string = "";
+    public showShort: boolean = false;
 
     private languageChanged: boolean = false;
+    private resizeObserver: ResizeObserver;
 
     constructor(
         private translate: TranslateService,
         protected route: ActivatedRoute) {
-
     }
 
     public ngOnInit(): void {
@@ -54,6 +57,10 @@ export class HeaderComponent {
                 }
             }
         });
+    }
+
+    public ngOnDestroy() {
+        this.resizeObserver.disconnect();
     }
 
     public changeLanguage(event: any): void {

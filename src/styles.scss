@@ -1067,6 +1067,7 @@ app-compare {
             height: var(--size);
             width: var(--size);
             background-size: var(--size);
+            background-repeat: no-repeat;
         }
 
         &:hover {
@@ -1083,6 +1084,7 @@ app-compare {
 
         .hide {
             background-image: url(/assets/images/svg/interface/icons/hide.svg);
+            background-position-y: 50%;
         }
     }
 }

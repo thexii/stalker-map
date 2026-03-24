@@ -1,9 +1,9 @@
 import { TradeSection, TraderSupplyItem, TraderBuySellItem } from ".";
 import { CharacterProfile } from "../character-profile.model";
+import { ObjectAtLocation } from "../object-at-location.model";
 import { TraderDiscounts } from "./trader-discount.model";
 
-export class TraderModel {
-  public locationId: number;
+export class TraderModel extends ObjectAtLocation {
   public locationName: string;
   public faction: string;
   public money: number;
@@ -11,9 +11,6 @@ export class TraderModel {
   public sell: TradeSection<TraderBuySellItem>[];
   public supplies: TradeSection<TraderSupplyItem>[];
   public discounts: TraderDiscounts[];
-  public x: number;
-  public y: number;
-  public z: number;
   public profile: CharacterProfile;
   public infinitiveMoney: boolean;
   public isMedic: boolean;

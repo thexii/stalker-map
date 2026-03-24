@@ -2527,7 +2527,7 @@ export class MapComponent {
             );
 
             if (destLocation.isUnderground) {
-
+                canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
                 canvasMarker
                     .bindPopup(
                         (stalker: any) =>
