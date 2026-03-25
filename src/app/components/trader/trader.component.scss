@@ -1,5 +1,4 @@
-
-$trader-columns: 8;
+$trader-columns: 6;
 
 .trader-container {
   display: flex;
@@ -30,9 +29,9 @@ $trader-columns: 8;
 
 .trader-container {
     .inventory-container {
-    min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
-    display: flex;
-    justify-content: center;
+        min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
+        display: flex;
+        justify-content: center;
     }
 
     .inventory {

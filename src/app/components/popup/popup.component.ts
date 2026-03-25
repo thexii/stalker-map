@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
-import { TranslateModule } from "@ngx-translate/core";
+import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { MapService } from "../../services/map.service";
+import { ToastService } from "../../services/toast.service";
 import { HiddenMarker } from "../../models/hidden-marker.model";
 import { NgClass } from "@angular/common";
 
@@ -20,11 +21,13 @@ export class PopupComponent {
 
     public isMarkerHidden: boolean = false;
 
-    constructor(private mapService: MapService) {
+    constructor(
+        private mapService: MapService,
+        private translate: TranslateService,
+        private toast: ToastService,
+    ) {}
 
-    }
-
-    private async ngOnInit(): Promise<void> {
+    private ngOnInit(): void {
         this.isMarkerHidden = this.mapService.isMarkHidden(this.marker);
     }
 
@@ -48,10 +51,39 @@ export class PopupComponent {
     }
 
     public async share(): Promise<void> {
-        if (navigator.share) {
-            await navigator.share({
-                url: this.shareUrl
-            });
+        const url = this.shareUrl;
+        if (!url) {
+            return;
+        }
+
+        if (this.shouldUseNativeShare() && typeof navigator.share === "function") {
+            try {
+                await navigator.share({ url });
+            } catch (err) {
+                if ((err as Error)?.name !== "AbortError") {
+                    await this.copyShareUrlToClipboard(url);
+                }
+            }
+            return;
+        }
+
+        await this.copyShareUrlToClipboard(url);
+    }
+
+    private shouldUseNativeShare(): boolean {
+        const nav = navigator as Navigator & { userAgentData?: { mobile?: boolean } };
+        if (nav.userAgentData?.mobile === true) {
+            return true;
+        }
+        return /iPhone|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    private async copyShareUrlToClipboard(url: string): Promise<void> {
+        try {
+            await navigator.clipboard.writeText(url);
+            this.toast.show(this.translate.instant("shareLinkCopied"));
+        } catch {
+            // Clipboard may be unavailable (non-secure context, permissions).
         }
     }
 

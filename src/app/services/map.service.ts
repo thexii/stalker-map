@@ -181,64 +181,9 @@ export class MapService {
         return componentRef;
     }
 
-    public onMarkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, contentMaker: (container: ViewContainerRef, isPopup: boolean) => any): void {
-        let isPopup: boolean = !(window.innerWidth < 500 && bottomSheetContainer != null);
-        let currentContainer = isPopup ? container : bottomSheetContainer.contentContainer;
-
-        if (!isPopup) {
-            bottomSheetContainer.contentContainer.clear();
-        }
-
-        const content = contentMaker(currentContainer, isPopup);
-
-        if (isPopup) {
-            this.bindPopup(map, event.target, content);
-        }
-        else {
-            bottomSheetContainer.show();
-        }
-    }
-
-    public handleStalkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
-        let isPopup: boolean = !(window.innerWidth < 500 && bottomSheetContainer != null);
-        let currentContainer = isPopup ? container : bottomSheetContainer.contentContainer;
-
-        const content = this.createStalkerContent(
-            event.target, 
-            currentContainer, 
-            game, 
-            items, 
-            mapConfig, 
-            isUnderground,
-            !isPopup
-        );
-
-        if (isPopup) {
-            this.bindPopup(map, event.target, content);
-        }
-        else {
-            bottomSheetContainer.contentContainer.clear();
-            bottomSheetContainer.show();
-        }
-    }
-
-    public setCellSize(value: number | string, game: string): void {
-        document.documentElement.style.setProperty(
-            '--inventory-cell-size',
-            `${value}px`
-        );
-    }
-
-    public createMechanicPopup(mechanicMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]) {
-        let mechanic: Mechanic = mechanicMarker.properties.mechanic;
-
-        mechanicMarker.getPopup().on('remove', function () {
-            mechanicMarker.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
+    public createMechanicContent(marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]): ComponentRef<MechanicComponent> {
         const componentRef = container.createComponent(MechanicComponent);
-        componentRef.instance.mechanic = mechanic;
+        componentRef.instance.mechanic = marker.properties.mechanic;
         componentRef.instance.game = game;
         componentRef.instance.allItems = allItems;
         componentRef.instance.rankSetting = mapConfig.rankSetting;
@@ -247,28 +192,54 @@ export class MapService {
         componentRef.instance.upgrades = upgrades;
         componentRef.instance.upgradeProperties = upgradeProperties;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
     }
 
-    private bindPopup(map: any, marker: any, innerContentRef: ComponentRef<any>) {
+    private getMapWrapperWidth(): number {
+        const wrapper = document.getElementById('map-wrapper');
+        if (wrapper) {
+            return Math.ceil(wrapper.getBoundingClientRect().width);
+        }
+
+        return window.innerWidth;
+    }
+
+    private preparePopup(innerContentRef: ComponentRef<any>): { popupComponentRef: ComponentRef<PopupComponent>, calculatedWidth: number } {
         const popupComponentRef = createComponent(PopupComponent, {
             environmentInjector: this.environmentInjector,
             projectableNodes: [[innerContentRef.location.nativeElement]]
         });
+
+        // 1. Спочатку ініціалізуємо внутрішній контент (StalkerComponent тощо),
+        // щоб там відпрацював ngOnInit і з'явився hiddenMarker
+        innerContentRef.changeDetectorRef.detectChanges();
+
+        // 2. Тепер передаємо дані через setInput (це надійніше в Angular 21)
+        if (innerContentRef.instance.hiddenMarker) {
+            popupComponentRef.setInput('marker', innerContentRef.instance.hiddenMarker);
+        }
+        if (innerContentRef.instance.shareUrl) {
+            popupComponentRef.setInput('shareUrl', innerContentRef.instance.shareUrl);
+        }
+
         this.appRef.attachView(popupComponentRef.hostView);
 
+        // 3. Робимо заміри ширини
         const tempContainer = document.createElement('div');
         tempContainer.style.cssText = 'position:fixed;visibility:hidden;pointer-events:none;top:0;left:0;';
         document.body.appendChild(tempContainer);
         tempContainer.appendChild(popupComponentRef.location.nativeElement);
 
-        innerContentRef.changeDetectorRef.detectChanges();
+        // 4. Фінальна перевірка змін для попапа
         popupComponentRef.changeDetectorRef.detectChanges();
 
         const calculatedWidth = Math.ceil(popupComponentRef.location.nativeElement.getBoundingClientRect().width);
-
         document.body.removeChild(tempContainer);
 
+        return { popupComponentRef, calculatedWidth };
+    }
+
+    private openPreparedPopup(map: any, marker: any, innerContentRef: ComponentRef<any>, popupComponentRef: ComponentRef<PopupComponent>, calculatedWidth: number): void {
         const popup = L.popup({
             minWidth: calculatedWidth,
             maxWidth: calculatedWidth,
@@ -276,12 +247,10 @@ export class MapService {
             autoPanPadding: [20, 20],
             closeButton: false
         })
-        .setLatLng(marker.getLatLng())
-        .setContent(popupComponentRef.location.nativeElement);
+            .setLatLng(marker.getLatLng())
+            .setContent(popupComponentRef.location.nativeElement);
 
         popupComponentRef.instance.popup = popup;
-        popupComponentRef.instance.marker = innerContentRef.instance.hiddenMarker;
-        popupComponentRef.instance.shareUrl = innerContentRef.instance.shareUrl;
 
         popup.on('remove', () => {
             popupComponentRef.destroy();
@@ -291,8 +260,109 @@ export class MapService {
         popup.openOn(map);
     }
 
+    public onMarkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, contentMaker: (container: ViewContainerRef, isPopup: boolean) => any): void {
+        const canUseSheet = bottomSheetContainer != null && (bottomSheetContainer as any).contentContainer != null;
+        let wantsPopup: boolean = !(window.innerWidth < 500 && canUseSheet);
+
+        if (!wantsPopup) {
+            bottomSheetContainer.contentContainer.clear();
+            contentMaker(bottomSheetContainer.contentContainer, false);
+            bottomSheetContainer.show();
+            return;
+        }
+
+        // Створюємо контент для popup (щоб коректно поміряти реальну ширину)
+        const popupContent = contentMaker(container, true) as ComponentRef<any>;
+
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(popupContent);
+        const mapWrapperWidth = this.getMapWrapperWidth();
+
+        if (canUseSheet && calculatedWidth > mapWrapperWidth) {
+            // Якщо popup виходить за ширину контейнера карти - замінюємо на sheet.
+            this.appRef.detachView(popupComponentRef.hostView);
+            popupComponentRef.destroy();
+
+            container.clear();
+
+            bottomSheetContainer.contentContainer.clear();
+            contentMaker(bottomSheetContainer.contentContainer, false);
+            bottomSheetContainer.show();
+            return;
+        }
+
+        this.openPreparedPopup(map, event.target, popupContent, popupComponentRef, calculatedWidth);
+    }
+
+    public handleStalkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
+        const canUseSheet = bottomSheetContainer != null && (bottomSheetContainer as any).contentContainer != null;
+        let wantsPopup: boolean = !(window.innerWidth < 500 && canUseSheet);
+
+        if (!wantsPopup) {
+            bottomSheetContainer.contentContainer.clear();
+            this.createStalkerContent(
+                event.target,
+                bottomSheetContainer.contentContainer,
+                game,
+                items,
+                mapConfig,
+                isUnderground,
+                true // bottom sheet mode
+            );
+            bottomSheetContainer.show();
+            return;
+        }
+
+        // Створюємо контент для popup (щоб коректно поміряти реальну ширину)
+        const popupContent = this.createStalkerContent(
+            event.target,
+            container,
+            game,
+            items,
+            mapConfig,
+            isUnderground,
+            false // popup mode
+        );
+
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(popupContent);
+        const mapWrapperWidth = this.getMapWrapperWidth();
+
+        if (canUseSheet && calculatedWidth > mapWrapperWidth) {
+            this.appRef.detachView(popupComponentRef.hostView);
+            popupComponentRef.destroy();
+
+            container.clear();
+
+            bottomSheetContainer.contentContainer.clear();
+            this.createStalkerContent(
+                event.target,
+                bottomSheetContainer.contentContainer,
+                game,
+                items,
+                mapConfig,
+                isUnderground,
+                true // bottom sheet mode
+            );
+            bottomSheetContainer.show();
+            return;
+        }
+
+        this.openPreparedPopup(map, event.target, popupContent, popupComponentRef, calculatedWidth);
+    }
+
+    public setCellSize(value: number | string, game: string): void {
+        document.documentElement.style.setProperty(
+            '--inventory-cell-size',
+            `${value}px`
+        );
+    }
+
+    private bindPopup(map: any, marker: any, innerContentRef: ComponentRef<any>) {
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(innerContentRef);
+        this.openPreparedPopup(map, marker, innerContentRef, popupComponentRef, calculatedWidth);
+    }
+
     private createPopup(): void {
-        
+
     }
 
     public createStuffTooltip(stuff: any) {
@@ -766,7 +836,7 @@ export class MapService {
                 inputTop.id = `layer-top-${layerId}`;
                 labelInsideCheck.setAttribute('for', inputTop.id);
 
-                if (!obj.layer.isUnderground && this.options.overlaysListTop  && obj.layer.addToTop !== false) {
+                if (!obj.layer.isUnderground && this.options.overlaysListTop && obj.layer.addToTop !== false) {
                     obj.layer.topId = this._overlaysListTop.childNodes.length;
                     this._overlaysListTop.appendChild(subHeaderPanel);
                 }

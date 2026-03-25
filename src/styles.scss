@@ -1088,3 +1088,28 @@ app-compare {
         }
     }
 }
+
+.app-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    z-index: 100000;
+    padding: 12px 20px;
+    background: rgba(20, 22, 24, 0.95);
+    color: #e8e8e8;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    max-width: min(90vw, 360px);
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.app-toast--visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

@@ -2075,20 +2075,8 @@ export class MapComponent {
                     offset: [0, 50],
                 }
             );
-
-            let minWidth = 1300;
-
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createMechanicPopup(stalker, this.container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties),
-                    { 
-                        className: 'mechanic-popup leaflet-popup-content-fit-content',
-                        autoPan: true,      // Карта сама підсунеться, щоб балун вліз у вікно
-                        offset: L.point(0, -10), // Зміщення по (X, Y). 0 по X гарантує центрику по горизонталі
-                     }
-                )
-                .openPopup();
+            
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createMechanicContent(e.target, container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties)));
         }
 
 

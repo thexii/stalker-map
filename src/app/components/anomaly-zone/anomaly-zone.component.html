@@ -1,9 +1,9 @@
-<div>
+<div class="header">
     @if (anomalZone.name) {
-        <div class="popup header">{{ anomalZone.name | translate }}</div>
+        <div class="popup-name">{{ anomalZone.name | translate }}</div>
     }
     @else {
-        <div class="popup header">{{ "anomaly-zone" | translate }}</div>
+        <div class="popup-name">{{ "anomaly-zone" | translate }}</div>
     }
 </div>
 

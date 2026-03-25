@@ -33,9 +33,9 @@ export class StalkerComponent {
 
     public inventory: StuffItem[];
 
-    constructor(private mapService: MapService) { }
+    constructor() { }
 
-    private async ngOnInit(): Promise<void> {
+    private ngOnInit(): void {
         if (this.stalker.inventoryItems?.length > 0) {
             this.inventory = [];
 

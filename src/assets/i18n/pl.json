@@ -46,6 +46,7 @@
     "trader": "Handlarz",
     "hideAll": "Ukryj wszystko",
     "markLink": "Skopiuj link",
+    "shareLinkCopied": "Link skopiowany do schowka.",
     "search": "Wyszukaj",
     "default_description": "Brak szczegółowych informacji.",
     "anomaliesCount": "Ilość anomalii: {{count}}",

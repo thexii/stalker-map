@@ -46,6 +46,7 @@
     "trader": "Торговець",
     "hideAll": "Сховати все",
     "markLink": "Посилання на мітку",
+    "shareLinkCopied": "Посилання скопійовано в буфер обміну.",
     "search": "Пошук",
     "default_description": "Детальна інформація відсутня.",
     "anomaliesCount": "Кількість аномалій: {{count}}",

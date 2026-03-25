@@ -46,6 +46,7 @@
     "trader": "Trader",
     "hideAll": "Hide all",
     "markLink": "Mark link",
+    "shareLinkCopied": "Link copied to clipboard.",
     "search": "Search",
     "default_description": "No data.",
     "anomaliesCount": "Number of anomalies: {{count}}",
