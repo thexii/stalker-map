@@ -22,9 +22,7 @@ import { GuideComponent } from '../guide-component/guide-component';
 import { TraderComponent } from '../trader.component/trader.component';
 import { HocStuffComponent } from '../hoc-stuff/hoc-stuff.component';
 import { Game } from '../../../models/game.model';
-
-declare const L: any;
-declare var markWidth: number;
+import { L, asStalkerMap, pixelCenter, StalkerCustomLayersControl, StalkerLayerGroup, StalkerMap, StalkerSearchControl } from '../../../leaflet/leaflet-setup';
 
 @Component({
     selector: 'app-map-hoc',
@@ -42,15 +40,15 @@ export class MapHocComponent {
     private readonly game: string = 'hoc';
     private gamedata: MapHoc;
     private mapConfig: MapConfig;
-    private map: any;
+    private map!: StalkerMap;
 
     private svgMarker: any;
     private canvasRenderer: any;
     private svgIcon: any;
-    private allLayers: any = [];
-    private searchContoller: any;
+    private allLayers: StalkerLayerGroup[] = [];
+    private searchContoller?: StalkerSearchControl;
     protected overlaysListTop: string = 'layers-control';
-    private layerContoller: any;
+    private layerContoller?: StalkerCustomLayersControl;
 
     private cellSizeUniqueName: string = 'hoc-cell-size';
 
@@ -95,8 +93,6 @@ export class MapHocComponent {
     }
 
     private async ngOnInit(): Promise<void> {
-        await this.mapService.initLeaflit();
-
         await Promise.all([
             this.loadLocales(this.translate.currentLang),
             this.loadItems(),
@@ -204,13 +200,16 @@ export class MapHocComponent {
             transformation: new L.Transformation(this.scaleFactor, 0, this.scaleFactor, 0),
         });
 
-        let center = [0, 0];
+        let center: L.LatLngExpression = [0, 0];
 
         if (gameConfig.mapBounds != null) {
-            center = [(gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0]) / 2, (gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1]) / 2]
+            center = pixelCenter(
+                gameConfig.mapBounds[1][0] - gameConfig.mapBounds[0][0],
+                gameConfig.mapBounds[1][1] - gameConfig.mapBounds[0][1]
+            );
         }
 
-        this.map = L.map('map', {
+        this.map = asStalkerMap(L.map('map', {
             center: center,
             zoom: gameConfig.startZoom,
             minZoom: gameConfig.minZoom,
@@ -219,12 +218,12 @@ export class MapHocComponent {
             markerZoomAnimation: !0,
             zoomAnimation: !0,
             zoomControl: !1,
-        });
+        }));
 
         this.map.scaleFactor = this.scaleFactor;
 
-        this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
-        this.map.attributionControl.addAttribution('<a href="https://github.com/joric">Tile maps by joric</a>');
+        this.map.attributionControl!.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
+        this.map.attributionControl!.addAttribution('<a href="https://github.com/joric">Tile maps by joric</a>');
 
         let baseLayers = [];
 
@@ -407,7 +406,7 @@ export class MapHocComponent {
         }
 
         this.translate.onLangChange.subscribe((i) => {
-            this.layerContoller.remove();
+            this.layerContoller?.remove();
             cellSizeControl.remove();
 
             let addRuler = false;
@@ -426,14 +425,15 @@ export class MapHocComponent {
                 this.translate.instant(x.name), x
             ]);
 
-            this.layerContoller = L.control.customLayers(
+            const layerController = L.control.customLayers(
                 Object.fromEntries(baseLayersControl),
                 Object.fromEntries(layersToControl),
                 { overlaysListTop: this.overlaysListTop }
-            );
-            this.layerContoller.searchName = 'layerControl';
-            this.layerContoller.isUnderground = false;
-            this.layerContoller.addTo(this.map);
+            ) as StalkerCustomLayersControl;
+            layerController.searchName = 'layerControl';
+            layerController.isUnderground = false;
+            layerController.addTo(this.map);
+            this.layerContoller = layerController;
             cellSizeControl.addTo(this.map);
 
             if (addRuler) {
@@ -452,13 +452,14 @@ export class MapHocComponent {
             this.translate.instant(x.name), x
         ]);
 
-        this.layerContoller = L.control.customLayers(
+        const layerController = L.control.customLayers(
             Object.fromEntries(baseLayersControl),
             Object.fromEntries(layersToControl),
             { overlaysListTop: this.overlaysListTop }
-        );
+        ) as StalkerCustomLayersControl;
 
-        this.layerContoller.addTo(this.map);
+        layerController.addTo(this.map);
+        this.layerContoller = layerController;
         cellSizeControl.addTo(this.map);
         ruler.addTo(this.map);
         this.createSearchController();
@@ -508,7 +509,7 @@ export class MapHocComponent {
                     throw ex;
                 }
             },
-        });
+        }) as StalkerSearchControl;
 
         this.searchContoller.on(
             'search:locationfound',
@@ -545,7 +546,7 @@ export class MapHocComponent {
                 slider.type = 'range';
                 slider.min = '50';
                 slider.max = '130';
-                slider.value = cellSize;
+                slider.value = String(cellSize);
                 slider.step = '10';
 
                 let itemModel = items.find(x => x.uniqueName == uniqueName);
@@ -569,20 +570,20 @@ export class MapHocComponent {
 
                 return container;
             }
-        });
+        } as any);
 
         // Функція-конструктор для зручності
-        L.control.slider = function (options: object) {
+        L.control.slider = function (options: L.SliderControlOptions) {
             return new L.Control.Slider(options);
-        };
+        } as any;
 
         return L.control.slider({
             position: 'topright',
-            onChange: (value: string) => {
-                this.mapService.setCellSize(value, 'hoc'); // Ваш існуючий метод
-                localStorage.setItem(this.cellSizeUniqueName, value);
+            onChange: (value: string | number) => {
+                this.mapService.setCellSize(String(value), 'hoc');
+                localStorage.setItem(this.cellSizeUniqueName, String(value));
             }
-        });
+        } as L.SliderControlOptions);
     }
 
     private addMarkers(): void {
@@ -748,38 +749,60 @@ export class MapHocComponent {
     }
 
     private addShapes() {
-        let shapeType = this.mapService.getShapeTypes();
+        // 1. Індексуємо типи фігур у Map для пошуку за O(1)
+        const shapeTypeMap = new Map(
+            this.mapService.getShapeTypes().map(t => [t.type, t])
+        );
 
-        for (let shapeCollection of this.gamedata.zones) {
-            let type = shapeType.find(x => x.type == shapeCollection.type);
+        for (const shapeCollection of this.gamedata.zones) {
+            const type = shapeTypeMap.get(shapeCollection.type);
 
-            if (type == null) {
-                console.error(shapeCollection.type);
+            if (!type) {
+                console.error(`Unknown shape type: ${shapeCollection.type}`);
                 continue;
             }
 
-            let polygons = [];
+            const layerFeatures: L.Layer[] = [];
+            const isFillsNotNull = type.fills != null;
 
-            for (let shape of shapeCollection.polygons) {
-                const coors: number[][] = Array.from({ length: Math.ceil(shape.coordinates.length / 2) }, (_, i) =>
-                    shape.coordinates.slice(i * 2, i * 2 + 2)
-                );
+            // 2. Оптимізована обробка полігонів
+            for (const shape of shapeCollection.polygons) {
+                const rawCoords = shape.coordinates;
+                const len = rawCoords.length;
+                const newCoors: [number, number][] = [];
 
-                let newCoors = coors.map(([x, z]) => [z, x]);
+                // Крок 2, міняємо місцями X та Z (які стають Lat/Lng) за один прохід
+                for (let i = 0; i < len; i += 2) {
+                    newCoors.push([rawCoords[i + 1], rawCoords[i]]);
+                }
 
-                let polygon = L.polygon(newCoors, { color: type.stroke, fill: type.fill });
+                const fillColor = isFillsNotNull ? (type.fills[shape.effectId] ?? type.fill) : type.fill;
 
-                polygons.push(polygon);
+                const polygon = L.polygon(newCoors as L.LatLngExpression[], {
+                    color: type.stroke,
+                    fillColor: fillColor, // Leaflet використовує fillColor для кольору заливки
+                    fill: !!fillColor
+                });
+
+                layerFeatures.push(polygon);
             }
 
-            for (let shape of shapeCollection.circles) {
-                let circle = L.circle([shape.z, shape.x], { radius: shape.radius, color: type.stroke, fill: type.fill });
+            // 3. Обробка кіл
+            for (const shape of shapeCollection.circles) {
+                const fillColor = isFillsNotNull ? (type.fills[shape.effectId] ?? type.fill) : type.fill;
 
-                polygons.push(circle);
+                const circle = L.circle([shape.z, shape.x], {
+                    radius: shape.radius,
+                    color: type.stroke,
+                    fillColor: fillColor,
+                    fill: !!fillColor
+                });
+
+                layerFeatures.push(circle);
             }
 
-            if (polygons.length > 0) {
-                this.addLayerToMap(L.layerGroup(polygons), type.name, false);
+            if (layerFeatures.length > 0) {
+                this.addLayerToMap(L.layerGroup(layerFeatures), type.name, false);
             }
         }
     }

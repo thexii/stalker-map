@@ -6,7 +6,7 @@
     module.exports = factory(require('leaflet'));
   }
   if (typeof window !== 'undefined' && window.L) {
-    window.L.Ruler = factory(L);
+    factory(window.L);
   }
 }(function (L) {
   "use strict";
@@ -142,19 +142,15 @@
           this._choice = true;
           this._toggleMeasure();
         }
-        console.log(this._clickedPoints)
       }
     },
     _calculateBearingAndDistance: function() {
       var f1 = this._clickedLatLong.lat, l1 = this._clickedLatLong.lng, f2 = this._movingLatLong.lat, l2 = this._movingLatLong.lng;
       var toRadian = Math.PI / 180;
-      // haversine formula
-      // bearing
       var y = Math.sin((l2-l1)*toRadian) * Math.cos(f2*toRadian);
       var x = Math.cos(f1*toRadian)*Math.sin(f2*toRadian) - Math.sin(f1*toRadian)*Math.cos(f2*toRadian)*Math.cos((l2-l1)*toRadian);
       var brng = Math.atan2(y, x)*((this.options.angleUnit.factor ? this.options.angleUnit.factor/2 : 180)/Math.PI);
       brng += brng < 0 ? (this.options.angleUnit.factor ? this.options.angleUnit.factor : 360) : 0;
-      // distance
 
       let unitFactor = this.options.lengthUnit.factor ? this.options.lengthUnit.factor : 1;
       var distance = Math.sqrt((f1 - f2) * (f1 - f2) + (l1 - l2) * (l1 - l2)) * unitFactor;

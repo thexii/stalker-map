@@ -30,17 +30,27 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet-search/dist/leaflet-search.src.css",
+              "node_modules/leaflet-search/dist/leaflet-search.mobile.src.css",
+              "src/app/leaflet/plugins/leaflet-ruler.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "leaflet",
+              "leaflet-search",
+              "leaflet-geometryutil",
+              "leaflet-arrowheads"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "1.2mb"
                 },
                 {
                   "type": "anyComponentStyle",
