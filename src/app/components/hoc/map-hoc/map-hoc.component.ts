@@ -262,20 +262,34 @@ export class MapHocComponent {
                     maxNativeZoom: 4,
                     noWrap: true
                 })
+            //D:\stalker-map\src\assets\images\s2\tiles\Mip_00\tile_2_0.png
+            let diegeticMap = L.tileLayer('/assets/images/s2/tiles/Mip_0{z}/tile_{y}_{x}.png',
+                {
+                    tileSize: tileSize * 4,
+                    zoomOffset: 0,
+                    minZoom: 0,
+                    maxZoom: 4,
+                    maxNativeZoom: 3,
+                    minNativeZoom: 3,
+                    noWrap: true
+                })
 
             inGameMap.ableToSearch = false;
             inGameMap.addToTop = false;
             rawGameMap.ableToSearch = false;
             rawGameMap.addToTop = false;
-
+            diegeticMap.ableToSearch = false;
+            diegeticMap.addToTop = false;
 
             rawGameMap.name = 'raw-map-label';
             inGameMap.name = 'in-game-map-label';
+            diegeticMap.name = 'diegetic-map-label';
 
             inGameMap.addTo(this.map);
 
             baseLayers.push(inGameMap);
             baseLayers.push(rawGameMap);
+            baseLayers.push(diegeticMap);
         }
 
         this.canvasRenderer = this.mapService.getCanvasRenderer();
