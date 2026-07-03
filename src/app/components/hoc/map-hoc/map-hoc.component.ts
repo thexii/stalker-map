@@ -631,6 +631,16 @@ export class MapHocComponent {
                 radius: 100
             },
             {
+                name: 'EMarkerType::Hub',
+                icon: new this.svgIcon({
+                    iconUrl:
+                        '/assets/images/s2/Markers/Texture_Camp_NotActive_General_Shadow.png',
+                    iconAnchor: [0, 0],
+                }),
+                isHub: true,
+                radius: 100
+            },
+            {
                 name: 'ESpawnType::LairSpawner',
                 icon: new this.svgIcon({
                     iconUrl:
@@ -667,7 +677,7 @@ export class MapHocComponent {
 
             let marker = new this.svgMarker(
                 [data.z, data.x],
-                { renderer: this.canvasRenderer, icon: icon, radius: icon.radius }
+                { renderer: this.canvasRenderer, icon: icon, radius: icon.isHub ? data.radius : icon.radius }
             );
 
             marker.name = data.title;
@@ -1113,6 +1123,11 @@ export class MapHocComponent {
                 }
                 else {
                     let icons = getIconAndFaction(data);
+
+                    if (!icons || icons.length == 0) {
+                        continue;
+                    }
+
                     icon = icons[0].icon;
                     title = icons[0].title;
                     desc = icons[0].faction;
@@ -1156,6 +1171,11 @@ export class MapHocComponent {
             }
             else {
                 let icons = getIconAndFaction(data);
+
+                if (!icons || icons.length == 0) {
+                    continue;
+                }
+
                 let shifts: number[][] = [];
 
                 if (icons.length == 2) {
@@ -1179,6 +1199,11 @@ export class MapHocComponent {
                     shifts.push([radius / 3, -radius / 6]);
                     shifts.push([-radius / 6, radius / 6]);
                     shifts.push([radius / 6, radius / 6]);
+                }
+
+                if (shifts.length == 0)
+                {
+                    continue;
                 }
 
                 for (let i = 0; i < icons.length; i++) {
@@ -1214,6 +1239,10 @@ export class MapHocComponent {
 
             for (let lair of data.lairs) {
                 let icon, desc;
+
+                if (!lair.faction) {
+                    continue;
+                }
 
                 if (lair.faction.includes('Neutrals') || lair.faction.includes('Diggers') || lair.faction.includes('ShevchenkoStalkers')) {
                     icon = stalkerCamp;
@@ -1860,7 +1889,7 @@ export class MapHocComponent {
             marker.feature.properties = {};
 
             let dataToSearch: string[] = [data.spawner, markers.length.toString()];
-            let config = this.gamedata.artefactSpawnerData.configs.find(
+            let config = this.gamedata.artefactSpawnerConfigs.find(
                 (x) => x.name == data.spawner
             );
 
@@ -1876,7 +1905,7 @@ export class MapHocComponent {
                         }
                     }
                 } else {
-                    let allArts = this.gamedata.artefactSpawnerData.artefacts;
+                    /*let allArts = this.items.artefacts;
 
                     if (
                         config.excludeRules &&
@@ -1895,7 +1924,7 @@ export class MapHocComponent {
                         if (item) {
                             dataToSearch.push(item.localeName);
                         }
-                    }
+                    }*/
                 }
             }
 
@@ -1935,8 +1964,8 @@ export class MapHocComponent {
 
         const componentRef = this.container.createComponent(ArtefactSpawnerPopupComponent);
         componentRef.instance.artefactSpawner = marker.data;
-        componentRef.instance.artefactSpawnerData =
-            this.gamedata.artefactSpawnerData;
+        componentRef.instance.artefactSpawnerConfigs =
+            this.gamedata.artefactSpawnerConfigs;
         componentRef.instance.items = this.items;
         /*componentRef.instance.anomalZone = zone.properties.zoneModel;
         componentRef.instance.game = game;

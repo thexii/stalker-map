@@ -14,7 +14,7 @@ import { ItemTooltipComponent } from '../../tooltips/item-tooltip/item-tooltip.c
 })
 export class ArtefactSpawnerPopupComponent {
   @Input() public artefactSpawner: ArtefactSpawner;
-  @Input() public artefactSpawnerData: ArtefactSpawnerConfig;
+  @Input() public artefactSpawnerConfigs: ArtefactSpawnerType[];
   @Input() public items: Item[];
 
   public config: ArtefactSpawnerType;
@@ -27,7 +27,7 @@ export class ArtefactSpawnerPopupComponent {
 
   private async ngOnInit(): Promise<void> {
     if (this.artefactSpawner.spawner) {
-      let config = this.artefactSpawnerData.configs.find(x => x.name == this.artefactSpawner.spawner);
+      let config = this.artefactSpawnerConfigs.find(x => x.name == this.artefactSpawner.spawner);
       if (config && config.settings && config.settings.length > 0) {
         this.artefacts = [];
 
@@ -39,15 +39,13 @@ export class ArtefactSpawnerPopupComponent {
             for (let art of config.listOfArtifacts) {
               let model = new ArtefactItem();
 
-              let artefact = this.artefactSpawnerData.artefacts.find(x => x.name == art);
               let item = this.items.find(x => x.uniqueName == art);
 
-              if (item && artefact) {
+              if (item) {
                 if (item.destroyOnPickup) {
                     continue;
                 }
 
-                model.artefact = artefact;
                 model.item = item;
                 anomalyArtefacts.push(model);
               }
@@ -57,7 +55,7 @@ export class ArtefactSpawnerPopupComponent {
           this.artefacts.push(anomalyArtefacts)
         }
         else {
-          let common = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Common');
+          /*let common = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Common');
           let uncommon = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Uncommon');
           let rare = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Rare');
           let epic = this.artefactSpawnerData.artefacts.filter(x => x.rarity == 'EArtifactRarity::Epic');
@@ -69,7 +67,7 @@ export class ArtefactSpawnerPopupComponent {
           this.createArtefactItems(common);
           this.createArtefactItems(uncommon);
           this.createArtefactItems(rare);
-          this.createArtefactItems(epic);
+          this.createArtefactItems(epic);*/
         }
 
         this.config = config;
