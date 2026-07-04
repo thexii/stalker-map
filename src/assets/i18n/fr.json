@@ -228,5 +228,10 @@
   "smart-paths": "Chemins des Stalkers",
   "artefact-ways": "Chemins des Artefacts",
   "level-changers": "Changeur de Niveau",
-  "mechanics": "Techniciens"
+  "mechanics": "Techniciens",
+  "dlcFilter": "Contenu DLC",
+  "dlc.None": "Jeu de base",
+  "dlc.Deluxe": "Édition Deluxe",
+  "dlc.PreOrder": "Précommande",
+  "dlc.Ultimate": "Édition Ultimate"
 }

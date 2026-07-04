@@ -297,7 +297,7 @@ input[type=checkbox]+label:before {
 }
 
 .inventory-item-image.hoc {
-  background-image: url(/assets/images/items/hoc_icon_equipment.png);
+  background-image: url(/assets/images/items/hoc_icon_equipment.webp);
   background-size: calc(var(--inventory-cell-size) * var(--item-width-in-cell));
 }
 
@@ -483,6 +483,54 @@ app-item-tooltip, app-upgrade-tooltip {
 
 .leaflet-control-slider-header {
     display: flex;
+}
+
+.leaflet-control-dlc-filter-container {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .leaflet-control-dlc-filter-content {
+        display: none;
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+    }
+}
+
+.leaflet-control-dlc-filter-header {
+    display: flex;
+}
+
+.leaflet-control .leaflet-control-dlc-filter-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.leaflet-control-dlc-filter-container:hover {
+    .leaflet-control-dlc-filter-content {
+        display: flex;
+    }
+}
+
+.dlc-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
 }
 
 .upgrade-property-icon {

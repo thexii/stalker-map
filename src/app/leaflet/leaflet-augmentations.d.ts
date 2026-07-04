@@ -82,6 +82,8 @@ declare module 'leaflet' {
         let Compare: any;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let StashFilter: any;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        let DlcFilter: any;
     }
 
     interface Transformation {
@@ -110,5 +112,7 @@ declare module 'leaflet' {
         function slider(options?: SliderControlOptions): any;
         function compare(opts?: ControlOptions): Control.Compare;
         function stashFilter(options?: StashFilterControlOptions): Control.StashFilter;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        function dlcFilter(): any;
     }
 }

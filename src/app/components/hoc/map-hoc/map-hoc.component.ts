@@ -51,6 +51,10 @@ export class MapHocComponent {
     private layerContoller?: StalkerCustomLayersControl;
 
     private cellSizeUniqueName: string = 'hoc-cell-size';
+    private dlcFilterLocalStorageKey: string = 'hoc-dlc-filter';
+    private dlcMarkers: any[] = [];
+    private dlcTypes: string[] = [];
+    private enabledDlcs: Set<string> = new Set();
 
     private richClasses: string[] = [
         'EItemType::Artifact',
@@ -363,11 +367,6 @@ export class MapHocComponent {
             this.gamedata.equipmentWidth.toString()
         );
 
-        document.documentElement.style.setProperty(
-            '--attachment-width-in-cell',
-            this.gamedata.attachmentsWidth.toString()
-        );
-
         let tempMap = this.map;
         let component = this;
         this.map.on('click', function (ev: any) {
@@ -389,8 +388,15 @@ export class MapHocComponent {
             //if (e.metaKey) {/*cmd is down*/}
         });
 
+        this.dlcTypes = this.collectDlcTypes();
+        this.enabledDlcs = this.loadEnabledDlcs();
+        this.applyDlcFilter();
+
         this.mapService.createCustomLayersControl();
         let cellSizeControl = this.createCellSizeChangerControl('Energetic_Limited', cellSize);
+        let dlcFilterControl = this.dlcTypes.some((t) => t !== 'None')
+            ? this.createDlcFilterControl()
+            : null;
 
         let layersToLayerController: any = [];
 
@@ -422,6 +428,10 @@ export class MapHocComponent {
         this.translate.onLangChange.subscribe((i) => {
             this.layerContoller?.remove();
             cellSizeControl.remove();
+            dlcFilterControl?.remove();
+            if (this.dlcTypes.some((t) => t !== 'None')) {
+                dlcFilterControl = this.createDlcFilterControl();
+            }
 
             let addRuler = false;
 
@@ -449,6 +459,7 @@ export class MapHocComponent {
             layerController.addTo(this.map);
             this.layerContoller = layerController;
             cellSizeControl.addTo(this.map);
+            dlcFilterControl?.addTo(this.map);
 
             if (addRuler) {
                 ruler.addTo(this.map)
@@ -475,6 +486,7 @@ export class MapHocComponent {
         layerController.addTo(this.map);
         this.layerContoller = layerController;
         cellSizeControl.addTo(this.map);
+        dlcFilterControl?.addTo(this.map);
         ruler.addTo(this.map);
         this.createSearchController();
 
@@ -538,6 +550,142 @@ export class MapHocComponent {
 
         this.map.addControl(this.searchContoller);
         this.configureSeo();
+    }
+
+    private normalizeDlc(dlc: string | null | undefined): string {
+        if (!dlc || dlc === 'None') {
+            return 'None';
+        }
+
+        return dlc;
+    }
+
+    private registerDlcMarker(marker: any, data: { dlc?: string | null }): void {
+        marker.dlc = this.normalizeDlc(data.dlc);
+        this.dlcMarkers.push(marker);
+    }
+
+    private collectDlcTypes(): string[] {
+        const types = new Set<string>();
+
+        for (const marker of this.dlcMarkers) {
+            types.add(marker.dlc);
+        }
+
+        return Array.from(types).sort((a, b) => {
+            if (a === 'None') {
+                return -1;
+            }
+
+            if (b === 'None') {
+                return 1;
+            }
+
+            return a.localeCompare(b);
+        });
+    }
+
+    private loadEnabledDlcs(): Set<string> {
+        const stored = localStorage.getItem(this.dlcFilterLocalStorageKey);
+
+        if (stored) {
+            try {
+                const parsed = JSON.parse(stored) as Record<string, boolean>;
+                const enabled = this.dlcTypes.filter((dlc) => parsed[dlc] !== false);
+
+                if (enabled.length > 0) {
+                    return new Set(enabled);
+                }
+            } catch {
+                // ignore invalid stored state
+            }
+        }
+
+        return new Set(this.dlcTypes);
+    }
+
+    private saveDlcFilterState(): void {
+        const state: Record<string, boolean> = {};
+
+        for (const dlc of this.dlcTypes) {
+            state[dlc] = this.enabledDlcs.has(dlc);
+        }
+
+        localStorage.setItem(this.dlcFilterLocalStorageKey, JSON.stringify(state));
+    }
+
+    private applyDlcFilter(): void {
+        for (const marker of this.dlcMarkers) {
+            marker.doNotRender = !this.enabledDlcs.has(marker.dlc);
+
+            if (typeof marker.redraw === 'function') {
+                marker.redraw();
+            }
+        }
+    }
+
+    private getDlcLabel(dlc: string): string {
+        const key = `dlc.${dlc}`;
+        const translated = this.translate.instant(key);
+
+        return translated !== key ? translated : dlc;
+    }
+
+    private createDlcFilterControl(): any {
+        const translate = this.translate;
+        const component = this;
+        const dlcTypes = this.dlcTypes;
+
+        if (!L.Control.DlcFilter) {
+            L.Control.DlcFilter = L.Control.extend({
+                options: {
+                    position: 'topright',
+                },
+
+                onAdd: function () {
+                    const container = L.DomUtil.create('div', 'leaflet-control-dlc-filter-container');
+                    const header = L.DomUtil.create('div', 'leaflet-control-dlc-filter-header', container);
+                    const toggle = L.DomUtil.create('a', 'leaflet-control-dlc-filter-toggle', header);
+                    toggle.title = translate.instant('dlcFilter');
+                    toggle.innerHTML = 'DLC';
+                    const content = L.DomUtil.create('div', 'leaflet-control-dlc-filter-content', header);
+
+                    for (const dlc of dlcTypes) {
+                        const item = L.DomUtil.create('label', 'dlc-filter-item', content);
+                        const checkbox = L.DomUtil.create('input', '', item) as HTMLInputElement;
+                        checkbox.type = 'checkbox';
+                        checkbox.checked = component.enabledDlcs.has(dlc);
+
+                        const label = L.DomUtil.create('span', '', item);
+                        label.innerHTML = component.getDlcLabel(dlc);
+
+                        L.DomEvent.on(checkbox, 'change', (e: Event) => {
+                            const target = e.target as HTMLInputElement;
+
+                            if (target.checked) {
+                                component.enabledDlcs.add(dlc);
+                            } else {
+                                component.enabledDlcs.delete(dlc);
+                            }
+
+                            component.saveDlcFilterState();
+                            component.applyDlcFilter();
+                        });
+                    }
+
+                    L.DomEvent.disableClickPropagation(container);
+                    L.DomEvent.disableScrollPropagation(container);
+
+                    return container;
+                },
+            } as any);
+
+            L.control.dlcFilter = function () {
+                return new L.Control.DlcFilter();
+            } as any;
+        }
+
+        return L.control.dlcFilter();
     }
 
     private createCellSizeChangerControl(uniqueName: string, cellSize: number): any {
@@ -728,6 +876,8 @@ export class MapHocComponent {
                 className: 's2-tooltip',
                 offset: new Point(0, 50),
             });
+
+            this.registerDlcMarker(marker, data);
 
             if (icon.isHub) {
                 hubs.push(marker);
@@ -1168,6 +1318,8 @@ export class MapHocComponent {
                     className: 's2-tooltip',
                     offset: new Point(0, 50),
                 });
+
+                this.registerDlcMarker(marker, data);
             }
             else {
                 let icons = getIconAndFaction(data);
@@ -1208,7 +1360,7 @@ export class MapHocComponent {
 
                 for (let i = 0; i < icons.length; i++) {
                     let isMutant = mutants.includes(data.lairs[i].faction);
-                    let marker = this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], isMutant, index);
+                    let marker = this.createMarker(data.x + shifts[i][0], data.z + shifts[i][1], icons[i], isMutant, index, data);
 
                     if (isMutant) {
                         mutantLairs.push(marker);
@@ -1314,7 +1466,7 @@ export class MapHocComponent {
         }
     }
 
-    private createMarker(x: number, y: number, markerData: any, isMutant: boolean, index: number): any {
+    private createMarker(x: number, y: number, markerData: any, isMutant: boolean, index: number, locationData: { dlc?: string | null }): any {
         let dataToSearch: string[] = [];
 
         if (isMutant) {
@@ -1353,6 +1505,8 @@ export class MapHocComponent {
             offset: new Point(0, 50),
         });
 
+        this.registerDlcMarker(marker, locationData);
+
         return marker;
     }
 
@@ -1378,6 +1532,7 @@ export class MapHocComponent {
             );
             marker.name = this.translate.instant('psychic');
 
+            this.registerDlcMarker(marker, data);
             markers.push(marker);
         }
 
@@ -1476,6 +1631,8 @@ export class MapHocComponent {
                     ),
                 { className: 'leaflet-popup-content-fit-content' }
             );
+
+            this.registerDlcMarker(marker, data);
 
             if (isRich) {
                 richMarkers.push(marker);
@@ -1693,6 +1850,8 @@ export class MapHocComponent {
                 marker.bindPopup((p: any) => this.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: 410, maxWidth: 1000, className: 'leaflet-popup-content-fit-content' });
             }
 
+            this.registerDlcMarker(marker, data);
+
             if (isRich) {
                 richMarkers.push(marker)
             }
@@ -1794,6 +1953,7 @@ export class MapHocComponent {
                 { className: 'leaflet-popup-content-fit-content' }
             );
 
+            this.registerDlcMarker(marker, data);
             array.push(marker);
         }
 
@@ -1857,6 +2017,7 @@ export class MapHocComponent {
                 { className: 'leaflet-popup-content-fit-content' }
             );
 
+            this.registerDlcMarker(marker, data);
             guiders.push(marker);
         }
 
@@ -1948,6 +2109,7 @@ export class MapHocComponent {
                 { minWidth: 910, maxWidth: 928, className: 'leaflet-popup-content-fit-content' }
             );
 
+            this.registerDlcMarker(marker, data);
             markers.push(marker);
         }
 

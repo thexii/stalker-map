@@ -267,5 +267,10 @@
     "circles": "Кола таборів",
     "Rat": "Крысы",
     "rich-stuff": "Ценный хабар",
-    "grid": "Координатная сетка"
+    "grid": "Координатная сетка",
+    "dlcFilter": "DLC контент",
+    "dlc.None": "Базовая игра",
+    "dlc.Deluxe": "Deluxe Edition",
+    "dlc.PreOrder": "Предзаказ",
+    "dlc.Ultimate": "Ultimate Edition"
 }

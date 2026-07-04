@@ -10365,30 +10365,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPM_MagDefault",
-      "GunPM_Screw"
-    ],
     "id": 0,
     "uniqueName": "GunPM_HG",
     "localeName": "sid_items_GunPM_HG_name",
@@ -10411,35 +10387,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunUDP_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunUDP_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunUDP_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunUDP_HG",
     "localeName": "sid_items_GunUDP_HG_name",
@@ -10462,53 +10409,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAPB_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAPB_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAPB",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunAPB_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunAPB_HG",
     "localeName": "sid_items_GunAPB_HG_name",
@@ -10531,47 +10431,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM10_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM10_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailM10",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunM10_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunM10_HG",
     "localeName": "sid_items_GunM10_HG_name",
@@ -10594,33 +10453,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailRhino",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunRhino_HG",
     "localeName": "sid_items_GunRhino_HG_name",
@@ -10643,54 +10475,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailKora",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunKora_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunKora_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunKora_MagDefault",
-      "GunPM_Screw"
-    ],
     "id": 0,
     "uniqueName": "GunKora_HG",
     "localeName": "sid_items_myriflepack_GunKora_HG_name",
@@ -10713,30 +10497,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPM_MagDefault",
-      "GunPM_Screw"
-    ],
     "id": 0,
     "uniqueName": "GuardGunPM_HG",
     "localeName": "sid_items_GunPM_HG_name",
@@ -10759,53 +10519,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailViper",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunViper_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunViper_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunViper_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunViper_PP",
     "localeName": "sid_items_GunViper_PP_name",
@@ -10828,54 +10541,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAKU_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAKU",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "AKU_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "AKU_DefaultMuz",
-      "GunAKU_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunAKU_PP",
     "localeName": "sid_items_GunAKU_PP_name",
@@ -10898,59 +10563,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_TopRail",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunBucket_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunBucket_PP",
     "localeName": "sid_items_GunBucket_PP_name",
@@ -10973,84 +10585,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_01",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunIntegral_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunIntegral_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunIntegral_FrontExtension",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunIntegral_MagDefault",
-      "Ironsights_01"
-    ],
     "id": 0,
     "uniqueName": "GunIntegral_PP",
     "localeName": "sid_items_GunIntegral_PP_name",
@@ -11073,71 +10607,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Zubr_SinMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunZubr_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunZubr_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailZubr",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunZubr_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunZubr_PP",
     "localeName": "sid_items_GunZubr_PP_name",
@@ -11160,60 +10629,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "AK74_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "AK74_DefaultMuz",
-      "GunAK74_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunAK74_ST",
     "localeName": "sid_items_GunAK74_ST_name",
@@ -11236,67 +10651,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_03",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M16_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunM16_MagDefault",
-      "Ironsights_03",
-      "M16_DefaultMuz"
-    ],
     "id": 0,
     "uniqueName": "GunM16_ST",
     "localeName": "sid_items_GunM16_ST_name",
@@ -11319,116 +10673,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "G37_ScopeRail",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_BuckLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RailPicatiniGP37",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGP37_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "G37_IronSight",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "G37_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "G37_BottomRail",
-      "G37_DefaultMuz",
-      "G37_ScopeRail",
-      "GunGP37_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunG37_ST",
     "localeName": "sid_items_GunG37_ST_name",
@@ -11451,91 +10695,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_02",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunFora_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Fora_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Fora_DefaultMuz",
-      "GunFora_MagDefault",
-      "Ironsights_02"
-    ],
     "id": 0,
     "uniqueName": "GunFora_ST",
     "localeName": "sid_items_GunFora_ST_name",
@@ -11558,85 +10717,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "DefaultScopeGrim",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailGrim",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGrim_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGrim_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGrim_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "DefaultScopeGrim",
-      "GunGrim_GLaunch",
-      "GunGrim_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunGrim_ST",
     "localeName": "sid_items_GunGrim_ST_name",
@@ -11659,42 +10739,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Gvintar_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGvintar_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGvintar_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunGvintar_MagDefault",
-      "Gvintar_Scope"
-    ],
     "id": 0,
     "uniqueName": "GunGvintar_ST",
     "localeName": "sid_items_GunGvintar_ST_name",
@@ -11717,103 +10761,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_02",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_BuckLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunKharod_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunKharod_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Kharod_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunKharod_MagDefault",
-      "Ironsights_02",
-      "Kharod_DefaultMuz"
-    ],
     "id": 0,
     "uniqueName": "GunKharod_ST",
     "localeName": "sid_items_GunKharod_ST_name",
@@ -11836,59 +10783,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailLavina",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunLavina_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunLavina_ST",
     "localeName": "sid_items_GunLavina_ST_name",
@@ -11911,103 +10805,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDnipro_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDnipro_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_02",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Dnipro_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Dnipro_DefaultMuz",
-      "GunDnipro_MagDefault",
-      "Ironsights_02"
-    ],
     "id": 0,
     "uniqueName": "GunDnipro_ST",
     "localeName": "sid_items_GunDnipro_ST_name",
@@ -12030,53 +10827,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPKP_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPKP_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPKP_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailPKP",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPKP_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunPKP_MG",
     "localeName": "sid_items_GunPKP_MG_name",
@@ -12099,8 +10849,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunObrez_SG",
     "localeName": "sid_items_GunObrez_SG_name",
@@ -12123,8 +10871,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunTOZ_SG",
     "localeName": "sid_items_GunTOZ_SG_name",
@@ -12147,54 +10893,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M860LongGrip",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M860ShortGrip",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM860_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "M860LongGrip",
-      "TopRailM860"
-    ],
     "id": 0,
     "uniqueName": "GunM860_SG",
     "localeName": "sid_items_GunM860_SG_name",
@@ -12217,45 +10915,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailSPSA",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunSPSA_SG",
     "localeName": "sid_items_GunSPSA_SG_name",
@@ -12278,77 +10937,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailD12",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunD12_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunD12_SG",
     "localeName": "sid_items_GunD12_SG_name",
@@ -12371,53 +10959,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_01",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Ram2_SinMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Ironsights_01"
-    ],
     "id": 0,
     "uniqueName": "GunRam2_SG",
     "localeName": "sid_items_GunRam2_SG_name",
@@ -12440,45 +10981,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailSPSA",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GuardGunSPSA_SG",
     "localeName": "sid_items_GunSPSA_SG_name",
@@ -12501,55 +11003,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "SVDM_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSVDM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "SVDM_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunSVDM_MagDefault",
-      "SVDM_DefaultMuz",
-      "SVDM_Scope"
-    ],
     "id": 0,
     "uniqueName": "GunSVDM_SP",
     "localeName": "sid_items_GunSVDM_SP_name",
@@ -12572,84 +11025,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X8Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunMark_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunMark_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Mark_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailMark",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunMark_MagDefault",
-      "Mark_DefaultMuz"
-    ],
     "id": 0,
     "uniqueName": "GunMark_SP",
     "localeName": "sid_items_GunMark_SP_name",
@@ -12672,55 +11047,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "M701_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_BuckLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM701_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "BottomRailM701",
-      "GunM701_MagDefault",
-      "M701_Scope"
-    ],
     "id": 0,
     "uniqueName": "GunM701_SP",
     "localeName": "sid_items_GunM701_SP_name",
@@ -12743,73 +11069,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSVU_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "SVU_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunSVU_MagDefault",
-      "SVU_DefaultMuz",
-      "SVU_Scope"
-    ],
     "id": 0,
     "uniqueName": "GunSVU_SP",
     "localeName": "sid_items_GunSVU_SP_name",
@@ -12832,41 +11091,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunThreeLine_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunBucket_TopRail",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunThreeLine_Scope"
-    ],
     "id": 0,
     "uniqueName": "GunThreeLine_SP",
     "localeName": "sid_items_myriflepack_GunThreeLine_SP_name",
@@ -12889,31 +11113,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Gauss_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGauss_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGauss_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gauss_DefaultMuz",
-      "Gauss_Scope",
-      "GunGauss_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "GunGauss_SP",
     "localeName": "sid_items_GunGauss_SP_name",
@@ -12936,8 +11135,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunRpg7_GL",
     "localeName": "sid_items_GunRpg7_GL_name",
@@ -12960,63 +11157,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Sofmod_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunG37V2_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_BuckLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RailPicatiniGP37",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunG37V2_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "G37_BottomRail",
-      "GunG37V2_MagPaired",
-      "GunG37V2_Scope",
-      "RailPicatiniGP37",
-      "Sofmod_Silen"
-    ],
     "id": 0,
     "uniqueName": "GunG37V2_ST",
     "localeName": "sid_items_supack_Gun_GP37V2_AR_name",
@@ -13039,42 +11179,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "NightStalker_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailKora",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunNightStalker_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunNightStalker_MagIncreased",
-      "NightStalker_Silen"
-    ],
     "id": 0,
     "uniqueName": "GunNightStalker_HG",
     "localeName": "sid_items_myriflepack_Gun_NightStalker_HG_name",
@@ -13097,30 +11201,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPM_MagDefault",
-      "GunPM_Screw"
-    ],
     "id": 0,
     "uniqueName": "Gun_ProjectY_HG",
     "localeName": "sid_items_Gun_ProjectY_HG_name",
@@ -13143,31 +11223,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPM_MagDefault",
-      "GunPM_Screw",
-      "RU_Silen_1"
-    ],
     "id": 0,
     "uniqueName": "Gun_Star_HG",
     "localeName": "sid_items_Gun_Star_HG_name",
@@ -13190,42 +11245,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_GStreet_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailM10",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_GStreet_MagIncreased",
-      "RU_SinMuz_2"
-    ],
     "id": 0,
     "uniqueName": "Gun_GStreet_HG",
     "localeName": "sid_items_Gun_GStreet_HG_name",
@@ -13248,66 +11267,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Zubr_SinMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_RatKiller_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunZubr_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailZubr",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_RatKiller_MagDefault",
-      "Zubr_SinMuz"
-    ],
     "id": 0,
     "uniqueName": "Gun_RatKiller_SMG",
     "localeName": "sid_items_Gun_RatKiller_SMG_name",
@@ -13330,48 +11289,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSpitfire_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailAKU",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "AKU_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "AKU_DefaultMuz",
-      "GunSpitfire_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "Gun_Spitfire_SMG",
     "localeName": "sid_items_Gun_Spitfire_SMG_name",
@@ -13394,60 +11311,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "AK74_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "AK74_DefaultMuz",
-      "GunAK74_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "Gun_Combatant_AR",
     "localeName": "sid_items_Gun_Combatant_AR_name",
@@ -13470,49 +11333,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDrowned_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "AK74_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDrowned_GLaunch",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "AK74_DefaultMuz",
-      "GunDrowned_GLaunch",
-      "GunDrowned_MagPaired"
-    ],
     "id": 0,
     "uniqueName": "Gun_Drowned_AR",
     "localeName": "sid_items_Gun_Drowned_AR_name",
@@ -13535,91 +11355,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_02",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDecider_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Fora_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Fora_DefaultMuz",
-      "GunDecider_MagDefault",
-      "Ironsights_02"
-    ],
     "id": 0,
     "uniqueName": "Gun_Decider_AR",
     "localeName": "sid_items_Gun_Decider_AR_name",
@@ -13642,57 +11377,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Sofmod_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_Sotnyk_ColimScope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSotnyk_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunAK74_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunDnipro_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Sotnyk_ColimScope",
-      "GunSotnyk_MagDefault",
-      "HP_Laser_1",
-      "RU_Grip_1",
-      "Sofmod_Silen"
-    ],
     "id": 0,
     "uniqueName": "Gun_Sotnyk_AR",
     "localeName": "sid_items_Gun_Sotnyk_AR_name",
@@ -13715,49 +11399,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Sharpshooter_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M701_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunM16_MagDefault",
-      "M701_Scope",
-      "Sharpshooter_Silen"
-    ],
     "id": 0,
     "uniqueName": "Gun_Sharpshooter_AR",
     "localeName": "sid_items_Gun_Sharpshooter_AR_name",
@@ -13780,50 +11421,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Sofmod_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M701_Colim_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "EN_Grip_2",
-      "GunM16_MagDefault",
-      "M701_Colim_Scope",
-      "Sofmod_Silen"
-    ],
     "id": 0,
     "uniqueName": "Gun_SOFMOD_AR",
     "localeName": "sid_items_Gun_SOFMOD_AR_name",
@@ -13846,85 +11443,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "DefaultScopeGrim",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailGrim",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_ColimScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunS15_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGrim_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGrim_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunGrim_GLaunch",
-      "GunS15_MagDefault",
-      "RU_AutMuz_2"
-    ],
     "id": 0,
     "uniqueName": "Gun_S15_AR",
     "localeName": "sid_items_Gun_S15_AR_name",
@@ -13947,38 +11465,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ram2_SinMuz_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M701_Colim_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "EN_Grip_1",
-      "EN_Laser_1",
-      "M701_Colim_Scope",
-      "Ram2_SinMuz_1"
-    ],
     "id": 0,
     "uniqueName": "Gun_Texas_SG",
     "localeName": "sid_items_Gun_Texas_SG_name",
@@ -14001,43 +11487,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_AutMuz_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_Silence_ColimScope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunTank_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailPKP",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Silence_ColimScope",
-      "GunTank_MagLarge",
-      "TopRailPKP"
-    ],
     "id": 0,
     "uniqueName": "Gun_Tank_MG",
     "localeName": "sid_items_Gun_Tank_MG_name",
@@ -14060,74 +11509,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "M701_Colim_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunMark_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunMark_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Mark_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailMark",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunMark_MagDefault",
-      "M701_Colim_Scope",
-      "Mark_DefaultMuz",
-      "TopRailMark"
-    ],
     "id": 0,
     "uniqueName": "Gun_Partner_SR",
     "localeName": "sid_items_Gun_Partner_SR_name",
@@ -14150,73 +11531,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "SVU_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSVU_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunSVU_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "SVU_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunSVU_MagDefault",
-      "SVU_DefaultMuz",
-      "SVU_Scope"
-    ],
     "id": 0,
     "uniqueName": "Gun_Whip_SR",
     "localeName": "sid_items_Gun_Whip_SR_name",
@@ -14239,55 +11553,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "M701_Colim_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_BuckLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM701_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "BottomRailM701",
-      "GunM701_MagDefault",
-      "M701_Colim_Scope"
-    ],
     "id": 0,
     "uniqueName": "Gun_Cavalier_SR",
     "localeName": "sid_items_Gun_Cavalier_SR_name",
@@ -14310,8 +11575,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "GunTOZ_Gonta",
     "localeName": "sid_items_GunTOZ_SG_name",
@@ -14448,54 +11711,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M860LongGrip",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M860ShortGrip",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM860_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "M860LongGrip",
-      "TopRailM860"
-    ],
     "id": 0,
     "uniqueName": "Gun_ShotgunMonolith_SG",
     "localeName": "sid_items_Gun_ShotgunMonolith_SG_name",
@@ -14518,67 +11733,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_03",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_3",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM16_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "M16_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GLaunch_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunM16_MagDefault",
-      "Ironsights_03",
-      "M16_DefaultMuz"
-    ],
     "id": 0,
     "uniqueName": "Gun_RifleMonolith_AR",
     "localeName": "sid_items_Gun_RifleMonolith_AR_name",
@@ -14601,30 +11755,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunPM_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Silen_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunPM_MagDefault",
-      "GunPM_Screw"
-    ],
     "id": 0,
     "uniqueName": "Gun_PistolMonolith_HG",
     "localeName": "sid_items_Gun_PistolMonolith_HG_name",
@@ -14647,68 +11777,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_01",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_Silence_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunIntegral_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunIntegral_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Silence_Silen",
-      "GunIntegral_FrontExtension",
-      "GunIntegral_MagDefault",
-      "Ironsights_01"
-    ],
     "id": 0,
     "uniqueName": "Gun_Logarithm_SMG",
     "localeName": "sid_items_Gun_Logarithm_SMG_name",
@@ -14731,36 +11799,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "M701_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_SinMuz_5",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunM701_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunM701_MagDefault",
-      "M701_Scope"
-    ],
     "id": 0,
     "uniqueName": "Gun_Zvirolov_SR",
     "localeName": "sid_items_Gun_Zvirolov_SR_name",
@@ -14783,59 +11821,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunLavina_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailLavina",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunLavina_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "Gun_Gabion_AR",
     "localeName": "sid_items_Gun_Gabion_AR_name",
@@ -14976,31 +11961,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Gvintar_Scope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunVeteran_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunGvintar_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Veteran_ConversionKit",
-      "GunVeteran_MagDefault",
-      "Gvintar_Scope"
-    ],
     "id": 0,
     "uniqueName": "Gun_Veteran_AR",
     "localeName": "sid_items_Gun_Veteran_AR_name",
@@ -15023,8 +11983,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": null,
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "Deluxe_GunAK74_ST",
     "localeName": "sid_items_Deluxe_GunAK74_ST_name",
@@ -15105,21 +12063,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": null,
     "id": 0,
     "uniqueName": "Gun_ModelSpecial_HG",
     "localeName": "sid_items_Gun_ModelSpecial_HG_name",
@@ -15142,53 +12085,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "EN_Silen_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "TopRailViper",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunViper_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunViper_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "GunViper_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "Gun_SMGMonolith_SMG",
     "localeName": "sid_items_Gun_SMGMonolith_SMG_name",
@@ -15211,80 +12107,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "Ironsights_02",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Sofmod_Silen",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_GoloScope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X2Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_X4Scope_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "EN_Laser_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunNovator_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunFora_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Fora_DefaultMuz",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Novator_ConversionKit",
-      "GunNovator_MagDefault",
-      "Ironsights_02",
-      "Sofmod_Silen"
-    ],
     "id": 0,
     "uniqueName": "Gun_Novator_AR",
     "localeName": "sid_items_Gun_Novator_AR_name",
@@ -15307,60 +12129,6 @@
     "$type": "hocWeapon",
     "ammoPackCount": 0,
     "fireInterval": 0,
-    "compatibleAttachments": [
-      {
-        "id": 0,
-        "uniqueName": "RU_SinMuz_4",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "Gun_Silence_ColimScope",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "RU_Grip_1",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "HP_Laser_2",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagDefault",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagIncreased",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagPaired",
-        "gridX": 0,
-        "gridY": 0
-      },
-      {
-        "id": 0,
-        "uniqueName": "GunD12_MagLarge",
-        "gridX": 0,
-        "gridY": 0
-      }
-    ],
-    "preinstalledAttachments": [
-      "Gun_Silence_ColimScope",
-      "GunD12_MagDefault"
-    ],
     "id": 0,
     "uniqueName": "Gun_Margach_SG",
     "localeName": "sid_items_Gun_Margach_SG_name",

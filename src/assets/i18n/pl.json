@@ -269,5 +269,10 @@
     "circles": "Koła obozów",
     "Rat": "Szczury",
     "rich-stuff": "Cenny łup",
-    "grid": "Siatka"
+    "grid": "Siatka",
+    "dlcFilter": "Zawartość DLC",
+    "dlc.None": "Gra podstawowa",
+    "dlc.Deluxe": "Edycja Deluxe",
+    "dlc.PreOrder": "Przedpremierowa",
+    "dlc.Ultimate": "Edycja Ultimate"
 }
