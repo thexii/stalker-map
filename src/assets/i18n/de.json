@@ -60,6 +60,7 @@
 
   "hideAll": "Alle ausblenden",
   "markLink": "Link markieren",
+  "shareLinkCopied": "Link in die Zwischenablage kopiert.",
   "search": "Suche",
   "default_description": "Keine Daten.",
 
@@ -261,5 +262,10 @@
   "gar_stalker_evening_trader": "Flohmarkt-Abendhändler",
   "gar_stalker_night_trader": "Flohmarkt-Nachthändler",
   "gar_quest_liberate_conc_camp_done": "Stalker vom Banditenlager am Fahrzeugfriedhof befreit",
-  "red_forest_underground_trader": "Händler in einer Mine im Roten Wald"
+  "red_forest_underground_trader": "Händler in einer Mine im Roten Wald",
+  "dlcFilter": "DLC-Inhalt",
+  "dlc.None": "Basis-Spiel",
+  "dlc.Deluxe": "Deluxe Edition",
+  "dlc.PreOrder": "Vorbestellung",
+  "dlc.Ultimate": "Ultimate Edition"
 }

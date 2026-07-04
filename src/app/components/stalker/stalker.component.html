@@ -1,43 +1,58 @@
-<div class="popup">
-    <stalker-profile [profile]="stalker.profile" [game]="game.gameStyle" [money]="stalker.money" [rankSetting]="rankSetting"></stalker-profile>
-    <div class="stalker-profile">
-        <div>{{ stalker.profile.bio | translate}}</div>
-    </div>
-    @if (inventory && inventory.length > 0) {
-        <div class="inventory-columns-7 inventory">
-            @for (stuffItem of inventory; track stuffItem) {
-                <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
-                    <div class="item-additional-info">
-                        @if (stuffItem.count > 1) {
-                            <div class="inventory-item-count">x{{stuffItem.count}}</div>
-                        }
-
-                        @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
-                            <div class="inventory-item-upgrade"></div>
-                        }
-                    </div>
-                    <div class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
-                        @if (stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000) {
-                            <div class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
-                        }
-
-                        @if (stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000) {
-                            <div class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
-                        }
-
-                        @if (stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000) {
-                            <div class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
-                        }
-                    </div>
-                </div>
-            }
+@if (isBottomSheet) {
+    <div class="bottom-sheet-container">
+        <div class="stalker-bio">
+            <div class="stalker-name stalker-icon icon-{{stalker.profile.faction}}">{{ stalker.profile.name | translate}}</div>
+            <div class="stalker-avatar {{game.gameStyle}}"
+            [ngStyle]="{'width': stalker.profile.iconWidth + 'px', 'height': stalker.profile.iconHeight + 'px', 'background-position': 'left ' + (-stalker.profile.iconX) + 'px top ' + (-stalker.profile.iconY) + 'px'}">
         </div>
-    }
-</div>
-<div class="bottom">
-    <div class="button url-button" (click)="copyLink()">
-        <span>{{ 'markLink' | translate}}</span>
+            <div class="stats">{{stalker.profile.rank}}, {{stalker.money}} RU</div>
+        </div>
+        @if (inventory && inventory.length > 0) {
+            <div class="inventory-container">
+                <ng-container *ngTemplateOutlet="inventoryContainer; context: {items: inventory, columns: 0}"></ng-container>
+            </div>
+        }
     </div>
-    <app-hide-unhide
-        [marker]="{lat: stalker.z, lng: stalker.x, layerName: 'stalkers', game: game.uniqueName, isUnderground: isUnderground}"></app-hide-unhide>
-</div>
+}
+@else {
+    <div class="popup">
+        <stalker-profile [profile]="stalker.profile" [game]="game.gameStyle" [money]="stalker.money" [rankSetting]="rankSetting"></stalker-profile>
+        <div class="stalker-profile">
+            <div>{{ stalker.profile.bio | translate}}</div>
+        </div>
+        @if (inventory && inventory.length > 0) {
+            <ng-container *ngTemplateOutlet="inventoryContainer; context: {items: inventory, columns: 7}"></ng-container>
+        }
+    </div>
+}
+
+<ng-template #inventoryContainer let-items="items" let-columns="columns">
+    <div class="inventory" [ngClass]="{'inventory-columns-{{columns}}': columns > 0}">
+        @for (stuffItem of inventory; track stuffItem) {
+            <div tooltip [component]="itemTooltipComponent" [componentData]="{item: stuffItem.item}" class="inventory-item inventory-item-width-{{stuffItem.item.width}} inventory-item-height-{{stuffItem.item.height}}">
+                <div class="item-additional-info">
+                    @if (stuffItem.count > 1) {
+                        <div class="inventory-item-count">x{{stuffItem.count}}</div>
+                    }
+
+                    @if (stuffItem.item.installedUpgrades && stuffItem.item.installedUpgrades.length > 0) {
+                        <div class="inventory-item-upgrade"></div>
+                    }
+                </div>
+                <div class="inventory-item-image {{this.game.gameStyle}} inventory-item-x-{{stuffItem.item.gridX}} inventory-item-y-{{stuffItem.item.gridY}}">
+                    @if (stuffItem.item.hasScope && stuffItem.item.scopeX > -1000 && stuffItem.item.scopeY > -1000) {
+                        <div class="wpn_addon scope" [style.left.px]="stuffItem.item.scopeX" [style.top.px]="stuffItem.item.scopeY"></div>
+                    }
+
+                    @if (stuffItem.item.hasSilencer && stuffItem.item.silencerX > -1000 && stuffItem.item.silencerY > -1000) {
+                        <div class="wpn_addon silencer" [style.left.px]="stuffItem.item.silencerX" [style.top.px]="stuffItem.item.silencerY"></div>
+                    }
+
+                    @if (stuffItem.item.hasGrenadeLauncher && stuffItem.item.grenadeLauncherX > -1000 && stuffItem.item.grenadeLauncherY > -1000) {
+                        <div class="wpn_addon grenade-launcher" [style.left.px]="stuffItem.item.grenadeLauncherX" [style.top.px]="stuffItem.item.grenadeLauncherY"></div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</ng-template>

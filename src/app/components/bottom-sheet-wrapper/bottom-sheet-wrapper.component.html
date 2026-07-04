@@ -1,0 +1,19 @@
+<div class="sheet-container" [class.is-dragging]="isDragging" [class.visible]="isVisible"
+    [style.transform]="transformStyle">
+
+    <div class="sheet-header" (touchstart)="onTouchStart($event)" (mousedown)="onMouseDown($event)">
+        <div class="drag-handle"></div>
+    </div>
+
+    <div class="sheet-body">
+        <ng-container #dynamicContent></ng-container>
+
+        <ng-content></ng-content>
+    </div>
+
+    <div class="popup-buttons">
+        <div class="button"><div class="hide"></div></div>
+        <div class="button"><div class="share"></div></div>
+        <div class="button" (click)="closeSheet()"><div class="close"></div></div>
+    </div>
+</div>

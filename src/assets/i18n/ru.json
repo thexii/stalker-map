@@ -45,6 +45,7 @@
     "anomalyArtMaxCount": "Максимум артефактов: {{count}}",
     "anomalyZoneArtMaxCount": "Маскимум артефактов на зону: {{count}}",
     "markLink": "Ссылка на метку",
+    "shareLinkCopied": "Ссылка скопирована в буфер обмена.",
     "st_name_wrenched": "«Выверт»",
     "st_name_fault": "«Разлом»",
     "st_name_burnt_farmstead": "Сгоревший хутор",
@@ -266,5 +267,10 @@
     "circles": "Кола таборів",
     "Rat": "Крысы",
     "rich-stuff": "Ценный хабар",
-    "grid": "Координатная сетка"
+    "grid": "Координатная сетка",
+    "dlcFilter": "DLC контент",
+    "dlc.None": "Базовая игра",
+    "dlc.Deluxe": "Deluxe Edition",
+    "dlc.PreOrder": "Предзаказ",
+    "dlc.Ultimate": "Ultimate Edition"
 }

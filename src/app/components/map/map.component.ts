@@ -27,14 +27,13 @@ import { HiddenMarker } from '../../models/hidden-marker.model';
 import { CompareComponent } from '../compare/compare.component';
 import { isDevMode } from '@angular/core';
 import { Game } from '../../models/game.model';
-
-declare const L: any;
-declare var markWidth: number;
+import { BottomSheetWrapperComponent } from "../bottom-sheet-wrapper/bottom-sheet-wrapper.component";
+import { L, asLatLngBounds, asLatLngExpressions, asStalkerLayerGroup, asStalkerMap, findLayerMarker, hasLevelChangerProperties, pixelBounds, pixelCenter, StalkerCustomLayersControl, StalkerLayerGroup, StalkerLocationsLayer, StalkerMap, StalkerMarker, StalkerSearchControl } from '../../leaflet/leaflet-setup';
 
 @Component({
     selector: 'app-map',
     standalone: true,
-    imports: [HeaderComponent, TranslateModule],
+    imports: [HeaderComponent, TranslateModule, BottomSheetWrapperComponent],
     templateUrl: './map.component.html',
     styleUrls: [
         './map.component.inventory.base.scss',
@@ -45,8 +44,8 @@ declare var markWidth: number;
     encapsulation: ViewEncapsulation.None,
 })
 export class MapComponent {
-    @ViewChild('dynamicComponents', { read: ViewContainerRef })
-    container: ViewContainerRef;
+    @ViewChild('dynamicComponents', { read: ViewContainerRef }) container: ViewContainerRef;
+    @ViewChild('bottomSheet') bottomSheet!: BottomSheetWrapperComponent;
 
     public readonly game: Game;
 
@@ -71,18 +70,18 @@ export class MapComponent {
     ];
 
     protected gamedata: Map;
-    protected map: any;
-    protected locations: any;
-    protected canvasLayer: any;
-    protected layers: any[] = [];
+    protected map!: StalkerMap;
+    protected locations!: StalkerLocationsLayer;
+    protected canvasLayer: L.Layer | null = null;
+    protected layers: StalkerLayerGroup[] = [];
     protected items: Item[];
     protected lootBoxConfig: LootBoxConfig;
     protected upgrades: ItemUpgrade[];
     protected upgradeProperties: UpgradeProperty[];
     protected mapConfig: MapConfig;
     protected svgIcon: any;
-    protected searchContoller: any;
-    protected layerContoller: any;
+    protected searchContoller?: StalkerSearchControl;
+    protected layerContoller?: StalkerCustomLayersControl;
     protected mapInitialized: boolean = false;
     protected markersToSearch: any[] = [];
     public undergroundMarkerToSearch: any[] = [];
@@ -187,7 +186,7 @@ export class MapComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    private onResize(event: any) {
+    public onResize(event: any) {
         let vh = event.target.outerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -208,8 +207,6 @@ export class MapComponent {
         if (dialog) {
             dialog.showModal(); // Opens a modal
         }
-
-        await this.mapService.initLeaflit();
 
         await Promise.all([
             this.loadLocales(this.translate.currentLang),
@@ -403,10 +400,7 @@ export class MapComponent {
     }
 
     private async ngOnDestroy(): Promise<void> {
-        if (this.map) {
-            this.map.remove();
-            this.map = null;
-        }
+        this.map?.remove();
     }
 
     private loadMap(gameData: Map, gameConfig: MapConfig): void {
@@ -417,8 +411,8 @@ export class MapComponent {
             transformation: new L.Transformation(gameConfig.kx ?? 1, 0, -1, 0),
         });
 
-        this.map = L.map('map', {
-            center: [gameData.heightInPixels / 2, gameData.widthInPixels / 2],
+        this.map = asStalkerMap(L.map('map', {
+            center: pixelCenter(gameData.heightInPixels, gameData.widthInPixels),
             zoom: gameConfig.startZoom,
             minZoom: gameConfig.minZoom,
             maxZoom: gameConfig.maxZoom,
@@ -426,14 +420,14 @@ export class MapComponent {
             markerZoomAnimation: !0,
             zoomAnimation: !0,
             zoomControl: !1
-        });
+        }));
 
-        var transformation = this.map.options.crs.transformation;
+        var transformation = this.map.options.crs!.transformation;
         console.log(transformation._a, transformation._b, transformation._c, transformation._d);
 
         this.map.scaleFactor = 1.5;
 
-        this.map.attributionControl.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
+        this.map.attributionControl!.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
 
         this.mapService.setMapComponent(this);
 
@@ -441,13 +435,7 @@ export class MapComponent {
 
         this.createCompareControl();
 
-        //this.createStashFilter();
-
-        let bounds = [
-            [0, 0]
-        ];
-
-        bounds.push([this.gamedata.heightInPixels, this.gamedata.widthInPixels]);
+        const bounds = pixelBounds(this.gamedata.heightInPixels, this.gamedata.widthInPixels);
 
         L.imageOverlay(`/assets/images/maps/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
         this.map.fitBounds(bounds);
@@ -556,10 +544,11 @@ export class MapComponent {
         }
 
         let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
-        this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl), { overlaysListTop: this.overlaysListTop });
-        this.layerContoller.searchName = "layerControl";
-        this.layerContoller.isUnderground = false;
-        this.layerContoller.addTo(this.map)
+        const layerController = L.control.customLayers(null, Object.fromEntries(layersToControl), { overlaysListTop: this.overlaysListTop }) as StalkerCustomLayersControl;
+        layerController.searchName = "layerControl";
+        layerController.isUnderground = false;
+        layerController.addTo(this.map);
+        this.layerContoller = layerController;
         //L.control.compare({ position: 'topright' }).addTo(this.map);
 
         //L.control.stashFilter({ gameCategories: itemsTypes, categoriesConfig: this.mapConfig.itemsCategoriesSettings, layers: this.layers }).addTo(this.map);
@@ -609,7 +598,7 @@ export class MapComponent {
         this.translate.onLangChange.subscribe(i => {
             let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
 
-            this.layerContoller.remove();
+            this.layerContoller?.remove();
             let addRuler = false;
 
             if (ruler) {
@@ -617,10 +606,11 @@ export class MapComponent {
                 addRuler = true;
             }
 
-            this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl), { overlaysListTop: this.overlaysListTop });
-            this.layerContoller.searchName = "layerControl";
-            this.layerContoller.isUnderground = false;
-            this.layerContoller.addTo(this.map)
+            const layerController = L.control.customLayers(null, Object.fromEntries(layersToControl), { overlaysListTop: this.overlaysListTop }) as StalkerCustomLayersControl;
+            layerController.searchName = "layerControl";
+            layerController.isUnderground = false;
+            layerController.addTo(this.map);
+            this.layerContoller = layerController;
 
             if (addRuler) {
                 ruler = this.addRuler();
@@ -640,16 +630,26 @@ export class MapComponent {
         this.route.queryParams.subscribe((h: any) => {
             if (h.lat != null && h.lng != null) {
                 if (h.underground > 0) {
-                    let levelChangers = this.layers.find(x => x.name == 'level-changers');
-                    let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.levelChanger.destinationLocationId == h.underground);
+                    const levelChangers = this.layers.find(x => x.name == 'level-changers');
+                    if (!levelChangers?._layers) {
+                        console.error(`cant find underground mark! (${h.lat},${h.lng},${h.type},${h.underground})`);
+                        return;
+                    }
 
-                    if (levelChanger) {
-                        this.map.flyTo(levelChanger._latlng, this.map.getMaxZoom());
+                    const levelChanger = findLayerMarker(
+                        levelChangers,
+                        (marker) => hasLevelChangerProperties(marker.properties)
+                            && marker.properties.levelChanger.destinationLocationId == h.underground
+                    );
 
-                        levelChanger.properties.markerToSearch = {};
-                        levelChanger.properties.markerToSearch.lat = +h.lat;
-                        levelChanger.properties.markerToSearch.lng = +h.lng;
-                        levelChanger.properties.markerToSearch.type = h.type;
+                    if (levelChanger && hasLevelChangerProperties(levelChanger.properties)) {
+                        this.map.flyTo(levelChanger.getLatLng(), this.map.getMaxZoom());
+
+                        levelChanger.properties.markerToSearch = {
+                            lat: +h.lat,
+                            lng: +h.lng,
+                            type: h.type,
+                        };
 
                         levelChanger.openPopup();
                     }
@@ -689,7 +689,8 @@ export class MapComponent {
                     }
                 }
             } else {
-                this.map.setView([bounds[1][0] / 2, bounds[1][1] / 2])
+                const boundsTuple = bounds as L.LatLngTuple[];
+                this.map.setView(pixelCenter(boundsTuple[1][0], boundsTuple[1][1]))
             }
         });
 
@@ -739,27 +740,37 @@ export class MapComponent {
                     throw ex;
                 }
             },
-        });
+        }) as StalkerSearchControl;
 
         this.searchContoller._handleUndergroundMark = (loc: any, self: any) => {
             let location = loc.layer.undergroundLocation;
 
-            let levelChangers = this.layers.find(x => x.name == 'level-changers');
-            let levelChanger: any = Object.values(levelChangers._layers).find((x: any) => x.properties.destination == location.uniqueName);
+            const levelChangers = this.layers.find(x => x.name == 'level-changers');
+            if (!levelChangers?._layers) {
+                console.error(`cant find level changer for ${location.uniqueName}`);
+                return;
+            }
 
-            if (levelChanger) {
-                self._moveToLocation(levelChanger._latlng, '', self._map)
-                levelChanger.properties.markerToSearch = loc;
-                let destinationLocation = this.gamedata.locations.find(x => x.id == levelChanger.properties.levelChanger.destinationLocationId) as Location;
+            const levelChanger = findLayerMarker(
+                levelChangers,
+                (marker) => marker.properties.destination == location.uniqueName
+            );
+
+            if (levelChanger && hasLevelChangerProperties(levelChanger.properties)) {
+                const levelChangerProperties = levelChanger.properties;
+                self._moveToLocation(levelChanger.getLatLng(), '', self._map)
+                levelChangerProperties.markerToSearch = loc;
+                let destinationLocation = this.gamedata.locations.find(x => x.id == levelChangerProperties.levelChanger.destinationLocationId) as Location;
 
                 if (this.openedUndergroundPopup) {
                     if (this.openedUndergroundPopup.component.location.id == destinationLocation.id) {
-                        if (levelChanger.properties.markerToSearch) {
+                        const markerToSearch = levelChangerProperties.markerToSearch;
+                        if (markerToSearch?.layer) {
                             this.openedUndergroundPopup.component.markerToSearch = new MarkerToSearch();
-                            this.openedUndergroundPopup.component.markerToSearch.lat = levelChanger.properties.markerToSearch.lat;
-                            this.openedUndergroundPopup.component.markerToSearch.lng = levelChanger.properties.markerToSearch.lng;
-                            this.openedUndergroundPopup.component.markerToSearch.type = levelChanger.properties.markerToSearch.layer.properties.typeUniqueName;
-                            levelChanger.properties.markerToSearch = undefined;
+                            this.openedUndergroundPopup.component.markerToSearch.lat = markerToSearch.lat;
+                            this.openedUndergroundPopup.component.markerToSearch.lng = markerToSearch.lng;
+                            this.openedUndergroundPopup.component.markerToSearch.type = markerToSearch.layer.properties.typeUniqueName ?? '';
+                            levelChangerProperties.markerToSearch = undefined;
                             this.openedUndergroundPopup.component.goToMarker();
                             return;
                         }
@@ -826,7 +837,7 @@ export class MapComponent {
             onRemove: function (map: any) {
                 // Nothing to do here
             }
-        });
+        } as any);
 
         L.control.compare = function (opts: any) {
             return new L.Control.Compare(opts);
@@ -1027,7 +1038,7 @@ export class MapComponent {
                     }
                 });*/
             },
-        });
+        } as any);
 
         // Фабричний метод для створення контролу
         L.control.stashFilter = function (options: any) {
@@ -1056,7 +1067,7 @@ export class MapComponent {
             onRemove: function (map: any) {
                 // Nothing to do here
             }
-        });
+        } as any);
     }
 
     private addRuler(): any {
@@ -1088,7 +1099,7 @@ export class MapComponent {
             },
         };
 
-        ruler = L.control.ruler(options);
+        ruler = L.control.ruler(options as L.RulerControlOptions);
         ruler.addTo(this.map);
 
         return ruler;
@@ -1111,10 +1122,10 @@ export class MapComponent {
                 locationImage = `/assets/images/maps/${this.game.gameStyle}/map_${location.uniqueName}.png`;
             }
 
-            let locationBounds = [
+            const locationBounds = asLatLngBounds([
                 [location.y1, location.x1],
                 [location.y2, location.x2]
-            ];
+            ]);
             let locationImageOverlay = L.imageOverlay(locationImage, locationBounds, {
                 interactive: !0,
                 className: 'location-on-map',
@@ -1126,7 +1137,7 @@ export class MapComponent {
             locationsOnMap.push(locationImageOverlay);
         }
 
-        this.locations = L.layerGroup(locationsOnMap);
+        this.locations = L.layerGroup(locationsOnMap) as StalkerLocationsLayer;
         this.locations.locations = Object.values(locationsOnMap);
         this.locations.addTo(this.map);
     }
@@ -1165,7 +1176,7 @@ export class MapComponent {
             points += `, ${firstPoint[0]},${firstPoint[1]}`
 
             svgElement.innerHTML = `<polyline fill="none" stroke="#e53c35" stroke-width="2" points="${points}" />`;
-            var svgElementBounds = [[minY, minX], [maxY, maxX]];
+            var svgElementBounds = asLatLngBounds([[minY, minX], [maxY, maxX]]);
             L.svgOverlay(svgElement, svgElementBounds).addTo(this.map);
         }
     }
@@ -1341,10 +1352,8 @@ export class MapComponent {
                         offset: new Point(0, 50),
                     });
 
-                    let widht = 300;
-
-                    stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, false), { minWidth: widht }).openPopup();
-
+                    stuff.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStashContent(e.target, container, this.game, this.items, false, isPopup)));
+        
                     if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                         markersToHide.push(stuff);
                     }
@@ -1474,8 +1483,9 @@ export class MapComponent {
                     offset: [0, 50],
                 }
             );
-            lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false), { minWidth: 300 }).openPopup(),
-                markers.push(lootBoxMarker);
+
+            lootBoxMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createLootBoxContent(e.target, container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, false)));
+            markers.push(lootBoxMarker);
         }
 
         this.addLayerToMap(L.layerGroup(markers), lootBoxType.uniqueName, lootBoxType.ableToSearch);
@@ -1601,7 +1611,7 @@ export class MapComponent {
 
                 let newCoors = coors.map(([x, z]) => [z, x]);
 
-                let polygon = L.polygon(newCoors, {color: type.stroke, fill: type.fill});
+                let polygon = L.polygon(asLatLngExpressions(newCoors), {color: type.stroke, fill: type.fill});
 
                 polygons.push(polygon);
             }
@@ -1704,9 +1714,7 @@ export class MapComponent {
                 searchFields.push(anomalyZoneIcon.uniqueName);
                 searchFields.push(location.uniqueName);
 
-                canvasMarker.feature = {};/* = {
-          properties: { search: searchFields.join(', ') },
-        };*/
+                canvasMarker.feature = {};
                 canvasMarker.feature.properties = {};
                 this.createTranslatableProperty(
                     canvasMarker.feature.properties,
@@ -1745,9 +1753,9 @@ export class MapComponent {
                 }
 
                 let locationFromL = this.locations.locations.find(
-                    (x: { id: any }) => x.id == zone.locationId
+                    (x) => x.id == zone.locationId
                 );
-                if (location) {
+                if (locationFromL) {
                     canvasMarker.properties.locationUniqueName = locationFromL.uniqueName;
                     canvasMarker.properties.locationName = locationFromL.name;
                 }
@@ -1766,11 +1774,7 @@ export class MapComponent {
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
 
-            canvasMarker
-                .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, false), {
-                    minWidth: 300,
-                })
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
         }
 
         try {
@@ -1844,7 +1848,6 @@ export class MapComponent {
             ableToSearch: true,
             icon: new this.svgIcon({
                 iconSize: [4, 4],
-                className: 'mark-container stalker-mark-2',
                 animate: false,
                 iconUrl: '/assets/images/svg/marks/trader.svg',
                 iconSizeInit: [2, 2],
@@ -1858,7 +1861,6 @@ export class MapComponent {
 
             icon:  new this.svgIcon({
                 iconSize: [4, 4],
-                className: 'mark-container stalker-mark-1.5',
                 animate: false,
                 iconUrl: '/assets/images/svg/marks/medic.svg',
                 iconSizeInit: [1.5, 1.5],
@@ -1911,13 +1913,8 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (trader: any) =>
-                        this.mapService.createTraderPopup(trader, this.gamedata.traders, canvasMarker, this.container, this.game, this.items, this.mapConfig),
-                    { maxWidth: 2000 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createTraderContent(e.target, this.gamedata.traders, container, this.game, this.items, this.mapConfig, isPopup)));
+        
         }
 
         this.addLayerToMap(L.layerGroup(markers), traderIcon.uniqueName, traderIcon.ableToSearch);
@@ -2023,13 +2020,7 @@ export class MapComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, false),
-                    { maxWidth: 500 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createStalkerContent(e.target, container, this.game, this.items, this.mapConfig, false, !isPopup)));
         }
 
 
@@ -2096,20 +2087,8 @@ export class MapComponent {
                     offset: [0, 50],
                 }
             );
-
-            let minWidth = 1300;
-
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createMechanicPopup(stalker, this.container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties),
-                    { 
-                        className: 'mechanic-popup leaflet-popup-content-fit-content',
-                        autoPan: true,      // Карта сама підсунеться, щоб балун вліз у вікно
-                        offset: L.point(0, -10), // Зміщення по (X, Y). 0 по X гарантує центрику по горизонталі
-                     }
-                )
-                .openPopup();
+            
+            canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createMechanicContent(e.target, container, this.game, this.items, this.mapConfig, this.upgrades, this.upgradeProperties)));
         }
 
 
@@ -2136,7 +2115,7 @@ export class MapComponent {
 
         let markers: any[] = [];
 
-        let smartTerrainPaths: { name: string, image: any }[] = [];
+        let smartTerrainPaths: L.Polyline[] = [];
 
         let handledSmartTerrains: string[] = [];
 
@@ -2393,7 +2372,7 @@ export class MapComponent {
                             latlngs.push([targetSmart.z, targetSmart.x]);
                         }
 
-                        var polyline = L.polyline(latlngs, { color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : null });
+                        var polyline = L.polyline(latlngs, { color: color, weight: 2, dashArray: notSameLocation ? '20, 20' : undefined });
 
                         if (color == 'blue') {
                             polyline.arrowheads({ size: '20px', fill: true, proportionalToTotal: false });
@@ -2548,7 +2527,7 @@ export class MapComponent {
             );
 
             if (destLocation.isUnderground) {
-
+                canvasMarker.on('click', (e: any) => this.mapService.onMarkerClick(e, this.map, this.container, this.bottomSheet, (container, isPopup)=> this.mapService.createAnomalyZoneContent(e.target, container, this.game, this.items, false)));
                 canvasMarker
                     .bindPopup(
                         (stalker: any) =>
@@ -2567,15 +2546,15 @@ export class MapComponent {
     }
 
     private addHiddenMarkers(markersToHide: any[]): void {
-        let hiddenLayer = L.layerGroup(markersToHide);
+        const hiddenLayer = L.layerGroup(markersToHide);
 
-        hiddenLayer.onAdd = function (map: any) {
+        (hiddenLayer as any).onAdd = function (map: any) {
             L.LayerGroup.prototype.onAdd.call(this, map);
 
             this.eachLayer(function (layer: any) {
                 layer.setOpacity(0.5);
             });
-        }
+        };
 
         this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
     }
@@ -2596,11 +2575,12 @@ export class MapComponent {
         this.addLayerToMap(L.layerGroup(roads), 'roads');
     }
 
-    private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
-        layer.ableToSearch = ableToSearch;
-        layer.name = name;
+    private addLayerToMap(layer: L.LayerGroup, name: string, ableToSearch: boolean = false): void {
+        const stalkerLayer = asStalkerLayerGroup(layer);
+        stalkerLayer.ableToSearch = ableToSearch;
+        stalkerLayer.name = name;
 
-        this.layers.push(layer);
+        this.layers.push(stalkerLayer);
     }
 
     private reorderSearchingLayers(layers: any): any {

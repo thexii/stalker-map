@@ -1,0 +1,36 @@
+.popup {
+    display: inline-grid; // Змінюємо flex на inline-grid
+    grid-template-columns: min-content; // Вся ширина попапу = мінімальна ширина контенту
+    row-gap: 10px;
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 15px;
+        color: white;
+        font-size: 20px;
+        min-width: 0; // Дозволяє хедеру стискатися менше за його контент
+
+        .title {
+            /* Якщо заголовок довший за контент, він почне переноситися 
+               або обрізатися, а не розсувати попап */
+            word-break: break-word; 
+            // Або, якщо хочете "..." в кінці:
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+        }
+    }
+
+    .content {
+        display: block;
+        width: 100%; // Тепер він просто займає 100% від min-content батька
+    }
+}

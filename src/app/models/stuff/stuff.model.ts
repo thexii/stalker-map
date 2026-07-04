@@ -1,13 +1,10 @@
 import { InventoryItem } from "../inventory-item.model";
+import { ObjectAtLocation } from "../object-at-location.model";
 
-export class StuffModel {
+export class StuffModel extends ObjectAtLocation {
   public name: string;
   public description: string;
-  public x: number;
-  public y: number;
-  public z: number;
   public typeId: number;
-  public locationId: number;
   public items: InventoryItem[];
   public boxConfig: string;
 

@@ -5,5 +5,22 @@
 }
 
 .popup {
-  min-width: 350px;
+  min-width: 352px;
+}
+
+.inventory-container {
+  overflow-x: scroll;
+}
+
+.bottom-sheet-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  .stalker-bio {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+  }
 }

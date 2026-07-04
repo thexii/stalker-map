@@ -41,11 +41,13 @@ export class ShapeCollection {
     public type: number;
     public polygons: Polygon[];
     public circles: Circle[];
+    public config: object[];
 }
 
 export class Polygon {
     public locationId: number
     public coordinates: number[];
+    public effectId: number;
 }
 
 export class Circle {
@@ -53,4 +55,5 @@ export class Circle {
     public x: number
     public z: number
     public radius: number;
+    public effectId: number;
 }

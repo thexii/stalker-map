@@ -1,9 +1,9 @@
-<div>
+<div class="header">
     @if (anomalZone.name) {
-        <div class="popup header">{{ anomalZone.name | translate }}</div>
+        <div class="popup-name">{{ anomalZone.name | translate }}</div>
     }
     @else {
-        <div class="popup header">{{ "anomaly-zone" | translate }}</div>
+        <div class="popup-name">{{ "anomaly-zone" | translate }}</div>
     }
 </div>
 
@@ -45,14 +45,5 @@
                 <span>{{anomaly.count}} x {{anomaly.anomaly | translate}}</span>
             </div>
         }
-    </div>
-}
-
-@if (anomalZone.anomaliySpawnSections && anomalZone.anomaliySpawnSections.length > 0) {
-    <div class="bottom">
-        <div class="button url-button" (click)="copyLink()">
-            <span>{{ 'markLink' | translate}}</span>
-        </div>
-        <app-hide-unhide [marker]="hiddenMarker.anomalZone(anomalZone, game, isUnderground)"></app-hide-unhide>
     </div>
 }

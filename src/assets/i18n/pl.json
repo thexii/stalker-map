@@ -46,6 +46,7 @@
     "trader": "Handlarz",
     "hideAll": "Ukryj wszystko",
     "markLink": "Skopiuj link",
+    "shareLinkCopied": "Link skopiowany do schowka.",
     "search": "Wyszukaj",
     "default_description": "Brak szczegółowych informacji.",
     "anomaliesCount": "Ilość anomalii: {{count}}",
@@ -268,5 +269,10 @@
     "circles": "Koła obozów",
     "Rat": "Szczury",
     "rich-stuff": "Cenny łup",
-    "grid": "Siatka"
+    "grid": "Siatka",
+    "dlcFilter": "Zawartość DLC",
+    "dlc.None": "Gra podstawowa",
+    "dlc.Deluxe": "Edycja Deluxe",
+    "dlc.PreOrder": "Przedpremierowa",
+    "dlc.Ultimate": "Edycja Ultimate"
 }

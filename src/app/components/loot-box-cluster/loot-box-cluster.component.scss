@@ -1,3 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.random-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
 .items-title {
   color: white;
 }

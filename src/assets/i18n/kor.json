@@ -46,6 +46,7 @@
     "trader": "Trader",
     "hideAll": "Hide all",
     "markLink": "Mark link",
+    "shareLinkCopied": "링크가 클립보드에 복사되었습니다.",
     "search": "Search",
     "default_description": "No data.",
     "anomaliesCount": "Number of anomalies: {{count}}",
@@ -243,5 +244,10 @@
     "circles": "Camp Circles",
     "Rat": "Rats",
     "rich-stuff": "Valuable Loot",
-    "grid": "Coordinate Grid"
+    "grid": "Coordinate Grid",
+    "dlcFilter": "DLC content",
+    "dlc.None": "Base game",
+    "dlc.Deluxe": "Deluxe Edition",
+    "dlc.PreOrder": "Pre-order",
+    "dlc.Ultimate": "Ultimate Edition"
 }

@@ -12,6 +12,10 @@
   margin-bottom: 5px;
 }
 
+html {
+  font-family: Letterica, sans-serif;
+}
+
 @media (max-width: 1024px) {
   .container-fluid {
     padding-right: 0;
@@ -93,13 +97,13 @@ body {
 .sub-headers {
   display: flex;
   flex-wrap: nowrap;
-  overflow: auto;
-  overflow-y: hidden;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox: hide scrollbar like WebKit */
 }
 
 .sub-headers::-webkit-scrollbar {
-  height: 0px;
+  height: 0;
 }
 
 .sub-header-checkbox {
@@ -190,8 +194,34 @@ input[type=checkbox]+label:before {
 }
 
 .inventory {
-  display: grid;
-  grid-template-columns: repeat(6, var(--inventory-cell-size));
+    display: grid;
+    /* auto-fill дозволяє створювати стільки колонок, скільки влізе в ширину */
+    grid-template-columns: repeat(auto-fill, var(--inventory-cell-size));
+    
+    /* Гнучка ширина, але кратна комірці */
+    /* Ми кажемо: "Будь на всю ширину, але не більше ніж влізе цілих комірок" */
+    width: 100%; 
+    max-width: 100%; 
+
+    /* Щоб не було "обрізаних" частин справа, ми змушуємо контейнер 
+       підлаштовуватися під кількість колонок, які в нього реально влізли */
+    width: fit-content; 
+
+    /* Мінімум 6 колонок */
+    min-width: calc(var(--inventory-cell-size) * 6);
+
+    grid-auto-flow: dense;
+    box-sizing: border-box;
+    gap: 0px;
+
+    background-color: #e5e5f7;
+    background-image: 
+        linear-gradient(#555656 1px, transparent 1px), 
+        linear-gradient(to right, #555656 1px, #090a0a 1px);
+    background-size: var(--inventory-cell-size) var(--inventory-cell-size);
+    border: 1px solid #555656;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, var(--inventory-cell-size));
   grid-template-rows: repeat(auto-fit, var(--inventory-cell-size));
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -201,8 +231,7 @@ input[type=checkbox]+label:before {
   background-color: #e5e5f7;
   background-image: linear-gradient(#555656 1px, transparent 1px), linear-gradient(to right, #555656 1px, #090a0a 1px);
   background-size: var(--inventory-cell-size) var(--inventory-cell-size);
-  border-bottom: 1px solid #555656;
-  margin-bottom: .5rem
+  border-bottom: 1px solid #555656;*/
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -268,7 +297,7 @@ input[type=checkbox]+label:before {
 }
 
 .inventory-item-image.hoc {
-  background-image: url(/assets/images/items/hoc_icon_equipment.png);
+  background-image: url(/assets/images/items/hoc_icon_equipment.webp);
   background-size: calc(var(--inventory-cell-size) * var(--item-width-in-cell));
 }
 
@@ -329,7 +358,7 @@ input[type=checkbox]+label:before {
 @for $i from 1 through 10 {
     .inventory-columns-#{$i} {
       grid-template-columns: repeat($i, var(--inventory-cell-size)) !important;
-      width: calc($i * var(--inventory-cell-size) + 1 );
+      width: calc($i * var(--inventory-cell-size) + 1px);
     }
 }
 
@@ -389,13 +418,18 @@ app-item-tooltip, app-upgrade-tooltip {
   opacity: 0;
 }
 
+.custom-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: white rgba(9, 10, 10, 1); /* Firefox: thumb track */
+}
+
 .custom-scroll::-webkit-scrollbar-track {
-	background-color: rgba(9,10,10,1);
+  background-color: rgba(9,10,10,1);
   border: 1px solid #555656;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-	background-color:rgba(9,10,10,1);
+  background-color: rgba(9,10,10,1);
   border: 1px solid white;
   margin: 3px;
 }
@@ -449,6 +483,54 @@ app-item-tooltip, app-upgrade-tooltip {
 
 .leaflet-control-slider-header {
     display: flex;
+}
+
+.leaflet-control-dlc-filter-container {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .leaflet-control-dlc-filter-content {
+        display: none;
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+    }
+}
+
+.leaflet-control-dlc-filter-header {
+    display: flex;
+}
+
+.leaflet-control .leaflet-control-dlc-filter-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.leaflet-control-dlc-filter-container:hover {
+    .leaflet-control-dlc-filter-content {
+        display: flex;
+    }
+}
+
+.dlc-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
 }
 
 .upgrade-property-icon {
@@ -1000,4 +1082,82 @@ app-compare {
 
 .leaflet-popup-content-fit-content .leaflet-popup-content {
     width: fit-content !important;
+}
+
+.bottom-sheet-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding-inline: 10px;
+  z-index: 100000;
+}
+
+.popup-buttons {
+    --size: 20px;
+    --padding: 3px;
+    --border: 1px;
+    --gap: 10px;
+    position: absolute;
+    top: calc(-1 * (var(--size) + var(--gap) + 2 * (var(--border) + var(--border))));
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--gap);
+
+    .button {
+        padding: var(--padding);
+        border: var(--border) solid white;  
+        background-color: black;
+        cursor: pointer;
+
+        div {
+            height: var(--size);
+            width: var(--size);
+            background-size: var(--size);
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        .close {
+            background-image: url(/assets/images/svg/interface/icons/close.svg);
+        }
+
+        .share {
+            background-image: url(/assets/images/svg/interface/icons/share.svg);
+        }
+
+        .hide {
+            background-image: url(/assets/images/svg/interface/icons/hide.svg);
+            background-position-y: 50%;
+        }
+    }
+}
+
+.app-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    z-index: 100000;
+    padding: 12px 20px;
+    background: rgba(20, 22, 24, 0.95);
+    color: #e8e8e8;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    max-width: min(90vw, 360px);
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.app-toast--visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }

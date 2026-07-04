@@ -60,6 +60,7 @@
 
   "hideAll": "Cacher tout",
   "markLink": "Marquer le lien",
+  "shareLinkCopied": "Lien copié dans le presse-papiers.",
   "search": "Chercher",
   "default_description": "Pas d'infos.",
 
@@ -227,5 +228,10 @@
   "smart-paths": "Chemins des Stalkers",
   "artefact-ways": "Chemins des Artefacts",
   "level-changers": "Changeur de Niveau",
-  "mechanics": "Techniciens"
+  "mechanics": "Techniciens",
+  "dlcFilter": "Contenu DLC",
+  "dlc.None": "Jeu de base",
+  "dlc.Deluxe": "Édition Deluxe",
+  "dlc.PreOrder": "Précommande",
+  "dlc.Ultimate": "Édition Ultimate"
 }

@@ -46,6 +46,7 @@
     "trader": "Trader",
     "hideAll": "Hide all",
     "markLink": "Mark link",
+    "shareLinkCopied": "A link a vágólapra másolva.",
     "search": "Search",
     "default_description": "No data.",
     "anomaliesCount": "Number of anomalies: {{count}}",
@@ -243,5 +244,10 @@
     "circles": "Camp Circles",
     "Rat": "Rats",
     "rich-stuff": "Valuable Loot",
-    "grid": "Coordinate Grid"
+    "grid": "Coordinate Grid",
+    "dlcFilter": "DLC content",
+    "dlc.None": "Base game",
+    "dlc.Deluxe": "Deluxe Edition",
+    "dlc.PreOrder": "Pre-order",
+    "dlc.Ultimate": "Ultimate Edition"
 }

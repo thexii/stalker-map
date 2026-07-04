@@ -13,9 +13,8 @@ import { MarkerToSearch } from "../../models/marker-to-search.model";
 import { MapComponent } from "../map/map.component";
 import { HiddenMarker } from "../../models/hidden-marker.model";
 import { MapService } from "../../services/map.service";
-
-declare const L: any;
-declare var markWidthUnderground: number;
+import { BottomSheetWrapperComponent } from "../bottom-sheet-wrapper/bottom-sheet-wrapper.component";
+import { L, asLatLngBounds, asStalkerLayerGroup, asStalkerMap, findLayerMarker, pixelBounds, pixelCenter, StalkerCustomLayersControl, StalkerLayerGroup, StalkerMap } from '../../leaflet/leaflet-setup';
 
 @Component({
     selector: 'app-underground',
@@ -38,10 +37,10 @@ export class UndergroundComponent {
     @Input() public markerToSearch: MarkerToSearch;
     @Input() public mapComponent: MapComponent;
 
-    private map: any;
-    private canvasLayer: any;
+    private map!: StalkerMap;
+    private canvasLayer: L.Layer | null = null;
 
-    private layers: any[] = [];
+    private layers: StalkerLayerGroup[] = [];
     private xShift: number = 0;
     private zShift: number = 0;
     private markWidthFactor: number = 3;
@@ -50,7 +49,7 @@ export class UndergroundComponent {
     public undergroundConfig: UndergroundLevelsConfig;
     public selectedLevel: string;
     public currentLevelImageOverlay: any;
-    protected layerContoller: any;
+    protected layerContoller?: StalkerCustomLayersControl;
 
     constructor(
         private translate: TranslateService,
@@ -206,8 +205,8 @@ export class UndergroundComponent {
             }
         }
 
-        this.map = L.map('underground-map', {
-            center: [this.location.heightInMeters / 2, this.location.widthInMeters / 2],
+        this.map = asStalkerMap(L.map('underground-map', {
+            center: pixelCenter(this.location.heightInMeters, this.location.widthInMeters),
             zoom: zoom,
             minZoom: minZoom,
             maxZoom: maxZoom,
@@ -215,16 +214,16 @@ export class UndergroundComponent {
             markerZoomAnimation: !0,
             zoomAnimation: !0,
             zoomControl: !1
-        });
+        }));
 
         this.map.scaleFactor = scaleFactor;
 
-        let bounds = [
-            [0, 0],
-            [this.location.heightInMeters, this.location.widthInMeters],
-        ];
+        const bounds = pixelBounds(this.location.heightInMeters, this.location.widthInMeters);
 
-        markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
+        let markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
+        document.documentElement.style.setProperty(
+            '--map-mark-width-underground',
+            `${markWidthUnderground}px`);
 
         this.map.on('zoomend', () => {
             markWidthUnderground = this.markWidthFactor * Math.pow(2, this.map.getZoom());
@@ -296,10 +295,11 @@ export class UndergroundComponent {
         }
 
         let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
-        this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
-        this.layerContoller.searchName = "underground";
-        this.layerContoller.isUnderground = true;
-        this.layerContoller.addTo(this.map)
+        const layerController = L.control.customLayers(null, Object.fromEntries(layersToControl)) as StalkerCustomLayersControl;
+        layerController.searchName = "underground";
+        layerController.isUnderground = true;
+        layerController.addTo(this.map);
+        this.layerContoller = layerController;
 
         if (this.markerToSearch) {
             this.goToMarker();
@@ -310,7 +310,7 @@ export class UndergroundComponent {
         this.translate.onLangChange.subscribe(i => {
             let layersToControl = this.layers.map(x => [this.translate.instant(x.name), x]);
 
-            this.layerContoller.remove();
+            this.layerContoller?.remove();
             let addRuler = false;
 
             if (ruler) {
@@ -318,10 +318,11 @@ export class UndergroundComponent {
                 addRuler = true;
             }
 
-            this.layerContoller = L.control.customLayers(null, Object.fromEntries(layersToControl));
-            this.layerContoller.searchName = "layerControl";
-            this.layerContoller.isUnderground = true;
-            this.layerContoller.addTo(this.map)
+            const layerController = L.control.customLayers(null, Object.fromEntries(layersToControl)) as StalkerCustomLayersControl;
+            layerController.searchName = "layerControl";
+            layerController.isUnderground = true;
+            layerController.addTo(this.map);
+            this.layerContoller = layerController;
 
             if (addRuler) {
                 ruler = this.addRuler();
@@ -362,7 +363,7 @@ export class UndergroundComponent {
             },
         };
 
-        ruler = L.control.ruler(options);
+        ruler = L.control.ruler(options as L.RulerControlOptions);
         ruler.addTo(this.map);
 
         return ruler;
@@ -382,10 +383,7 @@ export class UndergroundComponent {
     private addLocation() {
         let locationImage = `/assets/images/maps/${this.gamedata.uniqueName}/${this.selectedLevel}.png`;
 
-        let locationBounds = [
-            [0, 0],
-            [this.location.heightInMeters, this.location.widthInMeters],
-        ];
+        const locationBounds = pixelBounds(this.location.heightInMeters, this.location.widthInMeters);
 
         this.currentLevelImageOverlay = L.imageOverlay(locationImage, locationBounds, {
             interactive: !0,
@@ -583,7 +581,7 @@ export class UndergroundComponent {
                         className: 'map-tooltip',
                         offset: new Point(0, 50),
                     });
-                    stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
+                    //stuff.bindPopup((p: any) => this.mapService.createStashPopup(p, this.container, this.game, this.items, true));
 
                     if (hiddenMarkers.some(x => x.lat == stuffModel.z && x.lng == stuffModel.x)) {
                         markersToHide.push(stuff);
@@ -643,7 +641,7 @@ export class UndergroundComponent {
 
             canvasMarker.bindTooltip(
                 (marker: any) =>
-                    this.translate.instant(marker.properties.stalker.profile.name),
+                    this.translate.instant(stalker.profile.name),
                 {
                     sticky: true,
                     className: 'map-tooltip',
@@ -651,13 +649,7 @@ export class UndergroundComponent {
                 }
             );
 
-            canvasMarker
-                .bindPopup(
-                    (stalker: any) =>
-                        this.mapService.createStalkerPopup(stalker, this.container, this.game, this.items, this.mapConfig, true),
-                    { maxWidth: 500 }
-                )
-                .openPopup();
+            canvasMarker.on('click', (e: any) => this.mapService.handleStalkerClick(e, this.map, this.container, new BottomSheetWrapperComponent(), this.game, this.items, this.mapConfig, false));
         }
 
         if (markers.length > 0) {
@@ -666,15 +658,15 @@ export class UndergroundComponent {
     }
 
     private addHiddenMarkers(markersToHide: any[]): void {
-        let hiddenLayer = L.layerGroup(markersToHide);
+        const hiddenLayer = L.layerGroup(markersToHide);
 
-        hiddenLayer.onAdd = function (map: any) {
+        (hiddenLayer as any).onAdd = function (map: any) {
             L.LayerGroup.prototype.onAdd.call(this, map);
 
             this.eachLayer(function (layer: any) {
                 layer.setOpacity(0.5);
             });
-        }
+        };
 
         this.addLayerToMap(hiddenLayer, MapComponent.hiddenLayerName);
     }
@@ -734,9 +726,9 @@ export class UndergroundComponent {
                     offset: [0, 50],
                 }
             );
-            lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
+            /*lootBoxMarker.bindPopup((p: any) => this.mapService.createLootBoxPopup(p, this.container, this.game, this.items, this.gamedata.locations, this.lootBoxConfig, true), {
                 minWidth: 300,
-            }).openPopup(),
+            }).openPopup(),*/
                 markers.push(lootBoxMarker);
         }
 
@@ -861,11 +853,11 @@ export class UndergroundComponent {
                 },
                 { sticky: true, className: 'map-tooltip', offset: new Point(0, 50) }
             );
-            canvasMarker
+            /*canvasMarker
                 .bindPopup((zone: any) => this.mapService.createeAnomalyZonePopup(zone, this.container, this.game, this.items, true), {
                     minWidth: 300,
                 })
-                .openPopup();
+                .openPopup();*/
         }
 
         try {
@@ -908,17 +900,15 @@ export class UndergroundComponent {
         object[propertyName] = array;
     }
 
-    private addLayerToMap(layer: any, name: any, ableToSearch: boolean = false) {
-        layer.ableToSearch = ableToSearch;
-        layer.name = name;
-        layer.isUnderground = true;
-        this.layers.push(layer);
+    private addLayerToMap(layer: L.LayerGroup, name: string, ableToSearch: boolean = false): void {
+        const stalkerLayer = asStalkerLayerGroup(layer);
+        stalkerLayer.ableToSearch = ableToSearch;
+        stalkerLayer.name = name;
+        stalkerLayer.isUnderground = true;
+        this.layers.push(stalkerLayer);
     }
 
     private async ngOnDestroy(): Promise<void> {
-        if (this.map) {
-            this.map.remove();
-            this.map = null;
-        }
+        this.map?.remove();
     }
 }

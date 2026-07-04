@@ -60,6 +60,7 @@
 
   "hideAll": "Ocultar todo",
   "markLink": "Marcar enlace",
+  "shareLinkCopied": "Enlace copiado al portapapeles.",
   "search": "Buscar",
   "default_description": "Sin datos.",
 
@@ -227,5 +228,10 @@
   "smart-paths": "Rutas de stalkers",
   "artefact-ways": "Rutas de artefactos",
   "level-changers": "Guias",
-  "mechanics": "Mecánicos"
+  "mechanics": "Mecánicos",
+  "dlcFilter": "Contenido DLC",
+  "dlc.None": "Juego base",
+  "dlc.Deluxe": "Edición Deluxe",
+  "dlc.PreOrder": "Reserva",
+  "dlc.Ultimate": "Edición Ultimate"
 }

@@ -1,9 +1,6 @@
+import { ObjectAtLocation } from "../object-at-location.model";
 import { LootBox } from "./loot-box-section.model";
 
-export class LootBoxCluster {
-  public x: number;
-  public y: number;
-  public z: number;
+export class LootBoxCluster extends ObjectAtLocation {
   public lootBoxes: LootBox[];
-  public locationId: number;
 }

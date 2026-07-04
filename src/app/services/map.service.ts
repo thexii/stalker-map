@@ -1,5 +1,5 @@
 import { MapComponent } from './../components/map/map.component';
-import { Injectable, ViewContainerRef } from "@angular/core";
+import { ApplicationRef, ComponentRef, createComponent, EnvironmentInjector, Injectable, ViewContainerRef } from "@angular/core";
 import { HiddenMarker } from "../models/hidden-marker.model";
 import { StuffComponent } from '../components/stuff/stuff.component';
 import { Item } from '../models/item.model';
@@ -18,8 +18,10 @@ import { MechanicComponent } from '../components/mechanic/mechanic.component';
 import { ItemUpgrade, UpgradeProperty } from '../models/upgrades/upgrades';
 import { TranslateService } from '@ngx-translate/core';
 import { Game } from '../models/game.model';
-
-declare const L: any;
+import { BottomSheetWrapperComponent } from '../components/bottom-sheet-wrapper/bottom-sheet-wrapper.component';
+import { PopupComponent } from '../components/popup/popup.component';
+import { L } from '../leaflet/leaflet-setup';
+import type { StalkerLayerGroup, StalkerMap, StalkerMarker, StalkerRulerControl } from '../leaflet/stalker-leaflet.types';
 
 @Injectable({
     providedIn: 'root'
@@ -29,107 +31,32 @@ export class MapService {
     private hiddenMarksLocalStorageKey: string = 'hidden-markers';
     private hiddenMarksCache: HiddenMarker[];
     private mapComponent: MapComponent;
+    private bottomSheetWrapper: ComponentRef<BottomSheetWrapperComponent>;
 
     constructor(
-        private translate: TranslateService) {
+        private translate: TranslateService,
+        private environmentInjector: EnvironmentInjector,
+        private appRef: ApplicationRef) {
 
-    }
-
-    public async initLeaflit(): Promise<void> {
-        if (typeof L === 'undefined') {
-            await this.addScript('/assets/libs/leaflet/index.js');
-            await this.addScript('/assets/libs/leaflet/leaflet.js');
-            await this.addScript('/assets/libs/leaflet/plugins/search/leaflet-search.js');
-
-            await Promise.all([
-                this.addScript(
-                    '/assets/libs/leaflet/plugins/search/leaflet-search-geocoder.js'
-                ),
-                this.addScript(
-                    '/assets/libs/leaflet/plugins/ruler/leaflet-ruler.js'
-                ),
-                this.addScript(
-                    '/assets/libs/leaflet/plugins/leaflet.geometryutil.js'
-                ),
-                this.addScript(
-                    '/assets/libs/leaflet/plugins/arrow/leaflet-arrowheads.js'
-                )
-            ]);
-            console.log('Leaflet is loaded');
-        }
-
-        await Promise.all([
-            this.addStyle('/assets/libs/leaflet/leaflet.css'),
-            this.addStyle('/assets/libs/leaflet/plugins/search/leaflet-search.css'),
-            this.addStyle(
-                '/assets/libs/leaflet/plugins/search/leaflet-search.mobile.css'
-            ),
-            this.addStyle('/assets/libs/leaflet/plugins/ruler/leaflet-ruler.css')
-        ]);
-    }
-
-    public async addScript(scriptUrl: string): Promise<void> {
-        return new Promise((resolve, reject) => {
-            let script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = scriptUrl;
-            document.body.appendChild(script);
-
-            script.onload = () => {
-                resolve();
-            }
-
-            script.onerror = () => {
-                console.error(`Can not load ${scriptUrl}.`);
-                resolve();
-            };
-        });
-    }
-
-    public async addStyle(styleUrl: string): Promise<void> {
-        return new Promise((resolve, reject) => {
-            let style = document.createElement('link');
-            style.rel = 'stylesheet';
-            style.href = styleUrl;
-            document.body.appendChild(style);
-
-            style.onload = () => {
-                resolve();
-            }
-
-            style.onerror = () => {
-                console.error(`Can not load ${styleUrl}.`);
-                resolve();
-            };
-        });
     }
 
     public setMapComponent(mapComponent: MapComponent): void {
         this.mapComponent = mapComponent;
     }
 
-    public createStashPopup(stash: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean) {
-        stash.getPopup().on('remove', function () {
-            stash.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
+    public createStashContent(stash: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean, isPopup: boolean) {
         const componentRef = container.createComponent(StuffComponent);
         componentRef.instance.stuff = stash.properties.stuff;
         componentRef.instance.game = game;
         componentRef.instance.allItems = allItems;
         componentRef.instance.stuffType = stash.properties.typeUniqueName;
         componentRef.instance.isUnderground = isUnderground;
+        componentRef.instance.isPopup = isPopup;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
     }
 
-    public createLootBoxPopup(lootBox: any, container: ViewContainerRef, game: Game, allItems: Item[], locations: Location[], lootBoxConfig: LootBoxConfig, isUnderground: boolean) {
-        lootBox.getPopup().on('remove', function () {
-            lootBox.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
+    public createLootBoxContent(lootBox: any, container: ViewContainerRef, game: Game, allItems: Item[], locations: Location[], lootBoxConfig: LootBoxConfig, isUnderground: boolean) {
         const componentRef = container.createComponent(LootBoxClusterComponent);
         componentRef.instance.cluster = lootBox.properties.lootBox;
         componentRef.instance.game = game;
@@ -142,31 +69,11 @@ export class MapService {
         componentRef.instance.lootBoxLocationConfig = lootBoxLocationConfig as LootBox;
         componentRef.instance.isUnderground = isUnderground;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
     }
 
-    public createeAnomalyZonePopup(zone: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean) {
-        zone.getPopup().on('remove', function () {
-            zone.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
-        const componentRef = container.createComponent(AnomalyZoneComponent);
-        componentRef.instance.anomalZone = zone.properties.zoneModel;
-        componentRef.instance.game = game;
-        componentRef.instance.allItems = allItems;
-        componentRef.instance.isUnderground = isUnderground;
-
-        return componentRef.location.nativeElement;
-    }
-
-    public createTraderPopup(traderMarker: any, traders: TraderModel[], marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig) {
-        let trader: TraderModel = traderMarker.properties.traderConfig;
-
-        marker.getPopup().on('remove', function () {
-            marker.getPopup().off('remove');
-            componentRef.destroy();
-        });
+    public createTraderContent(marker: any, traders: TraderModel[], container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isPopup: boolean): ComponentRef<TraderComponent> {
+        let trader: TraderModel = marker.properties.traderConfig;
 
         const componentRef = container.createComponent(TraderComponent);
         componentRef.instance.trader = trader;
@@ -178,24 +85,199 @@ export class MapService {
         componentRef.instance.actor = mapConfig.actor;
         componentRef.instance.traderConfigs = mapConfig.traderConfigs;
         componentRef.instance.traderConfig = mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
+        componentRef.instance.isPopup = isPopup;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
     }
 
-    public createStalkerPopup(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean) {
-        stalkerMarker.getPopup().on('remove', function () {
-            stalkerMarker.getPopup().off('remove');
-            componentRef.destroy();
-        });
-
+    public createStalkerContent(stalkerMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, isUnderground: boolean, ismobile: boolean): ComponentRef<StalkerComponent> {
         const componentRef = container.createComponent(StalkerComponent);
         componentRef.instance.stalker = stalkerMarker.properties.stalker;
         componentRef.instance.game = game;
         componentRef.instance.allItems = allItems;
         componentRef.instance.rankSetting = mapConfig.rankSetting;
         componentRef.instance.isUnderground = isUnderground;
+        componentRef.instance.isBottomSheet = ismobile;
 
-        return componentRef.location.nativeElement;
+        return componentRef;
+    }
+
+    public createAnomalyZoneContent(marker: any, container: ViewContainerRef, game: Game, allItems: Item[], isUnderground: boolean): ComponentRef<AnomalyZoneComponent> {
+        const componentRef = container.createComponent(AnomalyZoneComponent);
+        componentRef.instance.anomalZone = marker.properties.zoneModel;
+        componentRef.instance.game = game;
+        componentRef.instance.allItems = allItems;
+        componentRef.instance.isUnderground = isUnderground;
+
+        return componentRef;
+    }
+
+    public createMechanicContent(marker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]): ComponentRef<MechanicComponent> {
+        const componentRef = container.createComponent(MechanicComponent);
+        componentRef.instance.mechanic = marker.properties.mechanic;
+        componentRef.instance.game = game;
+        componentRef.instance.allItems = allItems;
+        componentRef.instance.rankSetting = mapConfig.rankSetting;
+        componentRef.instance.relationType = mapConfig.traderRelationType;
+        componentRef.instance.actor = mapConfig.actor;
+        componentRef.instance.upgrades = upgrades;
+        componentRef.instance.upgradeProperties = upgradeProperties;
+
+        return componentRef;
+    }
+
+    private getMapWrapperWidth(): number {
+        const wrapper = document.getElementById('map-wrapper');
+        if (wrapper) {
+            return Math.ceil(wrapper.getBoundingClientRect().width);
+        }
+
+        return window.innerWidth;
+    }
+
+    private preparePopup(innerContentRef: ComponentRef<any>): { popupComponentRef: ComponentRef<PopupComponent>, calculatedWidth: number } {
+        const popupComponentRef = createComponent(PopupComponent, {
+            environmentInjector: this.environmentInjector,
+            projectableNodes: [[innerContentRef.location.nativeElement]]
+        });
+
+        // 1. Спочатку ініціалізуємо внутрішній контент (StalkerComponent тощо),
+        // щоб там відпрацював ngOnInit і з'явився hiddenMarker
+        innerContentRef.changeDetectorRef.detectChanges();
+
+        // 2. Тепер передаємо дані через setInput (це надійніше в Angular 21)
+        if (innerContentRef.instance.hiddenMarker) {
+            popupComponentRef.setInput('marker', innerContentRef.instance.hiddenMarker);
+        }
+        if (innerContentRef.instance.shareUrl) {
+            popupComponentRef.setInput('shareUrl', innerContentRef.instance.shareUrl);
+        }
+
+        this.appRef.attachView(popupComponentRef.hostView);
+
+        // 3. Робимо заміри ширини
+        const tempContainer = document.createElement('div');
+        tempContainer.style.cssText = 'position:fixed;visibility:hidden;pointer-events:none;top:0;left:0;';
+        document.body.appendChild(tempContainer);
+        tempContainer.appendChild(popupComponentRef.location.nativeElement);
+
+        // 4. Фінальна перевірка змін для попапа
+        popupComponentRef.changeDetectorRef.detectChanges();
+
+        const calculatedWidth = Math.ceil(popupComponentRef.location.nativeElement.getBoundingClientRect().width);
+        document.body.removeChild(tempContainer);
+
+        return { popupComponentRef, calculatedWidth };
+    }
+
+    private openPreparedPopup(map: any, marker: any, innerContentRef: ComponentRef<any>, popupComponentRef: ComponentRef<PopupComponent>, calculatedWidth: number): void {
+        const popup = L.popup({
+            minWidth: calculatedWidth,
+            maxWidth: calculatedWidth,
+            className: 'stalker-custom-popup',
+            autoPanPadding: [20, 20],
+            closeButton: false
+        })
+            .setLatLng(marker.getLatLng())
+            .setContent(popupComponentRef.location.nativeElement);
+
+        popupComponentRef.instance.popup = popup;
+
+        popup.on('remove', () => {
+            popupComponentRef.destroy();
+            innerContentRef.destroy();
+        });
+
+        popup.openOn(map);
+    }
+
+    public onMarkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, contentMaker: (container: ViewContainerRef, isPopup: boolean) => any): void {
+        const canUseSheet = bottomSheetContainer != null && (bottomSheetContainer as any).contentContainer != null;
+        let wantsPopup: boolean = !(window.innerWidth < 500 && canUseSheet);
+
+        if (!wantsPopup) {
+            bottomSheetContainer.contentContainer.clear();
+            contentMaker(bottomSheetContainer.contentContainer, false);
+            bottomSheetContainer.show();
+            return;
+        }
+
+        // Створюємо контент для popup (щоб коректно поміряти реальну ширину)
+        const popupContent = contentMaker(container, true) as ComponentRef<any>;
+
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(popupContent);
+        const mapWrapperWidth = this.getMapWrapperWidth();
+
+        if (canUseSheet && calculatedWidth > mapWrapperWidth) {
+            // Якщо popup виходить за ширину контейнера карти - замінюємо на sheet.
+            this.appRef.detachView(popupComponentRef.hostView);
+            popupComponentRef.destroy();
+
+            container.clear();
+
+            bottomSheetContainer.contentContainer.clear();
+            contentMaker(bottomSheetContainer.contentContainer, false);
+            bottomSheetContainer.show();
+            return;
+        }
+
+        this.openPreparedPopup(map, event.target, popupContent, popupComponentRef, calculatedWidth);
+    }
+
+    public handleStalkerClick(event: any, map: any, container: ViewContainerRef, bottomSheetContainer: BottomSheetWrapperComponent, game: Game, items: Item[], mapConfig: MapConfig, isUnderground: boolean): void {
+        const canUseSheet = bottomSheetContainer != null && (bottomSheetContainer as any).contentContainer != null;
+        let wantsPopup: boolean = !(window.innerWidth < 500 && canUseSheet);
+
+        if (!wantsPopup) {
+            bottomSheetContainer.contentContainer.clear();
+            this.createStalkerContent(
+                event.target,
+                bottomSheetContainer.contentContainer,
+                game,
+                items,
+                mapConfig,
+                isUnderground,
+                true // bottom sheet mode
+            );
+            bottomSheetContainer.show();
+            return;
+        }
+
+        // Створюємо контент для popup (щоб коректно поміряти реальну ширину)
+        const popupContent = this.createStalkerContent(
+            event.target,
+            container,
+            game,
+            items,
+            mapConfig,
+            isUnderground,
+            false // popup mode
+        );
+
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(popupContent);
+        const mapWrapperWidth = this.getMapWrapperWidth();
+
+        if (canUseSheet && calculatedWidth > mapWrapperWidth) {
+            this.appRef.detachView(popupComponentRef.hostView);
+            popupComponentRef.destroy();
+
+            container.clear();
+
+            bottomSheetContainer.contentContainer.clear();
+            this.createStalkerContent(
+                event.target,
+                bottomSheetContainer.contentContainer,
+                game,
+                items,
+                mapConfig,
+                isUnderground,
+                true // bottom sheet mode
+            );
+            bottomSheetContainer.show();
+            return;
+        }
+
+        this.openPreparedPopup(map, event.target, popupContent, popupComponentRef, calculatedWidth);
     }
 
     public setCellSize(value: number | string, game: string): void {
@@ -205,25 +287,13 @@ export class MapService {
         );
     }
 
-    public createMechanicPopup(mechanicMarker: any, container: ViewContainerRef, game: Game, allItems: Item[], mapConfig: MapConfig, upgrades: ItemUpgrade[], upgradeProperties: UpgradeProperty[]) {
-        let mechanic: Mechanic = mechanicMarker.properties.mechanic;
+    private bindPopup(map: any, marker: any, innerContentRef: ComponentRef<any>) {
+        const { popupComponentRef, calculatedWidth } = this.preparePopup(innerContentRef);
+        this.openPreparedPopup(map, marker, innerContentRef, popupComponentRef, calculatedWidth);
+    }
 
-        mechanicMarker.getPopup().on('remove', function () {
-            mechanicMarker.getPopup().off('remove');
-            componentRef.destroy();
-        });
+    private createPopup(): void {
 
-        const componentRef = container.createComponent(MechanicComponent);
-        componentRef.instance.mechanic = mechanic;
-        componentRef.instance.game = game;
-        componentRef.instance.allItems = allItems;
-        componentRef.instance.rankSetting = mapConfig.rankSetting;
-        componentRef.instance.relationType = mapConfig.traderRelationType;
-        componentRef.instance.actor = mapConfig.actor;
-        componentRef.instance.upgrades = upgrades;
-        componentRef.instance.upgradeProperties = upgradeProperties;
-
-        return componentRef.location.nativeElement;
     }
 
     public createStuffTooltip(stuff: any) {
@@ -239,8 +309,8 @@ export class MapService {
         return html;
     }
 
-    public addRuler(map: any, pixelsInGameUnit: number, lengthFactor: number): any {
-        let ruler;
+    public addRuler(map: StalkerMap, pixelsInGameUnit: number, lengthFactor: number): StalkerRulerControl {
+        let ruler: StalkerRulerControl;
 
         var options = {
             position: 'topright', // Leaflet control position option
@@ -268,7 +338,7 @@ export class MapService {
             },
         };
 
-        ruler = L.control.ruler(options);
+        ruler = L.control.ruler(options as L.RulerControlOptions);
 
         return ruler;
     }
@@ -572,7 +642,7 @@ export class MapService {
             },
 
             _initLayout: function () {
-                L.Control.Layers.prototype._initLayout.call(this);
+                (L.Control.Layers.prototype as any)._initLayout.call(this);
 
                 if (!this.isUnderground && this.options.overlaysListTop) {
                     this._overlaysListTop = document.getElementById(this.options.overlaysListTop);
@@ -697,7 +767,7 @@ export class MapService {
                 inputTop.id = `layer-top-${layerId}`;
                 labelInsideCheck.setAttribute('for', inputTop.id);
 
-                if (!obj.layer.isUnderground && this.options.overlaysListTop  && obj.layer.addToTop !== false) {
+                if (!obj.layer.isUnderground && this.options.overlaysListTop && obj.layer.addToTop !== false) {
                     obj.layer.topId = this._overlaysListTop.childNodes.length;
                     this._overlaysListTop.appendChild(subHeaderPanel);
                 }
@@ -832,7 +902,7 @@ export class MapService {
                 this._handlingClick = false;
                 this._refocusOnMap();
             },
-        });
+        } as any);
 
         L.control.customLayers = function (baseLayers: any, overlays: any, options: any) {
             return new L.Control.CustomLayers(baseLayers, overlays, options);
@@ -885,6 +955,7 @@ export class MapService {
                 stroke: '#fbff00',
                 fill: '#fbff001e',
                 name: 'radioactive',
+                fills: ['#7EA172', '#FFD54F', '#E65100', '#900C3F', '#4A0E17'].map(x => x.toLowerCase())
             },
             {
                 type: 103,

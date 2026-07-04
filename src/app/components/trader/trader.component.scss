@@ -1,5 +1,4 @@
-
-$trader-columns: 8;
+$trader-columns: 6;
 
 .trader-container {
   display: flex;
@@ -28,18 +27,20 @@ $trader-columns: 8;
   width: fit-content;
 }
 
-.inventory-container {
-  min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
-  display: flex;
-  justify-content: center;
-}
+.trader-container {
+    .inventory-container {
+        min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
+        display: flex;
+        justify-content: center;
+    }
 
-.inventory {
-  max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
-  overflow-y: auto;
-  overflow-x: hidden;
-  grid-template-columns: repeat($trader-columns, var(--inventory-cell-size));
-  min-width: calc($trader-columns * var(--inventory-cell-size));
+    .inventory {
+    max-height: round(up, var(--wrapper-height) / 2, var(--inventory-cell-size));
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-template-columns: repeat($trader-columns, var(--inventory-cell-size));
+    min-width: calc($trader-columns * var(--inventory-cell-size));
+    }
 }
 
 .best-sell-item {
@@ -155,7 +156,18 @@ $trader-columns: 8;
     border-radius: 3px;
   }
 
-  input[type=range]::-webkit-slider-runnable-track{
+  input[type=range]::-webkit-slider-runnable-track {
+    border-radius: 3px;
+  }
+
+  /* Firefox */
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid white;
+    border-radius: 3px;
+    background: #090a0a;
+  }
+
+  input[type=range]::-moz-range-track {
     border-radius: 3px;
   }
 
@@ -215,4 +227,64 @@ $trader-columns: 8;
 
 .best-sell-title {
   border-bottom: 3px solid white;
+}
+
+.mobile-trader {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .character-selector {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+
+        > * {
+            border: 1px solid white;
+            padding-block: 1em;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .selected {
+            background-color: rgba(255, 255, 255, 0.142);
+        }
+    }
+
+    .player-section {
+        display: none;
+        flex-direction: column;
+        row-gap: 10px;
+
+        &.selected {
+            display: flex;
+        }
+
+        .profile-data-info {
+        }
+
+        .relation-range {
+            width: 100%;
+        }
+
+        .range-labels {
+            column-gap: 10px;
+        }
+
+        .inventory-container {
+            min-width: unset;
+        }
+    }
+
+    .player-config {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sections-select-container {
+        max-height: 150px;
+    }
 }

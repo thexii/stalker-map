@@ -11,7 +11,7 @@ export class MapHoc {
   public stuffs: Stuff[];
   public anomalyFields: Marker[];
   public artefactSpawners: ArtefactSpawner[];
-  public artefactSpawnerData: ArtefactSpawnerConfig;
+  public artefactSpawnerConfigs: ArtefactSpawnerType[];
   public stashes: Stash[];
   public stashGenerators: StashGenerator[];
   public stashPrototypes: StashPrototype[];
