@@ -16,6 +16,9 @@ import { TraderBestDealService } from '../../services/trader-best-deal.service';
 import { TraderChartService } from '../../services/trader-chart.service';
 import { TraderItemTileComponent } from './trader-item-tile/trader-item-tile.component';
 import { ShareLinkService } from '../../services/share-link.service';
+import { FactorSelector, TraderFactorSelectorConfig } from '../../models/mechanic-discount-selector.model';
+import { matchCondlist } from '../../utils/condlist';
+import { buildFactorSelectors, collectWorldTokens } from '../../utils/factor-selector';
 
 @Component({
   selector: 'app-trader',
@@ -34,6 +37,7 @@ export class TraderComponent implements OnInit {
   @Input() relationType: RelationType;
   @Input() traderConfigs: TraderSectionsConfig[];
   @Input() traderConfig: TraderSectionsConfig;
+  @Input() factorSelectorConfigs: TraderFactorSelectorConfig[] = [];
   @Input() isPopup: boolean;
 
   readonly relations: number[] = [0, 0.5, 1];
@@ -54,11 +58,14 @@ export class TraderComponent implements OnInit {
   selectedItem: SelectedItem | undefined;
 
   readonly alwaysCondition = 'allways';
-  traderSectionIndexes: number[];
   hasMultiplyBuies = true;
   hasMultiplySells = true;
   hasMultiplySupplies = true;
+  sharedSectionSelector: 'all' | 'sell-buy' | 'sell-supply' | 'buy-supply' | null = null;
+  sharedSectionConditions: string[] = [];
+  sharedSectionDefaultLabel = 'sell_default';
   hasDiscounts = false;
+  factorSelectors: FactorSelector[] = [];
 
   relationTypeEnum = RelationType;
 
@@ -91,6 +98,8 @@ export class TraderComponent implements OnInit {
 
     this.traderSupplySections = this.sectionBuilder.buildSupplySections(this.trader, this.allItems);
     this.hasMultiplySupplies = this.traderSupplySections.length > 1;
+    this.configureSharedSectionSelector();
+    this.configureFactorSelectors();
 
     const builtDiscounts = this.sectionBuilder.buildDiscounts(this.trader);
     this.traderDiscounts = builtDiscounts ?? [];
@@ -103,11 +112,11 @@ export class TraderComponent implements OnInit {
     this.selectedSellSection = this.copy(this.traderSellSections.find((x) => x.sectionConditions === '')!);
     this.selectedSupplySection = this.copy(this.traderSupplySections.find((x) => x.sectionConditions === '')!);
 
-    this.traderSectionIndexes = Array.from(
-      Array(Math.max(this.traderBuySections.length, this.traderSellSections.length, this.traderSupplySections.length)).keys()
-    );
-
-    this.recalculateSection();
+    if (this.factorSelectors.length > 0) {
+      this.applyFactorSelection();
+    } else {
+      this.recalculateSection();
+    }
   }
 
   selectSell(sell: TradeSection<TraderBuySellItemView>): void {
@@ -120,6 +129,11 @@ export class TraderComponent implements OnInit {
     this.recalculateSection();
   }
 
+  selectSellCondition(condition: string): void {
+    const section = this.traderSellSections.find((x) => x.sectionConditions === condition);
+    if (section) this.selectSell(section);
+  }
+
   selectBuy(buy: TradeSection<TraderBuySellItemView>): void {
     if (this.selectedBuySection.sectionConditions === buy.sectionConditions) return;
     const sectionConfig = this.traderConfig.buy.find((x) => x.condition === buy.sectionConditions);
@@ -128,6 +142,11 @@ export class TraderComponent implements OnInit {
     this.checkSupply(sectionConfig?.enabledSupplies);
     this.checkDiscount(sectionConfig?.enabledDicounts);
     this.recalculateSection();
+  }
+
+  selectBuyCondition(condition: string): void {
+    const section = this.traderBuySections.find((x) => x.sectionConditions === condition);
+    if (section) this.selectBuy(section);
   }
 
   selectSupply(supply: TradeSection<TraderSupplyItemView>): void {
@@ -143,6 +162,25 @@ export class TraderComponent implements OnInit {
     }
   }
 
+  selectSupplyCondition(condition: string): void {
+    const section = this.traderSupplySections.find((x) => x.sectionConditions === condition);
+    if (section) this.selectSupply(section);
+  }
+
+  selectSharedSectionCondition(condition: string): void {
+    if (this.sharedSectionSelector === 'buy-supply') {
+      this.selectBuyCondition(condition);
+    } else {
+      this.selectSellCondition(condition);
+    }
+  }
+
+  get sharedSectionSelectedCondition(): string {
+    return this.sharedSectionSelector === 'buy-supply'
+      ? this.selectedBuySection.sectionConditions
+      : this.selectedSellSection.sectionConditions;
+  }
+
   selectDiscount(discount: TraderDiscounts): void {
     if (this.selectedDiscount?.conditions === discount.conditions) return;
     const sectionConfig = this.traderConfig.discount.find((x) => x.condition === discount.conditions);
@@ -152,6 +190,11 @@ export class TraderComponent implements OnInit {
     this.checkBuy(sectionConfig?.enabledBuies);
     this.checkSupply(sectionConfig?.enabledSupplies);
     this.recalculateSection();
+  }
+
+  selectDiscountCondition(condition: string): void {
+    const discount = this.traderDiscounts.find((x) => x.conditions === condition);
+    if (discount) this.selectDiscount(discount);
   }
 
   setRelationSelect(relation: string): void {
@@ -304,5 +347,106 @@ export class TraderComponent implements OnInit {
       return JSON.parse(JSON.stringify(object));
     }
     return object;
+  }
+
+  private haveSameSectionConditions(first: string[], second: string[]): boolean {
+    return first.length === second.length
+      && first.every((condition, index) => condition === second[index]);
+  }
+
+  private configureSharedSectionSelector(): void {
+    const sellConditions = this.traderSellSections.map((section) => section.sectionConditions);
+    const buyConditions = this.traderBuySections.map((section) => section.sectionConditions);
+    const supplyConditions = this.traderSupplySections.map((section) => section.sectionConditions);
+    const sameSellBuy = this.hasMultiplySells && this.hasMultiplyBuies
+      && this.haveSameSectionConditions(sellConditions, buyConditions);
+    const sameSellSupply = this.hasMultiplySells && this.hasMultiplySupplies
+      && this.haveSameSectionConditions(sellConditions, supplyConditions);
+    const sameBuySupply = this.hasMultiplyBuies && this.hasMultiplySupplies
+      && this.haveSameSectionConditions(buyConditions, supplyConditions);
+
+    if (sameSellBuy && sameSellSupply) {
+      this.sharedSectionSelector = 'all';
+      this.sharedSectionConditions = sellConditions;
+    } else if (sameSellBuy) {
+      this.sharedSectionSelector = 'sell-buy';
+      this.sharedSectionConditions = sellConditions;
+    } else if (sameSellSupply) {
+      this.sharedSectionSelector = 'sell-supply';
+      this.sharedSectionConditions = sellConditions;
+    } else if (sameBuySupply) {
+      this.sharedSectionSelector = 'buy-supply';
+      this.sharedSectionConditions = buyConditions;
+      this.sharedSectionDefaultLabel = 'buy_default';
+    }
+  }
+
+  public selectFactorSelector(selector: FactorSelector, condition: string): void {
+    selector.selectedCondition = condition;
+    this.applyFactorSelection();
+  }
+
+  private configureFactorSelectors(): void {
+    const config = this.factorSelectorConfigs?.find((x) => x.trader === this.trader.profile.name);
+    if (!config) {
+      return;
+    }
+
+    const sourceConditions = [
+      ...this.trader.sell.map((section) => section.sectionConditions),
+      ...this.trader.buy.map((section) => section.sectionConditions),
+      ...this.trader.supplies.map((section) => section.sectionConditions),
+      ...(this.trader.discounts ?? []).map((discount) => discount.conditions)
+    ];
+
+    this.factorSelectors = buildFactorSelectors(config.selectors, sourceConditions);
+  }
+
+  private applyFactorSelection(): void {
+    const world = collectWorldTokens(this.factorSelectors);
+
+    this.selectMatchedSection(this.trader.sell, this.traderSellSections, world, (section) => {
+      this.selectedSellSection = section;
+    });
+    this.selectMatchedSection(this.trader.buy, this.traderBuySections, world, (section) => {
+      this.selectedBuySection = section;
+    });
+    this.selectMatchedSection(this.trader.supplies, this.traderSupplySections, world, (section) => {
+      this.selectedSupplySection = section;
+    });
+
+    if (this.hasDiscounts) {
+      const matchedDiscount = matchCondlist(
+        this.trader.discounts ?? [],
+        (discount) => discount.conditions,
+        world
+      );
+      const matchedView = matchedDiscount
+        ? this.traderDiscounts.find((discount) => discount.conditions === matchedDiscount.conditions)
+        : this.traderDiscounts.find((discount) => discount.conditions === '');
+      if (matchedView) {
+        this.selectedDiscount = this.copy(matchedView);
+      }
+    }
+
+    this.recalculateSection();
+    if (this.selectedItem?.item) {
+      this.selectItem(this.selectedItem.item);
+    }
+  }
+
+  private selectMatchedSection<TRaw extends { sectionConditions: string }, TView extends TradeSection<unknown>>(
+    rawSections: TRaw[],
+    builtSections: TView[],
+    world: string[],
+    assign: (section: TView) => void
+  ): void {
+    const matched = matchCondlist(rawSections, (section) => section.sectionConditions, world);
+    const built = matched
+      ? builtSections.find((section) => section.sectionConditions === matched.sectionConditions)
+      : builtSections.find((section) => section.sectionConditions === '');
+    if (built) {
+      assign(this.copy(built));
+    }
   }
 }

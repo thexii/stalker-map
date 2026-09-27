@@ -6,6 +6,8 @@
 
 Репозиторій: [github.com/thexii/stalker-map](https://github.com/thexii/stalker-map)
 
+Сайт: [stalker-map.online](https://stalker-map.online)
+
 ## Підтримувані ігри
 
 | Гра | Маршрут | Опис |

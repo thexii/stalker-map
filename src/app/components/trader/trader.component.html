@@ -20,7 +20,7 @@
         </div>
         <div class="trader-container-section section-info custom-scroll">
             <div class="info container">
-                @if (hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies) {
+                @if (factorSelectors.length > 0 || hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies || hasDiscounts) {
                     <ng-container *ngTemplateOutlet="traderSettings"></ng-container>
                 }
 
@@ -194,7 +194,7 @@
 @else {
     <div class="mobile-trader">
         <div>
-            @if (hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies) {
+            @if (factorSelectors.length > 0 || hasMultiplySells || hasMultiplyBuies || hasMultiplySupplies || hasDiscounts) {
                 <ng-container *ngTemplateOutlet="traderSettings"></ng-container>
             }
         </div>
@@ -284,118 +284,120 @@
 <ng-template #traderSettings>
     <div class="sections-select-container custom-scroll">
         <div class="trader-sections-title">{{'trader-sections-title' | translate}}</div>
-        <table style="width: 100%;">
-            <tr>
-                @if (hasMultiplySells) {
-                    <td class="section-td">{{ 'trader-sell' | translate}}</td>
-                }
-
-                @if (hasMultiplyBuies) {
-                    <td class="section-td">{{ 'trader-buy' | translate}}</td>
-                }
-
-                @if (hasMultiplySupplies) {
-                    <td class="section-td">{{ 'trader-supply' | translate}}</td>
-                }
-
-                @if (hasDiscounts) {
-                    <td class="section-td">{{ 'discounts' | translate}}</td>
-                }
-            </tr>
-            @for (index of traderSectionIndexes; track index) {
-                <tr>
-                    @if (hasMultiplySells) {
-                        @if (traderSellSections[index]) {
-                            <td class="section" (click)="selectSell(traderSellSections[index])" [ngClass]="{'selected': selectedSellSection && selectedSellSection.sectionConditions == traderSellSections[index].sectionConditions}">
-                                @if (traderSellSections[index].sectionConditions) {
-                                    {{ traderSellSections[index].sectionConditions | translate }}
-                                }
-                                @else {
-                                    {{ "sell_default" | translate}}
-                                }
-                            </td>
+        @if (factorSelectors.length > 0) {
+            @for (selector of factorSelectors; track selector.name) {
+                <label class="section-selector">
+                    <span>{{ selector.label | translate }}</span>
+                    <select [value]="selector.selectedCondition"
+                        (change)="selectFactorSelector(selector, $any($event.target).value)">
+                        @for (option of selector.options; track option.condition) {
+                            <option [value]="option.condition">{{ option.label | translate }}</option>
                         }
-                        @else {
-                            <td></td>
-                        }
-                    }
-
-                    @if (hasMultiplyBuies) {
-                        @if (traderBuySections[index]) {
-                            <td class="section" (click)="selectBuy(traderBuySections[index])" [ngClass]="{'selected': selectedBuySection && selectedBuySection.sectionConditions == traderBuySections[index].sectionConditions}">
-                                @if (!traderBuySections[index].sectionConditions) {
-                                    {{ "buy_default" | translate}}
-                                }
-                                
-                                @if (traderBuySections[index].conditions) {
-                                    @for (cond of traderBuySections[index].conditions; track cond) {
-                                        <div>{{ cond | translate}}</div>
-                                    }
-                                }
-                            </td>
-                        }
-                        @else {
-                            <td></td>
-                        }
-                    }
-
-                    @if (hasMultiplySupplies) {
-                        @if (traderSupplySections[index]) {
-                            <td class="section" (click)="selectSupply(traderSupplySections[index])" [ngClass]="{'selected': selectedSupplySection && selectedSupplySection.sectionConditions == traderSupplySections[index].sectionConditions}">
-                                @if (!traderSupplySections[index].sectionConditions) {
-                                    {{ "supply_default" | translate }}
-                                }
-                                
-                                @if (traderSupplySections[index].conditions) {
-                                    @for (cond of traderSupplySections[index].conditions; track cond) {
-                                        <div>{{ cond | translate}}</div>
-                                    }
-                                }
-                            </td>
-                        }
-                        @else {
-                            <td></td>
-                        }
-                    }
-
-                    @if (hasDiscounts) {
-                        @if (traderDiscounts[index]) {
-                            <td class="section" (click)="selectDiscount(traderDiscounts[index])" [ngClass]="{'selected': selectedDiscount && selectedDiscount.conditions == traderDiscounts[index].conditions}">
-                                @if (!traderDiscounts[index].conditions) {
-                                    {{ "discount_default" | translate }}
-                                }
-                                
-                                @if (traderDiscounts[index].sectionConditions) {
-                                    @for (cond of traderDiscounts[index].sectionConditions; track cond) {
-                                        <div>{{ cond | translate}}</div>
-                                    }
-                                }
-                                
-                                @if (traderDiscounts[index].buy != 1) {
-                                    @if (traderDiscounts[index].buy > 1) {
-                                        <div>{{ 'bad_trader_buy_price' | translate }}: -{{ getDiscountPercent(traderDiscounts[index].buy) }}%</div>
-                                    }
-                                    @else {
-                                        <div>{{ 'good_trader_buy_price' | translate}}: +{{ getDiscountPercent(traderDiscounts[index].buy) }}%</div>
-                                    }
-                                }
-
-                                @if (traderDiscounts[index].sell != 1) {
-                                    @if (traderDiscounts[index].sell < 1) {
-                                        <div>{{ 'good_trader_sell_price' | translate}}: {{ getDiscountPercent(traderDiscounts[index].sell) }}%</div>
-                                    }
-                                    @else {
-                                        <div>{{ 'bad_trader_sell_price' | translate}}: +{{ getDiscountPercent(traderDiscounts[index].sell) }}%</div>
-                                    }
-                                }
-                            </td>
-                        }
-                        @else {
-                            <td></td>
-                        }
-                    }
-                </tr>
+                    </select>
+                </label>
             }
-        </table>
+        }
+        @else if (sharedSectionSelector) {
+            <label class="section-selector">
+                <span>
+                    @if (sharedSectionSelector == 'all' || sharedSectionSelector == 'sell-buy') {
+                        {{ 'trader-sell' | translate }} / {{ 'trader-buy' | translate }}
+                    }
+                    @if (sharedSectionSelector == 'sell-supply') {
+                        {{ 'trader-sell' | translate }} / {{ 'trader-supply' | translate }}
+                    }
+                    @if (sharedSectionSelector == 'buy-supply') {
+                        {{ 'trader-buy' | translate }} / {{ 'trader-supply' | translate }}
+                    }
+                </span>
+                <select [value]="sharedSectionSelectedCondition" (change)="selectSharedSectionCondition($any($event.target).value)">
+                    @for (condition of sharedSectionConditions; track condition) {
+                        <option [value]="condition">
+                            @if (!condition) {
+                                {{ sharedSectionDefaultLabel | translate }}
+                            }
+                            @else {
+                                @for (part of condition.split(' '); track part) {
+                                    {{ part | translate }}
+                                }
+                            }
+                        </option>
+                    }
+                </select>
+            </label>
+        }
+
+        @if (factorSelectors.length == 0 && hasMultiplySells && sharedSectionSelector != 'all' && sharedSectionSelector != 'sell-buy' && sharedSectionSelector != 'sell-supply') {
+            <label class="section-selector">
+                <span>{{ 'trader-sell' | translate }}</span>
+                <select [value]="selectedSellSection.sectionConditions" (change)="selectSellCondition($any($event.target).value)">
+                    @for (section of traderSellSections; track section.sectionConditions) {
+                        <option [value]="section.sectionConditions">
+                            {{ section.sectionConditions ? (section.sectionConditions | translate) : ('sell_default' | translate) }}
+                        </option>
+                    }
+                </select>
+            </label>
+        }
+
+        @if (factorSelectors.length == 0 && hasMultiplyBuies && sharedSectionSelector != 'all' && sharedSectionSelector != 'sell-buy' && sharedSectionSelector != 'buy-supply') {
+            <label class="section-selector">
+                <span>{{ 'trader-buy' | translate }}</span>
+                <select [value]="selectedBuySection.sectionConditions" (change)="selectBuyCondition($any($event.target).value)">
+                    @for (section of traderBuySections; track section.sectionConditions) {
+                        <option [value]="section.sectionConditions">
+                            @if (!section.sectionConditions) {
+                                {{ 'buy_default' | translate }}
+                            }
+                            @else {
+                                @for (condition of section.conditions; track condition) {
+                                    {{ condition | translate }}
+                                }
+                            }
+                        </option>
+                    }
+                </select>
+            </label>
+        }
+
+        @if (factorSelectors.length == 0 && hasMultiplySupplies && sharedSectionSelector != 'all' && sharedSectionSelector != 'sell-supply' && sharedSectionSelector != 'buy-supply') {
+            <label class="section-selector">
+                <span>{{ 'trader-supply' | translate }}</span>
+                <select [value]="selectedSupplySection.sectionConditions" (change)="selectSupplyCondition($any($event.target).value)">
+                    @for (section of traderSupplySections; track section.sectionConditions) {
+                        <option [value]="section.sectionConditions">
+                            @if (!section.sectionConditions) {
+                                {{ 'supply_default' | translate }}
+                            }
+                            @else {
+                                @for (condition of section.conditions; track condition) {
+                                    {{ condition | translate }}
+                                }
+                            }
+                        </option>
+                    }
+                </select>
+            </label>
+        }
+
+        @if (factorSelectors.length == 0 && hasDiscounts) {
+            <label class="section-selector">
+                <span>{{ 'discounts' | translate }}</span>
+                <select [value]="selectedDiscount?.conditions ?? ''" (change)="selectDiscountCondition($any($event.target).value)">
+                    @for (discount of traderDiscounts; track discount.conditions) {
+                        <option [value]="discount.conditions">
+                            @if (!discount.conditions) {
+                                {{ 'discount_default' | translate }}
+                            }
+                            @else {
+                                @for (condition of discount.sectionConditions; track condition) {
+                                    {{ condition | translate }}
+                                }
+                            }
+                        </option>
+                    }
+                </select>
+            </label>
+        }
     </div>
 </ng-template> 

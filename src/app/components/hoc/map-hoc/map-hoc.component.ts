@@ -53,6 +53,14 @@ import { hocAssetUrl } from '../../../utils/asset-url';
     encapsulation: ViewEncapsulation.None,
 })
 export class MapHocComponent {
+    private static readonly rawMapLayerName = 'raw-map-label';
+    private static readonly inGameBaseMapLayerName = 'in-game-base-map-label';
+    private static readonly inGameMapLayerName = 'in-game-map-label';
+    private static readonly diegeticMapLayerName = 'diegetic-map-label';
+    private static readonly topoMapLayerName = 'topo-map-label';
+    private static readonly joricTileMapAttribution = '<a href="https://github.com/joric/stalker2_tileset">Tile maps by joric</a>';
+    private static readonly commandobyTileMapAttribution = '<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3564815639">Topographic by commandoby</a>';
+
     @ViewChild('dynamicComponents', { read: ViewContainerRef })
     container: ViewContainerRef;
     @ViewChild('bottomSheet') bottomSheet!: BottomSheetWrapperComponent;
@@ -231,7 +239,15 @@ export class MapHocComponent {
         this.map.scaleFactor = this.scaleFactor;
 
         this.map.attributionControl!.addAttribution('&copy; <a href="https://stalker-map.online">stalker-map.online</a>');
-        this.map.attributionControl!.addAttribution('<a href="https://github.com/joric/stalker2_tileset">Tile maps by joric</a>');
+
+        const syncBaseLayerAttribution = (layer: any): void => {
+            this.map.attributionControl!.removeAttribution(MapHocComponent.joricTileMapAttribution);
+            this.map.attributionControl!.removeAttribution(MapHocComponent.commandobyTileMapAttribution);
+
+            if (layer?.attribution) {
+                this.map.attributionControl!.addAttribution(layer.attribution);
+            }
+        };
 
         let baseLayers = [];
 
@@ -281,8 +297,7 @@ export class MapHocComponent {
                     noWrap: true
                 })
 
-            //D:\stalker-map\src\assets\images\s2\tiles\Mip_00\tile_2_0.png
-            let diegeticMap = L.tileLayer('/assets/images/s2/tiles/Mip_0{z}/tile_{y}_{x}.png',
+            let diegeticMap = L.tileLayer('https://thexii.github.io/stalker-map-tiles-storage/game-asset/Mip_0{z}/tile_{y}_{x}.webp',
                 {
                     tileSize: tileSize * 4,
                     zoomOffset: 0,
@@ -290,6 +305,16 @@ export class MapHocComponent {
                     maxZoom: 4,
                     maxNativeZoom: 3,
                     minNativeZoom: 3,
+                    noWrap: true
+                })
+
+            let topoMap = L.tileLayer('https://thexii.github.io/stalker-map-tiles-storage/topographic/{z}/{x}_{y}.webp',
+                {
+                    tileSize: tileSize,
+                    zoomOffset: 0,
+                    minZoom: gameConfig.minZoom,
+                    maxZoom: maxZoom,
+                    maxNativeZoom: 3,
                     noWrap: true
                 })
 
@@ -305,18 +330,33 @@ export class MapHocComponent {
             dlc1Map.ableToSearch = false;
             dlc1Map.addToTop = false;
 
-            rawGameMap.name = 'raw-map-label';
-            inGameMap.name = 'in-game-base-map-label';
-            dlc1Map.name = 'in-game-map-label';
-            diegeticMap.name = 'diegetic-map-label';
+            topoMap.ableToSearch = false;
+            topoMap.addToTop = false;
+
+            rawGameMap.name = MapHocComponent.rawMapLayerName;
+            inGameMap.name = MapHocComponent.inGameBaseMapLayerName;
+            dlc1Map.name = MapHocComponent.inGameMapLayerName;
+            diegeticMap.name = MapHocComponent.diegeticMapLayerName;
+            topoMap.name = MapHocComponent.topoMapLayerName;
+
+            (rawGameMap as any).attribution = MapHocComponent.joricTileMapAttribution;
+            (inGameMap as any).attribution = MapHocComponent.joricTileMapAttribution;
+            (dlc1Map as any).attribution = MapHocComponent.joricTileMapAttribution;
+            (topoMap as any).attribution = MapHocComponent.commandobyTileMapAttribution;
 
             baseLayers.push(inGameMap);
             baseLayers.push(dlc1Map);
             baseLayers.push(rawGameMap);
             baseLayers.push(diegeticMap);
+            baseLayers.push(topoMap);
 
             const storedBaseLayer = this.readStoredBaseLayer(baseLayers);
-            (storedBaseLayer ?? dlc1Map).addTo(this.map);
+            const activeBaseLayer = storedBaseLayer ?? dlc1Map;
+            activeBaseLayer.addTo(this.map);
+            syncBaseLayerAttribution(activeBaseLayer);
+            this.map.on('baselayerchange', (event: any) => {
+                syncBaseLayerAttribution(event.layer);
+            });
         }
 
         this.canvasRenderer = this.mapService.getCanvasRenderer();
@@ -2678,13 +2718,13 @@ export class MapHocComponent {
     }
 
     public createTooltip(marker: any) {
-        let html = `<div class="header-tip"><span class="header">${this.translate.instant(
-            marker.name
-        )}</span></div>`;
+        let html = `<div class="header-tip"><span class="header">${this.translate.instant(marker.name)}</span></div>`;
         if (marker.description) {
-            html += `<div class="tooltip-text"><p>${this.translate.instant(
-                marker.description
-            )}</p></div>`;
+            let trans = this.translate.instant(marker.description);
+
+            if (trans != marker.description) {
+                html += `<div class="tooltip-text"><p>${this.translate.instant(marker.description)}</p></div>`;
+            }
         }
 
         return html;

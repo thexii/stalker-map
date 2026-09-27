@@ -7,7 +7,7 @@ import { RelationType } from '../../models/gamedata/map-config';
 import { CharacterProfile } from '../../models/character-profile.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { StalkerProfileComponent } from "../stalker-profile/stalker-profile.component";
-import { CommonModule, NgClass, NgStyle } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
 import { ItemUpgrade, Upgrade, UpgradeProperty, UpgradeSection, UpgradeSelectedEventModel } from '../../models/upgrades/upgrades';
 import { TooltipDirective } from '../tooltips/tooltip.directive';
 import { ItemTooltipComponent } from '../tooltips/item-tooltip/item-tooltip.component';
@@ -18,11 +18,14 @@ import { ItemUpgradesComponent } from './item-upgrades/item-upgrades.component';
 import { CompareService } from '../../services/compare.service';
 import { Game } from '../../models/game.model';
 import { ShareLinkService } from '../../services/share-link.service';
+import { FactorSelector, MechanicDiscountSelectorConfig } from '../../models/mechanic-discount-selector.model';
+import { matchCondlist } from '../../utils/condlist';
+import { buildFactorSelectors, collectWorldTokens } from '../../utils/factor-selector';
 
 @Component({
     selector: 'app-mechanic',
     standalone: true,
-    imports: [TranslatePipe, StalkerProfileComponent, NgStyle, NgClass, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent, ItemUpgradesComponent, CommonModule],
+    imports: [TranslatePipe, StalkerProfileComponent, NgStyle, TooltipDirective, ItemPropertyComponent, ItemPropertyNumberComponent, ItemUpgradesComponent, CommonModule],
     templateUrl: './mechanic.component.html',
     styleUrl: './mechanic.component.scss'
 })
@@ -42,6 +45,8 @@ export class MechanicComponent {
     public relation: number = this.relations[1];
     public selectedDiscount: MechanicDiscount;
     public discounts: MechanicDiscount[];
+    public discountSelectors: FactorSelector[] = [];
+    @Input() public discountSelectorConfigs: MechanicDiscountSelectorConfig[] = [];
     public selectedItem: UpgradableItem;
     public selectedItemForUpgrades: UpgradableItem;
     public selectedItemUpgrade: ItemUpgrade;
@@ -163,6 +168,8 @@ export class MechanicComponent {
                 this.discounts.reverse();
             }
         }
+        this.configureDiscountSelectors();
+        this.applyDiscountFromSelectors();
     }
 
     public addItemToCompare(item: Item, event?: Event): void {
@@ -182,6 +189,50 @@ export class MechanicComponent {
 
     public selectDiscount(discount: MechanicDiscount): void {
         this.selectedDiscount = discount;
+    }
+
+    public selectDiscountCondition(condition: string): void {
+        const discount = this.discounts?.find(x => x.condition == condition);
+        if (discount) {
+            this.selectDiscount(discount);
+        }
+    }
+
+    private configureDiscountSelectors(): void {
+        const config = this.discountSelectorConfigs?.find(x => x.mechanic == this.mechanic.profile.name);
+        if (!config || !this.mechanic.discounts?.length) {
+            return;
+        }
+
+        this.discountSelectors = buildFactorSelectors(
+            config.selectors,
+            this.mechanic.discounts.map(discount => discount.condition),
+            'discount_default'
+        );
+    }
+
+    public selectDiscountSelector(selector: FactorSelector, condition: string): void {
+        selector.selectedCondition = condition;
+        this.applyDiscountFromSelectors();
+    }
+
+    private applyDiscountFromSelectors(): void {
+        if (!this.discountSelectors.length || !this.discounts?.length) {
+            return;
+        }
+
+        const matched = matchCondlist(
+            this.mechanic.discounts,
+            discount => discount.condition,
+            collectWorldTokens(this.discountSelectors)
+        );
+        const matchedView = matched
+            ? this.discounts.find(discount => discount.condition === matched.condition)
+            : this.discounts.find(discount => !discount.condition);
+
+        if (matchedView) {
+            this.selectDiscount(matchedView);
+        }
     }
 
     public selectItem(item: Item): void {

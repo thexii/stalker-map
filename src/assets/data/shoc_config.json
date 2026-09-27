@@ -86,7 +86,7 @@
   "minZoom": 0,
   "maxZoom": 3,
   "startZoom": 1,
-  "globalMapFileName": "global_map.jpg",
+  "globalMapFileName": "global_map.webp",
   "width": 1024,
   "height": 2634,
   "traderRelationType": 1,

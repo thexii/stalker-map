@@ -6,6 +6,8 @@ Interactive maps for the **S.T.A.L.K.E.R.** series — locations, loot, anomalie
 
 Repository: [github.com/thexii/stalker-map](https://github.com/thexii/stalker-map)
 
+Site: [stalker-map.online](https://stalker-map.online)
+
 ## Supported games
 
 | Game | Route | Description |

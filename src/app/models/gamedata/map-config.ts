@@ -4,6 +4,7 @@ import { RankSetting } from "../rank-settings.model";
 import { TraderSectionsConfig } from "../trader/trader-sections-config.model";
 import { UndergroundLevelsConfig } from "../underground-levels-config.model";
 import { RichLootSubFilterConfig } from "../hoc/rich-loot-tags";
+import { MechanicDiscountSelectorConfig, TraderFactorSelectorConfig } from "../mechanic-discount-selector.model";
 
 export class MapConfig {
   public minZoom: number;
@@ -18,6 +19,8 @@ export class MapConfig {
   public lengthFactor: number;
   public markerFactor: number;
   public traderConfigs: TraderSectionsConfig[];
+  public mechanicDiscountSelectors?: MechanicDiscountSelectorConfig[];
+  public traderFactorSelectors?: TraderFactorSelectorConfig[];
   public traderRelationType: RelationType;
   public actor: CharacterProfile;
   public undergroundLevelsConfig: UndergroundLevelsConfig[];

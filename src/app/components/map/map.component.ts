@@ -437,7 +437,7 @@ export class MapComponent {
 
         const bounds = pixelBounds(this.gamedata.heightInPixels, this.gamedata.widthInPixels);
 
-        L.imageOverlay(`/assets/images/maps/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
+        L.imageOverlay(`https://thexii.github.io/stalker-map-tiles-storage/trilogy/${this.game.gameStyle}/${gameConfig.globalMapFileName}`, bounds).addTo(this.map);
         this.map.fitBounds(bounds);
 
         this.map.setMaxBounds(bounds);
@@ -1057,14 +1057,14 @@ export class MapComponent {
             let locationImage = '';
 
             if (location.image != null) {
-                locationImage = `/assets/images/maps/${this.game.gameStyle}/${location.image}`;
+                locationImage = `https://thexii.github.io/stalker-map-tiles-storage/trilogy/${this.game.gameStyle}/${location.image}`;
             }
             else {
                 if (location.x1 == 0 && location.x2 == 0 && location.y1 == 0 && location.y2 == 0) {
                     continue;
                 }
 
-                locationImage = `/assets/images/maps/${this.game.gameStyle}/map_${location.uniqueName}.png`;
+                locationImage = `https://thexii.github.io/stalker-map-tiles-storage/trilogy/${this.game.gameStyle}/map_${location.uniqueName}.webp`;
             }
 
             const locationBounds = asLatLngBounds([

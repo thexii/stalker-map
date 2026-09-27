@@ -261,6 +261,8 @@ export function patchCanvasRenderer(): void {
     if (!canvasRendererPatched) {
         const canvasProto = L.Canvas.prototype as any;
         const originalRequestRedraw = canvasProto._requestRedraw;
+        const originalRedraw = canvasProto._redraw;
+        const originalOnZoomEnd = canvasProto._onZoomEnd;
 
         L.Canvas.include({
             _updateSvgMarker: function (layer: any) {
@@ -294,6 +296,19 @@ export function patchCanvasRenderer(): void {
             _requestRedraw: function (layer: any) {
                 this._hitGridDirty = true;
                 return originalRequestRedraw.call(this, layer);
+            },
+
+            // Zoom and pan reproject markers without _requestRedraw, which left the
+            // hit grid on the previous view. Hover then misses every marker.
+            _redraw: function () {
+                this._hitGridDirty = true;
+                return originalRedraw.call(this);
+            },
+
+            _onZoomEnd: function () {
+                const result = originalOnZoomEnd.call(this);
+                this._hitGridDirty = true;
+                return result;
             },
 
             _onClick: function (e: any) {

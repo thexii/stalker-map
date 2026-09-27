@@ -119,6 +119,7 @@ export class MapService {
         componentRef.instance.actor = mapConfig.actor;
         componentRef.instance.traderConfigs = mapConfig.traderConfigs;
         componentRef.instance.traderConfig = mapConfig.traderConfigs?.find(x => x.trader == trader.profile.name) as TraderSectionsConfig;
+        componentRef.instance.factorSelectorConfigs = mapConfig.traderFactorSelectors ?? [];
         componentRef.instance.isPopup = isPopup;
 
         return componentRef;
@@ -219,6 +220,7 @@ export class MapService {
         componentRef.instance.rankSetting = mapConfig.rankSetting;
         componentRef.instance.relationType = mapConfig.traderRelationType;
         componentRef.instance.actor = mapConfig.actor;
+        componentRef.instance.discountSelectorConfigs = mapConfig.mechanicDiscountSelectors ?? [];
         componentRef.instance.upgrades = upgrades;
         componentRef.instance.upgradeProperties = upgradeProperties;
 

@@ -30,35 +30,42 @@
         <div class="info container">
             @if (discounts && discounts.length > 0) {
                 <div class="sections-select-container custom-scroll">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td class="section-td">{{ 'discounts' | translate}}</td>
-                        </tr>
-                        @for (discount of discounts; track discount) {
-                            <tr>
-                                <td class="section" (click)="selectDiscount(discount)"
-                                    [ngClass]="{'selected': selectedDiscount && selectedDiscount.condition == discount.condition}">
-                                    @if (discount.conditions) {
-                                        @for (cond of discount.conditions; track cond) {
-                                            <div>{{ cond | translate}}</div>
-                                        }
+                    @if (discountSelectors.length > 0) {
+                        @for (selector of discountSelectors; track selector.name) {
+                            <label class="section-selector">
+                                <span>{{ selector.label | translate }}</span>
+                                <select [value]="selector.selectedCondition"
+                                    (change)="selectDiscountSelector(selector, $any($event.target).value)">
+                                    @for (option of selector.options; track option.condition) {
+                                        <option [value]="option.condition">{{ option.label | translate }}</option>
                                     }
-                                    @else {
-                                        {{ "discount_default" | translate}}
-                                    }
-
-                                    @if (discount.value != 1) {
-                                        @if (discount.value > 1) {
-                                            <div>{{ 'bad_mechanic_price' | translate}}: +{{ Math.round((discount.value - 1) * 100)}}%</div>
+                                </select>
+                            </label>
+                        }
+                    }
+                    @else {
+                        <label class="section-selector">
+                            <span>{{ 'discounts' | translate }}</span>
+                            <select [value]="selectedDiscount.condition"
+                                (change)="selectDiscountCondition($any($event.target).value)">
+                                @for (discount of discounts; track discount.condition) {
+                                    <option [value]="discount.condition">
+                                        @if (discount.conditions) {
+                                            @for (condition of discount.conditions; track condition) {
+                                                {{ condition | translate }}
+                                            }
                                         }
                                         @else {
-                                            <div>{{ 'good_mechanic_price' | translate}}: {{ Math.round((discount.value - 1) * 100)}}%</div>
+                                            {{ 'discount_default' | translate }}
                                         }
-                                    }
-                                </td>
-                            </tr>
-                        }
-                    </table>
+                                        @if (discount.value != 1) {
+                                            ({{ Math.round((discount.value - 1) * 100) }}%)
+                                        }
+                                    </option>
+                                }
+                            </select>
+                        </label>
+                    }
                 </div>
             }
 

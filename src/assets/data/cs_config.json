@@ -92,7 +92,7 @@
   "minZoom": 0,
   "maxZoom": 3,
   "startZoom": 1,
-  "globalMapFileName": "global_map.png",
+  "globalMapFileName": "global_map.webp",
   "traderRelationType": 1,
   "markerFactor": 3,
   "kx": 0.7754125309809557,

@@ -100,7 +100,7 @@
   "rulerEnabled": true,
   "lengthFactor": 2.926829268292683,
   "markerFactor": 3,
-  "globalMapFileName": "global_map.png",
+  "globalMapFileName": "global_map.webp",
   "needLootBoxConfig": false,
   "traderRelationType": 2,
   "kx": 1,
@@ -114,91 +114,10 @@
     {
       "trader": "st_zat_b30_owl_stalker_trader_name",
       "enableRelationSelector": true,
-      "sell": [
-        {
-          "condition": "",
-          "enabledBuies": [""],
-          "enabledSupplies": null
-        },
-        {
-          "condition": "zat_b22_medic_respawn",
-          "enabledBuies": ["zat_b22_medic_respawn"],
-          "enabledSupplies": null
-        }
-      ],
-      "buy": [
-        {
-          "condition": "",
-          "enabledSells": [""],
-          "enabledSupplies": [""]
-        },
-        {
-          "condition": "zat_b22_medic_respawn",
-          "enabledSells": ["zat_b22_medic_respawn"],
-          "enabledSupplies": null
-        }
-      ],
-      "supply": [
-        {
-          "condition": "",
-          "enabledSells": [""],
-          "enabledBuies": [""]
-        }
-      ],
-      "discount": [
-        {
-          "condition": "",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": null
-        },
-        {
-          "condition": "information_dealer_functor",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": null
-        },
-        {
-          "condition": "zat_b30_barmen_under_sultan +zat_b7_actor_really_helped_bandits",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": [
-            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
-            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor"]
-        },
-        {
-          "condition": "zat_b7_actor_really_helped_bandits +zat_b30_barmen_under_sultan =information_dealer_functor",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": [
-            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan",
-            "is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(bandit) +zat_b30_barmen_under_sultan =wealthy_functor"]
-        },
-        {
-          "condition": "zat_b7_actor_really_helped_stalkers +zat_b30_sultan_loose",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": [
-            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
-            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor"]
-        },
-        {
-          "condition": "zat_b7_actor_really_helped_stalkers +zat_b30_sultan_loose =information_dealer_functor",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": [
-            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose",
-            "is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor",
-            "jup_a9_tech_way_info =is_faction_friend_to_actor(stalker) +zat_b30_sultan_loose =wealthy_functor"]
-        }
-      ]
+      "sell": [],
+      "buy": [],
+      "supply": [],
+      "discount": []
     },
     {
       "trader": "zat_a2_stalker_barmen_name",
@@ -239,54 +158,10 @@
     {
       "trader": "jup_b6_scientist_nuclear_physicist",
       "enableRelationSelector": true,
-      "sell": null,
-      "buy": null,
-      "supply": [
-        {
-          "condition": "",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledDicounts": [""]
-        },
-        {
-          "condition": "research_man_gained",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledDicounts": ["research_man_gained"]
-        },
-        {
-          "condition": "pioneer_achievement_gained",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledDicounts": [""]
-        },
-        {
-          "condition": "pioneer_achievement_gained +research_man_gained",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledDicounts": ["pioneer_achievement_gained +research_man_gained"]
-        }
-      ],
-      "discount": [
-        {
-          "condition": "",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": ["", "pioneer_achievement_gained"]
-        },
-        {
-          "condition": "research_man_gained",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": ["research_man_gained"]
-        },
-        {
-          "condition": "pioneer_achievement_gained +research_man_gained",
-          "enabledSells": null,
-          "enabledBuies": null,
-          "enabledSupplies": ["pioneer_achievement_gained +research_man_gained"]
-        }
-      ]
+      "sell": [],
+      "buy": [],
+      "supply": [],
+      "discount": []
     }
   ],
   "rankSetting": [
@@ -301,6 +176,167 @@
     {
       "rank": 90,
       "rankName": "master"
+    }
+  ],
+  "mechanicDiscountSelectors": [
+    {
+      "mechanic": "jup_b217_stalker_tech",
+      "selectors": [
+        {
+          "name": "materials",
+          "label": "mechanic-materials",
+          "conditionPrefix": "jup_b200_tech_materials_brought_counter_"
+        },
+        {
+          "name": "faction-help",
+          "label": "mechanic-faction-help",
+          "conditionPrefix": "counter_equal(jup_a6_actor_help_"
+        }
+      ]
+    }
+  ],
+  "traderFactorSelectors": [
+    {
+      "trader": "st_zat_b30_owl_stalker_trader_name",
+      "selectors": [
+        {
+          "name": "medic",
+          "label": "zat_b22_medic_respawn",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "zat_b22_medic_respawn", "label": "zat_b22_medic_respawn" }
+          ]
+        },
+        {
+          "name": "science",
+          "label": "jup_a9_tech_way_info",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "jup_a9_tech_way_info", "label": "jup_a9_tech_way_info" }
+          ]
+        },
+        {
+          "name": "faction",
+          "label": "trader-faction-standing",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "is_faction_friend_to_actor(stalker)", "label": "is_faction_friend_to_actor(stalker)" },
+            { "condition": "is_faction_friend_to_actor(bandit)", "label": "is_faction_friend_to_actor(bandit)" },
+            { "condition": "is_faction_friend_to_actor(stalker) is_faction_friend_to_actor(bandit)", "label": "trader-faction-both" }
+          ]
+        },
+        {
+          "name": "skadovsk",
+          "label": "trader-skadovsk-control",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "zat_b30_sultan_loose", "label": "trader-skadovsk-stalkers" },
+            { "condition": "zat_b30_barmen_under_sultan", "label": "trader-skadovsk-bandits" }
+          ]
+        },
+        {
+          "name": "wealthy",
+          "label": "wealthy_functor",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "wealthy_functor", "label": "wealthy_functor" }
+          ]
+        },
+        {
+          "name": "helped",
+          "label": "trader-skadovsk-hit",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "zat_b7_actor_really_helped_stalkers", "label": "trader-hit-stalkers" },
+            { "condition": "zat_b7_actor_really_helped_bandits", "label": "trader-hit-bandits" }
+          ]
+        },
+        {
+          "name": "info",
+          "label": "information_dealer_functor",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "information_dealer_functor", "label": "information_dealer_functor" }
+          ]
+        }
+      ]
+    },
+    {
+      "trader": "zat_a2_stalker_barmen_name",
+      "selectors": [
+        {
+          "name": "skadovsk",
+          "label": "trader-skadovsk-control",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "zat_b30_sultan_loose", "label": "trader-skadovsk-stalkers" },
+            { "condition": "zat_b29_exclusive_conditions", "label": "zat_b29_exclusive_conditions" }
+          ]
+        },
+        {
+          "name": "wealthy",
+          "label": "wealthy_functor",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "wealthy_functor", "label": "wealthy_functor" }
+          ]
+        }
+      ]
+    },
+    {
+      "trader": "jup_a6_stalker_barmen",
+      "selectors": [
+        {
+          "name": "science",
+          "label": "jup_a9_tech_way_info",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "jup_a9_tech_way_info", "label": "jup_a9_tech_way_info" }
+          ]
+        },
+        {
+          "name": "yanov",
+          "label": "trader-yanov-standing",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "counter_equal(jup_a6_actor_help_freedom:2)", "label": "counter_equal(jup_a6_actor_help_freedom:2)" },
+            { "condition": "counter_greater(jup_a6_actor_help_freedom:3)", "label": "counter_greater(jup_a6_actor_help_freedom:3)" },
+            { "condition": "counter_equal(jup_a6_actor_help_duty:2)", "label": "counter_equal(jup_a6_actor_help_duty:2)" },
+            { "condition": "counter_greater(jup_a6_actor_help_duty:3)", "label": "counter_greater(jup_a6_actor_help_duty:3)" },
+            { "condition": "counter_equal(jup_a6_actor_help_duty:2) counter_equal(jup_a6_actor_help_freedom:2)", "label": "trader-yanov-balanced" },
+            { "condition": "counter_greater(jup_a6_actor_help_stalkers:2)", "label": "counter_greater(jup_a6_actor_help_stalkers:2)" }
+          ]
+        },
+        {
+          "name": "wealthy",
+          "label": "wealthy_functor",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "wealthy_functor", "label": "wealthy_functor" }
+          ]
+        }
+      ]
+    },
+    {
+      "trader": "jup_b6_scientist_nuclear_physicist",
+      "selectors": [
+        {
+          "name": "pioneer",
+          "label": "pioneer_achievement_gained",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "pioneer_achievement_gained", "label": "pioneer_achievement_gained" }
+          ]
+        },
+        {
+          "name": "research",
+          "label": "research_man_gained",
+          "options": [
+            { "condition": "", "label": "selector_none" },
+            { "condition": "research_man_gained", "label": "research_man_gained" }
+          ]
+        }
+      ]
     }
   ],
   "undergroundLevelsConfig": [

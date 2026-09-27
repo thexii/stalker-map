@@ -34,6 +34,25 @@ $trader-columns: 6;
   max-height: 200px;
 }
 
+.section-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    flex: 0 0 8.5rem;
+  }
+
+  select {
+    min-width: 0;
+    flex: 1;
+    color: white;
+    background: #202020;
+    border: 1px solid #4d4d4d;
+    padding: 0.3rem;
+  }
+}
+
 .inventory-container {
   min-width: calc(($trader-columns + 1 ) * var(--inventory-cell-size));
   display: flex;
